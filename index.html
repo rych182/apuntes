@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Apuntes por tema</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        .contenedor {
+            border: solid 1px green;
+        }
+        
+        .fila {
+            border: solid 1px blue;
+        }
+        
+        .columna {
+            border: solid 1px purple;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="accordion" id="accordionExample">
+        <div class="card">
+            <div class="card-header" id="headngOne">
+                <h2 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#uno" aria-expanded="true" aria-controls="collapseOne">
+                Git y GitHub
+              </button>
+                </h2>
+            </div>
+
+            <div id="uno" class="collapse show" aria-labelledby="headngOne" data-parent="#accordionExample">
+                <div class="card-body">
+                    <h4>Configuraciones básicas</h4>
+                    <ol>
+                        <li>Poner nombre: <code>git config --global user.name "fulanito"</code>
+                            <br> ver la configuración: <code>git config --global user.name</code>
+                            <br> cambiar nombre: <code>git config --global user.name "mengano"</code>
+                        </li>
+
+
+                        <li>Poner correo: <code>git config --global user.mail "mail@mail.com"</code>
+                            <br>Ver la configuración: <code>git config --global user.mail</code>
+                            <br>Cambiar email: <code>git config --global user.mail "mail@mail.com"</code>
+                        </li>
+
+                        <li>
+                            Ver todas las configuraciones: <code>git config --global --list</code>
+                        </li>
+                    </ol>
+                    <h4>Generar una llave ssh</h4>
+                    <code>ssh-keygen</code><br>
+                    <H4>Ver archivos ocultos</H4>
+                    <ol>
+                        <li><code>ls -rf</code></li>
+                        <li><code>cd .ssh</code></li>
+                        <li><code>car id_rsa.pub</code> lo copias y lo pegas en tu cuenta de github en <b>ssh keys</b></li>
+                        <li><code></code></li>
+                    </ol>
+
+                    <h4>VER commits</h4>
+                    <code>git log</code><br>
+                    <h4>SALIR de los commits</h4>
+                    <code>q</code><br>
+                    <h4>Create a branch</h4>
+                    <code>git brach test-narvbar</code><br>
+                    <h4>Show all the branchs(include the hide branchs)</h4>
+                    <code>git branch -a</code><br>
+                    <h4>Move to other commmits</h4>
+                    <code>git checkout xxxxxxxxxxxxxxxxxxxxxxxxx(commit number)</code><br>
+                    <h4>Move to other branchs</h4>
+                    <code>git checkout branchName</code><br>
+                    <h4>Return to last commit</h4>
+                    <code>git checkout master</code><br>
+                    <h4>Borrar el commit pero que no borre el código</h4>
+                    <code>git reset --soft xxxxxxxxxxx(aquí va el commit que quieres borrar)</code><br>
+                    <h4>Borrar el commit y el código</h4>
+                    <code>git reset --hard xxxxxxxxxxx(aquí va el commit que quieres borrar)</code><br>
+                    <h4>Show Branchs</h4>
+                    <code>git branch</code><br>
+                    <h4>Create branchs</h4>
+                    <code>git branch NombreRama</code><br>
+                    <h4>FUSIONAR ramas</h4>
+                    <code>posicionarte en Master y luego "git merge rama"</code><br>
+                    <h4>Conectarte con un repositorio en github</h4>
+                    <code>git remote add origin xxxxxx(poner url del repositorio)</code><br>
+                    <h4>Vereificar si se conecto bien</h4>
+                    <code>git remote -v</code><br>
+                    <h4>Borrar conexión remota</h4>
+                    <code>git remote remove origin</code><br>
+                    <h4>Subir a servidor</h4>
+                    <code>git push origin master</code><br>
+                    <h4>Bajar cambios de un repositorio donde trabajamos en equipo</h4>
+                    <code>git fetch origin</code> después fusionamos <code>git merge origin/master</code> Si existe un conflicto, solo borrar HEAD y los signos, haces tu cambio y un nuevo commit
+                    <h4>Git Pull</h4>
+                    git pull = git fetch + git merge<code> git pull origin master</code>
+                    <h4>Subir rama a servidor(estar posicionado en la rama)</h4>
+                    <code>git push origin "nombreDeLaRama"</code>
+                    <h4>Clonar repositorio</h4>
+                    <code>git clone "url del repositorio de git"</code>
+                    <h4>Agregar un repositorio a una organización en Github </h4>
+                    <p>Ve a la pestaña de <b>Settings</b> y en la parte de abajo da click en <b>Transfer</b> </p>
+                    <h4>Pull Request</h4>
+                    <p>Cuando haces un fork en tu cuenta de git y modificas ese fork, pero quieres contribuir al proyecto original donde hiciste el fork, debes presionar <b>New Pull Request</b> </p>
+                    <h4>Push en servidor Digital Ocean</h4>
+                    <code>ssh "el IP o la dirección que te pongan root@pagin.com"</code>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingThree">
+                <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#dos" aria-expanded="false" aria-controls="collapseThree">
+                Visual Studio Code
+              </button>
+                </h2>
+            </div>
+            <div id="dos" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                    <div class="container">
+                        <h1>Pluggins</h1>
+                        <div class="card mb-3">
+                            <img src="img/pluggins1.png" class="card-img-top" alt="tamaños-imagenes-bootstrap">
+                        </div>
+                        <div class="card mb-3">
+                            <img src="img/pluggins2.png" class="card-img-top" alt="tamaños-imagenes-bootstrap">
+                        </div>
+                        <div class="card mb-3">
+                            <img src="img/pluggins3.png" class="card-img-top" alt="tamaños-imagenes-bootstrap">
+                        </div>
+                        <div class="card mb-3">
+                            <img src="img/pluggins4.png" class="card-img-top" alt="tamaños-imagenes-bootstrap">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingTwo">
+                <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#tres" aria-expanded="false" aria-controls="collapseTwo">
+                CSS3
+              </button>
+                </h2>
+            </div>
+            <div id="tres" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div class="card-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
+                    on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table,
+                    raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingThree">
+                <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#cuatro" aria-expanded="false" aria-controls="collapseThree">
+                SASS
+              </button>
+                </h2>
+            </div>
+            <div id="cuatro" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
+                    on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table,
+                    raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingThree">
+                <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#cinco" aria-expanded="false" aria-controls="collapseThree">
+                Bootstrap 4
+              </button>
+                </h2>
+            </div>
+            <div id="cinco" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                    <div class="container">
+                        <h1>¿Qué pasa cuando hay <kbd>2 clases</kbd> col de BOOTSTRAP?</h1>
+                        <div class="card mb-3">
+                            <img src="img/tabla-tamanos-boostrap.png" class="card-img-top" alt="tamaños-imagenes-bootstrap">
+                        </div>
+                        <P>El <code>.col</code> es para 576px hacia <kbd>ABAJO</kbd> y el
+                            <COde>col-md-8</COde> es de tablet hacia <kbd>ARRIBA</kbd> </P>
+                        <h2>Ejemplo 1</h2>
+                        <p><b>col-md-8</b>: 8/12 de tablet HACIA ARRIBA, phone: 12/12</p>
+                        <p><b>col-6 col-md-4</b>: 4/12 de tablet HACIA ARRIBA, phone: 1/2</p>
+                        <h2>Ejemplo 2</h2>
+                        <p><b>col-lg-8</b>: 8/12 de DESKTOP HACIA ARRIBA, PHONE & TABLET: 12/12</p>
+                        <p><b>col-6 col-lg-4</b>: 4/12 de DESKTOP HACIA ARRIBA, PHONE & TABLET: 1/2</p>
+
+                        <h2>Margins</h2>
+                        <p><b>Margin-top</b>: <code>mt-1 mt-2 mt-3 mt-4 mt-5 </code></p>
+                        <p><b>Margin-bottom</b>: <code>mb-1 mb-2 mb-3 mb-4 mb-5 </code></p>
+                        <p><b>Margin-top</b>: <code>mt-1 mt-2 mt-3 mt-4 mt-5 </code></p>
+                        <p><b>Margin-top</b>: <code>mt-1 mt-2 mt-3 mt-4 mt-5 </code></p>
+
+                        <h2>Paddings</h2>
+                        <p><b>Padding-top</b>: <code>pt-1 pt-2 pt-3 pt-4 pt-5 </code></p>
+                        <p><b>Padding-bottom</b>: <code>pb-1 pb-2 pb-3 pb-4 pb-5 </code></p>
+                        <p><b>Padding-top</b>: <code>pt-1 pt-2 pt-3 pt-4 pt-5 </code></p>
+                        <p><b>Padding-top</b>: <code>pt-1 pt-2 pt-3 pt-4 pt-5 </code></p>
+
+                        <h2>Centrar elemento</h2>
+                        <div class="mx-auto border text-center" style="width: 200px;">
+                            <code>mx-auto</code> y <code>text-center</code>
+                        </div>
+                        <ul>
+                            <li><b>Etiquetas html</b>:<code> &lt;section&gt;</code></li>
+                            <li><b>Formulas con etiqueta <code>&lt;var&gt;</code></b>(una etiqueta <code>var</code> por cada letra): <var>y</var> = <var>m</var><var>x</var> + <var>b</var></li>
+                            <li><b>Tachado <code>&lt;s&gt;</code></b>:<s>This line of text is meant to be treated as no longer accurate.</s></li>
+                            <li><b>Subrayado <code>&lt;u&gt;</code></b>:<u>This line of text will render as underlined</u></li>
+                            <li><b>Letra pequeña <code>&lt;small&gt;</code></b><small>This line of text is meant to be treated as fine print.</small></li>
+                            <li class="text-muted">
+                                This text is muted
+                            </li>
+                            <li class="text-primary">
+                                This text is important.
+                            </li>
+                            <li class="text-success">
+                                This text indicates success.
+                            </li>
+                            <li class="text-info">
+                                This text represents some information.
+                            </li>
+                            <li class="text-warning">
+                                This text represents a warning.
+                            </li>
+                            <li class="text-danger">
+                                This text represents danger.
+                            </li>
+                            <li class="text-secondary">
+                                Secondary text.
+                            </li>
+                            <li class="text-dark">
+                                This text is dark grey.
+                            </li>
+                            <li class="text-white" style="background: purple;">
+                                También hay text-white
+                            </li>
+                            <li><cite title="Source title">La etiqueta <code>&lt;cite&gt;</code> sirve para citar</cite></li>
+                            <li><b>blockquote-footer</b>: <code>&lt;blockquote-footer&gt;</code>
+                                <div class="blockquote-footer">Pone este estilo cool</div>
+                            </li>
+                        </ul>
+
+
+
+
+
+                    </div>
+
+
+                    <h5>container</h5>
+                    <div class="container border">
+                        <h4>.row</h4>
+                        <div class="row fila  m-1">
+                            <div class="col columna m-1">
+                                1/4 <code>col</code> , equal-width columns on small, medium, large, and extra large devices
+                            </div>
+                            <div class="col columna m-1">
+                                2/4 <code>col</code> , equal-width columns on small, medium, large, and extra large devices
+                            </div>
+                            <div class="col columna m-1">
+                                3/4 <code>col</code> , equal-width columns on small, medium, large, and extra large devices
+                            </div>
+                            <div class="col columna m-1">
+                                4/4 <code>col</code> , equal-width columns on small, medium, large, and extra large devices
+                            </div>
+                        </div>
+                    </div>
+                    <br><br>
+                    <h4>container-fluid</h4>
+                    <div class="container-fluid contenedor">
+                        <h4>.row</h4>
+                        <div class="row fila  m-1">
+                            <div class="col columna m-1">
+                                1/4 <code>col</code> , equal-width columns on small, medium, large, and extra large devices
+                            </div>
+                            <div class="col columna m-1">
+                                2/4 <code>col</code> , equal-width columns on small, medium, large, and extra large devices
+                            </div>
+                            <div class="col columna m-1">
+                                3/4 <code>col</code> , equal-width columns on small, medium, large, and extra large devices
+                            </div>
+                            <div class="col columna m-1">
+                                4/4 <code>col</code> , equal-width columns on small, medium, large, and extra large devices
+                            </div>
+                        </div>
+                    </div>
+                    <br><br>
+                    <h5>container</h5>
+                    <div class="container-fluid contenedor">
+                        <div class="container">
+                            <H4>row 1</H4>
+                            <div class="row fila m-1">
+                                <div class="col columna   m-1">
+                                    1 of 2 <code>col</code>
+                                </div>
+                                <div class="col columna   m-1">
+                                    2 of 2 <code>col</code>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <h4>row 2</h4>
+                            <div class="row fila  m-1">
+
+                                <div class="col columna  m-1">
+                                    1 of 3 <code>col</code>
+                                </div>
+                                <div class="col columna  m-1">
+                                    2 of 3 <code>col</code>
+                                </div>
+                                <div class="col columna  m-1">
+                                    3 of 3 <code>col</code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br><br>
+                    <h5>container-fluid</h5>
+                    <div class="container-fluid contenedor">
+                        <h5>row </h5>
+                        <div class="row fila m-1">
+                            <div class="col columna m-1">col 1/2</div>
+                            <div class="col columna m-1">col 2/2</div>
+                            <div class="w-100 columna m-1">Ocupa el 100% del ancho <code>w-100</code></div>
+                            <div class="col columna m-1">col 1/2</div>
+                            <div class="col columna m-1">col 2/2</div>
+                        </div>
+                    </div>
+
+                    <br><br>
+                    <h5>container-fluid</h5>
+                    <div class="container-fluid contenedor">
+                        <h6>row 1</h6>
+                        <div class="row fila m-1">
+                            <div class="col columna">
+                                1 of 3 col
+                            </div>
+                            <div class="col-6 columna">
+                                2 of 3 <code>col-6</code>
+                            </div>
+                            <div class="col columna">
+                                3 of 3 col
+                            </div>
+                        </div>
+                        <h6>row 2</h6>
+                        <div class="row fila m-1">
+                            <div class="col columna">
+                                1 of 3 col
+                            </div>
+                            <div class="col-5 columna">
+                                2 of 3 <code>col-5</code>
+                            </div>
+                            <div class="col columna">
+                                3 of 3 col
+                            </div>
+                        </div>
+                    </div>
+                    <br><br>
+                    <h5>container-fluid</h5>
+                    <div class="container-fluid contenedor">
+                        <h6>row <b>justify-content-md-center</b> </h6>
+                        <div class="row justify-content-md-center fila m-1">
+                            <div class="col col-lg-2 columna m-1">
+                                1 of 3
+                            </div>
+                            <div class="col-md-auto columna m-1">
+                                El ancho se adapta al tamaño del contenido <code>col-md-auto</code>
+                            </div>
+                            <div class="col col-lg-2 columna m-1">
+                                3 of 3 <code>col-lg-2</code>
+                            </div>
+                        </div>
+                        <h6>row</h6>
+                        <div class="row fila m-1">
+                            <div class="col columna m-1">
+                                1 of 3
+                            </div>
+                            <div class="col-md-auto columna m-1">
+                                El ancho se adapta al tamaño del contenido <code>col-md-auto</code>
+                            </div>
+                            <div class="col col-lg-2 columna m-1">
+                                3 of 3 <code>col-lg-2</code>
+                            </div>
+                        </div>
+                    </div>
+                    <br><br>
+
+                    <h5>container-fluid</h5>
+                    <div class="container-fluid contenedor">
+                        <h4>row 1</h4>
+                        <div class="row fila m-1">
+                            <div class="col-sm-8 columna"><code>col-sm-8</code> RESPONSIVE: toma las 12 columnas</div>
+                            <div class="col-sm-4 columna "><code>col-sm-4</code> RESPONSIVE: toma las 12 columnas</div>
+                        </div>
+                        <h4>row 2</h4>
+                        <div class="row fila m-1">
+                            <div class="col-sm columna m-1"><code>col-sm</code> RESPONSIVE: toma las 12 columnas</div>
+                            <div class="col-sm columna m-1"><code>col-sm</code> RESPONSIVE: toma las 12 columnas</div>
+                            <div class="col-sm columna m-1"><code>col-sm</code> RESPONSIVE: toma las 12 columnas</div>
+                        </div>
+                    </div>
+                    <br><br>
+
+                    <h4>col-md-8 </h4>
+                    <h4>col-6 col-md-4</h4>
+                    <div class="container-fluid contenedor">
+                        <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+                        <h5>row 1</h5>
+                        <div class="row fila">
+                            <div class="col-md-8 columna"><code>.col-md-8</code> PHONE:completa TABLET: 8/12 DESKTOP: 8/12</div>
+                            <div class="col-6 col-md-4 columna"><code>.col-6 .col-md-4</code> PHONE:1/2 TABLET: 4/12 DESKTOP: 4/12</div>
+                        </div>
+                        <h5>row 2</h5>
+                        <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+                        <div class="row fila">
+                            <div class="col-6 col-md-4 columna"><code>.col-6 .col-md-4</code>DESKTOP:4/12 TABLET:1/2</div>
+                            <div class="col-6 col-md-4 columna"><code>.col-6 .col-md-4</code>DESKTOP:4/12 TABLET:2/2</div>
+                            <div class="col-6 col-md-4 columna"><code>.col-6 .col-md-4</code>DESKTOP:4/12 TABLET:3/2 pasa abajo porque no cabe</div>
+
+                        </div>
+                        <h5>row 3</h5>
+                        <!-- Columns are always 50% wide, on mobile and desktop -->
+                        <div class="row fila">
+                            <div class="col-6 columna"><code>.col-6</code></div>
+                            <div class="col-6 columna"><code>.col-6</code></div>
+                        </div>
+                    </div>
+                    <br><br>
+
+                    <div class="container px-lg-5 contenedor">
+                        <h4>Relleno personalizado</h4>
+                        <div class="row mx-lg-n5">
+                            <div class="col py-3 px-lg-5 border bg-light">Custom column padding (Relleno de columna personalizado) <code>py-3 px-lg-5</code></div>
+                            <div class="col py-3 px-lg-5 border bg-light">Custom column padding (Relleno de columna personalizado) <code>py-3 px-lg-5</code></div>
+                        </div>
+                    </div>
+                    <br><br>
+
+                    <div class="container contenedor">
+                        <h4>row-cols-2</h4>
+                        <p>Le indica a la fila </p>
+                        <div class="row row-cols-6">
+
+                            <div class="col columna">Column</div>
+                            <div class="col columna">Column</div>
+                            <div class="col columna">Column</div>
+                            <div class="col columna">Column</div>
+                        </div>
+                    </div>
+
+                    <br><br>
+                    <div class="container border ">
+                        <blockquote class="blockquote text-center">
+                            <h4>Centrando texto de manera cool</h4>
+                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                            <footer class="blockquote-footer">Someone famous in <cite title="Source Title">La etiqueta <code>&lt;cite&gt;</code> sirve para citar</cite></footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingThree">
+                <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Javascript (ES6,7,8,9,10)
+              </button>
+                </h2>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
+                    on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table,
+                    raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+
+</html>
