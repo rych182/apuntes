@@ -476,12 +476,345 @@
                     <div class="card">
                         <div class="card-header" id="headingThree">
                             <h2 class="mb-0">
-                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#flexbox" aria-expanded="false" aria-controls="collapseThree">
+                            Flexbox
+                          </button>
+                            </h2>
+                        </div>
+                        <div id="flexbox" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div class="container-fluid border p-3">
+                                    <div class="d-flex p-2 bg-secondary">I'm a <code>.d-flex</code></div>
+                                </div> <br>
+                                <div class="container-fluid border p-3">
+                                    <div class="d-inline-flex p-2 bg-secondary">I'm a <code>.d-inline-flex</code></div>
+                                </div><br>
+                                <div class="container-fluid border p-3">
+                                    <code>
+                                        <ul>
+                                            <li>.d-flex</li>
+                                            <li>.d-inline-flex</li>
+                                            <li>.d-sm-flex</li>
+                                            <li>.d-sm-inline-flex</li>
+                                            <li>.d-md-flex</li>
+                                            <li>.d-md-inline-flex</li>
+                                            <li>.d-lg-flex</li>
+                                            <li>.d-lg-inline-flex</li>
+                                            <li>.d-xl-flex</li>
+                                            <li>.d-xl-inline-flex</li>
+                                        </ul>
+                                    </code>
+                                </div><br>
+                                <div class="container-fluid border p-3">
+                                    <h2>flex-row y flex-row-reverse</h2>
+                                    <div class="d-flex flex-row bd-highlight mb-3 border p-1">
+                                        <div class="p-2 bg-highlight border"><code>.flex-row</code> 1</div>
+                                        <div class="p-2 bg-muted border"><code>.flex-row</code> 2</div>
+                                        <div class="p-2 bg-muted border"><code>.flex-row</code> 3</div>
+                                    </div>
+                                    <div class="d-flex flex-row-reverse bd-highlight border p-1">
+                                        <div class="p-2 bd-highlight border"><code>.flex-row-reverse</code> 1</div>
+                                        <div class="p-2 bg-muted border"><code>.flex-row-reverse</code> 2</div>
+                                        <div class="p-2 bg-muted border"><code>.flex-row-reverse</code> 3</div>
+                                    </div>
+                                </div> <br>
+                                <div class="container-fluid border p-3">
+                                    <h2>flex-column y flex-column-reverse</h2>
+                                    <div class="d-flex flex-column bd-highlight mb-3 border">
+                                        <div class="p-2 bd-highlight border"><code>flex-column</code> 1</div>
+                                        <div class="p-2 bd-highlight border"><code>flex-column</code> 2</div>
+                                        <div class="p-2 bd-highlight border"><code>flex-column</code> 3</div>
+                                    </div>
+                                    <div class="d-flex flex-column-reverse bd-highlight border">
+                                        <div class="p-2 bd-highlight border"><code>flex-column-reverse</code> 1</div>
+                                        <div class="p-2 bd-highlight border"><code>flex-column-reverse</code> 2</div>
+                                        <div class="p-2 bd-highlight border"><code>flex-column-reverse</code> 3</div>
+                                    </div>
+                                </div> <br>
+                                <div class="container-fluid border p-3">
+                                    <h2>Justify content</h2>
+                                    <h4><code>justify-content-start</code></h4>
+                                    <code>
+                                        &lt;div class="d-flex justify-content-start bg-secondary mb-3"&gt; <br>
+                                            &lt;div class="p-2 bg-warning"&gt; Flex item 1 &lt;/div&gt; <br>
+                                            &lt;div class="p-2 bg-info"&gt; Flex item 2 &lt;/div&gt; <br>
+                                            &lt;div class="p-2 bg-primary"&gt; Flex item 3 &lt;/div&gt; <br>
+                                        &lt;/div&gt;
+                                    </code>
+                                    <div class="d-flex justify-content-start bg-secondary mb-3">
+                                        <div class="p-2 bg-info">Flex item 1</div>
+                                        <div class="p-2 bg-warning">Flex item 2</div>
+                                        <div class="p-2 bg-primary">Flex item 3</div>
+                                    </div>
+                                    <h4><code>justify-content-end</code></h4>
+                                    <code>
+                                        &lt;div class="d-flex justify-content-end bg-secondary mb-3"&gt; <br>
+                                            &lt;div class="p-2 bg-warning"&gt; Flex item 1 &lt;/div&gt; <br>
+                                            &lt;div class="p-2 bg-info"&gt; Flex item 2 &lt;/div&gt; <br>
+                                            &lt;div class="p-2 bg-primary"&gt; Flex item 3 &lt;/div&gt; <br>
+                                        &lt;/div&gt;
+                                    </code>
+                                    <div class="d-flex justify-content-end bg-secondary mb-3">
+                                        <div class="p-2 bg-info">Flex item 1</div>
+                                        <div class="p-2 bg-warning">Flex item 2</div>
+                                        <div class="p-2 bg-primary">Flex item 3</div>
+                                    </div>
+                                    <h4><code>justify-content-center</code></h4>
+                                    <code>
+                                        &lt;div class="d-flex justify-content-center bg-secondary mb-3"&gt; <br>
+                                            &lt;div class="p-2 bg-warning"&gt; Flex item 1 &lt;/div&gt; <br>
+                                            &lt;div class="p-2 bg-info"&gt; Flex item 2 &lt;/div&gt; <br>
+                                            &lt;div class="p-2 bg-primary"&gt; Flex item 3 &lt;/div&gt; <br>
+                                        &lt;/div&gt;
+                                    </code>
+                                    <div class="d-flex justify-content-center bg-secondary mb-3">
+                                        <div class="p-2 bg-info">Flex item 1</div>
+                                        <div class="p-2 bg-warning">Flex item 2</div>
+                                        <div class="p-2 bg-primary">Flex item 3</div>
+                                    </div>
+                                    <h4><code>justify-content-between</code></h4>
+                                    <code>
+                                        &lt;div class="d-flex justify-content-between bg-secondary mb-3"&gt; <br>
+                                            &lt;div class="p-2 bg-warning"&gt; Flex item 1 &lt;/div&gt; <br>
+                                            &lt;div class="p-2 bg-info"&gt; Flex item 2 &lt;/div&gt; <br>
+                                            &lt;div class="p-2 bg-primary"&gt; Flex item 3 &lt;/div&gt; <br>
+                                        &lt;/div&gt;
+                                    </code>
+                                    <div class="d-flex justify-content-between bg-secondary mb-3">
+                                        <div class="p-2 bg-info">Flex item 1</div>
+                                        <div class="p-2 bg-warning">Flex item 2</div>
+                                        <div class="p-2 bg-primary">Flex item 3</div>
+                                    </div>
+                                    <h4><code>justify-content-around</code></h4>
+                                    <code>
+                                        &lt;div class="d-flex justify-content-around bg-secondary mb-3"&gt; <br>
+                                            &lt;div class="p-2 bg-warning"&gt; Flex item 1 &lt;/div&gt; <br>
+                                            &lt;div class="p-2 bg-info"&gt; Flex item 2 &lt;/div&gt; <br>
+                                            &lt;div class="p-2 bg-primary"&gt; Flex item 3 &lt;/div&gt; <br>
+                                        &lt;/div&gt;
+                                    </code>
+                                    <div class="d-flex justify-content-around bg-secondary mb-3">
+                                        <div class="p-2 bg-info">Flex item 1</div>
+                                        <div class="p-2 bg-warning">Flex item 2</div>
+                                        <div class="p-2 bg-primary">Flex item 3</div>
+                                    </div>
+                                </div><br>
+                                <div class="container-fluid border">
+                                    <h4>.flex-fill</h4>
+                                    <p>Use .flex-fill on flex items to force them into equal widths(o anchos iguales si su contenido no supera sus cuadros de borde)</p>
+                                    <div class="d-flex">
+                                        <div class="p-2 bg-info flex-fill">Flex item 1 with a lot of content</div>
+                                        <div class="p-2 bg-warning flex-fill">Flex item 2</div>
+                                        <div class="p-2 bg-primary flex-fill">Flex item 3</div>
+                                    </div>
+                                </div><br>
+                                <div class="container mt-3 border">
+                                    <h2>Align Items</h2>
+                                    <p>Control the vertical alignment of single rows of flex items with the .align-content-* classes.</p>
+                                    <p>.align-items-start:</p>
+                                    <code>
+                                        &lt;div class="d-flex align-items-start bg-light"&gt; <br>
+                                            &lt;div class="p-2 border"&gt; Flex item 1 &lt;/div&gt; <br>
+                                            &lt;div class="p-2 border"&gt; Flex item 2 &lt;/div&gt; <br>
+                                            &lt;div class="p-2 border"&gt; Flex item 3 &lt;/div&gt; <br>
+                                        &lt;/div&gt;
+                                    </code>
+                                    <div class="d-flex align-items-start bg-light" style="height:150px">
+                                        <div class="p-2 border">Flex item 1</div>
+                                        <div class="p-2 border">Flex item 2</div>
+                                        <div class="p-2 border">Flex item 3</div>
+                                    </div>
+                                    <br>
+                                    <p>.align-items-end:</p>
+                                    <code>
+                                        &lt;div class="d-flex align-items-end bg-light"&gt; <br>
+                                            &lt;div class="p-2 border"&gt; Flex item 1 &lt;/div&gt; <br>
+                                            &lt;div class="p-2 border"&gt; Flex item 2 &lt;/div&gt; <br>
+                                            &lt;div class="p-2 border"&gt; Flex item 3 &lt;/div&gt; <br>
+                                        &lt;/div&gt;
+                                    </code>
+                                    <div class="d-flex align-items-end bg-light" style="height:150px">
+                                        <div class="p-2 border">Flex item 1</div>
+                                        <div class="p-2 border">Flex item 2</div>
+                                        <div class="p-2 border">Flex item 3</div>
+                                    </div>
+                                    <br>
+                                    <p>.align-items-center:</p>
+                                    <code>
+                                        &lt;div class="d-flex align-items-center bg-light"&gt; <br>
+                                            &lt;div class="p-2 border"&gt; Flex item 1 &lt;/div&gt; <br>
+                                            &lt;div class="p-2 border"&gt; Flex item 2 &lt;/div&gt; <br>
+                                            &lt;div class="p-2 border"&gt; Flex item 3 &lt;/div&gt; <br>
+                                        &lt;/div&gt;
+                                    </code>
+                                    <div class="d-flex align-items-center bg-light" style="height:150px">
+                                        <div class="p-2 border">Flex item 1</div>
+                                        <div class="p-2 border">Flex item 2</div>
+                                        <div class="p-2 border">Flex item 3</div>
+                                    </div>
+                                    <br>
+                                    <p>.align-items-baseline:</p>
+                                    <code>
+                                        &lt;div class="d-flex align-items-baseline bg-light"&gt; <br>
+                                            &lt;div class="p-2 border"&gt; Flex item 1 &lt;/div&gt; <br>
+                                            &lt;div class="p-2 border"&gt; Flex item 2 &lt;/div&gt; <br>
+                                            &lt;div class="p-2 border"&gt; Flex item 3 &lt;/div&gt; <br>
+                                        &lt;/div&gt;
+                                    </code>
+                                    <div class="d-flex align-items-baseline bg-light" style="height:150px">
+                                        <div class="p-2 border">Flex item 1</div>
+                                        <div class="p-2 border">Flex item 2</div>
+                                        <div class="p-2 border">Flex item 3</div>
+                                    </div>
+                                    <br>
+                                    <p>.align-items-stretch (default):</p>
+                                    <code>
+                                        &lt;div class="d-flex align-items-stretch bg-light"&gt; <br>
+                                            &lt;div class="p-2 border"&gt; Flex item 1 &lt;/div&gt; <br>
+                                            &lt;div class="p-2 border"&gt; Flex item 2 &lt;/div&gt; <br>
+                                            &lt;div class="p-2 border"&gt; Flex item 3 &lt;/div&gt; <br>
+                                        &lt;/div&gt;
+                                    </code>
+                                    <div class="d-flex align-items-stretch bg-light" style="height:150px">
+                                        <div class="p-2 border">Flex item 1</div>
+                                        <div class="p-2 border">Flex item 2</div>
+                                        <div class="p-2 border">Flex item 3</div>
+                                    </div>
+                                    <br>
+
+                                    <h2>Align Self</h2>
+                                    <p>.align-self-start:</p>
+                                    <code>
+                                            &lt;div class="d-flex bg-light"&gt; <br>
+                                                &lt;div class="p-2 border"&gt; Flex item 1 &lt;/div&gt; <br>
+                                                &lt;div class="p-2 border align-self-start"&gt; Flex item 2 &lt;/div&gt; <br>
+                                                &lt;div class="p-2 border"&gt; Flex item 3 &lt;/div&gt; <br>
+                                            &lt;/div&gt;
+                                        </code>
+                                    <div class="d-flex bg-light" style="height:150px">
+                                        <div class="p-2 border">Flex item 1</div>
+                                        <div class="p-2 border align-self-start">Flex item 2</div>
+                                        <div class="p-2 border">Flex item 3</div>
+                                    </div>
+                                    <br>
+                                    <p>.align-self-end:</p>
+                                    <code>
+                                        &lt;div class="d-flex bg-light"&gt; <br>
+                                            &lt;div class="p-2 border"&gt; Flex item 1 &lt;/div&gt; <br>
+                                            &lt;div class="p-2 border align-self-end"&gt; Flex item 2 &lt;/div&gt; <br>
+                                            &lt;div class="p-2 border"&gt; Flex item 3 &lt;/div&gt; <br>
+                                        &lt;/div&gt;
+                                    </code>
+                                    <div class="d-flex bg-light" style="height:150px">
+                                        <div class="p-2 border">Flex item 1</div>
+                                        <div class="p-2 border align-self-end">Flex item 2</div>
+                                        <div class="p-2 border">Flex item 3</div>
+                                    </div>
+                                    <br>
+                                    <p>.align-self-center:</p>
+                                    <code>
+                                        &lt;div class="d-flex bg-light"&gt; <br>
+                                            &lt;div class="p-2 border"&gt; Flex item 1 &lt;/div&gt; <br>
+                                            &lt;div class="p-2 border align-self-center"&gt; Flex item 2 &lt;/div&gt; <br>
+                                            &lt;div class="p-2 border"&gt; Flex item 3 &lt;/div&gt; <br>
+                                        &lt;/div&gt;
+                                    </code>
+                                    <div class="d-flex bg-light" style="height:150px">
+                                        <div class="p-2 border">Flex item 1</div>
+                                        <div class="p-2 border align-self-center">Flex item 2</div>
+                                        <div class="p-2 border">Flex item 3</div>
+                                    </div>
+                                    <br>
+                                    <p>.align-self-baseline:</p>
+                                    <code>
+                                        &lt;div class="d-flex bg-light"&gt; <br>
+                                            &lt;div class="p-2 border"&gt; Flex item 1 &lt;/div&gt; <br>
+                                            &lt;div class="p-2 border align-self-baseline"&gt; Flex item 2 &lt;/div&gt; <br>
+                                            &lt;div class="p-2 border"&gt; Flex item 3 &lt;/div&gt; <br>
+                                        &lt;/div&gt;
+                                    </code>
+                                    <div class="d-flex bg-light" style="height:150px">
+                                        <div class="p-2 border">Flex item 1</div>
+                                        <div class="p-2 border align-self-baseline">Flex item 2</div>
+                                        <div class="p-2 border">Flex item 3</div>
+                                    </div>
+                                    <br>
+                                    <p>.align-self-stretch (default):</p>
+                                    <code>
+                                        &lt;div class="d-flex bg-light"&gt; <br>
+                                            &lt;div class="p-2 border"&gt; Flex item 1 &lt;/div&gt; <br>
+                                            &lt;div class="p-2 border align-self-stretch"&gt; Flex item 2 &lt;/div&gt; <br>
+                                            &lt;div class="p-2 border"&gt; Flex item 3 &lt;/div&gt; <br>
+                                        &lt;/div&gt;
+                                    </code>
+                                    <div class="d-flex bg-light" style="height:150px">
+                                        <div class="p-2 border">Flex item 1</div>
+                                        <div class="p-2 border align-self-stretch">Flex item 2</div>
+                                        <div class="p-2 border">Flex item 3</div>
+                                    </div>
+                                    <br>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#seis" aria-expanded="false" aria-controls="collapseThree">
                             Javascript (ES6,7,8,9,10)
                           </button>
                             </h2>
                         </div>
-                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                        <div id="seis" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                            <div class="card-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
+                                on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft
+                                beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#siete" aria-expanded="false" aria-controls="collapseThree">
+                            JQuery
+                          </button>
+                            </h2>
+                        </div>
+                        <div id="siete" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                            <div class="card-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
+                                on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft
+                                beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#ocho" aria-expanded="false" aria-controls="collapseThree">
+                            TypeScript 3
+                          </button>
+                            </h2>
+                        </div>
+                        <div id="ocho" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                            <div class="card-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
+                                on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft
+                                beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#nueve" aria-expanded="false" aria-controls="collapseThree">
+                            Angular 8
+                          </button>
+                            </h2>
+                        </div>
+                        <div id="nueve" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                             <div class="card-body">
                                 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
                                 on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft
