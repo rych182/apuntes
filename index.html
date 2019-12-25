@@ -30,6 +30,26 @@
             <div class="col">
                 <div class="accordion" id="accordionExample">
                     <div class="card">
+                        <div class="card-header" id="headingThree">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#libros" aria-expanded="false" aria-controls="collapseThree">
+                            e-Books
+                          </button>
+                            </h2>
+                        </div>
+                        <div id="libros" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div class="container">
+                                    <h2>Lista</h2>
+                                    <ul>
+                                        <li><a href="libros/progit_v2.1.pdf">Git PRO</a></li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
                         <div class="card-header" id="headngOne">
                             <h2 class="mb-0">
                                 <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#uno" aria-expanded="true" aria-controls="collapseOne">
@@ -111,6 +131,14 @@
                                 <h4>git show </h4>
                                 <code>git show v0.3</code>
                                 <p>Te muestra el tag con su información</p>
+                                <img src="img/show-tag-anotada.png" alt="">
+                                <h4>Etiquetar un commit</h4>
+                                <code>git tag -a v1.2 9fceb02</code>
+                                <h4>Subir varias etiquetas</h4>
+                                <code>git push origin --tags</code>
+                                <h4>Subir etiquetas a Github</h4>
+                                <code>git push origin v1.5</code>
+                                <p><b>IMPORTANTE:</b>No se pueden modificar etiquetas a menos que crees una rama y luego hagas un merge <code>git checkout -b version2 v2.0.0</code></p>
                                 <h4>Bajar cambios de un repositorio donde trabajamos en equipo</h4>
                                 <code>git fetch origin</code> después fusionamos <code>git merge origin/master</code> Si existe un conflicto, solo borrar HEAD y los signos, haces tu cambio y un nuevo commit
                                 <h4>Git Pull</h4>
