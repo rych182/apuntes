@@ -461,28 +461,28 @@
                                         <li><b>Subrayado <code>&lt;u&gt;</code></b>:<u>This line of text will render as underlined</u></li>
                                         <li><b>Letra pequeña <code>&lt;small&gt;</code></b><small>This line of text is meant to be treated as fine print.</small></li>
                                         <li class="text-muted">
-                                            This text is muted
+                                            This text is muted <code> class="text-muted"</code>
                                         </li>
                                         <li class="text-primary">
-                                            This text is important.
+                                            This text is important. <code> class="text-primary"</code>
                                         </li>
                                         <li class="text-success">
-                                            This text indicates success.
+                                            This text indicates success. <code> class="text-success"</code>
                                         </li>
                                         <li class="text-info">
-                                            This text represents some information.
+                                            This text represents some information. <code> class="text-info"</code>
                                         </li>
                                         <li class="text-warning">
-                                            This text represents a warning.
+                                            This text represents a warning. <code> class="text-warning"</code>
                                         </li>
                                         <li class="text-danger">
-                                            This text represents danger.
+                                            This text represents danger. <code> class="text-danger"</code>
                                         </li>
                                         <li class="text-secondary">
-                                            Secondary text.
+                                            Secondary text. <code> class="text-secondary"</code>
                                         </li>
                                         <li class="text-dark">
-                                            This text is dark grey.
+                                            This text is dark grey. <code> class="text-dark"</code>
                                         </li>
                                         <li class="text-white" style="background: purple;">
                                             También hay text-white
@@ -709,9 +709,337 @@
                                         <footer class="blockquote-footer">Someone famous in <cite title="Source Title">La etiqueta <code>&lt;cite&gt;</code> sirve para citar</cite></footer>
                                     </blockquote>
                                 </div>
+
+                                <div class="container border">
+
+                                    <h2>Botones</h2>
+                                    <hr> <br>
+                                    <button class="btn btn-primary">btn btn-primary</button>
+                                    <button class="btn btn-secondary">btn btn-secondary</button>
+                                    <button class="btn btn-success">btn btn-success</button>
+                                    <button class="btn btn-info">btn btn-info</button>
+                                    <button class="btn btn-warning">btn btn-warning</button>
+                                    <button class="btn btn-dark">btn btn-dark</button>
+                                    <button class="btn btn-danger">btn btn-danger</button>
+                                    <button class="btn btn-light">btn btn-light</button>
+
+                                    <p><b>NOTA:</b> Las etiquetas <code> &lt;a&gt; &lt;button&gt;</code> e <code>&lt;input&gt;</code> pueden tener las clases <code>btn</code> para que tengan estilos de botones</p>
+                                    <h2>Botones outline</h2>
+                                    <hr><br>
+                                    <button class="btn btn-outline-primary">btn btn-outline-primary</button>
+                                    <button class="btn btn-outline-secondary">btn btn-outline-secondary</button>
+                                    <button class="btn btn-outline-success">btn btn-outline-success</button>
+                                    <button class="btn btn-outline-info">btn btn-outline-info</button>
+                                    <button class="btn btn-outline-warning">btn btn-outline-warning</button>
+                                    <button class="btn btn-outline-dark">btn btn-outline-dark</button>
+                                    <button class="btn btn-outline-danger">btn btn-outline-danger</button>
+                                    <button class="btn btn-outline-light">btn btn-outline-light</button>
+
+                                    <h2>Botones largos</h2>
+                                    <hr><br>
+                                    <button class="btn btn-primary btn-lg">largo</button><i>btn btn-primary btn-lg</i>
+                                    <button class="btn btn-info btn-lg">largo</button><i>btn btn-info btn-lg</i>
+
+                                    <h2>Botones cortos</h2>
+                                    <hr><br>
+                                    <button class="btn btn-primary btn-sm">corto</button><i>btn btn-primary btn-sm</i>
+                                    <button class="btn btn-info btn-sm">corto</button><i>btn btn-info btn-sm</i>
+
+                                    <h2>Botones block</h2>
+                                    <hr><br>
+                                    <button class="btn btn-primary btn-block">block</button><i>btn btn-block btn-lg</i>
+                                    <button class="btn btn-info btn-block">block</button><i>btn btn-block btn-lg</i>
+
+                                    <h2>Botones disabled</h2>
+                                    <hr><br>
+                                    <button class="btn btn-primary btn-lg" disabled>largo</button><i>btn btn-primary btn-lg</i>
+                                    <button class="btn btn-info btn-sm" disabled>corto</button><i>btn btn-info btn-sm</i>
+
+                                    <hr>
+
+                                    <h2>Cards</h2>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="card" style="width:500px">
+                                                <img class="card-img-top" src="img/goku0.jpg" alt="Card image">
+                                                <div class="card-img-overlay">
+                                                    <h4 class="card-title">John Doe</h4>
+                                                    <p class="card-text">Some example text.</p>
+                                                    <a href="#" class="btn btn-primary">See Profile</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="card" style="width:500px">
+                                                <img class="card-img-top" src="img/goku0.jpg" alt="Card image">
+                                                <div class="card-img-overlay">
+                                                    <h4 class="card-title">John Doe</h4>
+                                                    <p class="card-text">Some example text.</p>
+                                                    <a href="#" class="btn btn-primary">See Profile</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <h2>Card con color de fondo</h2>
+                                    <div class="col-6 mt-3">
+                                        <div class="card bg-primary" style="width:500px">
+                                            <div class="card-body">
+                                                <h4 class="card-title">John Doe</h4>
+                                                <p class="card-text">Some example text.</p>
+                                                <a href="#" class="btn btn-primary">See Profile</a>
+                                            </div>
+
+                                        </div>
+
+                                        <h2>También hay bordes <code>border-primary</code></h2>
+                                        <div class="col-6 mt-3">
+                                            <div class="card border-primary" style="width:500px">
+                                                <div class="card-body">
+                                                    <h4 class="card-title">John Doe</h4>
+                                                    <p class="card-text">Some example text.</p>
+                                                    <a href="#" class="btn btn-primary">See Profile</a>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <h2>formularios</h2>
+                                        <div class="col-6 border">
+                                            <form class="form-group">
+                                                <label for="name">Nombre</label>
+                                                <input type="text" placeholder="Nombre" class="form-control">
+                                                <label for="password">Contraseña</label>
+                                                <input type="password" class="form-control" placeholder="Contraseña">
+                                                <label for="name">Texto</label>
+                                                <textarea class="form-control" name="" id="" cols="10" rows="2" placeholder="Escribe"></textarea>
+                                                <label for="country">País</label>
+                                                <select class="form-control" name="" id="">
+                                                    <option value="Mexico">Mexico</option>
+                                                    <option value="Mexico">Brasil</option>
+                                                    <option value="Mexico">Rusia</option>
+                                                    <option value="Mexico">Polonia</option>
+                                                </select>
+                                                <div class="form-check">
+                                                    <label for="hombre" class="form-check-label">
+                                                        <input type="radio" name="hombre" id="hombre" class="form-check-input" value="option1" checked>Hombre
+                                                    </label>
+
+
+                                                </div>
+                                                <div class="form-check">
+                                                    <label for="mujer" class="form-check-label">
+                                                        <input type="radio" name="mujer" id="mujer" class="form-check-input" value="option2">Mujer
+                                                        
+                                                    </label>
+
+
+                                                </div>
+                                                <div class="form-check">
+                                                    <label for="" class="form-check-label">
+                                                        
+                                                        
+                                                    </label>
+                                                    <input type="checkbox" class="form-check-input">Acepto terminos y condiciones
+                                                </div>
+                                            </form>
+
+                                        </div>
+                                        <hr>
+                                        <form class="border mt-3 p-2">
+                                            <div class="form-group row">
+                                                <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                                                <div class="col-sm-10">
+                                                    <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                                                <div class="col-sm-10">
+                                                    <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                                                </div>
+                                            </div>
+                                            <fieldset class="form-group">
+                                                <div class="row">
+                                                    <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
+                                                    <div class="col-sm-10">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                                                            <label class="form-check-label" for="gridRadios1">
+                                                      First radio
+                                                    </label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                                                            <label class="form-check-label" for="gridRadios2">
+                                                      Second radio
+                                                    </label>
+                                                        </div>
+                                                        <div class="form-check disabled">
+                                                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
+                                                            <label class="form-check-label" for="gridRadios3">
+                                                      Third disabled radio
+                                                    </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                            <div class="form-group row">
+                                                <div class="col-sm-2">Checkbox</div>
+                                                <div class="col-sm-10">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" id="gridCheck1">
+                                                        <label class="form-check-label" for="gridCheck1">
+                                                    Example checkbox
+                                                  </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <div class="col-sm-10">
+                                                    <button type="submit" class="btn btn-primary">Sign in</button>
+                                                </div>
+                                            </div>
+                                        </form>
+
+                                        <h2>Formulario con grid y Flexbox hecha por mi</h2>
+                                        <div class="container border">
+                                            <form class="form-group col-md-12 col-lg-12">
+                                                <div class="col-md-12">
+                                                    <label for="nombre">Nombre</label>
+                                                    <input type="text" placeholder="Nombre" class="form-control">
+                                                </div>
+                                                <div class=" col-md-12">
+                                                    <label for="apellido">Apellido</label>
+                                                    <input type="text" placeholder="Apellido" class="form-control">
+                                                </div>
+
+                                                <div class=" col-md-12">
+                                                    <label for="password">Contraseña</label>
+                                                    <input type="password" placeholder="Contraseña" class="form-control">
+                                                </div>
+                                                <div class=" col-md-12">
+                                                    <div class="form-check pt-3">
+                                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                                                        <label class="form-check-label" for="gridRadios1">Hombre</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                                                        <label class="form-check-label" for="gridRadios2">Mujer</label>
+                                                    </div>
+                                                </div>
+                                                <div class=" col-md-12">
+                                                    <div class="form-check" style="margin-left: -17px">
+                                                        <label for="codigo">Código Postal</label>
+                                                        <input type="text" placeholder="Codigo postal" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class=" col-md-12">
+                                                    <div class="form-check">
+                                                        <label for="pais">País</label>
+                                                        <select name="" id="" class="form-control">
+                                                            <option value="Mexico">Mexico</option>
+                                                            <option value="Germany">Germany</option>
+                                                            <option value="USA">USA</option>
+                                                            <option value="Japan">Japan</option>
+                                                            <option value="Australia">Australia</option>
+                                                            <option value="Canada">Canada</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 mt-2">
+                                                    <button class="btn btn-primary btn-block">Enviar</button>
+                                                </div>
+
+                                            </form>
+
+                                            <hr>
+
+                                        </div>
+                                    </div>
+
+                                    <h2>Formulario con grid y Flexbox hecho ayuda</h2>
+                                    <div class="container">
+                                        <div class="row mt-3">
+                                            <div class="col">
+                                                <form action="" class="border border-danger p-2">
+                                                    <div class="form-group row">
+                                                        <div class="col-md-6 col-12">
+                                                            <label for="nombre">Nombre</label>
+                                                            <input type="text" class="form-control" placeholder="Nombre">
+                                                        </div>
+                                                        <div class="col-md-6 col-12">
+                                                            <label for="password">Contraseña</label>
+                                                            <input type="text " name=" " id=" " class="form-control " placeholder="Contraseña" aria-describedby="helpId ">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group row">
+                                                        <div class="col-md-6 col-12">
+                                                            <label for="texto">Texto</label>
+                                                            <textarea name="" id="" cols="15" rows="5" class="form-control"></textarea>
+                                                        </div>
+                                                        <div class="col-md-3 col-12">
+                                                            <label for="sexo">Sexo</label>
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                                                                <label class="form-check-label" for="gridRadios2">Hombre</label>
+                                                            </div>
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                                                                <label class="form-check-label" for="gridRadios2">Mujer</label>
+                                                            </div>
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" name="gridRadios" id="gridRadios2" value="option2">
+                                                                <label class="form-check-label" for="gridRadios2">Terminos y condiciones</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3 col-12">
+                                                            <div class="form-check">
+                                                                <label for="pais">País</label>
+                                                                <select name="" id="" class="form-control">
+                                                                    <option value="Mexico">Mexico</option>
+                                                                    <option value="Germany">Germany</option>
+                                                                    <option value="USA">USA</option>
+                                                                    <option value="Japan">Japan</option>
+                                                                    <option value="Australia">Australia</option>
+                                                                    <option value="Canada">Canada</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </form>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <hr>
+
+                                    <h2><a href="https://getbootstrap.com/docs/4.0/components/list-group/">Tablas</a></h2>
+
+                                    <div class="list-group">
+                                        <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+
+
+                                        <a href="#" class="list-group-item list-group-item-action list-group-item-primary">This is a primary list group item</a>
+                                        <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">This is a secondary list group item</a>
+                                        <a href="#" class="list-group-item list-group-item-action list-group-item-success">This is a success list group item</a>
+                                        <a href="#" class="list-group-item list-group-item-action list-group-item-danger">This is a danger list group item</a>
+                                        <a href="#" class="list-group-item list-group-item-action list-group-item-warning">This is a warning list group item</a>
+                                        <a href="#" class="list-group-item list-group-item-action list-group-item-info">This is a info list group item</a>
+                                        <a href="#" class="list-group-item list-group-item-action list-group-item-light">This is a light list group item</a>
+                                        <a href="#" class="list-group-item list-group-item-action list-group-item-dark">This is a dark list group item</a>
+                                    </div>
+                                </div>
+
+
                             </div>
                         </div>
                     </div>
+
+
                     <div class="card">
                         <div class="card-header" id="headingThree">
                             <h2 class="mb-0">
@@ -1058,6 +1386,49 @@
                                 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
                                 on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft
                                 beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#empleo" aria-expanded="false" aria-controls="collapseThree">
+                            Jobs
+                          </button>
+                            </h2>
+                        </div>
+                        <div id="empleo" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <h2>World class companies</h2>
+                                <ul>
+                                    <li><a href="http://nearshoredevs.com/">Near Shore devs</a></li>
+                                    <li>
+                                        <a href=""></a>
+                                    </li>
+                                    <li></li>
+                                </ul>
+                                <h2>Remote Jobs</h2>
+                                <ul>
+                                    <li><a href="https://terminal.io/">Terminal.io</a></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <h2>Best Mexican IT companies</h2>
+                                <ul>
+                                    <li><a href="https://www.abraxas.ventures/careers">Abraxas</a></li>
+                                    <li><a href="https://michelada.io/">Michelada.io</a></li>
+                                    <li><a href="https://tango.io/">Tango.io</a></li>
+                                    <li><a href="https://svitla.com/">Svitla</a></li>
+                                    <li><a href="https://www.scio.com.mx/">Scio</a></li>
+
+                                </ul>
+                                <h2>Job seekers pages</h2>
+                                <ul>
+                                    <li>
+                                        <a href="https://www.randstad.co.uk/">Randstad</a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
