@@ -96,6 +96,26 @@
             transform: translate(-50%, -50%);
             color: white;
         }
+        
+        .thumb {
+            margin: 10px;
+            border: 5px solid #ddd;
+            width: 150px;
+        }
+        
+        .thumb:hover {
+            box-shadow: 0 0 2px 1px rgba(0, 140, 186, .5);
+            width: 200px;
+        }
+        
+        .polaroid {
+            background-color: burlywood;
+            width: 300px;
+            padding: 10px;
+            margin: auto;
+            margin-bottom: 10px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
+        }
     </style>
 
 </head>
@@ -488,7 +508,7 @@
                                         <div class="card-header" id="tresPuntoCuatro">
                                             <h2 class="mb-0">
                                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#otro3-4" aria-expanded="false">
-                                            Positions
+                                            Positions and Images
                                           </button>
                                             </h2>
                                         </div>
@@ -504,11 +524,79 @@
                                                 <img style="position: relative; top:-110px; left:800px" src="img/bojack.jpg" alt="bojack">
                                                 <img style="position: absolute; right: 160px; bottom:250px" src="img/bitcoin.jpg" alt="">
 
-                                                <h4>=== Cajas DENTRO de una caja padre RELATIVE===</h>
-                                                    <p>hijo relative: toma la esquina de la caja padre como referencia, si lo mueves en negativo se sale de la caja por "ENCIMA" de la caja padre</p>
-                                                    <p>hijo static: No se mueve para ningún lado</p>
-                                                    <p>Hijo fixed:Toma como referencia el navegador, se pone por encima del padre</p>
-                                                    <p>hijo absolue: Se pone encima de la caja padre</p>
+                                                <h4>=== Cajas DENTRO de una caja padre RELATIVE===</h4>
+                                                <p>hijo relative: toma la esquina de la caja padre como referencia, si lo mueves en negativo se sale de la caja por "ENCIMA" de la caja padre</p>
+                                                <p>hijo static: No se mueve para ningún lado</p>
+                                                <p>Hijo fixed:Toma como referencia el navegador, se pone por encima del padre</p>
+                                                <p>hijo absolue: Se pone encima de la caja padre</p>
+
+                                                <h5>Consejo</h5>
+                                                <p>Puedes modificar el tamaño de las imagenes usando "Width" y "height" en la misma etiqueta HTML</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="card">
+                                        <div class="card-header" id="tresPuntoCinco">
+                                            <h2 class="mb-0">
+                                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#otro3-5" aria-expanded="false">
+                                            Auto Property
+                                          </button>
+                                            </h2>
+                                        </div>
+                                        <div id="otro3-5" class="collapse" aria-labelledby="tresPuntoCinco" data-parent="#accordionExample1">
+                                            <div class="card-body">
+                                                <div class="border mt-2" style="width: 75%; height:150px;">
+                                                    <h3 style="margin:auto; width:50%; background-color:blue; text-align: center;">Titulo con la propiedad auto</h3>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="card">
+                                        <div class="card-header" id="tresPuntoSeis">
+                                            <h2 class="mb-0">
+                                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#otro3-6" aria-expanded="false">
+                                            Efecto Thumbnail y Polaroid
+                                          </button>
+                                            </h2>
+                                        </div>
+                                        <div id="otro3-6" class="collapse" aria-labelledby="tresPuntoSeis" data-parent="#accordionExample1">
+                                            <div class="card-body">
+
+                                                <div class="d-flex justify-content-center">
+                                                    <div class="mr-5">
+                                                        <img src="img/chihiro.jpg" class="thumb" alt="chihiro">
+                                                    </div>
+                                                    <div>
+                                                        <br>
+                                                        <code>  .thumb {<br>
+                                                            margin: 10px;<br>
+                                                            border: 5px solid #ddd; <br>
+                                                            width: 150px; <br>
+                                                            }
+                                                        </code>
+                                                    </div>
+                                                    <div class="text-center">
+                                                        <code>  .thumb:hover {<br>
+                                                            box-shadow: 0 0 2px 1px rgba(0, 140, 186, .5);<br>
+                                                            width: 200px;<br>
+                                                       }
+                                                       </code>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="polaroid">
+                                                    <img src="img/batman.jpg" alt="batman" width="280">
+                                                    <div>
+                                                        <p>Batman y Gatubela</p>
+                                                    </div>
+                                                </div>
+
                                             </div>
                                         </div>
                                     </div>
