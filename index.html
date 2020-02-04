@@ -471,9 +471,16 @@
                                                 <p>Pone el tamaño de la tipografía</p>
                                                 <code>Font-family: 'Roboto'</code><br>
                                                 <p style="word-spacing: 5px;"><code>word-spacing</code> deja un espacio entre cada palabra</p>
-                                                <p><code>text-align:center/right;</code>Centra el texto o lo pone a la derecha</p>
+                                                <p style="text-align: center"><code>text-align:center/right;</code>Centra el texto o lo pone a la derecha</p cl>
                                                 <p><code>text-decoration:none/overline/underline/line-through</code> para que no tenga nada de CSS predeterminado</p>
+                                                <p style="text-decoration: overline;">text-decoration: overline</p>
+                                                <p style="text-decoration: underline;">text-decoration: underline</p>
+                                                <p style="text-decoration: line-through;">text-decoration: line-through</p>
                                                 <p><code>text-transform: uppercase/lowercase</code>texto en mayúsculas o minúsculas</p>
+
+                                                <h2 style="text-align: center;">Sombras</h2>
+                                                <p style="text-shadow: 2px 2px 2px purple;">text-shadow: 2px 2px 2px purple; Primer parameto: horizontal, Segundo parametro: vertical, Tercer parametro: Blur, Cuarto parametro: color(nombre,rgba ó hexadecimal)</p>
+                                                <p style="text-shadow: 2px 2px 2px purple;">El impacto de las sombras es "resaltar las fuentes"</p>
                                             </div>
                                         </div>
                                     </div>
@@ -481,15 +488,27 @@
                                         <div class="card-header" id="tresPuntoCuatro">
                                             <h2 class="mb-0">
                                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#otro3-4" aria-expanded="false">
-                                            Colapso #4
+                                            Positions
                                           </button>
                                             </h2>
                                         </div>
                                         <div id="otro3-4" class="collapse" aria-labelledby="tresPuntoCuatro" data-parent="#accordionExample1">
                                             <div class="card-body">
-                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                                                on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-                                                occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                                <h3>position relative: mueve tu imagen tomando como base la caja padre.BLABLABLA</h3>
+                                                <h4>position fixed: se quedara en el mismo lugar AUNQUE HAGAS SCROLL.</h4>
+                                                <h5>Position absolute: se coloca encima del relative <b>PERO</b> los pixeles se cuentan de otra manera</h5>
+                                                <h6>bottom:10px, desde abajo 10px hacia arriba</h6>
+                                                <h6>top:10px, desde arriba 10px hacia abajo</h6>
+                                                <h6>right:10px, desde la derecha 10px hacia la izquierda</h6>
+                                                <h6>left:10px, desde la izquierda 10px hacia la derecha</h6>
+                                                <img style="position: relative; top:-110px; left:800px" src="img/bojack.jpg" alt="bojack">
+                                                <img style="position: absolute; right: 160px; bottom:250px" src="img/bitcoin.jpg" alt="">
+
+                                                <h4>=== Cajas DENTRO de una caja padre RELATIVE===</h>
+                                                    <p>hijo relative: toma la esquina de la caja padre como referencia, si lo mueves en negativo se sale de la caja por "ENCIMA" de la caja padre</p>
+                                                    <p>hijo static: No se mueve para ningún lado</p>
+                                                    <p>Hijo fixed:Toma como referencia el navegador, se pone por encima del padre</p>
+                                                    <p>hijo absolue: Se pone encima de la caja padre</p>
                                             </div>
                                         </div>
                                     </div>
