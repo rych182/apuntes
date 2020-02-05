@@ -197,6 +197,16 @@
             filter: sepia(.5);
         }
         
+        .polaroid8 {
+            position: relative;
+            background-color: burlywood;
+            width: 300px;
+            padding: 10px;
+            margin: auto;
+            margin-bottom: 10px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
+        }
+        
         .polaroid:hover {
             opacity: .4;
         }
@@ -243,14 +253,14 @@
             <div class="col">
                 <div class="accordion" id="accordionExample">
                     <div class="card">
-                        <div class="card-header" id="headingThree">
+                        <div class="card-header" id="books-0">
                             <h2 class="mb-0">
                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#libros" aria-expanded="false">
                             e-Books
                           </button>
                             </h2>
                         </div>
-                        <div id="libros" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                        <div id="libros" class="collapse" aria-labelledby="books-0" data-parent="#accordionExample">
                             <div class="card-body">
                                 <div class="container">
                                     <h2>Lista</h2>
@@ -263,7 +273,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <div class="card-header" id="headngOne">
+                        <div class="card-header" id="git-0">
                             <h2 class="mb-0">
                                 <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#uno" aria-expanded="false">
                             Git y GitHub
@@ -271,7 +281,7 @@
                             </h2>
                         </div>
 
-                        <div id="uno" class="collapse show" aria-labelledby="headngOne" data-parent="#accordionExample">
+                        <div id="uno" class="collapse show" aria-labelledby="git-0" data-parent="#accordionExample">
                             <div class="card-body">
                                 <h4>Configuraciones básicas</h4>
                                 <ol>
@@ -372,14 +382,14 @@
                         </div>
                     </div>
                     <div class="card">
-                        <div class="card-header" id="headingThree">
+                        <div class="card-header" id="vsc-0">
                             <h2 class="mb-0">
                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#dos" aria-expanded="false">
                             Visual Studio Code
                           </button>
                             </h2>
                         </div>
-                        <div id="dos" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                        <div id="dos" class="collapse" aria-labelledby="vsc-0" data-parent="#accordionExample">
                             <div class="card-body">
                                 <div class="container">
                                     <h1>Pluggins</h1>
@@ -400,14 +410,14 @@
                         </div>
                     </div>
                     <div class="card">
-                        <div class="card-header" id="headingTwo">
+                        <div class="card-header" id="css3-0">
                             <h2 class="mb-0">
                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#tres" aria-expanded="false">
                             CSS3
                           </button>
                             </h2>
                         </div>
-                        <div id="tres" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                        <div id="tres" class="collapse" aria-labelledby="css3-0" data-parent="#accordionExample">
                             <div class="card-body">
                                 <div class="accordion" id="accordionExample1">
                                     <div class="card">
@@ -648,6 +658,10 @@
 
                                                 <h5>Consejo</h5>
                                                 <p>Puedes modificar el tamaño de las imagenes usando "Width" y "height" en la misma etiqueta HTML</p>
+
+                                                <hr>
+                                                <h3 class="text-center">Texto en imágenes</h3>
+                                                <p>La imagen debe tener una posición relativa y el texto una posición absoluta</p>
                                             </div>
                                         </div>
                                     </div>
@@ -676,7 +690,7 @@
                                         <div class="card-header" id="tresPuntoSeis">
                                             <h2 class="mb-0">
                                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#otro3-6" aria-expanded="false">
-                                            Efecto Thumbnail y Polaroid
+                                            Efecto Thumbnail y Polaroid(Y otras cosas).
                                           </button>
                                             </h2>
                                         </div>
@@ -705,6 +719,9 @@
                                                     </div>
                                                 </div>
 
+                                                <div class="d-flex">
+
+                                                </div>
 
                                                 <div class="polaroid">
                                                     <img src="img/batman.jpg" alt="batman" width="280">
@@ -779,6 +796,22 @@
                                                         <p>filter: sepia(.2);</p>
                                                     </div>
                                                 </div>
+
+                                                <div class="polaroid8">
+                                                    <img src="img/batman0.jpg" alt="batman" width="280">
+                                                    <p style="color: cornsilk;text-align: center; position: absolute;top: 160px; left: 20px;">Este texto está en posición <b>absoluta</b> y le doy colocación con <b>top y left</b></p>
+                                                    <div>
+                                                        <code>  .polaroid8 {<br>
+                                                            position: relative;<br>
+                                                            background-color: burlywood; <br>
+                                                            width: 300px; <br>
+                                                            padding: 10px;<br>
+                                                            margin: auto;<br>
+                                                            margin-bottom: 10px;<br>
+                                                            box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);<br>
+                                                        </code>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -788,14 +821,14 @@
                         </div>
                     </div>
                     <div class="card">
-                        <div class="card-header" id="headingThree">
+                        <div class="card-header" id="sass-0">
                             <h2 class="mb-0">
                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#cuatro" aria-expanded="false">
                             SASS
                           </button>
                             </h2>
                         </div>
-                        <div id="cuatro" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                        <div id="cuatro" class="collapse" aria-labelledby="sass-0" data-parent="#accordionExample">
                             <div class="card-body">
                                 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
                                 on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft
@@ -804,14 +837,14 @@
                         </div>
                     </div>
                     <div class="card">
-                        <div class="card-header" id="headingThree">
+                        <div class="card-header" id="bootstrap0">
                             <h2 class="mb-0">
                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#cinco" aria-expanded="false">
                             Bootstrap 4
                           </button>
                             </h2>
                         </div>
-                        <div id="cinco" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                        <div id="cinco" class="collapse" aria-labelledby="bootstrap0" data-parent="#accordionExample">
                             <div class="card-body">
 
                                 <div id="accordion">
@@ -1974,14 +2007,14 @@
                     </div>
 
                     <div class="card">
-                        <div class="card-header" id="headingThree">
+                        <div class="card-header" id="javascript-0">
                             <h2 class="mb-0">
                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#seis" aria-expanded="false">
                             Javascript (ES6,7,8,9,10)
                           </button>
                             </h2>
                         </div>
-                        <div id="seis" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                        <div id="seis" class="collapse" aria-labelledby="javascript-0" data-parent="#accordionExample">
                             <div class="card-body">
 
                                 <div id="es6">
@@ -2040,14 +2073,14 @@
                         </div>
                     </div>
                     <div class="card">
-                        <div class="card-header" id="headingThree">
+                        <div class="card-header" id="jquery-0">
                             <h2 class="mb-0">
                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#siete" aria-expanded="false">
                             JQuery
                           </button>
                             </h2>
                         </div>
-                        <div id="siete" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                        <div id="siete" class="collapse" aria-labelledby="jquery-0" data-parent="#accordionExample">
                             <div class="card-body">
                                 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
                                 on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft
@@ -2056,14 +2089,14 @@
                         </div>
                     </div>
                     <div class="card">
-                        <div class="card-header" id="headingThree">
+                        <div class="card-header" id="typescript-0">
                             <h2 class="mb-0">
                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#ocho" aria-expanded="false" aria-controls="collapseThree">
                             TypeScript 3
                           </button>
                             </h2>
                         </div>
-                        <div id="ocho" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                        <div id="ocho" class="collapse" aria-labelledby="typescript-0" data-parent="#accordionExample">
                             <div class="card-body">
 
 
@@ -2124,14 +2157,14 @@
                         </div>
                     </div>
                     <div class="card">
-                        <div class="card-header" id="headingThree">
+                        <div class="card-header" id="angular-0">
                             <h2 class="mb-0">
                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#nueve" aria-expanded="false" aria-controls="collapseThree">
                             Angular 8
                           </button>
                             </h2>
                         </div>
-                        <div id="nueve" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                        <div id="nueve" class="collapse" aria-labelledby="angular-0" data-parent="#accordionExample">
                             <div class="card-body">
 
                                 <div id="angular8">
@@ -2192,14 +2225,14 @@
                     </div>
 
                     <div class="card">
-                        <div class="card-header" id="headingThree">
+                        <div class="card-header" id="jobs-0">
                             <h2 class="mb-0">
                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#empleo" aria-expanded="false" aria-controls="collapseThree">
                             Jobs
                           </button>
                             </h2>
                         </div>
-                        <div id="empleo" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                        <div id="empleo" class="collapse" aria-labelledby="jobs-0" data-parent="#accordionExample">
                             <div class="card-body">
 
                                 <div class="d-flex">
@@ -2474,14 +2507,14 @@
                         </div>
 
                         <div class="card">
-                            <div class="card-header" id="headingThree">
+                            <div class="card-header" id="internationalEvents-0">
                                 <h2 class="mb-0">
                                     <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#InternationalEvents" aria-expanded="false" aria-controls="collapseThree">
                             International events.
                           </button>
                                 </h2>
                             </div>
-                            <div id="InternationalEvents" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                            <div id="InternationalEvents" class="collapse" aria-labelledby="internationalEvents-0" data-parent="#accordionExample">
                                 <div class="card-body">
                                     <ul>
                                         <li><a href="https://2019.fullstackfest.com/" target="_blank">fullstackfest</a></li>
@@ -2520,14 +2553,14 @@
                             </div>
                         </div>
                         <div class="card">
-                            <div class="card-header" id="headingThree">
+                            <div class="card-header" id="ux-0">
                                 <h2 class="mb-0">
                                     <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#UX" aria-expanded="false" aria-controls="collapseThree">
                             UX/UI.
                           </button>
                                 </h2>
                             </div>
-                            <div id="UX" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                            <div id="UX" class="collapse" aria-labelledby="ux-0" data-parent="#accordionExample">
                                 <div class="card-body">
                                     <h3>Font Icons</h3>
                                     <ul>
