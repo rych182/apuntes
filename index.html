@@ -207,6 +207,16 @@
             box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
         }
         
+        .polaroid9 {
+            background-color: burlywood;
+            width: 300px;
+            padding: 10px;
+            margin: auto;
+            margin-bottom: 10px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
+            filter: sepia(.5);
+        }
+        
         .polaroid:hover {
             opacity: .4;
         }
@@ -241,6 +251,11 @@
         
         .polaroid7:hover {
             filter: saturate(1);
+        }
+        
+        div.polaroid9:hover {
+            filter: sepia(1);
+            transform: translate(10px, 20px);
         }
     </style>
 
@@ -820,6 +835,33 @@
                                                         </code>
                                                     </div>
                                                 </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card">
+                                        <div class="card-header" id="tresPuntoSiete">
+                                            <h2 class="mb-0">
+                                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#css-animations" aria-expanded="false">
+                                            Animations
+                                          </button>
+                                            </h2>
+                                        </div>
+                                        <div id="css-animations" class="collapse" aria-labelledby="tresPuntoSiete" data-parent="#accordionExample1">
+                                            <div class="card-body">
+                                                <h3 class="text-center">Transform</h3>
+                                                <div class="polaroid9">
+                                                    <img src="img/gluten.jpg" alt="glutenMonster" width="280">
+                                                    <div>
+                                                        <code>  div.polaroid9:hover {<br>
+                                                            filter: sepia(1);<br>
+                                                            transform: translate(10px, 20px);<br>
+                                                            }<br>
+                                                        </code>
+
+                                                    </div>
+                                                </div>
+
                                             </div>
                                         </div>
                                     </div>
