@@ -225,6 +225,8 @@
             margin-bottom: 10px;
             box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
             filter: sepia(.5);
+            transform: rotate(50deg);
+            transition: 1s;
         }
         
         .polaroid11 {
@@ -235,6 +237,34 @@
             margin-bottom: 10px;
             box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
             filter: sepia(.5);
+            transition: 1s;
+        }
+        
+        .polaroid12 {
+            background-color: burlywood;
+            width: 300px;
+            padding: 10px;
+            margin: auto;
+            margin-bottom: 10px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
+            filter: sepia(.5);
+            transform: rotate(180deg);
+            transition: 1s;
+            transition-delay: 0.5s;
+        }
+        
+        .cubo {
+            width: 100px;
+            height: 100px;
+            margin: auto;
+            background-color: blueviolet;
+            transition: width 2s, height 2s, transform 2s;
+        }
+        
+        div.cubo:hover {
+            width: 300px;
+            height: 300px;
+            transform: rotate(180deg);
         }
         
         .polaroid:hover {
@@ -280,12 +310,18 @@
         
         div.polaroid10:hover {
             filter: sepia(1);
-            transform: rotate(50deg);
+            transform: rotate(0deg);
         }
         
         div.polaroid11:hover {
             filter: sepia(1);
             transform: scale(1.2, 1.2);
+        }
+        
+        div.polaroid12:hover {
+            filter: sepia(1);
+            transform: scale(1, 1);
+            transform: rotate(0deg);
         }
     </style>
 
@@ -902,7 +938,8 @@
                                                             transform: rotate(50deg);<br>
                                                             }<br>
                                                         </code>
-
+                                                        <p>El transition <b>NO</b> va en el hover, si no en la clase</p>
+                                                        <code>transition: 1s;</code>
                                                     </div>
                                                 </div>
                                                 <hr>
@@ -916,10 +953,41 @@
                                                             transform: scale(1.2,1.2);<br>
                                                             }<br>
                                                         </code>
-
+                                                        <p>El transition <b>NO</b> va en el hover, si no en la clase</p>
+                                                        <code>transition: 1s;</code>
                                                     </div>
                                                 </div>
+                                                <hr>
 
+
+                                                <h3 class="text-center">transform: scale(1.2,1.2); y transform: rotate(50deg);</h3>
+                                                <div class="polaroid12">
+                                                    <img src="img/washington.jpg" alt="Washington" width="280">
+                                                    <div>
+                                                        <code>  div.polaroid9:hover {<br>
+                                                            filter: sepia(1);<br>
+                                                            transform: scale(1.2,1.2);<br>
+                                                            }<br>
+                                                        </code>
+                                                        <p>El transition <b>NO</b> va en el hover, si no en la clase</p>
+                                                        <code>transition: 1s;</code>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <ul>
+                                                    <li>transform: translate(horizontal/Vertical/ambos)</li>
+                                                    <li>transform: rotate(90deg) rota</li>
+                                                    <li>transform: scale(0-1,2,3etc) aumenta o disminuye su tamaño real a escala</li>
+                                                    <li>transition: 1s; El tiempo que dura la transición</li>
+                                                    <l1>transition-timing-function: linear: Misma velocidad de princio a fin</l1>
+                                                    <l1>transition-timing-function: ease: comienza lento, luego rápido y termina lento</l1>
+                                                    <l1>transition-timing-function: ease-in: comienza lento y termina rápido</l1>
+                                                    <l1>transition-timing-function: ease-in-out: comienza rápido y termina lento</l1>
+                                                    <l1></l1>
+                                                </ul>
+
+                                                <hr>
+                                                <div class="cubo"></div>
 
                                             </div>
                                         </div>
