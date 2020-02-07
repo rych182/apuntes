@@ -253,6 +253,16 @@
             transition-delay: 0.5s;
         }
         
+        .polaroid13 {
+            background-color: burlywood;
+            width: 300px;
+            padding: 10px;
+            margin: auto;
+            margin-bottom: 10px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
+            filter: sepia(.5);
+        }
+        
         .cubo {
             width: 100px;
             height: 100px;
@@ -285,6 +295,15 @@
             }
             100% {
                 background-color: brown;
+            }
+        }
+        
+        @keyframes skew {
+            0% {
+                transform: skewX(20deg);
+            }
+            100% {
+                transform: skewY(-20deg);
             }
         }
         
@@ -343,6 +362,15 @@
             filter: sepia(1);
             transform: scale(1, 1);
             transform: rotate(0deg);
+        }
+        
+        div.polaroid13:hover {
+            filter: sepia(1);
+            transition: width 1s, transform .3s;
+            transition-delay: .3s;
+            animation-name: skew;
+            animation-iteration-count: 2;
+            animation-duration: 1s;
         }
     </style>
 
@@ -1007,7 +1035,19 @@
                                                     <li>animation-name: nombreDeLaAnimacion; Sirve para saber el nombre del Keyframe que hará la animación</li>
                                                     <li>@Keyframe: nombreDeLaAnimacion;</li> La animación
                                                     <li>animation-duration: 4s; Duración de la animación</li>
-                                                    <li>animation-delay: 1s;</li> Tiempo que tarda en comenzar la animación
+                                                    <li>animation-delay: 1s; Tiempo que tarda en comenzar la animación</li>
+                                                    <li>animation-iterarion-count: 3(ó infinite); El número de veces que se repite la animación</li>
+                                                    <li>animation-direction: altenate; alterna la dirección normal e inversa</li>
+                                                    <li>animation-direction: reverse;</li>
+                                                    <li>animation-direction: alternate-reverse;</li>
+                                                    <li>animation-timing-function: linear;</li>
+                                                    <li>animation-timing-function: ease; empieza normal, luego rápido y termina lento</li>
+                                                    <li>animation-timing-function: ease-in; Lenta completamente</li>
+                                                    <li>animation-timing-function: ease-in-out</li>
+                                                    <li><b>Forma resumida:</b> animation: nombreAnimacion 4s infinte(interation-count) alternate(animation-direction)</li>
+                                                    <li>
+                                                        <h3>Puedes meter una animación dentro de un hover</h3>
+                                                    </li>
                                                 </ul>
 
                                                 <hr>
@@ -1019,6 +1059,20 @@
                                                     <br>
                                                     </code>
                                                 <hr>
+
+                                                <div class="polaroid13">
+                                                    <img src="img/agujero.jpg" alt="agujero-negro" width="280">
+                                                    <div>
+                                                        <code>  div.polaroid9:hover {<br>
+                                                            filter: sepia(1);<br>
+                                                            transition: width 1s, transform .3s;<br>
+                                                            transition-delay: .3s;<br>
+                                                            animation-name: skew; <br>
+                                                            animation-iteration-count: 2; <br>
+                                                            animation-duration: 1s; <br>
+                                                        </code>
+                                                    </div>
+                                                </div>
 
                                             </div>
                                         </div>
@@ -2515,7 +2569,7 @@
                                             <a href="https://javascript.works-hub.com/jobs/" target="_blank">Javascript.works-hub</a>
                                         </li>
                                         <li>
-                                            <a href="" target="_blank"></a>
+                                            <a href="https://css-tricks.com" target="_blank">CSS-tricks</a>
                                         </li>
                                         <li>
                                             <a href="" target="_blank"></a>
