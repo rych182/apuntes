@@ -1109,8 +1109,8 @@
                                         </div>
                                         <div id="otro33" class="collapse" aria-labelledby="tresPuntoTres" data-parent="#accordionExample1">
                                             <div class="card-body">
-                                                <h3>Pseudo-clases</h3>
-                                                <p>Cuando ya fue visitado un link</p>
+                                                <h3 class="text-center">Pseudo-clases</h3>
+                                                <p> <b>a:visited</b> Cuando ya fue visitado un link</p>
                                                 <code>
                                                     a:visited{ <br>
                                                         color:red;<br>
@@ -1122,96 +1122,137 @@
                                                         color:yellow;<br>
                                                     }<br>
                                                 </code>
-                                                <p>Cuando nosotros damos "click" segundos antes de ir al link</p><br>
+                                                <p> <b>a:link</b> Cuando nosotros damos "click" segundos antes de ir al link</p><br>
                                                 <code>
                                                     a:link{<br>
                                                         color:purple;<br>
                                                     }<br>
                                                 </code>
-                                                <p>Pinta la segunda etiqueta P</p><br>
+                                                <p><b>p:nth:child(2)</b> Pinta la segunda etiqueta P</p><br>
                                                 <code>
                                                     p:nth:child(2){<br>
                                                         background-color:purple;<br>
                                                     }<br>
                                                 </code>
 
-                                                <p>Pinta los que sean pares</p><br>
+                                                <p><b>p:nth-of-typye(even)</b> Pinta los que sean pares</p><br>
                                                 <code>
                                                     p:nth-of-typye(<b>even</b>){<br>
                                                         background-color:purple;<br>
                                                     }<br>
                                                 </code>
 
-                                                <p>Pinta los que sean <b>INPARES</b></p><br>
+                                                <p><b>p:nth-of-type(odd)</b> Pinta los que sean <b>INPARES</b></p><br>
                                                 <code>
-                                                    p:nth-of-typye(<b>odd</b>){<br>
+                                                    p:nth-of-type(<b>odd</b>){<br>
                                                         background-color:purple;<br>
                                                     }<br>
                                                 </code>
 
-                                                <p>Pinta el primer HIJO , osea que siempre que haya una etiqueta P dentro de un div, pintara la primera P</p><br>
+                                                <p><b>p:first-of-type</b> Pinta el primer HIJO , osea que siempre que haya una etiqueta P dentro de un div, pintara la primera P</p><br>
                                                 <code>
                                                     p:first-of-type{<br>
                                                         background-color:purple;<br>
                                                     }<br>
                                                 </code>
 
-                                                <p>Pinta el último HIJO , osea que siempre que haya una etiqueta P dentro de un div, pintara la ULTIMA P</p><br>
+                                                <p><b>p:last-of-type</b> Pinta el último HIJO , osea que siempre que haya una etiqueta P dentro de un div, pintara la ULTIMA P</p><br>
                                                 <code>
                                                     p:last-of-type{<br>
                                                         background-color:purple;<br>
                                                     }<br>
                                                 </code>
 
-                                                <p>Pinta el único en su tipo</p><br>
+                                                <p><b>p:only-of-type</b> Pinta el único en su tipo</p><br>
                                                 <code>
                                                     p:only-of-type{<br>
                                                         background-color:purple;<br>
                                                     }<br>
                                                 </code>
 
-                                                <p>Pinta el último hijo</p>
+                                                <p><b>p:last-child</b> Pinta el último hijo</p>
                                                 <code>
                                                     p:last-child{<br>
                                                         background-color:purple;<br>
                                                     }<br>
                                                 </code>
 
-                                                <p>Pinta el unico hijo</p>
+                                                <p><b>p:only-child</b> Pinta el unico hijo</p>
                                                 <code>
                                                     p:only-child{<br>
                                                         background-color:purple;<br>
                                                     }<br>
                                                 </code>
 
-                                                <p>Pinta el elemento activado (se utiliza para los input)</p>
+                                                <p><b>p:only-enable</b> Pinta el elemento activado (se utiliza para los input)</p>
                                                 <code>
                                                     p:only-enable{<br>
                                                         background-color:purple;<br>
                                                     }<br>
                                                 </code>
 
-                                                <p>Pinta el elemento desactivado (se utiliza para los input)</p>
+                                                <p><b>p:only-disable</b> Pinta el elemento desactivado (se utiliza para los input)</p>
                                                 <code>
                                                     p:only-disable{<br>
                                                         background-color:purple;<br>
                                                     }<br>
                                                 </code>
 
-                                                <p>Pinta el elemento activado(se utilizan para los radio button ó checkbox)</p>
+                                                <p><b>p:only-enable</b> Pinta el elemento activado(se utilizan para los radio button ó checkbox)</p>
                                                 <code>
                                                     p:only-enable{<br>
                                                         background-color:purple;<br>
                                                     }<br>
                                                 </code>
 
-                                                <p>Pinta un elemento <b>VACIO</b></p>
+                                                <p><b>p:empty</b> Pinta un elemento <b>VACIO</b></p>
                                                 <code>
                                                     p:empty{<br>
-                                                        width:10px;
-                                                        height:10px;
+                                                        width:10px; <br>
+                                                        height:10px;<br>
                                                         background-color:purple;<br>
                                                     }<br>
+                                                </code>
+
+                                                <h3 class="text-center">Pseudo elementos</h3>
+                                                <p><b>first-line:</b>La primera linea cambiará, no importa el tamaño de la linea</p>
+                                                <code>
+                                                    p::first-line{<br>
+                                                        color: green;<br>
+                                                    }  <br>
+                                                </code>
+
+                                                <p><b>first-letter:</b>La primera linea cambiará a <b>Mayúscula</b></p>
+                                                <code>
+                                                    p::first-line{<br>
+                                                        color: green;<br>
+                                                    }  <br>
+                                                </code>
+
+                                                <p><b>p::before</b> agregara cosas antes del texto</p>
+                                                <code>
+                                                    p::before{<br>
+                                                        content: url("image.jpg"); <br>
+                                                        color: green;<br>
+                                                        font-size: 3em; <br>
+                                                    }  <br>
+                                                </code>
+
+                                                <p><b>p::after</b>agregara cosas después de que termine el texto</p>
+                                                <code>
+                                                    p::after{<br>
+                                                    content: url("image.jpg"); <br>
+                                                    color: green;<br>
+                                                    font-size: 3em; <br>
+                                                    }  <br>
+                                                </code>
+
+                                                <p><b>p::selection</b> modifica los estilos de todo lo que seleccionas</p>
+                                                <code>
+                                                    p::selection{<br>
+                                                    color: green;<br>
+                                                    font-size: 3em; <br>
+                                                    }  <br>
                                                 </code>
                                             </div>
                                         </div>
