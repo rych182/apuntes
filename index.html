@@ -20,6 +20,41 @@
             border: solid 1px purple;
         }
         
+        .columna0 {
+            background: aquamarine;
+            color: azure;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .columna1 {
+            background: rgb(105, 124, 118);
+            color: azure;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .columna2 {
+            background: rgba(0, 140, 186, .5);
+            color: azure;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .columna3 {
+            background: violet;
+            color: azure;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .columna4 {
+            background: yellowgreen;
+            color: azure;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
         body {
             background-image: url("img/goku0.jpg");
             background-repeat: no-repeat;
@@ -2464,7 +2499,31 @@
                                         </div>
                                     </div>
 
+                                    <div class="card">
+                                        <div class="card-header" id="bootstrap-11-1">
+                                            <h5 class="mb-0">
+                                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#bootstrap-11-1-1" aria-expanded="false" aria-controls="collapseThree">
+                                            Responsive utilities (Display)
+                                          </button>
+                                            </h5>
+                                        </div>
+                                        <div id="bootstrap-11-1-1" class="collapse" aria-labelledby="bootstrap-11-1" data-parent="#accordion">
+                                            <div class="card-body">
 
+                                                <div class="row">
+                                                    <!-- d-none: display none, para que no se muestre
+                                                        col columna d-none d-lg-block d-md-none: muestrate en bloque, muestrate en bloque en tamaño "lg", no te muestres en tamaño mediano hacia abajo
+                                                     -->
+                                                    <div class="col columna0 d-block d-sm-none">Soy tamaño extra small, puedes hacer más grande el navegador para ver como cambio</div>
+                                                    <div class="col columna1 d-none d-sm-block d-md-none">Soy tamaño Small, puedes hacer más grande el navegador para ver como cambio</div>
+                                                    <div class="col columna2 d-none d-md-block d-lg-none">Soy tamaño mediano</div>
+                                                    <div class="col columna3 d-none d-lg-block d-md-none d-xl-none">Soy tamaño Grande</div>
+                                                    <div class="col columna4 d-none d-xl-block">Soy tamaño extra grande, puedes reducir el navegador para ver como cambio</div>
+                                                </div>}
+
+                                            </div>
+                                        </div>
+                                    </div>
 
 
 
