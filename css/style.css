@@ -1,0 +1,422 @@
+.contenedor {
+    border: solid 1px green;
+}
+
+.fila {
+    border: solid 1px blue;
+}
+
+.columna {
+    border: solid 1px purple;
+}
+
+.columna0 {
+    background: aquamarine;
+    color: azure;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.columna1 {
+    background: rgb(105, 124, 118);
+    color: azure;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.columna2 {
+    background: rgba(0, 140, 186, .5);
+    color: azure;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.columna3 {
+    background: violet;
+    color: azure;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.columna4 {
+    background: yellowgreen;
+    color: azure;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+body {
+    background-image: url("img/goku0.jpg");
+    background-repeat: no-repeat;
+    background-position: -32% 20%;
+}
+
+.caja {
+    width: 400px;
+    height: 200px;
+    border: solid 1px red;
+    background-image: url("img/goku0.jpg");
+    background-size: auto;
+}
+
+.caja2 {
+    width: 400px;
+    height: 200px;
+    border: solid 1px red;
+    background-image: url("img/goku0.jpg");
+    background-size: 300px 100px;
+}
+
+.caja3 {
+    width: 400px;
+    height: 200px;
+    border: solid 1px red;
+    background-image: url("img/goku0.jpg");
+    background-size: 300px 100px;
+    background-repeat: no-repeat;
+}
+
+.caja4 {
+    width: 400px;
+    height: 200px;
+    border: solid 1px red;
+    background-image: url("img/goku0.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.caja5 {
+    width: 400px;
+    height: 200px;
+    border: solid 1px red;
+    background-image: url("img/goku0.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.caja6 {
+    width: 400px;
+    height: 200px;
+    border: solid 1px red;
+    background-image: url("img/goku0.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.caja7 {
+    width: 400px;
+    height: 200px;
+    border: solid 1px red;
+    background-image: url("img/goku0.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.thumb {
+    margin: 10px;
+    border: 5px solid #ddd;
+    width: 150px;
+}
+
+.thumb:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, .5);
+    width: 200px;
+}
+
+.polaroid {
+    background-color: burlywood;
+    width: 300px;
+    padding: 10px;
+    margin: auto;
+    margin-bottom: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
+}
+
+.polaroid0 {
+    background-color: burlywood;
+    width: 300px;
+    padding: 10px;
+    margin: auto;
+    margin-bottom: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
+    filter: blur(2px);
+}
+
+.polaroid1 {
+    background-color: burlywood;
+    width: 300px;
+    padding: 10px;
+    margin: auto;
+    margin-bottom: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
+    filter: brightness(1.5);
+}
+
+.polaroid2 {
+    background-color: burlywood;
+    width: 300px;
+    padding: 10px;
+    margin: auto;
+    margin-bottom: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
+    filter: brightness(0.5);
+}
+
+.polaroid3 {
+    background-color: burlywood;
+    width: 300px;
+    padding: 10px;
+    margin: auto;
+    margin-bottom: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
+    filter: contrast(2);
+}
+
+.polaroid4 {
+    background-color: burlywood;
+    width: 300px;
+    padding: 10px;
+    margin: auto;
+    margin-bottom: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
+    filter: grayscale(1);
+}
+
+.polaroid5 {
+    background-color: burlywood;
+    width: 300px;
+    padding: 10px;
+    margin: auto;
+    margin-bottom: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
+    filter: invert(1);
+}
+
+.polaroid6 {
+    background-color: burlywood;
+    width: 300px;
+    padding: 10px;
+    margin: auto;
+    margin-bottom: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
+    filter: saturate(5);
+}
+
+.polaroid7 {
+    background-color: burlywood;
+    width: 300px;
+    padding: 10px;
+    margin: auto;
+    margin-bottom: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
+    filter: sepia(.5);
+}
+
+.polaroid8 {
+    position: relative;
+    background-color: burlywood;
+    width: 300px;
+    padding: 10px;
+    margin: auto;
+    margin-bottom: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
+}
+
+.polaroid9 {
+    background-color: burlywood;
+    width: 300px;
+    padding: 10px;
+    margin: auto;
+    margin-bottom: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
+    filter: sepia(.5);
+}
+
+.polaroid10 {
+    background-color: burlywood;
+    width: 300px;
+    padding: 10px;
+    margin: auto;
+    margin-bottom: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
+    filter: sepia(.5);
+    transform: rotate(50deg);
+    transition: 1s;
+}
+
+.polaroid11 {
+    background-color: burlywood;
+    width: 300px;
+    padding: 10px;
+    margin: auto;
+    margin-bottom: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
+    filter: sepia(.5);
+    transition: 1s;
+}
+
+.polaroid12 {
+    background-color: burlywood;
+    width: 300px;
+    padding: 10px;
+    margin: auto;
+    margin-bottom: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
+    filter: sepia(.5);
+    transform: rotate(180deg);
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+
+.polaroid13 {
+    background-color: burlywood;
+    width: 300px;
+    padding: 10px;
+    margin: auto;
+    margin-bottom: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
+    filter: sepia(.5);
+}
+
+.cubo {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    background-color: blueviolet;
+    transition: width 2s, height 2s, transform 2s;
+}
+
+div.cubo:hover {
+    width: 300px;
+    height: 300px;
+    transform: rotate(180deg);
+    animation-name: cuboMamalon;
+    animation-duration: 1.5s;
+    animation-delay: .8s;
+}
+
+@keyframes cuboMamalon {
+    0% {
+        background-color: red;
+    }
+    25% {
+        background-color: cornflowerblue;
+    }
+    50% {
+        background-color: darkgreen;
+    }
+    75% {
+        background-color: aquamarine;
+    }
+    100% {
+        background-color: brown;
+    }
+}
+
+@keyframes skew {
+    0% {
+        transform: skewX(20deg);
+    }
+    100% {
+        transform: skewY(-20deg);
+    }
+}
+
+.polaroid:hover {
+    opacity: .4;
+}
+
+.polaroid0:hover {
+    filter: blur(0);
+}
+
+.polaroid1:hover {
+    filter: brightness(1);
+}
+
+.polaroid2:hover {
+    filter: brightness(1);
+}
+
+.polaroid3:hover {
+    filter: contrast(1);
+}
+
+.polaroid4:hover {
+    filter: grayscale(0);
+}
+
+.polaroid5:hover {
+    filter: invert(0);
+}
+
+.polaroid6:hover {
+    filter: saturate(1);
+}
+
+.polaroid7:hover {
+    filter: saturate(1);
+}
+
+div.polaroid9:hover {
+    filter: sepia(1);
+    transform: translate(10px, 20px);
+}
+
+div.polaroid10:hover {
+    filter: sepia(1);
+    transform: rotate(0deg);
+}
+
+div.polaroid11:hover {
+    filter: sepia(1);
+    transform: scale(1.2, 1.2);
+}
+
+div.polaroid12:hover {
+    filter: sepia(1);
+    transform: scale(1, 1);
+    transform: rotate(0deg);
+}
+
+div.polaroid13:hover {
+    filter: sepia(1);
+    transition: width 1s, transform .3s;
+    transition-delay: .3s;
+    animation-name: skew;
+    animation-iteration-count: 2;
+    animation-duration: 1s;
+}
+
+
+/*
+        Responsive Media queries
+        */
+
+@media screen and (max-width: 480px) {
+    body {
+        background-color: darkslateblue;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 760px) {
+    body {
+        background: cornflowerblue;
+    }
+}
+
+@media screen and (min-width: 761px) {
+    body {
+        background: darkgray;
+    }
+}
