@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Apuntes por tema</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -626,64 +625,78 @@
                                         </div>
                                         <div id="css-animations" class="collapse" aria-labelledby="tresPuntoSiete" data-parent="#accordionExample1">
                                             <div class="card-body">
-                                                <h3 class="text-center">transform: translate(10px, 20px);</h3>
-                                                <div class="polaroid9">
-                                                    <img src="img/gluten.jpg" alt="glutenMonster" width="280">
-                                                    <div>
-                                                        <code>  div.polaroid9:hover {<br>
-                                                            filter: sepia(1);<br>
-                                                            transform: translate(10px, 20px);<br>
-                                                            }<br>
-                                                        </code>
 
+                                                <div class="d-flex justify-content-around">
+                                                    <div>
+                                                        <h3 class="text-center">transform: translate(10px, 20px);</h3>
+                                                        <div class="polaroid9">
+                                                            <img src="img/gluten.jpg" alt="glutenMonster" width="280">
+                                                            <div>
+                                                                <code>  div.polaroid9:hover {<br>
+                                                                filter: sepia(1);<br>
+                                                                transform: translate(10px, 20px);<br>
+                                                                }<br>
+                                                            </code>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <hr>
 
-                                                <h3 class="text-center">transform: rotate(50deg);</h3>
-                                                <div class="polaroid10">
-                                                    <img src="img/arizona.jpg" alt="glutenMonster" width="280">
                                                     <div>
-                                                        <code>  div.polaroid9:hover {<br>
+                                                        <h3 class="text-center">transform: rotate(50deg);</h3>
+                                                        <div class="polaroid10">
+                                                            <img src="img/arizona.jpg" alt="glutenMonster" width="280">
+                                                            <div>
+                                                                <code>  div.polaroid9:hover {<br>
                                                             filter: sepia(1);<br>
                                                             transform: rotate(50deg);<br>
                                                             }<br>
                                                         </code>
-                                                        <p>El transition <b>NO</b> va en el hover, si no en la clase</p>
-                                                        <code>transition: 1s;</code>
+                                                                <p>El transition <b>NO</b> va en el hover, si no en la clase</p>
+                                                                <code>transition: 1s;</code>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <hr>
 
-                                                <h3 class="text-center">transform: scale(1.2,1.2);</h3>
-                                                <div class="polaroid11">
-                                                    <img src="img/Boeing.jpg" alt="glutenMonster" width="280">
+                                                </div>
+
+                                                <div class="d-flex justify-content-around">
                                                     <div>
-                                                        <code>  div.polaroid9:hover {<br>
+                                                        <h3 class="text-center">transform: scale(1.2,1.2);</h3>
+                                                        <div class="polaroid11">
+                                                            <img src="img/Boeing.jpg" alt="glutenMonster" width="280">
+                                                            <div>
+                                                                <code>  div.polaroid9:hover {<br>
+                                                                filter: sepia(1);<br>
+                                                                transform: scale(1.2,1.2);<br>
+                                                                }<br>
+                                                            </code>
+                                                                <p>El transition <b>NO</b> va en el hover, si no en la clase</p>
+                                                                <code>transition: 1s;</code>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+
+                                                    <div>
+                                                        <h3 class="text-center">transform: scale(1.2,1.2); y transform: rotate(50deg);</h3>
+                                                        <div class="polaroid12">
+                                                            <img src="img/washington.jpg" alt="Washington" width="280">
+                                                            <div>
+                                                                <code>  div.polaroid9:hover {<br>
                                                             filter: sepia(1);<br>
                                                             transform: scale(1.2,1.2);<br>
                                                             }<br>
                                                         </code>
-                                                        <p>El transition <b>NO</b> va en el hover, si no en la clase</p>
-                                                        <code>transition: 1s;</code>
+                                                                <p>El transition <b>NO</b> va en el hover, si no en la clase</p>
+                                                                <code>transition: 1s;</code>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <hr>
 
 
-                                                <h3 class="text-center">transform: scale(1.2,1.2); y transform: rotate(50deg);</h3>
-                                                <div class="polaroid12">
-                                                    <img src="img/washington.jpg" alt="Washington" width="280">
-                                                    <div>
-                                                        <code>  div.polaroid9:hover {<br>
-                                                            filter: sepia(1);<br>
-                                                            transform: scale(1.2,1.2);<br>
-                                                            }<br>
-                                                        </code>
-                                                        <p>El transition <b>NO</b> va en el hover, si no en la clase</p>
-                                                        <code>transition: 1s;</code>
-                                                    </div>
                                                 </div>
+
                                                 <hr>
                                                 <ul>
                                                     <li>transform: translate(horizontal/Vertical/ambos)</li>
@@ -713,28 +726,38 @@
                                                 </ul>
 
                                                 <hr>
-                                                <div class="cubo"></div>
-                                                <code class="d-flex justify-content-center">
-                                                    div.cubo:hover { <br> width: 300px; <br> height: 300px; <br> transform: rotate(180deg); <br> animation-name: cuboMamalon; <br> animation-duration: 4s; <br> animation-delay: .8s; <br> }
-                                                    <br> @keyframes cuboMamalon { <br> 0% { <br> background-color: red; <br> } <br> 25% { <br> background-color: cornflowerblue; <br> } <br> 50% { <br> background-color: darkgreen; <br> } <br> 75% { <br>                                                    background-color: aquamarine; <br> } <br> 100% { <br> background-color: brown;<br> }
-                                                    <br> }
-                                                    <br>
-                                                    </code>
-                                                <hr>
+                                                <div class="d-flex justify-content-around">
 
-                                                <div class="polaroid13">
-                                                    <img src="img/agujero.jpg" alt="agujero-negro" width="280">
                                                     <div>
-                                                        <code>  div.polaroid9:hover {<br>
-                                                            filter: sepia(1);<br>
-                                                            transition: width 1s, transform .3s;<br>
-                                                            transition-delay: .3s;<br>
-                                                            animation-name: skew; <br>
-                                                            animation-iteration-count: 2; <br>
-                                                            animation-duration: 1s; <br>
+                                                        <div class="cubo"></div>
+                                                        <code class="d-flex justify-content-center">
+                                                        div.cubo:hover { <br> width: 300px; <br> height: 300px; <br> transform: rotate(180deg); <br> animation-name: cuboMamalon; <br> animation-duration: 4s; <br> animation-delay: .8s; <br> }
+                                                        <br> @keyframes cuboMamalon { <br> 0% { <br> background-color: red; <br> } <br> 25% { <br> background-color: cornflowerblue; <br> } <br> 50% { <br> background-color: darkgreen; <br> } <br> 75% { <br>                                                    background-color: aquamarine; <br> } <br> 100% { <br> background-color: brown;<br> }
+                                                        <br> }
+                                                        <br>
                                                         </code>
                                                     </div>
+
+                                                    <div>
+                                                        <div class="polaroid13">
+                                                            <img src="img/agujero.jpg" alt="agujero-negro" width="280">
+                                                            <div>
+                                                                <code>  div.polaroid9:hover {<br>
+                                                                    filter: sepia(1);<br>
+                                                                    transition: width 1s, transform .3s;<br>
+                                                                    transition-delay: .3s;<br>
+                                                                    animation-name: skew; <br>
+                                                                    animation-iteration-count: 2; <br>
+                                                                    animation-duration: 1s; <br>
+                                                                </code>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
+
+
+
+
 
                                             </div>
                                         </div>
