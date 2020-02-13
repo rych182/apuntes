@@ -4,11 +4,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Parallax effect</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        .ejercicios {
+            position: relative;
+            background: url("../../img/parallax.jpg") 0 / cover fixed;
+            /*El 0 significa un valor por default*/
+            width: 100%;
+            height: 500px;
+        }
+        
+        .content {
+            position: absolute;
+            border-radius: 10px;
+            background-color: hsla(120, 10%, 100%, .6);
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, .8);
+            top: 15%;
+            bottom: 15%;
+            left: 10%;
+            right: 10%;
+            filter: blur(2px);
+        }
+        
+        .text {
+            top: 40%;
+            bottom: 40%;
+            left: 40%;
+            right: 40%;
+            position: absolute;
+        }
+        
+        p {
+            background-color: brown;
+        }
+    </style>
 </head>
 
 <body>
+    <h1>Después debo hacer más efectos Parallax porque este está muy simple</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse similique explicabo corrupti quis! Quas beatae molestiae earum? Libero natus recusandae ea nulla, numquam corrupti laudantium veniam minima earum accusantium repudiandae?</p>
 
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse similique explicabo corrupti quis! Quas beatae molestiae earum? Libero natus recusandae ea nulla, numquam corrupti laudantium veniam minima earum accusantium repudiandae?</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse similique explicabo corrupti quis! Quas beatae molestiae earum? Libero natus recusandae ea nulla, numquam corrupti laudantium veniam minima earum accusantium repudiandae?</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse similique explicabo corrupti quis! Quas beatae molestiae earum? Libero natus recusandae ea nulla, numquam corrupti laudantium veniam minima earum accusantium repudiandae?</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse similique explicabo corrupti quis! Quas beatae molestiae earum? Libero natus recusandae ea nulla, numquam corrupti laudantium veniam minima earum accusantium repudiandae?</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse similique explicabo corrupti quis! Quas beatae molestiae earum? Libero natus recusandae ea nulla, numquam corrupti laudantium veniam minima earum accusantium repudiandae?</p>
+    <div class="ejercicios">
+
+        <div class="content">
+
+        </div>
+        <h3 class="text">Yo soy el efecto Parallax, mira como me muevo</h3>
+
+    </div>
+    <p>Para el efecto Pharallax debemos de tener una posición relativa y una absoluta</p>
+    <p>El contenedor padre tendrá la posición relativa</p>
+    <p>El texto es el que tendrá la posición absoluta</p>
 </body>
 
 </html>
