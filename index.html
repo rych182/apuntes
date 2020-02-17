@@ -531,7 +531,7 @@
                                         <div class="card-header" id="tresPuntoTres">
                                             <h2 class="mb-0">
                                                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#otro33" aria-expanded="false">
-                                            Fonts
+                                            Fonts | Tipography | Medidas
                                           </button>
                                             </h2>
                                         </div>
@@ -544,7 +544,8 @@
                                                 <p>Pone el tamaño de la tipografía</p>
                                                 <code>Font-family: 'Roboto'</code><br>
                                                 <p style="word-spacing: 5px;"><code>word-spacing</code> deja un espacio entre cada palabra</p>
-                                                <p style="text-align: center"><code>text-align:center/right;</code>Centra el texto o lo pone a la derecha</p cl>
+                                                <p style="letter-spacing: 10px;"> <code>letter-spacing</code> deja un espacio entre cada LETRA</p>
+                                                <p style="text-align: center"><code>text-align:center/right;</code>Centra el texto o lo pone a la derecha</p>
                                                 <p><code>text-decoration:none/overline/underline/line-through</code> para que no tenga nada de CSS predeterminado</p>
                                                 <p style="text-decoration: overline;">text-decoration: overline</p>
                                                 <p style="text-decoration: underline;">text-decoration: underline</p>
@@ -554,6 +555,34 @@
                                                 <h2 style="text-align: center;">Sombras</h2>
                                                 <p style="text-shadow: 2px 2px 2px purple;">text-shadow: 2px 2px 2px purple; Primer parameto: horizontal, Segundo parametro: vertical, Tercer parametro: Blur, Cuarto parametro: color(nombre,rgba ó hexadecimal)</p>
                                                 <p style="text-shadow: 2px 2px 2px purple;">El impacto de las sombras es "resaltar las fuentes"</p>
+                                                <hr>
+                                                <h3 class="text-center">Typography</h3>
+
+                                                <p>Fuentes por default en la computadora</p>
+                                                <code>
+                                                    <br>
+                                                    body{ <br>
+                                                        font-family: Arial, Sans-serif, Helvetica; <br>
+                                                    }<br>
+                                                </code>
+                                                <p>Como agregar una fuente</p>
+                                                <code>
+                                                    <br>
+                                                    h1{ <br>
+                                                        font-family: "Falcon Masters"; <br>
+                                                        font-size: 20px;
+                                                        font-style:italic;
+                                                        color:#428ied;
+
+                                                    }<br>
+                                                </code>
+                                                <hr>
+
+                                                <h3 class="text-center">Medidas</h3>
+                                                <p>Las unicas medidas que se usan para buenas practicas son: <b>px,em, rem</b></p>
+                                                <p>El tamaño de la letra que te pone <b>el navegador por defecto</b></p>
+                                                <p><b>em</b>: su tamaño es relativo a su padre más cercano</p>
+                                                <p><b>rem</b>: su tamaño es relativo al <b>body</b></p>
                                             </div>
                                         </div>
                                     </div>
