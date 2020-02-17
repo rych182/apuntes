@@ -314,7 +314,7 @@
                                     <div class="card">
                                         <div class="card-header" id="cabecerUno">
                                             <h2 class="mb-0">
-                                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#backgrounds" aria-expanded="true">
+                                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#backgrounds" aria-expanded="false">
                                             Backgrounds 
                                           </button>
                                             </h2>
@@ -347,104 +347,126 @@
                                                         <code>Background-position</code> ó <code>Background-attachment</code>)</li>
                                                     <li><b>Background-size: auto;</b> la imagen se muestra en su tamaño original <br>
                                                         <code>        .caja { <br>
-                                            width: 400px; <br>
-                                            height: 200px; <br>
-                                            border: solid 1px red; <br>
-                                            background-image: url("img/goku0.jpg"); <br>
-                                            background-size: auto;
-                                        }</code>
+                                                            width: 400px; <br>
+                                                            height: 200px; <br>
+                                                            border: solid 1px red; <br>
+                                                            background-image: url("img/goku0.jpg"); <br>
+                                                            background-size: auto;
+                                                            }
+                                                        </code>
                                                         <div class="caja"></div>
                                                     </li>
-                                                    <li><b>background-size: 300px 100px;</b> tu le pones las medidas a la imagen <br>
-                                                        <code>        .caja2 { <br>
-                                            width: 400px; <br>
-                                            height: 200px; <br>
-                                            border: solid 1px red; <br>
-                                            background-image: url("img/goku0.jpg"); <br>
-                                            background-size: 300px 100px;
-                                        }</code>
+                                                    <li>
+                                                        <b>background-size: 300px 100px;</b> tu le pones las medidas a la imagen <br>
+                                                        <code>
+                                                            .caja2 { <br>
+                                                            width: 400px; <br>
+                                                            height: 200px; <br>
+                                                            border: solid 1px red; <br>
+                                                            background-image: url("img/goku0.jpg"); <br>
+                                                            background-size: 300px 100px; <br>
+                                                            }   <br>
+                                                        </code>
                                                         <div class="caja2"></div>
                                                     </li>
-                                                    <li><b>background-size: 300px 100px;</b> <br>
+                                                    <li>
+                                                        <b>background-size: 300px 100px;</b> <br>
                                                         <b>background-repeat: no-repeat;</b> <br> tu le pones las medidas a la imagen <br>
-                                                        <code>        .caja3 { <br>
-                                            width: 400px; <br>
-                                            height: 200px; <br>
-                                            border: solid 1px red; <br>
-                                            background-image: url("img/goku0.jpg"); <br>
-                                            background-size: 300px 100px;<br>
-                                            background-repeat: no-repeat; <br>
-                                            }
-                                        }</code>
+                                                        <code>
+                                                            .caja3 { <br>
+                                                            width: 400px; <br>
+                                                            height: 200px; <br>
+                                                            border: solid 1px red; <br>
+                                                            background-image: url("img/goku0.jpg"); <br>
+                                                            background-size: 300px 100px;<br>
+                                                            background-repeat: no-repeat; <br>
+                                                            } <br>
+                                                        </code>
                                                         <div class="caja3"></div>
                                                     </li>
                                                     <li>
                                                         <b>Background-size: 100% 100%;</b> la imagen se muestra en su tamaño original <br>
-                                                        <code>        .caja4 { <br>
-                                            width: 400px; <br>
-                                            height: 200px; <br>
-                                            border: solid 1px red; <br>
-                                            background-image: url("img/goku0.jpg"); <br>
-                                            background-size: 100% 100%; <br>
-                                            background-repeat: no-repeat; <br>
-                                        }</code>
+                                                        <code>        
+                                                            .caja4 { <br>
+                                                            width: 400px; <br>
+                                                            height: 200px; <br>
+                                                            border: solid 1px red; <br>
+                                                            background-image: url("img/goku0.jpg"); <br>
+                                                            background-size: 100% 100%; <br>
+                                                            background-repeat: no-repeat; <br>
+                                                        }</code>
                                                         <div class="caja4"></div>
                                                     </li>
                                                     <li>
                                                         <b>Background-size: cover;</b> La imagen de fondo cambia de tamaño para cubrir todo el contenedor, incluso si tiene que estirar la imagen o cortar un poco uno de los bordes <br>
-                                                        <code>        .caja4 { <br>
-                                            width: 400px; <br>
-                                            height: 200px; <br>
-                                            border: solid 1px red; <br>
-                                            background-image: url("img/goku0.jpg"); <br>
-                                            background-size: cover; <br>
-                                            background-repeat: no-repeat; <br>
-                                        }</code>
+                                                        <code>       
+                                                            .caja4 { <br>
+                                                            width: 400px; <br>
+                                                            height: 200px; <br>
+                                                            border: solid 1px red; <br>
+                                                            background-image: url("img/goku0.jpg"); <br>
+                                                            background-size: cover; <br>
+                                                            background-repeat: no-repeat; <br>
+                                                            }
+                                                        </code>
                                                         <div class="caja5"></div>
                                                     </li>
                                                     <li>
                                                         <b>Background-size: contain;</b> La imagen de fondo cambia de tamaño para asegurarse de que la imagen sea totalmente visible. <br>
-                                                        <code>        .caja6 { <br>
-                                            width: 400px; <br>
-                                            height: 200px; <br>
-                                            border: solid 1px red; <br>
-                                            background-image: url("img/goku0.jpg"); <br>
-                                            background-size: contain; <br>
-                                            background-repeat: no-repeat; <br>
-                                        }</code>
+                                                        <code>       
+                                                            .caja6 { <br>
+                                                            width: 400px; <br>
+                                                            height: 200px; <br>
+                                                            border: solid 1px red; <br>
+                                                            background-image: url("img/goku0.jpg"); <br>
+                                                            background-size: contain; <br>
+                                                            background-repeat: no-repeat; <br>
+                                                            }
+                                                        </code>
                                                         <div class="caja6"></div>
                                                     </li>
                                                     <li> <b>Poner texto sobre una imagen</b>
-                                                        <code>        .caja7 { <br>
-                                            width: 400px; <br>
-                                            height: 200px; <br>
-                                            border: solid 1px red; <br>
-                                            background-image: url("img/goku0.jpg"); <br>
-                                            background-size: 100% 100%; <br>
-                                            background-repeat: no-repeat; <br>
-                                        } <br>
-
-                                        .hero-text { <br>
-                                            text-align: center; <br>
-                                            position: absolute; <br>
-                                            top: 50%; <br>
-                                            left: 50%; <br>
-                                            transform: translate(-50%, -50%); <br>
-                                            color: white; <br>
-                                        }
-                                    
-                                    </code>
+                                                        <code>
+                                                            .caja7 { <br>
+                                                            width: 400px; <br>
+                                                            height: 200px; <br>
+                                                            border: solid 1px red; <br>
+                                                            background-image: url("img/goku0.jpg"); <br>
+                                                            background-size: 100% 100%; <br>
+                                                            background-repeat: no-repeat; <br>
+                                                            } <br>
+                                                            <br>
+                                                            .hero-text { <br>
+                                                            text-align: center; <br>
+                                                            position: absolute; <br>
+                                                            top: 50%; <br>
+                                                            left: 50%; <br>
+                                                            transform: translate(-50%, -50%); <br>
+                                                            color: white; <br>
+                                                            }
+                                                        </code>
                                                         <div class="caja7">
                                                             <div class="hero-text">
                                                                 <h3>Hello I'm a Goku, I'm a Sayayin</h3>
                                                             </div>
                                                         </div>
                                                     </li>
-                                                    <li></li>
-                                                    <li></li>
-                                                    <li></li>
-                                                    <li></li>
-                                                    <li></li>
+                                                    <li> <b>Centrar una imagen con "background-position:center center;"</b>
+                                                        <code>
+                                                            .caja8 { <br>
+                                                                width: 900px; <br>
+                                                                height: 600px; <br>
+                                                                border: solid 1px red; <br>
+                                                                background-image: url("../img/goku0.jpg"); <br>
+                                                                background-repeat: no-repeat; <br>
+                                                                background-size: 50%; <br>
+                                                                background-position: center center; <br>
+                                                                position: relative; <br>
+                                                            } <br>
+                                                        </code>
+
+                                                        <div class="caja8"></div>
+                                                    </li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -2676,7 +2698,7 @@
                                             <a href="https://www.amdocs.com/" target="_blank">Amdocs</a> Empresa israelí en Zapopan
                                         </li>
                                         <li>
-                                            <a href="https://hexaware.com/" target="_blank">Hexaware</a> Apus company(Need Angular developers)
+                                            <a href="https://hexaware.com/" target="_blank">Hexaware</a> Apus company(Need Angular developerss)
                                         </li>
                                         <li>
                                             <a href="" target="_blank"></a>
