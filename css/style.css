@@ -428,6 +428,6 @@ div.polaroid13:hover {
 
 @media screen and (min-width: 761px) {
     body {
-        background: darkgray;
+        background: url('../img/geometric-leaves.png');
     }
 }
