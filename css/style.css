@@ -150,7 +150,8 @@ body {
     padding: 10px;
     margin: auto;
     margin-bottom: 10px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+    opacity: .4;
 }
 
 .polaroid0 {
@@ -344,7 +345,7 @@ div.cubo:hover {
 }
 
 .polaroid:hover {
-    opacity: .4;
+    opacity: 1;
 }
 
 .polaroid0:hover {
@@ -430,4 +431,21 @@ div.polaroid13:hover {
     body {
         background: url('../img/geometric-leaves.png');
     }
+}
+
+
+/*Botones enlace*/
+
+.boton {
+    background: blue;
+    color: rgba(22, 2, 2, 0.945);
+    text-decoration: none;
+    padding: 20px;
+    display: inline-block;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+.boton:hover {
+    opacity: 0.8;
 }
