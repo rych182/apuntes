@@ -449,3 +449,10 @@ div.polaroid13:hover {
 .boton:hover {
     opacity: 0.8;
 }
+
+
+/*Ponerle íconos a la lista con life*/
+
+ul li {
+    list-style-image: url('../img/check.png');
+}
