@@ -589,26 +589,68 @@
                                                 <p style="text-shadow: 2px 2px 2px purple;">El impacto de las sombras es "resaltar las fuentes"</p>
                                                 <p style="color:white; text-shadow: 2px 0px 10px blue">La sombra es la que permite que se vea lo que estoy escribiendo</p>
                                                 <hr>
+
                                                 <h3 class="text-center">Typography</h3>
+                                                <div class="d-flex justify-content-around">
+                                                    <div>
+                                                        <p>Fuentes por default en la computadora</p>
+                                                        <code>
+                                                            <br>
+                                                            body{ <br>
+                                                            font-family: Arial, Sans-serif, Helvetica; <br>
+                                                            }<br>
+                                                        </code>
+                                                        <p>Como agregar una fuente</p>
+                                                        <code>
+                                                            <br>
+                                                            h1{ <br>
+                                                            font-family: "Falcon Masters"; <br>
+                                                            font-size: 20px;
+                                                            font-style:italic;
+                                                            color:#428ied;
+                                                            }<br>
+                                                        </code>
+                                                    </div>
 
-                                                <p>Fuentes por default en la computadora</p>
-                                                <code>
-                                                    <br>
-                                                    body{ <br>
-                                                        font-family: Arial, Sans-serif, Helvetica; <br>
-                                                    }<br>
-                                                </code>
-                                                <p>Como agregar una fuente</p>
-                                                <code>
-                                                    <br>
-                                                    h1{ <br>
-                                                        font-family: "Falcon Masters"; <br>
-                                                        font-size: 20px;
-                                                        font-style:italic;
-                                                        color:#428ied;
+                                                    <div>
+                                                        <div class="card border-success ml-5" style="max-width: 18rem;">
+                                                            <div class="card-header">Como poner una tipografía</div>
+                                                            <div class="card-body text-success">
+                                                                <h6 class="card-title">La diferencia entre usar bold de la tipografía y del CSS, es que en CSS es 1 ó 2 px más chico</h6>
+                                                                <p class="card-text">
+                                                                    <code><br>
+                                                                        <br>@font-face {
+                                                                            <br>font-family: 'Indie Flower';
+                                                                            <br>src: url('../fonts/IndieFlower-Regular.ttf');
+                                                                            <br>}
+                                                                    </code>
+                                                                    <p>Para usarse:</p>
+                                                                    <code>
+                                                                        <br>h1.dancingScriptSemiBold,
+                                                                        <br>p.dancingScriptSemiBold {
+                                                                        <br>font-family: 'Dancing Script', cursive;
+                                                                        <br>font-weight: 600;
+                                                                        <br>}
+                                                                    </code>
+                                                                    <a href="tipografias.html" target="_blank" rel="noopener noreferrer">Checa como se ven</a>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
 
-                                                    }<br>
-                                                </code>
+
+                                                </div>
+
+
+
+
+
+
+
+
+
+
+
                                                 <hr>
 
                                                 <h3 class="text-center">Medidas</h3>
@@ -1020,6 +1062,7 @@
                                                     <li> <b>transform: rotate(90deg)</b> rota</li>
                                                     <li> <b>transform: scale(0-1,2,3etc)</b> aumenta o disminuye su tamaño real a escala</li>
                                                     <li> <b>transition: 1s;</b> El tiempo que dura la transición</li>
+                                                    <li><b>transition: all 2s ease-in-out</b>Inicio lento y final lento( <b>all</b> significa que se aplique a todas las propiedades)</li>
                                                     <li> <b>transition-timing-function: linear:</b> Misma velocidad de princio a fin</li>
                                                     <li> <b>transition-timing-function: ease:transition-timing-function: ease:</b> comienza lento, luego rápido y termina lento</li>
                                                     <li> <b>transition-timing-function: ease-in:</b> comienza lento y termina rápido</li>
@@ -1036,7 +1079,7 @@
                                                     <li> <b>animation-timing-function: ease;</b> empieza normal, luego rápido y termina lento</li>
                                                     <li> <b>animation-timing-function: ease-in;</b> Lenta completamente</li>
                                                     <li> <b>animation-timing-function: ease-in-out</b></li>
-                                                    <li><b>Forma resumida:</b> animation: nombreAnimacion 4s infinte(interation-count) alternate(animation-direction)</li>
+                                                    <li><b>Animación de forma resumida:</b> animation: nombreAnimacion 4s infinte(interation-count) alternate(animation-direction)</li>
                                                     <li>
                                                         <h3>Puedes meter una animación dentro de un hover</h3>
                                                     </li>

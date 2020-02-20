@@ -456,3 +456,88 @@ div.polaroid13:hover {
 ul li {
     list-style-image: url('../img/check.png');
 }
+
+
+/*FINAL: Ponerle íconos a la lista con life*/
+
+
+/*TIPOGRAFÍAS INICIO*/
+
+@font-face {
+    font-family: 'Indie Flower';
+    src: url('../fonts/IndieFlower-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Dancing Script';
+    src: url('../fonts/DancingScript-Regular.ttf');
+}
+
+
+/*
+Si usas el todo lo que sea BOLD. semibold, mdium etc de los archivos de la tipografía, solo son 1 o 2 px más grandes, no es la gran cosa
+
+@font-face {
+    font-family: 'Dancing Script';
+    src: url('../fonts/DancingScript-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'Dancing Script';
+    src: url('../fonts/DancingScript-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'Dancing Script';
+    src: url('../fonts/DancingScript-Bold.ttf');
+}
+*/
+
+h1 {
+    font-family: 'Indie Flower', cursive;
+}
+
+p.indieFlower {
+    font-family: 'Indie Flower', cursive;
+}
+
+h1.uno {
+    font-family: 'Dancing Script', cursive;
+}
+
+p.dancingScript {
+    font-family: 'Dancing Script', cursive;
+}
+
+h1.dos {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 500;
+}
+
+p.dancingScriptMedium {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 500;
+}
+
+h1.dancingScriptSemiBold,
+p.dancingScriptSemiBold {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 600;
+}
+
+h1.dancingScriptBold,
+p.dancingScriptBold {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+}
+
+
+/*
+h1.dancingScriptBold p.dancingScriptBold {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+}
+*/
+
+
+/*TIPOGRAFÍAS FINAL*/
