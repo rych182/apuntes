@@ -1286,17 +1286,38 @@
 
                                     <div class="card">
                                         <div class="card-header" id="headingBorders">
-                                            <a data-toggle="collapse" href="#bordes" role="button" aria-expanded="false">
+                                            <a data-toggle="collapse" href="#responsive-design" role="button" aria-expanded="false">
                                                 <h2 class="mb-0">
-                                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#bordes" aria-expanded="false">
+                                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#responsive-design" aria-expanded="false">
                                                         Responsive Design tips
                                                     </button>
                                                 </h2>
                                             </a>
                                         </div>
-                                        <div id="bordes" class="collapse" aria-labelledby="headingBorders" data-parent="#accordionExample1">
+                                        <div id="responsive-design" class="collapse" aria-labelledby="headingBorders" data-parent="#accordionExample1">
                                             <div class="card-body">
-                                                <p>Ir tamaño por tamaño con el responsive, no quieras correr</p>
+                                                <ul>
+                                                    <li>Ir tamaño por tamaño con el responsive, no quieras correr</li>
+                                                    <li>Cuando necesites que una etiqueta <b>aside</b> ocupe el 100% del ancho en el responsive, debes hacer lo sig: <br>
+                                                        <div class="card" style="width: 18rem;">
+                                                            <div class="card-body">
+                                                                <p class="card-text">
+                                                                    <code>
+                                                                    <br> @media screen and (max-width:800px){
+                                                                        <br> aside{
+                                                                            <br>width:100%;
+                                                                        <br>}
+                                                                    <br>}
+                                                                </code>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+
+                                                    </li>
+                                                    <li></li>
+                                                    <li></li>
+                                                </ul>
+                                                <p></p>
                                             </div>
                                         </div>
                                     </div>
