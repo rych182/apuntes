@@ -1355,7 +1355,20 @@
                                         <b>NOTE:</b> Con esta linea de comandos puede crear cuantos archivos de CSS quieras. Ya hice la prueba con style0.css
 
                                     </li>
-                                    <li></li>
+                                    <li><code>node-sass style.sass style.css -w</code> Para que node este observando los cambios y compile en automático</li>
+                                    <li><code>node-sass -o css sass/test.sass -w</code> Para compilar y que te ponga el archivo de css que creara en la carpeta que le digas</li>
+                                    <h3>Nota importante</h3>
+                                    <p>Fijense bien el nombre de las carpetas que están dentro de otras carpetas, porque de lo contrario, te creara muchos archivos css en todas las carpetas que se llamen igual.</p>
+                                    <p>Ejemplo:</p>
+                                    <p>tengo las siguientes carpetas y archivos:</p>
+                                    index.html <br> &nbsp;&nbsp;&nbsp;css/style.css
+                                    <br> &nbsp;&nbsp;&nbsp;sass/
+                                    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sass/
+                                    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;css/
+                                    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;test.sass
+
+                                    <p>Y si tu en la terminal de Node te posicionas donde está el archivo index.html , y pones el comando <b>node-sass -o css sass/sass/test.sass</b> </p>
+                                    <p>Te creara el archivo <b>test.css en la primera y última carpeta css</b>, osea que lo tendras en ambas.</p>
                                 </ol>
                             </div>
                         </div>
