@@ -1,0 +1,18 @@
+h1 {
+  color: yellow; }
+
+p {
+  color: brown; }
+
+article p {
+  color: green; }
+
+article p .azul {
+  color: blue; }
+
+article p a {
+  text-decoration: none;
+  color: orange; }
+  article p a:hover {
+    color: pink;
+    font-size: 20px; }

@@ -1,0 +1,25 @@
+$colorTitulos: yellow
+$colorParrafos: brown
+h1
+    color: $colorTitulos
+
+p
+    color: $colorParrafos
+
+article
+    p
+        color: green
+
+article
+    p
+        .azul
+            color: blue
+
+article
+    p
+        a
+            text-decoration: none
+            color: orange
+            &:hover
+                color: pink
+                font-size: 20px
