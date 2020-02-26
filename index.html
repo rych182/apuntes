@@ -2698,20 +2698,43 @@
                                             <a data-toggle="collapse" href="#bootstrap-12-1-1" role="button" aria-expanded="false">
                                                 <h5 class="mb-0">
                                                     <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#bootstrap-12-1-1" aria-expanded="false" aria-controls="collapseThree">
-                                                        Ventanas modales
+                                                        Ventanas modales, PopOvers y ToolTips
                                                 </button>
                                                 </h5>
                                             </a>
                                         </div>
                                         <div id="bootstrap-12-1-1" class="collapse" aria-labelledby="bootstrap-11-1" data-parent="#accordion">
                                             <div class="card-body">
-                                                <div class="d-flex">
+                                                <h1>Instrucciones de uso</h1>
+                                                <ol>
+                                                    <li>Copiar y pegar el código de Bootstrap</li>
+                                                    <li>Fijarte que siempre estén iguales el <b>data-target</b> del <b>boton</b> y el primer <b>id</b> </li>
+                                                    <li>Fijarte que el <b>aria-labelledby</b> del cuerpo del <b>Modal</b> sea igual al <b>id</b> del H5 o de la etiqueta donde quieras que se <b>desplegue</b> todo</li>
+                                                    <li>Si quiero usar un <b>ToolTip, no olvidar</b> que debo de poner el código <b>JQuery</b> que viene en la página de <a href="https://getbootstrap.com/docs/4.0/components/tooltips/" class="tooltip-test"
+                                                            data-toggle="tooltip" title="Página de Boostrap, dame Click">Bootstrap</a> </li>
+                                                    <li>Si quiero usar un <b>PopOver, no olvidar</b> que debo de poner el código <b>JQuery</b> que viene en la página de <a href="https://getbootstrap.com/docs/4.0/components/tooltips/" class="tooltip-test"
+                                                            data-toggle="tooltip" title="Página de Boostrap, dame Click">Bootstrap</a></li>
+                                                    <li>Tanto el <b>PopOver</b> y <b>ToolTip</b> deben de llevar su respectivo <b>data-toggle="tooltip" y data-toggle="tooltip"</b> junto con su <b>data-content=""</b> y <b>title="Página de Boostrap, dame Click"</b>                                                        </li>
+                                                </ol>
+                                                <hr>
+                                                <h1>Notas importantes</h1>
+                                                <ol>
+                                                    <li> <b>data-toggle: modal</b>: con este atributo indicamos que queremos trabajar con una ventana modal </li>
+                                                    <li> <b>data-target: #modal-uno</b>: hace referencia al <b>id</b> que queremos trabajar</li>
+                                                    <li><b>table-index:-1</b>Es un atributo que nos pide Bootstrap</li>
+                                                    <li><b>arial-labelledby</b> debe ser igual al <b>data-target</b> pero sin el simbolo <b>#</b>, normlamente se encuentra en <b></b>
+                                                    </li>
+                                                    <li><b>aria-hidden:true</b> con esto la pantalla se pon un poco oscura</li>
+                                                    <li><b>data-dismiss: modal</b> este atributo va en la etiqueta <b>button</b> y se utiliza para decirle a bootstrap que queremos cerrar el modal, dentro del boton debe haber una etiqueta
+                                                        <b>label</b> con el atributo <b>arial-hiddne="true"</b> </li>
+                                                </ol>
+                                                <hr>
+                                                <div class="d-flex justify-content-around">
                                                     <div>
                                                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                                                             Modal común y corriente
                                                         </button>
-
-                                                        <!-- Modal -->
+                                                        <!-- Modal Típico -->
                                                         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                             <div class="modal-dialog" role="document">
                                                                 <div class="modal-content">
@@ -2735,15 +2758,140 @@
                                                     </div>
 
                                                     <div>
+                                                        <!-- Button trigger modal -->
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+                                                            Modal con Scroll
+                                                        </button>
 
+                                                        <!-- Modal -->
+                                                        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                                            <div class="modal-dialog" role="document">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <h5 class="modal-title" id="exampleModalLongTitle">El código esta <a href="https://getbootstrap.com/docs/4.0/components/modal/" target="_blank">aquí</a></h5>
+                                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                            <span aria-hidden="true">&times;</span>
+                                                                        </button>
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        <p>
+                                                                            What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+                                                                            specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                                                                            release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                                                        </p>
+                                                                        <p>
+                                                                            What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+                                                                            specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                                                                            release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                                                        </p>
+                                                                        <p>
+                                                                            What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+                                                                            specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                                                                            release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                                                        </p>
+                                                                        <p>
+                                                                            What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+                                                                            specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                                                                            release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                                                        </p>
+                                                                        <p>
+                                                                            What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+                                                                            specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                                                                            release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                                                        </p>
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </div>
 
+                                                    <div>
+                                                        <!-- Button trigger modal -->
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                                                            Modal centrado
+                                                        </button>
+
+                                                        <!-- Modal -->
+                                                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <h5 class="modal-title" id="exampleModalLongTitle">El código esta <a href="https://getbootstrap.com/docs/4.0/components/modal/" target="_blank">aquí</a></h5>
+                                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                            <span aria-hidden="true">&times;</span>
+                                                                        </button>
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        <p>
+                                                                            What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+                                                                            specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                                                                            release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                                                        </p>
+
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <hr>
+                                                <div class="d-flex justify-content-around">
+                                                    <div>
+                                                        <!-- Modal con PopOver y ToolTips -->
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modal-popOver">
+                                                            Modal con PopOver y ToolTips
+                                                        </button>
+
+                                                        <!-- Modal -->
+                                                        <div class="modal fade" id="Modal-popOver" tabindex="-1" role="dialog" aria-labelledby="modal-PopOver-tooltips" aria-hidden="true">
+                                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <h5 class="modal-title" id="modal-PopOver-tooltips">El código esta <a href="https://getbootstrap.com/docs/4.0/components/modal/" target="_blank">aquí</a></h5>
+                                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                            <span aria-hidden="true">&times;</span>
+                                                                        </button>
+
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        <h5>Popover in a modal</h5>
+                                                                        <p>This <a href="#" role="button" class="btn btn-secondary popover-test" title="Popover title" data-toggle="popover" data-content="Popover body content is set in this attribute.">button</a>                                                                            triggers a popover on click.</p>
+                                                                        <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+                                                                                Tooltip on top
+                                                                              </button>
+                                                                        <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+
+                                                                        <hr>
+                                                                        <h5>Tooltips in a modal</h5>
+                                                                        <p><a href="#" class="tooltip-test" data-toggle="tooltip" title="Tooltip">This link</a> and <a href="#" class="tooltip-test" data-toggle="tooltip" title="Tooltip">that link</a> have
+                                                                            tooltips on hover.</p>
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div>
+
+                                                    </div>
                                                     <div>
 
                                                     </div>
 
                                                 </div>
-
 
 
                                             </div>
@@ -3826,6 +3974,18 @@
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+        <script>
+            //jquery para el tooltip
+            $(function() {
+                $('[data-toggle="tooltip"]').tooltip()
+            })
+
+            //Jquery para usar el PopOver
+            $(function() {
+                $('[data-toggle="popover"]').popover()
+            })
+        </script>
 </body>
 
 </html>
