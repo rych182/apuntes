@@ -3129,6 +3129,67 @@
                                         </div>
                                     </div>
 
+                                    <div class="card">
+                                        <div class="card-header" id="bootstrap-11-1">
+                                            <a data-toggle="collapse" href="#bootstrap-14-1-1" role="button" aria-expanded="false">
+                                                <h5 class="mb-0">
+                                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#bootstrap-14-1-1" aria-expanded="false" aria-controls="collapseThree">
+                                                        Navbars
+                                                </button>
+                                                </h5>
+                                            </a>
+                                        </div>
+                                        <div id="bootstrap-14-1-1" class="collapse" aria-labelledby="bootstrap-11-1" data-parent="#accordion">
+                                            <div class="card-body">
+                                                <h1 class="text-center">Explicación</h1>
+                                                <ol>
+                                                    <li>Para utilizar un menú debemos utilizar la <b>etiqueta</b> <code>nav</code></li>
+                                                    <li>Poner la <b>clase</b> <code>navbar</code> ya que con eso le decimos a <b>Bootstrap</b> que queremos poner un <b>menú</b> </li>
+                                                    <li>Poner la <b>clase</b> <code>navbar-expand-lg</code> que me permitirá <b>transformar</b> mi menú a <b>dispositivo movil</b> en un tamaño largo</li>
+                                                    <li>Poner la <b>clase</b> <code>bg-light</code> que me permite que todos nuestros enlaces texto y demás, tengan un color <b>oscuro</b> para que contraste con el <b>fondo</b> de color claro</li>
+                                                    <li>Poner la <b>clase</b> <code>navbar-light</code> nos pone un <b>fondo</b> de color claro</li>
+                                                    <li>Poner la <b>etiqueta a</b> con la <b>clase</b> <code>navbar-brand</code>, después puedes ponerle un texto o una imagen pero se acostumbra texto </li>
+                                                    <li>Poner un <b>boton</b> con la <b>clase</b> <code>navbar-toggler</code> con el atributo <code>data-toggle="collapse"</code>, osea que cuando apretemos un componente mostrara/ocultara y en el <code>data-target="#navbar-0"</code>pondremos
+                                                        el id de nuestro menú</li>
+                                                    <li>Al botón le puedes poner los atributos <code>aria-controls="#navbar" aria-expanded="false" aria-label="menú de navegación"</code> para que funcionen bien en
+                                                        <h2>Kindles</h2>
+                                                    </li>
+                                                    <li><b>Dentro</b> del boton poner una etiqueta <code>span</code> con la clase <code>navbar-toggler-icon</code> para que en dispositivos moviles tengas tu ícono de hamburguesa </li>
+                                                    <li>Para que funcione el menú, <b>fuera</b> del boton abres una etiqueta <code>div</code> con la clases <code>collapse navbar-collapse</code> y un <b>id</b> que habías puesto en el <b>data-target del boton</b></li>
+                                                    <li>Dentro poner una lista desordenada con las clases <code>navbar-nav mr-auto</code>, <b>mr-auto</b> sirve para poner un margin right en automatico, osea te pone las etiquetas <b>li</b> a la derecha</li>
+                                                    <li>A los elementos
+                                                        <coded>li</coded> le pones la clase <code>nav-item</code> y dentro de la etiqueta <b>li</b> pones una etiqueta <b>a</b> con la clase <code>nav-link</code></li>
+                                                    <li></li>
+                                                </ol>
+                                                <nav class="navbar narbar-expand-lg bg-light navbar-light">
+                                                    <a class="navbar-brand" href="#">
+                                                        <img src="img/ric.png" width="48">
+                                                    </a>
+                                                    <button class="navbar-toggler" data-toggle="collapse" data-target="#navbar-0" aria-controls="#navbar" aria-expanded="false" aria-label="menú de navegación">
+                                                        <span class="navbar-toggler-icon"></span>
+                                                    </button>
+                                                    <div class="collapse navbar-collapse" id="navbar-0">
+                                                        <ul class="nabvar-nav mr-auto">
+                                                            <li class="nav-item">
+                                                                <a href="#" class="nav-link">Home</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a href="#" class="nav-link">About</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a href="#" class="nav-link">Information</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a href="#" class="nav-link">Contacto</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </nav>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
                                 </div>
 
 
