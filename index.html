@@ -12,7 +12,7 @@
 
 <body>
     <div class="container mt-4">
-        <h1>Notes about web development</h1>
+        <h1 class="text-center">Notes about web development</h1>
         <div class="row">
             <div class="col">
                 <div class="accordion" id="accordionExample">
@@ -2705,7 +2705,7 @@
                                         </div>
                                         <div id="bootstrap-12-1-1" class="collapse" aria-labelledby="bootstrap-11-1" data-parent="#accordion">
                                             <div class="card-body">
-                                                <h1>Instrucciones de uso</h1>
+                                                <h1 class="text-center">Instrucciones de uso</h1>
                                                 <ol>
                                                     <li>Copiar y pegar el código de Bootstrap</li>
                                                     <li>Fijarte que siempre estén iguales el <b>data-target</b> del <b>boton</b> y el primer <b>id</b> </li>
@@ -2717,7 +2717,7 @@
                                                     <li>Tanto el <b>PopOver</b> y <b>ToolTip</b> deben de llevar su respectivo <b>data-toggle="tooltip" y data-toggle="tooltip"</b> junto con su <b>data-content=""</b> y <b>title="Página de Boostrap, dame Click"</b>                                                        </li>
                                                 </ol>
                                                 <hr>
-                                                <h1>Notas importantes</h1>
+                                                <h1 class="text-center">Notas importantes</h1>
                                                 <ol>
                                                     <li> <b>data-toggle: modal</b>: con este atributo indicamos que queremos trabajar con una ventana modal </li>
                                                     <li> <b>data-target: #modal-uno</b>: hace referencia al <b>id</b> que queremos trabajar</li>
@@ -2884,15 +2884,108 @@
                                                         </div>
 
                                                     </div>
+
                                                     <div>
 
-                                                    </div>
-                                                    <div>
+                                                        <!-- Button trigger modal -->
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modal-Grid">
+                                                            Modal con sistema de Grid
+                                                        </button>
+
+                                                        <!-- Modal -->
+                                                        <div class="modal fade" id="Modal-Grid" tabindex="-1" role="dialog" aria-labelledby="exampleModal-Grid" aria-hidden="true">
+                                                            <div class="modal-dialog" role="document">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <h5 class="modal-title" id="exampleModal-Grid">Ver el código <a href="https://getbootstrap.com/docs/4.0/components/modal/" class="tooltip-test" data-toggle="tooltip" title="Página de Bootstrap">aquí</a></h5>
+                                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                            <span aria-hidden="true">&times;</span>
+                                                                        </button>
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        <div class="modal-body">
+                                                                            <div class="container-fluid">
+                                                                                <div class="row">
+                                                                                    <div class="col-md-4 border border-info">.col-md-4</div>
+                                                                                    <div class="col-md-4 ml-auto border border-info">.col-md-4 .ml-auto</div>
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                    <div class="col-md-3 ml-auto border border-info">.col-md-3 .ml-auto</div>
+                                                                                    <div class="col-md-2 ml-auto border border-info">.col-md-2 .ml-auto</div>
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                    <div class="col-md-6 ml-auto border border-info">.col-md-6 .ml-auto</div>
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                    <div class="col-sm-9 border border-info">
+                                                                                        Level 1: .col-sm-9
+                                                                                        <div class="row">
+                                                                                            <div class="col-8 col-sm-6 border border-info">
+                                                                                                Level 2: .col-8 .col-sm-6
+                                                                                            </div>
+                                                                                            <div class="col-4 col-sm-6 border border-info">
+                                                                                                Level 2: .col-4 .col-sm-6
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
 
                                                     </div>
+
+
 
                                                 </div>
+                                                <hr>
+                                                <h1 class="text-center">Formularios modales</h1>
+                                                <div class="d-flex justity-content-around">
 
+                                                    <div>
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal-form" data-whatever="@mdo">Open modal for @mdo</button>
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal-form" data-whatever="@fat">Open modal for @fat</button>
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal-form" data-whatever="@getbootstrap">Open modal for @getbootstrap</button>
+
+                                                        <div class="modal fade" id="exampleModal-form" tabindex="-1" role="dialog" aria-labelledby="ModalForm" aria-hidden="true">
+                                                            <div class="modal-dialog" role="document">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <h5 class="modal-title" id="ModalForm">New message</h5>
+                                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                            <span aria-hidden="true">&times;</span>
+                                                                        </button>
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        <form>
+                                                                            <div class="form-group">
+                                                                                <label for="recipient-name" class="col-form-label">Recipient:</label>
+                                                                                <input type="text" class="form-control" id="recipient-name">
+                                                                            </div>
+                                                                            <div class="form-group">
+                                                                                <label for="message-text" class="col-form-label">Message:</label>
+                                                                                <textarea class="form-control" id="message-text"></textarea>
+                                                                            </div>
+                                                                        </form>
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                                        <button type="button" class="btn btn-primary">Send message</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
 
                                             </div>
                                         </div>
