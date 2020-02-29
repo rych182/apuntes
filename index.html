@@ -3159,6 +3159,17 @@
                                                     <li>Dentro poner una lista desordenada con las clases <code>navbar-nav mr-auto</code>, <b>mr-auto</b> sirve para poner un margin right en automatico, osea te pone las etiquetas <b>li</b> a la derecha</li>
                                                     <li>A los elementos
                                                         <coded>li</coded> le pones la clase <code>nav-item</code> y dentro de la etiqueta <b>li</b> pones una etiqueta <b>a</b> con la clase <code>nav-link</code></li>
+                                                    <li>Para hacer un <b>submenu</b> debes poner la clase <code>dropdown</code> en la etiqueta <b>li</b>, en la etiqueta <b>a</b> poner la clase <code>dropdown-toggle</code> ponerle un <b>id unico</b> y los
+                                                        atributos <b>role="button" aria-haspopup="true" data-toggle="dropdown" aria-expanded="false"</b>, al hacer todo esto solo tendrás el <b>triangulito</b> que te dice que hay un submenu</li>
+                                                    <li> <b>Dentro</b> de la etiqueta li donde quieres tu <b>submenu</b> debes abrir un div con la clase <code>dropdown-menu</code>, ponerle su atributo <b>aria-labelledby="blog-0"</b> y en ese div ponerle el
+                                                        mismo id que a la etiqueta <b>a</b>con las etiquetas <b>a</b> que quieras, cada etqueta <b>a</b> con la clase <code>dropdpwn-item</code></li>
+                                                    <li class="text-danger">TIP IMPORTANTE: Si no sabes que hace una clase de Bootstrap, ve probando una en una en diferentes tamaños </li>
+                                                    <li>La clase <code>form-inline</code> te alinea el input y el boton en el formulario junto con las clases <code>my-2 my-lg-0</code> que se usan para un pequeño espaciado la clase <code>mr-auto</code> que
+                                                        <b></b>pusimos en la lista</b> empujara a la derecha hasta el fondo todo.</li>
+                                                    <li class="text-danger">Menú siempre FIJO: debes de poner la clase <code>fixed-top</code> en la etiqueta <b>nav</b> donde empezaste a crear tu menú</li>
+                                                    <li>Colores: al princio del <b>nav</b> donde pusiste <code>bg-light navbar-light</code> puedes poner <code>bg-dark navbar-dark</code></li>
+                                                    <li class="text-danger">TIP: Cuando uses la clase <code>navbar-brand</code> puedes poner tu imagen <b>logo</b> y abajo de la imagen un <b>texto</b> Sin etiqueta</li>
+                                                    <li></li>
                                                     <li></li>
                                                 </ol>
                                                 <nav class="navbar narbar-expand-lg bg-light navbar-light">
@@ -3169,15 +3180,29 @@
                                                         <span class="navbar-toggler-icon"></span>
                                                     </button>
                                                     <div class="collapse navbar-collapse" id="navbar-0">
-                                                        <ul class="nabvar-nav mr-auto">
+                                                        <ul class="navbar-nav mr-auto">
                                                             <li class="nav-item">
                                                                 <a href="#" class="nav-link">Home</a>
                                                             </li>
                                                             <li class="nav-item">
                                                                 <a href="#" class="nav-link">About</a>
                                                             </li>
-                                                            <li class="nav-item">
-                                                                <a href="#" class="nav-link">Information</a>
+                                                            <!--Submenu-->
+                                                            <li class="nav-item dropdown">
+                                                                <a href="#" class="nav-link dropdown-toggle" id="blog-0" role="button" aria-haspopup="true" data-toggle="dropdown" aria-expanded="false">Blog</a>
+                                                                <div class="dropdown-menu" aria-labelledby="blog-0">
+                                                                    <a href="#" target="_blank" class="dropdown-item">HTML</a>
+                                                                    <a href="#" target="_blank" class="dropdown-item">CSS3</a>
+                                                                    <a href="#" target="_blank" class="dropdown-item">Bootstrap4</a>
+                                                                    <a href="#" target="_blank" class="dropdown-item">EcmaScript6</a>
+                                                                    <a href="#" target="_blank" class="dropdown-item">Angular</a>
+                                                                    <a href="#" target="_blank" class="dropdown-item">NodeJS</a>
+                                                                    <a href="#" target="_blank" class="dropdown-item">Testing</a>
+                                                                    <a href="#" target="_blank" class="dropdown-item">SQL</a>
+                                                                    <a href="#" target="_blank" class="dropdown-item">MongoDB</a>
+                                                                    <a href="#" target="_blank" class="dropdown-item">FireBase</a>
+                                                                </div>
+
                                                             </li>
                                                             <li class="nav-item">
                                                                 <a href="#" class="nav-link">Contacto</a>
@@ -3185,10 +3210,56 @@
                                                         </ul>
                                                     </div>
                                                 </nav>
+                                                <hr>
+                                                <h1>Sticky Navigation Bar </h1>
+                                                <p><a href="https://www.w3schools.com/bootstrap4/bootstrap_navbar.asp">Example</a></p>
+
                                             </div>
                                         </div>
                                     </div>
 
+                                    <div class="card">
+                                        <div class="card-header" id="bootstrap-11-1">
+                                            <a data-toggle="collapse" href="#bootstrap-15-1-1" role="button" aria-expanded="false">
+                                                <h5 class="mb-0">
+                                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#bootstrap-15-1-1" aria-expanded="false" aria-controls="collapseThree">
+                                                        Barras de progreso
+                                                </button>
+                                                </h5>
+                                            </a>
+                                        </div>
+                                        <div id="bootstrap-15-1-1" class="collapse" aria-labelledby="bootstrap-11-1" data-parent="#accordion">
+                                            <div class="card-body">
+
+                                                <div class="row">
+                                                    <div class="col-md-2">
+                                                        <ul>
+                                                            <li>HTML5</li>
+                                                            <li>CSS3</li>
+                                                            <li>JS</li>
+                                                            <li>TypeScript</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-md-10">
+                                                        <div class="progress mt-2">
+                                                            <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                                                        </div>
+                                                        <div class="progress mt-2">
+                                                            <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+                                                        </div>
+                                                        <div class="progress mt-2">
+                                                            <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+                                                        </div>
+                                                        <div class="progress mt-2">
+                                                            <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100% Angular</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
 
                                 </div>
 
@@ -4139,7 +4210,8 @@
                                                 <li><a href="https://www.amazon.com.mx/Blue-Ocean-Strategy-Expanded-Uncontested-ebook/dp/B00O4CRR7Y/ref=sr_1_1?__mk_es_MX=%C3%85M%C3%85%C5%BD%C3%95%C3%91&keywords=blue+ocean+strategy&qid=1582496887&s=digital-text&sr=1-1"
                                                         target="_blank">	Blue Ocean Strategy, Expanded Edition: How to Create Uncontested Market Space and Make the Competition Irrelevant W. Chan Kim (Autor) </a></li> Crea un espacio de mercado y hace que
                                                 la competencia sea irrelevante.
-                                                <li><a href="http://www.i11digital.com/" target="_blank">	Antonio Garcia Martinez (Autor) </a></li>
+                                                <li><a href="https://www.amazon.com.mx/dp/B07BN6F7D1/?coliid=I2JU9S6SAA40FP&colid=28BV0ABDY8PE7&psc=0&ref_=lv_ov_lig_dp_it" target="_blank">First we take Manhattan </a>Gentrificación, por que los barrios se
+                                                    hacen caros y de moda</li>
                                                 <li><a href="http://www.i11digital.com/" target="_blank">	Antonio Garcia Martinez (Autor) </a></li>
                                                 <li><a href="http://www.i11digital.com/" target="_blank">	Antonio Garcia Martinez (Autor) </a></li>
 
