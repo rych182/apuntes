@@ -47,7 +47,63 @@
             margin-right: 50px;
             color: papayawhip;
         }
-        /*Header Inicio*/
+        
+        div>h1,
+        p {
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        div.botones {
+            border: solid 1px blueviolet;
+            display: flex;
+            justify-content: center;
+        }
+        
+        div,
+        a {
+            margin-top: 15px;
+        }
+        
+        a.btn {
+            border-radius: 20px;
+            border: blanchedalmond solid 1px;
+            color: blanchedalmond;
+            padding: 15px;
+            font-size: 20px;
+            text-decoration: none;
+            margin-left: 30px;
+        }
+        
+        a.btn:hover {
+            color: #4f4f4f;
+            background-color: blanchedalmond;
+        }
+        /*Header FINAL*/
+        /* SECTION PRINCIPIO*/
+        
+        section.titulo1 {
+            display: flex;
+            justify-content: center;
+        }
+        
+        section.productos1 {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+        
+        section.productos2 {
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        h2,
+        p {
+            text-align: center;
+            margin-top: 10px;
+        }
+        /* SECTION FINAL*/
     </style>
 </head>
 
@@ -77,8 +133,44 @@
             </div>
         </nav>
 
+        <div>
+            <h1>Slogan chingón de la empresa</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit, blanditiis qui. Quidem molestias necessitatibus incidunt accusamus, in sequi commodi placeat? Neque, quam. Corporis culpa quod suscipit, optio omnis aspernatur repellendus.</p>
+        </div>
+
+        <div class="botones">
+            <a href="#" class="btn">Services</a>
+            <a href="#" class="btn">Portafolio</a>
+        </div>
+
     </header>
 
+    <div>
+        <h1 class="titulo1">Caracteristicas</h1>
+    </div>
+
+    <section class="productos1">
+        <img src="img/icono1.png" alt="imagenProducto">
+        <img src="img/icono2.png" alt="imagenProducto">
+        <img src="img/icono3.png" alt="imagenProducto">
+    </section>
+
+    <section class="productos2">
+        <div>
+            <h2>Titulo</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi obcaecati dicta est esse nemo velit laudantium tempora beatae aspernatur error illo temporibus consectetur quibusdam ut inventore, harum consequatur dolores assumenda.</p>
+        </div>
+        <div>
+            <h2>Titulo</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate quod quis assumenda dignissimos explicabo aut accusamus blanditiis, voluptates animi aperiam possimus laudantium provident corporis saepe delectus neque iste eligendi maiores!
+            </p>
+        </div>
+        <div>
+            <h2>Titulo</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, fugiat rem corrupti suscipit incidunt distinctio placeat ut facilis deserunt repudiandae, excepturi neque ad ipsum officia cumque nihil! Perspiciatis, a numquam?</p>
+        </div>
+
+    </section>
 </body>
 
 </html>
