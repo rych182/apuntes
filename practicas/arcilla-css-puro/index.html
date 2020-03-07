@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        /*Header Inicio*/
+        
+        header {
+            background-image: url('img/bg.jpg');
+            height: 400px;
+        }
+        
+        nav {
+            border: solid 1px black;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .caja1 {
+            border: orangered solid 1px;
+            margin: 20px 50px;
+        }
+        
+        .caja1>a>img {
+            height: 50px;
+        }
+        
+        .caja2 {
+            border: orchid 1px solid;
+            margin: 20px 50px;
+        }
+        
+        ul>li {
+            display: inline-block;
+            margin-top: 15px;
+        }
+        
+        ul>li>a {
+            margin-left: 50px;
+            margin-right: 50px;
+            color: papayawhip;
+        }
+        /*Header Inicio*/
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="caja1">
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                    <img src="img/logo.jpg" alt="">
+                </a>
+            </div>
+            <div class="caja2">
+                <ul>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">About me</a>
+                    </li>
+                    <li>
+                        <a href="#">Services</a>
+                    </li>
+                    <li>
+                        <a href="#">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+
+</body>
+
+</html>
