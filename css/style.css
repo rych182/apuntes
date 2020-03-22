@@ -455,6 +455,78 @@ div.polaroid13:hover {
 
 ul li {
     list-style-image: url('../img/check.png');
+    font-size: 16px;
+}
+
+.icono-angular {
+    font-size: 20px;
+    color: red;
+}
+
+.icono-libro {
+    font-size: 20px;
+    color: black;
+    margin-right: 2px;
+}
+
+.icono-couch {
+    font-size: 20px;
+    color: black;
+    margin-right: 2px;
+}
+
+.icono-git {
+    font-size: 20px;
+    color: orangered;
+    margin-right: 2px;
+}
+
+.icono-github {
+    font-size: 20px;
+    color: purple;
+    margin-right: 2px;
+}
+
+.icono-html {
+    font-size: 20px;
+    color: orangered;
+    margin-right: 2px;
+}
+
+.icono-terminal {
+    font-size: 20px;
+    color: black;
+    margin-right: 2px;
+}
+
+.icono-windows {
+    font-size: 20px;
+    color: #00a4ef;
+    margin-right: 2px;
+}
+
+.icono-css3 {
+    font-size: 20px;
+    color: greenyellow;
+    margin-right: 2px;
+}
+
+.icono-sass {
+    font-size: 20px;
+    color: pink;
+    margin-right: 2px;
+}
+
+.icono-bootstrap {
+    font-size: 20px;
+    color: purple;
+    margin-right: 2px;
+}
+
+.icono-js {
+    font-size: 20px;
+    color: #FFD662;
+    margin-right: 2px;
 }
 
 
