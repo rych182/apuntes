@@ -459,73 +459,110 @@ ul li {
 }
 
 .icono-angular {
-    font-size: 20px;
+    font-size: 32px;
     color: red;
+    margin-right: 2px;
 }
 
 .icono-libro {
-    font-size: 20px;
+    font-size: 32px;
     color: black;
     margin-right: 2px;
 }
 
 .icono-couch {
-    font-size: 20px;
+    font-size: 32px;
     color: black;
     margin-right: 2px;
 }
 
 .icono-git {
-    font-size: 20px;
+    font-size: 32px;
     color: orangered;
     margin-right: 2px;
 }
 
 .icono-github {
-    font-size: 20px;
+    font-size: 32px;
     color: purple;
     margin-right: 2px;
 }
 
 .icono-html {
-    font-size: 20px;
+    font-size: 32px;
     color: orangered;
     margin-right: 2px;
 }
 
 .icono-terminal {
-    font-size: 20px;
+    font-size: 32px;
     color: black;
     margin-right: 2px;
 }
 
 .icono-windows {
-    font-size: 20px;
+    font-size: 32px;
     color: #00a4ef;
     margin-right: 2px;
 }
 
 .icono-css3 {
-    font-size: 20px;
+    font-size: 32px;
     color: greenyellow;
     margin-right: 2px;
 }
 
 .icono-sass {
-    font-size: 20px;
+    font-size: 32px;
     color: pink;
     margin-right: 2px;
 }
 
 .icono-bootstrap {
-    font-size: 20px;
+    font-size: 32px;
     color: purple;
     margin-right: 2px;
 }
 
 .icono-js {
-    font-size: 20px;
+    font-size: 32px;
     color: #FFD662;
+    margin-right: 2px;
+}
+
+.icono-ux {
+    font-size: 32px;
+    color: green;
+    margin-right: 2px;
+}
+
+.icono-marketing {
+    font-size: 32px;
+    color: GoldenRod;
+    margin-right: 2px;
+}
+
+.icono-marketing {
+    font-size: 32px;
+    color: GoldenRod;
+    margin-right: 2px;
+}
+
+.icono-design {
+    font-size: 32px;
+    color: lightgreen;
+    margin-right: 2px;
+}
+
+.icono-business {
+    font-size: 32px;
+    color: PaleGoldenRod;
+    margin-right: 2px;
+}
+
+.icono-canada {
+    font-size: 32px;
+    color: red;
     margin-right: 2px;
 }
 
