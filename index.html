@@ -3464,7 +3464,7 @@
                                             <a data-toggle="collapse" href="#js-1-1-1" role="button" aria-expanded="false">
                                                 <h5 class="mb-0 ">
                                                     <button class="btn btn-link" data-toggle="collapse" data-target="#js-1-1-1" aria-expanded="true">
-                                                        Collapsible Group Item #1
+                                                        NPM
                                                     </button>
                                                 </h5>
                                             </a>
@@ -3472,9 +3472,12 @@
 
                                         <div id="js-1-1-1" class="collapse show" aria-labelledby="js-1-1" data-parent="#es6">
                                             <div class="card-body">
-                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                                                on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-                                                occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                                <ul>
+                                                    <li>Checar versión: <code>npm -v</code></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
@@ -3483,16 +3486,50 @@
                                             <a data-toggle="collapse" href="#js-2-1-1" role="button" aria-expanded="false">
                                                 <h5 class="mb-0 ">
                                                     <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#js-2-1-1" aria-expanded="false">
-                                                        Collapsible Group Item #2
+                                                        BabelJS
                                                     </button>
                                                 </h5>
                                             </a>
                                         </div>
                                         <div id="js-2-1-1" class="collapse" aria-labelledby="js-2-1" data-parent="#es6">
                                             <div class="card-body">
-                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                                                on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-                                                occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                                <ol>
+                                                    <h2>Preparación, instalación y configuración</h2>
+                                                    <li>Crear las carpetas <b>SRC</b> donde tendremos nuestro código ES6 y <b>output</b> donde tendremos todo nuestro código compilado. Babel lo que busca son todos los archivos de la carpeta <b>SRC</b> y los
+                                                        compila a la carpeta output que son los que van a poner en el navegador</li>
+                                                    <li>Te vas a la documentación
+                                                        <a href="https://babeljs.io/docs/en/usage" target="_blank">BabelJS</a> Y COPIARAS <code> npm install --save-dev @babel/core @babel/cli @babel/preset-env</code> <b>@babel/core</b> es el nucleo de
+                                                        BabelJS, <b>@babel/cli</b> es su linea de comandos y <b>@babel/preset-env</b> es un <b>preset</b> que básicamente es una colección de pluggins, que lo que hará es convertir el código ES6 a JS
+                                                    </li>
+                                                    <li>Crear el archivo <b>package.json</b> y dentro pones una llaves así <code>{}</code> que es un objeto vacío, este objeto vacío nos servidá para NodeJS, ya que Node se encargará de identificar en nuestro
+                                                        paquete, todos los comandos que queremos tener disponible para nuestro proyecto y todas nuestras dependencias, que son todas las herramientas que necesita nuestro proyecto para funcionar, como <b>BabelJS</b></li>
+                                                    <li>Instalas Babel usando la linea de comandos en tu terminal de Git en la ruta de tu proyecto, puedes abrir la terminal dando click derecho y git bash en la carpeta donde esta tu proyecto</li>
+                                                    <li>
+                                                        Copias y pegas este código después de las dependencias que instalaste. Aquí iran los scripts que queremos que se ejecuten con NodeJS, cuando ejecutemos algún comando <br>
+                                                        <div class="card" style="width: 18rem;">
+                                                            <div class="card-body">
+                                                                <p class="card-text espacio-codigo0"><code>"scripts": {</code></p>
+                                                                <p class="card-text espacio-codigo1"><code>"build": "babel src -d output --watch"</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>}</code></p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>El comando de arriba quiere decir que ejecutemos BabelJS, encuentre la carpeta <b>src</b>, acceda a todos los archivos que tenemos dentro, luego que lo exporte compilado y lo ponga en la carpeta <b>output</b>                                                        y el <b>--watch</b> sirve para que el compilador este observando cambios siempre, el código de arriba lo puedes ver en este <a href="https://babeljs.io/setup#installation" target="_blank">link</a>                                                        también aquí viene el codigo de la configuración del archivo <b>.babelrc</b></li>
+                                                    <li>Creas el archivo de configuración de BabelJS en la carpeta raiz de tu proyecto con la terminación <b>.babelrc</b> y pegas el siguiente código(con eso le indicamos con que preset queremos trabajar): <br>
+                                                        <div class="card" style="width: 18rem;">
+                                                            <div class="card-body">
+                                                                <p class="card-text espacio-codigo0"><code>{</code></p>
+                                                                <p class="card-text espacio-codigo1"><code>"presets": ["@babel/preset-env"]</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>}</code></p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>Fijate que el preset que esta en el archivo <b>.babelrc</b> coincida con el del <b>package.json</b>, no le vaya a faltar algún caracter como un @ o algo así</li>
+                                                    <li>Puedes compilar usando el comdan <code>npm run build</code></li>
+                                                    <li>Todo este proceso te creara una carpeta <b>node_modules</b> y un archivo <b>package-lock.json</b> </li>
+                                                    <li>Ahora en tu archivo html debes poner la ruta <b>output/archivo.js</b> para usar el codigo compilado</li>
+                                                    <li></li>
+                                                </ol>
                                             </div>
                                         </div>
                                     </div>
