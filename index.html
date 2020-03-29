@@ -319,6 +319,18 @@
                                 <div>
                                     <ul>
                                         <li><code>crtl + f</code> sirve para encontrar una clase o etiqueta o lo que andes buscando con el nombre</li>
+                                        <li>Material Icon theme: para tener íconos</li>
+                                        <li>TypeScript Importer: ayuda con la importación de modulos de TypeScript</li>
+                                        <li>Bracket pair colorizer 2, te ordena las llaves de distinto color para que no te pierdas</li>
+                                        <li></li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <ul>
+                                        <h2>Pluggins navegadores Google Chrome y Mozilla</h2>
+                                        <li>Json Viewer Awesome Google Chrome: Nos permite trabajar con archivos json de una manera muy fácil</li>
+                                        <li></li>
                                     </ul>
                                 </div>
 
@@ -3473,7 +3485,7 @@
                                         <div id="js-1-1-1" class="collapse show" aria-labelledby="js-1-1" data-parent="#es6">
                                             <div class="card-body">
                                                 <ul>
-                                                    <li>Checar versión: <code>npm -v</code></li>
+                                                    <li>Checar versión: <code>npm -v</code> con la versión 8 en adelante está perfecto</li>
                                                     <li></li>
                                                     <li></li>
                                                     <li></li>
@@ -3538,12 +3550,117 @@
                                             <a data-toggle="collapse" href="#js-3-1-1" role="button" aria-expanded="false">
                                                 <h5 class="mb-0 ">
                                                     <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#js-3-1-1" aria-expanded="false">
-                                                        Collapsible Group Item #3
+                                                        ES6
                                                     </button>
                                                 </h5>
                                             </a>
                                         </div>
                                         <div id="js-3-1-1" class="collapse" aria-labelledby="js-3-1" data-parent="#es6">
+                                            <div class="card-body">
+                                                <div class="d-flex justify-content-around">
+                                                    <div>
+                                                        <ul>
+                                                            <h2>Datos curiosos</h2>
+                                                            <li>El <b>undifened</b>, de las funciones de JS aparece por que las funciones de Javascript tienen por default un <b>return</b></li>
+                                                            <li>En <b>console.log("hola mundo");</b> console es un objeto y .log es un <b>metodo</b>(una función dentro de un objeto)</li>
+                                                            <li>Cambiando colores en consola, <code>console.log('%c mis variables','color:blue;');</code></li>
+                                                            <li>Con <code>console.table({a,b,c});</code> puedes imprimir los valores en una tabla en <b>la consola</b></li>
+                                                            <li>En Javascript, cualquier variable que no esté inicializada, tiene el valor de <b>undifined</b></li>
+                                                            <li>Depende donde quieras ejecutar Javascript es si funcionara o no, prompt o confirm, no funcionaran si ejecutaras tu programa en la consola con Node, pero si quieres imprimir la varible "global"
+                                                                en tu programa, Node te mostrará todo lo que tiene, ahora, prompt y confirm, funcionaran sin problema en el navegador
+                                                            </li>
+                                                            <li></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div>
+                                                        <ul>
+                                                            <h2>Buena practicas</h2>
+                                                            <li> <b>No usa VAR</b> para declarar variables, usa <b>let</b>, esto debido a que cuando utilizamos <b>var</b> lo esta colocando dentro de un objeto global llamado <b>window</b> donde te muestra las
+                                                                capacidades que tiene cada navegador web, puedes probarlo en la consola de cada navegador, escribiendo la palabra <b>window</b>, y ahí aparecera la variable que hayas escrito con <b>var</b>,
+                                                                esto te perjudica en que pudieses sobre escribir algún metodo, y eso ocasionará errores en tu proyecto y no sabrás que tendrás mal y esos errores son muy difíciles de rastrear</li>
+                                                            <li>El orden de como importas los archivos <b>si importa</b></li>
+                                                            <li>Deshabilitar el cache, click derecho en chrome, inspeccionar>network> click en disable cache</li>
+                                                            <li><b>let</b> y <b>const</b> no sobre escriben las variables que se encuentran en el objeto global <b>window</b></li>
+                                                            <li></li>
+                                                        </ul>
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="d-flex justify-content-around">
+                                                    <div>
+                                                        <ul>
+                                                            <h2>Terminologías</h2>
+                                                            <li> <b>Polyfill</b> es un código que provee funcionamiento de una caracteristica nueva de es6 a una vieja</li>
+                                                            <li></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div>
+                                                        <ul>
+                                                            <h2>Evitar errores</h2>
+                                                            <li>No puedes usar una variable antes de inicializarla</li>
+                                                            <li></li>
+                                                            <li></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                                <div class="d-flex justify-content-around">
+                                                    <div>
+                                                        <ul>
+                                                            <h2>METODOS que me van a servir de Javascript</h2>
+                                                            <h3>Nota: prompt y confirm se encuentran dentro del objeto window</h3>
+                                                            <li><b>prompt</b>: hace aparecer una ventana con un formulario y una pregunta, <code></code></li>
+                                                            <li><b>confirm</b>: similar al prompt solo que aquí te da elegir OK ó Cancel, y si lo guardas en una variable y luego imprimes la variable para ver que tiene dentro verás <b>true ó false</b></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div>
+                                                        <ul>
+                                                            <h2>Tipos de datos</h2>
+                                                            <li><b>Strings</b>: cadenas de texto</li>
+                                                            <li><b>Null</b>: significa que no tiene nada ahí dento, NO ES LO MISMO QUE <b>UNDIFINED</b>, no lo confundas</li>
+                                                            <li><b>Boleano</b>: es <b>true</b> ó <b>false</b></li>
+                                                            <li></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header" id="js-4-1">
+                                            <a data-toggle="collapse" href="#js-4-1-1" role="button" aria-expanded="false">
+                                                <h5 class="mb-0 ">
+                                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#js-4-1-1" aria-expanded="false">
+                                                        NodeJS
+                                                    </button>
+                                                </h5>
+                                            </a>
+                                        </div>
+                                        <div id="js-4-1-1" class="collapse" aria-labelledby="js-4-1" data-parent="#es6">
+                                            <div class="card-body">
+                                                <ul>
+                                                    <h2>Correr programas</h2>
+                                                    <li>Abre una terminal y escribe: node, se activara tu servidor y podrás correr tus programas</li>
+                                                    <li>si tienes un archivo JS con un programa, solo situate en la carpeta en tu terminal y escribe <code>node archivo.js</code> y ejecutara tu programa</li>
+                                                    <li></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header" id="js-5-1">
+                                            <a data-toggle="collapse" href="#js-5-1-1" role="button" aria-expanded="false">
+                                                <h5 class="mb-0 ">
+                                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#js-5-1-1" aria-expanded="false">
+                                                        Collapsible Group Item #3
+                                                    </button>
+                                                </h5>
+                                            </a>
+                                        </div>
+                                        <div id="js-5-1-1" class="collapse" aria-labelledby="js-5-1" data-parent="#es6">
                                             <div class="card-body">
                                                 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
                                                 on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
