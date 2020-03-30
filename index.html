@@ -3626,6 +3626,12 @@
                                                             <h3>Nota: prompt y confirm se encuentran dentro del objeto window</h3>
                                                             <li><b>prompt</b>: hace aparecer una ventana con un formulario y una pregunta, <code></code></li>
                                                             <li><b>confirm</b>: similar al prompt solo que aquí te da elegir OK ó Cancel, y si lo guardas en una variable y luego imprimes la variable para ver que tiene dentro verás <b>true ó false</b></li>
+                                                            <li><a href="#js-lenght">.length</a>: mascotas.length te dice cuantos cupos tiene un array, si no sabes cuantos cupos hay en el array por que es dinámico, se recomienda usar <b>console.log(mascotas.length-1);</b></li>
+                                                            <li><b>.push</b></li>: mascotas.push("datos") te agrega un nuevo dato a tu array, puede ser de cualquier tipo al final de tu array
+                                                            <li><b>.unshift</b></li>: mascotas.unshift("datos") te agrega un nuevo dato a tu array, puede ser de cualquier tipo al <b>inicio</b> de tu array
+                                                            <li>.pop</li> mascotas.pop(); remueve el último dato de tu array , si quieres guardar e una variable lo que se borro, puedes guardarlo en una variable <b>let borrado = mascotas.pop():</b>
+                                                            <li><b>.splice</b> mascotas.splice(1, 4); Elimina el rango de elementos que tu le digas, dentro de un array</li>
+                                                            <li><b>.indexOf</b>: mascotas.indexOf("pez"); Te dice el lugar en donde se encuentra el dato que buscas, OJO: debes ponerlo exacto, mayúsculas y minúsculas</li>
                                                         </ul>
                                                     </div>
                                                     <div>
@@ -3738,6 +3744,80 @@
                                                                         ["Canada ", "Suiza ", "Germany "]<br>
                                                                     ];</code></p>
                                                                 <p class="card-text espacio-codigo0 "><code>console.log(datos[3]);</code></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div>
+                                                        <div class="card " style="width: 18rem; ">
+                                                            <div class="card-body" id="js-length">
+                                                                <p class="card-text espacio-codigo0 ">Ejercicio 7 </p>
+                                                                <p class="card-text espacio-codigo0 ">El metodo <b>length</b> te muestra cuantos cupos tiene un array</p>
+                                                                <p class="card-text espacio-codigo0 "><code>let mascotas = ["perro", "gato", "perico"];</code></p>
+                                                                <p class="card-text espacio-codigo0 "><code>console.log(mascotas.length);</code></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div>
+                                                        <div class="card " style="width: 18rem; ">
+                                                            <div class="card-body" id="js-length">
+                                                                <p class="card-text espacio-codigo0 ">Ejercicio 8 </p>
+                                                                <p class="card-text espacio-codigo0 ">El metodo <b>.push()</b> Te agrega un nuevo dato a tu array al final</p>
+                                                                <p class="card-text espacio-codigo0 "><code>let mascotas = ["perro", "gato", "perico"];</code></p>
+                                                                <p class="card-text espacio-codigo0 "><code>mascotas.push("Pez");</code></p>
+                                                                <p class="card-text espacio-codigo0 "><code>console.log(mascotas.length);</code></p>
+                                                                <p class="card-text espacio-codigo0 "><code>console.log(mascotas);</code></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="card " style="width: 18rem; ">
+                                                            <div class="card-body" id="js-length">
+                                                                <p class="card-text espacio-codigo0 ">Ejercicio 9 </p>
+                                                                <p class="card-text espacio-codigo0 ">El metodo <b>.unshift("dato")</b> Te agrega un nuevo dato a tu array pero al inicio</p>
+                                                                <p class="card-text espacio-codigo0 "><code>let mascotas = ["perro", "gato", "perico"];</code></p>
+                                                                <p class="card-text espacio-codigo0 "><code>mascotas.unshift("Caracol");</code></p>
+                                                                <p class="card-text espacio-codigo0 "><code>console.log(mascotas.length);</code></p>
+                                                                <p class="card-text espacio-codigo0 "><code>console.log(mascotas);</code></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="card " style="width: 18rem; ">
+                                                            <div class="card-body" id="js-length">
+                                                                <p class="card-text espacio-codigo0 ">Ejercicio 10 </p>
+                                                                <p class="card-text espacio-codigo0 ">El metodo <b>.pop();</b> Borrar el último dato de tu array</p>
+                                                                <p class="card-text espacio-codigo0 "><code>let mascotas = ["perro", "gato", "perico"];</code></p>
+                                                                <p class="card-text espacio-codigo0 "><code>let borrado = mascotas.pop();</code></p>
+                                                                <p class="card-text espacio-codigo0 "><code>console.log(mascotas.length);</code></p>
+                                                                <p class="card-text espacio-codigo0 "><code>console.log(mascotas);</code></p>
+                                                                <p class="card-text espacio-codigo0 "><code>console.log("La mascota que se borro fue: " + borrado);</code></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="card " style="width: 18rem; ">
+                                                            <div class="card-body" id="js-length">
+                                                                <p class="card-text espacio-codigo0 ">Ejercicio 11 </p>
+                                                                <p class="card-text espacio-codigo0 ">El metodo <b>.splice(1, 4);</b> Elimina el rango de elementos que tu le digas, dentro de un array</p>
+                                                                <p class="card-text espacio-codigo0 "><code>let mascotas = ["perro", "gato", "perico", "pez", "hamster", "mapache"];</code></p>
+                                                                <p class="card-text espacio-codigo0 "><code>let elementosBorrados = mascotas.splice(1, 4);</code></p>
+                                                                <p class="card-text espacio-codigo0 "><code>console.log(mascotas.length);</code></p>
+                                                                <p class="card-text espacio-codigo0 "><code>console.log(mascotas);</code></p>
+                                                                <p class="card-text espacio-codigo0 "><code>console.log(elementosBorrados);</code></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div>
+                                                        <div class="card " style="width: 18rem; ">
+                                                            <div class="card-body" id="js-length">
+                                                                <p class="card-text espacio-codigo0 ">Ejercicio 12 </p>
+                                                                <p class="card-text espacio-codigo0 ">El metodo <b>length</b> Te dice el lugar en donde se encuentra el dato que buscas, OJO: debes ponerlo exacto, mayúsculas y minúsculas</p>
+                                                                <p class="card-text espacio-codigo0 "><code>let mascotas = ["perro", "gato", "perico", "pez", "hamster", "mapache"];</code></p>
+                                                                <p class="card-text espacio-codigo0 "><code>let indice = mascotas.indexOf("pez");</code></p>
+                                                                <p class="card-text espacio-codigo0 "><code>console.log(indice);</code></p>
                                                             </div>
                                                         </div>
                                                     </div>
