@@ -3632,6 +3632,14 @@
                                                             <li>.pop</li> mascotas.pop(); remueve el último dato de tu array , si quieres guardar e una variable lo que se borro, puedes guardarlo en una variable <b>let borrado = mascotas.pop():</b>
                                                             <li><b>.splice</b> mascotas.splice(1, 4); Elimina el rango de elementos que tu le digas, dentro de un array</li>
                                                             <li><b>.indexOf</b>: mascotas.indexOf("pez"); Te dice el lugar en donde se encuentra el dato que buscas, OJO: debes ponerlo exacto, mayúsculas y minúsculas</li>
+                                                            <li><b>entriesPares</b>: const entriesPares = Object.entries(persona); console.log(entriesPares); convierte el objeto de js en arrays <b>INCLUSO</b> cuando creas el objeto con un <b>const</b> que
+                                                                se supone no se debería poder modificar checa el <b>ejercicio 15</b></li>
+                                                            <li><b>.getOwnPropertyNames()</b> Object.getOwnPropertyNames(persona); te muestra las propiedades que le pusiste a tu objeto, pero en un Array, <b>ES MUY USADO AL TRABAJAR CON OBJETOS EN JS</b>,
+                                                                checa el ejercicio 18</li>
+                                                            <li><b>Object.values()</b> Object.values(persona) Te pone en un array los valores que tengas dentro de las propiedades que están dentro de tu objeto, <b>checa el ejercicio 19</b>, ES MUY USADO EN
+                                                                JS
+                                                            </li>
+                                                            <li></li>
                                                         </ul>
                                                     </div>
                                                     <div>
@@ -3645,6 +3653,8 @@
                                                         </ul>
                                                     </div>
                                                 </div>
+                                                <hr>
+
                                                 <hr>
                                                 <div class="d-flex justify-content-around">
                                                     <div>
@@ -3661,6 +3671,14 @@
                                                                     </div>
                                                                 </div>
                                                             </li>
+                                                            <li>
+                                                                Aunque crees un objeto de JS con un <b>const</b>, podrá ser modificado con los metodos <b>delete</b> y <b>Objecto.entries</b>
+                                                            </li>
+                                                            <li>Para <b>evitar</b> cualquier modificación en un objeto de JS, puedes utilizar la propiedad <b>Object.freeze</b>, que sirve para congelar tu objeto y se quede como lo dejaste, PERO
+                                                                <b>no funciona con arrays y objetos que están dentro del objeto</b> A MENOS que pongas la dirección específica de lo que no quieres que se modifique, <b>ejemplo: Object.freeze(persona.amigos);</b>                                                                , checa el <b>ejemplo 17</b>
+
+                                                            </li>
+                                                            <li></li>
                                                             <li></li>
                                                         </ul>
                                                     </div>
@@ -3678,6 +3696,30 @@
                                                             <li>Estos 2 links te dicen que tipos de nombres puedes usar en JS, <a href="https://mathiasbynens.be/notes/javascript-identifiers">mathiasbynens</a> y <a href="https://mothereff.in/js-variables#%E0%B2%A0%5f%E0%B2%A0">Validador de nombres</a></li>
                                                         </ul>
                                                     </div>
+                                                </div>
+                                                <hr>
+                                                <div>
+                                                    <div>
+                                                        <ul>
+                                                            <h2>Referencias</h2>
+                                                            <li>
+                                                                <a href="https://developer.mozilla.org/es/docs/Web/JavaScript">Mozilla</a> parece que ya tiene mejores referencias
+                                                            </li>
+                                                            <li>
+                                                                <a href="https://www.freecodecamp.org/">Free Code Camp</a> Entrenamiento de JS
+                                                            </li>
+                                                            <li>
+                                                                <a href="https://dev.to/t/javascript">dev.to</a> Artículos chingones sobre JS
+                                                            </li>
+                                                            <li>
+                                                                <a href=""></a>
+                                                            </li>
+                                                            <li>
+                                                                <a href=""></a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div></div>
                                                 </div>
                                                 <hr>
                                                 <div class="d-flex flex-wrap justify-content-around">
@@ -3825,18 +3867,18 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="card ">
-                                        <div class="card-header " id="js-4-1 ">
-                                            <a data-toggle="collapse " href="#js-4-1-1 " role="button " aria-expanded="false ">
-                                                <h5 class="mb-0 ">
-                                                    <button class="btn btn-link collapsed " data-toggle="collapse " data-target="#js-4-1-1 " aria-expanded="false ">
+                                    <div class="card">
+                                        <div class="card-header" id="js-4-1">
+                                            <a data-toggle="collapse" href="#js-4-1-1" role="button" aria-expanded="false">
+                                                <h5 class="mb-0">
+                                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#js-4-1-1" aria-expanded="false">
                                                         NodeJS
                                                     </button>
                                                 </h5>
                                             </a>
                                         </div>
-                                        <div id="js-4-1-1 " class="collapse " aria-labelledby="js-4-1 " data-parent="#es6 ">
-                                            <div class="card-body ">
+                                        <div id="js-4-1-1" class="collapse" aria-labelledby="js-4-1" data-parent="#es6">
+                                            <div class="card-body">
                                                 <ul>
                                                     <h2>Correr programas</h2>
                                                     <li>Abre una terminal y escribe: node, se activara tu servidor y podrás correr tus programas</li>
@@ -3846,18 +3888,18 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="card ">
-                                        <div class="card-header " id="js-5-1 ">
-                                            <a data-toggle="collapse " href="#js-5-1-1 " role="button " aria-expanded="false ">
-                                                <h5 class="mb-0 ">
-                                                    <button class="btn btn-link collapsed " data-toggle="collapse " data-target="#js-5-1-1 " aria-expanded="false ">
+                                    <div class="card">
+                                        <div class="card-header" id="js-5-1">
+                                            <a data-toggle="collapse" href="#js-5-1-1" role="button" aria-expanded="false">
+                                                <h5 class="mb-0">
+                                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#js-5-1-1" aria-expanded="false">
                                                         Collapsible Group Item #3
                                                     </button>
                                                 </h5>
                                             </a>
                                         </div>
-                                        <div id="js-5-1-1 " class="collapse " aria-labelledby="js-5-1 " data-parent="#es6 ">
-                                            <div class="card-body ">
+                                        <div id="js-5-1-1" class="collapse" aria-labelledby="js-5-1" data-parent="#es6">
+                                            <div class="card-body">
                                                 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
                                                 on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
                                                 occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
@@ -3869,17 +3911,17 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card ">
-                        <div class="card-header " id="jquery-0 ">
-                            <a data-toggle="collapse " href="#siete " role="button " aria-expanded="false ">
+                    <div class="card">
+                        <div class="card-header" id="jquery-0">
+                            <a data-toggle="collapse" href="#siete" role="button" aria-expanded="false">
                                 <h2 class="mb-0 ">
-                                    <button class="btn btn-link collapsed " type="button " data-toggle="collapse " data-target="#siete " aria-expanded="false ">
-                                        <img src="img/JQuery.png ">
+                                    <button class="btn btn-link collapsed " type="button" data-toggle="collapse" data-target="#siete" aria-expanded="false">
+                                        <img src="img/JQuery.png">
                                     </button>
                                 </h2>
                             </a>
                         </div>
-                        <div id="siete " class="collapse " aria-labelledby="jquery-0 " data-parent="#accordionExample ">
+                        <div id="siete" class="collapse" aria-labelledby="jquery-0" data-parent="#accordionExample">
                             <div class="card-body ">
                                 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
                                 on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft
@@ -3887,51 +3929,51 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card ">
-                        <div class="card-header " id="typescript-0 ">
-                            <a data-toggle="collapse " href="#ocho " role="button " aria-expanded="false ">
+                    <div class="card">
+                        <div class="card-header" id="typescript-0">
+                            <a data-toggle="collapse" href="#ocho" role="button" aria-expanded="false">
                                 <h2 class="mb-0 ">
-                                    <button class="btn btn-link collapsed " type="button " data-toggle="collapse " data-target="#ocho " aria-expanded="false " aria-controls="collapseThree ">
-                                        <img src="img/typescript.png "> TypeScript 3
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#ocho" aria-expanded="false" aria-controls="collapseThree">
+                                        <img src="img/typescript.png"> TypeScript 3
                                     </button>
                                 </h2>
                             </a>
                         </div>
-                        <div id="ocho " class="collapse " aria-labelledby="typescript-0 " data-parent="#accordionExample ">
-                            <div class="card-body ">
+                        <div id="ocho" class="collapse" aria-labelledby="typescript-0" data-parent="#accordionExample">
+                            <div class="card-body">
 
 
-                                <div id="typescript3 ">
-                                    <div class="card ">
-                                        <div class="card-header " id="typescript-1-1 ">
-                                            <a data-toggle="collapse " href="#typescript-1-1-1 " role="button " aria-expanded="false ">
-                                                <h5 class="mb-0 ">
-                                                    <button class="btn btn-link " data-toggle="collapse " data-target="#typescript-1-1-1 " aria-expanded="true ">
+                                <div id="typescript3">
+                                    <div class="card">
+                                        <div class="card-header" id="typescript-1-1">
+                                            <a data-toggle="collapse" href="#typescript-1-1-1" role="button" aria-expanded="false">
+                                                <h5 class="mb-0">
+                                                    <button class="btn btn-link" data-toggle="collapse" data-target="#typescript-1-1-1" aria-expanded="true">
                                                         Collapsible Group Item #1
                                                     </button>
                                                 </h5>
                                             </a>
                                         </div>
 
-                                        <div id="typescript-1-1-1 " class="collapse show " aria-labelledby="typescript-1-1 " data-parent="#typescript3 ">
-                                            <div class="card-body ">
+                                        <div id="typescript-1-1-1" class="collapse show" aria-labelledby="typescript-1-1" data-parent="#typescript3">
+                                            <div class="card-body">
                                                 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
                                                 on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
                                                 occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="card ">
-                                        <div class="card-header " id="typescript-2-1 ">
-                                            <a data-toggle="collapse " href="#typescript-2-1-1 " role="button " aria-expanded="false ">
-                                                <h5 class="mb-0 ">
-                                                    <button class="btn btn-link collapsed " data-toggle="collapse " data-target="#typescript-2-1-1 " aria-expanded="false ">
+                                    <div class="card">
+                                        <div class="card-header" id="typescript-2-1">
+                                            <a data-toggle="collapse" href="#typescript-2-1-1" role="button" aria-expanded="false">
+                                                <h5 class="mb-0">
+                                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#typescript-2-1-1" aria-expanded="false">
                                                         Collapsible Group Item #2
                                                     </button>
                                                 </h5>
                                             </a>
                                         </div>
-                                        <div id="typescript-2-1-1 " class="collapse " aria-labelledby="typescript-2-1 " data-parent="#typescript3 ">
+                                        <div id="typescript-2-1-1" class="collapse" aria-labelledby="typescript-2-1" data-parent="#typescript3">
                                             <div class="card-body ">
                                                 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
                                                 on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
@@ -3939,18 +3981,18 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="card ">
-                                        <div class="card-header " id="typescript-3-1 ">
-                                            <a data-toggle="collapse " href="#typescript-3-1-1 " role="button " aria-expanded="false ">
-                                                <h5 class="mb-0 ">
-                                                    <button class="btn btn-link collapsed " data-toggle="collapse " data-target="#typescript-3-1-1 " aria-expanded="false ">
+                                    <div class="card">
+                                        <div class="card-header" id="typescript-3-1">
+                                            <a data-toggle="collapse" href="#typescript-3-1-1" role="button" aria-expanded="false">
+                                                <h5 class="mb-0">
+                                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#typescript-3-1-1" aria-expanded="false">
                                                         Collapsible Group Item #3
                                                     </button>
                                                 </h5>
                                             </a>
                                         </div>
-                                        <div id="typescript-3-1-1 " class="collapse " aria-labelledby="typescript-3-1 " data-parent="#typescript3 ">
-                                            <div class="card-body ">
+                                        <div id="typescript-3-1-1" class="collapse" aria-labelledby="typescript-3-1" data-parent="#typescript3">
+                                            <div class="card-body">
                                                 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
                                                 on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
                                                 occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
@@ -3963,70 +4005,70 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card ">
-                        <div class="card-header " id="angular-0 ">
-                            <a data-toggle="collapse " href="#nueve " role="button " aria-expanded="false ">
-                                <h2 class="mb-0 ">
-                                    <button class="btn btn-link collapsed " type="button " data-toggle="collapse " data-target="#nueve " aria-expanded="false " aria-controls="collapseThree ">
-                            Angular 8 <i class="fab fa-angular icono-angular "></i>
+                    <div class="card">
+                        <div class="card-header" id="angular-0">
+                            <a data-toggle="collapse" href="#nueve" role="button" aria-expanded="false">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#nueve" aria-expanded="false" aria-controls="collapseThree">
+                            Angular 8 <i class="fab fa-angular icono-angular"></i>
                           </button>
                                 </h2>
                             </a>
                         </div>
-                        <div id="nueve " class="collapse " aria-labelledby="angular-0 " data-parent="#accordionExample ">
-                            <div class="card-body ">
+                        <div id="nueve" class="collapse" aria-labelledby="angular-0" data-parent="#accordionExample">
+                            <div class="card-body">
 
-                                <div id="angular8 ">
-                                    <div class="card ">
-                                        <div class="card-header " id="angular-1-1 ">
-                                            <a data-toggle="collapse " href="#angular-1-1-1 " role="button " aria-expanded="false ">
-                                                <h5 class="mb-0 ">
-                                                    <button class="btn btn-link " data-toggle="collapse " data-target="#angular-1-1-1 " aria-expanded="true ">
-                                                        Collapsible Group Item #1 <i class="fab fa-angular icono-angular "></i>
+                                <div id="angular8">
+                                    <div class="card">
+                                        <div class="card-header" id="angular-1-1">
+                                            <a data-toggle="collapse" href="#angular-1-1-1" role="button" aria-expanded="false">
+                                                <h5 class="mb-0">
+                                                    <button class="btn btn-link" data-toggle="collapse" data-target="#angular-1-1-1" aria-expanded="true">
+                                                        Collapsible Group Item #1 <i class="fab fa-angular icono-angular"></i>
                                                     </button>
                                                 </h5>
                                             </a>
                                         </div>
 
-                                        <div id="angular-1-1-1 " class="collapse show " aria-labelledby="angular-1-1 " data-parent="#angular8 ">
-                                            <div class="card-body ">
-                                                <i class="fab fa-angular "></i> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck
+                                        <div id="angular-1-1-1" class="collapse show" aria-labelledby="angular-1-1" data-parent="#angular8">
+                                            <div class="card-body">
+                                                <i class="fab fa-angular"></i> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck
                                                 quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson
                                                 cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore
                                                 sustainable VHS.
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="card ">
-                                        <div class="card-header " id="angular-2-1 ">
-                                            <a data-toggle="collapse " href="#angular-2-1-1 " role="button " aria-expanded="false ">
-                                                <h5 class="mb-0 ">
-                                                    <button class="btn btn-link collapsed " data-toggle="collapse " data-target="#angular-2-1-1 " aria-expanded="false ">
+                                    <div class="card">
+                                        <div class="card-header" id="angular-2-1">
+                                            <a data-toggle="collapse" href="#angular-2-1-1" role="button" aria-expanded="false">
+                                                <h5 class="mb-0">
+                                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#angular-2-1-1" aria-expanded="false">
                                                         Collapsible Group Item #2
                                                     </button>
                                                 </h5>
                                             </a>
                                         </div>
-                                        <div id="angular-2-1-1 " class="collapse " aria-labelledby="angular-2-1 " data-parent="#angular8 ">
-                                            <div class="card-body ">
+                                        <div id="angular-2-1-1" class="collapse" aria-labelledby="angular-2-1" data-parent="#angular8">
+                                            <div class="card-body">
                                                 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
                                                 on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
                                                 occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="card ">
-                                        <div class="card-header " id="angular-3-1 ">
-                                            <a data-toggle="collapse " href="#angular-3-1-1 " role="button " aria-expanded="false ">
-                                                <h5 class="mb-0 ">
-                                                    <button class="btn btn-link collapsed " data-toggle="collapse " data-target="#angular-3-1-1 " aria-expanded="false ">
+                                    <div class="card">
+                                        <div class="card-header" id="angular-3-1">
+                                            <a data-toggle="collapse" href="#angular-3-1-1" role="button" aria-expanded="false">
+                                                <h5 class="mb-0">
+                                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#angular-3-1-1" aria-expanded="false">
                                                         Collapsible Group Item #3
                                                     </button>
                                                 </h5>
                                             </a>
                                         </div>
-                                        <div id="angular-3-1-1 " class="collapse " aria-labelledby="angular-3-1 " data-parent="#angular8 ">
-                                            <div class="card-body ">
+                                        <div id="angular-3-1-1" class="collapse" aria-labelledby="angular-3-1" data-parent="#angular8">
+                                            <div class="card-body">
                                                 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
                                                 on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
                                                 occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
@@ -4040,294 +4082,294 @@
                         </div>
                     </div>
 
-                    <div class="card ">
-                        <div class="card-header " id="jobs-0 ">
-                            <a data-toggle="collapse " href="#empleo " role="button " aria-expanded="false ">
-                                <h2 class="mb-0 ">
-                                    <button class="btn btn-link collapsed " type="button " data-toggle="collapse " data-target="#empleo " aria-expanded="false " aria-controls="collapseThree ">
-                                        <img src="img/jobs.png "> Jobs
+                    <div class="card">
+                        <div class="card-header" id="jobs-0">
+                            <a data-toggle="collapse" href="#empleo" role="button" aria-expanded="false">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#empleo" aria-expanded="false" aria-controls="collapseThree">
+                                        <img src="img/jobs.png"> Jobs
                                     </button>
                                 </h2>
                             </a>
                         </div>
-                        <div id="empleo " class="collapse " aria-labelledby="jobs-0 " data-parent="#accordionExample ">
-                            <div class="card-body ">
+                        <div id="empleo" class="collapse" aria-labelledby="jobs-0" data-parent="#accordionExample">
+                            <div class="card-body">
 
-                                <div class="d-flex ">
+                                <div class="d-flex">
 
                                     <ul>
                                         <h2>World class companies</h2>
-                                        <li><a href="http://nearshoredevs.com/ " target="_blank ">Near Shore devs</a></li>
+                                        <li><a href="http://nearshoredevs.com/" target="_blank">Near Shore devs</a></li>
                                         <li>
-                                            <a href="https://www.sequoiacap.com " target="_blank ">Sequoiacap <i>Sillicon Valley Fund</i></a>
+                                            <a href="https://www.sequoiacap.com" target="_blank">Sequoiacap <i>Sillicon Valley Fund</i></a>
                                         </li>
                                         <li>
-                                            <a href="https://careers.accel.com/ " target="_blank ">Accel <i>Sillicon Valley Fund</i></a>
+                                            <a href="https://careers.accel.com/" target="_blank">Accel <i>Sillicon Valley Fund</i></a>
                                         </li>
                                         <li>
-                                            <a href="https://jobs.greylock.com/jobs " target="_blank ">Greylock <i>Sillicon Valley Fund</i></a>
+                                            <a href="https://jobs.greylock.com/jobs" target="_blank">Greylock <i>Sillicon Valley Fund</i></a>
                                         </li>
                                         <li>
-                                            <a href="https://www.coinbase.com/ " target="_blank ">Coinbase</a>
+                                            <a href="https://www.coinbase.com/" target="_blank">Coinbase</a>
                                         </li>
                                         <li>
-                                            <a href="https://stackoverflow.com/ " target="_blank ">Stackoverflow</a>
+                                            <a href="https://stackoverflow.com/" target="_blank">Stackoverflow</a>
                                         </li>
                                         <li>
-                                            <a href="https://angel.co/jobs " target="_blank ">Angel.co</a>
+                                            <a href="https://angel.co/jobs" target="_blank">Angel.co</a>
                                         </li>
                                         <li>
-                                            <a href="https://codepen.io/jobs/ " target="_blank ">Codepen</a>
+                                            <a href="https://codepen.io/jobs/" target="_blank">Codepen</a>
                                         </li>
                                         <li>
-                                            <a href="https://js-kongress.com/jobs/ " target="_blank ">js-kongress</a>
+                                            <a href="https://js-kongress.com/jobs/" target="_blank">js-kongress</a>
                                         </li>
                                         <li>
-                                            <a href="https://vuejsdevelopers.com/ " target="_blank ">VueJSdevelopers</a>
+                                            <a href="https://vuejsdevelopers.com/" target="_blank">VueJSdevelopers</a>
                                         </li>
                                         <li>
-                                            <a href="https://www.crunchbase.com/ " target="_blank ">Crunchbase</a>
+                                            <a href="https://www.crunchbase.com/" target="_blank">Crunchbase</a>
                                         </li>
                                         <li>
-                                            <a href="https://www.workatastartup.com/ " target="_blank ">Workatastartup (YCombinator)</a>
+                                            <a href="https://www.workatastartup.com/" target="_blank">Workatastartup (YCombinator)</a>
                                         </li>
                                         <li>
-                                            <a href="https://auth0.com/ " target="_blank ">Auth0</a>
+                                            <a href="https://auth0.com/" target="_blank">Auth0</a>
                                         </li>
                                         <li>
-                                            <a href="https://lambdaschool.com/careers " target="_blank ">Lambdaschool</a>
+                                            <a href="https://lambdaschool.com/careers" target="_blank">Lambdaschool</a>
                                         </li>
                                         <li>
-                                            <a href="https://vuejobs.com/ " target="_blank ">Vuejobs</a>
+                                            <a href="https://vuejobs.com/" target="_blank">Vuejobs</a>
                                         </li>
                                         <li>
-                                            <a href="https://passionatepeople.io/ " target="_blank ">Passionatepeople</a>
+                                            <a href="https://passionatepeople.io/" target="_blank">Passionatepeople</a>
                                         </li>
                                         <li>
-                                            <a href="https://www.cypress.io " target="_blank ">Cypress</a>
+                                            <a href="https://www.cypress.io" target="_blank">Cypress</a>
                                         </li>
                                         <li>
-                                            <a href="https://trello.com/es " target="_blank ">Trello</a>
+                                            <a href="https://trello.com/es" target="_blank">Trello</a>
                                         </li>
                                         <li>
-                                            <a href="https://www.atlassian.com/ " target="_blank ">Atlassian</a>
+                                            <a href="https://www.atlassian.com/" target="_blank">Atlassian</a>
                                         </li>
                                         <li>
-                                            <a href="https://news.ycombinator.com/jobs " target="_blank ">YCombinator <i>Hacker news</i></a>
+                                            <a href="https://news.ycombinator.com/jobs" target="_blank">YCombinator <i>Hacker news</i></a>
                                         </li>
                                         <li>
-                                            <a href="https://www.hackerrank.com/ " target="_blank ">Hackerrank</a>
+                                            <a href="https://www.hackerrank.com/" target="_blank">Hackerrank</a>
                                         </li>
                                         <li>
-                                            <a href="https://angularjobs.com/ " target="_blank ">Angularjobs</a>
+                                            <a href="https://angularjobs.com/" target="_blank">Angularjobs</a>
                                         </li>
                                         <li>
-                                            <a href="https://javascript.works-hub.com/jobs/ " target="_blank ">Javascript.works-hub</a>
+                                            <a href="https://javascript.works-hub.com/jobs/" target="_blank">Javascript.works-hub</a>
                                         </li>
                                         <li>
-                                            <a href="https://css-tricks.com " target="_blank ">CSS-tricks</a>
+                                            <a href="https://css-tricks.com" target="_blank">CSS-tricks</a>
                                         </li>
                                         <li>
-                                            <a href="https://www.frogdesign.com/ " target="_blank ">frogdesign</a> Experta en UX
+                                            <a href="https://www.frogdesign.com/" target="_blank">frogdesign</a> Experta en UX
                                         </li>
                                         <li>
-                                            <a href="https://www.honeypot.io/ " target="_blank ">HoneyPot</a> Hicieron el documental de Vue JS
+                                            <a href="https://www.honeypot.io/" target="_blank">HoneyPot</a> Hicieron el documental de Vue JS
                                         </li>
                                         <li>
-                                            <a href="https://hired.com/ " target="_blank ">Hired</a> Publican la encuesta mundial de vacantes de Software Enginners, lo vi en EdTeam
+                                            <a href="https://hired.com/" target="_blank">Hired</a> Publican la encuesta mundial de vacantes de Software Enginners, lo vi en EdTeam
                                         </li>
                                         <li>
-                                            <a href="https://soshace.com/ " target="_blank ">Soshace</a> Empleos en ingles con diferentes tecnologías
+                                            <a href="https://soshace.com/" target="_blank">Soshace</a> Empleos en ingles con diferentes tecnologías
                                         </li>
                                         <li>
-                                            <a href="https://www.lever.co/careers/ " target="_blank ">Lever</a>
+                                            <a href="https://www.lever.co/careers/" target="_blank">Lever</a>
                                         </li>
                                         <li>
-                                            <a href="https://www.vettery.com/ " target="_blank ">Vettery</a>Buscador de empleos en el extranjero
+                                            <a href="https://www.vettery.com/" target="_blank">Vettery</a>Buscador de empleos en el extranjero
                                         </li>
                                         <li>
-                                            <a href=" " target="_blank "></a>
+                                            <a href="" target="_blank"></a>
                                         </li>
                                         <li>
-                                            <a href=" " target="_blank "></a>
+                                            <a href="" target="_blank"></a>
                                         </li>
                                     </ul>
 
 
                                     <ul>
                                         <h2>Remote Jobs</h2>
-                                        <li><a href="https://terminal.io/ " target="_blank ">Terminal.io</a></li>
-                                        <li><a href="https://remoteok.io/ " target="_blank ">Remoteok.io</a></li>
+                                        <li><a href="https://terminal.io/" target="_blank">Terminal.io</a></li>
+                                        <li><a href="https://remoteok.io/" target="_blank">Remoteok.io</a></li>
                                         <li>
-                                            <a href="https://remotive.io/ " target="_blank ">Remotive.io</a>
+                                            <a href="https://remotive.io/" target="_blank">Remotive.io</a>
                                         </li>
                                         <li>
-                                            <a href="https://jsremotely.com/ " target="_blank ">JSremotely</a>
+                                            <a href="https://jsremotely.com/" target="_blank">JSremotely</a>
                                         </li>
                                         <li>
-                                            <a href="https://turing.com/ " target="_blank ">Turing</a>
+                                            <a href="https://turing.com/" target="_blank">Turing</a>
                                         </li>
                                         <li>
-                                            <a href="https://frontendremotejobs.com/ " target="_blank ">FrontendRemoteJobs</a>
+                                            <a href="https://frontendremotejobs.com/" target="_blank">FrontendRemoteJobs</a>
                                         </li>
                                         <li>
-                                            <a href="https://www.smashingmagazine.com/ " target="_blank ">Smashing Magazine</a>
+                                            <a href="https://www.smashingmagazine.com/" target="_blank">Smashing Magazine</a>
                                         </li>
                                         <li>
-                                            <a href="https://weremoto.com/ " target="_blank ">WeRemoto</a>
+                                            <a href="https://weremoto.com/" target="_blank">WeRemoto</a>
                                         </li>
                                         <li>
-                                            <a href="https://www.upwork.com/ " target="_blank ">UpWork</a>
+                                            <a href="https://www.upwork.com/" target="_blank">UpWork</a>
                                         </li>
                                     </ul>
 
                                     <ul>
                                         <h2>Best Mexican IT companies</h2>
-                                        <li><a href="https://www.abraxas.ventures/careers " target="_blank ">Abraxas</a></li>
-                                        <li><a href="https://michelada.io/ " target="_blank ">Michelada.io</a></li>
-                                        <li><a href="https://tango.io/ " target="_blank ">Tango.io</a></li>
-                                        <li><a href="https://svitla.com/ " target="_blank ">Svitla</a></li>
-                                        <li><a href="https://www.scio.com.mx/ " target="_blank ">Scio</a></li>
-                                        <li><a href="https://www.icalialabs.com/ " target="_blank ">Icalialabs</a> <i>jobs@icalialabs.com</i></li>
-                                        <li><a href="https://www.tekzenit.com " target="_blank ">Tekzenit</a></li>
+                                        <li><a href="https://www.abraxas.ventures/careers" target="_blank">Abraxas</a></li>
+                                        <li><a href="https://michelada.io/" target="_blank">Michelada.io</a></li>
+                                        <li><a href="https://tango.io/" target="_blank">Tango.io</a></li>
+                                        <li><a href="https://svitla.com/" target="_blank">Svitla</a></li>
+                                        <li><a href="https://www.scio.com.mx/" target="_blank">Scio</a></li>
+                                        <li><a href="https://www.icalialabs.com/" target="_blank">Icalialabs</a> <i>jobs@icalialabs.com</i></li>
+                                        <li><a href="https://www.tekzenit.com" target="_blank">Tekzenit</a></li>
                                         <li>
-                                            <a href="https://www.tacitknowledge.com/ " target="_blank ">Tacitknowledge</a>
+                                            <a href="https://www.tacitknowledge.com/" target="_blank">Tacitknowledge</a>
                                         </li>
                                         <li>
-                                            <a href="https://www.mobiik.com/ " target="_blank ">Mobiik</a>
+                                            <a href="https://www.mobiik.com/" target="_blank">Mobiik</a>
                                         </li>
                                         <li>
-                                            <a href="https://www.proscai.com " target="_blank ">Proscai</a>
+                                            <a href="https://www.proscai.com" target="_blank">Proscai</a>
                                         </li>
                                         <li>
-                                            <a href="https://www.magmalabs.io/ " target="_blank ">Magmalabs</a>
+                                            <a href="https://www.magmalabs.io/" target="_blank">Magmalabs</a>
                                         </li>
                                         <li>
-                                            <a href="https://ns.tequilapps.com/ " target="_blank ">NearSoft San Luis Potosi</a>
+                                            <a href="https://ns.tequilapps.com/" target="_blank">NearSoft San Luis Potosi</a>
                                         </li>
                                         <li>
-                                            <a href="https://www.globant.com/#home " target="_blank ">Globant</a>
+                                            <a href="https://www.globant.com/#home" target="_blank">Globant</a>
                                         </li>
                                         <li>
-                                            <a href="https://www.wizeline.com/ " target="_blank ">Wizeline</a>
+                                            <a href="https://www.wizeline.com/" target="_blank">Wizeline</a>
                                         </li>
-                                        <li><a href="https://trabajaenintugo.com/ " target="_blank ">Intugo</a></li>
+                                        <li><a href="https://trabajaenintugo.com/" target="_blank">Intugo</a></li>
                                         <li>
-                                            <a href="https://www.itexico.com/ " target="_blank ">Itexico</a>
-                                        </li>
-                                        <li>
-                                            <a href="http://www.grw.com.mx/ " target="_blank ">GrowIt</a>
+                                            <a href="https://www.itexico.com/" target="_blank">Itexico</a>
                                         </li>
                                         <li>
-                                            <a href="https://www.sngular.com " target="_blank ">Sngular</a>
+                                            <a href="http://www.grw.com.mx/" target="_blank">GrowIt</a>
                                         </li>
                                         <li>
-                                            <a href="https://www.taltere.com/ " target="_blank ">Taltere</a>
+                                            <a href="https://www.sngular.com" target="_blank">Sngular</a>
                                         </li>
                                         <li>
-                                            <a href="https://donchambitas.com/ " target="_blank ">Don chambitas</a>
+                                            <a href="https://www.taltere.com/" target="_blank">Taltere</a>
                                         </li>
                                         <li>
-                                            <a href="https://codigofacilito.com/ " target="_blank ">Codigofacilito</a>
+                                            <a href="https://donchambitas.com/" target="_blank">Don chambitas</a>
                                         </li>
                                         <li>
-                                            <a href="https://www.accenture.com " target="_blank ">Accenture</a>
+                                            <a href="https://codigofacilito.com/" target="_blank">Codigofacilito</a>
                                         </li>
                                         <li>
-                                            <a href="https://www.luxoft.com/ " target="_blank ">Luxoft</a>
+                                            <a href="https://www.accenture.com" target="_blank">Accenture</a>
                                         </li>
                                         <li>
-                                            <a href="https://www.epam.com/ " target="_blank ">EPAM</a>
+                                            <a href="https://www.luxoft.com/" target="_blank">Luxoft</a>
                                         </li>
                                         <li>
-                                            <a href="https://www.ibm.com/mx-es " target="_blank ">IBM</a>
+                                            <a href="https://www.epam.com/" target="_blank">EPAM</a>
                                         </li>
                                         <li>
-                                            <a href="https://www.tiempodev.com/ " target="_blank ">Tiempo Development</a>
+                                            <a href="https://www.ibm.com/mx-es" target="_blank">IBM</a>
                                         </li>
                                         <li>
-                                            <a href="https://www.unosquare.com " target="_blank ">Unosquare</a>
+                                            <a href="https://www.tiempodev.com/" target="_blank">Tiempo Development</a>
                                         </li>
                                         <li>
-                                            <a href="http://www.agavelab.com " target="_blank ">Agavelab</a>
+                                            <a href="https://www.unosquare.com" target="_blank">Unosquare</a>
                                         </li>
                                         <li>
-                                            <a href="https://nu.com.mx/ " target="_blank ">NuBank</a>
+                                            <a href="http://www.agavelab.com" target="_blank">Agavelab</a>
                                         </li>
                                         <li>
-                                            <a href="https://arkusnexus.com/ " target="_blank ">Arkusnexus</a>
+                                            <a href="https://nu.com.mx/" target="_blank">NuBank</a>
                                         </li>
                                         <li>
-                                            <a href="https://onephase.com/ " target="_blank ">Onephase</a>
+                                            <a href="https://arkusnexus.com/" target="_blank">Arkusnexus</a>
                                         </li>
                                         <li>
-                                            <a href="https://novasolutionsystems.com/ " target="_blank ">Nova Solution Systems</a>
+                                            <a href="https://onephase.com/" target="_blank">Onephase</a>
                                         </li>
                                         <li>
-                                            <a href="https://simpat.tech " target="_blank ">Simpat</a>
+                                            <a href="https://novasolutionsystems.com/" target="_blank">Nova Solution Systems</a>
                                         </li>
                                         <li>
-                                            <a href="https://www.altimetrik.com/ " target="_blank ">altimetrik</a>
+                                            <a href="https://simpat.tech" target="_blank">Simpat</a>
                                         </li>
                                         <li>
-                                            <a href="https://www.startupgdl.com/ " target="_blank ">StartUpGDL</a>
+                                            <a href="https://www.altimetrik.com/" target="_blank">altimetrik</a>
                                         </li>
                                         <li>
-                                            <a href="https://www.amdocs.com/ " target="_blank ">Amdocs</a> Empresa israelí en Zapopan
+                                            <a href="https://www.startupgdl.com/" target="_blank">StartUpGDL</a>
                                         </li>
                                         <li>
-                                            <a href="https://hexaware.com/ " target="_blank ">Hexaware</a> Apus company(Need Angular developerss)
+                                            <a href="https://www.amdocs.com/" target="_blank">Amdocs</a> Empresa israelí en Zapopan
                                         </li>
                                         <li>
-                                            <a href="https://www.digitalonus.com/ " target="_blank ">DigitalOnUs</a>
+                                            <a href="https://hexaware.com/" target="_blank">Hexaware</a> Apus company(Need Angular developerss)
                                         </li>
                                         <li>
-                                            <a href="https://kueski.com/ " target="_blank ">Kueski</a>
+                                            <a href="https://www.digitalonus.com/" target="_blank">DigitalOnUs</a>
                                         </li>
                                         <li>
-                                            <a href="https://www.brightcove.com/es/ " target="_blank ">Brightcove</a>
+                                            <a href="https://kueski.com/" target="_blank">Kueski</a>
                                         </li>
                                         <li>
-                                            <a href="https://zignallabs.com/ " target="_blank ">ZignalLabs</a>
+                                            <a href="https://www.brightcove.com/es/" target="_blank">Brightcove</a>
                                         </li>
                                         <li>
-                                            <a href="http://seis10.com " target="_blank ">Seis10</a> e-Commerce y DevOps, pero puede cambiar
+                                            <a href="https://zignallabs.com/" target="_blank">ZignalLabs</a>
                                         </li>
                                         <li>
-                                            <a href="https://www.ust-global.com/ " target="_blank ">UST-global</a> Java, AWS & English, pero puede cambiar
+                                            <a href="http://seis10.com" target="_blank">Seis10</a> e-Commerce y DevOps, pero puede cambiar
                                         </li>
                                         <li>
-                                            <a href="https://www.skycatch.com/ " target="_blank ">SkyCatch</a>
+                                            <a href="https://www.ust-global.com/" target="_blank">UST-global</a> Java, AWS & English, pero puede cambiar
                                         </li>
                                         <li>
-                                            <a href="https://salesloft.com/ " target="_blank ">SalesLoft</a>
+                                            <a href="https://www.skycatch.com/" target="_blank">SkyCatch</a>
                                         </li>
                                         <li>
-                                            <a href="https://jobs.cisco.com/jobs/SearchJobs " target="_blank ">CISCO</a>
+                                            <a href="https://salesloft.com/" target="_blank">SalesLoft</a>
                                         </li>
                                         <li>
-                                            <a href="https://jobs.intel.com/ListJobs/All/Search/jobtitle " target="_blank ">Intel</a>
+                                            <a href="https://jobs.cisco.com/jobs/SearchJobs" target="_blank">CISCO</a>
                                         </li>
                                         <li>
-                                            <a href="https://envato.com/ " target="_blank ">Envato</a>
+                                            <a href="https://jobs.intel.com/ListJobs/All/Search/jobtitle" target="_blank">Intel</a>
                                         </li>
                                         <li>
-                                            <a href="https://www.onelogin.com/ " target="_blank ">OneLogin</a>
+                                            <a href="https://envato.com/" target="_blank">Envato</a>
                                         </li>
                                         <li>
-                                            <a href="https://www.pixan.io/ " target="_blank ">Pixan</a> El wey buen pedo de GDL
+                                            <a href="https://www.onelogin.com/" target="_blank">OneLogin</a>
                                         </li>
                                         <li>
-                                            <a href="https://www.apptegy.com/ " target="_blank ">Apptegy</a> empleos de Node
+                                            <a href="https://www.pixan.io/" target="_blank">Pixan</a> El wey buen pedo de GDL
                                         </li>
                                         <li>
-                                            <a href="https://www.neoris.com/home " target="_blank ">Neoris</a> Empleos de Frontend y Angular
+                                            <a href="https://www.apptegy.com/" target="_blank">Apptegy</a> empleos de Node
                                         </li>
                                         <li>
-                                            <a href="https://pkglobal.com " target="_blank ">Pkglobal</a> se ve corporativa, no hay chambas de momento pero dicen que es profesional
+                                            <a href="https://www.neoris.com/home" target="_blank">Neoris</a> Empleos de Frontend y Angular
                                         </li>
                                         <li>
-                                            <a href="https://www.facebook.com/groups/devsMX/?fref=nf " target="_blank ">Grupo de Fsce con mucha chamba</a>
+                                            <a href="https://pkglobal.com" target="_blank">Pkglobal</a> se ve corporativa, no hay chambas de momento pero dicen que es profesional
+                                        </li>
+                                        <li>
+                                            <a href="https://www.facebook.com/groups/devsMX/?fref=nf" target="_blank">Grupo de Fsce con mucha chamba</a>
                                         </li>
 
                                     </ul>
@@ -4340,64 +4382,64 @@
 
                                             <h2>Job seekers pages</h2>
                                             <li>
-                                                <a href="https://www.randstad.co.uk/ " target="_blank ">Randstad</a>
+                                                <a href="https://www.randstad.co.uk/" target="_blank">Randstad</a>
                                             </li>
                                             <li>
-                                                <a href="https://www.glassdoor.com.mx " target="_blank ">Glassdoor</a>
+                                                <a href="https://www.glassdoor.com.mx" target="_blank">Glassdoor</a>
                                             </li>
                                             <li>
-                                                <a href="https://triplebyte.com/ " target="_blank ">Triplebyte</a>
+                                                <a href="https://triplebyte.com/" target="_blank">Triplebyte</a>
                                             </li>
                                             <li>
-                                                <a href="https://notchteam.com/ " target="_blank ">Notchteam</a>
+                                                <a href="https://notchteam.com/" target="_blank">Notchteam</a>
                                             </li>
                                             <li>
-                                                <a href="https://www.cliber.io/ " target="_blank ">Cliber.io</a>
+                                                <a href="https://www.cliber.io/" target="_blank">Cliber.io</a>
                                             </li>
                                             <li>
-                                                <a href="https://bestplacetocode.com/ " target="_blank ">Best place to code</a>
+                                                <a href="https://bestplacetocode.com/" target="_blank">Best place to code</a>
                                             </li>
                                             <li>
-                                                <a href="https://coderslink.com/ " target="_blank ">Coderslink</a>
+                                                <a href="https://coderslink.com/" target="_blank">Coderslink</a>
                                             </li>
                                             <li>
-                                                <a href="https://empleosti.com.mx/ " target="_blank ">Empleosti</a>
+                                                <a href="https://empleosti.com.mx/" target="_blank">Empleosti</a>
                                             </li>
                                             <li>
-                                                <a href="https://www.recluit.com/ " target="_blank ">Recluit</a>
+                                                <a href="https://www.recluit.com/" target="_blank">Recluit</a>
                                             </li>
                                             <li>
-                                                <a href="http://tas-screenit.com/ " target="_blank ">Tas-screenit</a>
+                                                <a href="http://tas-screenit.com/" target="_blank">Tas-screenit</a>
                                             </li>
                                             <li>
-                                                <a href="https://www.recluit.com/ " target="_blank ">Recluit</a>
+                                                <a href="https://www.recluit.com/" target="_blank">Recluit</a>
                                             </li>
                                             <li>
-                                                <a href="https://trabajoendigital.com/ " target="_blank ">Trabajo en Digital</a>
+                                                <a href="https://trabajoendigital.com/" target="_blank">Trabajo en Digital</a>
                                             </li>
                                             <li>
-                                                <a href="https://www.indeed.com.mx " target="_blank ">Indeed</a>
+                                                <a href="https://www.indeed.com.mx" target="_blank">Indeed</a>
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/feed/ " target="_blank ">Linkedin</a>
+                                                <a href="https://www.linkedin.com/feed/" target="_blank">Linkedin</a>
                                             </li>
                                             <li>
-                                                <a href="https://www.bumeran.com.mx/ " target="_blank ">Bumeran</a>
+                                                <a href="https://www.bumeran.com.mx/" target="_blank">Bumeran</a>
                                             </li>
                                             <li>
-                                                <a href="https://www.occ.com.mx " target="_blank ">OCC</a>
+                                                <a href="https://www.occ.com.mx" target="_blank">OCC</a>
                                             </li>
                                             <li>
-                                                <a href="https://www.computrabajo.com.mx/ " target="_blank ">Computrabajo</a>
+                                                <a href="https://www.computrabajo.com.mx/" target="_blank">Computrabajo</a>
                                             </li>
                                             <li>
-                                                <a href="https://vacantesdigitales.com/ " target="_blank ">Vacantes Digitales</a>
+                                                <a href="https://vacantesdigitales.com/" target="_blank">Vacantes Digitales</a>
                                             </li>
                                             <li>
-                                                <a href="https://www.infojobs.net " target="_blank ">InfoJobs</a>
+                                                <a href="https://www.infojobs.net" target="_blank">InfoJobs</a>
                                             </li>
                                             <li>
-                                                <a href="https://interfell.com/ " target="_blank ">Interfell</a>
+                                                <a href="https://interfell.com/" target="_blank">Interfell</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -4406,14 +4448,14 @@
                                         <ol>
                                             <h2>Toxic companies</h2>
                                             <li>
-                                                <a href="https://www.indracompany.com/ " target="_blank ">Indra</a>
+                                                <a href="https://www.indracompany.com/" target="_blank">Indra</a>
                                             </li>
-                                            <li><a href="https://www.tcs.com/ " target="_blank ">Tata</a></li>
+                                            <li><a href="https://www.tcs.com/" target="_blank">Tata</a></li>
                                             <li>
-                                                <a href="https://www.gruposalinas.com/ " target="_blank ">Grupo Salinas</a>
+                                                <a href="https://www.gruposalinas.com/" target="_blank">Grupo Salinas</a>
                                             </li>
                                             <li>
-                                                <a href="https://www.softtek.com/es/ " target="_blank ">Softtek</a>
+                                                <a href="https://www.softtek.com/es/" target="_blank">Softtek</a>
                                             </li>
                                         </ol>
                                     </div>
@@ -4422,220 +4464,220 @@
                                         <ul>
                                             <h2>Reclutadores serios y/ó con experiencia e internacionales</h2>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/jessiayala/ " target="_blank ">Jessi Ayala</a> Nearsoft
+                                                <a href="https://www.linkedin.com/in/jessiayala/" target="_blank">Jessi Ayala</a> Nearsoft
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/mitzyposas/ " target="_blank ">Mitzy Posas</a> IT RH Senior
+                                                <a href="https://www.linkedin.com/in/mitzyposas/" target="_blank">Mitzy Posas</a> IT RH Senior
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/sandra-trevi%C3%B1o-721b6433/ " target="_blank ">Sandra-treviño</a> CodersLink
+                                                <a href="https://www.linkedin.com/in/sandra-trevi%C3%B1o-721b6433/" target="_blank">Sandra-treviño</a> CodersLink
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/oktaviamerazga/ " target="_blank ">Oktavia Merazga</a> Hungría-Monterrey-USA-Remotos
+                                                <a href="https://www.linkedin.com/in/oktaviamerazga/" target="_blank">Oktavia Merazga</a> Hungría-Monterrey-USA-Remotos
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/almendra-s%C3%A1nchez-8a62158/ " target="_blank ">Almendra Sanchez</a> HR Senior IT
+                                                <a href="https://www.linkedin.com/in/almendra-s%C3%A1nchez-8a62158/" target="_blank">Almendra Sanchez</a> HR Senior IT
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/karlaguerrerom/ " target="_blank ">Karla Guerrero</a> SR RH It
+                                                <a href="https://www.linkedin.com/in/karlaguerrerom/" target="_blank">Karla Guerrero</a> SR RH It
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/marlen-osorio-0859662a/ " target="_blank ">Marlen Osorio</a>SR IT RH
+                                                <a href="https://www.linkedin.com/in/marlen-osorio-0859662a/" target="_blank">Marlen Osorio</a>SR IT RH
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/jos%C3%A9-carlo-medina-a337a654/ " target="_blank ">Jose Carlo</a> El wey bn pedo de Zapopan, Angular-node-react
+                                                <a href="https://www.linkedin.com/in/jos%C3%A9-carlo-medina-a337a654/" target="_blank">Jose Carlo</a> El wey bn pedo de Zapopan, Angular-node-react
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/durga-raja-b15165ab/ " target="_blank ">Durga Raja</a> IT-USA-Apu
+                                                <a href="https://www.linkedin.com/in/durga-raja-b15165ab/" target="_blank">Durga Raja</a> IT-USA-Apu
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/ashish-gupta-4a2ab465/ " target="_blank ">Ashish Gupta</a> IT-USA-Apu
+                                                <a href="https://www.linkedin.com/in/ashish-gupta-4a2ab465/" target="_blank">Ashish Gupta</a> IT-USA-Apu
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/erick-m-859ab817a/ " target="_blank ">Erik Zapopan Taltere</a> Buen pedo erik
+                                                <a href="https://www.linkedin.com/in/erick-m-859ab817a/" target="_blank">Erik Zapopan Taltere</a> Buen pedo erik
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/alejandro-lozano-91402035/ " target="_blank ">Alejandro-Lozano</a> Regio-remoto-Bilingue-50k
+                                                <a href="https://www.linkedin.com/in/alejandro-lozano-91402035/" target="_blank">Alejandro-Lozano</a> Regio-remoto-Bilingue-50k
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/carlosagomeze/ " target="_blank ">Carlos</a> Regio-Saltillo-bilingue-bn pedo este wey
+                                                <a href="https://www.linkedin.com/in/carlosagomeze/" target="_blank">Carlos</a> Regio-Saltillo-bilingue-bn pedo este wey
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/alex-zorych-289681104/ " target="_blank ">Alex-Zorych</a> RH IT USA
+                                                <a href="https://www.linkedin.com/in/alex-zorych-289681104/" target="_blank">Alex-Zorych</a> RH IT USA
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/beremar/ " target="_blank ">Berenice</a> Apoyo Coronavirus, Escuela Bancaria
+                                                <a href="https://www.linkedin.com/in/beremar/" target="_blank">Berenice</a> Apoyo Coronavirus, Escuela Bancaria
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/marcela-navarro-97454a39/ " target="_blank ">Marcela Navarro</a> Singular
+                                                <a href="https://www.linkedin.com/in/marcela-navarro-97454a39/" target="_blank">Marcela Navarro</a> Singular
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/ana-carolina-agraz-f/ " target="_blank ">Ana Carolina</a> Luxoft
+                                                <a href="https://www.linkedin.com/in/ana-carolina-agraz-f/" target="_blank">Ana Carolina</a> Luxoft
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/satinder-sharma-667977113/ " target="_blank ">Satinder Sharma</a> RH SR Apu
+                                                <a href="https://www.linkedin.com/in/satinder-sharma-667977113/" target="_blank">Satinder Sharma</a> RH SR Apu
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/gabriela-g-lopez-b8316122/ " target="_blank ">Gabriela Lopez</a> EPAM
+                                                <a href="https://www.linkedin.com/in/gabriela-g-lopez-b8316122/" target="_blank">Gabriela Lopez</a> EPAM
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/stefania-bravo-8703a1a7/ " target="_blank ">Stefania Bravo</a> SR Alliance IT
+                                                <a href="https://www.linkedin.com/in/stefania-bravo-8703a1a7/" target="_blank">Stefania Bravo</a> SR Alliance IT
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/domenicadlcnaime/ " target="_blank ">Domenica</a> Regia
+                                                <a href="https://www.linkedin.com/in/domenicadlcnaime/" target="_blank">Domenica</a> Regia
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/anahuerta1/ " target="_blank ">Ana Huerta</a> EPAM
+                                                <a href="https://www.linkedin.com/in/anahuerta1/" target="_blank">Ana Huerta</a> EPAM
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/alejandrasanchez1/ " target="_blank ">Alejandra Sanchez</a> SR IT RH
+                                                <a href="https://www.linkedin.com/in/alejandrasanchez1/" target="_blank">Alejandra Sanchez</a> SR IT RH
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/manuelperezg/ " target="_blank ">Manuel Perez</a> SR IT RH
+                                                <a href="https://www.linkedin.com/in/manuelperezg/" target="_blank">Manuel Perez</a> SR IT RH
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/yesenia-silva-12b89b57/ " target="_blank ">Yesenia Silva</a> Kueski
+                                                <a href="https://www.linkedin.com/in/yesenia-silva-12b89b57/" target="_blank">Yesenia Silva</a> Kueski
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/victor-mu%C3%B1oz-838bb0129/ " target="_blank ">Victor Muñoz</a>HR IT USA
+                                                <a href="https://www.linkedin.com/in/victor-mu%C3%B1oz-838bb0129/" target="_blank">Victor Muñoz</a>HR IT USA
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/illse-rodriguez-lazcano-89b03a137/ " target="_blank ">Illse Rodriguez</a> CodersLink
+                                                <a href="https://www.linkedin.com/in/illse-rodriguez-lazcano-89b03a137/" target="_blank">Illse Rodriguez</a> CodersLink
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/grisellmaldonado/ " target="_blank ">Grisell Maldonado</a> IT Sr RH
+                                                <a href="https://www.linkedin.com/in/grisellmaldonado/" target="_blank">Grisell Maldonado</a> IT Sr RH
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/lita-rojas-00ba9581/ " target="_blank ">Lita Rojas</a>EPAM
+                                                <a href="https://www.linkedin.com/in/lita-rojas-00ba9581/" target="_blank">Lita Rojas</a>EPAM
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/dulce-luna-990a0463/ " target="_blank ">Dulce Luna</a> NearSoft
+                                                <a href="https://www.linkedin.com/in/dulce-luna-990a0463/" target="_blank">Dulce Luna</a> NearSoft
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/mar%C3%ADa-eugenia-quiroz-f%C3%A9lix-25795650/ " target="_blank ">Maria Eugenia</a> Obregon Technology
+                                                <a href="https://www.linkedin.com/in/mar%C3%ADa-eugenia-quiroz-f%C3%A9lix-25795650/" target="_blank">Maria Eugenia</a> Obregon Technology
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/gisela-a-022525a9/ " target="_blank ">Gisela</a> SR IT
+                                                <a href="https://www.linkedin.com/in/gisela-a-022525a9/" target="_blank">Gisela</a> SR IT
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/veronica-cruz-44a98693/ " target="_blank ">Veronica Cruz</a>Lead Screen IT
+                                                <a href="https://www.linkedin.com/in/veronica-cruz-44a98693/" target="_blank">Veronica Cruz</a>Lead Screen IT
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/flor-sanchez/ " target="_blank ">Flor-Sanchez</a> Oracle
+                                                <a href="https://www.linkedin.com/in/flor-sanchez/" target="_blank">Flor-Sanchez</a> Oracle
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/michellejschmidt/ " target="_blank ">Michelle jschmidt</a> RH USA
+                                                <a href="https://www.linkedin.com/in/michellejschmidt/" target="_blank">Michelle jschmidt</a> RH USA
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/karenortizmitre/ " target="_blank ">karen Ortiz</a> Tiempo Development
+                                                <a href="https://www.linkedin.com/in/karenortizmitre/" target="_blank">karen Ortiz</a> Tiempo Development
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/ivonne-dur%C3%A1n-01b49559/ " target="_blank ">Ivonne Duran</a> SR IT RH
+                                                <a href="https://www.linkedin.com/in/ivonne-dur%C3%A1n-01b49559/" target="_blank">Ivonne Duran</a> SR IT RH
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/laurabracho/ " target="_blank ">Laura Bracho</a> UnoSquare
+                                                <a href="https://www.linkedin.com/in/laurabracho/" target="_blank">Laura Bracho</a> UnoSquare
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/olivia-galindo-3798145/ " target="_blank ">Olivia Galindo</a> Itexico
+                                                <a href="https://www.linkedin.com/in/olivia-galindo-3798145/" target="_blank">Olivia Galindo</a> Itexico
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/andreamontelongorecruiter/ " target="_blank "></a> Director RH UnoSquare
+                                                <a href="https://www.linkedin.com/in/andreamontelongorecruiter/" target="_blank"></a> Director RH UnoSquare
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/lizeth-brockman-028094b7/ " target="_blank ">Lizeth Brockman</a> Tiempo Development
+                                                <a href="https://www.linkedin.com/in/lizeth-brockman-028094b7/" target="_blank">Lizeth Brockman</a> Tiempo Development
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/stefaniponce/ " target="_blank ">Stefani Ponce</a> EPAM
+                                                <a href="https://www.linkedin.com/in/stefaniponce/" target="_blank">Stefani Ponce</a> EPAM
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/andrea-fortozo/ " target="_blank ">Andrea Fortozo</a> LEAD RH USA
+                                                <a href="https://www.linkedin.com/in/andrea-fortozo/" target="_blank">Andrea Fortozo</a> LEAD RH USA
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/ariadna-navarrete/ " target="_blank ">Ariadna Navarrete</a> Tiempo Development
+                                                <a href="https://www.linkedin.com/in/ariadna-navarrete/" target="_blank">Ariadna Navarrete</a> Tiempo Development
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/claudiahernandez21/ " target="_blank ">Claudia Hernandez</a> Lead Terminal
+                                                <a href="https://www.linkedin.com/in/claudiahernandez21/" target="_blank">Claudia Hernandez</a> Lead Terminal
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/josecarlospujol/ " target="_blank ">Giovanna</a> Intugo
+                                                <a href="https://www.linkedin.com/in/josecarlospujol/" target="_blank">Giovanna</a> Intugo
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/rosalba-flores-b4005030/ " target="_blank ">Rosalba-Flores</a> Sr IT
+                                                <a href="https://www.linkedin.com/in/rosalba-flores-b4005030/" target="_blank">Rosalba-Flores</a> Sr IT
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/antonio-trevi%C3%B1o-gomez-96a612aa/ " target="_blank ">Antonio Treviño</a> SR IT RH
+                                                <a href="https://www.linkedin.com/in/antonio-trevi%C3%B1o-gomez-96a612aa/" target="_blank">Antonio Treviño</a> SR IT RH
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/allandavazo/ " target="_blank ">Allan Davazo</a> NearSoft
+                                                <a href="https://www.linkedin.com/in/allandavazo/" target="_blank">Allan Davazo</a> NearSoft
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/sherlyrodriguez/ " target="_blank ">Sherly Rodriguez</a> RH IT Bilingue
+                                                <a href="https://www.linkedin.com/in/sherlyrodriguez/" target="_blank">Sherly Rodriguez</a> RH IT Bilingue
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/marcela-r-b6926569/ " target="_blank ">Marcela Rojas</a> RH IT USA
+                                                <a href="https://www.linkedin.com/in/marcela-r-b6926569/" target="_blank">Marcela Rojas</a> RH IT USA
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/octavioaguilera/ " target="_blank ">Octavio Aguilera</a> Luxoft
+                                                <a href="https://www.linkedin.com/in/octavioaguilera/" target="_blank">Octavio Aguilera</a> Luxoft
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/csuarezz/ " target="_blank ">Cesar Suarez</a> EPAM
+                                                <a href="https://www.linkedin.com/in/csuarezz/" target="_blank">Cesar Suarez</a> EPAM
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/victoria-ochoa-landeros-lion-05518b58/ " target="_blank ">Victoria Ochoa</a> Itexico
+                                                <a href="https://www.linkedin.com/in/victoria-ochoa-landeros-lion-05518b58/" target="_blank">Victoria Ochoa</a> Itexico
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/jessicailizaliturri/ " target="_blank ">Jessica Ilizaliturri</a> Kueski
+                                                <a href="https://www.linkedin.com/in/jessicailizaliturri/" target="_blank">Jessica Ilizaliturri</a> Kueski
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/yira-c-p%C3%A9rez-abiant%C3%BAn-5a7bb795/ " target="_blank ">Yira Perez</a>IT USA
+                                                <a href="https://www.linkedin.com/in/yira-c-p%C3%A9rez-abiant%C3%BAn-5a7bb795/" target="_blank">Yira Perez</a>IT USA
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/abrilcastrov/ " target="_blank ">Abril Castro</a> EPAM
+                                                <a href="https://www.linkedin.com/in/abrilcastrov/" target="_blank">Abril Castro</a> EPAM
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/laura-victoria-villegas-restrepo-a2b04974/ " target="_blank ">Laura Victoria Villegas</a> RH INternational
+                                                <a href="https://www.linkedin.com/in/laura-victoria-villegas-restrepo-a2b04974/" target="_blank">Laura Victoria Villegas</a> RH INternational
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/valentinrecruiter/ " target="_blank ">Valentin</a> HR IT SR
+                                                <a href="https://www.linkedin.com/in/valentinrecruiter/" target="_blank">Valentin</a> HR IT SR
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/nellymejia/ " target="_blank ">Nelly Mejia</a> Senior IT
+                                                <a href="https://www.linkedin.com/in/nellymejia/" target="_blank">Nelly Mejia</a> Senior IT
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/elsbeths-slak/ " target="_blank "> Karen Sánchez</a> RH IT SR
+                                                <a href="https://www.linkedin.com/in/elsbeths-slak/" target="_blank"> Karen Sánchez</a> RH IT SR
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/monica-andrade-063b8057/ " target="_blank ">Monica Andrade</a> WIZELINE
+                                                <a href="https://www.linkedin.com/in/monica-andrade-063b8057/" target="_blank">Monica Andrade</a> WIZELINE
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/glunaruelas/ " target="_blank ">Gilberto Luna Ruelas</a> LEAD EPAM
+                                                <a href="https://www.linkedin.com/in/glunaruelas/" target="_blank">Gilberto Luna Ruelas</a> LEAD EPAM
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/abigail-vera-80381475/ " target="_blank ">Abigail Vera</a>RH IT SR
+                                                <a href="https://www.linkedin.com/in/abigail-vera-80381475/" target="_blank">Abigail Vera</a>RH IT SR
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/jorge-martinez-morales-03428192/ " target="_blank ">Jorge Martinez morales</a>IT RH SR USA
+                                                <a href="https://www.linkedin.com/in/jorge-martinez-morales-03428192/" target="_blank">Jorge Martinez morales</a>IT RH SR USA
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/fabiola-gonz%C3%A1lez-hern%C3%A1ndez-a475626/ " target="_blank ">Fabiola Gonzalez</a> LEAD Globant
+                                                <a href="https://www.linkedin.com/in/fabiola-gonz%C3%A1lez-hern%C3%A1ndez-a475626/" target="_blank">Fabiola Gonzalez</a> LEAD Globant
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/angelicabonilla/ " target="_blank ">Angelica Bonilla</a> RH IT ITAM
+                                                <a href="https://www.linkedin.com/in/angelicabonilla/" target="_blank">Angelica Bonilla</a> RH IT ITAM
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/alejandrocarlosrecruiter/ " target="_blank ">Alejandro Carlos</a> Luxoft
+                                                <a href="https://www.linkedin.com/in/alejandrocarlosrecruiter/" target="_blank">Alejandro Carlos</a> Luxoft
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/priscila-valenzuela-4179aa100/ " target="_blank ">Priscila Valenzuela</a> NearSoft
+                                                <a href="https://www.linkedin.com/in/priscila-valenzuela-4179aa100/" target="_blank">Priscila Valenzuela</a> NearSoft
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/psicsandraarauz/ " target="_blank ">Sandra Arauz</a> EPAM
+                                                <a href="https://www.linkedin.com/in/psicsandraarauz/" target="_blank">Sandra Arauz</a> EPAM
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/janell-p-a3133516b/ " target="_blank ">Janell Picon</a> Toronto CrossBridge
+                                                <a href="https://www.linkedin.com/in/janell-p-a3133516b/" target="_blank">Janell Picon</a> Toronto CrossBridge
                                             </li>
                                             <li>
-                                                <a href="https://www.linkedin.com/in/donchambitas/ " target="_blank ">Hugo</a> Don Chambitas
+                                                <a href="https://www.linkedin.com/in/donchambitas/" target="_blank">Hugo</a> Don Chambitas
                                             </li>
                                             <li>
                                                 <a href=" " target="_blank "></a>
@@ -4650,69 +4692,69 @@
 
                     </div>
 
-                    <div class="card ">
-                        <div class="card-header " id="internationalEvents-0 ">
-                            <a data-toggle="collapse " href="#InternationalEvents " role="button " aria-expanded="false ">
-                                <h2 class="mb-0 ">
-                                    <button class="btn btn-link collapsed " type="button " data-toggle="collapse " data-target="#InternationalEvents " aria-expanded="false " aria-controls="collapseThree ">
+                    <div class="card">
+                        <div class="card-header" id="internationalEvents-0">
+                            <a data-toggle="collapse" href="#InternationalEvents" role="button" aria-expanded="false">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#InternationalEvents" aria-expanded="false" aria-controls="collapseThree">
                                         <img src="img/international.png "> International events.
                                     </button>
                                 </h2>
                             </a>
                         </div>
-                        <div id="InternationalEvents " class="collapse " aria-labelledby="internationalEvents-0 " data-parent="#accordionExample ">
+                        <div id="InternationalEvents" class="collapse" aria-labelledby="internationalEvents-0" data-parent="#accordionExample">
                             <div class="card-body ">
                                 <ul>
-                                    <li><a href="https://2019.fullstackfest.com/ " target="_blank ">fullstackfest</a></li>
+                                    <li><a href="https://2019.fullstackfest.com/" target="_blank">fullstackfest</a></li>
                                     <li>
-                                        <a href="https://csscamp.tech/ " target="_blank ">CSScamp</a>
+                                        <a href="https://csscamp.tech/" target="_blank">CSScamp</a>
                                     </li>
                                     <li>
-                                        <a href="https://jscamp.tech/ " target="_blank ">JScamp</a>
+                                        <a href="https://jscamp.tech/" target="_blank">JScamp</a>
                                     </li>
                                     <li>
-                                        <a href="https://js-kongress.com " target="_blank ">JS-kongress</a>
+                                        <a href="https://js-kongress.com" target="_blank">JS-kongress</a>
                                     </li>
                                     <li>
-                                        <a href="https://www.frontenddeveloperlove.com/ " target="_blank ">frontenddeveloperlove</a>
+                                        <a href="https://www.frontenddeveloperlove.com/" target="_blank">frontenddeveloperlove</a>
                                     </li>
                                     <li>
-                                        <a href="https://zeit.co/day#venue " target="_blank ">zeit.co</a>
+                                        <a href="https://zeit.co/day#venue" target="_blank">zeit.co</a>
                                     </li>
                                     <li>
-                                        <a href="https://git-merge.com/ " target="_blank ">Git</a>
+                                        <a href="https://git-merge.com/" target="_blank">Git</a>
                                     </li>
                                     <li>
-                                        <a href="https://assemble.auth0.com/ " target="_blank ">Auth0</a>
+                                        <a href="https://assemble.auth0.com/" target="_blank">Auth0</a>
                                     </li>
                                     <li>
-                                        <a href="https://javascript-conference.com/london/pwaconf/ " target="_blank ">PWAConf</a>
+                                        <a href="https://javascript-conference.com/london/pwaconf/" target="_blank">PWAConf</a>
                                     </li>
                                     <li>
-                                        <a href="https://jsconf.mx " target="_blank ">JSConf</a>
+                                        <a href="https://jsconf.mx" target="_blan">JSConf</a>
                                     </li>
                                     <li>
-                                        <a href="https://www.uie.com/ " target="_blank ">uie</a> UX workshops and conferences
+                                        <a href="https://www.uie.com/" target="_blank">uie</a> UX workshops and conferences
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
 
-                    <div class="card ">
-                        <div class="card-header " id="ux-0 ">
-                            <a data-toggle="collapse " href="#seo " role="button " aria-expanded="false ">
-                                <h2 class="mb-0 ">
-                                    <button class="btn btn-link collapsed " type="button " data-toggle="collapse " data-target="#seo " aria-expanded="false " aria-controls="collapseThree ">
-                                        <img src="img/seo.png "> SEO (Search Engine Optimization)
+                    <div class="card">
+                        <div class="card-header" id="ux-0">
+                            <a data-toggle="collapse" href="#seo" role="button" aria-expanded="false">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#seo" aria-expanded="false" aria-controls="collapseThree">
+                                        <img src="img/seo.png"> SEO (Search Engine Optimization)
                                     </button>
                                 </h2>
                             </a>
                         </div>
-                        <div id="seo " class="collapse " aria-labelledby="ux-0 " data-parent="#accordionExample ">
-                            <div class="card-body ">
+                        <div id="seo" class="collapse" aria-labelledby="ux-0" data-parent="#accordionExample">
+                            <div class="card-body">
 
-                                <div class="d-flex justify-content-around border border-info mt-3 ">
+                                <div class="d-flex justify-content-around border border-info mt-3">
                                     <div>
                                         <h2>Definición</h2> <br>
                                         <p>Es la optimización para motores de Busqueda</p>
@@ -4762,12 +4804,12 @@
                                             <li>Hostings rápidos, no por contratar barato sacrifiques velocidad que es lo que le interesa a Google</li>
                                             <li><strong>Palabras long tail</strong>: es la clásica busqueda en Google de varias palabras, recibes menos visitas pero tus visitas específicamente te buscan a ti, porque la busqueda es extremadamente específica</li>
                                             <li><strong>Palabras clave</strong>: Ponte en la piel del usuario, como buscaría yo sobre mis artículos, piensa sobre lo que quieres hablar</li>
-                                            <li><a href="https://neilpatel.com/ " target="_blank ">NeilPatel</a> para conseguir Keywords Ideas y checar cuantas busquedas puedes obtener, te dice las webs que usan eso</li>
+                                            <li><a href="https://neilpatel.com/" target="_blank">NeilPatel</a> para conseguir Keywords Ideas y checar cuantas busquedas puedes obtener, te dice las webs que usan eso</li>
                                             <li><strong>Seguir tendencias:</strong> Estar al tanto de las noticias de tu sector y usar palabras clave</li>
-                                            <li><a href="https://answerthepublic.com/ " target="_blank ">AnswerThePublic</a> escribes una palabra o conjunto de palabras y te muestra las preguntas que hace la gente con esas palabras</li>
+                                            <li><a href="https://answerthepublic.com/" target="_blank">AnswerThePublic</a> escribes una palabra o conjunto de palabras y te muestra las preguntas que hace la gente con esas palabras</li>
                                             <li><b>Centrate</b> en <b>crear contenido</b></li>
-                                            <li><a href="https://search.google.com/search-console/about " target="_blank ">Google Search Console</a> es un servicio gratuito para webmasters de Google que permite a los creadores de páginas web comprobar el
-                                                estado de la indexación de sus sitios en internet por el buscador y optimizar su visibilidad</li>
+                                            <li><a href="https://search.google.com/search-console/about" target="_blank">Google Search Console</a> es un servicio gratuito para webmasters de Google que permite a los creadores de páginas web comprobar el estado
+                                                de la indexación de sus sitios en internet por el buscador y optimizar su visibilidad</li>
                                             <li><b>Destacar</b> ciertas palabras con <b>negritas</b>, no hacer sobreuso</li>
                                             <li>Hacer artículos departamentales de tipo listado</li>
                                             <li>Contenido evergreen(Perdurable en el tiempo), contenido que todo el tiempo esté buscando la gente</li>
@@ -4839,7 +4881,7 @@
                                         <ol>
                                             <li>Google lo hace de manera automática pero es un proceso mas lento, excepto si sigo estos pasos</li>
                                             <li>
-                                                Entrar a <a href="https://search.google.com/search-console/about " target="_blank ">Google Search Console</a> y
+                                                Entrar a <a href="https://search.google.com/search-console/about" target="_blank">Google Search Console</a> y
                                                 <ol>
                                                     <li>Click en mi sitio web en la parte superior IZQUIERDA</li>
                                                     <li>Click en añadir propiedad y agregar el dominio</li>
@@ -4875,40 +4917,40 @@
                                         <h2>Herramientas SEO</h2>
                                         <ul>
                                             <li>
-                                                <a href="https://compressor.io/ " target="_blank "></a>Compressor</a> Comprime el peso de las imágenes
+                                                <a href="https://compressor.io/" target="_blank"></a>Compressor</a> Comprime el peso de las imágenes
                                             </li>
                                             <li>
-                                                <a href="https://compresspng.com/ " target="_blank "></a>CompressPNG</a> Comprime el peso de las imágenes
+                                                <a href="https://compresspng.com/" target="_blank"></a>CompressPNG</a> Comprime el peso de las imágenes
                                             </li>
-                                            <li><a href="https://www.xml-sitemaps.com/ " target="_blank ">XML-SiteMaps</a>indexa tu sitio web, si no lo tienes, te penalizara, <strong>el archivo debe estar puesto en la raiz del proyecto</strong></li>
-                                            <li><a href="https://developers.google.com/speed/pagespeed/insights/ " target="_blank ">Google Page Speed Insight</a> Te dice la velocidad de carga en movil y escritorio</li>
+                                            <li><a href="https://www.xml-sitemaps.com/" target="_blank">XML-SiteMaps</a>indexa tu sitio web, si no lo tienes, te penalizara, <strong>el archivo debe estar puesto en la raiz del proyecto</strong></li>
+                                            <li><a href="https://developers.google.com/speed/pagespeed/insights/" target="_blank">Google Page Speed Insight</a> Te dice la velocidad de carga en movil y escritorio</li>
                                             <li>
-                                                <a href="https://www.wappalyzer.com/ " target="_blank ">Wappalyzer</a>Pluggin de navegador que te dice en que esta hecho un sitio web
+                                                <a href="https://www.wappalyzer.com/" target="_blank">Wappalyzer</a>Pluggin de navegador que te dice en que esta hecho un sitio web
                                             </li>
                                             <li>
-                                                <a href="https://neilpatel.com/ " target="_blank ">NeilPatel</a> para conseguir Keywords Ideas y checar cuantas busquedas puedes obtener, te dice las webs que usan eso y si vez que tiene keywords con pocas
+                                                <a href="https://neilpatel.com/" target="_blank">NeilPatel</a> para conseguir Keywords Ideas y checar cuantas busquedas puedes obtener, te dice las webs que usan eso y si vez que tiene keywords con pocas
                                                 vistas, es bueno usarlas mientras sigan en tendencia, porque son vistas seguras
                                             </li>
                                             <li>
-                                                <a href="https://answerthepublic.com/ " target="_blank ">AnswerThePublic</a> escribes una palabra o conjunto de palabras y te muestra las preguntas que hace la gente con esas palabras
+                                                <a href="https://answerthepublic.com/" target="_blank">AnswerThePublic</a> escribes una palabra o conjunto de palabras y te muestra las preguntas que hace la gente con esas palabras
 
                                             </li>
                                             <li>
-                                                <a href="https://search.google.com/search-console/about " target="_blank ">Google Search Console</a> es un servicio gratuito para webmasters de Google que permite a los creadores de páginas web comprobar
-                                                el estado de la indexación de sus sitios en internet por el buscador y optimizar su visibilidad
+                                                <a href="https://search.google.com/search-console/about" target="_blank">Google Search Console</a> es un servicio gratuito para webmasters de Google que permite a los creadores de páginas web comprobar el
+                                                estado de la indexación de sus sitios en internet por el buscador y optimizar su visibilidad
                                             </li>
-                                            <li><a href="https://www.screamingfrog.co.uk/seo-spider/ " target="_blank ">ScreamingFrog</a> es una herramienta que rastrea las URL de un sitio web(hasta 500 de manera gratuita) y revisa su SEO, h1,h2, títulos
-                                                repetidos, su status code(200) etiquetas metas, imágenes, el título que tiene cada página, meta descripción, meta keywords, tiempo de respuesta, incluso seleccionando un link, te revisa a detalle dicho link</li>
-                                            <li><a href="https://emojipedia.org/ " target="_blank ">EmojiPedia</a> es un sitio web para poner emojis y que aparezcan en tu publicación cuando alguien te busque en Google </li>
-                                            <li><a href="https://www.woorank.com " target="_blank ">WooRank</a> es un sitio web que se dedica a analizar el SEO de tu sitio, lo que está bien ó mal, te dice que le hace falta, que se puede mejorar y que tan
-                                                importante ó prioritario es cada cosa. </li>
-                                            <li><a href="https://www.expireddomains.net " target="_blank ">ExpiredDomains</a> sitio web donde puedes ver dominios expirados y comprarlos, solo se recomienda comprar los dominios con mucho tráfico y tengan la
-                                                misma temática que tu sitio.</li>
-                                            <li><a href="https://kwfinder.com " target="_blank ">KwFinder</a> es una herramienta que te dice la frecuencia de busquedas</li>
-                                            <li><a href="https://www.google.com/intl/es/webmasters/ " target="_blank ">WebMasters Google</a> te enseña muchas cosas sobre SEO y lo siguen puros Google Developer Expert</li>
-                                            <li><a href="https://validator.w3.org/ " target="_blank ">Validator W3</a> Es el standar de html5, puedes verificar si tienes errores</li>
-                                            <li><a href="https://herramientas-online.com/unminify-javascript-beautifier.html " target="_blank ">Unminify-Javascript-Beautifier</a> Minifica tu código JS</li>
-                                            <li><a href="https://www.blacklistmaster.com " target="_blank ">Black List Master</a> Te muestra si tu sitio web está en la lista negra de dominios</li>
+                                            <li><a href="https://www.screamingfrog.co.uk/seo-spider/" target="_blank">ScreamingFrog</a> es una herramienta que rastrea las URL de un sitio web(hasta 500 de manera gratuita) y revisa su SEO, h1,h2, títulos repetidos,
+                                                su status code(200) etiquetas metas, imágenes, el título que tiene cada página, meta descripción, meta keywords, tiempo de respuesta, incluso seleccionando un link, te revisa a detalle dicho link</li>
+                                            <li><a href="https://emojipedia.org/" target="_blank">EmojiPedia</a> es un sitio web para poner emojis y que aparezcan en tu publicación cuando alguien te busque en Google </li>
+                                            <li><a href="https://www.woorank.com" target="_blank">WooRank</a> es un sitio web que se dedica a analizar el SEO de tu sitio, lo que está bien ó mal, te dice que le hace falta, que se puede mejorar y que tan importante
+                                                ó prioritario es cada cosa. </li>
+                                            <li><a href="https://www.expireddomains.net" target="_blank">ExpiredDomains</a> sitio web donde puedes ver dominios expirados y comprarlos, solo se recomienda comprar los dominios con mucho tráfico y tengan la misma
+                                                temática que tu sitio.</li>
+                                            <li><a href="https://kwfinder.com" target="_blank">KwFinder</a> es una herramienta que te dice la frecuencia de busquedas</li>
+                                            <li><a href="https://www.google.com/intl/es/webmasters/" target="_blank">WebMasters Google</a> te enseña muchas cosas sobre SEO y lo siguen puros Google Developer Expert</li>
+                                            <li><a href="https://validator.w3.org/" target="_blank">Validator W3</a> Es el standar de html5, puedes verificar si tienes errores</li>
+                                            <li><a href="https://herramientas-online.com/unminify-javascript-beautifier.html" target="_blank">Unminify-Javascript-Beautifier</a> Minifica tu código JS</li>
+                                            <li><a href="https://www.blacklistmaster.com" target="_blank">Black List Master</a> Te muestra si tu sitio web está en la lista negra de dominios</li>
                                         </ul>
                                         <hr>
                                         <h2>Contenido</h2>
@@ -4951,7 +4993,7 @@
                                         <ul>
                                             <li>Poner más de una etiqueta H1</li>
                                             <li>Poner CSS dentro del HTML5</li>
-                                            <li><a href="https://www.xml-sitemaps.com/ " target="_blank ">XML-SiteMaps</a>, si no lo tienes, te penalizara, ya que el archivo indexa tu sitio web</li>
+                                            <li><a href="https://www.xml-sitemaps.com/" target="_blank">XML-SiteMaps</a>, si no lo tienes, te penalizara, ya que el archivo indexa tu sitio web</li>
                                             <li>Tener tu certificado HTTPs activado, Google le da mucha importancia a la seguridad</li>
                                             <li>Contenido oculto con CSS</li>
                                             <li>Comprar enlaces y link building(enlaces que apuntan a tu sitio)</li>
@@ -5008,28 +5050,28 @@
                         </div>
                     </div>
 
-                    <div class="card ">
-                        <div class="card-header " id="ux-0 ">
-                            <a data-toggle="collapse " href="#UX " role="button " aria-expanded="false ">
-                                <h2 class="mb-0 ">
-                                    <button class="btn btn-link collapsed " type="button " data-toggle="collapse " data-target="#UX " aria-expanded="false " aria-controls="collapseThree ">
-                                        <i class="fas fa-pen-nib icono-ux "></i> UX/UI.
+                    <div class="card">
+                        <div class="card-header" id="ux-0">
+                            <a data-toggle="collapse" href="#UX" role="button" aria-expanded="false">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#UX" aria-expanded="false" aria-controls="collapseThree">
+                                        <i class="fas fa-pen-nib icono-ux"></i> UX/UI.
                                     </button>
                                 </h2>
                             </a>
                         </div>
-                        <div id="UX " class="collapse " aria-labelledby="ux-0 " data-parent="#accordionExample ">
-                            <div class="card-body ">
+                        <div id="UX" class="collapse" aria-labelledby="ux-0" data-parent="#accordionExample">
+                            <div class="card-body">
 
                                 <div class="d-flex justify-content-around border border-info mt-3 ">
                                     <ul>
                                         <h3>Texturas</h3>
-                                        <li><a href="https://www.toptal.com/designers/subtlepatterns/ " target="_blank ">toptal</a> Tiene texturas que puedes poner de imagen de fondo y pesa muy poco(kbytes) y se ven muy bien</li>
-                                        <li><a href="https://github.com/atlemo/SubtlePatterns " target="_blank ">Más texturas</a></li>
+                                        <li><a href="https://www.toptal.com/designers/subtlepatterns/" target="_blank">toptal</a> Tiene texturas que puedes poner de imagen de fondo y pesa muy poco(kbytes) y se ven muy bien</li>
+                                        <li><a href="https://github.com/atlemo/SubtlePatterns" target="_blank">Más texturas</a></li>
                                     </ul>
                                     <ul>
                                         <h3>Checar compatibilidad en navegadores</h3>
-                                        <li><a href="https://caniuse.com/#home " target="_blank ">Can I Use</a></li>
+                                        <li><a href="https://caniuse.com/#home" target="_blank">Can I Use</a></li>
                                     </ul>
                                 </div>
                                 <div class="d-flex justify-content-around border border-danger mt-3 ">
@@ -5037,44 +5079,44 @@
                                         <ul>
                                             <h3>Font Icons</h3>
                                             <li>
-                                                <a href="https://feathericons.com/ " target="_blank ">Feathericons</a> Contiene 280 íconos, se puede cambiar el tamaño de los íconos, su grozor y se descarga en formato SVG
+                                                <a href="https://feathericons.com/" target="_blank">Feathericons</a> Contiene 280 íconos, se puede cambiar el tamaño de los íconos, su grozor y se descarga en formato SVG
                                             </li>
                                             <li>
-                                                <a href="https://thenounproject.com/ " target="_blank ">The noun project</a> Contiene 2millones de íconos, contiene íconos raros, personalizas el color de los íconos,
+                                                <a href="https://thenounproject.com/" target="_blank">The noun project</a> Contiene 2millones de íconos, contiene íconos raros, personalizas el color de los íconos,
                                             </li>
                                             <li>
-                                                <a href="https://www.iconfinder.com/ " target="_blank ">Iconfinder</a> EL QUE MÁS ÍCONOS TIENE, 4millones,
+                                                <a href="https://www.iconfinder.com/" target="_blank">Iconfinder</a> EL QUE MÁS ÍCONOS TIENE, 4millones,
                                             </li>
                                             <li>
-                                                <a href="https://icons8.com/icons " target="_blank ">Icons8</a> Iconos con estilos diferentes, los puedes editar para cambiarles la apariencia, poner un ícono dentro de otro
+                                                <a href="https://icons8.com/icons" target="_blank">Icons8</a> Iconos con estilos diferentes, los puedes editar para cambiarles la apariencia, poner un ícono dentro de otro
                                             </li>
                                             <li>
-                                                <a href="https://iconmonstr.com/ " target="_blank ">Icons de un mismo estilo hechos por el mismo diseñador</a> ,
+                                                <a href="https://iconmonstr.com/" target="_blank">Icons de un mismo estilo hechos por el mismo diseñador</a> ,
                                             </li>
                                             <li>
-                                                <a href="https://material.io/resources/icons/?style=baseline " target="_blank ">Material Design</a>, tienes iconos con/sin relleno, iconos redondeados, íconos con 2 tonos e íconos con esquinas cuadradas
+                                                <a href="https://material.io/resources/icons/?style=baseline" target="_blank">Material Design</a>, tienes iconos con/sin relleno, iconos redondeados, íconos con 2 tonos e íconos con esquinas cuadradas
                                             </li>
                                             <li>
-                                                <a href="https://fontawesome.com/ " target="_blank ">Font Awesome</a>, el mejor, <b>CHECA LOS EFECTOS <a href="https://fontawesome.com/how-to-use/on-the-web/referencing-icons/basic-use " target="_blank ">AQUí</a> EN LA PARTE INFERIOR DEL SITIO</b>                                                .
+                                                <a href="https://fontawesome.com/" target="_blank">Font Awesome</a>, el mejor, <b>CHECA LOS EFECTOS <a href="https://fontawesome.com/how-to-use/on-the-web/referencing-icons/basic-use " target="_blank ">AQUí</a> EN LA PARTE INFERIOR DEL SITIO</b>                                                .
                                             </li>
                                             <li>
-                                                <a href="https://flat-icons.com/ " target="_blank ">Flat-icons</a>, íconos chingones y recomendados por <a href="https://brandpalettes.com/ " target="_blank ">Brand Palettes</a>.
+                                                <a href="https://flat-icons.com/" target="_blank">Flat-icons</a>, íconos chingones y recomendados por <a href="https://brandpalettes.com/ " target="_blank ">Brand Palettes</a>.
                                             </li>
                                             <li>
-                                                <a href="https://icomoon.io " target="_blank ">IcoMoon</a> iconos recomendados por JotaJotaVM.
+                                                <a href="https://icomoon.io" target="_blank">IcoMoon</a> iconos recomendados por JotaJotaVM.
                                             </li>
                                         </ul>
                                     </div>
                                     <div>
                                         <ul>
                                             <h3>Bancos de imagenes</h3>
-                                            <li><a href="https://unsplash.com/ " target="_blank ">UnSplash</a></li>
-                                            <li><a href="https://foter.com/ " target="_blank ">Foter</a></li>
+                                            <li><a href="https://unsplash.com/" target="_blank">UnSplash</a></li>
+                                            <li><a href="https://foter.com/" target="_blank">Foter</a></li>
 
                                         </ul>
                                         <ul>
                                             <h3>Logotipos</h3>
-                                            <li><a href="https://www.freelogodesign.org/ " target="_blank ">FreeLogoDesign</a></li>
+                                            <li><a href="https://www.freelogodesign.org/" target="_blank">FreeLogoDesign</a></li>
 
                                         </ul>
                                     </div>
@@ -5082,48 +5124,48 @@
                                 <div class="d-flex justify-content-around mt-3 border border-success ">
                                     <ul class=" mt-3 ">
                                         <h3 class="text-center ">Herramientas para los colores</h3>
-                                        <li><a href="https://coolors.co " target="_blank ">Coolors</a></li>
-                                        <li><a href="https://brandcolors.net/ " target="_blank ">BrandColors</a> Colores de marcas famosas</li>
+                                        <li><a href="https://coolors.co" target="_blank">Coolors</a></li>
+                                        <li><a href="https://brandcolors.net/" target="_blank">BrandColors</a> Colores de marcas famosas</li>
                                         <li>
-                                            <a href="https://www.uxpin.com/ " target="_blank ">UxPin</a> ´Para hacer MockUps recomendado por gente de <b>HBO</b> y <b>Paypal</b>
+                                            <a href="https://www.uxpin.com/" target="_blank">UxPin</a> ´Para hacer MockUps recomendado por gente de <b>HBO</b> y <b>Paypal</b>
                                         </li>
                                         <li>
-                                            <a href="https://html-color-codes.info/codigos-de-colores-hexadecimales/ " target="_blank ">html-color-codes.info</a> Elige manualmente tu color hexadecimal
+                                            <a href="https://html-color-codes.info/codigos-de-colores-hexadecimales/" target="_blank">html-color-codes.info</a> Elige manualmente tu color hexadecimal
                                         </li>
                                         <li>
-                                            <a href="https://brandpalettes.com/ " target="_blank ">Brand Palettes</a> colores de las marcas
+                                            <a href="https://brandpalettes.com/" target="_blank">Brand Palettes</a> colores de las marcas
                                         </li>
 
                                     </ul>
                                     <ul class="mt-3 ">
                                         <h3 class="text-center ">Paginas UX importantes</h3>
                                         <li>
-                                            <a href="https://www.cssdesignawards.com/ " target="_blank ">CSSDesignawards</a>
+                                            <a href="https://www.cssdesignawards.com/" target="_blank">CSSDesignawards</a>
                                         </li>
                                         <li>
-                                            <a href="https://uxdesign.cc/ " target="_blank ">UxDesign</a>
+                                            <a href="https://uxdesign.cc/" target="_blank">UxDesign</a>
                                         </li>
                                         <li>
-                                            <a href="https://www.uxmatters.com/ " target="_blank ">UxMatters</a> Artículos de UX de puro crack
+                                            <a href="https://www.uxmatters.com/" target="_blank">UxMatters</a> Artículos de UX de puro crack
                                         </li>
                                         <li>
-                                            <a href="https://uxmag.com/ " target="_blank ">UxMag</a> Artículos/investigación/negocio etc
+                                            <a href="https://uxmag.com/" target="_blank">UxMag</a> Artículos/investigación/negocio etc
                                         </li>
                                         <li>
-                                            <a href="https://www.ideo.com/ " target="_blank ">ideo</a> La empresa más pesada en UX
+                                            <a href="https://www.ideo.com/" target="_blank">ideo</a> La empresa más pesada en UX
                                         </li>
                                         <li>
-                                            <a href="https://www.uie.com/ " target="_blank ">Cursos sobre UX online y presenciales</a>
+                                            <a href="https://www.uie.com/" target="_blank">Cursos sobre UX online y presenciales</a>
                                         </li>
                                         <li>
-                                            <a href="https://www.centercentre.com/ " target="_blank ">CenterCentre</a>Master en UX
+                                            <a href="https://www.centercentre.com/" target="_blank">CenterCentre</a>Master en UX
                                         </li>
                                         <li>
-                                            <a href="https://theteamw.com " target="_blank ">the Team W</a>Cursos de UX gratis y otros muy caros
+                                            <a href="https://theteamw.com" target="_blank">the Team W</a>Cursos de UX gratis y otros muy caros
                                         </li>
-                                        <li><a href="https://www.4ourthmobile.com/training " target="_blank ">4ourthmobile.com</a>Blog/news/courses</li>
+                                        <li><a href="https://www.4ourthmobile.com/training" target="_blank">4ourthmobile.com</a>Blog/news/courses</li>
                                         <li>
-                                            <a href="https://www.pantone.com/ ">Pantone</a> Creo el estandar mundial de colores, ellos deciden las tendencias en todas las industrias
+                                            <a href="https://www.pantone.com/" target="_blank">Pantone</a> Creo el estandar mundial de colores, ellos deciden las tendencias en todas las industrias
                                         </li>
                                     </ul>
                                 </div>
@@ -5132,36 +5174,36 @@
                                     <ul class="mt-3 ">
                                         <h3 class="text-center ">Personalidades de UX</h3>
                                         <li>
-                                            <a href="https://twitter.com/mkammerer?lang=es " target="_blank ">Matthew Kammerer</a>Co-Founder Ux-Boot
+                                            <a href="https://twitter.com/mkammerer?lang=es" target="_blank">Matthew Kammerer</a>Co-Founder Ux-Boot
                                         </li>
                                         <li>
-                                            <a href="https://davidleggettart.com/home.html " target="_blank ">David Leggett</a>Co-Founder/developer/designer Ux-Boot, sell his company in 3M
+                                            <a href="https://davidleggettart.com/home.html" target="_blank">David Leggett</a>Co-Founder/developer/designer Ux-Boot, sell his company in 3M
                                         </li>
                                         <li>
-                                            <a href="https://twitter.com/amygracewells " target="_blank ">Amy Grace Wells</a>Designer Ux-Boot
+                                            <a href="https://twitter.com/amygracewells" target="_blank">Amy Grace Wells</a>Designer Ux-Boot
                                         </li>
                                         <li>
-                                            <a href="https://twitter.com/andrewmaier?lang=es " target="_blank ">Andrew Maier</a>Co-Founder/tutor Ux-Boot
+                                            <a href="https://twitter.com/andrewmaier?lang=es" target="_blank">Andrew Maier</a>Co-Founder/tutor Ux-Boot
                                         </li>
                                         <li>
-                                            <a href="https://twitter.com/thebrainlady?lang=es " target="_blank ">Susan Weinschenk PhD</a>Co-Founder The Team W and writer
+                                            <a href="https://twitter.com/thebrainlady?lang=es" target="_blank">Susan Weinschenk PhD</a>Co-Founder The Team W and writer
                                         </li>
                                         <li>
-                                            <a href="https://twitter.com/lauraklein " target="_blank ">Laura klein</a> Autora UX for Lean Startups
+                                            <a href="https://twitter.com/lauraklein" target="_blank">Laura klein</a> Autora UX for Lean Startups
                                         </li>
                                         <li>
-                                            <a href="https://twitter.com/jmspool " target="_blank ">Jared Spool</a>Founder CenterCentre & UIE
+                                            <a href="https://twitter.com/jmspool" target="_blank">Jared Spool</a>Founder CenterCentre & UIE
 
                                         </li>
-                                        <li><a href="https://twitter.com/shoobe01 " target="_blank ">Steven Hoober</a> Founder 4ourth</li>
+                                        <li><a href="https://twitter.com/shoobe01" target="_blank">Steven Hoober</a> Founder 4ourth</li>
                                         <li>
-                                            <a href="https://twitter.com/leahbuley " target="_blank ">Leah Buley</a>
+                                            <a href="https://twitter.com/leahbuley" target="_blank">Leah Buley</a>
                                         </li>
                                         <li>
-                                            <a href="https://blog.nearsoftjobs.com/@misaello " target="_blank ">Misael León</a> El wey de NearSoft
+                                            <a href="https://blog.nearsoftjobs.com/@misaello" target="_blank">Misael León</a> El wey de NearSoft
                                         </li>
                                         <li>
-                                            <a href="https://twitter.com/dasalvar " target="_blank ">Daniel Alvarez</a> Lo siguen gente pesada en Twitter
+                                            <a href="https://twitter.com/dasalvar" target="_blank">Daniel Alvarez</a> Lo siguen gente pesada en Twitter
                                         </li>
 
 
@@ -5222,13 +5264,13 @@
                                     <ul>
                                         <h3>Typography websites</h3>
                                         <li>
-                                            <a href="http://www.fontbros.com/ " target="_blank ">Fontbros</a>
+                                            <a href="http://www.fontbros.com/" target="_blank">Fontbros</a>
                                         </li>
                                         <li>
-                                            <a href="https://www.dafont.com/es/ " target="_blank ">Dafont</a>
+                                            <a href="https://www.dafont.com/es/" target="_blank">Dafont</a>
                                         </li>
                                         <li>
-                                            <a href="https://www.fonts.com " target="_blank ">Fonts</a>
+                                            <a href="https://www.fonts.com" target="_blank">Fonts</a>
                                         </li>
                                     </ul>
 
@@ -5288,13 +5330,13 @@
 
                                     <ul>
                                         <h3>Tools</h3>
-                                        <li><a href="https://uitest.com/ " target="_blank " rel="noopener noreferrer ">uiTest</a> analiza tu sitio web a fondo y te dice con que herramientas las analizo</li>
-                                        <li><a href="https://developers.google.com/speed/pagespeed/insights/ " target="_blank ">Google Page Speed Insight</a> Te dice la velocidad de carga en movil y escritorio</li>
-                                        <li><a href="https://www.pingdom.com/ " target="_blank ">Pingdom</a> proporciona usuarios reales, tiempo de actividad, velocidad de página y monitoreo sintético de aplicaciones web.</li>
-                                        <li><a href="https://herramientas-online.com/comprimir-descomprimir-css.html " target="_blank ">comprimir-descomprimir-css</a></li>
+                                        <li><a href="https://uitest.com/" target="_blank" rel="noopener noreferrer ">uiTest</a> analiza tu sitio web a fondo y te dice con que herramientas las analizo</li>
+                                        <li><a href="https://developers.google.com/speed/pagespeed/insights/" target="_blank">Google Page Speed Insight</a> Te dice la velocidad de carga en movil y escritorio</li>
+                                        <li><a href="https://www.pingdom.com/" target="_blank">Pingdom</a> proporciona usuarios reales, tiempo de actividad, velocidad de página y monitoreo sintético de aplicaciones web.</li>
+                                        <li><a href="https://herramientas-online.com/comprimir-descomprimir-css.html" target="_blank">comprimir-descomprimir-css</a></li>
                                         <li>
-                                            <li><a href="https://www.digitalattackmap.com " target="_blank ">DigitalAttackMap</a> te muestra los ataques DDOS que se están haciendo en este momento</li>
-                                            <li><a href="http://presenciaweb.net/tools/circulo-cromatico/ " target="_blank ">circulo-cromatico</a> eliges colores que combinen en tu sitio web</li>
+                                            <li><a href="https://www.digitalattackmap.com" target="_blank">DigitalAttackMap</a> te muestra los ataques DDOS que se están haciendo en este momento</li>
+                                            <li><a href="http://presenciaweb.net/tools/circulo-cromatico/" target="_blank">circulo-cromatico</a> eliges colores que combinen en tu sitio web</li>
                                             <li></li>
                                     </ul>
                                 </div>
@@ -5302,41 +5344,41 @@
                         </div>
                     </div>
 
-                    <div class="card ">
-                        <div class="card-header " id="marketing-0 ">
-                            <a data-toggle="collapse " href="#marketing " role="button " aria-expanded="false ">
+                    <div class="card">
+                        <div class="card-header" id="marketing-0">
+                            <a data-toggle="collapse" href="#marketing" role="button" aria-expanded="false">
                                 <h2 class="mb-0 ">
-                                    <button class="btn btn-link collapsed " type="button " data-toggle="collapse " data-target="#marketing " aria-expanded="false " aria-controls="collapseThree ">
-                                        <i class="fas fa-search-dollar icono-marketing "></i> <i class="fas fa-ad icono-marketing "></i> <i class="fas fa-bullhorn icono-marketing "></i> Marketing
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#marketing" aria-expanded="false" aria-controls="collapseThree">
+                                        <i class="fas fa-search-dollar icono-marketing"></i> <i class="fas fa-ad icono-marketing"></i> <i class="fas fa-bullhorn icono-marketing"></i> Marketing
                                     </button>
                                 </h2>
                             </a>
                         </div>
-                        <div id="marketing " class="collapse " aria-labelledby="marketing-0 " data-parent="#accordionExample ">
+                        <div id="marketing" class="collapse" aria-labelledby="marketing-0" data-parent="#accordionExample">
                             <div class="card-body ">
-                                <div class="d-flex justify-content-around border border-danger mt-3 ">
+                                <div class="d-flex justify-content-around border border-danger mt-3">
                                     <div>
                                         <ul>
                                             <h3>Awards</h3>
                                             <li>
-                                                <a href="https://performancemarketingawards.com/2019/ " target="_blank "> Performance Marketing Awards</a>
+                                                <a href="https://performancemarketingawards.com/2019/" target="_blank"> Performance Marketing Awards</a>
                                             </li>
                                             <li>
-                                                <a href="https://www.canneslions.com/ " target="_blank ">Cannes Lions</a>
+                                                <a href="https://www.canneslions.com/" target="_blank">Cannes Lions</a>
                                             </li>
 
                                         </ul>
                                         <ul>
                                             <h3>Personalities</h3>
                                             <li>
-                                                <a href="https://www.sethgodin.com " target="_blank ">Seth Godin</a> Libros y cursos
+                                                <a href="https://www.sethgodin.com" target="_blank">Seth Godin</a> Libros y cursos
                                             </li>
-                                            <li><a href="https://www.garyvaynerchuk.com/ " target="_blank ">Gary Vee</a>Libros y cursos</li>
+                                            <li><a href="https://www.garyvaynerchuk.com/" target="_blank">Gary Vee</a>Libros y cursos</li>
                                         </ul>
                                         <ul>
-                                            <li><a href="https://unamo.com/es/ " target="_blank ">Unamo</a>: Herramientas para mercadologo y medir muchas cosas, se ve buena</li>
+                                            <li><a href="https://unamo.com/es/" target="_blank">Unamo</a>: Herramientas para mercadologo y medir muchas cosas, se ve buena</li>
                                             <li>
-                                                <a href=" " target="_blank "></a>
+                                                <a href="" target="_blank"></a>
                                             </li>
                                         </ul>
                                     </div>
@@ -5356,24 +5398,24 @@
                         </div>
                     </div>
 
-                    <div class="card ">
-                        <div class="card-header " id="design-0 ">
-                            <a data-toggle="collapse " href="#design " role="button " aria-expanded="false ">
-                                <h2 class="mb-0 ">
-                                    <button class="btn btn-link collapsed " type="button " data-toggle="collapse " data-target="#design " aria-expanded="false " aria-controls="collapseThree ">
-                                        <i class="fas fa-drafting-compass icono-design "></i> Design
+                    <div class="card">
+                        <div class="card-header" id="design-0">
+                            <a data-toggle="collapse" href="#design" role="button" aria-expanded="false">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#design" aria-expanded="false" aria-controls="collapseThree">
+                                        <i class="fas fa-drafting-compass icono-design"></i> Design
                                     </button>
                                 </h2>
                             </a>
                         </div>
-                        <div id="design " class="collapse " aria-labelledby="design-0 " data-parent="#accordionExample ">
-                            <div class="card-body ">
-                                <div class="d-flex justify-content-around border border-danger mt-3 ">
+                        <div id="design" class="collapse" aria-labelledby="design-0" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-around border border-danger mt-3">
                                     <div>
                                         <ul>
                                             <h3>Cursos</h3>
-                                            <li><a href="https://platzi.com/ " target="_blank ">Platzi</a></li>
-                                            <li><a href="https://www.domestika.org/es " target="_blank ">Domestika</a></li>
+                                            <li><a href="https://platzi.com/" target="_blank">Platzi</a></li>
+                                            <li><a href="https://www.domestika.org/es" target="_blank">Domestika</a></li>
                                         </ul>
                                     </div>
                                     <div>
@@ -5392,19 +5434,19 @@
                         </div>
                     </div>
 
-                    <div class="card ">
-                        <div class="card-header " id="business-0 ">
-                            <a data-toggle="collapse " href="#business " role="button " aria-expanded="false ">
-                                <h2 class="mb-0 ">
-                                    <button class="btn btn-link collapsed " type="button " data-toggle="collapse " data-target="#business " aria-expanded="false " aria-controls="collapseThree ">
-                                        <i class="fas fa-rocket icono-business "></i> <i class="fas fa-yen-sign icono-business "></i> <i class="fas fa-pound-sign icono-business "></i> Business
+                    <div class="card">
+                        <div class="card-header" id="business-0">
+                            <a data-toggle="collapse" href="#business" role="button" aria-expanded="false">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#business" aria-expanded="false" aria-controls="collapseThree">
+                                        <i class="fas fa-rocket icono-business"></i> <i class="fas fa-yen-sign icono-business"></i> <i class="fas fa-pound-sign icono-business"></i> Business
                                     </button>
                                 </h2>
                             </a>
                         </div>
-                        <div id="business " class="collapse " aria-labelledby="business-0 " data-parent="#accordionExample ">
-                            <div class="card-body ">
-                                <div class="d-flex justify-content-around border border-danger mt-3 ">
+                        <div id="business" class="collapse" aria-labelledby="business-0" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-around border border-danger mt-3">
                                     <div>
                                         <ul>
                                             <h3>Cursos</h3>
@@ -5464,30 +5506,30 @@
                         </div>
                     </div>
 
-                    <div class="card ">
-                        <div class="card-header " id="canada-0 ">
-                            <a data-toggle="collapse " href="#frontendPages " role="button " aria-expanded="false ">
-                                <h2 class="mb-0 ">
-                                    <button class="btn btn-link collapsed " type="button " data-toggle="collapse " data-target="#frontendPages " aria-expanded="false " aria-controls="collapseThree ">
-                                        <img src="img/unicorn.png "> Cool Frontend Pages
+                    <div class="card">
+                        <div class="card-header" id="canada-0">
+                            <a data-toggle="collapse" href="#frontendPages" role="button" aria-expanded="false">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#frontendPages" aria-expanded="false" aria-controls="collapseThree">
+                                        <img src="img/unicorn.png"> Cool Frontend Pages
                                     </button>
                                 </h2>
                             </a>
                         </div>
-                        <div id="frontendPages " class="collapse " aria-labelledby="canada-0 " data-parent="#accordionExample ">
-                            <div class="card-body ">
-                                <div class="d-flex justify-content-around border border-danger mt-3 ">
+                        <div id="frontendPages" class="collapse" aria-labelledby="canada-0" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-around border border-danger mt-3">
                                     <div>
                                         <ul>
                                             <h3>Cool Frontend Pages List</h3>
                                             <li>
-                                                <a href="https://passionatepeople.io/ " target="_blank ">PassionatePeople</a>
+                                                <a href="https://passionatepeople.io/" target="_blank">PassionatePeople</a>
                                             </li>
                                             <li>
-                                                <a href="https://playvalorant.com/es-mx/ " target="_blank ">playvalorant</a>
+                                                <a href="https://playvalorant.com/es-mx/" target="_blank">playvalorant</a>
                                             </li>
                                             <li>
-                                                <a href="http://philippehong.com/ " target="_blank ">Philip Pehong</a> Asiatico australiano
+                                                <a href="http://philippehong.com/" target="_blank">Philip Pehong</a> Asiatico australiano
                                             </li>
 
                                         </ul>
@@ -5496,7 +5538,7 @@
                                     <div>
                                         <ul>
                                             <h3>Websites with value information</h3>
-                                            <li><a href="https://worldclassremote.com/ ">World Class Remote</a></li>
+                                            <li><a href="https://worldclassremote.com/" target="_blank">World Class Remote</a></li>
                                             <li></li>
                                             <li></li>
                                         </ul>
@@ -5508,36 +5550,36 @@
                         </div>
                     </div>
 
-                    <div class="card ">
-                        <div class="card-header " id="canada-0 ">
-                            <a data-toggle="collapse " href="#canada " role="button " aria-expanded="false ">
-                                <h2 class="mb-0 ">
-                                    <button class="btn btn-link collapsed " type="button " data-toggle="collapse " data-target="#canada " aria-expanded="false " aria-controls="collapseThree ">
-                                        <i class="fab fa-canadian-maple-leaf icono-canada "></i> CANADA
+                    <div class="card">
+                        <div class="card-header" id="canada-0">
+                            <a data-toggle="collapse" href="#canada" role="button" aria-expanded="false">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#canada" aria-expanded="false" aria-controls="collapseThree">
+                                        <i class="fab fa-canadian-maple-leaf icono-canada"></i> CANADA
                                     </button>
                                 </h2>
                             </a>
                         </div>
-                        <div id="canada " class="collapse " aria-labelledby="canada-0 " data-parent="#accordionExample ">
-                            <div class="card-body ">
-                                <div class="d-flex justify-content-around border border-danger mt-3 ">
+                        <div id="canada" class="collapse" aria-labelledby="canada-0" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-around border border-danger mt-3">
                                     <div>
                                         <ul>
                                             <h3>Canadian consultors</h3>
                                             <li>
-                                                <a href="http://www.artim.ca " target="_blank ">Artim</a> Consultor especializado en Quebec y resto del país, tiene esposa mexicana y el habla 3 idiomas
+                                                <a href="http://www.artim.ca" target="_blank">Artim</a> Consultor especializado en Quebec y resto del país, tiene esposa mexicana y el habla 3 idiomas
                                             </li>
                                             <li>
-                                                <a href="https://www.immilandcanada.com/ " target="_blank ">Eddy Ramirez Immilandcanada</a>Consultora venezolana
+                                                <a href="https://www.immilandcanada.com/" target="_blank">Eddy Ramirez Immilandcanada</a>Consultora venezolana
                                             </li>
                                             <li>
-                                                <a href="https://www.rumbocanada.com " target="_blank ">Emely Duverge</a> Dominicana-coreana-Canadiense
+                                                <a href="https://www.rumbocanada.com" target="_blank">Emely Duverge</a> Dominicana-coreana-Canadiense
                                             </li>
                                             <li>
-                                                <a href="https://www.planbimmigration.com/ " target="_blank ">Plan B inmigration</a>Maria Laura Bertero Ecuatoriana-Italiana-Cubana
+                                                <a href="https://www.planbimmigration.com/" target="_blank">Plan B inmigration</a>Maria Laura Bertero Ecuatoriana-Italiana-Cubana
                                             </li>
                                             <li>
-                                                <a href="https://www.endeavourimm.com/ " target="_blank ">Sandra Martinez Gaona</a> La que sale en Desafío Nomada resolviendo preguntas
+                                                <a href="https://www.endeavourimm.com/" target="_blank">Sandra Martinez Gaona</a> La que sale en Desafío Nomada resolviendo preguntas
                                             </li>
                                             <li>
                                                 Milagros Gonzalez milagros424@gmail.com , ella está en las provincias del atlantico
