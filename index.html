@@ -3572,6 +3572,21 @@
                                                             <li><b>Null</b>: sin valor, si usas typeof, te dirá que es un <b>objeto</b></li>
                                                             <li>Las variables <b>no pueden empezar con números ó caracteres raros</b> tampoco <b>ponerle puntos</b></li>
                                                             <li>Es muy raro tener 3 niveles dentro de arrays</li>
+                                                            <li><b>Toda función devuelve "UNDIFINED"</b>, porque todas las funciones tienen un "return aunque no este escrito" cuando se tiene una función y no tiene un return "específico", devolverá "undifined"</li>
+                                                            <li>
+                                                                Si quieres devolver 2 valores, tendras que volverlo array:
+                                                                <div class="card" style="width: 18rem;">
+                                                                    <div class="card-body">
+                                                                        <p class="card-text espacio-codigo0"><code>let nombre = (nombre) => {</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>console.log(nombre);</code></p>
+
+                                                                        <p class="card-text espacio-codigo1"><code>return [1, 2];</code></p>
+                                                                        <p class="card-text espacio-codigo0"><code>}</code></p>
+                                                                        <p class="card-text espacio-codigo0"><code>const almacen = nombre("Ricardo");</code></p>
+                                                                        <p class="card-text espacio-codigo0"><code>console.log(almacen[0], almacen[1]);</code></p>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
                                                             <li></li>
                                                         </ul>
                                                     </div>
@@ -3614,6 +3629,21 @@
                                                             <h2>Evitar errores</h2>
                                                             <li>No puedes usar una variable antes de inicializarla</li>
                                                             <li>Evita usar como variables, palabras reservadas, aquí dejo una <a href="libros/palabras-reservadas-js.pdf">lista</a></li>
+                                                            <li><b>Toda función devuelve "UNDIFINED"</b>, porque todas las funciones tienen un "return aunque no este escrito" cuando se tiene una función y no tiene un return "específico", devolverá "undifined"</li>
+                                                            <li>
+                                                                Si quieres devolver 2 valores, tendras que volverlo array:
+                                                                <div class="card" style="width: 18rem;">
+                                                                    <div class="card-body">
+                                                                        <p class="card-text espacio-codigo0"><code>let nombre = (nombre) => {</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>console.log(nombre);</code></p>
+
+                                                                        <p class="card-text espacio-codigo1"><code>return [1, 2];</code></p>
+                                                                        <p class="card-text espacio-codigo0"><code>}</code></p>
+                                                                        <p class="card-text espacio-codigo0"><code>const almacen = nombre("Ricardo");</code></p>
+                                                                        <p class="card-text espacio-codigo0"><code>console.log(almacen[0], almacen[1]);</code></p>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
                                                             <li></li>
                                                         </ul>
                                                     </div>
@@ -3639,7 +3669,7 @@
                                                             <li><b>Object.values()</b> Object.values(persona) Te pone en un array los valores que tengas dentro de las propiedades que están dentro de tu objeto, <b>checa el ejercicio 19</b>, ES MUY USADO EN
                                                                 JS
                                                             </li>
-                                                            <li></li>
+                                                            <li> <b>Math.random()</b> Te da un número aleatorio entre 0 y 1 </li>
                                                         </ul>
                                                     </div>
                                                     <div>
@@ -3675,11 +3705,23 @@
                                                                 Aunque crees un objeto de JS con un <b>const</b>, podrá ser modificado con los metodos <b>delete</b> y <b>Objecto.entries</b>
                                                             </li>
                                                             <li>Para <b>evitar</b> cualquier modificación en un objeto de JS, puedes utilizar la propiedad <b>Object.freeze</b>, que sirve para congelar tu objeto y se quede como lo dejaste, PERO
-                                                                <b>no funciona con arrays y objetos que están dentro del objeto</b> A MENOS que pongas la dirección específica de lo que no quieres que se modifique, <b>ejemplo: Object.freeze(persona.amigos);</b>                                                                , checa el <b>ejemplo 17</b>
-
+                                                                <b>no funciona con arrays y objetos que están dentro del objeto</b> A MENOS que pongas la dirección específica de lo que no quieres que se modifique, <b>ejemplo: Object.freeze(persona.amigos);</b>                                                                ,checa el <b>ejemplo 17</b>
                                                             </li>
-                                                            <li></li>
-                                                            <li></li>
+                                                            <li><b>Toda función devuelve "UNDIFINED"</b>, porque todas las funciones tienen un "return aunque no este escrito" cuando se tiene una función y no tiene un return "específico", devolverá "undifined"</li>
+                                                            <li>
+                                                                Si quieres devolver 2 valores, tendras que volverlo array:
+                                                                <div class="card" style="width: 18rem;">
+                                                                    <div class="card-body">
+                                                                        <p class="card-text espacio-codigo0"><code>let nombre = (nombre) => {</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>console.log(nombre);</code></p>
+
+                                                                        <p class="card-text espacio-codigo1"><code>return [1, 2];</code></p>
+                                                                        <p class="card-text espacio-codigo0"><code>}</code></p>
+                                                                        <p class="card-text espacio-codigo0"><code>const almacen = nombre("Ricardo");</code></p>
+                                                                        <p class="card-text espacio-codigo0"><code>console.log(almacen[0], almacen[1]);</code></p>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
                                                         </ul>
                                                     </div>
 
