@@ -6,7 +6,21 @@
 Nota: Es muy raro tener 3 niveles de arrays
 */
 
+let persona = {
+    nombre: "Ricardo",
+    edad: 32,
+    casado: false,
+    tipoDeDato: null,
+    mascotas: ["Alvi", "Negro negro", "Beni", "Cocochon", "Lechera", "Cuach"],
+    paises: {
+        Trudealand: "Canada",
+        Koreanland: "Corea del Sur",
+        Europe: ["Swizerland", "Germany", "Rusia"]
+    }
+}
+let almacen = Object.values(persona);
 
+console.log(almacen);
 
 /*
 Ejercicio 1 
@@ -59,14 +73,14 @@ console.log(mascotas.length);
 console.log(mascotas);
 
 Ejercicio 9
-Te agrega un nuevo dato a tu array pero al inicio
+Usa el metodo unshift(); que te agrega un nuevo dato a tu array pero al inicio
 let mascotas = ["perro", "gato", "perico"];
 mascotas.unshift("Caracol");
 console.log(mascotas.length);
 console.log(mascotas);
 
 Ejercicio 10
-Borrar el último dato de tu array
+Borrar el último dato de tu array y muestra lo que hayas borrado
 let mascotas = ["perro", "gato", "perico"];
 let borrado = mascotas.pop();
 console.log(mascotas.length);
@@ -88,7 +102,7 @@ let indice = mascotas.indexOf("pez");
 console.log(indice);
 
 Ejercicio 13
-Crear un objeto y mostrar su contenido
+Crear un objeto con diferentes tipos de datos y mostrar su contenido
 let persona = {
     nombre: "Ricardo",
     edad: 33,
