@@ -1,7 +1,23 @@
-let operacion = () => Math.random();
-console.log(operacion());
+//DEESTRUCTURACIÓN DE ARGUMENTOS
+
+const persona = {
+    nombre: 'Ricardo',
+    apellido: 'Garrido',
+    //edad: 32,
+    hobbies: ['ver series', 'no hace nada']
+}
+
+const imprimirPropiedades = ({ nombre, apellido, edad = 32, hobbies }) => {
+    console.log({ nombre });
+    console.log({ apellido });
+    console.log({ edad });
+    console.log({ hobbies });
+}
+
+imprimirPropiedades(persona);
 
 /*
+
 Ejercicio 1
 Imprimir mi nombre con una función flecha
 let nombre = () => {
@@ -66,4 +82,96 @@ console.log(almacen[0], almacen[1]);
 
 Ejercicio 8
 Crea una función con un número aleatorio del 0 al 1, con funciones flechas y resumidas
+let numero = () => Math.random();
+console.log(numero());
+
+Ejercicio 9 PROTIP
+Crear una funcion flecha con "return" que retorne un objeto y luego resume ese objeto
+const persona = (nombre, apellido) => {
+    return {
+        nombre: nombre,
+        apellido: apellido
+    }
+}
+const caja = persona('Ricardo', 'Garrido');
+console.log(caja);
+
+RESUMIDA
+const persona = (nombre, apellido) =>
+    ({ nombre, apellido })
+
+const caja = persona('Ricardo', 'Garrido');
+console.log(caja);
+
+Ejercicio 18 PROTIP
+Crear una función con parametros REST, el argumento rest no puede llevar nada despues de el, solo antes
+
+let persona = (nombre, ...args) => {
+    return [nombre, args];
+}
+console.log(persona("Ricardo", true, 32, ["Perro", "Canada"]));
+
+Ejercicio 19 PROTIP
+Deestructuración: sirve para darle nombres a los valores que tiene un arreglo, en vez de crear una variable por cada posicion del arreglo. Ejemplo
+let persona = (...args) => {
+    return args;
+}
+
+const [nombre, soltero, edad, aficiones] = persona("Ricardo", true, 32, ["Perro", "Canada"]);
+console.log(aficiones);
+
+Ejercicio 20 PROTIP
+Deestructuración con un objeto RESUMIDO
+const persona = (nombre, apellido) =>
+    ({ nombre, apellido })
+
+const { nombre } = persona('Ricardo', 'Garrido');
+console.log({ nombre });
+
+Ejercicio 21 PROTIP
+Destructuración con un objeto resumido, cambiandole el nombre a la propiedad del objeto
+const persona = (nombre, apellido) =>
+    ({ nombre, apellido })
+
+const { nombre: nombreNuevo } = persona('Ricardo', 'Garrido');
+console.log({ nombreNuevo });
+
+Ejercicio 21 PROTIP
+Reestructuracion de argumentos en un objeto cuando hace falta un valor .
+MANERA 1
+onst persona = {
+    nombre: 'Ricardo',
+    apellido: 'Garrido',
+    //edad: 32,
+    hobbies: ['ver series', 'no hace nada']
+}
+
+const imprimirPropiedades = ({ nombre, apellido, edad, hobbies }) => {
+    edad = edad || 0;
+    console.log({ nombre });
+    console.log({ apellido });
+    console.log({ edad });
+    console.log({ hobbies });
+}
+
+imprimirPropiedades(persona);
+
+MANERA 2 (esto se le llama "asignarle un valor por defecto", es la más viable)
+const persona = {
+    nombre: 'Ricardo',
+    apellido: 'Garrido',
+    //edad: 32,
+    hobbies: ['ver series', 'no hace nada']
+}
+
+const imprimirPropiedades = ({ nombre, apellido, edad = 32, hobbies }) => {
+    console.log({ nombre });
+    console.log({ apellido });
+    console.log({ edad });
+    console.log({ hobbies });
+}
+
+imprimirPropiedades(persona);
+
+
 */

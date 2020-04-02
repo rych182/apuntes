@@ -10,17 +10,17 @@ let persona = {
     nombre: "Ricardo",
     edad: 32,
     casado: false,
-    tipoDeDato: null,
-    mascotas: ["Alvi", "Negro negro", "Beni", "Cocochon", "Lechera", "Cuach"],
-    paises: {
-        Trudealand: "Canada",
-        Koreanland: "Corea del Sur",
-        Europe: ["Swizerland", "Germany", "Rusia"]
+    dato: null,
+    mascotas: ["alvi", "negro", "cocochon", "didisin"],
+    amigos: {
+        secu: "Urrutia",
+        unila: "Ruben",
+        uaem: "Lau"
     }
 }
-let almacen = Object.values(persona);
-
+let almacen = Object.getOwnPropertyNames(persona);
 console.log(almacen);
+
 
 /*
 Ejercicio 1 
