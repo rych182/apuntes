@@ -1,22 +1,10 @@
 //DEESTRUCTURACIÓN DE ARGUMENTOS
 
-const persona = {
-    nombre: 'Ricardo',
-    apellido: 'Garrido',
-    //edad: 32,
-    hobbies: ['ver series', 'no hace nada']
-}
 
-const imprimirPropiedades = ({ nombre, apellido, edad = 32, hobbies }) => {
-    console.log({ nombre });
-    console.log({ apellido });
-    console.log({ edad });
-    console.log({ hobbies });
-}
-
-imprimirPropiedades(persona);
 
 /*
+
+
 
 Ejercicio 1
 Imprimir mi nombre con una función flecha
@@ -27,7 +15,6 @@ nombre();
 
 Ejercicio2
 Imprimir mi nombre en una función flecha, asignandole el nombre en los parentesis
-Imprimir mi nombre con una función flecha
 let nombre = (nombre1) => {
     console.log(nombre1);
 }
@@ -103,7 +90,7 @@ const persona = (nombre, apellido) =>
 const caja = persona('Ricardo', 'Garrido');
 console.log(caja);
 
-Ejercicio 18 PROTIP
+Ejercicio 10 PROTIP
 Crear una función con parametros REST, el argumento rest no puede llevar nada despues de el, solo antes
 
 let persona = (nombre, ...args) => {
@@ -111,7 +98,7 @@ let persona = (nombre, ...args) => {
 }
 console.log(persona("Ricardo", true, 32, ["Perro", "Canada"]));
 
-Ejercicio 19 PROTIP
+Ejercicio 11 PROTIP
 Deestructuración: sirve para darle nombres a los valores que tiene un arreglo, en vez de crear una variable por cada posicion del arreglo. Ejemplo
 let persona = (...args) => {
     return args;
@@ -120,7 +107,7 @@ let persona = (...args) => {
 const [nombre, soltero, edad, aficiones] = persona("Ricardo", true, 32, ["Perro", "Canada"]);
 console.log(aficiones);
 
-Ejercicio 20 PROTIP
+Ejercicio 12 PROTIP
 Deestructuración con un objeto RESUMIDO
 const persona = (nombre, apellido) =>
     ({ nombre, apellido })
@@ -128,7 +115,7 @@ const persona = (nombre, apellido) =>
 const { nombre } = persona('Ricardo', 'Garrido');
 console.log({ nombre });
 
-Ejercicio 21 PROTIP
+Ejercicio 13 PROTIP
 Destructuración con un objeto resumido, cambiandole el nombre a la propiedad del objeto
 const persona = (nombre, apellido) =>
     ({ nombre, apellido })
@@ -136,10 +123,10 @@ const persona = (nombre, apellido) =>
 const { nombre: nombreNuevo } = persona('Ricardo', 'Garrido');
 console.log({ nombreNuevo });
 
-Ejercicio 21 PROTIP
+Ejercicio 14 PROTIP
 Reestructuracion de argumentos en un objeto cuando hace falta un valor .
 MANERA 1
-onst persona = {
+const persona = {
     nombre: 'Ricardo',
     apellido: 'Garrido',
     //edad: 32,
@@ -173,5 +160,16 @@ const imprimirPropiedades = ({ nombre, apellido, edad = 32, hobbies }) => {
 
 imprimirPropiedades(persona);
 
+Ejercicio 15
+Cuantos caracteres tiene un array
+const nombres = ['Carlos', 'Alejandro', 'Manuel', 'Cesar'];
+const numero_caracteres = nombres.map((nombre) => {
+    console.log(`${nombre} tiene ${nombre.length} letras`);
+})
+
+Ejercicio 16
+resumir el ejercicio 15
+const nombres = ['Carlos', 'Alejandro', 'Manuel', 'Cesar'];
+const numero_caracteres = nombres.map(nombre => `${nombre} tiene ${nombre.length} letras`)
 
 */
