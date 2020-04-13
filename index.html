@@ -3701,9 +3701,50 @@
                                                                         <p class="card-text espacio-codigo0"><code>console.log(peter, tony);</code></p>
                                                                     </div>
                                                                 </div>
+                                                                <hr>
+                                                                <h3>Ejemplo 3: con arreglo</h3>
+                                                                <div class="card" style="width: 18rem;">
+                                                                    <div class="card-body">
+                                                                        <p class="card-text espacio-codigo0">Esto sobre escribe el valor en ambos arreglos, esto es un problema</p>
+                                                                        <p class="card-text espacio-codigo1"><code>const frutas = ['Manzana', 'Pera', 'Piña'];</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>const otrasFrutas = frutas;</code></p>
+                                                                        <p class="card-text espacio-codigo0"><code>otrasFrutas.push('Mango');</code></p>
+                                                                        <p class="card-text espacio-codigo0"><code>console.table({ frutas, otrasFrutas });</code></p>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="card" style="width: 18rem;">
+                                                                    <div class="card-body">
+                                                                        <p class="card-text espacio-codigo0">Aquí ya no sobreescribe el valor</p>
+                                                                        <p class="card-text espacio-codigo1"><code>const frutas = ['Manzana', 'Pera', 'Piña'];</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>const otrasFrutas = [...frutas];</code></p>
+                                                                        <p class="card-text espacio-codigo0"><code>otrasFrutas.push('Mango');</code></p>
+                                                                        <p class="card-text espacio-codigo0"><code>console.table({ frutas, otrasFrutas });</code></p>
+                                                                    </div>
+                                                                </div>
                                                             </li>
-                                                            <li></li>
-                                                            <li></li>
+                                                            <li><b>Callback</b>: Es un función que se pasa como argumento a un operación asincrona, con la espectativa de que dicha función sea ejecutada una vez esta termine</li>
+                                                            <li><b>Promesas</b>: es un objeto que puede producir un valor único en algún momento en el futuro: un valor resuelto o una razón por la que no se resuelve. Ejemplo:
+                                                                <div class="card" style="width: 18rem;">
+                                                                    <div class="card-body">
+                                                                        <p class="card-text espacio-codigo0">Crea una promesa </p>
+                                                                        <p class="card-text espacio-codigo1"><code>const promesa = new Promise((resolve, reject) => {</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>$caja = false;</code></p>
+                                                                        <p class="card-text espacio-codigo0"><code>if ($caja) {</code></p>
+                                                                        <p class="card-text espacio-codigo0"><code>resolve();</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>} else {</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>reject();</code></p>
+                                                                        <p class="card-text espacio-codigo0"><code>}</code></p>
+                                                                        <p class="card-text espacio-codigo0"><code>});</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>promesa.then(() => {</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>alert("Exito!");</code></p>
+                                                                        <p class="card-text espacio-codigo0"><code>}).catch(() => {</code></p>
+                                                                        <p class="card-text espacio-codigo0"><code>alert("No funciono!");</code></p>
+                                                                        <p class="card-text espacio-codigo0"><code>});</code></p>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+
                                                         </ul>
                                                     </div>
                                                     <div>
@@ -3926,7 +3967,7 @@
                                                         <a href="https://2019.stateofjs.com/">Metricas JS</a>
                                                     </li>
                                                     <li>
-                                                        <a href=""></a>
+                                                        <a href="https://hotframeworks.com/#top-frameworks">Hot frameworks</a>Frameworks más usados
                                                     </li>
                                                 </ul>
                                             </div>
@@ -5030,6 +5071,24 @@
                                 <li>
                                     <a href="https://www.bairesdev.com/" target="_blank">bairesdev</a> Trabajo remoto por pandemia, OFERTAS ANGULAR
                                 </li>
+                                <li>
+                                    <a href="https://www.mediamonks.com" target="_blank">Media Monks</a> A esta empresa lo sigue el creador de Fullstack conference
+                                </li>
+                                <li>
+                                    <a href="https://badak.mx/bolsa-de-trabajo/" target="_blank">badak</a>
+                                </li>
+                                <li>
+                                    <a href="" target="_blank"></a>
+                                </li>
+                                <li>
+                                    <a href="" target="_blank"></a>
+                                </li>
+                                <li>
+                                    <a href="" target="_blank"></a>
+                                </li>
+                                <li>
+                                    <a href="" target="_blank"></a>
+                                </li>
                             </ul>
                         </div>
 
@@ -6004,7 +6063,17 @@
                                 <li>
                                     <li><a href="https://www.digitalattackmap.com" target="_blank">DigitalAttackMap</a> te muestra los ataques DDOS que se están haciendo en este momento</li>
                                     <li><a href="http://presenciaweb.net/tools/circulo-cromatico/" target="_blank">circulo-cromatico</a> eliges colores que combinen en tu sitio web</li>
-                                    <li></li>
+                                    <li><a href="http://flexbox.help/">Flexbox help</a> </li>
+                                    <li>
+                                        <a href=""></a>
+                                    </li>
+                                    <li>
+                                        <a href=""></a>
+                                    </li>
+                                    <li>
+                                        <a href=""></a>
+                                    </li>
+
                             </ul>
                         </div>
                     </div>
@@ -6269,7 +6338,7 @@
                                         <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/submit-profile/rounds-invitations.html " target="_blank ">Rango de puntaje y probabilidad para quedarte</a>
                                     </li>
                                     <li>
-                                        <a href=" " target="_blank "></a>
+                                        <a href="https://noc.esdc.gc.ca/Home/Welcome/ad9ad48caec046c198c5008fefd97bee?GoCTemplateCulture=en-CA" target="_blank">Categoría del NOC</a> Te dice cual es la categoría de tu labor
                                     </li>
                                 </ul>
                             </div>
@@ -6283,7 +6352,7 @@
                                         <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigration-citizenship-representative/choose/authorized.html#law-societies " target="_blank ">Para verificar a un ABOGADO migratorio</a>
                                     </li>
                                     <li>
-                                        <a href=" " target="_blank "></a>
+                                        <a href="https://somersetimmigration.com/six-selection-factors-calculator/" target="_blank ">Somer Set Immigration</a> Calcula los puntos de migración
                                     </li>
                                 </ul>
                             </div>

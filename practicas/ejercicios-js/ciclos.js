@@ -13,7 +13,7 @@ let a = 20;
 let b = 10;
 a = 30;
 
-/* 
+/*Ejemplo 1 
 PARTE 1:Esto sobre escribe el valor en ambos objetos, esto es un problema, se solucionara en la parte 2
 let juan = { nombre: 'Juan' };
 let ana = juan;
@@ -27,7 +27,15 @@ ana.nombre = 'Ana';
 console.log(juan, ana);
 */
 
-const cambiarNombre = ({...persona }) => {
+const frutas = ['Manzana', 'Pera', 'Piña'];
+const otrasFrutas = [...frutas];
+
+otrasFrutas.push('Mango');
+console.table({ frutas, otrasFrutas });
+
+/* Ejemplo 2
+Parte1
+const cambiarNombre = (persona) => {
     persona.nombre = 'Tony'
     return persona;
 }
@@ -36,6 +44,16 @@ let peter = { nombre: 'Peter' };
 let tony = cambiarNombre(peter);
 console.log(peter, tony);
 
+Parte2
+const cambiarNombre = ({...persona }) => {
+    persona.nombre = 'Tony'
+    return persona;
+}
+
+let peter = { nombre: 'Peter' };
+let tony = cambiarNombre(peter);
+console.log(peter, tony);
+*/
 
 //parametro spread: Cuando utilizas los tres puntos fuera de una funcion(EN CUALQUIER LUGAR), es un parametro SPREAD y simboliza, "separa los elementos", la ventaja es que rompe la referencia de Javascript y así podemos trabajar con objetos y hacer igualaciones que apunten a diferentes espacios en memoria
 //parametro rest: Es una sintaxis, cuando lo pongo como argumento dentro de una función, ES UN PARAMETRO REST, y quiere decir "Une todos los argumentos en una sola variable y transformalo como un areglo"
