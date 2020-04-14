@@ -3832,74 +3832,172 @@
                                                             </li>
                                                             <li> <b>Math.random()</b> Te da un número aleatorio entre 0 y 1 </li>
                                                             <li><b>.map()</b> es una función que te muestra lo que tiene dentro un array <br>
-                                                                <code>
+
                                                                 <div class="card" style="width: 18rem;">
                                                                     <div class="card-body">
                                                                         <p class="card-text espacio-codigo0"><code>const nombres = ['Carlos', 'Alejandro', 'Manuel', 'Cesar'];</code></p>
-                                                                <p class="card-text espacio-codigo1"><code>const numero_caracteres = nombres.map((nombre) => {</code></p>
-                                                                <p class="card-text espacio-codigo1"><code>console.log(`${nombre} tiene ${nombre.length} letras`);</code></p>
-                                                                <p class="card-text espacio-codigo0"><code>})</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>const numero_caracteres = nombres.map((nombre) => {</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>console.log(`${nombre} tiene ${nombre.length} letras`);</code></p>
+                                                                        <p class="card-text espacio-codigo0"><code>})</code></p>
+                                                                    </div>
+                                                                </div>
+
+                                                            </li>
+                                                            <li> <b>.startsWith('p')</b> Checa con que letra comienza la palabra dentro de la variable
+
+                                                                <div class="card" style="width: 18rem;">
+                                                                    <div class="card-body">
+
+                                                                        <p class="card-text espacio-codigo1"><code>let texto = "Hola mundo";</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>console.log(`¿'${texto}' empieza con la letra 'p'?`, texto.startsWith('p'));</code></p>
+                                                                    </div>
+                                                                </div>
+
+                                                            </li>
+                                                            <li><b>.toLocaleLowerCase().endsWith('o')</b> Checa con que letra termina la palabra y aparte la convierte a minúscula
+
+                                                                <div class="card" style="width: 18rem;">
+                                                                    <div class="card-body">
+
+                                                                        <p class="card-text espacio-codigo1"><code>let texto = "Hola mundo";</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>console.log(`¿'${texto}' empieza con la letra 'p'?`, texto.startsWith('p'));</code></p>
+                                                                    </div>
+                                                                </div>
+
+                                                            </li>
+                                                            <li><b>.toLocaleLowerCase().endsWith('o')</b> Checa con que letra termina la palabra y aparte la convierte a minúscula
+
+                                                                <div class="card" style="width: 18rem;">
+                                                                    <div class="card-body">
+                                                                        <p class="card-text espacio-codigo1"><code>let texto = "Hola mundo";</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>console.log(`¿'${texto}' empieza con la letra 'p'?`, texto.startsWith('p'));</code></p>
+                                                                    </div>
+                                                                </div>
+
+                                                            </li>
+                                                            <li>
+                                                                <b>.texto.includes('Ric')</b> Busca si contiene una palabra y te dice si es true or false
+
+                                                                <div class="card" style="width: 18rem;">
+                                                                    <div class="card-body">
+                                                                        <p class="card-text espacio-codigo1"><code>let amigos = ['Nacho', 'Urrutia', 'Jessica', 'Lau'];</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>console.log(`¿ ${amigos} incluye la palabra "Lau"?`, amigos.includes('Lau'));</code></p>
+                                                                    </div>
+                                                                </div>
+
+                                                                <b>También sirve para arreglos</b>
+
+                                                                <div class="card" style="width: 18rem;">
+                                                                    <div class="card-body">
+                                                                        <p class="card-text espacio-codigo1"><code>let texto = "Hola mundo";</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>console.log(`¿'${texto}' empieza con la letra 'p'?`, texto.startsWith('p'));</code></p>
+                                                                    </div>
+                                                                </div>
+
+                                                            </li>
+                                                            <li><b>.find( () =>{} )</b> Nos devuelve <b>El primer elemento</b> de un arreglo que <b> "cumpla una condición"</b>
+                                                                <div class="card" style="width: 18rem;">
+                                                                    <div class="card-body">
+                                                                        <p class="card-text espacio-codigo1"><code>let amigos = ['Nacho', 'Urrutia', 'Jessica', 'Lau'];</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>console.log(amigos.find((amigo) => { <br>
+                                                                            return amigo.length > 6; <br>
+                                                                        }));</code></p>
+                                                                    </div>
+                                                                </div>
+                                                                <b>Se puede resumir la función</b>
+                                                                <div class="card" style="width: 18rem;">
+                                                                    <div class="card-body">
+                                                                        <p class="card-text espacio-codigo1"><code>let amigos = ['Nacho', 'Urrutia', 'Jessica', 'Lau'];</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>console.log(amigos.find(amigo => amigo.length > 6));</code></p>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li><b>.findIndex()</b> Encuentra la posición en el arreglo en el que se encuentra el dato que estás buscando
+                                                                <div class="card" style="width: 18rem;">
+                                                                    <div class="card-body">
+                                                                        <p class="card-text espacio-codigo1"><code>let amigos = ['Nacho', 'Urrutia', 'Jessica', 'Lau'];</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>console.log(amigos.findIndex((amigo) => {</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>return amigo === 'Jessica';</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>}));</code></p>
+
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <b>También se puede acortar</b>
+                                                            <div class="card" style="width: 18rem;">
+                                                                <div class="card-body">
+                                                                    <p class="card-text espacio-codigo1"><code>let amigos = ['Nacho', 'Urrutia', 'Jessica', 'Lau'];</code></p>
+                                                                    <p class="card-text espacio-codigo1"><code>console.log(amigos.findIndex(amigo => amigo === 'Jessica'));</code></p>
+
+                                                                </div>
+                                                            </div>
+                                                            <li></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div>
+                                                        <ul>
+                                                            <h2>Tipos de datos</h2>
+                                                            <li><b>Strings</b>: cadenas de texto</li>
+                                                            <li><b>Null</b>: significa que no tiene nada ahí dento, NO ES LO MISMO QUE <b>UNDIFINED</b>, no lo confundas</li>
+                                                            <li><b>Boleano</b>: es <b>true</b> ó <b>false</b></li>
+                                                            <li><b>undifined</b>: indefinido, que no se le ha agregado un valor</li>
+                                                            <li><b>Number</b>: números enteros o decimales(integers or floats)</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <hr>
+
+                                                <hr>
+                                                <div class="d-flex justify-content-around">
+                                                    <div>
+                                                        <ul>
+                                                            <h2>Datos importantes de ES6</h2>
+                                                            <li>Las variables <b>let, no se pueden sobre escribir</b> EJEMPLO:
+                                                                <div class="card" style="width: 18rem;">
+                                                                    <div class="card-body">
+                                                                        <p class="card-text espacio-codigo0"><code>let nombre = "Ricardo";</code></p>
+                                                                        <p class="card-text espacio-codigo0"><code>console.log(nombre);</code></p>
+                                                                        <br>
+                                                                        <p class="card-text espacio-codigo0"><code>let nombre = "Fulano";</code></p>
+                                                                        <p class="card-text espacio-codigo0"><code>console.log(nombre);</code></p>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                Aunque crees un objeto de JS con un <b>const</b>, podrá ser modificado con los metodos <b>delete</b> y <b>Objecto.entries</b>
+                                                            </li>
+                                                            <li>Para <b>evitar</b> cualquier modificación en un objeto de JS, puedes utilizar la propiedad <b>Object.freeze</b>, que sirve para congelar tu objeto y se quede como lo dejaste, PERO
+                                                                <b>no funciona con arrays y objetos que están dentro del objeto</b> A MENOS que pongas la dirección específica de lo que no quieres que se modifique, <b>ejemplo: Object.freeze(persona.amigos);</b>                                                                ,checa el <b>ejemplo 17</b>
+                                                            </li>
+                                                            <li><b>Toda función devuelve "UNDIFINED"</b>, porque todas las funciones tienen un "return aunque no este escrito" cuando se tiene una función y no tiene un return "específico", devolverá "undifined"</li>
+                                                            <li>
+                                                                Si quieres devolver 2 valores, tendras que volverlo array:
+                                                                <div class="card" style="width: 18rem;">
+                                                                    <div class="card-body">
+                                                                        <p class="card-text espacio-codigo0"><code>let nombre = (nombre) => {</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>console.log(nombre);</code></p>
+
+                                                                        <p class="card-text espacio-codigo1"><code>return [1, 2];</code></p>
+                                                                        <p class="card-text espacio-codigo0"><code>}</code></p>
+                                                                        <p class="card-text espacio-codigo0"><code>const almacen = nombre("Ricardo");</code></p>
+                                                                        <p class="card-text espacio-codigo0"><code>console.log(almacen[0], almacen[1]);</code></p>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li>En Javascript todos los objetos son pasados por referencia</li>
+                                                            <li>En javascript todo es un objeto excepto los primitivos</li>
+                                                            <li>
+                                                                <b>También sirve para arreglos</b>
+                                                                <code>
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                        <p class="card-text espacio-codigo1"><code>let amigos = ['Nacho', 'Urrutia', 'Jessica', 'Lau'];</code></p>
+                                                                <p class="card-text espacio-codigo1"><code>console.log(`¿ ${amigos} incluye la palabra "Lau"?`, amigos.includes('Lau'));</code></p>
                                                     </div>
                                                 </div>
                                                 </code>
                                                 </li>
                                                 <li></li>
-                                                </ul>
-                                            </div>
-                                            <div>
-                                                <ul>
-                                                    <h2>Tipos de datos</h2>
-                                                    <li><b>Strings</b>: cadenas de texto</li>
-                                                    <li><b>Null</b>: significa que no tiene nada ahí dento, NO ES LO MISMO QUE <b>UNDIFINED</b>, no lo confundas</li>
-                                                    <li><b>Boleano</b>: es <b>true</b> ó <b>false</b></li>
-                                                    <li><b>undifined</b>: indefinido, que no se le ha agregado un valor</li>
-                                                    <li><b>Number</b>: números enteros o decimales(integers or floats)</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <hr>
-
-                                        <hr>
-                                        <div class="d-flex justify-content-around">
-                                            <div>
-                                                <ul>
-                                                    <h2>Datos importantes de ES6</h2>
-                                                    <li>Las variables <b>let, no se pueden sobre escribir</b> EJEMPLO:
-                                                        <div class="card" style="width: 18rem;">
-                                                            <div class="card-body">
-                                                                <p class="card-text espacio-codigo0"><code>let nombre = "Ricardo";</code></p>
-                                                                <p class="card-text espacio-codigo0"><code>console.log(nombre);</code></p>
-                                                                <br>
-                                                                <p class="card-text espacio-codigo0"><code>let nombre = "Fulano";</code></p>
-                                                                <p class="card-text espacio-codigo0"><code>console.log(nombre);</code></p>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        Aunque crees un objeto de JS con un <b>const</b>, podrá ser modificado con los metodos <b>delete</b> y <b>Objecto.entries</b>
-                                                    </li>
-                                                    <li>Para <b>evitar</b> cualquier modificación en un objeto de JS, puedes utilizar la propiedad <b>Object.freeze</b>, que sirve para congelar tu objeto y se quede como lo dejaste, PERO
-                                                        <b>no funciona con arrays y objetos que están dentro del objeto</b> A MENOS que pongas la dirección específica de lo que no quieres que se modifique, <b>ejemplo: Object.freeze(persona.amigos);</b>                                                        ,checa el <b>ejemplo 17</b>
-                                                    </li>
-                                                    <li><b>Toda función devuelve "UNDIFINED"</b>, porque todas las funciones tienen un "return aunque no este escrito" cuando se tiene una función y no tiene un return "específico", devolverá "undifined"</li>
-                                                    <li>
-                                                        Si quieres devolver 2 valores, tendras que volverlo array:
-                                                        <div class="card" style="width: 18rem;">
-                                                            <div class="card-body">
-                                                                <p class="card-text espacio-codigo0"><code>let nombre = (nombre) => {</code></p>
-                                                                <p class="card-text espacio-codigo1"><code>console.log(nombre);</code></p>
-
-                                                                <p class="card-text espacio-codigo1"><code>return [1, 2];</code></p>
-                                                                <p class="card-text espacio-codigo0"><code>}</code></p>
-                                                                <p class="card-text espacio-codigo0"><code>const almacen = nombre("Ricardo");</code></p>
-                                                                <p class="card-text espacio-codigo0"><code>console.log(almacen[0], almacen[1]);</code></p>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>En Javascript todos los objetos son pasados por referencia</li>
-                                                    <li>En javascript todo es un objeto excepto los primitivos</li>
-                                                    <li></li>
-                                                    <li></li>
                                                 </ul>
                                             </div>
 
@@ -5626,7 +5724,8 @@
                                     <li>OBLIGATORIO saber HTML5 si quieres adentrarte en el SEO</li>
                                     <li>Buena semantica en HML5</li>
                                     <li>Title: poner nombre de la marca y palabra clave genérica, la más amplia y específica que tiene nuestra web, también una pequeña oración con palabras clave <br> Ejemplo: Marca - comprar vino gouermette de la mejor calidad
-                                        online <br> Este es el primer titulo que siempre aparece en las busquedas de Google de cualquier empresa</li>
+                                        online
+                                        <br> Este es el primer titulo que siempre aparece en las busquedas de Google de cualquier empresa</li>
                                     <li>Etiquetas meta(description, keyword(no más de 7 palabras, de 5a7), title y robot etc) <br>
                                         <code>&lt;meta name="description " content="Comprar vinos online, siempre al mejor precio y con el mejor servicio "&gt;</code> <br>
                                         <code>&lt;meta name="keyword " content="Comprar vinos online, siempre al mejor precio y con el mejor servicio "&gt;</code> <br>
@@ -6217,8 +6316,8 @@
                                             target="_blank ">	Crushing It!: How Great Entrepreneurs Build Their Business and Influence-And How You Can, Too  </a> Gary Vee (Author): Docenas de experiencias de emprendedores que dejaron el mundo corporativo
                                     </li>
                                     <li><a href="https://www.amazon.com.mx/Blue-Ocean-Strategy-Expanded-Uncontested-ebook/dp/B00O4CRR7Y/ref=sr_1_1?__mk_es_MX=%C3%85M%C3%85%C5%BD%C3%95%C3%91&keywords=blue+ocean+strategy&qid=1582496887&s=digital-text&sr=1-1 "
-                                            target="_blank ">	Blue Ocean Strategy, Expanded Edition: How to Create Uncontested Market Space and Make the Competition Irrelevant W. Chan Kim (Autor) </a></li> Crea un espacio de mercado y hace que la competencia
-                                    sea irrelevante.
+                                            target="_blank ">	Blue Ocean Strategy, Expanded Edition: How to Create Uncontested Market Space and Make the Competition Irrelevant W. Chan Kim (Autor) </a></li>
+                                    Crea un espacio de mercado y hace que la competencia sea irrelevante.
                                     <li><a href="https://www.amazon.com.mx/dp/B07BN6F7D1/?coliid=I2JU9S6SAA40FP&colid=28BV0ABDY8PE7&psc=0&ref_=lv_ov_lig_dp_it " target="_blank ">First we take Manhattan </a>Gentrificación, por que los barrios se hacen caros
                                         y de moda</li>
                                     <li><a href="http://www.i11digital.com/ " target="_blank ">	Antonio Garcia Martinez (Autor) </a></li>
