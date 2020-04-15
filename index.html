@@ -3587,6 +3587,19 @@
                                                                     </div>
                                                                 </div>
                                                             </li>
+                                                            <li><b>Diferencias entre ES6, ES7, ES8, ES-NEXT</b> <br>
+                                                                <ul>
+                                                                    <li><b>ES6:</b> Agrega las funciones flecha y otras funciones, algunas funciones deben ser transpiladas con BabelJS</li>
+                                                                    <li><b>ES7:</b> Incluye nuevas funciones</li>
+                                                                    <li><b>ES8:</b> Se agregan funciones Async/Await</li>
+                                                                    <li><b>ES-Next:</b> Versión en desarrollo, nunca es liberada</li>
+
+                                                                </ul>
+                                                            </li>
+                                                            <li><b>JavaScript es el lenguaje</b> y EcmaScript las especificaciones que uno debe de seguir</li>
+                                                            <li><b>NodeJS</b> es una plataforma hecha en JS utilizada par aplicaciones en servidores</li>
+                                                            <li><b>document</b>: cuando imprimes document en la consola del navegador te muestra todo lo que tienes en tu html, es por eso que la función <b>.getElementById('')</b> te ayuda a seleccionar un
+                                                                ID de tu documento ó un una etiqueta usando <b>.querySelector('h1')</b></li>
                                                             <li></li>
                                                         </ul>
                                                     </div>
@@ -3815,7 +3828,7 @@
                                                         <ul>
                                                             <h2>METODOS que me van a servir de Javascript</h2>
                                                             <h3>Nota: prompt y confirm se encuentran dentro del objeto window</h3>
-                                                            <li><b>prompt</b>: hace aparecer una ventana con un formulario y una pregunta, <code></code></li>
+                                                            <li><b>prompt</b>: hace aparecer una ventana con un formulario y una pregunta, <code>let nombre = prompt('¿Cómo te llamas?');</code> <br> <code>document.getElementById('app').innerHTML = `Mi nombre es ${nombre}`;</code></li>
                                                             <li><b>confirm</b>: similar al prompt solo que aquí te da elegir OK ó Cancel, y si lo guardas en una variable y luego imprimes la variable para ver que tiene dentro verás <b>true ó false</b></li>
                                                             <li><a href="#js-lenght">.length</a>: mascotas.length te dice cuantos cupos tiene un array, si no sabes cuantos cupos hay en el array por que es dinámico, se recomienda usar <b>console.log(mascotas.length-1);</b></li>
                                                             <li><b>.push</b></li>: mascotas.push("datos") te agrega un nuevo dato a tu array, puede ser de cualquier tipo al final de tu array
@@ -4683,16 +4696,36 @@
                                     <a data-toggle="collapse" href="#js-5-1-1" role="button" aria-expanded="false">
                                         <h5 class="mb-0">
                                             <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#js-5-1-1" aria-expanded="false">
-                                                        Collapsible Group Item #3
+                                                        WebPack
                                                     </button>
                                         </h5>
                                     </a>
                                 </div>
                                 <div id="js-5-1-1" class="collapse" aria-labelledby="js-5-1" data-parent="#es6">
                                     <div class="card-body">
-                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                                        on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat
-                                        craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                        <h2>¿Para que sirve?</h2>
+                                        Es una herramienta que nos facilita trabajar con módulos. Los módulos son archivos que contienen clases, funciones etc. El objetivo de dividir todo en muchos archivos es que todo este más organizado, más fácil de mantener y actualizarlo. Osea, separar
+                                        nuestro código en muchos archivos Javascript, pero los navegadores no tienen forma de juntar todos nuestros archivos, es aquí donde entra webpack, que junta todos nuestros archivos en unos solo, en ves de agregar
+                                        muchos archivos js en nuestro archivo html
+                                        <h2>Instalación y configuración(Checar instalación previa en la sección de Babel js)</h2>
+                                        <ol>
+                                            <li>Instalar webpack <code>npm install --save-dev webpack</code></li>
+                                            <li>Instalar webpack-CLI <code>npm install --save-dev webpack-cli</code></li>
+                                            <li>Crear el archivo de configuracion de webapck llamado webpack.config.js en la raiz</li>
+                                            <li>En el archivo <b>package.json</b> debes crear un script y modificar el que ya tenías llamado <b>build</b>
+                                                <div class="card " style="width: 18rem; ">
+                                                    <div class="card-body" id="js-length">
+                                                        <p class="card-text espacio-codigo1 "><code>"scripts": {</code></p>
+                                                        <p class="card-text espacio-codigo1 "><code>"build": "webpack",</code></p>
+                                                        <p class="card-text espacio-codigo1 "><code>"build-babel": "babel src -d output --watch"</code></p>
+                                                        <p class="card-text espacio-codigo1 "><code>},</code></p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>Ir a esta sección de webpack <a href="https://webpack.js.org/guides/getting-started/#modules">Modules</a> y copias la parte de <b>webpack.config.js</b> y pegarlo en tu archivo <b>webpack.config.js</b></li>
+                                            <li>Pondremos en el archivo el código que queremos que se ejecute </li>
+                                            <li></li>
+                                        </ol>
                                     </div>
                                 </div>
                             </div>
