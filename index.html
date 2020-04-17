@@ -4765,6 +4765,23 @@
                                                             </div>
                                                         </div>
                                                     </li>
+                                                    <li>En el archivo <b>app.js</b> vas a importar todos los archivos que tengas usando la sig sintaxis <b>import { mensajeAlerta } from './modulos/mensajeAlerta';</b> OJO: NUNCA debes de poner .js , solo el
+                                                        nombre de los archivos</li>
+                                                    <li>Cuando vayas a exporta, pones la palabra export a cada funcion que vayas a querer usar, Ejemplo:
+                                                        <br>
+                                                        <div class="card " style="width: 18rem; ">
+                                                            <div class="card-body" id="js-length">
+                                                                <p class="card-text espacio-codigo1 "><code>export const mensajeAlerta = (datos) => {</code></p>
+                                                                <p class="card-text espacio-codigo1 "><code>alert(datos);</code></p>
+                                                                <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                                            </div>
+                                                        </div>
+                                                        <br> Y en el archivo<b>app.js</b> mandas llamar tu función <code>mensajeAlerta("Hello World");</code>
+                                                    </li>
+                                                    <li>Otra manera de <b>exportar</b> es que hasta abajo del archivo exportar las funciones <code> export {mensajeAlerta};</code></li>
+                                                    <li>Para no tener que compilar siempre, en el archivo <b>package.json</b> modifica el script <b>build</b> y ponle <b>"build": "webpack --watch",</b></li>
+
+                                                    <li>Lo que más se exporta son funciones y clases</li>
                                                 </ol>
                                             </div>
                                         </div>
