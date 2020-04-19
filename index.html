@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -4780,7 +4781,76 @@
                                                     <li>Otra manera de <b>exportar</b> es que hasta abajo del archivo exportar las funciones <code> export {mensajeAlerta};</code></li>
                                                     <li>Para no tener que compilar siempre, en el archivo <b>package.json</b> modifica el script <b>build</b> y ponle <b>"build": "webpack --watch",</b></li>
 
-                                                    <li>Lo que más se exporta son funciones y clases</li>
+                                                    <li>Lo que más se exporta son funciones y clases, ejemplo: <br>
+                                                        <div class="card " style="width: 18rem; ">
+                                                            <div class="card-body" id="js-length">
+                                                                <p class="card-text espacio-codigo1 "><code>export class Persona {</code></p>
+                                                                <p class="card-text espacio-codigo1 "><code>constructor(nombre, edad) {</code></p>
+                                                                <p class="card-text espacio-codigo1 "><code>this.nombre = nombre;</code></p>
+                                                                <p class="card-text espacio-codigo1 "><code>this.edad = edad;</code></p>
+                                                                <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                                                <p class="card-text espacio-codigo1 "><code>mostrarInfo() {</code></p>
+                                                                <p class="card-text espacio-codigo1 "><code>console.log(`${this.nombre} tiene ${this.edad} años`);</code></p>
+                                                                <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                                                <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                                            </div>
+                                                        </div>
+                                                        Y lo importas en tu archivo <b>app.js</b> así <code>import { Persona } from './modulos/clasePersona';</code>
+                                                    </li>
+                                                    <li>Otra manera de exportar tus clases es así:
+                                                        <div class="card " style="width: 18rem; ">
+                                                            <div class="card-body" id="js-length">
+                                                                <p class="card-text espacio-codigo1 "><code>class Persona {</code></p>
+                                                                <p class="card-text espacio-codigo1 "><code>constructor(nombre, edad) {</code></p>
+                                                                <p class="card-text espacio-codigo1 "><code>this.nombre = nombre;</code></p>
+                                                                <p class="card-text espacio-codigo1 "><code>this.edad = edad;</code></p>
+                                                                <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                                                <p class="card-text espacio-codigo1 "><code>mostrarInfo() {</code></p>
+                                                                <p class="card-text espacio-codigo1 "><code>console.log(`${this.nombre} tiene ${this.edad} años`);</code></p>
+                                                                <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                                                <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                                                <p class="card-text espacio-codigo1 "><code>export { Persona };</code></p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>También puedes <b>exportar por defecto</b> y cuando la importes <b>la puedes llamar como quieras</b> y omitir las llaves, el export por default solo lo puedes hacer unas vez por archivo , ejemplo:
+                                                        <div class="card " style="width: 18rem; ">
+                                                            <div class="card-body" id="js-length">
+                                                                <p class="card-text espacio-codigo1 "><code>export default class Persona {</code></p>
+                                                                <p class="card-text espacio-codigo1 "><code>constructor(nombre, edad) {</code></p>
+                                                                <p class="card-text espacio-codigo1 "><code>this.nombre = nombre;</code></p>
+                                                                <p class="card-text espacio-codigo1 "><code>this.edad = edad;</code></p>
+                                                                <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                                                <p class="card-text espacio-codigo1 "><code>mostrarInfo() {</code></p>
+                                                                <p class="card-text espacio-codigo1 "><code>console.log(`${this.nombre} tiene ${this.edad} años`);</code></p>
+                                                                <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                                                <p class="card-text espacio-codigo1 "><code>}</code></p>
+
+                                                            </div>
+                                                        </div>
+                                                        Y lo importas en tu archivo <b>app.js</b> así <code>import Perro from './modulos/clasePersona';</code> <br> Incluso cuando llames la clase, también puedes mandarla a llamar con el nuevo nombre: <br>
+                                                        <code>const ric = new Perro('Ricardo', 33);</code><br>
+                                                        <code>ric.mostrarInfo();</code> <br> Otra manera de <b>exportar por default seria</b>
+                                                        <li>Otra manera de exportar tus clases es así:
+                                                            <div class="card " style="width: 18rem; ">
+                                                                <div class="card-body" id="js-length">
+                                                                    <p class="card-text espacio-codigo1 "><code>class Persona {</code></p>
+                                                                    <p class="card-text espacio-codigo1 "><code>constructor(nombre, edad) {</code></p>
+                                                                    <p class="card-text espacio-codigo1 "><code>this.nombre = nombre;</code></p>
+                                                                    <p class="card-text espacio-codigo1 "><code>this.edad = edad;</code></p>
+                                                                    <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                                                    <p class="card-text espacio-codigo1 "><code>mostrarInfo() {</code></p>
+                                                                    <p class="card-text espacio-codigo1 "><code>console.log(`${this.nombre} tiene ${this.edad} años`);</code></p>
+                                                                    <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                                                    <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                                                    <p class="card-text espacio-codigo1 "><code>export default Persona;</code></p>
+                                                                </div>
+                                                            </div>
+                                                            Y lo importas en tu archivo <b>app.js</b> así <code>import Persona from './modulos/clasePersona';</code> y lo mandas llamar como <b>Persona</b> para no complicarlo<br>
+                                                            <code>const ric = new Persona('Ricardo', 33);</code><br>
+                                                            <code>ric.mostrarInfo();</code>
+                                                        </li>
+                                                    </li>
                                                 </ol>
                                             </div>
                                         </div>
