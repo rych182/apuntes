@@ -1,6 +1,10 @@
-let resultado1 = Math.random();
-console.log(resultado1);
+let caja = 4;
+caja += 3;
+
+console.log(caja);
 /*
+Algebra
+Multiplicaciones y divisiones primero, luego sumas y restas
 
 Ejercicio 1: Sacar el residuo de una división
 const num1 = 20;
