@@ -1,7 +1,7 @@
 let caja = 4;
-caja += 3;
+let caja1 = "4";
 
-console.log(caja);
+console.log(typeof parseInt(caja1));
 /*
 Algebra
 Multiplicaciones y divisiones primero, luego sumas y restas
@@ -47,4 +47,16 @@ console.log(resultado1);
 Ejercicio 9 Math.random() te da un valor aleatorio del 0 al 0.99
 let resultado1 = Math.random();
 console.log(resultado1);
+
+Ejercicio 10 transforma la cadena de texto a número
+let caja = 4;
+let caja1 = "4";
+
+console.log(typeof parseInt(caja1));
+
+Ejercicio 11
+let caja = 4;
+let caja1 = "4";
+
+console.log(typeof Number(caja1));
 */
