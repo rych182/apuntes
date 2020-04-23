@@ -1,5 +1,5 @@
-let caja = "1.345";
-console.log(Number(caja));
+let caja = 2435;
+console.log(typeof caja.toString());
 /*
 Algebra
 Multiplicaciones y divisiones primero, luego sumas y restas
