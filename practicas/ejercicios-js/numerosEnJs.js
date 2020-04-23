@@ -1,4 +1,7 @@
-let meses = new Array('Enero', 'Febrero', 'Marzo');
+let meses = new Array(1, 2, 44, 56, 78, 98, 90, 9);
+meses.sort(function(x, y) {
+    return y - x;
+});
 console.log(meses);
 
 
@@ -66,6 +69,43 @@ let caja = (num1, num2) => {
 }
 console.log(`${caja(4, 5)}`);
 
+Ejercicio 13: Comprobar si es realmente un array
+let meses = new Array('Enero', 'Febrero', 'Marzo');
+console.log(Array.isArray(meses));
 
+Ejercicio 14: Elimina la primera posición de un arreglo
+let meses = new Array('Enero', 'Febrero', 'Marzo');
+meses.shift();
+console.log(meses);
 
+Ejercicio 15: unir 2 arreglos en 1
+let meses = new Array('Enero', 'Febrero', 'Marzo');
+let numeros = [1, 2, 3];
+console.log(meses.concat(numeros));
+
+Ejercicio 15: unir 2 varios arreglos en 1
+let meses = new Array('Enero', 'Febrero', 'Marzo');
+let numeros = [1, 2, 3];
+let numeros1 = [4, 5, 6];
+let numeros2 = [7, 8, 9];
+console.log(meses.concat(numeros, numeros1, numeros2));
+
+Ejercicio 16: Ordena el array en orden alfabetico
+let meses = new Array('Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'JUnio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'DIciembre');
+meses.sort();
+console.log(meses);
+
+Ejercicio 17: Acomodar los números del array de menor a mayor
+let meses = new Array(1, 2, 44, 56, 78, 98, 90, 9);
+meses.sort(function(x, y) {
+    return x - y;
+});
+console.log(meses);
+
+Ejercicio 18: Acomodar los números del array de mayor a menor
+let meses = new Array(1, 2, 44, 56, 78, 98, 90, 9);
+meses.sort(function(x, y) {
+    return y - x;
+});
+console.log(meses);
 */

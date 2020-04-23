@@ -1214,7 +1214,7 @@
                                                                     transition-delay: .3s;<br>
                                                                     animation-name: skew; <br>
                                                                     animation-iteration-count: 2; <br>
-                                                                    animation-duration: 1s; <br>
+                                                                    animation-duration: 1s; }<br>
                                                                 </code>
                                                             </div>
                                                         </div>
@@ -3613,7 +3613,7 @@
                                                                     </div>
                                                                 </div>
                                                             </li>
-                                                            <li></li>
+                                                            <li><b></div>b</b>>const</b> cuando tiene dentro un arreglo, puede modificarse un espacio del arreglo pero no el arreglo entero</li>
                                                         </ul>
                                                     </div>
                                                     <div>
@@ -3807,7 +3807,7 @@
                                                                         <p class="card-text espacio-codigo0"><code>console.log(persona("Ricardo", true, 32, ["Perro", "Canada"]));</code></p>
                                                                     </div>
                                                                 </div>
-                                                            </li>}
+                                                            </li>
                                                             <li>En Javascript, todos los objetos son pasados por referencia, Todos los primitivos son pasados por valor</li>
                                                             <li>No puedes sobreescribir una variable <b>let</b> ni un <b>const</b></li>
                                                             <li>No podemos acceder a variables <b>let, dentro de una función</b></li>
@@ -3858,8 +3858,32 @@
                                                             <li><a href="#js-lenght">.length</a>: mascotas.length te dice cuantos cupos tiene un array, si no sabes cuantos cupos hay en el array por que es dinámico, se recomienda usar <b>console.log(mascotas.length-1);</b></li>
                                                             <li><b>.push</b></li>: mascotas.push("datos") te agrega un nuevo dato a tu array, puede ser de cualquier tipo al final de tu array
                                                             <li><b>.unshift</b></li>: mascotas.unshift("datos") te agrega un nuevo dato a tu array, puede ser de cualquier tipo al <b>inicio</b> de tu array
+                                                            <li><b>meses.shift();</b> : elimina la primera posición de un array</li>
                                                             <li>.pop</li> mascotas.pop(); remueve el último dato de tu array , si quieres guardar e una variable lo que se borro, puedes guardarlo en una variable <b>let borrado = mascotas.pop():</b>
                                                             <li><b>.splice</b> mascotas.splice(1, 4); Elimina el rango de elementos que tu le digas, dentro de un array</li>
+                                                            <li><b>meses.sort();</b> Ordena el array en orden alfabetico y los números también de mayor a menor y menos a mayor <br>
+
+                                                                <div class="card" style="width: 18rem;">
+                                                                    <div class="card-body">
+                                                                        <p class="card-text espacio-codigo0">Menor a mayor</p>
+                                                                        <p class="card-text espacio-codigo1"><code>let meses = new Array(1, 2, 44, 56, 78, 98, 90, 9);</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>meses.sort(function(x, y) {</code></p>
+                                                                        <p class="card-text espacio-codigo0"><code>return x - y;</code></p>
+                                                                        <p class="card-text espacio-codigo0"><code>});</code></p>
+                                                                        <p class="card-text espacio-codigo0"><code>console.log(meses);</code></p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="card" style="width: 18rem;">
+                                                                    <div class="card-body">
+                                                                        <p class="card-text espacio-codigo0">Mayor a menor</p>
+                                                                        <p class="card-text espacio-codigo1"><code>let meses = new Array(1, 2, 44, 56, 78, 98, 90, 9);</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>meses.sort(function(x, y) {</code></p>
+                                                                        <p class="card-text espacio-codigo0"><code>return y - x;</code></p>
+                                                                        <p class="card-text espacio-codigo0"><code>});</code></p>
+                                                                        <p class="card-text espacio-codigo0"><code>console.log(meses);</code></p>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
                                                             <li><b>.indexOf</b>: mascotas.indexOf("pez"); Te dice el lugar en donde se encuentra el dato que buscas, OJO: debes ponerlo exacto, mayúsculas y minúsculas</li>
                                                             <li><b>entriesPares</b>: const entriesPares = Object.entries(persona); console.log(entriesPares); convierte el objeto de js en arrays <b>INCLUSO</b> cuando creas el objeto con un <b>const</b> que
                                                                 se supone no se debería poder modificar checa el <b>ejercicio 15</b></li>
@@ -4146,6 +4170,28 @@
                                                                     </div>
                                                                 </div>
                                                             </li>
+                                                            <li>
+                                                                <b>caja.concat(caja2)</b> une 2 arreglos en 1
+                                                                <div class="card" style="width: 18rem;">
+                                                                    <div class="card-body">
+                                                                        <p class="card-text espacio-codigo1"><code>let meses = new Array('Enero', 'Febrero', 'Marzo');</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>let numeros = [1, 2, 3];</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>console.log(meses.concat(numeros));</code></p>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <b>caja.concat(caja2,caja3,caja4)</b> une varios arreglos en 1
+                                                                <div class="card" style="width: 18rem;">
+                                                                    <div class="card-body">
+                                                                        <p class="card-text espacio-codigo1"><code>let meses = new Array('Enero', 'Febrero', 'Marzo');</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>let numeros = [1, 2, 3];</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>let numeros1 = [4, 5, 6];</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>let numeros2 = [7, 8, 9];</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>console.log(meses.concat(numeros, numeros1, numeros2));</code></p>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
 
                                                             <li><b>Obtener la fecha:</b> <code>let hoy = new Date(); console.log(hoy);</code></li>
                                                             <li><b>Obtener el día:</b> <code>let hoy = new Date(); let dia = hoy.getDay(); console.log(dia);</code></li>
@@ -4239,6 +4285,7 @@
                                                             </li>
                                                             <li><b>Poner comillas en el texto:</b> \' </li>
                                                             <li><b>Algebra</b>:Multiplicaciones y divisiones primero, luego sumas y restas</li>
+                                                            <li><b></div>b</b>>const</b> cuando tiene dentro un arreglo, puede modificarse un espacio del arreglo pero no el arreglo entero</li>
                                                         </ul>
                                                     </div>
 
