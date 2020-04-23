@@ -1,8 +1,5 @@
-let meses = new Array(1, 2, 44, 56, 78, 98, 90, 9);
-meses.sort(function(x, y) {
-    return y - x;
-});
-console.log(meses);
+let fecha = new Date().getFullYear();
+console.log(fecha);
 
 
 /*
@@ -108,4 +105,8 @@ meses.sort(function(x, y) {
     return y - x;
 });
 console.log(meses);
+
+Ejercicio 19: obtener el año completo
+let fecha = new Date().getFullYear();
+console.log(fecha);
 */
