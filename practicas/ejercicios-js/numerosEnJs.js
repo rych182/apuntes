@@ -1,5 +1,7 @@
-let caja = 2435;
-console.log(typeof caja.toString());
+let meses = new Array('Enero', 'Febrero', 'Marzo');
+console.log(meses);
+
+
 /*
 Algebra
 Multiplicaciones y divisiones primero, luego sumas y restas
@@ -45,4 +47,25 @@ console.log(resultado1);
 Ejercicio 9 Math.random() te da un valor aleatorio del 0 al 0.99
 let resultado1 = Math.random();
 console.log(resultado1);
+
+Ejercicio 10, te transforma el string en un número
+let caja = '2435';
+console.log(typeof Number(caja));
+
+Ejercicio 11 te transforma el número en String
+let caja = 2435;
+console.log(typeof String(caja));
+
+Ejercicio 12 te transforma el número en string
+let caja = 2435;
+console.log(typeof caja.toString());
+
+Ejercicio 13 imprimir una función con "template string ó template literals"(así se llama)
+let caja = (num1, num2) => {
+    return num1 + num2;
+}
+console.log(`${caja(4, 5)}`);
+
+
+
 */
