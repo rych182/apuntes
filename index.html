@@ -3653,6 +3653,50 @@
                                                                     <li><b>Simbols</b>: un tipo de dato que no puede ser igual a ninguno, un un valor <b>UNICO</b>(se usan en objetos)</li>
                                                                 </ol>
                                                             </li>
+                                                            <li>
+                                                                <ol>
+                                                                    <h2>Lógica booleana</h2>
+                                                                    <li><b>false</b> es false</li>
+                                                                    <li><b>true</b> es true</li>
+                                                                    <li><b>!false</b> es true</li>
+                                                                    <li><b>!true</b> es false</li>
+                                                                    <li><b>!!true</b> es true</li>
+                                                                    <li><b>!!false</b> es false</li>
+                                                                    <li>
+                                                                        <div class="card" style="width: 18rem;">
+                                                                            <div class="card-body">
+                                                                                <p class="card-text espacio-codigo0">También se puede negar una función, ejemplo</p>
+                                                                                <p class="card-text espacio-codigo1"><code>let caja = () => {</code></p>
+                                                                                <p class="card-text espacio-codigo1"><code>console.log("Regresa falso");</code></p>
+                                                                                <p class="card-text espacio-codigo0"><code>return false;</code></p>
+                                                                                <p class="card-text espacio-codigo0"><code>}</code></p>
+                                                                                <p class="card-text espacio-codigo0"><code>console.log(!caja());</code></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li><b>&& ó AND</b> ambas deben de ser ciertas para que de TRUE</li>
+                                                                    <li><b>true && true</b> da true</li>
+                                                                    <li><b>true && false</b> da false</li>
+                                                                    <li>
+                                                                        <div class="card" style="width: 18rem;">
+                                                                            <div class="card-body">
+                                                                                <p class="card-text espacio-codigo0">OJO: si Javascript nota que el primer resultado dará false, ya no seguirá revisando más cosas, por eso primero pon el true, se usa mucho cuando quieres ejecutar funciones
+                                                                                    de manera condicional</p>
+                                                                                <p class="card-text espacio-codigo1"><code>let box = () => {</code></p>
+                                                                                <p class="card-text espacio-codigo1"><code>console.log("Regresa true");</code></p>
+                                                                                <p class="card-text espacio-codigo0"><code>return true;</code></p>
+                                                                                <p class="card-text espacio-codigo0"><code>}</code></p>
+                                                                                <p class="card-text espacio-codigo0"><code>let caja = () => {</code></p>
+                                                                                <p class="card-text espacio-codigo1"><code>console.log("Regresa falso");</code></p>
+                                                                                <p class="card-text espacio-codigo1"><code>return false;</code></p>
+                                                                                <p class="card-text espacio-codigo0"><code>}</code></p>
+                                                                                <p class="card-text espacio-codigo0"><code>console.log(caja() && box());</code></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li><b>OR ó ||</b>al menos una condición debe de ser verdad</li>
+                                                                </ol>
+                                                            </li>
                                                             <li><b>Deestructuración</b>: una expresión que permite asignar valores a nombres conforme a una estructura de tabla dada. Ejemplo: <br>
                                                                 <div class="card" style="width: 18rem;">
                                                                     <div class="card-body">

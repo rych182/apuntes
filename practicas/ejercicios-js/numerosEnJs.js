@@ -1,5 +1,4 @@
-let fecha = new Date().getFullYear();
-console.log(fecha);
+console.log(false && false);
 
 
 /*
