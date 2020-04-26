@@ -1,4 +1,26 @@
-console.log(false && false);
+//Ejercicios con funsiones y lógica booleana
+
+const soyUndifined = undefined;
+const soyNull = null;
+const soyFalso = false;
+
+const a1 = true && 'Hola mundo';
+//evalua primero que sea true y como si es true, pasa al segundo valor y lo imprime,osea se le asigna ese valor, EL UÚLTIMO VALOR 
+const a2 = true && 'Hola mundo' && 150;
+//Se le asigna el último valor, que no sea negativo
+const a3 = true && 'hola mundo' && 150 && soyNull;
+const a4 = true && 'hola mundo' && 150 && soyUndifined;
+//Pero si hay un valor falso, lo imprime aunque no sea el último
+const a5 = true && 'hola mundo' && soyFalso && 150 && soyUndifined;
+//Pero si es con OR, buscará al menos un true o un valor sin detenerse en el primer valor aunque sea false, e imprimira el último valor
+const a6 = soyFalso || 'Ya no soy falso';
+//Imprime el último valor aunque sea un null o undifined
+const a7 = soyFalso || soyUndifined;
+const a8 = soyFalso || soyUndifined || soyNull;
+//Pero si encuentra un valor anterior al true, DISTINTO de null o undifined, pondrá ese valor
+const a9 = soyFalso || "texto" || true;
+
+console.log(a9);
 
 
 /*
@@ -108,4 +130,6 @@ console.log(meses);
 Ejercicio 19: obtener el año completo
 let fecha = new Date().getFullYear();
 console.log(fecha);
+
+
 */

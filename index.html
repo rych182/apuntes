@@ -3695,6 +3695,33 @@
                                                                         </div>
                                                                     </li>
                                                                     <li><b>OR ó ||</b>al menos una condición debe de ser verdad</li>
+                                                                    <li>
+                                                                        <div class="card" style="width: 18rem;">
+                                                                            <div class="card-body">
+                                                                                <p class="card-text espacio-codigo0">Ejercicio capcioso con AND y OR</p>
+                                                                                <p class="card-text espacio-codigo1"><code>const soyUndifined = undefined;</code></p>
+                                                                                <p class="card-text espacio-codigo1"><code>const soyNull = null;</code></p>
+                                                                                <p class="card-text espacio-codigo0"><code>const soyFalso = false;</code></p>
+                                                                                <p class="card-text espacio-codigo0"><code>const a1 = true && 'Hola mundo';</code></p>
+                                                                                <p class="card-text espacio-codigo0">//evalua primero que sea true y como si es true, pasa al segundo valor y lo imprime,osea se le asigna ese valor, EL UÚLTIMO VALOR</p>
+                                                                                <p class="card-text espacio-codigo1"><code>const a2 = true && 'Hola mundo' && 150;</code></p>
+                                                                                <p class="card-text espacio-codigo1">//Se le asigna el último valor, que no sea negativo</p>
+                                                                                <p class="card-text espacio-codigo0"><code>const a3 = true && 'hola mundo' && 150 && soyNull;</code></p>
+                                                                                <p class="card-text espacio-codigo0"><code>const a4 = true && 'hola mundo' && 150 && soyUndifined;</code></p>
+                                                                                <p class="card-text espacio-codigo1">//Pero si hay un valor falso, lo imprime aunque no sea el último</p>
+                                                                                <p class="card-text espacio-codigo1"><code>const a5 = true && 'hola mundo' && soyFalso && 150 && soyUndifined;</code></p>
+                                                                                <p class="card-text espacio-codigo0">//Pero si es con OR, buscará al menos un true o un valor sin detenerse en el primer valor aunque sea false, e imprimira el último valor</p>
+                                                                                <p class="card-text espacio-codigo0"><code>const a6 = soyFalso || 'Ya no soy falso';</code></p>
+                                                                                <p class="card-text espacio-codigo0">//Imprime el último valor aunque sea un null o undifined</p>
+                                                                                <p class="card-text espacio-codigo1"><code>const a7 = soyFalso || soyUndifined;</code></p>
+                                                                                <p class="card-text espacio-codigo1"><code>const a8 = soyFalso || soyUndifined || soyNull;</code></p>
+                                                                                <p class="card-text espacio-codigo0">//Pero si encuentra un valor anterior al true, DISTINTO de null o undifined, pondrá ese valor</p>
+                                                                                <p class="card-text espacio-codigo0"><code>const a9 = soyFalso || "texto" || true;</code></p>
+                                                                                <p class="card-text espacio-codigo0"><code>console.log(a9);</code></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li></li>
                                                                 </ol>
                                                             </li>
                                                             <li><b>Deestructuración</b>: una expresión que permite asignar valores a nombres conforme a una estructura de tabla dada. Ejemplo: <br>
