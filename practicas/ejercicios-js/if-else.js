@@ -1,13 +1,5 @@
 // '?' es 'if' ,':' es el 'else'
 
-const dia = 5;
-const horaActual = 14;
-let horaApertura;
-let mensaje;
-// '?' es 'if' ,':' es el 'else'
-horaApertura = ([0, 6].includes(dia)) ? 9 : 11;
-mensaje = (horaActual >= horaApertura) ? "Esta abierto" : `Esta cerrado, hoy abrimos a las ${horaApertura}`;
-console.log(horaApertura, mensaje);
 
 
 
@@ -94,5 +86,42 @@ let mensaje;
 horaApertura = ([0, 6].includes(dia)) ? 9 : 11;
 mensaje = (horaActual >= horaApertura) ? "Esta abierto" : `Esta cerrado, hoy abrimos a las ${horaApertura}`;
 console.log(horaApertura, mensaje);
+
+Ejercicio 7, imprime el número mayor con el operador ternario(if-else corto)
+const numeroMayor = (a, b) => {
+    return (a > b) ? a : b;
+}
+console.log(numeroMayor(7, 5));
+
+Ejercicio 8, reducir el código del ejercicio 7 
+const numeroMayor = (a, b) => (a > b) ? a : b;
+console.log(numeroMayor(7, 9));
+
+Ejercicio 9, un programa que te diga si la persona es miembro o no con un valor booleano
+const tieneMembresia = (miembro) => (miembro) ? '2usd' : "cobrele 10usd por puto";
+console.log(tieneMembresia(true));
+
+Ejercicio 10, crear un array que dentro tenga un if corto.
+let compa = false;
+const amigos = [
+    'Urrutia',
+    'fulano',
+    'sutano',
+    'mengano',
+    compa ? 'perengano' : "el capi"
+];
+console.log(amigos);
+
+Ejercicio 11, imprimir la calificación usando el operador ternario(if-else corto)
+let calificacion = 65;
+const grado = calificacion >= 95 ? "A+" :
+    calificacion >= 90 ? "A" :
+    calificacion >= 85 ? "B+" :
+    calificacion >= 80 ? "B" :
+    calificacion >= 75 ? "C+" :
+    calificacion >= 70 ? "C" :
+    calificacion >= 65 ? "D+" :
+    calificacion >= 60 ? "D" : "F";
+console.log(calificacion, grado);
 
 */
