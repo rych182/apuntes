@@ -224,6 +224,29 @@
                                         <li><a href="https://vim-adventures.com/">vim-adventures</a> Video juego para aprender a usar <b>VIM</b></li>
                                         <li><a href="https://www.vim.org/">Aprender VIM</a> SU sitio oficial</li>
                                     </ul>
+                                    <ol>
+                                        <h2>Flujo de trabajo con VIM</h2>
+                                        <li><b>Entrar al archivo</b></li>
+                                        <li><b>3j</b> te MUEVE 3 lineas hacia abajo, tu puedes indicar cuantas lineas quieres bajar</li>
+                                        <li><b>3k</b> te MUEVE lineas hacia arriba, tu puedes indicar cuantas lineas quieres subir</li>
+                                        <li><b>0</b> para ubicarnos en el inicio de una linea</li>
+                                        <li><b>$</b> para ubicarme al final de una linea </li>
+                                        <li><b>gg</b> te lleva hasta el inicio del archivo</li>
+                                        <li><b>GG</b> te lleva hasta la última linea de tu archivo</li>
+                                        <li><b>15G</b> te lleva a la linea 15</li>
+                                        <li><b>dw</b> te CORTA una palabra, te tienes que colocar al inicio de esa palabra</li>
+                                        <li><b>dd</b> te CORTA todo un renglon</li>
+                                        <li><b>yy</b> te COPIA todo un renglon</li>
+                                        <li><b>3yy</b> te COPIA los 3 siguientes renglones</li>
+                                        <li><b>3dd</b> te CORTA los siguientes 3 renglones</li>
+                                        <li><b>p</b> te pega el renglon que cortaste usando <b>dd</b> ó <b>yy</b></li>
+                                        <li><b>/Palabra</b> BUSCA la palabra</li>
+                                        <li><b>u</b> ES LO MISMO QUE CTRL + Z, quita los cambios y te pone todo como estaba antes</li>
+                                        <li><b>:w</b> para guardar lo que has escrito</li>
+                                        <li><b>:q</b> para salir</li>
+                                        <li><b>:wq</b> para guardar lo que has escrito y salir</li>
+                                        <li><b>esc + :q!</b> <code>esc</code> es para que puedas escribir el comando y al escribir <code>:q!</code>salir sin guardar el archivo</li>
+                                    </ol>
                                 </div>
                             </div>
                         </div>
@@ -3688,14 +3711,36 @@
                                                         <ul>
                                                             <h2>DOM</h2>
                                                             <li><b>document</b> al ejecutar esto en la consola del navegador chrome te mostrará todo lo que hace referencia a la página html</li>
-                                                            <li><b>document.querySelector('body')</b> querySelector seleccionar la etiqueta que le digas y siempre seleccionara la primera en su tipo que encuentre en tu documento html</li>
-                                                            <li><b>document.querySelectorAll('img')</b> selecciona todas las etiquetas de su mismo tipo en tu documento html</li>
+                                                            <li><b>document.querySelector('body')</b> querySelector SELECCIONA la etiqueta que le digas y siempre seleccionara la primera en su tipo que encuentre en tu documento html, puedes guardar esta seleccion
+                                                                dentro de una variable, ejemplo: <code>const divBotones = document.querySelector('#divBotones');</code></li>
+                                                            <li><b>document.querySelectorAll('img')</b> SELECCIONA todas las etiquetas de su mismo tipo en tu documento html</li>
                                                             <li><b>document.querySelector('img').src</b> te dice la ruta de tu imagen</li>
-                                                            <li><b>document.querySelector('small').innerText</b> te agrega texto ó número, PERO no agrega html</li>
-                                                            <li><b>document.querySelector('small').innerHTML</b> te agrega texto, números y etiquetas HTML</li>
-                                                            <li><b></b></li>
-                                                            <li><b></b></li>
+                                                            <li><b>document.querySelector('small').innerText</b> te AGREGA texto ó número, PERO no agrega html</li>
+                                                            <li><b>document.querySelector('small').innerHTML</b> te AGREGA texto, números y etiquetas HTML</li>
+                                                            <li><b>document.getElementById('computadora-cartas');</b> SELECCIONA un elemento que tenga el id que le indicaste</li>
+                                                            <li><b>document.getElementById('computadora-cartas');</b> es lo mismo que <b>document.querySelector('#computadora-cartas')</b></li>
+                                                            <li><b>document.querySelector('.carta');</b> te SELECCIONA elemento que tenga esa clase PERO solo 1 elemento</li>
+                                                            <li><b>const divBotones = document.querySelector('#divBotones');</b> puedes GUARDAR UNA SELECCION de una id ó clase</li>
+                                                            <li><b>document.getElementsByClassName('carta');</b> te SELECCIONA TODOS los elementos que tengan esa clase</li>
+                                                            <li><b>document.createElement('button');</b> CREA un elemento, y también se puede almacenar en una variable <code>const botonNuevo = document.createElement('button');</code></li>
+                                                            <li><b>botonNuevo.innerText = "Destruir";</b> AGREGA texto a tu elemento creado</li>
+                                                            <li><b>divBotones.append(botonNuevo)</b> AGREGA AL DOM usando <b>APPEND</b></li>
+                                                            <li><b>botonNuevo.classList.add('btn-success');</b> AGREGAR estilos a algo que yo he creado, seleccionado y guardado en variables o constantes</li>
                                                         </ul>
+                                                        <div>
+                                                            <h2>Consejo</h2>
+                                                            <p>Acostumbrate a trabajar con <b>document.querySelector('')</b> porque con el puedes hacer todo y así no te tienes que acordar de lo demás como, <b>.ElementsByClassName</b> etc</p>
+                                                        </div>
+                                                        <div>
+                                                            <ol>
+                                                                <h2>Resumen de un flujo de trabajo</h2>
+                                                                <li><b>Selecciona y almacena esa seleccion en un elemento</b> <code>const divBotones = document.querySelector('#divBotones');</code></li>
+                                                                <li><b>Crea un elemento y almacenalo</b> <code>const botonNuevo = document.createElement('button');</code></li>
+                                                                <li><b>Agrega testo al elemento creado </b> <code>botonNuevo.innerText = "Texto y más texto";</code></li>
+                                                                <li><b>Agrega al DOM un elemento ya creado y ya almacenado</b> <code>divBotones.append(botonNuevo)</code></li>
+                                                                <li><b>Dale estilos a lo agregado al DOM</b> <code>botonNuevo.classList.add('btn-success');</code></li>
+                                                            </ol>
+                                                        </div>
                                                     </div>
 
                                                 </div>
