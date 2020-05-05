@@ -177,15 +177,15 @@
                                         <li><b>VIM</b> para entrar a VIM</li>
                                         <li><b>:edit nombreArchivo.txt</b> para entrar al archivo si has entrado directamente a VIM</li>
                                         <li><b>vim nombreArchivo.txt</b> para entrar al archivo</li>
-                                        <li><b>w</b> te mueve al comienzo de la siguiente palabra</li>
-                                        <li><b>e</b> te mueve al final de la siguiente palabra</li>
-                                        <li><b>b</b> te mueve una palabra hacia atras</li>
-                                        <li><b>j</b> te mueve un renglon hacia abajo</li>
-                                        <li><b>3j</b> te mueve 3 lineas hacia abajo, tu puedes indicar cuantas lineas quieres bajar</li>
-                                        <li><b>k</b> te mueve lineas hacia arriba</li>
-                                        <li><b>3k</b> te mueve lineas hacia arriba, tu puedes indicar cuantas lineas quieres subir</li>
-                                        <li><b>3w</b> te mueve 3 palabras adelante, tu puedes indicar cuantas palabras quieres mmoverte</li>
-                                        <li><b>3b</b> te mueve 3 palabras hacia atras, tu puedes indicar cuantas palabras quieres mmoverte</li>
+                                        <li><b>w</b> te MUEVE al comienzo de la siguiente palabra</li>
+                                        <li><b>e</b> te MUEVE al final de la siguiente palabra</li>
+                                        <li><b>b</b> te MUEVE una palabra hacia atras</li>
+                                        <li><b>j</b> te MUEVE un renglon hacia abajo</li>
+                                        <li><b>3j</b> te MUEVE 3 lineas hacia abajo, tu puedes indicar cuantas lineas quieres bajar</li>
+                                        <li><b>k</b> te MUEVE lineas hacia arriba</li>
+                                        <li><b>3k</b> te MUEVE lineas hacia arriba, tu puedes indicar cuantas lineas quieres subir</li>
+                                        <li><b>3w</b> te MUEVE 3 palabras adelante, tu puedes indicar cuantas palabras quieres mmoverte</li>
+                                        <li><b>3b</b> te MUEVE 3 palabras hacia atras, tu puedes indicar cuantas palabras quieres mmoverte</li>
                                         <li><b>fX</b> encuentra la letra que buscas, "en la misma linea"</li>
                                         <li><b>0</b> para ubicarnos en el inicio de una linea</li>
                                         <li><b>$</b> para ubicarme al final de una linea</li>
@@ -195,15 +195,34 @@
                                         <li><b>GG</b> te lleva hasta la última linea de tu archivo</li>
                                         <li><b>15G</b> te lleva a la linea 15</li>
                                         <li><b>i</b>INSERT sirve para empezar a modificar tu archivo</li>
+                                        <li><b>o</b> INSERT y te manda al final del renglon donde te hayas posicionado</li>
+                                        <li><b>x</b> te BORRA caracteres sin necesidad de usar el comando <b>i</b></li>
+                                        <li><b>dw</b> te CORTA una palabra, te tienes que colocar al inicio de esa palabra</li>
+                                        <li><b>dw + .</b> te CORTA una palabra, te tienes que colocar al inicio de esa palabra y si presionas "." corta la siguiente</li>
+                                        <li><b>.</b> repites el último comando</li>
+                                        <li><b>dd</b> te CORTA todo un renglon</li>
+                                        <li><b>yy</b> te COPIA todo un renglon</li>
+                                        <li><b>3yy</b> te COPIA los 3 siguientes renglones</li>
+                                        <li><b>3dd</b> te CORTA los siguientes 3 renglones</li>
+                                        <li><b>p</b> te pega el renglon que cortaste usando <b>dd</b> ó <b>yy</b></li>
                                         <li><b>:w</b> para guardar lo que has escrito</li>
                                         <li><b>:wq</b> para guardar lo que has escrito y salir</li>
                                         <li><b>esc + :q!</b> <code>esc</code> es para que puedas escribir el comando y al escribir <code>:q!</code>salir sin guardar el archivo</li>
                                         <li><b>:q</b> para salir</li>
                                         <li><b>:help</b> para obtener ayuda</li>
                                         <li><b>:version</b> ver la version de VIM</li>
-                                        <li><b></b></li>
-                                        <li><b></b></li>
-                                        <li><b></b></li>
+                                        <li><b>v + j ó k + d + p</b> CORTAR Y PEGAR, entras en <b>modo visual</b> para seleccionar todo lo que quieras usando <b>j</b> ó <b>k</b> y con <b>d</b> lo <b>cortas</b> y con <b>p</b> lo <b>pegas</b></li>
+                                        <li><b>/Palabra</b> BUSCA la palabra</li>
+                                        <li><b>/Palabra + n</b> BUSCA la palabra y al presionar <b>n</b> te muestra otra palabra igual</li>
+                                        <li><b>/o$ + n</b> BUSCA todoas las palabras que terminen con esa letra y al presionar <b>n</b> </li>
+                                        <li><b>:%s/que/con/g</b>Va a SUSTITUIR la palabra <b>que</b> por <b>con</b> en todo el documento, pero debes posicionarte al inicio del documento, la terminal te dirá, cuantas cosas substituiste</li>
+                                        <li><b>u</b> ES LO MISMO QUE CTRL + Z, quita los cambios y te pone todo como estaba antes</li>
+                                        <li><a href="https://vim-adventures.com/">vim-adventures</a> Video juego para aprender a usar <b>VIM</b></li>
+                                    </ul>
+                                    <ul>
+                                        <h2>Referencias VIM</h2>
+                                        <li><a href="https://vim-adventures.com/">vim-adventures</a> Video juego para aprender a usar <b>VIM</b></li>
+                                        <li><a href="https://www.vim.org/">Aprender VIM</a> SU sitio oficial</li>
                                     </ul>
                                 </div>
                             </div>
