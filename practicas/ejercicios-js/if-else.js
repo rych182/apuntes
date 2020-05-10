@@ -1,6 +1,5 @@
 // '?' es 'if' ,':' es el 'else'
-
-
+//if (nombre === undefined) { nombre = "visitante" } otra manera de hacer un IF
 
 
 /*
@@ -123,5 +122,13 @@ const grado = calificacion >= 95 ? "A+" :
     calificacion >= 65 ? "D+" :
     calificacion >= 60 ? "D" : "F";
 console.log(calificacion, grado);
+
+Ejercicio 12
+Manera distinta de hacer un IF-else
+let saludo = (nombre) => {
+    if (nombre === undefined) { nombre = "visitante" }
+    return `Hola ${nombre}`;
+}
+console.log(saludo());
 
 */

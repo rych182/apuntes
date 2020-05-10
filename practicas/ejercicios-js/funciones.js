@@ -1,10 +1,16 @@
 //DEESTRUCTURACIÓN DE ARGUMENTOS
 
-
+let saludar = {
+    accion: function saludar(a) {
+        return `Hola ${a}`;
+    },
+    otraAccion: function hablar(b) {
+        return `${b}`;
+    }
+}
+console.log(saludar.otraAccion("Blablabla"));
 
 /*
-
-
 
 Ejercicio 1
 Imprimir mi nombre con una función flecha
@@ -172,4 +178,22 @@ resumir el ejercicio 15
 const nombres = ['Carlos', 'Alejandro', 'Manuel', 'Cesar'];
 const numero_caracteres = nombres.map(nombre => `${nombre} tiene ${nombre.length} letras`)
 
+Ejercicio 17
+Crea una función con una variable por default si alguna vez alguien no rellena el dato
+let saludar = (nombre = "visitante") => {
+    return `Hola ${nombre}`;
+}
+console.log(saludar("Sutano"));
+
+EJERCICIO 18
+Crea una funcion dentro del valor de un objeto y usala
+let saludar = {
+    accion: function saludar(a) {
+        return `Hola ${a}`;
+    },
+    otraAccion: function hablar(b) {
+        return `${b}`;
+    }
+}
+console.log(saludar.otraAccion("Blablabla"));
 */
