@@ -1,20 +1,9 @@
 //DEESTRUCTURACIÓN DE ARGUMENTOS
 
-try {
-    clientes();
-} catch (error) {
-    console.log(error);
-} finally {
-    console.log("Ejecuta esto pase lo que pase");
-}
-
-function clientes() {
-    console.log("Descargando...");
-
-    setTimeout(() => {
-        console.log("Completado!");
-    }, 3000);
-}
+let dia = new Date();
+let dato = dia.setFullYear(2016);
+dato = dia.getFullYear();
+console.log(dato);
 
 
 //try catch cuando no quieres que se detenga la ejecución de tu programa
@@ -244,6 +233,7 @@ function clientes() {
         console.log("Completado!");
     }, 3000);
 }
+
 
 
 */
