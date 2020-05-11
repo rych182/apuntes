@@ -1,9 +1,12 @@
 //DEESTRUCTURACIÓN DE ARGUMENTOS
 
-let dia = new Date();
-let dato = dia.setFullYear(2016);
-dato = dia.getFullYear();
-console.log(dato);
+let efectivo = 500;
+let carritoCompras = 300;
+if (efectivo > carritoCompras)
+    console.log("Puedes pagar");
+else
+    console.log("Te falt dinero para la compra");
+
 
 
 //try catch cuando no quieres que se detenga la ejecución de tu programa
@@ -234,6 +237,32 @@ function clientes() {
     }, 3000);
 }
 
+EJERCICIO 21
+Cualquier edad puede entrar menos 18
+let edad = 17;
+if (edad != 18) {
+    console.log("Puede entrar");
+} else {
+    console.log("NO Puede entrar!");
+}
 
+Ejercicio 22
+Comparar las cantidades y decidir si puedes pagar o no 
+let efectivo = 500;
+let carritoCompras = 300;
+if (efectivo > carritoCompras) {
+    console.log("Puedes pagar");
+} else {
+    console.log("Te falt dinero para la compra");
+}
+
+EJERCICIO 23
+Resumir el código del ejercicio 22 NO SE RECOMIENDA ESTA SINTAXIS
+let efectivo = 500;
+let carritoCompras = 300;
+if (efectivo > carritoCompras)
+    console.log("Puedes pagar");
+else
+    console.log("Te falt dinero para la compra");
 
 */
