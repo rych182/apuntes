@@ -1,14 +1,24 @@
 //DEESTRUCTURACIÓN DE ARGUMENTOS
 
-let saludar = {
-    accion: function saludar(a) {
-        return `Hola ${a}`;
-    },
-    otraAccion: function hablar(b) {
-        return `${b}`;
-    }
+try {
+    clientes();
+} catch (error) {
+    console.log(error);
+} finally {
+    console.log("Ejecuta esto pase lo que pase");
 }
-console.log(saludar.otraAccion("Blablabla"));
+
+function clientes() {
+    console.log("Descargando...");
+
+    setTimeout(() => {
+        console.log("Completado!");
+    }, 3000);
+}
+
+
+//try catch cuando no quieres que se detenga la ejecución de tu programa
+//Usalo cuando las funciones no sabes si vayan a tener datos, si llegan vacias, no llenes tu codigo de try catch
 
 /*
 
@@ -196,4 +206,44 @@ let saludar = {
     }
 }
 console.log(saludar.otraAccion("Blablabla"));
+
+EJERCICIO 19 TRY-CATCH
+//try catch cuando no quieres que se detenga la ejecución de tu programa
+//Usalo cuando las funciones no sabes si vayan a tener datos, si llegan vacias, no llenes tu codigo de try catch
+//Normalmente se usa cuando descargas un listado de clientes, NO LO USES para agregar una clase o algo en el html
+//Esto solo se puede con las funciones antiguas de JS, con las flechas primero se declara la funcion.
+try {
+    algo();
+} catch (error) {
+    console.log(error);
+}
+clientes();
+
+function clientes() {
+    console.log("Descargando...");
+
+    setTimeout(() => {
+        console.log("Completado!");
+    }, 3000);
+}
+
+EJERCICIO 20 TRY-CATCH-FINALLY
+Finally ejecuta pase lo que pase
+try {
+    clientes();
+} catch (error) {
+    console.log(error);
+} finally {
+    console.log("Ejecuta esto pase lo que pase");
+}
+
+function clientes() {
+    console.log("Descargando...");
+
+    setTimeout(() => {
+        console.log("Completado!");
+    }, 3000);
+}
+
+
 */
