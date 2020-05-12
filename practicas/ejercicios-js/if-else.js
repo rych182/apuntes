@@ -1,6 +1,9 @@
 // '?' es 'if' ,':' es el 'else'
 //if (nombre === undefined) { nombre = "visitante" } otra manera de hacer un IF
 
+let logueado = true;
+console.log(logueado === true ? "SI se logueo" : "NO se logueo");
+
 
 /*
 Ejercicio 1, hacer los días de la semana con if-else-else if
@@ -130,5 +133,52 @@ let saludo = (nombre) => {
     return `Hola ${nombre}`;
 }
 console.log(saludo());
+
+EJERCICIO 13
+Un programa con if que te salude dependiendo la hora
+let hora = "q";
+if (hora < 12 && hora >= 5) {
+    console.log("BUenos días!");
+} else if (hora >= 12 && hora < 19) {
+    console.log("BUenas tardes!");
+} else if (hora >= 19 && hora <= 24 || hora < 5 && hora > 0) {
+    console.log("BUenas noches!");
+} else {
+    console.log("Hora no valida");
+}
+
+EJERCICIO 14
+Cuando las 2 opciones son ciertas, se ejecuta la primera solamente
+let puntaje = 100;
+
+if (puntaje > 50) {
+    console.log("el puntaje es mayor a 50");
+} else if (puntaje > 75) {
+    console.log("el puntaje es mayor a 75");
+}
+
+EJERCICIO 15
+Checa si puedes pagar en efecto ó efectivo + crédito o no puedes pagarlo utilizando if
+let efectivo = 300;
+let credito = 300;
+let pago = 200;
+let total = efectivo + credito;
+let cambio0 = efectivo - pago;
+let cambio = (efectivo + credito) - pago;
+
+if (efectivo >= pago) {
+    console.log(`Puedo pagar y me sobra de cambio en efectivo ${cambio0}`);
+} else if (efectivo < pago && total >= pago) {
+    console.log(`No me alcanza, usaré crédito y me sobran ${cambio} de crédito`);
+} else if (pago > total) {
+    console.log("No puedo comprarlo =/");
+} else {
+    console.log("Dato no valido");
+}
+
+EJERCICIO 16
+Ejercicio con if-corto
+
+
 
 */

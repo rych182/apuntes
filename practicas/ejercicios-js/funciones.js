@@ -1,11 +1,5 @@
 //DEESTRUCTURACIÓN DE ARGUMENTOS
 
-let efectivo = 500;
-let carritoCompras = 300;
-if (efectivo > carritoCompras)
-    console.log("Puedes pagar");
-else
-    console.log("Te falt dinero para la compra");
 
 
 
@@ -264,5 +258,14 @@ if (efectivo > carritoCompras)
     console.log("Puedes pagar");
 else
     console.log("Te falt dinero para la compra");
+
+
+EJERCICIO 24
+
+
+EJERCICIO 25
+
+
+EJERCICIO 26
 
 */
