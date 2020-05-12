@@ -1,10 +1,5 @@
 //Hacer un for anidado https://www.youtube.com/watch?v=IbOGEvOV6BA
 
-let countries = ['Mexico', 'USA', 'Canada', 'Japan', 'SOuth Korea'];
-for (let i of countries) {
-    console.log(i);
-}
-
 
 /*
 APUNTES:
@@ -38,4 +33,50 @@ Pero se acostumbra poner el sengular del nombre del array
 for (let country of countries) {
     console.log(country);
 }
+
+Ejercicio 5, imprimir un arreglo usando forEach(), perro es el index, osea la posición en el arreglo, es una caracteristica que tiene la función forEach()
+let countries = ['Mexico', 'USA', 'Canada', 'Japan', 'SOuth Korea'];
+countries.forEach((country, perro) => {
+    console.log(`${perro} ${country}`);
+})
+
+Ejercicio 6: extrae información de objetos dentro de un arreglo usando la función map, para crear un nuevo arreglo(que es lo que hace la función .map)
+let carrito = [
+    { id: 1, producto: 'libro' },
+    { id: 2, producto: 'Camisa' },
+    { id: 3, producto: 'Guitarra' },
+    { id: 4, producto: 'Tablet' }
+];
+
+const nombreProducto = carrito.map((carrito) => {
+    return carrito.producto;
+})
+console.log(nombreProducto);
+
+EJERCICIO 7: Recorrer un objeto utilizando FOR IN
+const automovil = {
+    modelo: 'Camaro',
+    motor: 6.1,
+    anio: 1969,
+    marca: "Chevrolet"
+}
+for (const auto in automovil) {
+    console.log(`${auto}: ${automovil[auto]}`);
+}
+
+EJERCICIO 8, imprime con un for, arrays creados con la función .entries(), usando los espacios de memoria y datos de 1 solo array
+const ciudades = ['Mexico', 'Canada', 'USA', 'Groelandia', 'Brasil'];
+for (let entrada of ciudades.entries()) {
+    console.log(entrada);
+}
+
+EJERCICIO 9, lo mismo que el ejercicio 8 pero usando la función .map(), "transforma" los datos en ARRAY
+const datos = new Map();
+datos.set("nombre", "juan");
+datos.set("profesion", "desarrollo web");
+
+for (const entrada of datos.entries()) {
+    console.log(entrada);
+}
+
 */
