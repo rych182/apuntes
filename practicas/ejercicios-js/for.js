@@ -1,8 +1,11 @@
 //Hacer un for anidado https://www.youtube.com/watch?v=IbOGEvOV6BA
 
-let countries = ['Mexico', 'USA', 'Canada', 'Japan', 'SOuth Korea'];
-for (let i of countries) {
-    console.log(i);
+for (let i = 0; i <= 10; i++) {
+    if (i % 2 == 0) {
+        console.log(`El ${i} es par`);
+    } else {
+        console.log(`El ${i} es inpar`);
+    }
 }
 
 
@@ -37,5 +40,32 @@ for (let i of countries) {
 Pero se acostumbra poner el sengular del nombre del array
 for (let country of countries) {
     console.log(country);
+}
+
+EJERCICIO 5, usar un IF dentro de un FOR
+for (let i = 0; i <= 10; i++) {
+    if (i == 5) {
+        console.log(`Voy en el ${i}`);
+        continue;
+    }
+    console.log(i);
+}
+
+EJERCICIO 6, detener el FOR en el número 5
+for (let i = 0; i <= 10; i++) {
+    if (i == 5) {
+        console.log(`Voy en el ${i}`);
+        break;
+    }
+    console.log(i);
+}
+
+Ejercicio 7, imprime si el número es par o inpar
+for (let i = 0; i <= 10; i++) {
+    if (i % 2 == 0) {
+        console.log(`El ${i} es par`);
+    } else {
+        console.log(`El ${i} es inpar`);
+    }
 }
 */
