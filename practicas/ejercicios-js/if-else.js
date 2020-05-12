@@ -1,8 +1,6 @@
 // '?' es 'if' ,':' es el 'else'
 //if (nombre === undefined) { nombre = "visitante" } otra manera de hacer un IF
 
-let logueado = true;
-console.log(logueado === true ? "SI se logueo" : "NO se logueo");
 
 
 /*
@@ -179,6 +177,8 @@ if (efectivo >= pago) {
 EJERCICIO 16
 Ejercicio con if-corto
 
+let logueado = true;
+console.log(logueado === true ? "SI se logueo" : "NO se logueo");
 
 
 */

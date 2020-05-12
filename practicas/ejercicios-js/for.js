@@ -34,6 +34,7 @@ for (let country of countries) {
     console.log(country);
 }
 
+<<<<<<< HEAD
 Ejercicio 5, imprimir un arreglo usando forEach(), perro es el index, osea la posición en el arreglo, es una caracteristica que tiene la función forEach()
 let countries = ['Mexico', 'USA', 'Canada', 'Japan', 'SOuth Korea'];
 countries.forEach((country, perro) => {
@@ -79,4 +80,31 @@ for (const entrada of datos.entries()) {
     console.log(entrada);
 }
 
+
+EJERCICIO 10, usar un IF dentro de un FOR
+for (let i = 0; i <= 10; i++) {
+    if (i == 5) {
+        console.log(`Voy en el ${i}`);
+        continue;
+    }
+    console.log(i);
+}
+
+EJERCICIO 11, detener el FOR en el número 5
+for (let i = 0; i <= 10; i++) {
+    if (i == 5) {
+        console.log(`Voy en el ${i}`);
+        break;
+    }
+    console.log(i);
+}
+
+Ejercicio 12, imprime si el número es par o inpar
+for (let i = 0; i <= 10; i++) {
+    if (i % 2 == 0) {
+        console.log(`El ${i} es par`);
+    } else {
+        console.log(`El ${i} es inpar`);
+    }
+}
 */
