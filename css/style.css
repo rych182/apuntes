@@ -417,19 +417,19 @@ div.polaroid13:hover {
 
 @media screen and (max-width: 480px) {
     body {
-        background-color: darkslateblue;
+        background: url('../img/texturas/robots.png');
     }
 }
 
 @media screen and (min-width: 481px) and (max-width: 760px) {
     body {
-        background: cornflowerblue;
+        background: url('../img/texturas/dark_wood.png');
     }
 }
 
 @media screen and (min-width: 761px) {
     body {
-        background: url('../img/texturas/ep_naturalblack.png');
+        background: url('../img/texturas/christmas-dark.png');
     }
 }
 
@@ -604,6 +604,19 @@ Si usas el todo lo que sea BOLD. semibold, mdium etc de los archivos de la tipog
 
 h1 {
     font-family: 'Indie Flower', cursive;
+    color: wheat;
+}
+
+h2 {
+    font-family: 'Indie Flower';
+    color: darkslategrey;
+}
+
+a,
+label {
+    font-family: 'Indie Flower';
+    color: darkblue;
+    font-weight: 600;
 }
 
 p.indieFlower {
