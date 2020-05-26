@@ -3720,6 +3720,7 @@
                                                             <li><b>document.querySelector('small').innerText</b> te AGREGA texto ó número, PERO no agrega html</li>
                                                             <li><b>document.querySelector('small').innerHTML</b> te AGREGA texto, números y etiquetas HTML</li>
                                                             <li><b>document.getElementById('computadora-cartas');</b> SELECCIONA un elemento que tenga el id que le indicaste</li>
+                                                            <li><b>document.getElementById('computadora-cartas').textContent;</b> MUESTRA el texto que tiene el id que le indicaste</li>
                                                             <li><b>document.getElementById('computadora-cartas');</b> es lo mismo que <b>document.querySelector('#computadora-cartas')</b></li>
                                                             <li><b>document.querySelector('.carta');</b> te SELECCIONA elemento que tenga esa clase PERO solo 1 elemento</li>
                                                             <li><b>const divBotones = document.querySelector('#divBotones');</b> puedes GUARDAR UNA SELECCION de una id ó clase</li>
@@ -3735,8 +3736,41 @@
                                                             <li><b>window.location</b> te da información acerca de la URL, mucha info, recuerda que es un objeto, puedes acceder a info más específica usando "." , ejemplo: <code>window.location.port</code>
                                                                 <code>window.location.href='https://twitter.com'</code></li>
                                                             <li><b>window.navigator</b>: Te dice los datos del navegador y como también es un objeto puedes pedirle más datos <code>window.navigator.appName</code></li>
-                                                            <li><b></b></li>
-                                                            <li><b></b></li>
+                                                            <li><code>document.all</code> te dice cuantos elemtos tiene tu document(etiquetas html y con que ids y clases)</li>
+                                                            <li><code>document.all[119]</code> seleccionas la etiqueta de tu documento en específico</li>
+                                                            <li><code>document.URL</code>: te da la url</li>
+                                                            <li><code>document.forms</code> te da los formularios</li>
+                                                            <li><code>document.forms[0]</code> seleccionas el primer formulario</li>
+                                                            <li><code>document.forms[0].id</code> selecciona el id del formulario y te lo muestra</li>
+                                                            <li><code>document.forms[0].className</code>selecciona la clase del formulario y te la muestra</li>
+                                                            <li><code>document.forms[0].classList</code> te muestra las clases que tenga el formulario o cualquier clase</li>
+                                                            <li><code>document.forms[0].classList[0]</code>te muestra la clase según el número que le pongas en el array</li>
+                                                            <li><code>document.images</code> te muestra cuantas imagenes hay y cuales tienen id y clase </li>
+                                                            <li><code>document.images[2]</code> te muestra la imagen su src, como se llama la imagen y si tiene ancho o altura etc</li>
+                                                            <li><code>document.images[2].src</code> te da el src de la imagen</li>
+                                                            <li><b>Convertir HTMLCollection</b> en un array(o culquiera de los ejemplo de arriba) <code>let imagenes = document.images; let imagenesArr = Array.from(imagenes) console.log(imagenesArr);</code></li>
+                                                            <li>
+                                                                <div class="card" style="width: 18rem;">
+                                                                    <div class="card-body">
+                                                                        <p class="card-text espacio-codigo0">Ejemplo de document.images con función <b>Array</b> que convierte un HtmlCollection en un array </p>
+                                                                        <p class="card-text espacio-codigo1"><code>let imagenes = document.images;</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>let imagenesArr = Array.from(imagenes);</code></p>
+                                                                        <p class="card-text espacio-codigo0"><code>console.log(imagenesArr);</code></p>
+                                                                        <p class="card-text espacio-codigo0"><code></code></p>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="card" style="width: 18rem;">
+                                                                    <div class="card-body">
+                                                                        <p class="card-text espacio-codigo0">Ejemplo donde usa <b>forEach</b> para mostrar cada imagen</p>
+                                                                        <p class="card-text espacio-codigo1"><code>imagenesArr.forEach(function(imagen){</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>console.log(imagen);</code></p>
+                                                                        <p class="card-text espacio-codigo0"><code>});</code></p>
+                                                                        <p class="card-text espacio-codigo0"><code></code></p>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
                                                             <li><b></b></li>
                                                         </ul>
                                                         <div>
