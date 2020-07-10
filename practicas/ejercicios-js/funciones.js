@@ -1,8 +1,3 @@
-//DEESTRUCTURACIÓN DE ARGUMENTOS
-
-
-
-
 //try catch cuando no quieres que se detenga la ejecución de tu programa
 //Usalo cuando las funciones no sabes si vayan a tener datos, si llegan vacias, no llenes tu codigo de try catch
 
@@ -261,7 +256,19 @@ else
 
 
 EJERCICIO 24
+//Ejericio scope global y bloque(dentro de un if)
+var a = 'a';
+let b = 'b';
+const c = 'c';
 
+if (true) {
+    var a = 'AA';
+    let b = 'BB';
+    const c = 'CC';
+    console.log('BLOQUE: ', a, b, c);
+}
+
+console.log('GLOBALES: ', a, b, c);
 
 EJERCICIO 25
 
