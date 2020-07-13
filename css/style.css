@@ -6,6 +6,15 @@
     border: solid 1px blue;
 }
 
+.colapsos {
+    background-color: BurlyWood;
+}
+
+a h2 button.colorTitulo {
+    color: seashell;
+    font-weight: 600;
+}
+
 .columna {
     border: solid 1px purple;
 }
