@@ -3716,7 +3716,10 @@
                                                             <li><b>document.querySelector('body')</b> querySelector SELECCIONA la etiqueta que le digas y siempre seleccionara la primera en su tipo que encuentre en tu documento html, puedes guardar esta seleccion
                                                                 dentro de una variable, ejemplo: <code>const divBotones = document.querySelector('#divBotones');</code></li>
                                                             <li><b>document.querySelectorAll('img')</b> SELECCIONA todas las etiquetas de su mismo tipo en tu documento html</li>
-                                                            <li><b>document.querySelector('img').src</b> te dice la ruta de tu imagen</li>
+                                                            <li><b>document.querySelector('img').src</b> te dice la ruta de tu imagen, solo te selecciona la primera</li>
+                                                            <li><b>document.querySelector('#principal a:first-child')</b> selecciona los selectores de css</li>
+                                                            <li><b>document.querySelector('#principal').getElementByClassName('.titulo');</b> seleccionas el id que contenga la clase fulana</li>
+                                                            <li><b>const encabezado = document.querySelector('#hero');</b> puedes seleccionar id y clases usando <b>querySelector</b></li>
                                                             <li><b>document.getElementById('hero').textContent;</b> te muestra el contenido del texto </li>
                                                             <li><b>document.querySelector('small').innerText</b> te AGREGA texto ó número, PERO no agrega html</li>
                                                             <li><b>document.querySelector('small').innerHTML</b> te AGREGA texto, números y etiquetas HTML</li>
@@ -3727,8 +3730,10 @@
                                                             <li><b>document.getElementById('computadora-cartas');</b> es lo mismo que <b>document.querySelector('#computadora-cartas')</b></li>
                                                             <li><b>document.querySelector('.carta');</b> te SELECCIONA elemento que tenga esa clase PERO solo 1 elemento</li>
                                                             <li><b>const divBotones = document.querySelector('#divBotones');</b> puedes GUARDAR UNA SELECCION de una id ó clase</li>
-                                                            <li><b>document.getElementsByClassName('carta');</b> te SELECCIONA TODOS los elementos que tengan esa clase</li>
+                                                            <li><b>document.getElementsByClassName('.carta');</b> te SELECCIONA TODOS los elementos que tengan esa clase</li>
+                                                            <li><b>document.getElementsByClassName('.otraClase')[3];</b> te SELECCIONA TODOS los elementos que tengan esa clase y le puedes poner la psicion del array</li>
                                                             <li><b>document.createElement('button');</b> CREA un elemento, y también se puede almacenar en una variable <code>const botonNuevo = document.createElement('button');</code></li>
+                                                            <li><b>document.getElementByTagName('div');</b> SELECCIONA la etiqueta HTML</li>
                                                             <li><b>botonNuevo.innerText = "Destruir";</b> AGREGA texto a tu elemento creado</li>
                                                             <li><b>divBotones.append(botonNuevo)</b> AGREGA AL DOM usando <b>APPEND</b></li>
                                                             <li><b>botonNuevo.classList.add('btn-success');</b> AGREGAR estilos a algo que yo he creado, seleccionado y guardado en variables o constantes</li>
@@ -3751,6 +3756,22 @@
                                                             <li><code>document.images</code> te muestra cuantas imagenes hay y cuales tienen id y clase </li>
                                                             <li><code>document.images[2]</code> te muestra la imagen su src, como se llama la imagen y si tiene ancho o altura etc</li>
                                                             <li><code>document.images[2].src</code> te da el src de la imagen</li>
+                                                            <li><b>nodeName</b> son las etiquetas html, los nodos al final son nuestras etiquetas de html <code>console.log('caja.nodeName');</code> la consola te regresa la etiqueta que este guardada en la
+                                                                variable caja</li>
+                                                            <li><b>children</b> te regresa las etiquetas html que hayas seleccionado y almacenado en la variable <code>const navegacion = document.querySelector('#principal');<br>console.log('navegacion.children')</code>                                                                </li>
+                                                            <li><b>childElementCount</b><code>console.log('cursos[0].childElementCount');</code> te cuenta el número de elementos hijos</li>
+                                                            <li><b>parentElement</b><code> const cursos = document.querySelectorAll('.card'); console.log('cursos[0].parentElement.parentElement.parentElement');</code> te da el padre o la etiqueta mayor al
+                                                                padre, puedes ir tan afuera como quieras, a esto se le llama transversin<b>TRANSVERSING</b></li>
+                                                            <li><b>previousElementSibling</b><code>const enlaces = document.querySelectorAll('.enlace'); console.log('enlaces[0].previousElementSibling');</code>te SELECCIONA el elemento previo</li>
+                                                            <li><b>createElement</b> ejemplo más abajo<code></code></li>
+                                                            <li><b>appendChild</b><code>nuevoEncabezado.appendChild(document.createTextNode('Otro titulo'));</code> todo puede ser agregado al DOM</li>
+                                                            <li><b>remove();</b><code>const enlaces = document.querySelectorAll('.enlace'); enlaces[0].remove();</code>remueve</li>
+                                                            <li><b>removeChild();</b><code>const navegacion = document.querySelector('#principal'); navegacion.removeChild(enlaces[0]);</code>Otra manera de borrar</li>
+                                                            <li><b>classList</b><code>elemento = primerLi.classList.add('nueva-clase');</code> Te dice todas las clases que contenga tu elemento seleccionado</li>
+                                                            <li><b>getAttribute</b><code>elemento = primerLi.getAttribute('href');</code> CONSIGUE los atributos del html</li>
+                                                            <li><b>setAttribute</b><code>primeLi.setAttribute('href','http://facebook.com');</code> REDECLARA el atributo del HTML</li>
+                                                            <li><b>hasAttribute</b><code>primerLi.hasAttribute('data-id');</code>comprueba si tienes un atributo</li>
+                                                            <li><b>removeAttribute</b><code>primerLi.removeAttribute('data-id');</code> remueve el atributo</li>
                                                             <li><b>Convertir HTMLCollection</b> en un array(o culquiera de los ejemplo de arriba) <code>let imagenes = document.images; let imagenesArr = Array.from(imagenes) console.log(imagenesArr);</code></li>
                                                             <li>
                                                                 <div class="card" style="width: 18rem;">
@@ -3793,7 +3814,64 @@
                                                                     </div>
                                                                 </div>
                                                             </li>
-                                                            <li></li>
+                                                            <li>
+                                                                <div class="card" style="width: 18rem;">
+                                                                    <div class="card-body">
+                                                                        <p class="card-text espacio-codigo0">Ejemplo creando elementos con <b>createElement</b></p>
+                                                                        <p class="card-text espacio-codigo1"><code>const enlace = document.createElement('a');</code></p>
+                                                                        <p class="card-text espacio-codigo1">//agregamos una clase</p>
+                                                                        <p class="card-text espacio-codigo1"><code>enlace.className='enlace';</code></p>
+                                                                        <p class="card-text espacio-codigo1">//añadir id</p>
+                                                                        <p class="card-text espacio-codigo0"><code>enlace.id = 'nuevo-id';</code></p>
+                                                                        <p class="card-text espacio-codigo1">//agregamos el atributo href</p>
+                                                                        <p class="card-text espacio-codigo0"><code>enlace.setAttribute('href','#')</code></p>
+                                                                        <p class="card-text espacio-codigo1">//Añadir el texto</p>
+                                                                        <p class="card-text espacio-codigo0"><code>enlace.textContent = 'Nuevo Enlace';</code></p>
+                                                                        <p class="card-text espacio-codigo1">//Otra manera de agregar texto</p>
+                                                                        <p class="card-text espacio-codigo0"><code>enlace.appenChild(document.createTextNode('Nuevo enlace'))</code></p>
+                                                                        <p class="card-text espacio-codigo1">//agregando todo esto en el id que le estás indicando de tu proyecto</p>
+                                                                        <p class="card-text espacio-codigo0"><code>document.querySelector('#secundaria').appendChild(enlace);</code></p>
+
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="card" style="width: 18rem;">
+                                                                    <div class="card-body">
+                                                                        <p class="card-text espacio-codigo0">Ejemplo reemplazando elementos con <b>replaceChild</b></p>
+                                                                        <p class="card-text espacio-codigo1"><code>const nuevoEncabezado = document.createElement('h2');</code></p>
+                                                                        <p class="card-text espacio-codigo1">//agregamos una id</p>
+                                                                        <p class="card-text espacio-codigo1"><code>nuevoEncabezado.id ='encabezado';</code></p>
+                                                                        <p class="card-text espacio-codigo1">//agregar nuevo texto</p>
+                                                                        <p class="card-text espacio-codigo0"><code>nuevoEncabezado.appendChild(document.createTextNode('Los mejores cursos'));</code></p>
+                                                                        <p class="card-text espacio-codigo1">//elemento que sera reemplazado</p>
+                                                                        <p class="card-text espacio-codigo0"><code>const anterior = document.querySelector('#encabezado');</code></p>
+                                                                        <p class="card-text espacio-codigo1">//Elemento padre</p>
+                                                                        <p class="card-text espacio-codigo0"><code>const elPadre = document.querySelector('#lista-Cursos');</code></p>
+                                                                        <p class="card-text espacio-codigo1">//Reemplazando</p>
+                                                                        <p class="card-text espacio-codigo0"><code>elPadre.replaceChild(nuevoEncabezado,anterior)</code></p>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="card" style="width: 18rem;">
+                                                                    <div class="card-body">
+                                                                        <p class="card-text espacio-codigo0">Agregando y quitando clases <b></b></p>
+                                                                        <p class="card-text espacio-codigo1"><code>const primerLi = document.querySelector('.enlace');</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>let elemento;</code></p>
+                                                                        <p class="card-text espacio-codigo1">//Obtener una clase de CSS: Ejemplo 1</p>
+                                                                        <p class="card-text espacio-codigo1"><code>elemento = primerLi.className;</code></p>
+                                                                        <p class="card-text espacio-codigo0"><code>elemento = primerLi.classList.add('nueva-clase');</code></p>
+                                                                        <p class="card-text espacio-codigo0"><code>elemento = primerLi.classList.remove('vieja-clase');</code></p>
+                                                                        <p class="card-text espacio-codigo0"><code>elemento = primerLi.classList;</code></p>
+                                                                        <p class="card-text espacio-codigo1">//Modificar atributos: Ejemplo 2</p>
+                                                                        <p class="card-text espacio-codigo0"><code>elemento = primerLi.getAttribute('href');</code></p>
+                                                                        <p class="card-text espacio-codigo0"><code>primeLi.setAttribute('href','http://facebook.com');</code></p>
+                                                                        <p class="card-text espacio-codigo0"><code></code></p>
+                                                                        <p class="card-text espacio-codigo0"><code></code></p>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
                                                             <li><code></code></li>
                                                         </ul>
                                                         <div>
