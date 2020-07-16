@@ -3692,6 +3692,242 @@
                                                             </li>
                                                             <li><b>b</b>>const</b> cuando tiene dentro un arreglo, puede modificarse un espacio del arreglo pero no el arreglo entero</li>
                                                         </ul>
+                                                        <ul>
+                                                            <h2>Event Listeners</h2>
+                                                            <li><b>addEventListener('click',function(e){})</b>
+                                                                <div class="card" style="width: 18rem;">
+                                                                    <div class="card-body">
+                                                                        <p class="card-text espacio-codigo0">Evento click</p>
+                                                                        <p class="card-text espacio-codigo1"><code>document.querySelector('#buscador').addEventListener('click',function(e){)</code></p>
+                                                                        <p class="card-text espacio-codigo1">//para que no te lleve a la página # al dar el click</p>
+                                                                        <p class="card-text espacio-codigo1"><code>e.preventDefault();</code></p>
+                                                                        <p class="card-text espacio-codigo0"><code>alert('Buscando cursos');</code></p>
+                                                                        <p class="card-text espacio-codigo0"><code>});</code></p>
+                                                                        <p class="card-text espacio-codigo0">Si no ponemos el <b>e.preventDefault();</b> nos lleva a la url con #, esto es por que en nuestro <b>form</b> tenemos un <b>action"#"</b> , a esto se le conoce como la acción por defalt,
+                                                                            no solo se le puede poner <b>function(e)</b>, también se le puede poner <b>function(event)</b> ó <b>function(evt)</b>, son convenciones que a la gente le gusta usar, el <b>e.preventDefault();</b>                                                                            suele usarse para comprobar que todos los campos tengan ciertos datos, realizar algún calculo ó comprobar disponibilidad
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="card" style="width: 18rem;">
+                                                                    <div class="card-body">
+                                                                        <p class="card-text espacio-codigo0">Evento click (Otra forma de ejecutarlo)</p>
+                                                                        <p class="card-text espacio-codigo1">//OJO, la funcion que llamas, no debe llevar parentesis(me refiero a la funcion <b>ejecturar</b>)</p>
+                                                                        <p class="card-text espacio-codigo1"><code>document.getElementById('submit-buscador').addEventListener('click', ejecutar);</code></p>
+                                                                        <p class="card-text espacio-codigo1">//La <b>e</b> y el <b>e.preventDefault</b> van aquí en la función</p>
+                                                                        <p class="card-text espacio-codigo1"><code>function ejecutar(e) {</code></p>
+                                                                        <p class="card-text espacio-codigo0"><code>e.preventDefault();</code></p>
+                                                                        <p class="card-text espacio-codigo0"><code>alert("Ejecutando desde una funcion");</code></p>
+                                                                        <p class="card-text espacio-codigo0"><code>}</code></p>
+                                                                    </div>
+                                                                </div>
+                                                                <p>Con esto puedes ver la información que almacena el <b>event</b>, como las coordenadas de los pixeles donde diste click, el tamaño del navegador ó el elemento al que le diste click </p>
+                                                                <div class="card" style="width: 18rem;">
+                                                                    <div class="card-body">
+                                                                        <p class="card-text espacio-codigo0"><code>document.querySelector('#submit-buscador').addEventListener('click',ejecutar)</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>function ejecutar(e) {</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>e.preventDefault();</code></p>
+                                                                        <p class="card-text espacio-codigo0"><code>let elemento;</code></p>
+                                                                        <p class="card-text espacio-codigo0"><code>elemento = e;</code></p>
+                                                                        <p class="card-text espacio-codigo0"><code>elemento = e.target;</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>console.log(elemento);</code></p>
+                                                                        <p class="card-text espacio-codigo0"><code>}</code></p>
+                                                                    </div>
+                                                                </div>
+                                                                <p>También puedes imprimir en consola cualquier cosa a lo que le des click</p>
+                                                                <div class="card" style="width: 18rem;">
+                                                                    <div class="card-body">
+                                                                        <p class="card-text espacio-codigo0"><code>document.querySelector('#encabezado').addEventListener('click',function(e)){</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>console.log(e.target.innerText);</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>)};</code></p>
+                                                                    </div>
+                                                                </div>
+                                                                <p>O modificar un texto en el DOM</p>
+                                                                <div class="card" style="width: 18rem;">
+                                                                    <div class="card-body">
+                                                                        <p class="card-text espacio-codigo0"><code>document.querySelector('#encabezado').addEventListener('click',function(e)){</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>e.target.innerText = "Nuevo Encabezado";</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>)};</code></p>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <p><b>mouseenter</b> solo pasar por encima el cursor del mouse</p>
+                                                                <div class="card" style="width: 18rem;">
+                                                                    <div class="card-body">
+                                                                        <p class="card-text espacio-codigo0"><code>const boton = document.querySelector('#vaciar-carrito');</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>boton.addEventListener('mouseenter',obtenerEvento)</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>function obtenerEvento(e){</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>console.log(`EVENTO: ${e.type}`);</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>}</code></p>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <p><b>mouseleave</b> salir del boton con el cursor del mouse</p>
+                                                                <div class="card" style="width: 18rem;">
+                                                                    <div class="card-body">
+                                                                        <p class="card-text espacio-codigo0"><code>const boton = document.querySelector('#vaciar-carrito');</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>boton.addEventListener('mouseleave',obtenerEvento)</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>function obtenerEvento(e){</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>console.log(`EVENTO: ${e.type}`);</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>}</code></p>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <p><b>mouseover</b> ejecuta el codigo cada vez que pases por encima del boton</p>
+                                                                <div class="card" style="width: 18rem;">
+                                                                    <div class="card-body">
+                                                                        <p class="card-text espacio-codigo0"><code>const boton = document.querySelector('#vaciar-carrito');</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>boton.addEventListener('mouseover',obtenerEvento)</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>function obtenerEvento(e){</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>console.log(`EVENTO: ${e.type}`);</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>}</code></p>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <p><b>mouseup</b> Se ejecuta cuando das click pero hasta que sueltes el click</p>
+                                                                <div class="card" style="width: 18rem;">
+                                                                    <div class="card-body">
+                                                                        <p class="card-text espacio-codigo0"><code>const boton = document.querySelector('#vaciar-carrito');</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>boton.addEventListener('mouseup',obtenerEvento)</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>function obtenerEvento(e){</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>console.log(`EVENTO: ${e.type}`);</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>}</code></p>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                        <ul>
+                                                            <h2>Eventos para formularios</h2>
+                                                            <li>
+                                                                <p><b>keydown</b> Es un evento que se ejecuta cada que estás escribiendo</p>
+                                                                <div class="card" style="width: 18rem;">
+                                                                    <div class="card-body">
+                                                                        <p class="card-text espacio-codigo0"><code>const boton = document.querySelector('#vaciar-carrito');</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>boton.addEventListener('keydown',obtenerEvento)</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>function obtenerEvento(e){</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>console.log(busqueda.value)</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>console.log(`EVENTO: ${e.type}`);</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>}</code></p>
+                                                                    </div>
+                                                                </div>
+                                                                <p>Puede ser bueno si realizas un buscador en una empresa, si comienzas a escribir un apellido, que te vaya filtrando los nombres con ese apellido</p>
+                                                            </li>
+                                                            <li>
+                                                                <p><b>keypress</b> Es lo mismo que keydown</p>
+                                                                <div class="card" style="width: 18rem;">
+                                                                    <div class="card-body">
+                                                                        <p class="card-text espacio-codigo0"><code>const boton = document.querySelector('#vaciar-carrito');</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>boton.addEventListener('keypress',obtenerEvento)</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>function obtenerEvento(e){</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>document.querySelector('#encabezado').innerText = encabezado.value;</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>console.log(`EVENTO: ${e.type}`);</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>}</code></p>
+                                                                    </div>
+                                                                </div>
+                                                                <p>En este ejemplo imprime lo que escribes como si fuera ANgular o React</p>
+                                                            </li>
+                                                            <li>
+                                                                <p><b>focus</b> se ejecuta cada que das click en el formulario</p>
+                                                                <div class="card" style="width: 18rem;">
+                                                                    <div class="card-body">
+                                                                        <p class="card-text espacio-codigo0"><code>const boton = document.querySelector('#vaciar-carrito');</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>boton.addEventListener('focus',obtenerEvento)</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>function obtenerEvento(e){</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>console.log(`EVENTO: ${e.type}`);</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>}</code></p>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <p><b>blur</b> se ejecuta cada que das click <b>fuera</b> del formulario</p>
+                                                                <div class="card" style="width: 18rem;">
+                                                                    <div class="card-body">
+                                                                        <p class="card-text espacio-codigo0"><code>const boton = document.querySelector('#vaciar-carrito');</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>boton.addEventListener('blur',obtenerEvento)</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>function obtenerEvento(e){</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>console.log(`EVENTO: ${e.type}`);</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>}</code></p>
+                                                                    </div>
+                                                                </div>
+                                                                <p>Normalmente se utiliza para cuando validas un formulario, cuando el usuario de click fuera del formulario, comprobar cuantos caracteres escribió el usuario, y decir si el campo es obligatorio</p>
+                                                            </li>
+                                                            <li>
+                                                                <p><b>copy</b> se ejecuta cada que el usuario copia texto</p>
+                                                                <div class="card" style="width: 18rem;">
+                                                                    <div class="card-body">
+                                                                        <p class="card-text espacio-codigo0"><code>const boton = document.querySelector('#vaciar-carrito');</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>boton.addEventListener('copy',obtenerEvento)</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>function obtenerEvento(e){</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>console.log(`EVENTO: ${e.type}`);</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>}</code></p>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <p><b>paste</b> se ejecuta cada que el usuario pega texto</p>
+                                                                <div class="card" style="width: 18rem;">
+                                                                    <div class="card-body">
+                                                                        <p class="card-text espacio-codigo0"><code>const boton = document.querySelector('#vaciar-carrito');</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>boton.addEventListener('paste',obtenerEvento)</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>function obtenerEvento(e){</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>console.log(`EVENTO: ${e.type}`);</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>}</code></p>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <p><b>input</b> se ejecuta cada que el usuario haga alguno de las cosas que he puesto en los ejemplos pasados</p>
+                                                                <div class="card" style="width: 18rem;">
+                                                                    <div class="card-body">
+                                                                        <p class="card-text espacio-codigo0"><code>const boton = document.querySelector('#vaciar-carrito');</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>boton.addEventListener('input',obtenerEvento)</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>function obtenerEvento(e){</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>console.log(`EVENTO: ${e.type}`);</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>}</code></p>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <p><b>event bubbling</b> cuanddo se propaga un evento click porque hay varios hijos dentro de un padre</p>
+                                                                <div class="card" style="width: 18rem;">
+                                                                    <div class="card-body">
+                                                                        <p>//Asi se detiene el evento bubbling con e.stopPropagation</p>
+                                                                        <p class="card-text espacio-codigo0"><code>const card = document.querySelector(.card);</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>const infoCursos = document.querySelector('.info-card')</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>const agregarCarrito = document.querySelector('.agregar-carrito');</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>card.addEventListener('click',function(e){</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>console.log('Click en Card');</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>e.stopPropagation</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>});</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>infoCurso.addEventListener('click',function(e){</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>console.log('Click en Info Curso');</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>});</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>agregarCarrito.addEventListener('click',function(e){</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>console.log('click en agregar a Carrito')</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>});</code></p>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <p><b>ELiminar elementos del DOM</b></p>
+                                                                <div class="card" style="width: 18rem;">
+                                                                    <div class="card-body">
+                                                                        <p>//Asi se detiene el evento bubbling con e.stopPropagation</p>
+                                                                        <p class="card-text espacio-codigo0"><code>document.body.addEventListener('click',eliminarElemento);</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>function eliminarElemento(e){</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>e.preventDefault();</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>if(e.target.classList.contains('borrar-curso')){</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>console.log(e.target.parentElement.parentElement.remove());</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>}</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>}</code></p>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+
+                                                        </ul>
                                                     </div>
                                                     <div>
                                                         <ul>
