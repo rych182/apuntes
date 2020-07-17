@@ -5,6 +5,8 @@
 localStorage.setItem('nombre', 'Ricardo');
 sessionStorage.setItem('pais', 'Canada');
 localStorage.removeItem('nombre');
+
+const nombre = localStorage.getItem('nombre');
 //Agregar un sesion
 
 

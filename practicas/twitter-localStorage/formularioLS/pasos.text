@@ -1,0 +1,22 @@
+1)
+Creamos la "funcion eventListeners" para selecccionar el id #formulario y ejecutar el evento
+"submit" con la función "agregar tweet".
+
+2)Dentro de la funcion agregarTweet, usamos document.getElementById('tweet').value; para obtener todo lo que escriban en el "textarea"
+
+3)Dentro de la misma función agregarTweet utilizamos la variable const li = document.createElement('li'); para que cree una lista y 
+donde todo lo que se escriba en el "textarea" con el id "tweet" y la constante "tweet" se grabe en esa constante y luego se imprima
+en la lista, para crearlo utilizo listaTweets.appendChild(li);.
+
+4)Creamos un boton de borrar que tendra una clase y un texto, el mismo se crea cuando aparece
+el tweet, usando li.appendChild(botonBorrar);
+
+5)En la función eventListeners agregamos la manera de borrar usando 
+listaTweets.addEventListener('click', borrarTweet);
+
+6)Creamos la función borrarTweet, donde verificaremos si se le da click al tachesito ó no usando un if con la condición
+e.target.className == 'borrar-tweet' que sirve para decirnos que evento se almaceno en el "e" y si donde le dimos click, tiene 
+una clase llamada "borrar-tweet', y se borrara con "e.target.parentElement.remove()" que te dice a lo que le diste click, lo 
+selecciona y lo remueve
+
+7)
