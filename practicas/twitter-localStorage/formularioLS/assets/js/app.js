@@ -1,8 +1,6 @@
 //Variables
 const listaTweets = document.getElementById('lista-tweets');
 
-
-
 //EventListeners
 eventListeners();
 
@@ -15,9 +13,8 @@ function eventListeners() {
 
     //Contenido cargado, CARGA cuando todo el documento html ha terminado de cargarse
     //queremos que cuando termine de cargar lea los datos del localstorage y los imprima
-    document.addEventListener('DOMContentLoaded',localStorageListo);
+    document.addEventListener('DOMContentLoaded', localStorageListo);
 }
-
 
 
 //Funciones
@@ -64,9 +61,9 @@ function localStorageListo() {
     let tweets;
 
     tweets = obtenerLocalStorage();
-    
+
     tweets.forEach(function(tweet) {
-       
+
         //Crear boton de eliminar
         const botonBorrar = document.createElement('a');
         botonBorrar.classList = 'borrar-tweet';
@@ -79,7 +76,7 @@ function localStorageListo() {
         //Añade el boton junto con el tweet
         li.appendChild(botonBorrar);
         //Crea el tweet
-        listaTweets.appendChild(li); 
+        listaTweets.appendChild(li);
     });
 }
 
@@ -92,7 +89,7 @@ function agregarTweetLocalStorage(tweet) {
     tweets.push(tweet);
 
     //COnvierte de string aarreglo para local storage
-    localStorage.setItem('tweets',JSON.stringify(tweets));
+    localStorage.setItem('tweets', JSON.stringify(tweets));
 
 }
 
@@ -110,21 +107,20 @@ function obtenerLocalStorage() {
 }
 
 //eliminar tweet de local storage
-function borrarTweetLocalStorage(tweet){
+function borrarTweetLocalStorage(tweet) {
     //tweetBorrar va a ser la versión cortada, donde no aparezca la X
     let tweets, tweetBorrar;
     //con substring corta todo hasta la penultima letra y lo almacena
-    tweetBorrar = tweet.substring(0, tweet.length -1);
+    tweetBorrar = tweet.substring(0, tweet.length - 1);
     //
     tweets = obtenerLocalStorage();
 
     tweets.forEach(function(tweet, index) {
         if (tweetBorrar === tweet) {
             //index lo usamos para saber la posicion y el uno para decirle que solo queremos eliminar 1 posición
-            tweets.splice(index,1);
+            tweets.splice(index, 1);
         }
     });
-    
+
     localStorage.setItem('tweets', JSON.stringify(tweets));
 }
-
