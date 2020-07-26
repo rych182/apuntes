@@ -1,0 +1,13 @@
+1)crear las variables email,asunto,mensaje y btnEnviar y dentro de ellas seleccionar los ids del 
+formulario y del boton de enviar
+
+2)Crear la función "eventListener" que dentro tendra el evento DOMContentLoaded que 
+ejecutara la función "inicioApp", pero el llamado de la función "eventListener" se
+pondrá arriba de la funcion porque quiero que la función "inicioApp" desabilite el
+boton enviar 
+
+3)Crear los listeners para "email", "asunto" y "mensaje", y la función "validarCampos",
+que verificará que haya algo escrito, su longuitud y si los 3 tienen algo escrito, el boton de enviar se
+habilitara
+
+

@@ -4147,6 +4147,13 @@
                                                                 <li><b>Dale estilos a lo agregado al DOM</b> <code>botonNuevo.classList.add('btn-success');</code></li>
                                                             </ol>
                                                         </div>
+                                                        <div>
+                                                            <h2>this</h2>
+                                                            <ul>
+                                                                <li><b>this.type</b>: te dice el tipo de dato o lo que esta seleccionando, si fuera un formulario, te diria si es de tipo text, email o textarea</li>
+                                                                
+                                                            </ul>
+                                                        </div>
                                                     </div>
 
                                                 </div>
@@ -4472,6 +4479,20 @@
                                                                 </div>
                                                             </li>
                                                             <li><b>.indexOf</b>: mascotas.indexOf("pez"); Te dice el lugar en donde se encuentra el dato que buscas, OJO: debes ponerlo exacto, mayúsculas y minúsculas</li>
+                                                            <li><b>setTimeout</b>: ejecuta una acción después de cierto tiempo
+                                                                <div class="card" style="width: 18rem;">
+                                                                    <div class="card-body">
+                                                                        <p class="card-text espacio-codigo0">Mayor a menor</p>
+                                                                        <p class="card-text espacio-codigo1"><code>setTimeout(function() {</code></p>
+                                                                        <p class="card-text espacio-codigo1"><code>spinnerGif.style.display = 'none';</code></p>
+                                                                        <p class="card-text espacio-codigo0">//AppendChild necesita el id de un elemento padre</p>
+                                                                        <p class="card-text espacio-codigo0"><code>document.querySelector('#loaders').appendChild(enviado);</code></p>
+                                                                        <p class="card-text espacio-codigo0"><code>}, 2000);</code></p>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li><b>.reset()</b> formularioEnviar.reset(); resetea todo a como estaba
+                                                            </li>
                                                             <li><b>entriesPares</b>: const entriesPares = Object.entries(persona); console.log(entriesPares); convierte el objeto de js en arrays <b>INCLUSO</b> cuando creas el objeto con un <b>const</b> que
                                                                 se supone no se debería poder modificar checa el <b>ejercicio 15</b></li>
                                                             <li><b>.getOwnPropertyNames()</b> Object.getOwnPropertyNames(persona); te muestra las propiedades que le pusiste a tu objeto, pero en un Array, <b>ES MUY USADO AL TRABAJAR CON OBJETOS EN JS</b>,
