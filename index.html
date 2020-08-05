@@ -6166,12 +6166,15 @@
                                     <div id="wordpress-1-1-1" class="collapse show" aria-labelledby="wordpress-1-1" data-parent="#es6">
                                         <div class="card-body">
                                             <h2>Archivos</h2>
-                                            <p>Los archivos de Wordpress deben de tener ciertos nombres para que wordpress los detecte</p>
+                                            <p>Los archivos de Wordpress deben de tener ciertos nombres para que wordpress los detecte, la jerarquia de temas y los nombres de los archivos los puedes ver <a href="https://developer.wordpress.org/files/2014/10/Screenshot-2019-01-23-00.20.04.png"
+                                                    target="_blank">aquí</a>, mientras algo este más a la derecha es más general</p>
                                             <ul>
                                                 <li><b>index.php</b></li>
                                                 <li><b>style.css</b> wordpress espera el archivo <b>FUERA DE LA CARPETA CSS</b> así que no lo vayas a meter</li>
-                                                <li></li>
-                                                <li></li>
+                                                <li><b>page.php</b> las páginas apareceran aquí, checalo en las jerarquias.</li>
+                                                <li><b>single.php</b> los post apareceran aquí, checa la página de jerarquia para verificar</li>
+                                                <li><b></b></li>
+                                                <li><b></b></li>
                                             </ul>
 
                                             <hr>
@@ -6202,20 +6205,38 @@
                                             <hr>
 
                                             <h2>Instalar Wordpress en ubuntu</h2>
-                                            <ul>
-                                                <ol>Descargar Xampp e instalarlo con los comandos <b>chmod 755 instalador.exe</b></ol>
-                                                <ol>Ejecutarlo con el comando <b>sudo /opt/lampp/lampp start</b></ol>
-                                                <ol>Descargar Wordpress y moverlo a la carpeta <b>/opt/lampp/htdocs</b> y desempaquetalo, debes estar como super usuario</ol>
-                                                <ol>Crear una base de datos para word press en phpMyAdmin</ol>
-                                                <ol>Ir a <b>localhost/wordpress</b> para empezar la instalacion
-                                                    <ul>
-                                                        <ol>Poner los sig datos: <b>database name, username(root),password(vacio), database host(localhost), y table prefix: wp_</b></ol>
-                                                        <ol>Elegir <b>site title, username y password</b></ol>
-                                                    </ul>
-                                                </ol>
-                                                <ol>Probablemente xampp no tenga permisos, así que tengas que crear por consola el archivo <b>wp-config.php</b></ol>
-                                                <ol>Copia el codigo que te muestra Wordpress y pegalo en tu archivo <b>wp-config.php</b> dudas: <a href="https://www.5balloons.info/install-wordpress-localhost-xampp/" target="_blank">aquí</a></ol>
-                                            </ul>
+                                            <ol>
+                                                <li>Descargar Xampp e instalarlo con los comandos <b>chmod 755 instalador.exe</b></li>
+                                                <li>Ejecutarlo con el comando <b>sudo /opt/lampp/lampp start</b></li>
+                                                <li>Descargar Wordpress y moverlo a la carpeta <b>/opt/lampp/htdocs</b> y desempaquetalo, debes estar como super usuario</li>
+                                                <li>Crear una base de datos para word press en phpMyAdmin</li>
+                                                <li>Ir a <b>localhost/wordpress</b> para empezar la instalacion
+                                                    <ol>
+                                                        <li>Poner los sig datos: <b>database name, username(root),password(vacio), database host(localhost), y table prefix: wp_</b></li>
+                                                        <li>Elegir <b>site title, username y password</b></li>
+                                                    </ol>
+                                                </li>
+                                                <li>Probablemente xampp no tenga permisos, así que tengas que crear por consola el archivo <b>wp-config.php</b></li>
+                                                <li>Copia el codigo que te muestra Wordpress y pegalo en tu archivo <b>wp-config.php</b> dudas: <a href="https://www.5balloons.info/install-wordpress-localhost-xampp/" target="_blank">aquí</a></li>
+                                            </ol>
+                                            <hr>
+
+                                            <h2>Instalar Wordpress con Local by FlyWheel en WIndows</h2>
+                                            <ol>
+                                                <li>Instalar <a href="https://localwp.com/community/c/releases" target="_blank">Local by FlyWheel</a></li>
+                                                <li>Ponerle nombre en: <b>what's your site name?</b></li>
+                                                <li>En las opciones avanzadas puedes ver <b>local site domain: gymfitness.local y path: localsites/gymFitness</b>, ya están por default</li>
+                                                <li>Click en prefered</li>
+                                                <li>Agregar datos por default como:
+                                                    <ol>
+                                                        <li>wordpress usernsme: ric</li>
+                                                        <li>wordpress password: 123</li>
+                                                        <li>wordpress email : dev-email@flywheel.local</li>
+                                                    </ol>
+                                                </li>
+                                                <li>Ya instalado, en el boton de admin, inicias sesion en wordpress para el panel de administracion</li>
+                                                <li>Instalar y activar Disable Gutenberg</li>
+                                            </ol>
                                         </div>
                                     </div>
                                 </div>
