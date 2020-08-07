@@ -6199,8 +6199,58 @@
                                             <ul>
                                                 <li>Para que Wordpress detecte el nombre de tu tema y demás datos, debes de ponerle un comentario con los datos.
                                                 </li>
-                                                <li></li>
-                                                <li></li>
+                                                <li>Wordpress recomienda usar esta sintaxis <br> <code>while (have_posts()):</code> <br>
+                                                    <code>endwhile;</code></li>
+                                                <li><b>Loop</b> se refiere a que consultas la base de datos por medio de un while y te muestra los resultados</li>
+                                                <li><b>functions.php</b> debes de crear este archivo porque así lo pide wordpress, ahí estarán todas tus funciones</li>
+                                                <li><b>Prefijos:</b> es necesario que le pongas prefijos a las funciones que crees, por que cada plugin que instales en Wordpress tiene funciones con diferentes nombres y si alguna tiene un nombre igual que
+                                                    alguna función que tu creaste, rompera tu codigo</li>
+                                                <li><b>Hooks:</b> son más de 4mil en Wordpress y son funciones que corren en determinado tiempo y en determinado lugar. A lo mucho se utilizan 20 ó 30 por proyecto</li>
+                                                <li><b>__</b> el doble guión bajo sirve para traducir</li>
+                                                <li><b></b></li>
+                                                <li><b></b></li>
+                                                <li><b></b></li>
+                                                <li><b></b></li>
+                                            </ul>
+                                            <hr>
+
+
+                                            <h2>Funciones dentro de Wordpress(se conocen como template_tags)</h2>
+                                            <ul>
+                                                <li><b>have_posts()</b> Consulta la base de datos y revisa si hay algo en ella</li>
+                                                <li><b>the_post()</b> Tiene la información de la base de datos</li>
+                                                <li><b>the_title()</b> Te imprime el titulo de tus <b>páginas</b></li>
+                                                <li><b>the_content();</b> Imprime el contenido de tu página</li>
+                                                <li><b>the_author();</b> Imprime el autor</li>
+                                                <li><b>the_date();</b> Imprime la fecha</li>
+                                                <li><b>get_header();</b> encuentra el archivo header en tu proyecto y muestra lo que haya ahí, es como un <b>include 'header.php';</b></li>
+                                                <li><b>get_footer();</b> encuentra el archivo footer en tu proyecto y muestra lo que haya ahí, es como un <b>include 'footer.php';</b></li>
+                                                <li><b>get_template_directory_uri(); /img/logo.svg</b> CONSIGUE la ruta de las imagenes pero tienes que poner la carpeta y el nombre de la imagen</li>
+                                                <li><b>register_nav_menus()</b> registra los menus, puedes tener cuantos quieras, ejemplo:
+                                                    <div class="card" style="width: 18rem;">
+                                                        <div class="card-body">
+                                                            <p class="card-text espacio-codigo0"><code>function gymfitness_menu(){</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>register_nav_menus(array(</code></p>
+                                                            <p class="card-text espacio-codigo1">//Lo que lee Wordpress| Lo que se va a mostrar en pantalla al usuario | Text Domain (viene en el CSS)</p>
+                                                            <p class="card-text espacio-codigo0"><code>'menu-principal' => __('Menu principal', 'gymfitness')</code></p>
+                                                            <p class="card-text espacio-codigo0"><code>));</code></p>
+                                                            <p class="card-text espacio-codigo0"><code>}</code></p>
+                                                            <p class="card-text espacio-codigo0"><code>add_action('init', 'gymfitness_menu');</code></p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li><b></b></li>
+                                                <li><b></b></li>
+                                            </ul>
+
+                                            <h2>Hooks</h2>
+                                            <p>En Wordpress cuando creas una función tienes que agregarle algo llamado <b>on Hook</b>, tiene como 4mil hooks Wordpress y son funciones que corren en determinado tiempo y en determinado lugar. A lo mucho se
+                                                utilizan 20 ó 30 por proyecto</p>
+                                            <ul>
+                                                <li><b>add_action('init',);</b> esta funcion corre el <b>hook</b>(el primer parametro), indica que la funcion(que cree) va a correr encuato Wordpress arranque, osea en cuanto visite el sitio web</li>
+                                                <li><b></b></li>
+                                                <li><b></b></li>
+                                                <li><b></b></li>
                                             </ul>
                                             <hr>
 
