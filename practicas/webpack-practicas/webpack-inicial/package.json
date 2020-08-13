@@ -1,0 +1,16 @@
+{
+    "name": "webpack-prueba1",
+    "version": "1.0.0",
+    "description": "Este es mi primer proyecto con webpack",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "webpack"
+    },
+    "author": "Ricardo Garrido",
+    "license": "ISC",
+    "devDependencies": {
+        "webpack": "^4.44.1",
+        "webpack-cli": "^3.3.12"
+    }
+}

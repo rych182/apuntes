@@ -5626,6 +5626,16 @@
                                                 <p>Gestiona las dependencias(los paquetes que descargas para tus trabajos), monta rápido servidores de prueba para acelera el proceso de producción, cargar modulos ya que a veces segmentamos nuestra aplicación
                                                     convertir a diferentes formatos(por ejemplo es8 a es5),minimizar codigo, compilar sass a css, compilar TypeScript a ES6, nos permite trabajar con ES6 moderno
                                                 </p>
+                                                <hr>
+                                                <h2>Notas varias</h2>
+                                                <ol>
+                                                    <li>React y Angular ya tienen webpack por defecto</li>
+                                                    <li>Webpack detecta por default la carpeta <b>src</b>
+                                                    </li>
+                                                    <li>Da un orden de archivos webpack</li>
+                                                </ol>
+
+
                                                 <h2>Instalación y configuración(Checar instalación previa en la sección de Babel js)</h2>
                                                 <ol>
                                                     <li>Instalar webpack <code>npm install --save-dev webpack</code></li>
@@ -5778,6 +5788,25 @@
                                                     <li></li>
 
 
+                                                </ol>
+
+                                                <hr>
+
+                                                <h2>Webpack tutorial Fernando Herrera</h2>
+                                                <ol>
+                                                    <li>Crea tu archivo <b>.json</b> posicionandote con la terminal en la carpeta done crearas tu proyectos usando el comando </li>
+                                                    <li>Indicaras el nombre de tu <b>package name</b> la version, descripcion, <b>test comand</b> sirve por si hay un comando de pruebas automaticas,git repository, <b>keywords</b>en el que caso de que quieran
+                                                        subir su paquete al grupo de repositorios de Node, <b>author</b> tu nombre y licencia <b>ISC</b></li>
+                                                    <li>En los archivos <b>.json</b> es obligatorio que lleven comillas cada cosa descriptiva</li>
+                                                    <li>INSTALO <b>npm install webpack webpack-cli --save-dev</b> el <b>--save-dev</b> quiere decir que esto lo ponga como una dependencia de desarrollo, osea que no va a ir a producción </li>
+                                                    <li>Entrar al archivo package.json y agregar <code>"scripts": {"test": "echo \"Error: no test specified\" && exit 1","build": "webpack"}</code> con esto estoy indicando a mi aplicacion que cuando yo ejecute
+                                                        el comando <b>build</b> dispare webpack con su configuración por defecto, y por defecto va a buscar la carpeta src, la carpeta js y va a unificar los archivos de js, los va a comprimir, y los va
+                                                        a dejar listos para producción</li>
+                                                    <li>EJECUTAR el comando <code>npm run build</code> y creara la carpeta <b>dist</b> y <b>node modules</b></li>
+                                                    <li>SIEMPREque hagas modificacion en tus archivos, vuelve a correr <code>npm run build</code></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
                                                 </ol>
                                             </div>
                                         </div>
@@ -6210,7 +6239,7 @@
                                                     alguna función que tu creaste, rompera tu codigo</li>
                                                 <li><b>Hooks:</b> son más de 4mil en Wordpress y son funciones que corren en determinado tiempo y en determinado lugar. A lo mucho se utilizan 20 ó 30 por proyecto</li>
                                                 <li><b>__</b> el doble guión bajo sirve para traducir</li>
-                                                <li><b></b></li>
+                                                <li><b>Arreglos asociativos</b> son muy usados para hacer una consulta en Wordpress</li>
                                                 <li><b></b></li>
                                                 <li><b></b></li>
                                                 <li><b></b></li>
@@ -6293,6 +6322,56 @@
                                         </div>
                                     </div>
                                 </div>
+
+                                <div class="card  colapsos">
+                                    <div class="card-header" id="phppoo-1-1">
+                                        <a data-toggle="collapse" href="#phppoo-1-1-1" role="button" aria-expanded="false">
+                                            <h5 class="mb-0 ">
+                                                <button class="btn btn-link colorTitulo" data-toggle="collapse" data-target="#phppoo-1-1-1" aria-expanded="true">
+                                                    <span style="font-size: 24px; color: DarkSlateGrey;">
+                                                        <h2>PHP Programación estructurada y POO</h2>
+                                                    </span>
+                                                </button>
+                                            </h5>
+                                        </a>
+                                    </div>
+
+                                    <div id="phppoo-1-1-1" class="collapse show" aria-labelledby="phppoo-1-1" data-parent="#es6">
+                                        <div class="card-body">
+                                            <h2>Notas curiosas</h2>
+                                            <ol>
+                                                <li>Los valores boleanos <b>true</b> y <b>false</b> regresan los valores <b>1</b> y false no lo va a imprimir</li>
+                                                <li>En una condicional, si ninguna opción es valida, siempre toma la última</li>
+                                                <li><b>=!</b> significa <b>no es igual</b></li>
+                                                <li></li>
+                                                <li></li>
+                                                <li></li>
+                                                <li></li>
+                                            </ol>
+                                            <hr>
+
+                                            <h2>Consejos</h2>
+                                            <ol>
+                                                <li><b>var_dump/print_r/etiqueta pre</b> son tus mejores aliados al trabajar con arreglos</li>
+                                                <li></li>
+                                                <li></li>
+                                            </ol>
+
+                                            <h2>Funciones de php muy usadas</h2>
+                                            <ul>
+                                                <li><b>array_push($frutas,"pera");</b> agrega un elemento a tu array</li>
+                                                <li><b>unset($frutas[0]);</b> te elimina la posicion del melón</li>
+                                                <li><b>concatenar</b> usando el punto<b>.</b></li>
+                                                <li><b>Arreglos asociativos</b> son muy usados para hacer una consulta en Wordpress</li>
+                                                <li><b>var_dump vs print_r</b> ambos te imprimen el arreglo pero <b>var_dump</b> te dice que tipo de dato tiene el arreglo y POSICION</li>
+                                                <li><b>var_dump</b> con array normal te dice <b>POSICION</b>, tipo de dato y número de caracteres, con <b>array_asociativo</b> te dice el tipo de dato, nombre y contenido de cada casilla del array asociativo</li>
+                                                <li><b></b></li>
+                                                <li><b></b></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -7700,7 +7779,6 @@
                                 <div class="d-flex justify-content-around border border-info mt-3 ">
                                     <h2><a href="https://www.adobe.com/mx/products/xd.html" target="_blank">Adobe XD</a></h2>
 
-                                    
                                 </div>
                             </div>
                         </div>
