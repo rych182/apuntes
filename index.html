@@ -3585,7 +3585,11 @@
                                                 <p>Hay paquetes para reconocimiento facial, imagenes, video llamadas, trabajar con archivos en un servidor, conexiones a base datos sql, sql server y oracle, </p>
                                                 <ul>
                                                     <li>Checar versión: <code>npm -v</code> con la versión 8 en adelante está perfecto</li>
-                                                    <li></li>
+                                                    <li>Instalar Webpack <code>npm install webpack webpack-cli --save-dev</code></li>
+                                                    <li>Instalar <b>html-loader</b> y <b>html-webpack-plugin</b> usando <code>npm i -D html-loader html-webpack-plugin</code> para acomodar el archivo de html en el bundle y el bundle en el html</li>
+                                                    <li>INstalar servidor de webpack <code>npm i -D webpack-dev-server</code></li>
+                                                    <li>CORRER webpack-dev-server <code>npm start</code> y eso hace que esté esperando cambios todo el tiempo</li>
+                                                    <li>Si no tienes libre el puerto 8080, puedes usar otro con esta configuración en tu archivo <b>package.json</b> <code>"start": "webpack-dev-server --open --port=8081"</code></li>
                                                     <li></li>
                                                     <li></li>
                                                 </ul>
@@ -5633,6 +5637,15 @@
                                                     <li>Webpack detecta por default la carpeta <b>src</b>
                                                     </li>
                                                     <li>Da un orden de archivos webpack</li>
+                                                    <li>Cuando no configuramos, por defecto, webpack corre todo en modo de producción, y quita comentarios, dejar codigo limpio, simplificarlo, pero cuando estamos desarrollando yo necesito mis comentarios,
+                                                        para eso configuramos tomo en modo <b>development</b></li>
+                                                    <li>Los <b>rules</b> sirven para decirle a webpack que hacer con cierto tipo de archivos</li>
+                                                    <li>NOTA: a las personas que están acostumbradas a trabajar con Angular, esta es la razón por la cual no hay otras importaciones adicionales de scripts aquí(en el index.html), porque webpack lo hace por
+                                                        nosotros
+                                                    </li>
+                                                    <li><code>npm i -D</code>quiere decir que se instalara la dependencia como desarrollo, no producción</li>
+                                                    <li></li>
+                                                    <li></li>
                                                 </ol>
 
 
@@ -5802,9 +5815,55 @@
                                                     <li>Entrar al archivo package.json y agregar <code>"scripts": {"test": "echo \"Error: no test specified\" && exit 1","build": "webpack"}</code> con esto estoy indicando a mi aplicacion que cuando yo ejecute
                                                         el comando <b>build</b> dispare webpack con su configuración por defecto, y por defecto va a buscar la carpeta src, la carpeta js y va a unificar los archivos de js, los va a comprimir, y los va
                                                         a dejar listos para producción</li>
-                                                    <li>EJECUTAR el comando <code>npm run build</code> y creara la carpeta <b>dist</b> y <b>node modules</b></li>
+                                                    <li>EJECUTAR el comando <code>npm run build</code> y creara SIEMPRE la carpeta <b>dist</b> y <b>node modules</b></li>
                                                     <li>SIEMPREque hagas modificacion en tus archivos, vuelve a correr <code>npm run build</code></li>
-                                                    <li></li>
+                                                </ol>
+                                                <h2>Configuración de webpack</h2>
+                                                <ol>
+                                                    <li>CREAR el archivo <b>webpack.config.js</b> en la raiz, donde está el archivo <b>package.json</b></li>
+                                                    <li>Los <b>rules</b> sirven para decirle a webpack que hacer con cierto tipo de archivos </li>
+                                                    <li>INSTALAR <code>npm i -D html-loader html-webpack-plugin</code> que sirven para que webpack mueva el archivo index.html a la carpeta <b>dist</b> y que incruste el bundle.js en el index, <code>npm i -D</code>                                                        quiere decir que se instalara la dependencia como desarrollo, no producción</li>
+                                                    <li>al final de esta lista pondre el código, para saber como debe estar todo </li>
+                                                    <li><b>test</b> es la condición que webpack tiene que hacer cuando este evaluando archivo por archivo, y esta condición se va a aplicar si el archivo cumple la siguiente expresión regular(una expresion regular
+                                                        me permite buscar coincidencias de lo que ya sea que especifique aquí dentro de un string). Ejemplo: <code>test: /\.html$/</code> esto quiere decir que le diga a webpack que aplique esta regla si
+                                                        es un archivo con extension html</li>
+                                                    <li>Agregamos <b>const HtmlWebPackPlugin = require('html-webpack-plugin');</b> que es una manera en que node para cargar estos archivos de otros paquetes </li>
+                                                    <li>Al correr de nuevo <code>npm run build</code> me pasara el index.html a la carpeta <b>dist</b> con 2 importaciones al <b>main.js</b>, podemos borrar la etiqueta script con el <b>../dist/main.js</b>dde
+                                                        mi index.html que esta en la carpeta <b>dist</b> por que webpack lo agregara por mi cuando haga el <b>build</b>, incluso si borro el <b>main.js</b> me lo agregara. NOTA: a las personas que están
+                                                        acostumbradas a trabajar con Angular, esta es la razón por la cual no hay otras importaciones adicionales de scripts aquí(en el index.html), porque webpack lo hace por nosotros </li>
+                                                    <li>Si queremos que minifique el codigo, agregamos: <code>minimize: false</code> en la parte de options</li>
+                                                    <li>
+                                                        <div class="card " style="width: 18rem; ">
+                                                            <div class="card-body" id="js-length">
+                                                                <p class="card-text espacio-codigo1 ">
+                                                                    La configuración completa
+                                                                </p>
+                                                                <p class="card-text espacio-codigo1 "><code>const HtmlWebPackPlugin = require('html-webpack-plugin');</code></p>
+                                                                <p class="card-text espacio-codigo1 "><code>module.exports = {</code></p>
+                                                                <p class="card-text espacio-codigo1 "><code>mode: 'development',</code></p>
+                                                                <p class="card-text espacio-codigo1 "><code>module: {</code></p>
+                                                                <p class="card-text espacio-codigo1 "><code>rules: [{</code></p>
+                                                                <p class="card-text espacio-codigo1 "><code>test: /\.html$/i,</code></p>
+                                                                <p class="card-text espacio-codigo1 "><code>loader: 'html-loader',</code></p>
+                                                                <p class="card-text espacio-codigo1 "><code>options: {</code></p>
+                                                                <p class="card-text espacio-codigo1 "><code>attributes: false,</code></p>
+                                                                <p class="card-text espacio-codigo1 "><code>minimize: false</code></p>
+                                                                <p class="card-text espacio-codigo1 "><code>},</code></p>
+                                                                <p class="card-text espacio-codigo1 "><code>}]</code></p>
+                                                                <p class="card-text espacio-codigo1 "><code>},</code></p>
+                                                                <p class="card-text espacio-codigo1 "><code>plugins: [</code></p>
+                                                                <p class="card-text espacio-codigo1 "><code>new HtmlWebPackPlugin({</code></p>
+                                                                <p class="card-text espacio-codigo1 "><code>template: './src/index.html',</code></p>
+                                                                <p class="card-text espacio-codigo1 "><code>filename: './index.html'</code></p>
+                                                                <p class="card-text espacio-codigo1 "><code>}),</code></p>
+                                                                <p class="card-text espacio-codigo1 "><code>]</code></p>
+                                                                <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>INSTALAR el servidor de desarrollo de webpack <code>npm i -D webpack-dev-server</code></li>
+                                                    <li>CONFIGURAR <b>package.json</b> agregando a los scripts <code>"start": "webpack-dev-server --open"</code> para que inmediatamente se ejecute el servidor webpack te abra la pestaña, porque estamos usando
+                                                        la url <b>file://</b> cuando necesitamos <b>http://</b>, a mi en Ubuntu me abrió <b>localhost:8080/</b> después de correr el comando <code>npm start</code></li>
                                                     <li></li>
                                                     <li></li>
                                                 </ol>
