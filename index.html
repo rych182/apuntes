@@ -6416,17 +6416,86 @@
                                                 <li></li>
                                             </ol>
 
+                                            <hr>
                                             <h2>Funciones de php muy usadas</h2>
                                             <ul>
                                                 <li><b>array_push($frutas,"pera");</b> agrega un elemento a tu array</li>
-                                                <li><b>unset($frutas[0]);</b> te elimina la posicion del melón</li>
+                                                <li><b>unset($frutas[0]);</b> te elimina la posicion del melón en el array, también elimina variables</li>
                                                 <li><b>concatenar</b> usando el punto<b>.</b></li>
                                                 <li><b>Arreglos asociativos</b> son muy usados para hacer una consulta en Wordpress</li>
                                                 <li><b>var_dump vs print_r</b> ambos te imprimen el arreglo pero <b>var_dump</b> te dice que tipo de dato tiene el arreglo y POSICION</li>
                                                 <li><b>var_dump</b> con array normal te dice <b>POSICION</b>, tipo de dato y número de caracteres, con <b>array_asociativo</b> te dice el tipo de dato, nombre y contenido de cada casilla del array asociativo</li>
+                                                <li><b>isset($var)</b> Determina si una variable está definida y no es NULL</li>
+                                                <li><b>array_rand($elArray)</b> Sacar un dato aleatorio del array<br>
+                                                    <code>$caja = array('Perro','Gato','Ratón','Perico');</code> <br>
+                                                    <code>$indice = array_rand($caja);</code>
+                                                </li>
+                                                <li><b>gettype();</b>Te indica que tipo de valor es la variable</li>
+                                                <li><b>round(7.435,2)</b> redondea un número y te le puedes indicar cuantos decimales quieres que redonde</li>
+                                                <li><b>is_string();</b> Comprueba si la variable es una cadena de texto</li>
+                                                <li><b>is_float();</b>Comprueba si la variable es un número flotante</li>
+                                                <li><b>trim();</b> Quita los espacios al principio y al final</li>
+                                                <li><b>empty();</b> Checa si la variable tiene contenido</li>
+                                                <li><b>strlen($variable);</b> Cuenta los caracteres que hay en la variable</li>
+                                                <li><b>strpos($var,"palabra");</b> Busca donde esta una palabra dentro de una frase que es una cadena de texto</li>
+                                                <li><b>str_replace(palabra que reemplazaras, palabra nueva, $variable);</b> reemplaza una variable <br>
+                                                    <code>$vowels = array("a", "e", "i", "o", "u", "A", "E", "I", "O", "U");</code> <br>
+                                                    <code>$onlyconsonants = str_replace($vowels, "", "Hello World of PHP");</code> <br>
+                                                    <code>echo $onlyconsonants;</code>
+                                                </li>
+                                                <li><b>strtolower();</b> pone todas las palabras del string en minusculas</li>
+                                                <li><b>strtoupper();</b> Pone todas las palabras del string en mayúsculas</li>
+                                                <li><b>ceil(12.001)</b> redondea hacia arriba</li>
+                                                <li><b></b></li>
                                                 <li><b></b></li>
                                                 <li><b></b></li>
                                             </ul>
+                                            <hr>
+
+                                            <h2>Funciones usadas pero no tanto</h2>
+                                            <ul>
+                                                <li><b>date(d-m-Y);</b> Checar los formatos</li>
+                                                <li><b>sqrt();</b> Saca la raiz cuadrada</li>
+                                                <li><b>rand(10,40);</b> Genera un número aleatorio entre 2 cifras</li>
+                                                <li><b>pi();</b> genera el 3.1416</li>
+                                                <li><b></b></li>
+                                                <li><b></b></li>
+                                                <li><b></b></li>
+                                            </ul>
+                                            <hr>
+
+                                            <h2>funciones para arrays</h2>
+                                            <ul>
+                                                <li><b>asort</b>: te ordena el array alfabeticamente</li>
+                                                <li><b>arsort($nombres);</b> ordena el array de manera inversa</li>
+                                                <li><b>sort</b>: nos ordena un array numerico</li>
+                                                <li><b>array_push($elArray,$agregar)</b>: AGREGA un elemento al array</li>
+                                                <li><b>array_pop($elArray)</b>: te ELIMINA el último elemento del array</li>
+                                                <li><b>array_rand($elArray)</b>: te SELECCIONA un elemento aleatoriamente</li>
+                                                <li><b>array_reverse($numeros)</b>: imprime el orden inverso de un array de números</li>
+                                                <li><b>array_search('Hola',$elArray)</b>: busca dentro del array y te dice el indice en el que se encuentra</li>
+                                                <li><b>count($elArray)</b>: me dice el número de elementos que tiene mi array</li>
+                                                <li><b>sizeof($elArray)</b>: lo mismo que la función <b>count</b></li>
+                                            </ul>
+
+                                            <hr>
+                                            <h2>Funciones ruta</h2>
+                                            <ul>
+                                                <li><b>PATHINFO_BASENAME:</b> da el nombre del archivo con su extension</li>
+                                                <li><b>pathinfo('documento.txt', PATHINFO_BASENAME);</b></li>
+                                                <li><b>PATHINFO_DIRNAME</b> te da el nombre de la carpeta o las carpetas donde está tu archivo</li>
+                                                <li><b>PATHINFO_EXTENSION:</b> Te da la extensión de tu archivo</li>
+                                                <li><b>PATHINFO_FILENAME:</b> Nos devuelve el nombre del documento</li>
+                                                <li><b>$resultados = glob('*.php');</b> Nos permite buscar archivos dentro de una carpeta con la extensión que queramos</li>
+                                                <li><b>GLOB_BRACE</b>: te permite poner varias extensiones,OJO no pongas espacios entre las extensiones, Es muy útil para las imágenes y gif, <code>$resultados = glob('*.{php,txt,html}',GLOB_BRACE);</code> ,
+                                                    también te permite buscar entre carpetas, OJO, pon bien los slash y nombre de carpetas,<code>$resultados = glob('practicas/sesiones/*.{php,txt}', GLOB_BRACE); print_r($resultados);</code> </li>
+                                                <li><b>basename:</b> elimina toda la ruta de tu archivo y como segundo parametro también podemos eliminar el parametro <code>echo basename('carpeta1/carpeta2/archivo.php','.php');</code></li>
+                                                <li><b>dirname:</b>te devuelve la ruta de donde está tu archvo</li>
+
+                                            </ul>
+                                            <hr>
+
+
                                         </div>
                                     </div>
                                 </div>
