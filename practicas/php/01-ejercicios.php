@@ -1,6 +1,22 @@
 <?php
 /* temas: variables, boleanos, condicional(if,else-if, if-if else-else), arreglos */
 
+$names = array(
+    'name' => 'Fulano',
+    'lastName' => 'Gomez',
+    'email' => 'fulano@email.com',
+    $others = array(
+    'name' => 'Mengano',
+    'lastName' => 'Perez',
+    'email' => 'mengano@email.com'
+    ),
+    $others2 = array(
+        'name' => 'Perengano',
+        'lastName' => 'Garcia',
+        'email' => 'Garcia@mail.com'
+    )
+);
+echo $names[1]['lastName'];
 
 
 /*  ===========================================EXERCISES=======================================================
@@ -19,6 +35,10 @@ $verdadero = true;
 $falso = false;
 echo $falso;
 ----------------------------------------------------------------------------------------------------
+
+                        ===============IF-ELSE====================
+
+
 EXERCISE 3: Create a conditional exercise
 $num1 = 123;
     $num2 = 19;
@@ -46,6 +66,9 @@ $edad = (isset($edad)) ? $edad : 'el usuario no establecio su edad';
 echo 'Edad:' . $edad;
 
 ----------------------------------------------------------------------------------------------------------
+
+                    ===============ARRAYS===================
+
 EXERCISE 5: Print a Array
 $frutas = array('Melon','Sandia','Naranja','Manzana','Uva');
 echo "<pre>";
@@ -89,6 +112,9 @@ $caja = array('Perro','Gato','Ratón','Perico');
 $contar = count($caja);
 echo $contar;
 ----------------------------------------------------------------------------------------------------------
+
+                        =================ASOCIATIVE ARRAY==========================
+
 EXERCISE 7: Print asociative array and normal array using var_dump and print_r
 $alumno = array(
     "Nombre"    => "Ricardo",
@@ -111,7 +137,31 @@ echo "<pre>";
 //print_r($alumno);
 var_dump($frutas);
 echo "</pre>";
+--------------------------------------------------------------------------------------------------------------------
+EXERCISE 7.01: Print a asociative array
+
+$names = array(
+    'name' => 'Fulano',
+    'lastName' => 'Gomez',
+    'email' => 'fulano@email.com',
+    $others = array(
+    'name' => 'Mengano',
+    'lastName' => 'Perez',
+    'email' => 'mengano@email.com'
+    ),
+    $others2 = array(
+        'name' => 'Perengano',
+        'lastName' => 'Garcia',
+        'email' => 'Garcia@mail.com'
+    )
+);
+echo $names[1]['lastName'];
+
+
 -----------------------------------------------------------------------------------------------------------------------
+
+                        ===============FUNCTIONS=====================
+
 EXERCISE 8: write a function that adds
 function suma($num1,$num2)
 {
@@ -127,6 +177,25 @@ function nombre($name)
 }
 nombre("Ricardo");
 ---------------------------------------------------------------------------------------------------------------------------
+EXERCISE 8.02: Write a function that print your name saving other function inside a variable
+function getName($name)
+{
+    $text = "My name is: ". $name;
+    return $text;
+}
+
+function fullName($name,$lastName)
+{
+    $var = getName($name) . $lastName;
+    return $var;
+}
+
+echo fullName("Ricardo ","Garrido");
+
+---------------------------------------------------------------------------------------------------------------------------
+
+                                ===============FOR==================
+
 EXERCISE 9: Create a loop using "for" at 0 to 10 
 for ($i=0; $i <= 10; $i++) { 
 	echo $i . "<br>";
@@ -157,6 +226,17 @@ for ($i=0; $i < 10; $i++) {
         continue;
     }
     echo $i . "<br>";
+}
+
+-------------------------------------------------------------------------------------------------------------------------------
+EXERCISE 9.05: create to multiplicate tables using 2 "for"
+
+for ($i=1; $i <=10 ; $i++) { 
+    echo "<td>";
+        for ($x=1; $x <=10 ; $x++) { 
+            echo "$i x $x =".($i*$x)."<br>";
+        }
+    echo "</td>";
 }
 
 */
