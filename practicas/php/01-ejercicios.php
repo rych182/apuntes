@@ -1,22 +1,7 @@
 <?php
 /* temas: variables, boleanos, condicional(if,else-if, if-if else-else), arreglos */
 
-$names = array(
-    'name' => 'Fulano',
-    'lastName' => 'Gomez',
-    'email' => 'fulano@email.com',
-    $others = array(
-    'name' => 'Mengano',
-    'lastName' => 'Perez',
-    'email' => 'mengano@email.com'
-    ),
-    $others2 = array(
-        'name' => 'Perengano',
-        'lastName' => 'Garcia',
-        'email' => 'Garcia@mail.com'
-    )
-);
-echo $names[1]['lastName'];
+
 
 
 /*  ===========================================EXERCISES=======================================================
@@ -238,7 +223,25 @@ for ($i=1; $i <=10 ; $i++) {
         }
     echo "</td>";
 }
+--------------------------------------------------------------------------------------------------------------------------------
+======================================FOREACH======================================
 
+EXERCISE 10: print an array using foreach
+$states = array('Nuevo Leon','Jalisco','CDMX','Puebla','Veracruz','Sonora','Guanajuato','Sinaloa');
+foreach($states as $state){
+    echo $state . "<br>";
+}
+---------------------------------------------------------------------------------------------------------------------------------
+EXERCISE 10.01: print an asociative array using foreach
+$names = array(
+    'name' => 'Fulano',
+    'lastName' => 'Gomez',
+    'email' => 'fulano@email.com',
+);
+
+foreach($names as $datos => $value){
+    echo $datos . ": " .$value. "<br>";
+}
 */
 
     
