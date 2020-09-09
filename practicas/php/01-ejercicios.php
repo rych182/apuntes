@@ -1,6 +1,12 @@
 <?php
 /* temas: variables, boleanos, condicional(if,else-if, if-if else-else), arreglos */
 
+$password = "murcielago";
+if (strlen($password)< 8) {
+    echo "EL password es débil";
+} else {
+    echo "EL password es seguro";
+}
 
 
 
@@ -49,6 +55,9 @@ $edad;
 echo isset($edad);
 $edad = (isset($edad)) ? $edad : 'el usuario no establecio su edad';
 echo 'Edad:' . $edad;
+----------------------------------------------------------------------------------------------------------
+EXERCISE 4.02: 
+
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -242,6 +251,26 @@ $names = array(
 foreach($names as $datos => $value){
     echo $datos . ": " .$value. "<br>";
 }
+-------------------------------------------------------------------------------------------------------------------------------
+EXERCISE 11: Print to 1 at 10  
+$i = 0;
+while ($i <= 10) {
+	echo $i . "<br>";
+	$i++;
+}
+-------------------------------------------------------------------------------------------------------------------------------
+EXERCISE 11.01: Print the values inside of an array using the "while" loop.
+
+$meses = array('Enero','Febrero','Marzo','Abril',
+				'Mayo','Junio','Julio','Agosto',
+			'Septiembre','Octubre','Noviembre','Diciembre');
+
+$i = 0;
+while ($i < count($meses)) {
+	echo $meses[$i] . "<br>";
+	$i++;
+}
+
 */
 
     

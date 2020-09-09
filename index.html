@@ -6278,6 +6278,14 @@
                                             </ul>
                                             <hr>
 
+                                            <h2>FUnciones que existen en WOrdpress</h2>
+                                            <ul>
+                                                <li><b>Usuario logeado:</b> si quieres saber si hay un usuario logeado</li>
+                                                <li><b>privilegios</b>Si quieres saber que privilegios tiene un usuario</li>
+                                                <li><b>Imprimir un menú</b></li>
+                                            </ul>
+                                            <hr>
+
                                             <h2>Nombrar tema de Wordpress</h2>
                                             <p>Para nombrar un tema de wordpress lo haces en el archivo <b>style.css</b> de la siguiente manera</p>
                                             <hr>
@@ -6304,7 +6312,6 @@
                                                 <li><b></b></li>
                                             </ul>
                                             <hr>
-
 
                                             <h2>Funciones dentro de Wordpress(se conocen como template_tags)</h2>
                                             <ul>
@@ -6402,12 +6409,63 @@
                                                 <li>Los valores boleanos <b>true</b> y <b>false</b> regresan los valores <b>1</b> y false no lo va a imprimir</li>
                                                 <li>En una condicional, si ninguna opción es valida, siempre toma la última</li>
                                                 <li><b>=!</b> significa <b>no es igual</b></li>
-                                                <li></li>
-                                                <li></li>
-                                                <li></li>
+                                                <li>
+                                                    <div class="card " style="width: 18rem; ">
+                                                        <div class="card-body" id="js-length">
+                                                            <p class="card-text espacio-codigo1 ">
+                                                                Dentro de const no puedes utilizar variables ni funciones pero dentro de define si puedes utilizar variables y funciones
+                                                            </p>
+                                                            <p class="card-text espacio-codigo1 "><code>$path= 'cursoPHP/index.php';</code></p>
+                                                            <p class="card-text espacio-codigo1 "><code>define('PATH',$path);</code></p>
+                                                            <p class="card-text espacio-codigo1 "><code>echo PATH1;</code></p>
+                                                            <p class="card-text espacio-codigo1 "><code>define('PATH2',mt_rand());</code></p>
+                                                            <p class="card-text espacio-codigo1 "><code>echo PATH2;</code></p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="card " style="width: 18rem;">
+                                                        <div class="card-body" id="js-length">
+                                                            <p class="card-text espacio-codigo1">
+                                                                Forzar tipo de datos
+                                                            </p>
+                                                            <p class="card-text espacio-codigo1"><code>$price = 11.2;</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>$price=(int)$price;</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>echo var_dump($price);</code></p>
+                                                            <p class="card-text espacio-codigo1">//se puede usar bool,int,double</p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li><b>INTERPOLACION</b>Es poner una variable dentro de las comillas en un echo</li>
+                                                <li>
+                                                    <div class="card " style="width: 18rem;">
+                                                        <div class="card-body" id="js-length">
+                                                            <p class="card-text espacio-codigo1">
+                                                                Llaves en una variable: Sirven para no escribas mal la variable
+                                                            </p>
+                                                            <p class="card-text espacio-codigo1"><code>$var = "codigo";</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>echo "Hola {$var} facilito";</code></p>
+                                                        </div>
+                                                    </div>
+                                                </li>
                                                 <li></li>
                                             </ol>
                                             <hr>
+
+                                            <h2>Errores en PHP</h2>
+                                            <ul>
+                                                <p>Los errores de PHP tienen 3 partes</p>
+                                                <li>El "tipo" de error , que siempre está al principio</li>
+                                                <li>El mensaje de error, nos proporciona una pista sobre el error</li>
+                                                <li>El contesto del error, nos dice donde ocurrio</li>
+                                            </ul>
+                                            <h3>Los mensajes de error más populares</h3>
+                                            <ol>
+                                                <li><b>Parse error:</b> se genera solo en tiempo de compilación</li>
+                                                <li><b>Fatal error:</b> envia un mensaje de advertencia y detiene la ejecución</li>
+                                                <li><b>Warning:</b> envia un mensaje de advertencia sin detener la ejecución , a diferencia de error fatal</li>
+                                                <li><b>Notices:</b> Aviso en tiempo de ejecución, aviso o nota de sugerencia, detalles vaya, nos indica cual fue el error pero se muestra un parte del resultado, en notices no se detiene la ejecución</li>
+                                            </ol>
 
                                             <h2>Consejos</h2>
                                             <ol>
@@ -6446,9 +6504,54 @@
                                                 <li><b>strtolower();</b> pone todas las palabras del string en minusculas</li>
                                                 <li><b>strtoupper();</b> Pone todas las palabras del string en mayúsculas</li>
                                                 <li><b>ceil(12.001)</b> redondea hacia arriba</li>
+                                                <li><b>intval($var)</b>= tranforma tu dato a entero</li>
+                                                <li><b>boolval()</b>= tranforma tu dato a boleano</li>
+                                                <li><b>floatval()</b> = tranforma tu dato a flotante</li>
+                                                <li><b>strval()</b> = tranforma tu dato a string</li>
+                                                <li><b>substr("Marines Mendez Gallegos",8,6)</b> = te extrae texti de una cadena de texto 6 casillas a partir de la posicion 8, imprime Mendez, los acentos cuentan como caracter y si usas -8, te agarra los valores
+                                                    empezando desde el final</li>
+                                                <li>
+                                                    <div class="card " style="width: 18rem;">
+                                                        <div class="card-body" id="js-length">
+                                                            <p class="card-text espacio-codigo1">
+                                                                <b>preg_match($var2,$var1)</b>//Te pone 1 si encuentra una coincidencia y 0 si no
+                                                            </p>
+                                                            <p class="card-text espacio-codigo1"><code>$var1= "Hola mundo";</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>$var2= "/Hola/";</code></p>
+                                                            <p class="card-text espacio-codigo1">checar documentacion</p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="card " style="width: 18rem;">
+                                                        <div class="card-body" id="js-length">
+                                                            <p class="card-text espacio-codigo1">
+                                                                <b>sprintf($arg1,$arg2,$text);</b>, remmplaza %s por los datos que le pongas, checa documentacion
+                                                            </p>
+                                                            <p class="card-text espacio-codigo1"><code>$arg1=1994;</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>$arg2="php";</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>$text="En %s fue creado %s";</code></p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="card " style="width: 18rem;">
+                                                        <div class="card-body" id="js-length">
+                                                            <p class="card-text espacio-codigo1">
+                                                                <b></b>
+                                                            </p>
+                                                            <p class="card-text espacio-codigo1"><code>echo preg_match_all($var2,$var1,$match)</code> //Te devuelve un arreglo con lo que encontro</p>
+                                                            <p class="card-text espacio-codigo1"><code>$var1 = 'Los numeros son 1 4 5 6';</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>$var2 = '/[0-9]/';</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>print_t($matches);</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>CHECAR DOCUMENTACIÓN</code></p>
+                                                            <p class="card-text espacio-codigo1">//Puedes usarla para fechas y "\" este signo sirve por si no agarrar caracteres</p>
+                                                            <p class="card-text espacio-codigo1">Lo aprendi en codigo facilito capítulo PCRE</p>
+                                                        </div>
+                                                    </div>
+                                                </li>
                                                 <li><b></b></li>
-                                                <li><b></b></li>
-                                                <li><b></b></li>
+
                                             </ul>
                                             <hr>
 
@@ -6491,7 +6594,6 @@
                                                     también te permite buscar entre carpetas, OJO, pon bien los slash y nombre de carpetas,<code>$resultados = glob('practicas/sesiones/*.{php,txt}', GLOB_BRACE); print_r($resultados);</code> </li>
                                                 <li><b>basename:</b> elimina toda la ruta de tu archivo y como segundo parametro también podemos eliminar el parametro <code>echo basename('carpeta1/carpeta2/archivo.php','.php');</code></li>
                                                 <li><b>dirname:</b>te devuelve la ruta de donde está tu archvo</li>
-
                                             </ul>
                                             <hr>
 
