@@ -1,12 +1,6 @@
 <?php
 /* temas: variables, boleanos, condicional(if,else-if, if-if else-else), arreglos */
 
-$password = "murcielago";
-if (strlen($password)< 8) {
-    echo "EL password es débil";
-} else {
-    echo "EL password es seguro";
-}
 
 
 
@@ -19,6 +13,15 @@ Create a variable
 EXERCISE 1.01: Use gettype() to know of data type in a variable
 $numero = true;
 echo gettype($numero);
+--------------------------------------------------------------------------------------------------
+EXERCISE 1.02: sum, subtract, multiply and divide with the same variable
+$total = 0;
+$total += 5;
+$total += 20;
+$total -= 10;
+$total *= 2;
+$total /= 3;
+echo $total;
 ---------------------------------------------------------------------------------------------------
 
 EXERCISE 2: Print boolean variables true and false
@@ -56,8 +59,13 @@ echo isset($edad);
 $edad = (isset($edad)) ? $edad : 'el usuario no establecio su edad';
 echo 'Edad:' . $edad;
 ----------------------------------------------------------------------------------------------------------
-EXERCISE 4.02: 
-
+EXERCISE 4.02: check the number of characters using if-else and strlen function 
+$password = "murcielago";
+if (strlen($password)< 8) {
+    echo "EL password es débil";
+} else {
+    echo "EL password es seguro";
+}
 
 ----------------------------------------------------------------------------------------------------------
 
@@ -170,8 +178,15 @@ function nombre($name)
     echo $name;
 }
 nombre("Ricardo");
+--------------------------------------------------------------------------------------------------------------------------
+EXERCISE 8.02: Write a function that will be print your name using {} 
+function nombre($name)
+{
+    echo "Mi nombre es {$name}";
+}
+nombre("Ricardo");
 ---------------------------------------------------------------------------------------------------------------------------
-EXERCISE 8.02: Write a function that print your name saving other function inside a variable
+EXERCISE 8.03: Write a function that print your name saving other function inside a variable
 function getName($name)
 {
     $text = "My name is: ". $name;
@@ -185,6 +200,25 @@ function fullName($name,$lastName)
 }
 
 echo fullName("Ricardo ","Garrido");
+--------------------------------------------------------------------------------------------------------------------------
+EXERCISE 8.04: Write a program than subtract money using "functions"
+function total_pagar($cantidad){
+    $total = $cantidad * 1.16;
+    return $total;
+}
+
+$cantidad_a_pagar = total_pagar(1000);
+
+function balance_banco($cantidad_a_pagar){
+    $balance = 5000;
+    if ($cantidad_a_pagar > $balance) {
+        echo "Te hace falta camaron!";
+    } else {
+        $balance_final = $balance - $cantidad_a_pagar;
+        echo "Pagaste " . $balance_final;
+    }
+}
+balance_banco($cantidad_a_pagar);
 
 ---------------------------------------------------------------------------------------------------------------------------
 
@@ -232,6 +266,16 @@ for ($i=1; $i <=10 ; $i++) {
         }
     echo "</td>";
 }
+------------------------------------------------------------------------------------------------------------------------------
+EXERCISE 9.06: print the odd and even numbers from 1 to 100
+for ($i=0; $i <100 ; $i++) {
+    if ($i % 2 == 0) {
+        echo $i . " es un número par <br>";
+    } else {
+        echo $i . " es un número inpar <br>";
+    }
+}
+
 --------------------------------------------------------------------------------------------------------------------------------
 ======================================FOREACH======================================
 
