@@ -6300,7 +6300,9 @@
                                                 <li>Para que Wordpress detecte el nombre de tu tema y demás datos, debes de ponerle un comentario con los datos.
                                                 </li>
                                                 <li>Wordpress recomienda usar esta sintaxis <br> <code>while (have_posts()):</code> <br>
-                                                    <code>endwhile;</code></li>
+                                                    <code>endwhile;</code>
+                                                </li>
+                                                <li><b>the_post();</b> , tiene la información de la base de datos</li>
                                                 <li><b>Loop</b> se refiere a que consultas la base de datos por medio de un while y te muestra los resultados</li>
                                                 <li><b>functions.php</b> debes de crear este archivo porque así lo pide wordpress, ahí estarán todas tus funciones</li>
                                                 <li><b>Prefijos:</b> es necesario que le pongas prefijos a las funciones que crees, por que cada plugin que instales en Wordpress tiene funciones con diferentes nombres y si alguna tiene un nombre igual que
@@ -6338,6 +6340,10 @@
                                                         </div>
                                                     </div>
                                                 </li>
+                                                <li><b>wp_enqueue_style();</b> Nos permite cargar hojas de estilo y librerias de Javascript, incluso Angular, react y vue</li>
+                                                <li><b>get_stylesheet_uri()</b> nos permite leer la ubicacion de nuestra hoja de estilos y va a colocar la ruta, incluso cuando compartas el proyecto en otra computadora o lo subas a un servidor</li>
+                                                <li><b>wp_head();</b> sirve para activar tu hoja de estilos pero antes debes de poner todo los datos en la funcion <b>wp_enqueue_style();</b></li>
+                                                <li><b></b></li>
                                                 <li><b></b></li>
                                                 <li><b></b></li>
                                             </ul>
@@ -6386,6 +6392,44 @@
                                                 <li>Ya instalado, en el boton de admin, inicias sesion en wordpress para el panel de administracion</li>
                                                 <li>Instalar y activar Disable Gutenberg</li>
                                             </ol>
+                                            <hr>
+
+                                            <h2>Cosas importantes que haces en Wordpress</h2>
+                                            <ol>
+                                                <li><b>Poner de inicio una pagina</b> Ajustes>lectura: Una cosa es definir el espacio en el que estara el menú y como se va llamar, otra es crearlo, otra es asignarlo y la última es, donde se va a ver.</li>
+                                                <li>
+                                                    <div class="card " style="width: 18rem; ">
+                                                        <div class="card-body" id="js-length">
+                                                            <p class="card-text espacio-codigo1 ">
+                                                                <b>Crear la seccioin de menpu en Wordpress</b> , crear el archivo de functions.php y agregar esto:
+                                                            </p>
+                                                            <p class="card-text espacio-codigo1 "><code>function aquapro_menus(){</code></p>
+                                                            <p class="card-text espacio-codigo1 "><code>register_nav_menus(array(</code></p>
+                                                            <p class="card-text espacio-codigo1 "><code>'menu-principal' => __('Menu Principal','AquaPro')</code></p>
+                                                            <p class="card-text espacio-codigo1 "><code>));</code></p>
+                                                            <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                                            <p class="card-text espacio-codigo1 "><code>add_action('init','aquapro_menus');</code></p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+
+                                                <li>
+                                                    <div class="card " style="width: 18rem; ">
+                                                        <div class="card-body" id="js-length">
+                                                            <p class="card-text espacio-codigo1 ">
+                                                                <b>El bucle de Worpress</b> para mostrar comentarios y publicaciones de la Base de datos
+                                                            </p>
+                                                            <p class="card-text espacio-codigo1 "><code><?php while ( have_posts()): the_post(); ?></code></p>
+                                                            <p class="card-text espacio-codigo1 "><code><h1> <?php the_title(); ?> </h1></code></p>
+                                                            <p class="card-text espacio-codigo1 "><code><?php the_content(); ?></code></p>
+                                                            <p class="card-text espacio-codigo1 "><code><?php endwhile; ?></code></p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li></li>
+                                                <li></li>
+                                            </ol>
+
                                         </div>
                                     </div>
                                 </div>
