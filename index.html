@@ -432,6 +432,19 @@
                                         <li><b>Wordpress snippets</b></li>
                                         <li><b>Wordpress snippet</b></li>
                                     </ul>
+
+                                    <hr>
+                                    <h2>Crear snippets</h2>
+                                    <p>file>preference>user snippet</p>
+                                    <p>Primero le das un nombre, luego un prefijo, y por último el body es lo que va a generar.</p><br>
+                                    <code>
+                                        "media query": {<br>
+                                            "prefix": "mq",<br>
+                                            "body": [<br>
+                                                "@media (min-width: $1) {\n\t$0\n}"<br>
+                                            ]<br>
+                                        }<br>
+                                    </code>
                                 </div>
 
 
@@ -527,6 +540,32 @@
 
 
 
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card colapsos">
+                                        <div class="card-header" id="variosTemas-0">
+                                            <a data-toggle="collapse" href="#variosTemas" role="button" aria-expanded="false">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link collapsed colorTitulo" type="button" data-toggle="collapse" data-target="#variosTemas" aria-expanded="false">
+                                                        Temas varios
+                                                    </button>
+                                                </h2>
+                                            </a>
+                                        </div>
+                                        <div id="variosTemas" class="collapse" aria-labelledby="variosTemas-0" data-parent="#accordionExample1">
+                                            <div class="card-body">
+
+                                                <div class="d-flex justify-content-around">
+                                                    <h2>Temas varios/consejos</h2>
+                                                    <ul>
+                                                        <li>CONSEJO: No es bueno crear grandes bloques de media queries</li>
+                                                        <li></li>
+                                                        <li></li>
+                                                    </ul>
+                                                </div>
+                                                <hr>
                                             </div>
                                         </div>
                                     </div>
@@ -6046,9 +6085,13 @@
                         </div>
                         <div id="siete" class="collapse" aria-labelledby="jquery-0" data-parent="#accordionExample">
                             <div class="card-body ">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                                on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft
-                                beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                <h2>Pluggins</h2>
+                                <h3>Slacknav pluggin</h3>
+                                <img src="img/slicknav-pluggin.png" class="img-fluid">
+                                <p>Modo de uso</p>
+                                <code>
+                                    
+                                </code>
                             </div>
                         </div>
                     </div>
@@ -6343,7 +6386,7 @@
                                                 <li><b>wp_enqueue_style();</b> Nos permite cargar hojas de estilo y librerias de Javascript, incluso Angular, react y vue</li>
                                                 <li><b>get_stylesheet_uri()</b> nos permite leer la ubicacion de nuestra hoja de estilos y va a colocar la ruta, incluso cuando compartas el proyecto en otra computadora o lo subas a un servidor</li>
                                                 <li><b>wp_head();</b> sirve para activar tu hoja de estilos pero antes debes de poner todo los datos en la funcion <b>wp_enqueue_style();</b></li>
-                                                <li><b></b></li>
+                                                <li><b>get_bloginfo('name')</b> te da el nombre del sitio web</li>
                                                 <li><b></b></li>
                                                 <li><b></b></li>
                                             </ul>
@@ -6426,10 +6469,80 @@
                                                         </div>
                                                     </div>
                                                 </li>
+                                                <li>
+                                                    <div class="card " style="width: 18rem; ">
+                                                        <div class="card-body" id="js-length">
+                                                            <p class="card-text espacio-codigo1 ">
+                                                                <b>Agregar una libreria</b>
+                                                            </p>
+                                                            <p class="card-text espacio-codigo1 "><code>wp_enqueue_style('normalize',get_template_directory_uri() . '/css/normalize.css',array(),'8.0.1');</code></p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <div class="card " style="width: 18rem; ">
+                                                    <div class="card-body" id="js-length">
+                                                        <p class="card-text espacio-codigo1 ">
+                                                            <b>Agregar tipografias</b>
+                                                        </p>
+                                                        <p class="card-text espacio-codigo1 "><code>wp_enqueue_style('googleFont','https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700;900&family=Staatliches&display=swap"',array(),'1.0.0');</code></p>
+                                                    </div>
+                                                </div>
+                                                <li><b>wp_footer();</b> te crea la barra de menú del <b>header</b> donde puedes ir al panel de control o al sitio y viceversa
+                                                    <img src="img/wp_footer.png" class="img-fluid">
+                                                </li>
+                                                <li><b>Wordpress trae</b> por default varias librerias de js y hasta frameworks como backbone.js</li>
+                                                <li><b>Cambiar el titulo</b> Ajustes>generales</li>
+                                                <li></li>
                                                 <li></li>
                                                 <li></li>
                                             </ol>
 
+                                            <hr>
+                                            <div>
+                                                <h2>Links importantes</h2>
+                                                <ul>
+                                                    <li>
+                                                        <a href="https://wpacademia.es/">wpacademia</a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="https://multilingualpress.org/">multilingualpress</a> pluggin que traduce
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="https://www.esthersola.com/">Esther Sola</a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="https://www.zonadpw.com/">zonadpw</a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="https://www.mojomarketplace.com/item/neilmink-parallax-lawyer-wordpress-theme?rr=cj">Tema conocido pero en Wordpress</a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="https://tranquilidadwp.com/">tranquilidadwp</a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="https://www.silocreativo.com/">silocreativo</a> Los que crean temas de wordpress bien calificados
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="https://ohyeahdev.com/">ohyeahdev</a> La empresa del español pueblerino
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="https://nbadiola.com/donde-aprender-wordpress/">nbadiola</a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="https://wplive.es/">wplive</a> entrevistas mamalonas de Wordpress
+                                                    </li>
+
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
