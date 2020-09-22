@@ -445,6 +445,34 @@
                                             ]<br>
                                         }<br>
                                     </code>
+
+                                    <hr>
+                                    <h2>Mis snipptets</h2>
+                                    <code>
+                                        "media query": {<br>
+                                            "prefix": "mq",<br>
+                                            "body": [<br>
+                                                "@media (min-width: $1) {\n\t$0\n}"<br>
+                                            ]<br>
+                                        }<br><br>
+                                    </code>
+                                    <code>
+                                        "custom properties": {<br>
+                                            "prefix": "cust",<br>
+                                            "body": [<br>
+                                                ":root {\n\t /*FUENTES*/ \n\t--fuentePrincipal: 'Staatliches', cursive;\n\t--fuenteTexto: 'Open Sans', sans - serif;\n\t--fuenteSecundaria: 'Raleway', sans - serif;\n\t /*COLORES*/ \n\t--colorPrimario: #FF5B00;\n\t--grisOscuro: #2F2E2E;\n\t--grisClaro: #EBEBEB;\n\t--blanco: #ffffff;\n\t--black: #000000;\n}"<br>
+                                            ]<br>
+                                        }<br><br>
+                                    </code>
+                                    <code>
+                                        "fuente": {<br>
+                                            "prefix": "fuentes",<br>
+                                            "body": [<br>
+                                                ".clase{\n\tfont-family: var(--fuentePrimaria); {\n\t$0\n}"<br>
+                                            ]<br>
+                                        }<br><br>
+                                    </code>
+
                                 </div>
 
 
@@ -6353,7 +6381,7 @@
                                                 <li><b>Hooks:</b> son más de 4mil en Wordpress y son funciones que corren en determinado tiempo y en determinado lugar. A lo mucho se utilizan 20 ó 30 por proyecto</li>
                                                 <li><b>__</b> el doble guión bajo sirve para traducir</li>
                                                 <li><b>Arreglos asociativos</b> son muy usados para hacer una consulta en Wordpress</li>
-                                                <li><b></b></li>
+                                                <li>La ventaja es que tendrás muchos tamaños y eso ayuda a que el sitio web sea más rápido</li>
                                                 <li><b></b></li>
                                                 <li><b></b></li>
                                             </ul>
@@ -6387,6 +6415,11 @@
                                                 <li><b>get_stylesheet_uri()</b> nos permite leer la ubicacion de nuestra hoja de estilos y va a colocar la ruta, incluso cuando compartas el proyecto en otra computadora o lo subas a un servidor</li>
                                                 <li><b>wp_head();</b> sirve para activar tu hoja de estilos pero antes debes de poner todo los datos en la funcion <b>wp_enqueue_style();</b></li>
                                                 <li><b>get_bloginfo('name')</b> te da el nombre del sitio web</li>
+                                                <li><b>php the_post_thumbnail();</b> publica lo que tenga en tu página, sin esto, no aparece nada cuando das click en el menú que te llevará a la publicación que quieres ver, Los tamaños los defines usando
+                                                    <b>'thumbnail','medium','large'</b>, también puedes darle una clase específica a la imagen así <code>the_post_thumbnail('blog',array('class' => ('imagen-destacada')));</code></li>
+                                                <li><b>php get_sidebar(); </b> publica el sidebar en tu template/página</li>
+                                                <li><b></b></li>
+                                                <li><b></b></li>
                                                 <li><b></b></li>
                                                 <li><b></b></li>
                                             </ul>
@@ -6492,10 +6525,34 @@
                                                 </li>
                                                 <li><b>Wordpress trae</b> por default varias librerias de js y hasta frameworks como backbone.js</li>
                                                 <li><b>Cambiar el titulo</b> Ajustes>generales</li>
-                                                <li></li>
-                                                <li></li>
+                                                <li>
+                                                    <div class="card " style="width: 18rem; ">
+                                                        <div class="card-body" id="js-length">
+                                                            <p class="card-text espacio-codigo1 ">
+                                                                <b>Poner imagenes</b> para adjuntarlas en las publicaciones de las páginas<br> Pero para que se publique debes poner <b><?php the_post_thumbnail('large'); ?></b> en el archivo <b>page.php</b>                                                                <br> Los tamaños los defines usando <b>'thumbnail','medium','large'</b>
+                                                            </p>
+                                                            <p class="card-text espacio-codigo1 "><code>function gisea_prototype_setup(){</code></p>
+                                                            <p class="card-text espacio-codigo1 ">//Habilitar imágenes destacadas</p>
+                                                            <p class="card-text espacio-codigo1 "><code>add_theme_support('post-thumbnails');</code></p>
+                                                            <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                                            <p class="card-text espacio-codigo1 "><code>add_action('after_setup_theme','gisea_prototype_setup');</code></p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li><b>regenerar imagenes Herramientas>Regenerate Thumbnails>presionar primer boton</b>, para que te de todos los tamaños de imagenes que hayas puesto en tu archivo <b>functions.php</b> ese plugin, todas las
+                                                    imagenes que ya hayas subido pero no tengan ese tamaño, La ventaja es que tendrás muchos tamaños y eso ayuda a que el sitio web sea más rápido
+                                                </li>
                                                 <li></li>
                                             </ol>
+
+                                            <hr>
+                                            <h2>Pluggins importantes de Wordpress</h2>
+                                            <ul>
+                                                <li><b>Regenerate Thumbnails</b> para que te de todos los tamaños de imagenes ese plugin, todas las imagenes que ya hayas subido pero no tengan ese tamaño, La ventaja es que tendrás muchos tamaño y eso ayuda
+                                                    a que el sitio web sea más rápido</li>
+                                                <li></li>
+                                                <li></li>
+                                            </ul>
 
                                             <hr>
                                             <div>
