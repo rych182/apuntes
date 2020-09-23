@@ -6418,7 +6418,7 @@
                                                 <li><b>php the_post_thumbnail();</b> publica lo que tenga en tu página, sin esto, no aparece nada cuando das click en el menú que te llevará a la publicación que quieres ver, Los tamaños los defines usando
                                                     <b>'thumbnail','medium','large'</b>, también puedes darle una clase específica a la imagen así <code>the_post_thumbnail('blog',array('class' => ('imagen-destacada')));</code></li>
                                                 <li><b>php get_sidebar(); </b> publica el sidebar en tu template/página</li>
-                                                <li><b></b></li>
+                                                <li><b>get_template_part('template-parts/paginas'); </b> sirve como un <b>include</b> de php</li>
                                                 <li><b></b></li>
                                                 <li><b></b></li>
                                                 <li><b></b></li>
@@ -6474,7 +6474,7 @@
                                             <ol>
                                                 <li><b>Poner de inicio una pagina</b> Ajustes>lectura: Una cosa es definir el espacio en el que estara el menú y como se va llamar, otra es crearlo, otra es asignarlo y la última es, donde se va a ver.</li>
                                                 <li>
-                                                    <div class="card " style="width: 18rem; ">
+                                                    <div class="card " style="width: 38rem; ">
                                                         <div class="card-body" id="js-length">
                                                             <p class="card-text espacio-codigo1 ">
                                                                 <b>Crear la seccioin de menpu en Wordpress</b> , crear el archivo de functions.php y agregar esto:
@@ -6490,34 +6490,40 @@
                                                 </li>
 
                                                 <li>
-                                                    <div class="card " style="width: 18rem; ">
+                                                    <div class="card " style="width: 38rem; ">
                                                         <div class="card-body" id="js-length">
                                                             <p class="card-text espacio-codigo1 ">
                                                                 <b>El bucle de Worpress</b> para mostrar comentarios y publicaciones de la Base de datos
-                                                            </p>
-                                                            <p class="card-text espacio-codigo1 "><code><?php while ( have_posts()): the_post(); ?></code></p>
-                                                            <p class="card-text espacio-codigo1 "><code><h1> <?php the_title(); ?> </h1></code></p>
-                                                            <p class="card-text espacio-codigo1 "><code><?php the_content(); ?></code></p>
-                                                            <p class="card-text espacio-codigo1 "><code><?php endwhile; ?></code></p>
+                                                            </p> &lt; &gt; &nbsp;
+                                                            <p class="card-text espacio-codigo1 "><code>&lt;?php while ( have_posts()): the_post(); ?&gt;</code></p>
+                                                            <p class="card-text espacio-codigo1 "><code>&gt;h1&gt; &lt;?php the_title(); ?&gt; &gt;/h1&gt;</code></p>
+                                                            <p class="card-text espacio-codigo1 "><code>&lt;?php the_content(); ?&gt;</code></p>
+                                                            <p class="card-text espacio-codigo1 "><code>&lt;?php endwhile; ?&gt;</code></p>
                                                         </div>
                                                     </div>
                                                 </li>
                                                 <li>
-                                                    <div class="card " style="width: 18rem; ">
+                                                    <div class="card " style="width: 58rem; ">
                                                         <div class="card-body" id="js-length">
                                                             <p class="card-text espacio-codigo1 ">
                                                                 <b>Agregar una libreria</b>
                                                             </p>
+                                                            <p class="card-text espacio-codigo1 "><code>function gisea_prototype_scripts_style(){</code></p>
                                                             <p class="card-text espacio-codigo1 "><code>wp_enqueue_style('normalize',get_template_directory_uri() . '/css/normalize.css',array(),'8.0.1');</code></p>
+                                                            <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                                            <p class="card-text espacio-codigo1 "><code>add_action('wp_enqueue_scripts','gisea_prototype_scripts_style');</code></p>
                                                         </div>
                                                     </div>
                                                 </li>
-                                                <div class="card " style="width: 18rem; ">
+                                                <div class="card " style="width: 58rem; ">
                                                     <div class="card-body" id="js-length">
                                                         <p class="card-text espacio-codigo1 ">
                                                             <b>Agregar tipografias</b>
                                                         </p>
+                                                        <p class="card-text espacio-codigo1 "><code>function gisea_prototype_scripts_style(){</code></p>
                                                         <p class="card-text espacio-codigo1 "><code>wp_enqueue_style('googleFont','https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700;900&family=Staatliches&display=swap"',array(),'1.0.0');</code></p>
+                                                        <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                                        <p class="card-text espacio-codigo1 "><code>add_action('wp_enqueue_scripts','gisea_prototype_scripts_style');</code></p>
                                                     </div>
                                                 </div>
                                                 <li><b>wp_footer();</b> te crea la barra de menú del <b>header</b> donde puedes ir al panel de control o al sitio y viceversa
@@ -6526,7 +6532,7 @@
                                                 <li><b>Wordpress trae</b> por default varias librerias de js y hasta frameworks como backbone.js</li>
                                                 <li><b>Cambiar el titulo</b> Ajustes>generales</li>
                                                 <li>
-                                                    <div class="card " style="width: 18rem; ">
+                                                    <div class="card " style="width: 38rem; ">
                                                         <div class="card-body" id="js-length">
                                                             <p class="card-text espacio-codigo1 ">
                                                                 <b>Poner imagenes</b> para adjuntarlas en las publicaciones de las páginas<br> Pero para que se publique debes poner <b><?php the_post_thumbnail('large'); ?></b> en el archivo <b>page.php</b>                                                                <br> Los tamaños los defines usando <b>'thumbnail','medium','large'</b>
@@ -6542,6 +6548,34 @@
                                                 <li><b>regenerar imagenes Herramientas>Regenerate Thumbnails>presionar primer boton</b>, para que te de todos los tamaños de imagenes que hayas puesto en tu archivo <b>functions.php</b> ese plugin, todas las
                                                     imagenes que ya hayas subido pero no tengan ese tamaño, La ventaja es que tendrás muchos tamaños y eso ayuda a que el sitio web sea más rápido
                                                 </li>
+                                                <li>
+                                                    <div class="card " style="width: 48rem; ">
+                                                        <div class="card-body" id="js-length">
+                                                            <p class="card-text espacio-codigo1 ">
+                                                                <b></b> <label style="color: red;" for="">Agregar templates</label> usando este codigo y crearas otro archivo que su nombre comience con <b>page</b> ejemplo <b>page-no-sidebar.php</b>
+                                                            </p>
+                                                            &lt; &gt; &nbsp;
+                                                            <p class="card-text espacio-codigo1 "><code>/*</code></p>
+                                                            <p class="card-text espacio-codigo1 "><code>* Template Name: Contenido Centrado (No Sidebars)</code></p>
+                                                            <p class="card-text espacio-codigo1 "><code>*/</code></p>
+                                                            <p class="card-text espacio-codigo1 "><code>get_header(); ?></code></p>
+                                                            <p class="card-text espacio-codigo1 "><code>&nbsp;&lt;main class="contenedor pagina seccion no-sidebar"&gt;</code></p>
+                                                            <p class="card-text espacio-codigo1 "><code>&nbsp;&nbsp;&lt;div class="contenido-principal"&gt;</code></p>
+                                                            <p class="card-text espacio-codigo1 "><code>&nbsp;&nbsp;&nbsp;&lt;?php while ( have_posts() ): the_post(); ?></code></p>
+                                                            <p class="card-text espacio-codigo1 "><code>&nbsp;&nbsp;&nbsp;&lt;h1 class="text-center texto-primario"&gt; &lt;?php the_title(); ?> &lt;/h1&gt;</code></p>
+                                                            <p class="card-text espacio-codigo1 "><code>&nbsp;&nbsp;&nbsp;//el array hace que le des una clase específica a esa imagen destacada</code></p>
+                                                            <p class="card-text espacio-codigo1 "><code>&nbsp;&nbsp;&nbsp;&lt;?php the_post_thumbnail('blog',array('class' => ('imagen-destacada'))); ?></code></p>
+                                                            <p class="card-text espacio-codigo1 "><code>&nbsp;&nbsp;&nbsp;&lt;?php the_content(); ?></code></p>
+                                                            <p class="card-text espacio-codigo1 "><code>&nbsp;&nbsp;&nbsp;&lt;?php endwhile; ?></code></p>
+                                                            <p class="card-text espacio-codigo1 "><code>&nbsp;&nbsp;&lt;/div&gt;</code></p>
+                                                            <p class="card-text espacio-codigo1 "><code>&nbsp;&lt;/main&gt;</code></p>
+                                                            <p class="card-text espacio-codigo1 "><code>&lt;?php get_footer(); ?></code></p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li></li>
+                                                <li></li>
+                                                <li></li>
                                                 <li></li>
                                             </ol>
 
