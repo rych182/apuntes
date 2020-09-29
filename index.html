@@ -6573,9 +6573,48 @@
                                                         </div>
                                                     </div>
                                                 </li>
-                                                <li></li>
-                                                <li></li>
-                                                <li></li>
+                                                <li><b>Activar slug</b> cuando esta en el panel de control de Wordpress en una página, en la parte superior que dice <b>opciones de pantalla</b> presionas <b>slug</b> y te mostrara en la parte inferior un pequeño
+                                                    formulario que sirve para modificar el nombre del link con el que se vera la url de la página, también si creas un archivo con el nombre <b>page-nuestras-clases.php</b> la pagina usara ese archivo
+                                                    <img src="img/slug1.png" class="img-fluid">
+                                                    <img src="img/slug2.png" class="img-fluid">
+                                                </li>
+                                                <li><b>Custom Post Types</b> ¿Qúe son los <b>Post types</b>? Wordpress almacena los diferentes tipos de contenido y los agrupa en algo llamado post types, cada entrada de blog se le conoce como <b>post</b> y
+                                                    su post type se le conoce como <b>posts</b>.
+                                                    <b>actualmente en wordpress hay 7 Post Types</b>, tambiém puedes crear los tuyos. Existe 7 tipos de post:
+                                                    <br>
+                                                    <ul>
+                                                        <li><b>post</b>: las entradas de blog</li>
+                                                        <li><b>pages</b>: también tienen su propio post type</li>
+                                                        <li><b>attachments</b>: fotos y video</li>
+                                                        <li><b>menus</b>: los menus de navegacion también se almacenan</li>
+                                                        <li><b>revisiones</b>: todos los cambios que se van haciendo en una entrada del blog</li>
+                                                        <li><b>css</b> el css personalizado</li>
+                                                        <li><b>Changesets</b> similar a una revision pero del customizr, el customizr almacena los cambios para que puedas revertilos, similar a git </li>
+                                                    </ul>
+                                                    <b>Ventajas y consideraciones</b><br>
+                                                    <ul>
+                                                        <li>Mejor orden en el area de administración</li>
+                                                        <li>Un Post Type personalizado también tendrá acceso a los template files y funciones, es algo que tu creas pero que hereda toda la funcionalidad de wordpress</li>
+                                                        <li>Puedes crear consultas personalizadas en tus post types</li>
+                                                        <li>El codigo de un post type, se crea en un theme o en un plugin, las buenas practicas dicen que debe de ir en la carpeta de <b>plugin</b>, toda funcionalidad debe de ir en la carpeta de plugin</li>
+
+                                                    </ul>
+                                                </li>
+                                                <li><b>Como crear un POST TYPE</b>:
+                                                    <ol>
+                                                        <li>Ir a la carpeta de plugins y crear una carpeta con el prefijo de tu tema</li>
+                                                        <li>Crear dentro de la carpeta que creaste un archivo .php con el mismo nombre de la carpeta</li>
+                                                        <li><a href="https://developer.wordpress.org/reference/functions/post_type_supports/">Referencia</a></li>
+                                                        <li><a href="https://developer.wordpress.org/resource/dashicons/#album">Iconos de Wordpress</a></li>
+                                                        <li>Agregar este <a href="https://gist.github.com/juanpablogdl/2ff8f4a6f0ed075fb284767a520f99f9">codigo</a> cambia el titulo y el nombre de la funcion, que sea corto y que la funcion coincida con el
+                                                            hook, dejo una imagen para que veas comentarios porque ya me dió hueva escribir
+                                                            <img src="img/post-types.png" class="img-fluid">
+                                                            <img src="img/post-types1.png" class="img-fluid">
+                                                        </li>
+                                                        <li>Agregar el codigo de seguridad para que nadie pueda acceder a los archivos del plugin <code></code></li>
+                                                        <li>Puedes agregar cuantos post types quieras, solo cambiales el nombre</li>
+                                                    </ol>
+                                                </li>
                                                 <li></li>
                                             </ol>
 
@@ -6584,7 +6623,11 @@
                                             <ul>
                                                 <li><b>Regenerate Thumbnails</b> para que te de todos los tamaños de imagenes ese plugin, todas las imagenes que ya hayas subido pero no tengan ese tamaño, La ventaja es que tendrás muchos tamaño y eso ayuda
                                                     a que el sitio web sea más rápido</li>
-                                                <li></li>
+                                                <li><b>Advanced custom fields</b>: sirve para generar campos personalizados en la publicación que vayas a hacer
+                                                    <img src="img/advanced-custom-fields.png" class="img-fluid">
+                                                    <img src="img/advanced-custom-fields1.png" class="img-fluid">
+                                                    <img src="img/advanced-custom-fields2.png" class="img-fluid">
+                                                </li>
                                                 <li></li>
                                             </ul>
 
