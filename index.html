@@ -6382,7 +6382,7 @@
                                                 <li><b>__</b> el doble guión bajo sirve para traducir</li>
                                                 <li><b>Arreglos asociativos</b> son muy usados para hacer una consulta en Wordpress</li>
                                                 <li>La ventaja es que tendrás muchos tamaños y eso ayuda a que el sitio web sea más rápido</li>
-                                                <li><b></b></li>
+                                                <li><b><a href="https://developer.wordpress.org/reference/">DOCUMENTACION</a> </b> La documentacion de Wordpress es muy buena</li>
                                                 <li><b></b></li>
                                             </ul>
                                             <hr>
@@ -6398,6 +6398,7 @@
                                                 <li><b>get_header();</b> encuentra el archivo header en tu proyecto y muestra lo que haya ahí, es como un <b>include 'header.php';</b></li>
                                                 <li><b>get_footer();</b> encuentra el archivo footer en tu proyecto y muestra lo que haya ahí, es como un <b>include 'footer.php';</b></li>
                                                 <li><b>get_template_directory_uri(); /img/logo.svg</b> CONSIGUE la ruta de las imagenes pero tienes que poner la carpeta y el nombre de la imagen</li>
+                                                <li><b>get_sidebar();</b> encuentra el archivo siderbar en tu proyecto y muestra lo que haya ahí, es como un <b>include 'sidebar.php';</b></li>
                                                 <li><b>register_nav_menus()</b> registra los menus, puedes tener cuantos quieras, ejemplo:
                                                     <div class="card" style="width: 18rem;">
                                                         <div class="card-body">
@@ -6419,10 +6420,30 @@
                                                     <b>'thumbnail','medium','large'</b>, también puedes darle una clase específica a la imagen así <code>the_post_thumbnail('blog',array('class' => ('imagen-destacada')));</code></li>
                                                 <li><b>php get_sidebar(); </b> publica el sidebar en tu template/página</li>
                                                 <li><b>get_template_part('template-parts/paginas'); </b> sirve como un <b>include</b> de php</li>
+                                                <li><b>wp_reset_postdata();</b> se usa después de usar la clase <b>wp_query</b>, es una buena practica, sirve para decirle a Wordpress que puede seguir haciendo las cosas de la manera tradicional en que las
+                                                    hace
+                                                </li>
+                                                <li><b>the_field('dias_clase');</b> sirve para imprimir el campo del plugin <b>advanced custom field</b>
+                                                    <img src="img/advanced-custom-fields3.png" class="img-fluid">
+                                                </li>
+                                                <li><b>get_the_title();</b> sirve para guardar el titulo en una variable, todos los "the_algo" tienen su "get_", ejemplo: <code>$titulo = get_the_title();</code></li>
+                                                <li><b>dynamic_sidebar('sidebar_1');</b> id sidebar que está en el archivo functions.php</li>
                                                 <li><b></b></li>
                                                 <li><b></b></li>
                                                 <li><b></b></li>
+                                                <li><b></b></li>
+
                                             </ul>
+                                            <hr>
+
+                                            <h2>Clases dentro de Wordpress</h2>
+                                            <li><b><a href="https://developer.wordpress.org/reference/classes/wp_query/">wp_query</a></b> Hace una consulta a la base de datos para traer los resultados que traemos en nuestro Custom Post type, el nombre del
+                                                post type lo encuentras en gisea_prototype_post_types.php y en la parte donde dice register_post_type( 'gisea_clases', $args );, es <b>'gisea_clases'</b></li>
+                                            <li><b><a href=""></a></b></li>
+                                            <li><b><a href=""></a></b></li>
+                                            <li><b><a href=""></a></b></li>
+                                            <li><b><a href=""></a></b></li>
+                                            <li><b><a href=""></a></b></li>
 
                                             <h2>Hooks</h2>
                                             <p>En Wordpress cuando creas una función tienes que agregarle algo llamado <b>on Hook</b>, tiene como 4mil hooks Wordpress y son funciones que corren en determinado tiempo y en determinado lugar. A lo mucho se
@@ -6470,7 +6491,7 @@
                                             </ol>
                                             <hr>
 
-                                            <h2>Cosas importantes que haces en Wordpress</h2>
+                                            <h2>Cosas importantes que hacer en Wordpress</h2>
                                             <ol>
                                                 <li><b>Poner de inicio una pagina</b> Ajustes>lectura: Una cosa es definir el espacio en el que estara el menú y como se va llamar, otra es crearlo, otra es asignarlo y la última es, donde se va a ver.</li>
                                                 <li>
@@ -6613,8 +6634,38 @@
                                                         </li>
                                                         <li>Agregar el codigo de seguridad para que nadie pueda acceder a los archivos del plugin <code></code></li>
                                                         <li>Puedes agregar cuantos post types quieras, solo cambiales el nombre</li>
+                                                        <li>Al terminar debes ir a <b>Ajustes>enlaces permanentes>Guardar cambios</b> </li>
                                                     </ol>
                                                 </li>
+                                                <li><b><a href="https://developer.wordpress.org/reference/">DOCUMENTACION</a> </b> La documentacion de Wordpress es muy buena</li>
+                                                <li>
+                                                    <div class="card " style="width: 48rem; ">
+                                                        <div class="card-body" id="js-length">
+                                                            <p class="card-text espacio-codigo1 ">
+                                                                <b>Activando Widgets</b>son sidebars para mantener al usuario dentro del sitio(enviciarlos), puedes configurarlos y puedes poner el número de sitebars que quieras. El siderbar 1 se muestra
+                                                                en las entradas y el sidebar 2 en las clases </b> <br>
+                                                            </p>
+                                                            &lt; &gt;
+                                                            <p class="card-text espacio-codigo1 "><code>function gisea_prototype_widgets(){</code></p>
+                                                            <p class="card-text espacio-codigo1 ">//El widget se registra con esta función porque nunca se le cambió el nombre</p>
+                                                            <p class="card-text espacio-codigo1 "><code>register_sidebar(array(</code></p>
+                                                            <p class="card-text espacio-codigo1 "><code>'name' => 'Sidebar 1',//Nombre que se verá en el panel de administración</code></p>
+                                                            <p class="card-text espacio-codigo1 "><code>'id' => 'sidebar_1',//la manera en la que Wordpress reconoce el widget</code></p>
+                                                            <p class="card-text espacio-codigo1 "><code>'before_widget' => '&lt;div class="widget"&gt;',</code> //Contenido que vendrá antes del widget</p>
+                                                            <p class="card-text espacio-codigo1 "><code>'after_widget' => '&lt;/div&gt;',</code></p>
+                                                            <p class="card-text espacio-codigo1 "><code>'before_title' => '&lt;h3&gt;',</code></p>
+                                                            <p class="card-text espacio-codigo1 "><code>'after_title' => '&lt;/h3&gt;'</code></p>
+                                                            <p class="card-text espacio-codigo1 "><code>));</code></p>
+                                                            <img src="img/widgets.png" class="img-fluid">
+
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li></li>
+                                                <li></li>
+                                                <li></li>
+                                                <li></li>
+                                                <li></li>
                                                 <li></li>
                                             </ol>
 
@@ -8194,7 +8245,8 @@
                                             <li><a href="http://presenciaweb.net/tools/circulo-cromatico/" target="_blank">circulo-cromatico</a> eliges colores que combinen en tu sitio web</li>
                                             <li><a href="http://flexbox.help/">Flexbox help</a> </li>
                                             <li>
-                                                <a href=""></a>
+                                                <a href="https://www.colorzilla.com/gradient-editor/">Colorzilla</a>, degradados en CSS para ponerlas en tu imagen
+                                                <img src="img/colorzilla.png" class="img-fluid">
                                             </li>
                                             <li>
                                                 <a href=""></a>
