@@ -594,6 +594,15 @@
                                                     </ul>
                                                 </div>
                                                 <hr>
+                                                <div class="d-flex justify-content-around">
+                                                    <h2>CSS Grid</h2>
+                                                    <ul>
+                                                        <li><b>grid-template-columns: repeat(2, 1fr);</b> es como tener 50% 50%, fr significa una fraccion, otro ejemplo <code>repeat(2, 1fr); = 50 50 , repeat(4, 1fr); = 25 25 25 25</code></li>
+                                                        <li><b><a href="https://www.mozilla.org/es-MX/firefox/developer/">Mozilla developer edition</a></b> sirve mucho para CSS Grid, te muestra las columnas presionando el boton de Grid en <b>inspeccionar elemento</b>
+                                                            <br> Guiate por las columnas y filas del navegador <b>columnas es de izquierda a derecha y filas de arriba a abajo</b></li>
+                                                        <li></li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -6068,6 +6077,18 @@
                                                                 <a href="https://github.com/chniter/bstreeview">Bootstrap Treeview A very simple plugin to build a basic and elegant Treeview with bootstrap 4</a>
                                                             </li>
                                                             <li>
+                                                                <a href="https://lokeshdhakar.com/projects/lightbox2/">lightbox2</a> Puedes hacer galerías
+                                                            </li>
+                                                            <li>
+                                                                <a href=""></a>
+                                                            </li>
+                                                            <li>
+                                                                <a href=""></a>
+                                                            </li>
+                                                            <li>
+                                                                <a href=""></a>
+                                                            </li>
+                                                            <li>
                                                                 <a href=""></a>
                                                             </li>
                                                         </ul>
@@ -6383,6 +6404,9 @@
                                                 <li><b>Arreglos asociativos</b> son muy usados para hacer una consulta en Wordpress</li>
                                                 <li>La ventaja es que tendrás muchos tamaños y eso ayuda a que el sitio web sea más rápido</li>
                                                 <li><b><a href="https://developer.wordpress.org/reference/">DOCUMENTACION</a> </b> La documentacion de Wordpress es muy buena</li>
+                                                <li><a href="https://codex.wordpress.org/Conditional_Tags">Conditional Tags</a> Las etiquetas condicionales se pueden utilizar en sus archivos de plantilla para cambiar el contenido que se muestra y cómo se
+                                                    muestra ese contenido en una página en particular</li>
+                                                <li><b></b></li>
                                                 <li><b></b></li>
                                             </ul>
                                             <hr>
@@ -6428,6 +6452,10 @@
                                                 </li>
                                                 <li><b>get_the_title();</b> sirve para guardar el titulo en una variable, todos los "the_algo" tienen su "get_", ejemplo: <code>$titulo = get_the_title();</code></li>
                                                 <li><b>dynamic_sidebar('sidebar_1');</b> id sidebar que está en el archivo functions.php</li>
+                                                <li><b>get_post_gallery()</b>Verifique el contenido de una publicación específica para la galería y, si está presente, devuelve el primero</li>
+                                                <li><b>get_the_ID()</b> conseguimos el id de las imagenes</li>
+                                                <li><b>explode()</b> quita el caracter que le digas y lo guarda en un array</li>
+                                                <li><b>wp_get_attachment_image_src($id,'square')</b> Recupera una imagen para representar un archivo adjunto. Ejemplo: <code>$imagenThumb = wp_get_attachment_image_src($id,'square')[0];</code></li>
                                                 <li><b></b></li>
                                                 <li><b></b></li>
                                                 <li><b></b></li>
@@ -6646,10 +6674,10 @@
                                                                 en las entradas y el sidebar 2 en las clases </b> <br>
                                                             </p>
                                                             &lt; &gt;
-                                                            <p class="card-text espacio-codigo1 "><code>function gisea_prototype_widgets(){</code></p>
-                                                            <p class="card-text espacio-codigo1 ">//El widget se registra con esta función porque nunca se le cambió el nombre</p>
-                                                            <p class="card-text espacio-codigo1 "><code>register_sidebar(array(</code></p>
-                                                            <p class="card-text espacio-codigo1 "><code>'name' => 'Sidebar 1',//Nombre que se verá en el panel de administración</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>function gisea_prototype_widgets(){</code></p>
+                                                            <p class="card-text espacio-codigo1">//El widget se registra con esta función porque nunca se le cambió el nombre</p>
+                                                            <p class="card-text espacio-codigo1"><code>register_sidebar(array(</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>'name' => 'Sidebar 1',//Nombre que se verá en el panel de administración</code></p>
                                                             <p class="card-text espacio-codigo1 "><code>'id' => 'sidebar_1',//la manera en la que Wordpress reconoce el widget</code></p>
                                                             <p class="card-text espacio-codigo1 "><code>'before_widget' => '&lt;div class="widget"&gt;',</code> //Contenido que vendrá antes del widget</p>
                                                             <p class="card-text espacio-codigo1 "><code>'after_widget' => '&lt;/div&gt;',</code></p>
@@ -6661,8 +6689,8 @@
                                                         </div>
                                                     </div>
                                                 </li>
-                                                <li></li>
-                                                <li></li>
+                                                <li><b>agregar un formulario en el widget</b>, ir al archivo gisea_widgets.php</li>
+                                                <li><b>Agregar una galeria</b> ir al archivo <b>page-no-sidebar.php</b> y copiar el codigo</li>
                                                 <li></li>
                                                 <li></li>
                                                 <li></li>
@@ -6791,6 +6819,8 @@
                                                         </div>
                                                     </div>
                                                 </li>
+                                                <li><b>name</b> el name en php es lo que te hace acceder a los datos</li>
+                                                <li></li>
                                                 <li></li>
                                             </ol>
                                             <hr>
