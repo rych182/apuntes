@@ -6456,9 +6456,11 @@
                                                 <li><b>get_the_ID()</b> conseguimos el id de las imagenes</li>
                                                 <li><b>explode()</b> quita el caracter que le digas y lo guarda en un array</li>
                                                 <li><b>wp_get_attachment_image_src($id,'square')</b> Recupera una imagen para representar un archivo adjunto. Ejemplo: <code>$imagenThumb = wp_get_attachment_image_src($id,'square')[0];</code></li>
-                                                <li><b></b></li>
-                                                <li><b></b></li>
-                                                <li><b></b></li>
+                                                <li><b>the_permalink();</b> me lleva de un enlace al contenido</li>
+                                                <li><b>get_the_author_meta('ID')</b> esta es la función que tiene toda la información de un usuario <a href="https://developer.wordpress.org/reference/functions/get_the_author_meta/">checar</a>, en la sección
+                                                    de "mi perfil" en la parte superior derecha del panel de control, puedes ver tus datos, ahí hay una opción que dice "mostrar este nombre publicamente" y puedes cambiar el nombre con el que se veran los
+                                                    post del administrador, TODOS LOS GET REQUIEREN UN <b>ECHO</b> para mostrarse</li>
+                                                <li><b>the_time(get_option('date_format')); OBTENER FECHA</b> te pone la fecha del post, <b>get_option</b> es una forma en la que puedes obtener los valores de Wordpress</li>
                                                 <li><b></b></li>
 
                                             </ul>
@@ -6691,8 +6693,9 @@
                                                 </li>
                                                 <li><b>agregar un formulario en el widget</b>, ir al archivo gisea_widgets.php</li>
                                                 <li><b>Agregar una galeria</b> ir al archivo <b>page-no-sidebar.php</b> y copiar el codigo</li>
-                                                <li></li>
-                                                <li></li>
+                                                <li><b>Cambiar tu nombre en los post</b> "mi perfil" en la parte superior derecha del panel de control, puedes ver tus datos, ahí hay una opción que dice "mostrar este nombre publicamente" y puedes cambiar el
+                                                    nombre con el que se veran los post del administrador</li>
+                                                <li><b>agregar la seccion de blog</b> crear el home.php y copiar el codigo</li>
                                                 <li></li>
                                                 <li></li>
                                             </ol>
