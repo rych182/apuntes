@@ -1,4 +1,13 @@
-.contenedor {
+/*---------------GENERAL STYLES--------------*/
+
+.menusColapso {
+    margin-top: 75px;
+}
+
+
+/*---------------FINISH GENERAL STYLES--------------*/
+
+margin-top: 75px !important .contenedor {
     border: solid 1px green;
 }
 
@@ -468,7 +477,6 @@ div.polaroid13:hover {
 /*Ponerle íconos a la lista con life*/
 
 ul li {
-    list-style-image: url('../img/check.png');
     font-size: 16px;
 }
 
