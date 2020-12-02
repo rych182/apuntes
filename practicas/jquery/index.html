@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Exercises</title>
+    <style>
+        code {
+            color: palevioletred;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 class="saludo">Hello world</h1>
+    <p id="parrafo">Saludos para todos</p>
+    <div>=]</div>
+    <div></div>
+    <hr>
+
+    <div id="ejercicioDos">
+        <p>Primer forma de usar ready en jquery, hay mucho programador mamón. <b>ESTA ES LA FUNCIÓN RECOMENDADA</b></p>
+        <code>$(function() { alert("hola"); })</code>
+
+        <p>Segunda forma de usar ready en Jquery</p>
+        <code>$().ready(function() {alert("Segunda forma");})</code>
+
+        <p>Tercer forma de usar ready en Jquery</p>
+        <code>$(document).ready(function() {alert("Tercer forma");})</code>
+
+        <p>Cuarta forma de usar ready en Jquery</p>
+        <code>$('h1').ready(function() {alert("Tercer forma");})</code>
+    </div>
+    <hr>
+
+    <h2>Ejercicio Ocultando parrafos</h2>
+    <div class="pruebaHide1">
+        <p>Ocultando el parrafo</p>
+    </div>
+    <div class="pruebaHide2">
+        <p>Ocultando el parrafo</p>
+    </div>
+
+    <div class="pruebaHide3">
+        <p>Ocultando el parrafo</p>
+    </div>
+
+    <div id="pruebaHide1">
+        <p>Ocultando el parrafo</p>
+    </div>
+    <div id="pruebaHide2">
+        <p>Ocultando el parrafo</p>
+    </div>
+
+    <div id="pruebaHide3">
+        <p>Ocultando el parrafo</p>
+    </div>
+
+    <hr>
+
+
+    <script src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#parrafo').text('El texto ha sido modificado =D ');
+            $('.saludo').css({
+                'background-color': 'red',
+                'font-size': '42px'
+            });
+            //$('div').text('seleccionando la etiqueta y su contenido =D, todas las etiquetas div aunque esten vacías, tendrán este contenido ');
+        });
+
+        $('h2').ready(function() {
+            alert("Tercer forma");
+        });
+
+        $(document).ready(function() {
+            $('.pruebaHide1 , #pruebaHide2 , #pruebaHide3').hide();
+        });
+    </script>
+</body>
+
+</html>
