@@ -89,13 +89,138 @@
                         <a class="dropdown-item" href="marketing.html">Marketing</a>
                         <a class="dropdown-item" href="design.html">Design</a>
                         <a class="dropdown-item" href="business.html">Business</a>
-                        <a class="dropdown-item" href="frontend.pages.html">Cool Frontend Pages</a>
+                        <a class="dropdown-item" href="frontend-pages.html">Cool Frontend Pages</a>
                         <a class="dropdown-item" href="canada.html">Canada</a>
                     </div>
                 </li>
             </ul>
         </div>
     </nav>
+
+
+    <div class="container menusColapso">
+        <div class="card colapsos">
+            <div class="card-header" id="terminal-0">
+                <a data-toggle="collapse" href="#terminal" role="button" aria-expanded="false">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed colorTitulo" type="button" data-toggle="collapse" data-target="#terminal" aria-expanded="false">
+                            <i class="fas fa-terminal icono-terminal"></i> Terminal <i class="fab fa-windows icono-windows"></i>
+              </button>
+                    </h2>
+                </a>
+            </div>
+            <div id="terminal" class="collapse" aria-labelledby="terminal-0" data-parent="#accordionExample">
+                <div class="card-body">
+                    <div class="container">
+                        <h2>Comandos</h2>
+                        <ul>
+                            <li><b>cd</b> para entrar en una carpeta</li>
+                            <li><b>cd ..</b> para salir de una carpeta</li>
+                            <li><b>mkdir</b> para crear una carpeta</li>
+                            <li><b>ls</b> para ver los archivos y carpetas que hay</li>
+                            <li><b>touch</b> para crear un archivo</li>
+                            <li><b>pwd</b> para ver la ruta de donde estás posicionado</li>
+                            <li><b>rm</b> para borrar un archivo</li>
+                            <li><b>rmdir</b> para borrar un archivo</li>
+                            <li><b>cd--</b> te lleva a la raiz de tus principales carpetas</li>
+                            <li><b>mv archivo.txt /home/ric/Documentos/capetaMamalona</b> RECUERDA QUE PARA MOVER UN ARCHVIO LA RUTA COMIENZA USANDO /home/ric mueve el archivo a donde quieras mandarlo pero debes estar posicionado donde esta el archivo
+                            </li>
+                            <li><b>mv nombreviejoarchivo1 nombrenuevoarchivo1</b> RENOMBRAR archivo </li>
+                            <li><b>cp nombreArchivo /home/ric/Documentos/capetaMamalona</b> COPIA un archivo y lo pega en la dirección que le pongas</li>
+                            <li><b>cp -r nombreCarpeta /home/ric/Documentos/capetaMamalona</b> COPIA una carpeta y lo pega en la dirección que le pongas</li>
+                            <li><b>unzip arxhivo.zip</b> descomprime tu archivo zip, debes estar posicionado en la carpeta donde esta</li>
+                            <li><b>zip archivo.zip carpeta</b> COMPRIME tu <b>archivo ó carpeta llena de archivos</b> a .zip ,pero la carpeta se debe llamar igual que lo que estás comprimiendo</li>
+                            <li><b>tar -czvf nombreArchivo.tar.gz nombreCarpeta</b>a la carpeta que vas a comprimir le pones <b>tar.gz</b> y el nombre que quieras que lleve el archivo y después pones el nombre de la carpeta y ya</li>
+                            <li><b>tar -xzvf guara.tar.gz</b> para <b>descomprimir</b> los archivos .tar.gz</li>
+                            <li><b>sudo su</b>(para entrar como administrador)</li>
+                            <li><b>sudo /opt/lampp/lampp start</b> (inicializar xampp)</li>
+                            <li><b>chmod 755 instalador.exe</b> linea de comando para instalar xampp</li>
+                            <li><b>CTRL + SHIFT + D</b> salir de super usuario</li>
+                            <li>Permisos para modificar archivos y carpetas de XAMPP <a href="https://askubuntu.com/questions/596209/xampp-htdocs-folder-sub-folders-and-all-files-permission" target="_blank">Todo htdocs</a> y
+                                <a href="https://linuxgx.blogspot.com/2018/09/establecer-permisos-la-carpeta-htdocs.html" target="_blank">Crear accesos directos y dar 1 permiso</a></li>
+
+                        </ul>
+                        <ul>
+                            <h2>Comandos VIM</h2>
+                            <li><b>Instalar VIM en Ubuntu</b> <code>sudo apt install vim</code></li>
+                            <li><b>VIM</b> para entrar a VIM</li>
+                            <li><b>:edit nombreArchivo.txt</b> para entrar al archivo si has entrado directamente a VIM</li>
+                            <li><b>vim nombreArchivo.txt</b> para entrar al archivo</li>
+                            <li><b>w</b> te MUEVE al comienzo de la siguiente palabra</li>
+                            <li><b>e</b> te MUEVE al final de la siguiente palabra</li>
+                            <li><b>b</b> te MUEVE una palabra hacia atras</li>
+                            <li><b>j</b> te MUEVE un renglon hacia abajo</li>
+                            <li><b>3j</b> te MUEVE 3 lineas hacia abajo, tu puedes indicar cuantas lineas quieres bajar</li>
+                            <li><b>k</b> te MUEVE lineas hacia arriba</li>
+                            <li><b>3k</b> te MUEVE lineas hacia arriba, tu puedes indicar cuantas lineas quieres subir</li>
+                            <li><b>3w</b> te MUEVE 3 palabras adelante, tu puedes indicar cuantas palabras quieres mmoverte</li>
+                            <li><b>3b</b> te MUEVE 3 palabras hacia atras, tu puedes indicar cuantas palabras quieres mmoverte</li>
+                            <li><b>fX</b> encuentra la letra que buscas, "en la misma linea"</li>
+                            <li><b>0</b> para ubicarnos en el inicio de una linea</li>
+                            <li><b>$</b> para ubicarme al final de una linea</li>
+                            <li><b>*IncioPalabra</b> Encontrar la misma palabras dentro del texto</li>
+                            <li><b>%</b>lo pones donde se abre un parentesis y te lleva a donde se cierra</li>
+                            <li><b>gg</b> te lleva hasta el inicio del archivo</li>
+                            <li><b>GG</b> te lleva hasta la última linea de tu archivo</li>
+                            <li><b>15G</b> te lleva a la linea 15</li>
+                            <li><b>i</b>INSERT sirve para empezar a modificar tu archivo</li>
+                            <li><b>o</b> INSERT y te manda al final del renglon donde te hayas posicionado</li>
+                            <li><b>x</b> te BORRA caracteres sin necesidad de usar el comando <b>i</b></li>
+                            <li><b>dw</b> te CORTA una palabra, te tienes que colocar al inicio de esa palabra</li>
+                            <li><b>dw + .</b> te CORTA una palabra, te tienes que colocar al inicio de esa palabra y si presionas "." corta la siguiente</li>
+                            <li><b>.</b> repites el último comando</li>
+                            <li><b>dd</b> te CORTA todo un renglon</li>
+                            <li><b>yy</b> te COPIA todo un renglon</li>
+                            <li><b>3yy</b> te COPIA los 3 siguientes renglones</li>
+                            <li><b>3dd</b> te CORTA los siguientes 3 renglones</li>
+                            <li><b>p</b> te pega el renglon que cortaste usando <b>dd</b> ó <b>yy</b></li>
+                            <li><b>:w</b> para guardar lo que has escrito</li>
+                            <li><b>:wq</b> para guardar lo que has escrito y salir</li>
+                            <li><b>esc + :q!</b> <code>esc</code> es para que puedas escribir el comando y al escribir <code>:q!</code>salir sin guardar el archivo</li>
+                            <li><b>:q</b> para salir</li>
+                            <li><b>:help</b> para obtener ayuda</li>
+                            <li><b>:version</b> ver la version de VIM</li>
+                            <li><b>v + j ó k + d + p</b> CORTAR Y PEGAR, entras en <b>modo visual</b> para seleccionar todo lo que quieras usando <b>j</b> ó <b>k</b> y con <b>d</b> lo <b>cortas</b> y con <b>p</b> lo <b>pegas</b></li>
+                            <li><b>/Palabra</b> BUSCA la palabra</li>
+                            <li><b>/Palabra + n</b> BUSCA la palabra y al presionar <b>n</b> te muestra otra palabra igual</li>
+                            <li><b>/o$ + n</b> BUSCA todoas las palabras que terminen con esa letra y al presionar <b>n</b> </li>
+                            <li><b>:%s/que/con/g</b>Va a SUSTITUIR la palabra <b>que</b> por <b>con</b> en todo el documento, pero debes posicionarte al inicio del documento, la terminal te dirá, cuantas cosas substituiste</li>
+                            <li><b>u</b> ES LO MISMO QUE CTRL + Z, quita los cambios y te pone todo como estaba antes</li>
+                            <li><a href="https://vim-adventures.com/" target="_blank">vim-adventures</a> Video juego para aprender a usar <b>VIM</b></li>
+                        </ul>
+                        <ul>
+                            <h2>Referencias VIM</h2>
+                            <li><a href="https://vim-adventures.com/" target="_blank">vim-adventures</a> Video juego para aprender a usar <b>VIM</b></li>
+                            <li><a href="https://www.vim.org/" target="_blank">Aprender VIM</a> SU sitio oficial</li>
+                        </ul>
+                        <ol>
+                            <h2>Flujo de trabajo con VIM</h2>
+                            <li><b>Entrar al archivo</b></li>
+                            <li><b>3j</b> te MUEVE 3 lineas hacia abajo, tu puedes indicar cuantas lineas quieres bajar</li>
+                            <li><b>3k</b> te MUEVE lineas hacia arriba, tu puedes indicar cuantas lineas quieres subir</li>
+                            <li><b>0</b> para ubicarnos en el inicio de una linea</li>
+                            <li><b>$</b> para ubicarme al final de una linea </li>
+                            <li><b>gg</b> te lleva hasta el inicio del archivo</li>
+                            <li><b>GG</b> te lleva hasta la última linea de tu archivo</li>
+                            <li><b>15G</b> te lleva a la linea 15</li>
+                            <li><b>dw</b> te CORTA una palabra, te tienes que colocar al inicio de esa palabra</li>
+                            <li><b>dd</b> te CORTA todo un renglon</li>
+                            <li><b>yy</b> te COPIA todo un renglon</li>
+                            <li><b>3yy</b> te COPIA los 3 siguientes renglones</li>
+                            <li><b>3dd</b> te CORTA los siguientes 3 renglones</li>
+                            <li><b>p</b> te pega el renglon que cortaste usando <b>dd</b> ó <b>yy</b></li>
+                            <li><b>/Palabra</b> BUSCA la palabra</li>
+                            <li><b>u</b> ES LO MISMO QUE CTRL + Z, quita los cambios y te pone todo como estaba antes</li>
+                            <li><b>:w</b> para guardar lo que has escrito</li>
+                            <li><b>:q</b> para salir</li>
+                            <li><b>:wq</b> para guardar lo que has escrito y salir</li>
+                            <li><b>esc + :q!</b> <code>esc</code> es para que puedas escribir el comando y al escribir <code>:q!</code>salir sin guardar el archivo</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="js/jquery.js"></script>

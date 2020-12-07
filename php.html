@@ -89,13 +89,697 @@
                         <a class="dropdown-item" href="marketing.html">Marketing</a>
                         <a class="dropdown-item" href="design.html">Design</a>
                         <a class="dropdown-item" href="business.html">Business</a>
-                        <a class="dropdown-item" href="frontend.pages.html">Cool Frontend Pages</a>
+                        <a class="dropdown-item" href="frontend-pages.html">Cool Frontend Pages</a>
                         <a class="dropdown-item" href="canada.html">Canada</a>
                     </div>
                 </li>
             </ul>
         </div>
     </nav>
+
+    <div class="container menusColapso">
+        <div class="card colapsos">
+            <div class="card-header" id="jquery-0">
+                <a data-toggle="collapse" href="#nuevePuntoUno" role="button" aria-expanded="false">
+                    <h2 class="mb-0 ">
+                        <button class="btn btn-link collapsed  colorTitulo" type="button" data-toggle="collapse" data-target="#nuevePuntoUno" aria-expanded="false">
+                            <span style="font-size: 24px; color: BlueViolet;">
+                                <i class="fab fa-php"></i>PHP
+                            </span>
+                </button>
+                    </h2>
+                </a>
+            </div>
+            <div id="nuevePuntoUno" class="collapse" aria-labelledby="jquery-0" data-parent="#accordionExample">
+                <div class="card-body ">
+                    <div class="card  colapsos">
+                        <div class="card-header" id="wordpress-1-1">
+                            <a data-toggle="collapse" href="#wordpress-1-1-1" role="button" aria-expanded="false">
+                                <h5 class="mb-0 ">
+                                    <button class="btn btn-link colorTitulo" data-toggle="collapse" data-target="#wordpress-1-1-1" aria-expanded="true">
+                                        <span style="font-size: 24px; color: DarkSlateGrey;">
+                                            <i class="fab fa-wordpress"></i>
+                                        </span>
+                                    </button>
+                                </h5>
+                            </a>
+                        </div>
+
+                        <div id="wordpress-1-1-1" class="collapse show" aria-labelledby="wordpress-1-1" data-parent="#es6">
+                            <div class="card-body">
+                                <h2>Archivos</h2>
+                                <p>Los archivos de Wordpress deben de tener ciertos nombres para que wordpress los detecte, la jerarquia de temas y los nombres de los archivos los puedes ver <a href="https://developer.wordpress.org/files/2014/10/Screenshot-2019-01-23-00.20.04.png"
+                                        target="_blank">aquí</a>, mientras algo este más a la derecha es más general</p>
+                                <ul>
+                                    <li><b>index.php</b></li>
+                                    <li><b>style.css</b> wordpress espera el archivo <b>FUERA DE LA CARPETA CSS</b> así que no lo vayas a meter</li>
+                                    <li><b>page.php</b> las páginas apareceran aquí, checalo en las jerarquias.</li>
+                                    <li><b>single.php</b> los post apareceran aquí, checa la página de jerarquia para verificar</li>
+                                    <li><b></b></li>
+                                    <li><b></b></li>
+                                </ul>
+
+                                <hr>
+                                <h2>Plugins de Visual studio Code para Wordpress</h2>
+                                <ul>
+                                    <li><b>Wordpress Snippet</b></li>
+                                    <li><b>Wordpress Snippets</b></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <hr>
+
+                                <h2>FUnciones que existen en WOrdpress</h2>
+                                <ul>
+                                    <li><b>Usuario logeado:</b> si quieres saber si hay un usuario logeado</li>
+                                    <li><b>privilegios</b>Si quieres saber que privilegios tiene un usuario</li>
+                                    <li><b>Imprimir un menú</b></li>
+                                    <li><b>Un logo, imagen ó titulo</b> ya hay una función que hace eso en Wordpress</li>
+                                </ul>
+                                <hr>
+
+                                <h2>Nombrar tema de Wordpress</h2>
+                                <p>Para nombrar un tema de wordpress lo haces en el archivo <b>style.css</b> de la siguiente manera</p>
+                                <hr>
+
+                                <h2>Licencias</h2>
+                                <p><b>License: GNU general Public License v2 or later</b> te permite ganar dinero con el tema que compraste, pero lo que no esta permitido es revender el tema, solo tu lo puedes vender </p>
+                                <hr>
+
+                                <h2>Notas varias</h2>
+                                <ul>
+                                    <li>Para que Wordpress detecte el nombre de tu tema y demás datos, debes de ponerle un comentario con los datos.
+                                    </li>
+                                    <li>Wordpress recomienda usar esta sintaxis <br> <code>while (have_posts()):</code> <br>
+                                        <code>endwhile;</code>
+                                    </li>
+                                    <li><b>the_post();</b> , tiene la información de la base de datos</li>
+                                    <li><b>Loop</b> se refiere a que consultas la base de datos por medio de un while y te muestra los resultados</li>
+                                    <li><b>functions.php</b> debes de crear este archivo porque así lo pide wordpress, ahí estarán todas tus funciones</li>
+                                    <li><b>Prefijos:</b> es necesario que le pongas prefijos a las funciones que crees, por que cada plugin que instales en Wordpress tiene funciones con diferentes nombres y si alguna tiene un nombre igual que alguna función
+                                        que tu creaste, rompera tu codigo</li>
+                                    <li><b>Hooks:</b> son más de 4mil en Wordpress y son funciones que corren en determinado tiempo y en determinado lugar. A lo mucho se utilizan 20 ó 30 por proyecto</li>
+                                    <li><b>__</b> el doble guión bajo sirve para traducir</li>
+                                    <li><b>Arreglos asociativos</b> son muy usados para hacer una consulta en Wordpress</li>
+                                    <li>La ventaja es que tendrás muchos tamaños y eso ayuda a que el sitio web sea más rápido</li>
+                                    <li><b><a href="https://developer.wordpress.org/reference/">DOCUMENTACION</a> </b> La documentacion de Wordpress es muy buena</li>
+                                    <li><a href="https://codex.wordpress.org/Conditional_Tags">Conditional Tags</a> Las etiquetas condicionales se pueden utilizar en sus archivos de plantilla para cambiar el contenido que se muestra y cómo se muestra ese
+                                        contenido en una página en particular</li>
+                                    <li><b></b></li>
+                                    <li><b></b></li>
+                                </ul>
+                                <hr>
+
+                                <h2>Funciones dentro de Wordpress(se conocen como template_tags)</h2>
+                                <ul>
+                                    <li><b>have_posts()</b> Consulta la base de datos y revisa si hay algo en ella</li>
+                                    <li><b>the_post()</b> Tiene la información de la base de datos</li>
+                                    <li><b>the_title()</b> Te imprime el titulo de tus <b>páginas</b></li>
+                                    <li><b>the_content();</b> Imprime el contenido de tu página</li>
+                                    <li><b>the_author();</b> Imprime el autor</li>
+                                    <li><b>the_date();</b> Imprime la fecha</li>
+                                    <li><b>get_header();</b> encuentra el archivo header en tu proyecto y muestra lo que haya ahí, es como un <b>include 'header.php';</b></li>
+                                    <li><b>get_footer();</b> encuentra el archivo footer en tu proyecto y muestra lo que haya ahí, es como un <b>include 'footer.php';</b></li>
+                                    <li><b>get_template_directory_uri(); /img/logo.svg</b> CONSIGUE la ruta de las imagenes pero tienes que poner la carpeta y el nombre de la imagen</li>
+                                    <li><b>get_sidebar();</b> encuentra el archivo siderbar en tu proyecto y muestra lo que haya ahí, es como un <b>include 'sidebar.php';</b></li>
+                                    <li><b>register_nav_menus()</b> registra los menus, puedes tener cuantos quieras, ejemplo:
+                                        <div class="card" style="width: 18rem;">
+                                            <div class="card-body">
+                                                <p class="card-text espacio-codigo0"><code>function gymfitness_menu(){</code></p>
+                                                <p class="card-text espacio-codigo1"><code>register_nav_menus(array(</code></p>
+                                                <p class="card-text espacio-codigo1">//Lo que lee Wordpress| Lo que se va a mostrar en pantalla al usuario | Text Domain (viene en el CSS)</p>
+                                                <p class="card-text espacio-codigo0"><code>'menu-principal' => __('Menu principal', 'gymfitness')</code></p>
+                                                <p class="card-text espacio-codigo0"><code>));</code></p>
+                                                <p class="card-text espacio-codigo0"><code>}</code></p>
+                                                <p class="card-text espacio-codigo0"><code>add_action('init', 'gymfitness_menu');</code></p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li><b>wp_enqueue_style();</b> Nos permite cargar hojas de estilo y librerias de Javascript, incluso Angular, react y vue</li>
+                                    <li><b>get_stylesheet_uri()</b> nos permite leer la ubicacion de nuestra hoja de estilos y va a colocar la ruta, incluso cuando compartas el proyecto en otra computadora o lo subas a un servidor</li>
+                                    <li><b>wp_head();</b> sirve para activar tu hoja de estilos pero antes debes de poner todo los datos en la funcion <b>wp_enqueue_style();</b></li>
+                                    <li><b>get_bloginfo('name')</b> te da el nombre del sitio web</li>
+                                    <li><b>php the_post_thumbnail();</b> publica lo que tenga en tu página, sin esto, no aparece nada cuando das click en el menú que te llevará a la publicación que quieres ver, Los tamaños los defines usando
+                                        <b>'thumbnail','medium','large'</b>, también puedes darle una clase específica a la imagen así <code>the_post_thumbnail('blog',array('class' => ('imagen-destacada')));</code></li>
+                                    <li><b>php get_sidebar(); </b> publica el sidebar en tu template/página</li>
+                                    <li><b>get_template_part('template-parts/paginas'); </b> sirve como un <b>include</b> de php</li>
+                                    <li><b>wp_reset_postdata();</b> se usa después de usar la clase <b>wp_query</b>, es una buena practica, sirve para decirle a Wordpress que puede seguir haciendo las cosas de la manera tradicional en que las hace
+                                    </li>
+                                    <li><b>the_field('dias_clase');</b> sirve para imprimir el campo del plugin <b>advanced custom field</b>
+                                        <img src="img/advanced-custom-fields3.png" class="img-fluid">
+                                    </li>
+                                    <li><b>get_the_title();</b> sirve para guardar el titulo en una variable, todos los "the_algo" tienen su "get_", ejemplo: <code>$titulo = get_the_title();</code></li>
+                                    <li><b>dynamic_sidebar('sidebar_1');</b> id sidebar que está en el archivo functions.php</li>
+                                    <li><b>get_post_gallery()</b>Verifique el contenido de una publicación específica para la galería y, si está presente, devuelve el primero</li>
+                                    <li><b>get_the_ID()</b> conseguimos el id de las imagenes</li>
+                                    <li><b>explode()</b> quita el caracter que le digas y lo guarda en un array</li>
+                                    <li><b>wp_get_attachment_image_src($id,'square')</b> Recupera una imagen para representar un archivo adjunto. Ejemplo: <code>$imagenThumb = wp_get_attachment_image_src($id,'square')[0];</code></li>
+                                    <li><b>the_permalink();</b> me lleva de un enlace al contenido</li>
+                                    <li><b>get_the_author_meta('ID')</b> esta es la función que tiene toda la información de un usuario <a href="https://developer.wordpress.org/reference/functions/get_the_author_meta/">checar</a>, en la sección de "mi perfil"
+                                        en la parte superior derecha del panel de control, puedes ver tus datos, ahí hay una opción que dice "mostrar este nombre publicamente" y puedes cambiar el nombre con el que se veran los post del administrador,
+                                        TODOS LOS GET REQUIEREN UN <b>ECHO</b> para mostrarse</li>
+                                    <li><b>the_time(get_option('date_format')); OBTENER FECHA</b> te pone la fecha del post, <b>get_option</b> es una forma en la que puedes obtener los valores de Wordpress</li>
+                                    <li><b>get_queried_object();</b> nos dice la ultima query que se realizo, por eso cuando clickeamos una categoria nos dice cual clickeamos en el titulo <code>$categoria = get_queried_object();</code></li>
+                                    <li><b>get_page_by_title('Nuestras clases')</b> nos retorna cierta información de la página que le indiquemos</li>
+                                    <li><b>esc_url()</b> sirve para eliminar caracteres de la url, me imagino que se usa por seguridad</li>
+                                    <li><b>site_url('/')</b> te lleva a la url que le digas</li>
+                                    <li><b></b></li>
+
+                                </ul>
+                                <hr>
+
+                                <h2>Clases dentro de Wordpress</h2>
+                                <li><b><a href="https://developer.wordpress.org/reference/classes/wp_query/">wp_query</a></b> Hace una consulta a la base de datos para traer los resultados que traemos en nuestro Custom Post type, el nombre del post type lo
+                                    encuentras en gisea_prototype_post_types.php y en la parte donde dice register_post_type( 'gisea_clases', $args );, es <b>'gisea_clases'</b></li>
+                                <li><b><a href=""></a></b></li>
+                                <li><b><a href=""></a></b></li>
+                                <li><b><a href=""></a></b></li>
+                                <li><b><a href=""></a></b></li>
+                                <li><b><a href=""></a></b></li>
+
+                                <h2>Hooks</h2>
+                                <p>En Wordpress cuando creas una función tienes que agregarle algo llamado <b>on Hook</b>, tiene como 4mil hooks Wordpress y son funciones que corren en determinado tiempo y en determinado lugar. A lo mucho se utilizan 20
+                                    ó 30 por proyecto</p>
+                                <ul>
+                                    <li><b>add_action('init',);</b> esta funcion corre el <b>hook</b>(el primer parametro), indica que la funcion(que cree) va a correr encuato Wordpress arranque, osea en cuanto visite el sitio web</li>
+                                    <li><b></b></li>
+                                    <li><b></b></li>
+                                    <li><b></b></li>
+                                </ul>
+                                <hr>
+
+                                <h2>Instalar Wordpress en ubuntu</h2>
+                                <ol>
+                                    <li>Descargar Xampp e instalarlo con los comandos <b>chmod 755 instalador.exe</b></li>
+                                    <li>Ejecutarlo con el comando <b>sudo /opt/lampp/lampp start</b></li>
+                                    <li>Descargar Wordpress y moverlo a la carpeta <b>/opt/lampp/htdocs</b> y desempaquetalo, debes estar como super usuario</li>
+                                    <li>Crear una base de datos para word press en phpMyAdmin</li>
+                                    <li>Ir a <b>localhost/wordpress</b> para empezar la instalacion
+                                        <ol>
+                                            <li>Poner los sig datos: <b>database name, username(root),password(vacio), database host(localhost), y table prefix: wp_</b></li>
+                                            <li>Elegir <b>site title, username y password</b></li>
+                                        </ol>
+                                    </li>
+                                    <li>Probablemente xampp no tenga permisos, así que tengas que crear por consola el archivo <b>wp-config.php</b></li>
+                                    <li>Copia el codigo que te muestra Wordpress y pegalo en tu archivo <b>wp-config.php</b> dudas: <a href="https://www.5balloons.info/install-wordpress-localhost-xampp/" target="_blank">aquí</a></li>
+                                </ol>
+                                <hr>
+
+                                <h2>Instalar Wordpress con Local by FlyWheel en WIndows</h2>
+                                <ol>
+                                    <li>Instalar <a href="https://localwp.com/community/c/releases" target="_blank">Local by FlyWheel</a></li>
+                                    <li>Ponerle nombre en: <b>what's your site name?</b></li>
+                                    <li>En las opciones avanzadas puedes ver <b>local site domain: gymfitness.local y path: localsites/gymFitness</b>, ya están por default</li>
+                                    <li>Click en prefered</li>
+                                    <li>Agregar datos por default como:
+                                        <ol>
+                                            <li>wordpress usernsme: ric</li>
+                                            <li>wordpress password: 123</li>
+                                            <li>wordpress email : dev-email@flywheel.local</li>
+                                        </ol>
+                                    </li>
+                                    <li>Ya instalado, en el boton de admin, inicias sesion en wordpress para el panel de administracion</li>
+                                    <li>Instalar y activar Disable Gutenberg</li>
+                                </ol>
+                                <hr>
+
+                                <h2>Cosas importantes que hacer en Wordpress</h2>
+                                <ol>
+                                    <li><b>Poner de inicio una pagina</b> Ajustes>lectura: Una cosa es definir el espacio en el que estara el menú y como se va llamar, otra es crearlo, otra es asignarlo y la última es, donde se va a ver.</li>
+                                    <li>
+                                        <div class="card " style="width: 38rem; ">
+                                            <div class="card-body" id="js-length">
+                                                <p class="card-text espacio-codigo1 ">
+                                                    <b>Crear la seccioin de menpu en Wordpress</b> , crear el archivo de functions.php y agregar esto:
+                                                </p>
+                                                <p class="card-text espacio-codigo1 "><code>function aquapro_menus(){</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>register_nav_menus(array(</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>'menu-principal' => __('Menu Principal','AquaPro')</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>));</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>add_action('init','aquapro_menus');</code></p>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="card " style="width: 38rem; ">
+                                            <div class="card-body" id="js-length">
+                                                <p class="card-text espacio-codigo1 ">
+                                                    <b>El bucle de Worpress</b> para mostrar comentarios y publicaciones de la Base de datos
+                                                </p> &lt; &gt; &nbsp;
+                                                <p class="card-text espacio-codigo1 "><code>&lt;?php while ( have_posts()): the_post(); ?&gt;</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>&gt;h1&gt; &lt;?php the_title(); ?&gt; &gt;/h1&gt;</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>&lt;?php the_content(); ?&gt;</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>&lt;?php endwhile; ?&gt;</code></p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="card " style="width: 58rem; ">
+                                            <div class="card-body" id="js-length">
+                                                <p class="card-text espacio-codigo1 ">
+                                                    <b>Agregar una libreria</b>
+                                                </p>
+                                                <p class="card-text espacio-codigo1 "><code>function gisea_prototype_scripts_style(){</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>wp_enqueue_style('normalize',get_template_directory_uri() . '/css/normalize.css',array(),'8.0.1');</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>add_action('wp_enqueue_scripts','gisea_prototype_scripts_style');</code></p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <div class="card " style="width: 58rem; ">
+                                        <div class="card-body" id="js-length">
+                                            <p class="card-text espacio-codigo1 ">
+                                                <b>Agregar tipografias</b>
+                                            </p>
+                                            <p class="card-text espacio-codigo1 "><code>function gisea_prototype_scripts_style(){</code></p>
+                                            <p class="card-text espacio-codigo1 "><code>wp_enqueue_style('googleFont','https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700;900&family=Staatliches&display=swap"',array(),'1.0.0');</code></p>
+                                            <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                            <p class="card-text espacio-codigo1 "><code>add_action('wp_enqueue_scripts','gisea_prototype_scripts_style');</code></p>
+                                        </div>
+                                    </div>
+                                    <li><b>wp_footer();</b> te crea la barra de menú del <b>header</b> donde puedes ir al panel de control o al sitio y viceversa
+                                        <img src="img/wp_footer.png" class="img-fluid">
+                                    </li>
+                                    <li><b>Wordpress trae</b> por default varias librerias de js y hasta frameworks como backbone.js</li>
+                                    <li><b>Cambiar el titulo</b> Ajustes>generales</li>
+                                    <li>
+                                        <div class="card " style="width: 38rem; ">
+                                            <div class="card-body" id="js-length">
+                                                <p class="card-text espacio-codigo1 ">
+                                                    <b>Poner imagenes</b> para adjuntarlas en las publicaciones de las páginas<br> Pero para que se publique debes poner <b><?php the_post_thumbnail('large'); ?></b> en el archivo <b>page.php</b> <br> Los
+                                                    tamaños los defines usando <b>'thumbnail','medium','large'</b>
+                                                </p>
+                                                <p class="card-text espacio-codigo1 "><code>function gisea_prototype_setup(){</code></p>
+                                                <p class="card-text espacio-codigo1 ">//Habilitar imágenes destacadas</p>
+                                                <p class="card-text espacio-codigo1 "><code>add_theme_support('post-thumbnails');</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>add_action('after_setup_theme','gisea_prototype_setup');</code></p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li><b>regenerar imagenes Herramientas>Regenerate Thumbnails>presionar primer boton</b>, para que te de todos los tamaños de imagenes que hayas puesto en tu archivo <b>functions.php</b> ese plugin, todas las imagenes que
+                                        ya hayas subido pero no tengan ese tamaño, La ventaja es que tendrás muchos tamaños y eso ayuda a que el sitio web sea más rápido
+                                    </li>
+                                    <li>
+                                        <div class="card " style="width: 48rem; ">
+                                            <div class="card-body" id="js-length">
+                                                <p class="card-text espacio-codigo1 ">
+                                                    <b></b> <label style="color: red;" for="">Agregar templates</label> usando este codigo y crearas otro archivo que su nombre comience con <b>page</b> ejemplo <b>page-no-sidebar.php</b>
+                                                </p>
+                                                &lt; &gt; &nbsp;
+                                                <p class="card-text espacio-codigo1 "><code>/*</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>* Template Name: Contenido Centrado (No Sidebars)</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>*/</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>get_header(); ?></code></p>
+                                                <p class="card-text espacio-codigo1 "><code>&nbsp;&lt;main class="contenedor pagina seccion no-sidebar"&gt;</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>&nbsp;&nbsp;&lt;div class="contenido-principal"&gt;</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>&nbsp;&nbsp;&nbsp;&lt;?php while ( have_posts() ): the_post(); ?></code></p>
+                                                <p class="card-text espacio-codigo1 "><code>&nbsp;&nbsp;&nbsp;&lt;h1 class="text-center texto-primario"&gt; &lt;?php the_title(); ?> &lt;/h1&gt;</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>&nbsp;&nbsp;&nbsp;//el array hace que le des una clase específica a esa imagen destacada</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>&nbsp;&nbsp;&nbsp;&lt;?php the_post_thumbnail('blog',array('class' => ('imagen-destacada'))); ?></code></p>
+                                                <p class="card-text espacio-codigo1 "><code>&nbsp;&nbsp;&nbsp;&lt;?php the_content(); ?></code></p>
+                                                <p class="card-text espacio-codigo1 "><code>&nbsp;&nbsp;&nbsp;&lt;?php endwhile; ?></code></p>
+                                                <p class="card-text espacio-codigo1 "><code>&nbsp;&nbsp;&lt;/div&gt;</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>&nbsp;&lt;/main&gt;</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>&lt;?php get_footer(); ?></code></p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li><b>Activar slug</b> cuando esta en el panel de control de Wordpress en una página, en la parte superior que dice <b>opciones de pantalla</b> presionas <b>slug</b> y te mostrara en la parte inferior un pequeño formulario
+                                        que sirve para modificar el nombre del link con el que se vera la url de la página, también si creas un archivo con el nombre <b>page-nuestras-clases.php</b> la pagina usara ese archivo
+                                        <img src="img/slug1.png" class="img-fluid">
+                                        <img src="img/slug2.png" class="img-fluid">
+                                    </li>
+                                    <li><b>Custom Post Types</b> ¿Qúe son los <b>Post types</b>? Wordpress almacena los diferentes tipos de contenido y los agrupa en algo llamado post types, cada entrada de blog se le conoce como <b>post</b> y su post type
+                                        se le conoce como <b>posts</b>.
+                                        <b>actualmente en wordpress hay 7 Post Types</b>, tambiém puedes crear los tuyos. Existe 7 tipos de post:
+                                        <br>
+                                        <ul>
+                                            <li><b>post</b>: las entradas de blog</li>
+                                            <li><b>pages</b>: también tienen su propio post type</li>
+                                            <li><b>attachments</b>: fotos y video</li>
+                                            <li><b>menus</b>: los menus de navegacion también se almacenan</li>
+                                            <li><b>revisiones</b>: todos los cambios que se van haciendo en una entrada del blog</li>
+                                            <li><b>css</b> el css personalizado</li>
+                                            <li><b>Changesets</b> similar a una revision pero del customizr, el customizr almacena los cambios para que puedas revertilos, similar a git </li>
+                                        </ul>
+                                        <b>Ventajas y consideraciones</b><br>
+                                        <ul>
+                                            <li>Mejor orden en el area de administración</li>
+                                            <li>Un Post Type personalizado también tendrá acceso a los template files y funciones, es algo que tu creas pero que hereda toda la funcionalidad de wordpress</li>
+                                            <li>Puedes crear consultas personalizadas en tus post types</li>
+                                            <li>El codigo de un post type, se crea en un theme o en un plugin, las buenas practicas dicen que debe de ir en la carpeta de <b>plugin</b>, toda funcionalidad debe de ir en la carpeta de plugin</li>
+
+                                        </ul>
+                                    </li>
+                                    <li><b>Como crear un POST TYPE</b>:
+                                        <ol>
+                                            <li>Ir a la carpeta de plugins y crear una carpeta con el prefijo de tu tema</li>
+                                            <li>Crear dentro de la carpeta que creaste un archivo .php con el mismo nombre de la carpeta</li>
+                                            <li><a href="https://developer.wordpress.org/reference/functions/post_type_supports/">Referencia</a></li>
+                                            <li><a href="https://developer.wordpress.org/resource/dashicons/#album">Iconos de Wordpress</a></li>
+                                            <li>Agregar este <a href="https://gist.github.com/juanpablogdl/2ff8f4a6f0ed075fb284767a520f99f9">codigo</a> cambia el titulo y el nombre de la funcion, que sea corto y que la funcion coincida con el hook, dejo una
+                                                imagen para que veas comentarios porque ya me dió hueva escribir
+                                                <img src="img/post-types.png" class="img-fluid">
+                                                <img src="img/post-types1.png" class="img-fluid">
+                                            </li>
+                                            <li>Agregar el codigo de seguridad para que nadie pueda acceder a los archivos del plugin <code></code></li>
+                                            <li>Puedes agregar cuantos post types quieras, solo cambiales el nombre</li>
+                                            <li>Al terminar debes ir a <b>Ajustes>enlaces permanentes>Guardar cambios</b> </li>
+                                            <li>Esto al final te crea una opción en el panel de control
+                                                <img src="img/post-types2.png" class="img-fluid">
+                                            </li>
+                                        </ol>
+                                    </li>
+                                    <li><b><a href="https://developer.wordpress.org/reference/">DOCUMENTACION</a> </b> La documentacion de Wordpress es muy buena</li>
+                                    <li>
+                                        <div class="card " style="width: 48rem; ">
+                                            <div class="card-body" id="js-length">
+                                                <p class="card-text espacio-codigo1 ">
+                                                    <b>Activando Widgets</b>son sidebars para mantener al usuario dentro del sitio(enviciarlos), puedes configurarlos y puedes poner el número de sitebars que quieras. El siderbar 1 se muestra en las entradas
+                                                    y el sidebar 2 en las clases </b> <br>
+                                                </p>
+                                                &lt; &gt;
+                                                <p class="card-text espacio-codigo1"><code>function gisea_prototype_widgets(){</code></p>
+                                                <p class="card-text espacio-codigo1">//El widget se registra con esta función porque nunca se le cambió el nombre</p>
+                                                <p class="card-text espacio-codigo1"><code>register_sidebar(array(</code></p>
+                                                <p class="card-text espacio-codigo1"><code>'name' => 'Sidebar 1',//Nombre que se verá en el panel de administración</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>'id' => 'sidebar_1',//la manera en la que Wordpress reconoce el widget</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>'before_widget' => '&lt;div class="widget"&gt;',</code> //Contenido que vendrá antes del widget</p>
+                                                <p class="card-text espacio-codigo1 "><code>'after_widget' => '&lt;/div&gt;',</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>'before_title' => '&lt;h3&gt;',</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>'after_title' => '&lt;/h3&gt;'</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>));</code></p>
+                                                <img src="img/widgets.png" class="img-fluid">
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li><b>agregar un formulario en el widget</b>, ir al archivo gisea_widgets.php</li>
+                                    <li><b>Agregar una galeria</b> ir al archivo <b>page-no-sidebar.php</b> y copiar el codigo</li>
+                                    <li><b>Cambiar tu nombre en los post</b> "mi perfil" en la parte superior derecha del panel de control, puedes ver tus datos, ahí hay una opción que dice "mostrar este nombre publicamente" y puedes cambiar el nombre con
+                                        el que se veran los post del administrador</li>
+                                    <li><b>agregar la seccion de blog</b> crear el home.php y copiar el codigo, también crear <b>category.php</b> y <b>loop-blog.php</b> en la carpeta <b>template-parts</b></li>
+                                    <li><b>Soporte seo</b> Poner <code>add_theme_support('title-tag');</code> en functions.php</li>
+                                    <li>
+                                        </b><a href="https://codex.wordpress.org/Shortcode_API">Crear un shortcode</a><b> ejemplo: <code>[foobar]</code></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ol>
+
+                                <hr>
+                                <h2>Pluggins importantes de Wordpress</h2>
+                                <ul>
+                                    <li><b>Regenerate Thumbnails</b> para que te de todos los tamaños de imagenes ese plugin, todas las imagenes que ya hayas subido pero no tengan ese tamaño, La ventaja es que tendrás muchos tamaño y eso ayuda a que el
+                                        sitio web sea más rápido</li>
+                                    <li><b>Advanced custom fields</b>: sirve para generar campos personalizados en la publicación que vayas a hacer
+                                        <img src="img/advanced-custom-fields.png" class="img-fluid">
+                                        <img src="img/advanced-custom-fields1.png" class="img-fluid">
+                                        <img src="img/advanced-custom-fields2.png" class="img-fluid">
+                                    </li>
+                                    <li><b>Contact Form 7</b> para crear formularios, solo copias el mini-codigo y lo pegas en tu página de contacto, puedes personalizar el formulario usando las mismas clases y etiquetas que crea el plugin</li>
+                                    <li><b>Advanced Custom Fields: Leaflet Map Field</b> paraponer un mapa
+                                        <img src="img/leaflet-1.png" class="img-fluid">
+                                        <img src="img/leaflet-2.png" class="img-fluid">
+                                        <img src="img/leaflet-3.png" class="img-fluid">
+                                    </li>
+                                    <li></li>
+                                    <li></li>
+                                    </ul>
+
+                                    <hr>
+                                    <div>
+                                        <h2>Links importantes</h2>
+                                        <ul>
+                                            <li>
+                                                <a href="https://wpacademia.es/">wpacademia</a>
+                                            </li>
+
+                                            <li>
+                                                <a href="https://multilingualpress.org/">multilingualpress</a> pluggin que traduce
+                                            </li>
+
+                                            <li>
+                                                <a href="https://www.esthersola.com/">Esther Sola</a>
+                                            </li>
+
+                                            <li>
+                                                <a href="https://www.zonadpw.com/">zonadpw</a>
+                                            </li>
+
+                                            <li>
+                                                <a href="https://www.mojomarketplace.com/item/neilmink-parallax-lawyer-wordpress-theme?rr=cj">Tema conocido pero en Wordpress</a>
+                                            </li>
+
+                                            <li>
+                                                <a href="https://tranquilidadwp.com/">tranquilidadwp</a>
+                                            </li>
+
+                                            <li>
+                                                <a href="https://www.silocreativo.com/">silocreativo</a> Los que crean temas de wordpress bien calificados
+                                            </li>
+
+                                            <li>
+                                                <a href="https://ohyeahdev.com/">ohyeahdev</a> La empresa del español pueblerino
+                                            </li>
+
+                                            <li>
+                                                <a href="https://nbadiola.com/donde-aprender-wordpress/">nbadiola</a>
+                                            </li>
+
+                                            <li>
+                                                <a href="https://wplive.es/">wplive</a> entrevistas mamalonas de Wordpress
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card  colapsos">
+                        <div class="card-header" id="phppoo-1-1">
+                            <a data-toggle="collapse" href="#phppoo-1-1-1" role="button" aria-expanded="false">
+                                <h5 class="mb-0 ">
+                                    <button class="btn btn-link colorTitulo" data-toggle="collapse" data-target="#phppoo-1-1-1" aria-expanded="true">
+                                        <span style="font-size: 24px; color: DarkSlateGrey;">
+                                            <h2>PHP Programación estructurada y POO</h2>
+                                        </span>
+                                    </button>
+                                </h5>
+                            </a>
+                        </div>
+
+                        <div id="phppoo-1-1-1" class="collapse show" aria-labelledby="phppoo-1-1" data-parent="#es6">
+                            <div class="card-body">
+                                <h2>Notas curiosas</h2>
+                                <ol>
+                                    <li>Los valores boleanos <b>true</b> y <b>false</b> regresan los valores <b>1</b> y false no lo va a imprimir</li>
+                                    <li>En una condicional, si ninguna opción es valida, siempre toma la última</li>
+                                    <li><b>=!</b> significa <b>no es igual</b></li>
+                                    <li>
+                                        <div class="card " style="width: 18rem; ">
+                                            <div class="card-body" id="js-length">
+                                                <p class="card-text espacio-codigo1 ">
+                                                    Dentro de const no puedes utilizar variables ni funciones pero dentro de define si puedes utilizar variables y funciones
+                                                </p>
+                                                <p class="card-text espacio-codigo1 "><code>$path= 'cursoPHP/index.php';</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>define('PATH',$path);</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>echo PATH1;</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>define('PATH2',mt_rand());</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>echo PATH2;</code></p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="card " style="width: 18rem;">
+                                            <div class="card-body" id="js-length">
+                                                <p class="card-text espacio-codigo1">
+                                                    Forzar tipo de datos
+                                                </p>
+                                                <p class="card-text espacio-codigo1"><code>$price = 11.2;</code></p>
+                                                <p class="card-text espacio-codigo1"><code>$price=(int)$price;</code></p>
+                                                <p class="card-text espacio-codigo1"><code>echo var_dump($price);</code></p>
+                                                <p class="card-text espacio-codigo1">//se puede usar bool,int,double</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li><b>INTERPOLACION</b>Es poner una variable dentro de las comillas en un echo</li>
+                                    <li>
+                                        <div class="card " style="width: 18rem;">
+                                            <div class="card-body" id="js-length">
+                                                <p class="card-text espacio-codigo1">
+                                                    Llaves en una variable: Sirven para no escribas mal la variable
+                                                </p>
+                                                <p class="card-text espacio-codigo1"><code>$var = "codigo";</code></p>
+                                                <p class="card-text espacio-codigo1"><code>echo "Hola {$var} facilito";</code></p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li><b>name</b> el name en php es lo que te hace acceder a los datos</li>
+                                    <li></li>
+                                    <li></li>
+                                </ol>
+                                <hr>
+
+                                <h2>Errores en PHP</h2>
+                                <ul>
+                                    <p>Los errores de PHP tienen 3 partes</p>
+                                    <li>El "tipo" de error , que siempre está al principio</li>
+                                    <li>El mensaje de error, nos proporciona una pista sobre el error</li>
+                                    <li>El contesto del error, nos dice donde ocurrio</li>
+                                </ul>
+                                <h3>Los mensajes de error más populares</h3>
+                                <ol>
+                                    <li><b>Parse error:</b> se genera solo en tiempo de compilación</li>
+                                    <li><b>Fatal error:</b> envia un mensaje de advertencia y detiene la ejecución</li>
+                                    <li><b>Warning:</b> envia un mensaje de advertencia sin detener la ejecución , a diferencia de error fatal</li>
+                                    <li><b>Notices:</b> Aviso en tiempo de ejecución, aviso o nota de sugerencia, detalles vaya, nos indica cual fue el error pero se muestra un parte del resultado, en notices no se detiene la ejecución</li>
+                                </ol>
+
+                                <h2>Consejos</h2>
+                                <ol>
+                                    <li><b>var_dump/print_r/etiqueta pre</b> son tus mejores aliados al trabajar con arreglos</li>
+                                    <li><b>while</b> es el bucle más usado en Wordpress</li>
+                                    <li></li>
+                                </ol>
+
+                                <hr>
+                                <h2>Funciones de php muy usadas</h2>
+                                <ul>
+                                    <li><b>array_push($frutas,"pera");</b> agrega un elemento a tu array</li>
+                                    <li><b>unset($frutas[0]);</b> te elimina la posicion del melón en el array, también elimina variables</li>
+                                    <li><b>concatenar</b> usando el punto<b>.</b></li>
+                                    <li><b>Arreglos asociativos</b> son muy usados para hacer una consulta en Wordpress</li>
+                                    <li><b>var_dump vs print_r</b> ambos te imprimen el arreglo pero <b>var_dump</b> te dice que tipo de dato tiene el arreglo y POSICION</li>
+                                    <li><b>var_dump</b> con array normal te dice <b>POSICION</b>, tipo de dato y número de caracteres, con <b>array_asociativo</b> te dice el tipo de dato, nombre y contenido de cada casilla del array asociativo</li>
+                                    <li><b>isset($var)</b> Determina si una variable está definida y no es NULL</li>
+                                    <li><b>array_rand($elArray)</b> Sacar un dato aleatorio del array<br>
+                                        <code>$caja = array('Perro','Gato','Ratón','Perico');</code> <br>
+                                        <code>$indice = array_rand($caja);</code>
+                                    </li>
+                                    <li><b>gettype();</b>Te indica que tipo de valor es la variable</li>
+                                    <li><b>round(7.435,2)</b> redondea un número y te le puedes indicar cuantos decimales quieres que redonde</li>
+                                    <li><b>is_string();</b> Comprueba si la variable es una cadena de texto</li>
+                                    <li><b>is_float();</b>Comprueba si la variable es un número flotante</li>
+                                    <li><b>trim();</b> Quita los espacios al principio y al final</li>
+                                    <li><b>empty();</b> Checa si la variable tiene contenido</li>
+                                    <li><b>strlen($variable);</b> Cuenta los caracteres que hay en la variable</li>
+                                    <li><b>strpos($var,"palabra");</b> Busca donde esta una palabra dentro de una frase que es una cadena de texto</li>
+                                    <li><b>str_replace(palabra que reemplazaras, palabra nueva, $variable);</b> reemplaza una variable <br>
+                                        <code>$vowels = array("a", "e", "i", "o", "u", "A", "E", "I", "O", "U");</code> <br>
+                                        <code>$onlyconsonants = str_replace($vowels, "", "Hello World of PHP");</code> <br>
+                                        <code>echo $onlyconsonants;</code>
+                                    </li>
+                                    <li><b>strtolower();</b> pone todas las palabras del string en minusculas</li>
+                                    <li><b>strtoupper();</b> Pone todas las palabras del string en mayúsculas</li>
+                                    <li><b>ceil(12.001)</b> redondea hacia arriba</li>
+                                    <li><b>intval($var)</b>= tranforma tu dato a entero</li>
+                                    <li><b>boolval()</b>= tranforma tu dato a boleano</li>
+                                    <li><b>floatval()</b> = tranforma tu dato a flotante</li>
+                                    <li><b>strval()</b> = tranforma tu dato a string</li>
+                                    <li><b>substr("Marines Mendez Gallegos",8,6)</b> = te extrae texti de una cadena de texto 6 casillas a partir de la posicion 8, imprime Mendez, los acentos cuentan como caracter y si usas -8, te agarra los valores empezando
+                                        desde el final</li>
+                                    <li>
+                                        <div class="card " style="width: 18rem;">
+                                            <div class="card-body" id="js-length">
+                                                <p class="card-text espacio-codigo1">
+                                                    <b>preg_match($var2,$var1)</b>//Te pone 1 si encuentra una coincidencia y 0 si no
+                                                </p>
+                                                <p class="card-text espacio-codigo1"><code>$var1= "Hola mundo";</code></p>
+                                                <p class="card-text espacio-codigo1"><code>$var2= "/Hola/";</code></p>
+                                                <p class="card-text espacio-codigo1">checar documentacion</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="card " style="width: 18rem;">
+                                            <div class="card-body" id="js-length">
+                                                <p class="card-text espacio-codigo1">
+                                                    <b>sprintf($arg1,$arg2,$text);</b>, remmplaza %s por los datos que le pongas, checa documentacion
+                                                </p>
+                                                <p class="card-text espacio-codigo1"><code>$arg1=1994;</code></p>
+                                                <p class="card-text espacio-codigo1"><code>$arg2="php";</code></p>
+                                                <p class="card-text espacio-codigo1"><code>$text="En %s fue creado %s";</code></p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="card " style="width: 18rem;">
+                                            <div class="card-body" id="js-length">
+                                                <p class="card-text espacio-codigo1">
+                                                    <b></b>
+                                                </p>
+                                                <p class="card-text espacio-codigo1"><code>echo preg_match_all($var2,$var1,$match)</code> //Te devuelve un arreglo con lo que encontro</p>
+                                                <p class="card-text espacio-codigo1"><code>$var1 = 'Los numeros son 1 4 5 6';</code></p>
+                                                <p class="card-text espacio-codigo1"><code>$var2 = '/[0-9]/';</code></p>
+                                                <p class="card-text espacio-codigo1"><code>print_t($matches);</code></p>
+                                                <p class="card-text espacio-codigo1"><code>CHECAR DOCUMENTACIÓN</code></p>
+                                                <p class="card-text espacio-codigo1">//Puedes usarla para fechas y "\" este signo sirve por si no agarrar caracteres</p>
+                                                <p class="card-text espacio-codigo1">Lo aprendi en codigo facilito capítulo PCRE</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li><b></b></li>
+
+                                </ul>
+                                <hr>
+
+                                <h2>Funciones usadas pero no tanto</h2>
+                                <ul>
+                                    <li><b>date(d-m-Y);</b> Checar los formatos</li>
+                                    <li><b>sqrt();</b> Saca la raiz cuadrada</li>
+                                    <li><b>rand(10,40);</b> Genera un número aleatorio entre 2 cifras</li>
+                                    <li><b>pi();</b> genera el 3.1416</li>
+                                    <li><b>esc_attr()</b> Esa función es necesaria cuando vas a recibir datos que provengan del cliente, generalmente se usa para filtrar o prevenir que no se envíe código de JavaScript ni ningún tipo de inyección de código.
+                                        Siempre se usa cuando se escapan atributos HTML (especialmente valores de formulario) como alt, value, title, src, etc.</li>
+                                    <li><b></b></li>
+                                    <li><b></b></li>
+                                </ul>
+                                <hr>
+
+                                <h2>funciones para arrays</h2>
+                                <ul>
+                                    <li><b>asort</b>: te ordena el array alfabeticamente</li>
+                                    <li><b>arsort($nombres);</b> ordena el array de manera inversa</li>
+                                    <li><b>sort</b>: nos ordena un array numerico</li>
+                                    <li><b>array_push($elArray,$agregar)</b>: AGREGA un elemento al array</li>
+                                    <li><b>array_pop($elArray)</b>: te ELIMINA el último elemento del array</li>
+                                    <li><b>array_rand($elArray)</b>: te SELECCIONA un elemento aleatoriamente</li>
+                                    <li><b>array_reverse($numeros)</b>: imprime el orden inverso de un array de números</li>
+                                    <li><b>array_search('Hola',$elArray)</b>: busca dentro del array y te dice el indice en el que se encuentra</li>
+                                    <li><b>count($elArray)</b>: me dice el número de elementos que tiene mi array</li>
+                                    <li><b>sizeof($elArray)</b>: lo mismo que la función <b>count</b></li>
+                                </ul>
+
+                                <hr>
+                                <h2>Funciones ruta</h2>
+                                <ul>
+                                    <li><b>PATHINFO_BASENAME:</b> da el nombre del archivo con su extension</li>
+                                    <li><b>pathinfo('documento.txt', PATHINFO_BASENAME);</b></li>
+                                    <li><b>PATHINFO_DIRNAME</b> te da el nombre de la carpeta o las carpetas donde está tu archivo</li>
+                                    <li><b>PATHINFO_EXTENSION:</b> Te da la extensión de tu archivo</li>
+                                    <li><b>PATHINFO_FILENAME:</b> Nos devuelve el nombre del documento</li>
+                                    <li><b>$resultados = glob('*.php');</b> Nos permite buscar archivos dentro de una carpeta con la extensión que queramos</li>
+                                    <li><b>GLOB_BRACE</b>: te permite poner varias extensiones,OJO no pongas espacios entre las extensiones, Es muy útil para las imágenes y gif, <code>$resultados = glob('*.{php,txt,html}',GLOB_BRACE);</code> , también te
+                                        permite buscar entre carpetas, OJO, pon bien los slash y nombre de carpetas,<code>$resultados = glob('practicas/sesiones/*.{php,txt}', GLOB_BRACE); print_r($resultados);</code> </li>
+                                    <li><b>basename:</b> elimina toda la ruta de tu archivo y como segundo parametro también podemos eliminar el parametro <code>echo basename('carpeta1/carpeta2/archivo.php','.php');</code></li>
+                                    <li><b>dirname:</b>te devuelve la ruta de donde está tu archvo</li>
+                                </ul>
+                                <hr>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="js/jquery.js"></script>
