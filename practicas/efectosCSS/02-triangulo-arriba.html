@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            background-color: #a8cf45;
+            margin: 50px 50px;
+            text-align: center;
+            font-weight: bolder;
+            padding: 15px 30px;
+            width: 80px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        
+        .triangulo-top {
+            transform: translateX(0);
+        }
+        
+        .triangulo-top::before {
+            content: '';
+            transition-duration: 500ms;
+            border-style: solid;
+            border-width: 0px 15px 15px 15px;
+            /*cambiale los colores a todos menos al red para que veas el resultado*/
+            border-color: transparent transparent #a8cf45 transparent;
+            /*el absolute hace que se mueva dentro de la caja padre*/
+            position: absolute;
+            left: 50%;
+            top: 0;
+            /*como ya tiene 30px de altura le quito 15px*/
+            margin-left: -15px;
+        }
+        
+        .triangulo-top:hover::before {
+            top: -15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="triangulo-top">
+        <p>Triangulo Top</p>
+    </div>
+</body>
+
+</html>

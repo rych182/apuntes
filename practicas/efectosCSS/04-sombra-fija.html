@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            background-color: #a8cf45;
+            margin: 50px 50px;
+            text-align: center;
+            font-weight: bolder;
+            padding: 15px 30px;
+            width: 80px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        
+        .sombra-fija {
+            /*Para que no se descuadre*/
+            transform: translateX(0);
+        }
+        
+        .sombra-fija::before {
+            content: '';
+            position: absolute;
+            width: 90%;
+            left: 5%;
+            top: 100%;
+            height: 10px;
+            background: -moz-radial-gradient( center, ellipse, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+            background: -webkit-radial-gradient( center, ellipse, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+            -moz-transition-duration: .5s;
+            -webkit-transition-duration: .5s;
+            opacity: 0;
+        }
+        
+        .sombra-fija:hover::before {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sombra-fija">
+        <p>Sombra Fija</p>
+    </div>
+</body>
+
+</html>

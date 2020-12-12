@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            background-color: #a8cf45;
+            margin: 50px 50px;
+            text-align: center;
+            font-weight: bolder;
+            padding: 15px 30px;
+            width: 80px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        
+        .esquina-pagina {
+            transform: translateX(0);
+        }
+        
+        .esquina-pagina::before {
+            content: '';
+            position: absolute;
+            /*con el left y bottom pones lacaja en la esquina inferior izquierda*/
+            left: 0px;
+            bottom: 0px;
+            width: 0;
+            height: 0;
+            background: linear-gradient( 45deg, white 45%, #aaa 50%, #ccc 60%, white);
+            transition-duration: .5s;
+        }
+        
+        .esquina-pagina:hover::before {
+            width: 35px;
+            height: 35px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="esquina-pagina">
+        <p>Esquina de la página</p>
+    </div>
+</body>
+
+</html>
