@@ -100,13 +100,107 @@
             display: flex;
             flex-flow: row wrap-reverse;
         }
+        
+        .justify-content-start {
+            background: #333333;
+            height: 30vh;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+        }
+        
+        .justify-content-end {
+            background: #333333;
+            height: 30vh;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-end;
+        }
+        
+        .justify-content-center {
+            background: #333333;
+            height: 30vh;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+        }
+        
+        .justify-content-space-between {
+            background: #333333;
+            height: 30vh;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+        }
+        
+        .justify-content-space-around {
+            background: #333333;
+            height: 30vh;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+        }
+        
+        .justify-content-space-evenly {
+            background: #333333;
+            height: 30vh;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+        }
+        
+        .justify-column-flex-start {
+            background: #333333;
+            height: 30vh;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: flex-start;
+        }
+        
+        .justify-column-flex-end {
+            background: #333333;
+            height: 30vh;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: flex-end;
+        }
+        
+        .justify-column-space-between {
+            background: #333333;
+            height: 30vh;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-between;
+        }
+        
+        .justify-column-space-around {
+            background: #333333;
+            height: 30vh;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-around;
+        }
+        
+        .justify-column-space-evenly {
+            background: #333333;
+            height: 30vh;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-evenly;
+        }
     </style>
 
 </head>
 
 <body>
     <strong>En FLEXBOX, o tenemos FILAS ó COLUMNAS, por eso se dice que es UNIDIMENSIONAL</strong>
-    <p>La dirección por defecto de flex es alinearse en fila a la izquierda una caja al lado de la otra</p>
+    <p>La dirección por defecto de flex es alinearse en fila a la izquierda una caja al lado de la otra ejemplo: </p>
+    <ul>
+        <li><b>flex-direction: row;</b></li>
+        <li><b>flex-wrap: nowrap;</b></li>
+        <li><b>flex-flow: row nowrap;</b></li>
+        <li><b>justify-content: flex-start;</b></li>
+    </ul>
     <p><b>display: block</b> usa todo el espacio de manera horizontal y pone todo uno debajo del otro</p>
     <p><b>display: inline-flex</b> utilizan solo el espacio <b>que necesitan</b></p>
     <hr>
@@ -301,6 +395,120 @@
         <article class="item-altura">Flex Item 9</article>
         <article class="item-altura">Flex Item 10</article>
         <article class="item-altura">Flex Item 11</article>
+    </section>
+    <hr>
+
+
+    <h2>justify-content = <label style="color: red;">flex-flow(flex-direction + flex-wrap) + justify-content(flex-start | flex-end | center | space-between | space-around | space-evenly) </label></h2>
+    <p><b>flex-flow: row wrap; + justify-content: flex-start;</b> Sirve para poner al inicio los bloques</p>
+    <section class="container justify-content-start">
+        <article class="item-altura">Flex Item 1</article>
+        <article class="item-altura">Flex Item 2</article>
+        <article class="item-altura">Flex Item 3</article>
+    </section>
+    <hr>
+
+
+    <h2>justify-content = <label style="color: red;">flex-flow(flex-direction + flex-wrap) + justify-content(flex-start | flex-end | center | space-between | space-around | space-evenly) </label></h2>
+    <p><b>flex-flow: row wrap; + justify-content: flex-end;</b> Sirve para poner al final los bloques</p>
+    <section class="container justify-content-end">
+        <article class="item-altura">Flex Item 1</article>
+        <article class="item-altura">Flex Item 2</article>
+        <article class="item-altura">Flex Item 3</article>
+    </section>
+    <hr>
+
+
+    <h2>justify-content = <label style="color: red;">flex-flow(flex-direction + flex-wrap) + justify-content(flex-start | flex-end | center | space-between | space-around | space-evenly) </label></h2>
+    <p><b>flex-flow: row wrap; + justify-content: flex-start;</b> Sirve para poner al inicio los bloques</p>
+    <section class="container justify-content-center">
+        <article class="item-altura">Flex Item 1</article>
+        <article class="item-altura">Flex Item 2</article>
+        <article class="item-altura">Flex Item 3</article>
+    </section>
+    <hr>
+
+
+    <h2>justify-content = <label style="color: red;">flex-flow(flex-direction + flex-wrap) + justify-content(flex-start | flex-end | center | space-between | space-around | space-evenly) </label></h2>
+    <p><b>flex-flow: row wrap; + justify-content: space-between;</b> Sirve para poner al inicio los bloques</p>
+    <section class="container justify-content-space-between">
+        <article class="item-altura">Flex Item 1</article>
+        <article class="item-altura">Flex Item 2</article>
+        <article class="item-altura">Flex Item 3</article>
+    </section>
+    <hr>
+
+
+    <h2>justify-content = <label style="color: red;">flex-flow(flex-direction + flex-wrap) + justify-content(flex-start | flex-end | center | space-between | space-around | space-evenly) </label></h2>
+    <p><b>flex-flow: row wrap; + justify-content: space-around;</b> Sirve para poner al inicio los bloques</p>
+    <section class="container justify-content-space-around">
+        <article class="item-altura">Flex Item 1</article>
+        <article class="item-altura">Flex Item 2</article>
+        <article class="item-altura">Flex Item 3</article>
+    </section>
+    <hr>
+
+
+    <h2>justify-content = <label style="color: red;">flex-flow(flex-direction + flex-wrap) + justify-content(flex-start | flex-end | center | space-between | space-around | space-evenly) </label></h2>
+    <p><b>flex-flow: row wrap; + justify-content: space-evenly;</b> Sirve para poner al inicio los bloques</p>
+    <section class="container justify-content-space-evenly">
+        <article class="item-altura">Flex Item 1</article>
+        <article class="item-altura">Flex Item 2</article>
+        <article class="item-altura">Flex Item 3</article>
+    </section>
+    <hr>
+
+    <h2>justify-content = <label style="color: red;">flex-flow(flex-direction + flex-wrap) + justify-content(flex-start | flex-end | center | space-between | space-around | space-evenly) </label></h2>
+    <p><b>flex-flow: row wrap; + justify-content: flex-start;</b> Sirve para poner al inicio los bloques</p>
+    <section class="container justify-column-flex-start">
+        <article class="item-altura">Flex Item 1</article>
+        <article class="item-altura">Flex Item 2</article>
+        <article class="item-altura">Flex Item 3</article>
+    </section>
+    <hr>
+
+    <h2>justify-content = <label style="color: red;">flex-flow(flex-direction + flex-wrap) + justify-content(flex-start | flex-end | center | space-between | space-around | space-evenly) </label></h2>
+    <p><b>flex-flow: column wrap; + justify-content: flex-end;</b> Sirve para poner al inicio los bloques</p>
+    <section class="container justify-column-flex-end">
+        <article class="item-altura">Flex Item 1</article>
+        <article class="item-altura">Flex Item 2</article>
+        <article class="item-altura">Flex Item 3</article>
+    </section>
+    <hr>
+
+    <h2>justify-content = <label style="color: red;">flex-flow(flex-direction + flex-wrap) + justify-content(flex-start | flex-end | center | space-between | space-around | space-evenly) </label></h2>
+    <p><b>flex-flow: column wrap; + justify-content: center;</b> Sirve para poner al inicio los bloques</p>
+    <section class="container justify-column-flex-center">
+        <article class="item-altura">Flex Item 1</article>
+        <article class="item-altura">Flex Item 2</article>
+        <article class="item-altura">Flex Item 3</article>
+    </section>
+    <hr>
+
+    <h2>justify-content = <label style="color: red;">flex-flow(flex-direction + flex-wrap) + justify-content(flex-start | flex-end | center | space-between | space-around | space-evenly) </label></h2>
+    <p><b>flex-flow: column wrap; + justify-content: space-between;</b> Sirve para poner al inicio los bloques</p>
+    <section class="container justify-column-space-between ">
+        <article class="item-altura">Flex Item 1</article>
+        <article class="item-altura">Flex Item 2</article>
+        <article class="item-altura">Flex Item 3</article>
+    </section>
+    <hr>
+
+    <h2>justify-content = <label style="color: red;">flex-flow(flex-direction + flex-wrap) + justify-content(flex-start | flex-end | center | space-between | space-around | space-evenly) </label></h2>
+    <p><b>flex-flow: column wrap; + justify-content: space-around;</b> Sirve para poner al inicio los bloques</p>
+    <section class="container justify-column-space-around ">
+        <article class="item-altura">Flex Item 1</article>
+        <article class="item-altura">Flex Item 2</article>
+        <article class="item-altura">Flex Item 3</article>
+    </section>
+    <hr>
+
+    <h2>justify-content = <label style="color: red;">flex-flow(flex-direction + flex-wrap) + justify-content(flex-start | flex-end | center | space-between | space-around | space-evenly) </label></h2>
+    <p><b>flex-flow: column wrap; + justify-content: space-evenly;</b> Sirve para poner al inicio los bloques</p>
+    <section class="container justify-column-space-evenly ">
+        <article class="item-altura">Flex Item 1</article>
+        <article class="item-altura">Flex Item 2</article>
+        <article class="item-altura">Flex Item 3</article>
     </section>
     <hr>
 </body>
