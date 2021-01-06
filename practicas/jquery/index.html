@@ -9,6 +9,16 @@
         code {
             color: palevioletred;
         }
+        
+        h2#efectos {
+            text-align: center;
+        }
+        
+        .caja {
+            width: 200px;
+            height: 200px;
+            background: #000;
+        }
     </style>
 </head>
 
@@ -60,6 +70,9 @@
 
     <hr>
 
+    <h2 id="efectos">Efectos</h2>
+    <button onclick="efecto()">Efecto</button>
+    <div class="caja"></div>
 
     <script src="js/jquery.js"></script>
     <script>
@@ -79,6 +92,30 @@
         $(document).ready(function() {
             $('.pruebaHide1 , #pruebaHide2 , #pruebaHide3').hide();
         });
+        //sección de efectos
+        function efecto() {
+            //$(seleccionarAlgo).efecto(velocidad,callbakc(una funcion dentro de una función))
+            /*
+            $('.caja').hide(2000, function() {
+                alert("He ocultado la caja negra")
+            });
+
+            $('.caja').fadeIn(2000); sirve para mostrar algo oculto
+            $('.caja').fadeIn(2000); sirve para aparecer las cosas como show
+            $('.caja').toggle(2000); aparece y desaparece dando click
+            $('.caja').fadeOut(2000); sirve para desaparecer objetos
+            $('.caja').fadeToggle(3000);
+            $('.caja').fadeIn(2000);
+            $('.caja').slideDown(3000); desaparece desde abajo
+            $('.caja').slideUp(3000); se oculta desde arriba 
+            $('.caja').slidToggle(3000);
+
+
+
+            */
+            $('.caja').slideToggle(3000);
+
+        }
     </script>
 </body>
 

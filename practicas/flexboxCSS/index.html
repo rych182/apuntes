@@ -188,6 +188,161 @@
             flex-flow: column wrap;
             justify-content: space-evenly;
         }
+        /*------------ align-items---------------*/
+        
+        .align-items-stretch {
+            background: #333333;
+            height: 30vh;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+            align-items: stretch;
+        }
+        
+        .align-items-flex-start {
+            background: #333333;
+            height: 30vh;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+        
+        .align-items-flex-end {
+            background: #333333;
+            height: 30vh;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+            align-items: flex-end;
+        }
+        
+        .align-items-center {
+            background: #333333;
+            height: 30vh;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+            align-items: stretch;
+        }
+        
+        .align-items-column-flex-start {
+            background: #333333;
+            height: 30vh;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+        
+        .align-items-column-flex-end {
+            background: #333333;
+            height: 30vh;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: flex-start;
+            align-items: flex-end;
+        }
+        
+        .align-items-column-center {
+            background: #333333;
+            height: 30vh;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        /*------------------ALIGN CONTENT----------------------*/
+        
+        .align-content-flex-start {
+            background: #333333;
+            height: 30vh;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: flex-start;
+            align-content: flex-start;
+        }
+        
+        .align-content-flex-end {
+            background: #333333;
+            height: 30vh;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: flex-start;
+            align-content: flex-end;
+        }
+        
+        .align-content-center {
+            background: #333333;
+            height: 30vh;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: flex-start;
+            align-content: center;
+        }
+        
+        .align-content-space-between {
+            background: #333333;
+            height: 30vh;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: flex-start;
+            align-content: space-between;
+        }
+        
+        .align-content-space-around {
+            background: #333333;
+            height: 30vh;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: flex-start;
+            align-content: space-around;
+        }
+        
+        .align-content-flex-start-row {
+            background: #333333;
+            height: 30vh;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            align-content: flex-start;
+        }
+        
+        .align-content-flex-end-row {
+            background: #333333;
+            height: 30vh;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            align-content: flex-end;
+        }
+        
+        .align-content-center-row {
+            background: #333333;
+            height: 30vh;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            align-content: center;
+        }
+        
+        .align-content-space-between-row {
+            background: #333333;
+            height: 30vh;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            align-content: space-between;
+        }
+        
+        .align-content-space-around-row {
+            background: #333333;
+            height: 30vh;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            align-content: space-around;
+        }
     </style>
 
 </head>
@@ -257,6 +412,9 @@
         <article class="item">Flex Item 3</article>
     </section>
     <hr>
+
+    <h2>Tecnicamente WRAP y NOWRAP es para saber si la caja flex envuelve o no envuelve todos sus hijos</h2>
+
 
     <h2>flex-direction: row; <label style="color: red;">flex-wrap: nowrap;</label></h2>
     <p><b>flex-direction: row; flex-wrap: nowrap;</b> Va a mantener en una linea todas las cajas </p>
@@ -399,6 +557,8 @@
     <hr>
 
 
+    <h2>justify-content depende de flex direction, si es fila o columna</h2>
+
     <h2>justify-content = <label style="color: red;">flex-flow(flex-direction + flex-wrap) + justify-content(flex-start | flex-end | center | space-between | space-around | space-evenly) </label></h2>
     <p><b>flex-flow: row wrap; + justify-content: flex-start;</b> Sirve para poner al inicio los bloques</p>
     <section class="container justify-content-start">
@@ -511,6 +671,262 @@
         <article class="item-altura">Flex Item 3</article>
     </section>
     <hr>
+
+
+
+
+    <h2><label style="color: red;">align-items: stretch;</label></h2>
+    <p><b>flex-flow: row wrap; + justify-content: flex-start; align-items: stretch;</b> estira las cajas, sea column o row lo que hayas puesto en flex-flow, igual las va a estirar</p>
+    <section class="container align-items-stretch">
+        <article class="item-altura">Flex Item 1</article>
+        <article class="item-altura">Flex Item 2</article>
+        <article class="item-altura">Flex Item 3</article>
+        <article class="item-altura">Flex Item 4</article>
+        <article class="item-altura">Flex Item 5</article>
+        <article class="item-altura">Flex Item 6</article>
+        <article class="item-altura">Flex Item 7</article>
+        <article class="item-altura">Flex Item 8</article>
+        <article class="item-altura">Flex Item 9</article>
+    </section>
+    <hr>
+
+
+    <h2><label style="color: red;">align-items: flex-end;</label> TRABAJA DE MANERA INDEPENDIENTE CADA LINEA</h2>
+    <p><b>flex-flow: row wrap; + justify-content: flex-start; align-items: stretch;</b> alinea las cajas al final</p>
+    <section class="container align-items-flex-end">
+        <article class="item-altura">Flex Item 1</article>
+        <article class="item-altura">Flex Item 2</article>
+        <article class="item-altura">Flex Item 3</article>
+        <article class="item-altura">Flex Item 4</article>
+        <article class="item-altura">Flex Item 5</article>
+        <article class="item-altura">Flex Item 6</article>
+        <article class="item-altura">Flex Item 7</article>
+        <article class="item-altura">Flex Item 8</article>
+        <article class="item-altura">Flex Item 9</article>
+    </section>
+    <hr>
+
+
+    <h2><label style="color: red;">align-items: flex-start;</label></h2>
+    <p><b>flex-flow: row wrap; + justify-content: flex-start; align-items: stretch;</b> alinea las cajas al inicio</p>
+    <section class="container align-items-flex-start">
+        <article class="item-altura">Flex Item 1</article>
+        <article class="item-altura">Flex Item 2</article>
+        <article class="item-altura">Flex Item 3</article>
+        <article class="item-altura">Flex Item 4</article>
+        <article class="item-altura">Flex Item 5</article>
+        <article class="item-altura">Flex Item 6</article>
+        <article class="item-altura">Flex Item 7</article>
+        <article class="item-altura">Flex Item 8</article>
+        <article class="item-altura">Flex Item 9</article>
+    </section>
+    <hr>
+
+    <h2><label style="color: red;">align-items: center;</label></h2>
+    <p><b>flex-flow: column wrap; + justify-content: flex-start; align-items: center;</b> estira las cajas, sea column o row lo que hayas puesto en flex-flow, igual las va a estirar</p>
+    <section class="container align-items-stretch">
+        <article class="item-altura">Flex Item 1</article>
+        <article class="item-altura">Flex Item 2</article>
+        <article class="item-altura">Flex Item 3</article>
+        <article class="item-altura">Flex Item 4</article>
+        <article class="item-altura">Flex Item 5</article>
+        <article class="item-altura">Flex Item 6</article>
+        <article class="item-altura">Flex Item 7</article>
+        <article class="item-altura">Flex Item 8</article>
+        <article class="item-altura">Flex Item 9</article>
+    </section>
+
+    <!-- AGREGAR ESTE ULTIMO EJERCICIO PERO USANDO COLUMNAS-->
+
+    <h2><label style="color: red;">align-items: flex-start;</label></h2>
+    <p><b>flex-flow: column wrap; + justify-content: flex-start; align-items: center;</b> estira las cajas, sea column o row lo que hayas puesto en flex-flow, igual las va a estirar</p>
+    <section class="container align-items-column-flex-start">
+        <article class="item-altura">Flex Item 1</article>
+        <article class="item-altura">Flex Item 2</article>
+        <article class="item-altura">Flex Item 3</article>
+        <article class="item-altura">Flex Item 4</article>
+        <article class="item-altura">Flex Item 5</article>
+        <article class="item-altura">Flex Item 6</article>
+        <article class="item-altura">Flex Item 7</article>
+        <article class="item-altura">Flex Item 8</article>
+        <article class="item-altura">Flex Item 9</article>
+    </section>
+
+    <h2><label style="color: red;">align-items: flex-end;</label></h2>
+    <p><b>flex-flow: column wrap; + justify-content: flex-end; align-items: center;</b> estira las cajas, sea column o row lo que hayas puesto en flex-flow, igual las va a estirar</p>
+    <section class="container align-items-column-flex-start">
+        <article class="item-altura">Flex Item 1</article>
+        <article class="item-altura">Flex Item 2</article>
+        <article class="item-altura">Flex Item 3</article>
+        <article class="item-altura">Flex Item 4</article>
+        <article class="item-altura">Flex Item 5</article>
+        <article class="item-altura">Flex Item 6</article>
+        <article class="item-altura">Flex Item 7</article>
+        <article class="item-altura">Flex Item 8</article>
+        <article class="item-altura">Flex Item 9</article>
+    </section>
+
+    <h2><label style="color: red;">align-items: center;</label></h2>
+    <p><b>flex-flow: column wrap; + justify-content: flex-start; align-items: center;</b> estira las cajas, sea column o row lo que hayas puesto en flex-flow, igual las va a estirar</p>
+    <section class="container align-items-column-center">
+        <article class="item-altura">Flex Item 1</article>
+        <article class="item-altura">Flex Item 2</article>
+        <article class="item-altura">Flex Item 3</article>
+        <article class="item-altura">Flex Item 4</article>
+        <article class="item-altura">Flex Item 5</article>
+        <article class="item-altura">Flex Item 6</article>
+        <article class="item-altura">Flex Item 7</article>
+        <article class="item-altura">Flex Item 8</article>
+        <article class="item-altura">Flex Item 9</article>
+    </section>
+    <hr>
+
+    <h2>Align content no funciona cuando tienes <label style="color: red;">NOWRAP</label> (cuando los hijos están en una misma linea)</h2>
+    <h2>Ejercicios con columnas</h2>
+
+    <h2><label style="color: red;">align-content: flex-start;</label></h2>
+    <p><b>flex-flow: column wrap; + justify-content: flex-start; align-content: flex-start;</b> </p>
+    <section class="container align-content-flex-start">
+        <article class="item-altura">Flex Item 1</article>
+        <article class="item-altura">Flex Item 2</article>
+        <article class="item-altura">Flex Item 3</article>
+        <article class="item-altura">Flex Item 4</article>
+        <article class="item-altura">Flex Item 5</article>
+        <article class="item-altura">Flex Item 6</article>
+        <article class="item-altura">Flex Item 7</article>
+        <article class="item-altura">Flex Item 8</article>
+        <article class="item-altura">Flex Item 9</article>
+    </section>
+
+    <h2><label style="color: red;">align-content: flex-end;</label></h2>
+    <p><b>flex-flow: column wrap; + justify-content: flex-start; align-content: flex-end;</b> </p>
+    <section class="container align-content-flex-end">
+        <article class="item-altura">Flex Item 1</article>
+        <article class="item-altura">Flex Item 2</article>
+        <article class="item-altura">Flex Item 3</article>
+        <article class="item-altura">Flex Item 4</article>
+        <article class="item-altura">Flex Item 5</article>
+        <article class="item-altura">Flex Item 6</article>
+        <article class="item-altura">Flex Item 7</article>
+        <article class="item-altura">Flex Item 8</article>
+        <article class="item-altura">Flex Item 9</article>
+    </section>
+
+    <h2><label style="color: red;">align-content: center;</label></h2>
+    <p><b>flex-flow: column wrap; + justify-content: flex-start; align-content: center;</b> </p>
+    <section class="container align-content-center">
+        <article class="item-altura">Flex Item 1</article>
+        <article class="item-altura">Flex Item 2</article>
+        <article class="item-altura">Flex Item 3</article>
+        <article class="item-altura">Flex Item 4</article>
+        <article class="item-altura">Flex Item 5</article>
+        <article class="item-altura">Flex Item 6</article>
+        <article class="item-altura">Flex Item 7</article>
+        <article class="item-altura">Flex Item 8</article>
+        <article class="item-altura">Flex Item 9</article>
+    </section>
+
+    <h2><label style="color: red;">align-content: space-between;</label></h2>
+    <p><b>flex-flow: column wrap; + justify-content: flex-start; align-content: space-between;</b> </p>
+    <section class="container align-content-space-between">
+        <article class="item-altura">Flex Item 1</article>
+        <article class="item-altura">Flex Item 2</article>
+        <article class="item-altura">Flex Item 3</article>
+        <article class="item-altura">Flex Item 4</article>
+        <article class="item-altura">Flex Item 5</article>
+        <article class="item-altura">Flex Item 6</article>
+        <article class="item-altura">Flex Item 7</article>
+        <article class="item-altura">Flex Item 8</article>
+        <article class="item-altura">Flex Item 9</article>
+    </section>
+
+    <h2><label style="color: red;">align-content: space-around;</label></h2>
+    <p><b>flex-flow: column wrap; + justify-content: flex-start; align-content: space-around;</b> </p>
+    <section class="container align-content-space-around">
+        <article class="item-altura">Flex Item 1</article>
+        <article class="item-altura">Flex Item 2</article>
+        <article class="item-altura">Flex Item 3</article>
+        <article class="item-altura">Flex Item 4</article>
+        <article class="item-altura">Flex Item 5</article>
+        <article class="item-altura">Flex Item 6</article>
+        <article class="item-altura">Flex Item 7</article>
+        <article class="item-altura">Flex Item 8</article>
+        <article class="item-altura">Flex Item 9</article>
+    </section>
+
+    <h2>Ejercicios con filas</h2>
+
+
+    <h2><label style="color: red;">align-content: flex-start;</label></h2>
+    <p><b>flex-flow: column wrap; + justify-content: flex-start; align-content: flex-start;</b> </p>
+    <section class="container align-content-flex-start-row">
+        <article class="item-altura">Flex Item 1</article>
+        <article class="item-altura">Flex Item 2</article>
+        <article class="item-altura">Flex Item 3</article>
+        <article class="item-altura">Flex Item 4</article>
+        <article class="item-altura">Flex Item 5</article>
+        <article class="item-altura">Flex Item 6</article>
+        <article class="item-altura">Flex Item 7</article>
+        <article class="item-altura">Flex Item 8</article>
+        <article class="item-altura">Flex Item 9</article>
+    </section>
+
+    <h2><label style="color: red;">align-content: flex-end;</label></h2>
+    <p><b>flex-flow: column wrap; + justify-content: flex-start; align-content: flex-end;</b> </p>
+    <section class="container align-content-flex-end-row">
+        <article class="item-altura">Flex Item 1</article>
+        <article class="item-altura">Flex Item 2</article>
+        <article class="item-altura">Flex Item 3</article>
+        <article class="item-altura">Flex Item 4</article>
+        <article class="item-altura">Flex Item 5</article>
+        <article class="item-altura">Flex Item 6</article>
+        <article class="item-altura">Flex Item 7</article>
+        <article class="item-altura">Flex Item 8</article>
+        <article class="item-altura">Flex Item 9</article>
+    </section>
+
+    <h2><label style="color: red;">align-content: center;</label></h2>
+    <p><b>flex-flow: column wrap; + justify-content: flex-start; align-content: center;</b> </p>
+    <section class="container align-content-center-row">
+        <article class="item-altura">Flex Item 1</article>
+        <article class="item-altura">Flex Item 2</article>
+        <article class="item-altura">Flex Item 3</article>
+        <article class="item-altura">Flex Item 4</article>
+        <article class="item-altura">Flex Item 5</article>
+        <article class="item-altura">Flex Item 6</article>
+        <article class="item-altura">Flex Item 7</article>
+        <article class="item-altura">Flex Item 8</article>
+        <article class="item-altura">Flex Item 9</article>
+    </section>
+
+    <h2><label style="color: red;">align-content: space-between;</label></h2>
+    <p><b>flex-flow: column wrap; + justify-content: flex-start; align-content: space-between;</b> </p>
+    <section class="container align-content-space-between-row">
+        <article class="item-altura">Flex Item 1</article>
+        <article class="item-altura">Flex Item 2</article>
+        <article class="item-altura">Flex Item 3</article>
+        <article class="item-altura">Flex Item 4</article>
+        <article class="item-altura">Flex Item 5</article>
+        <article class="item-altura">Flex Item 6</article>
+        <article class="item-altura">Flex Item 7</article>
+        <article class="item-altura">Flex Item 8</article>
+        <article class="item-altura">Flex Item 9</article>
+    </section>
+
+    <h2><label style="color: red;">align-content: space-around;</label></h2>
+    <p><b>flex-flow: column wrap; + justify-content: flex-start; align-content: space-around;</b> </p>
+    <section class="container align-content-space-around-row">
+        <article class="item-altura">Flex Item 1</article>
+        <article class="item-altura">Flex Item 2</article>
+        <article class="item-altura">Flex Item 3</article>
+        <article class="item-altura">Flex Item 4</article>
+        <article class="item-altura">Flex Item 5</article>
+        <article class="item-altura">Flex Item 6</article>
+        <article class="item-altura">Flex Item 7</article>
+        <article class="item-altura">Flex Item 8</article>
+        <article class="item-altura">Flex Item 9</article>
+    </section>
+
 </body>
 
 </html>
