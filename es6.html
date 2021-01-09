@@ -502,20 +502,21 @@
                                         </div>
                                         <div>
                                             <ul>
-                                                <h2>Buena practicas</h2>
+                                                <h2>Buenas practicas</h2>
                                                 <li> <b>No usa VAR</b> para declarar variables, usa <b>let</b>, esto debido a que cuando utilizamos <b>var</b> lo esta colocando dentro de un objeto global llamado <b>window</b> donde te muestra las capacidades
                                                     que tiene cada navegador web, puedes probarlo en la consola de cada navegador, escribiendo la palabra <b>window</b>, y ahí aparecera la variable que hayas escrito con <b>var</b>, esto te perjudica en
                                                     que pudieses sobre escribir algún metodo, y eso ocasionará errores en tu proyecto y no sabrás que tendrás mal y esos errores son muy difíciles de rastrear</li>
                                                 <li>El orden de como importas los archivos <b>si importa</b></li>
                                                 <li>Deshabilitar el cache, click derecho en chrome, inspeccionar>network> click en disable cache</li>
-                                                <li><b>let</b> y <b>const</b> no sobre escriben las variables que se encuentran en el objeto global <b>window</b></li>
+                                                <li><b>let</b> y <b>const</b> no se puede sobreescribir las variables ó constantes que se encuentran en el objeto global a menos que le agregues datos a una costante que contenga array u objeto y las constantes
+                                                    se tienen que <b>declarar con un dato</b> , no se pueden dejar vacias<b>window</b></li>
                                                 <li>Evita usar como variables, palabras reservadas, aquí dejo una <a href="libros/palabras-reservadas-js.pdf">lista</a></li>
                                                 <li><b>Let:</b> para sobre-Escribir un Let, tienes que hacer esto: <br>
                                                     <code>let perro = 'firulais';</code> <br>
                                                     <code>perro = 'solovino';</code>
                                                 </li>
                                                 <li><b>Poner comillas en el texto:</b> \' </li>
-                                                <li></li>
+                                                <li>Usar comillas <b>inversas</b> para poder usar <b>template strings</b>, una ventaja es que respeta la identación,saltos y espacios, esto ayudara a que en los proyectos generes codigo dinámico.</li>
                                             </ul>
                                             <ul>
                                                 <h2>DOM</h2>

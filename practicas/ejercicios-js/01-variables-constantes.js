@@ -1,0 +1,52 @@
+/**
+Ejercicio 1: Imprimir con template strings
+let name = "Ricardo";
+let age = 33;
+let country = "Mexico";
+console.log(`My name is ${name} I am ${age} and I am from ${country}`);
+
+
+EJERCICIO 2: Declarar constantes e imprimirlas
+const caja = 21;
+console.log(caja);
+
+
+EJERCICIO 3: declara un array e imprimelo
+let cadena = ["Mexico", "USA", "Canada"];
+console.log(cadena);
+
+***EJERCICIO 4: declara un objeto e imprimelo
+let unPinshiObjeto = {
+    nombre: 'Pedro',
+    apellido: "Martinez",
+    edad: 24
+}
+console.log(unPinshiObjeto);
+
+EJERCICIO 5: agrega datos a un array usando la funcion PUSH
+let cadena = ["Mexico", "USA", "Canada"];
+cadena.push("Greenland");
+console.log(cadena);
+
+EJERCICIO 6: Agrega datos a un array constante
+const cadena = ["Mexico", "USA", "Canada"];
+cadena.push("Greenland");
+console.log(cadena);
+
+***EJERCICIO 7: agrega datos de distintas maneras a un objeto
+let unPinshiObjeto = {
+    nombre: 'Pedro',
+    apellido: "Martinez",
+    edad: 24
+}
+
+***EJERCICIO 8: Agrega datos a una constante objeto
+const unPinshiObjeto = {
+    nombre: 'Pedro',
+    apellido: "Martinez",
+    edad: 24
+}
+unPinshiObjeto.correo = "correo@correo.com";
+console.log(unPinshiObjeto);
+
+*/

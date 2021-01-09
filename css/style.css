@@ -708,3 +708,355 @@ h1.dancingScriptBold p.dancingScriptBold {
 
 
 /*Estilos generales FINAL*/
+
+
+/*-------------------FLEXBOX EXERCISES------------------------------*/
+
+.container-flex {
+    background: #333333;
+    display: flex;
+}
+
+.container-inline-flex {
+    background: #333333;
+    display: inline-flex;
+}
+
+
+/*------ FLEX-DIRECTION -------*/
+
+.container-flex-direction-row {
+    background: #333333;
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-direction-row-reverse {
+    background: #333333;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.flex-direction-column {
+    background: #333333;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-direction-column-reverse {
+    background: #333333;
+    height: 30vh;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.item {
+    background: #666666;
+}
+
+
+/*-------- FLEX-NOWRAP ------*/
+
+.item-altura {
+    background: #666666;
+    width: 20%;
+    border: thin solid #777777;
+}
+
+.flex-wrap-nowrap {
+    background: #333333;
+    height: 30vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.flex-wrap-wrap {
+    background: #333333;
+    height: 30vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.flex-wrap-wrap-reverse {
+    background: #333333;
+    height: 30vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+}
+
+.column-flex-wrap-nowrap {
+    background: #333333;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.column-flex-wrap-wrap {
+    background: #333333;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.flex-flow {
+    background: #333333;
+    height: 30vh;
+    display: flex;
+    flex-flow: row wrap-reverse;
+}
+
+.justify-content-start {
+    background: #333333;
+    height: 30vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+
+.justify-content-end {
+    background: #333333;
+    height: 30vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+}
+
+.justify-content-center {
+    background: #333333;
+    height: 30vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.justify-content-space-between {
+    background: #333333;
+    height: 30vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.justify-content-space-around {
+    background: #333333;
+    height: 30vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.justify-content-space-evenly {
+    background: #333333;
+    height: 30vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+.justify-column-flex-start {
+    background: #333333;
+    height: 30vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+}
+
+.justify-column-flex-end {
+    background: #333333;
+    height: 30vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-end;
+}
+
+.justify-column-space-between {
+    background: #333333;
+    height: 30vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+}
+
+.justify-column-space-around {
+    background: #333333;
+    height: 30vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+}
+
+.justify-column-space-evenly {
+    background: #333333;
+    height: 30vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+}
+
+
+/*------------ align-items---------------*/
+
+.align-items-stretch {
+    background: #333333;
+    height: 30vh;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+.align-items-flex-start {
+    background: #333333;
+    height: 30vh;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.align-items-flex-end {
+    background: #333333;
+    height: 30vh;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.align-items-center {
+    background: #333333;
+    height: 30vh;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+.align-items-column-flex-start {
+    background: #333333;
+    height: 30vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.align-items-column-flex-end {
+    background: #333333;
+    height: 30vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.align-items-column-center {
+    background: #333333;
+    height: 30vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+/*------------------ALIGN CONTENT----------------------*/
+
+.align-content-flex-start {
+    background: #333333;
+    height: 30vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+}
+
+.align-content-flex-end {
+    background: #333333;
+    height: 30vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-content: flex-end;
+}
+
+.align-content-center {
+    background: #333333;
+    height: 30vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-content: center;
+}
+
+.align-content-space-between {
+    background: #333333;
+    height: 30vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-content: space-between;
+}
+
+.align-content-space-around {
+    background: #333333;
+    height: 30vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-content: space-around;
+}
+
+.align-content-flex-start-row {
+    background: #333333;
+    height: 30vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+}
+
+.align-content-flex-end-row {
+    background: #333333;
+    height: 30vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: flex-end;
+}
+
+.align-content-center-row {
+    background: #333333;
+    height: 30vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: center;
+}
+
+.align-content-space-between-row {
+    background: #333333;
+    height: 30vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: space-between;
+}
+
+.align-content-space-around-row {
+    background: #333333;
+    height: 30vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: space-around;
+}
+
+
+/*-------------------FLEXBOX EXERCISES------------------------------*/

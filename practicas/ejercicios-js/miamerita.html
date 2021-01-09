@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <label for="fechaencuesta" class="fechaencuesta">
+            <span>Fecha de la Encuesta: </span>
+        <input type="date" name="fechaencuesta" id="dias" value="2019-01-01">
+    </label>
+
+    <button class="btnmostrar" id="fecha" type="submit"> Mostrar Dia de Semana </button>
+
+
+    <script>
+        //MOSTRANDO EL DIA QUE SELECCIONE EL USUARIO
+
+        const fechaSeleccionada = document.getElementById('fecha');
+
+        fecha.addEventListener('click', function() {
+
+            const dias = document.getElementById("dias").value;
+
+            const fecha = new Date(dias);
+            //const weekDay = fecha.getDay();
+            const dia = ['Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado', 'Domingo'];
+            alert('La fecha seleccionada en el elemento de fecha es un ' + dia[fecha.getDay()]);
+
+            //console.log(dia[dias.getDay()]);
+        });
+
+        //Object.values(objeto)
+
+        //Lo que me da 3 es la transformación del formato fecha.getDay()
+
+        //dia[fecha]
+        //dia[fech]
+        //dias.getDay NADA
+        //dia.getDay NADA
+        //fechaLocal function getDay() { [native code] }
+        // dia.getDay NADA
+        // dias.getDay NADA
+        //fecha.getDay NADA
+        //dia me imprime los días de la semana
+        //dias me imprime la fecha en formato fecha pero aparece como string
+
+
+        //alert('La fecha seleccionada en el elemento de fecha es un ' + dia[fecha.getDay()]);
+
+        //console.log(dia[fecha.getDay()]);
+    </script>
+</body>
+
+</html>
