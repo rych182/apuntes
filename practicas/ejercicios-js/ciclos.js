@@ -9,9 +9,11 @@
 //Cuando trabajamos con primitivos, cualquier tipo de asignación como esta ó lo mandamos a una función como argumento
 //lo estamos mandando por valor.Es decir, no importa si transformamos la variable ó le asignamos otra cosa, 
 //no estamos afectando el mismo valor de memoria, estamos pasando unicamente el valor
-let a = 20;
-let b = 10;
-a = 30;
+
+
+
+
+
 
 /*Ejemplo 1 
 PARTE 1:Esto sobre escribe el valor en ambos objetos, esto es un problema, se solucionara en la parte 2
@@ -27,11 +29,16 @@ ana.nombre = 'Ana';
 console.log(juan, ana);
 */
 
+
+
+/*Quien sabe que hacia esto aquí
 const frutas = ['Manzana', 'Pera', 'Piña'];
 const otrasFrutas = [...frutas];
 
 otrasFrutas.push('Mango');
 console.table({ frutas, otrasFrutas });
+*/
+
 
 /* Ejemplo 2
 Parte1
