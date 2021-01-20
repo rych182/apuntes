@@ -1,3 +1,17 @@
+let nombre = "ric";
+let edad = 33;
+
+const persona = {
+    nombre,
+    edad,
+    frase() {
+        console.log("Eres un crack!");
+    }
+}
+
+console.log(persona.nombre);
+persona.frase();
+
 /**
 Ejercicio 1: Imprimir con template strings
 let name = "Ricardo";
@@ -48,5 +62,35 @@ const unPinshiObjeto = {
 }
 unPinshiObjeto.correo = "correo@correo.com";
 console.log(unPinshiObjeto);
+
+***Ejercicio 9: Agregar datos a un objeto desde una variable
+let nombre = "ric";
+let edad = 33;
+
+const persona = {
+    nombre: nombre,
+    edad: edad,
+    frase: function() {
+        console.log("Eres un crack!");
+    }
+}
+
+persona.frase();
+
+***Ejercicio 10: Resumir la escritura del ejercicio anterior
+
+let nombre = "ric";
+let edad = 33;
+
+const persona = {
+    nombre,
+    edad,
+    frase() {
+        console.log("Eres un crack!");
+    }
+}
+
+console.log(persona.nombre);
+persona.frase();
 
 */

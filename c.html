@@ -182,20 +182,37 @@
                                                 <li><b>Variables globales:</b> se encuentran fuera de una función</li>
                                                 <li><b>DEFINE</b> <code>#DEFINE PI 3.1416 </code> es lo mismo que una constante</li>
                                                 <li><b>int</b> se usa para variables <b>enteras</b></li>
-                                                <li><b>float</b> se usa para variables con <b>decimales</b></li>
-                                                <li></li>
-                                                <li></li>
-                                                <li></li>
+                                                <li><b>float</b> tamaño: 4bytes se usa para variables con <b>decimales</b> y cuando ejecutas el programa, te muestra decimales, y si quieres especificar cuantos decimales solo tienes que indicarselo así <code>printf("La suma de x + PI es: %.2f",suma);</code>                                                    y también te lo redondea.</li>
+                                                <li><b>unsigned int</b> su tamaño es de 2bytes y su rango es de 65535 </li>
+                                                <li><b>char</b> tamaño: 1byte rango: 0 a 255</li>
+                                                <li><b>short</b> tamaño: 2bytes rango: -128 a 127</li>
+                                                <li><b>long</b> tamaño: 4bytes rango: 262144 y se ejecuta con <code></code></li>
+                                                <li><b>double</b> tamaño: 8bytes rango: muy extenso, se imprime <code>printf("El elemento que quiere mostrar es: %lf\n",e);</code></li>
+                                                <li><b>char x[50]</b> cuando quieras guardar un texto, le indicas la cantidad de caracteres que te permite</li>
                                             </ol>
                                         </div>
                                         <div>
                                             <ul>
                                                 <h3>Datos muy útiles</h3>
                                                 <li><code>return 0;</code> se utiliza al final de la función de nuestro programa para verificar que esta bien</li>
+                                                <li><b>%s</b> sirve para avisar que vas a guardar un <b>string</b></li>
+                                                <li></li>
+                                            </ul>
+                                        </div>
+                                    </section>
+
+                                    <section class="d-flex">
+                                        <div>
+                                            <ul>
+                                                <h2>Funciones</h2>
+                                                <li><b>scanf("%s",&c);</b> cuando corres el programa, te pide que digites datos, pero si vas a guardar palabras, ya no es necesario poner <b>&</b>, ejemplo: <code>scanf("%s",c);</code> el problema es que el
+                                                    scanf te guarda todo, pero solo hasta que apretas la tecla de espacio, ahó ya no guardara lo demás, para eso usas la función <b>gets(x)</b></li>
+                                                <li><b>gets(x)</b> te guarda todo los caracteres incluido los espacios</li>
                                                 <li></li>
                                                 <li></li>
                                             </ul>
                                         </div>
+                                        <div></div>
                                     </section>
 
                                 </div>

@@ -1,6 +1,8 @@
 //try catch cuando no quieres que se detenga la ejecución de tu programa
 //Usalo cuando las funciones no sabes si vayan a tener datos, si llegan vacias, no llenes tu codigo de try catch
 
+
+
 /*
 
 Ejercicio 1
@@ -86,6 +88,14 @@ const persona = (nombre, apellido) =>
 
 const caja = persona('Ricardo', 'Garrido');
 console.log(caja);
+
+Ejercicio 9.1: resumir una función, sin parenteses(solo se puede cuando es una cosa, no 2 como en el ejercicio anterior)
+const saludo = texto => {
+    console.log(texto);
+}
+saludo("Hola mundo");
+
+
 
 Ejercicio 10 PROTIP
 Crear una función con parametros REST, el argumento rest no puede llevar nada despues de el, solo antes
