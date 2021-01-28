@@ -760,13 +760,68 @@
                                                     </li>
                                                     <li><b>DESTRUCTURACION</b> se usa mucho en <b>REACT JS</b></li>
                                                     <li><b>REST & SPREAD</b> se usan mucho en Angular, React y Vue</li>
-                                                    <li></li>
+                                                    <li> <b>this</b> Al usar las arrow functions y this, heredan el contesto del padre, ejemplo:
+                                                        <div class="card" style="width: 18rem;">
+                                                            <div class="card-body">
+                                                                <p class="card-text espacio-codigo0"><code>const perro = {</code></p>
+                                                                <p class="card-text espacio-codigo1"><code>nombre: "kenai",</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>ladrar: () => {</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>console.log(this);</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>}</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>}</code></p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
                                                 </ul>
 
                                                 <ul>
                                                     <h2>Parametros REST & SPREAD</h2>
                                                     <li><b>REST</b> sirve para ir agregando datos</li>
-                                                    <li><b>SPREAD</b></li>
+                                                    <li><b>SPREAD</b> Sirve para separar los datos </li>
+                                                </ul>
+
+                                                <ul>
+                                                    <h2>Objetos antiguos en javascript</h2>
+                                                    <li>
+                                                        <div class="card" style="width: 18rem;">
+                                                            <div class="card-body">
+                                                                <p class="card-text espacio-codigo0">Los objetos de manera antigua en Javascript</p>
+                                                                <p class="card-text espacio-codigo1"><code>function animal(nombre, genero) {</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>//Propiedades</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>this.nombre = nombre;</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>this.genero = genero;</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>//Metodos</code></p>
+                                                                <p class="card-text espacio-codigo1"><code>this.sonar = function() {</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>console.log("Hago sonidos porque estoy vivo");</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>}</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>}</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>const snoopy = new animal("Snoopy", "Macho");</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>const lolaBunny = new animal("Lola Bunny", "Hembra");</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>console.log(snoopy);</code></p>
+
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="card" style="width: 18rem;">
+                                                            <div class="card-body">
+                                                                <p class="card-text espacio-codigo0">PROTOTYPE:Metodos agregados desde afuera, esto evita la duplicidad de metodos</p>
+                                                                <p class="card-text espacio-codigo1"><code>function animal(nombre, genero) {</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>//Propiedades</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>this.nombre = nombre;</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>this.genero = genero;</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>}</code></p>
+                                                                <p class="card-text espacio-codigo1"><code>//Metodos agregados desde afuera, esto evita la duplicidad de metodos</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>animal.prototype.sonar = function() {</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>console.log("Hago sonidos porque estoy vivo");</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>}</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>const snoopy = new animal("Snoopy", "Macho");</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>const lolaBunny = new animal("Lola Bunny", "Hembra");</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>lolaBunny.sonar();</code></p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -1602,7 +1657,7 @@
                                                 <li><b>Modificar una fecha:</b> <code>let dia = new Date(); let dato = dia.setFullYear(2016); dato = dia.getFullYear(); console.log(dato);</code> </li>
                                                 <li><b>Cambiar fechas,minutos, hrs</b> de la misma manera que puedes usar getHours, puedes usar setHours y todo lo demás</li>
                                                 <li><a href="https://javascript-minifier.com/">javascript-minifier</a> para minificar el código</li>
-                                                <li><b></b></li>
+                                                <li><b><a href="https://jsonplaceholder.typicode.com/guide/">jsonplaceholder</a></b> la API REST para frontends más usada</li>
                                             </ul>
                                         </div>
                                     </div>

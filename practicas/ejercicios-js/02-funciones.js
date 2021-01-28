@@ -95,6 +95,19 @@ const saludo = texto => {
 }
 saludo("Hola mundo");
 
+Ejercicio 9.2: resumir una función sin usar "return"
+const suma = (a, b) => a + b;
+console.log(suma(9, 9));
+
+Ejercicio 9.3: Recorrer array con un .forEach
+const numeros = [1, 2, 3, 4, 5];
+numeros.forEach((elemento, index) => {
+    console.log(`El elemento ${elemento} esta en la posicion ${index}`);
+});
+
+Ejercicio 9.4: Resume el codigo de arriba quitandole las llaves
+const numeros = [1, 2, 3, 4, 5];
+numeros.forEach((elemento, index) => console.log(`El elemento ${elemento} esta en la posicion ${index}`));
 
 
 Ejercicio 10 PROTIP
@@ -280,9 +293,40 @@ if (true) {
 
 console.log('GLOBALES: ', a, b, c);
 
-EJERCICIO 25
+EJERCICIO 25: Escribe un objeto como se hacía de antaño.
+function animal(nombre, genero) {
+    //Propiedades
+    this.nombre = nombre;
+    this.genero = genero;
+
+    //Metodos
+    this.sonar = function() {
+        console.log("Hago sonidos porque estoy vivo");
+    }
+}
+
+const snoopy = new animal("Snoopy", "Macho");
+const lolaBunny = new animal("Lola Bunny", "Hembra");
+
+console.log(snoopy);
 
 
-EJERCICIO 26
+EJERCICIO 26: Agrega un metodo a un objeto de antaño usando prototype.
+function animal(nombre, genero) {
+    //Propiedades
+    this.nombre = nombre;
+    this.genero = genero;
+}
+
+//Metodos agregados desde afuera, esto evita la duplicidad de metodos
+animal.prototype.sonar = function() {
+    console.log("Hago sonidos porque estoy vivo");
+}
+
+const snoopy = new animal("Snoopy", "Macho");
+const lolaBunny = new animal("Lola Bunny", "Hembra");
+
+lolaBunny.sonar();
+
 
 */

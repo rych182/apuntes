@@ -170,7 +170,6 @@
 
 
                     <div class="d-flex">
-
                         <ul>
                             <h2>Formas de seleccionar comparando JS vs JQuery</h2>
                             <h3>JS</h3>
@@ -181,7 +180,33 @@
                             <li>$('#id')</li>
                             <li>$('.class')</li>
                             <li>$('p')</li>
+                            <li><b>.parent()</b> selecciona el elemento padre del id que le digas, ejemplo: <code>$('#tercera').parent()</code></li>
+                            <li><b>.children()</b> selecciona los hijos del elemento seleccionado <code>$('#padre').children()</code> y si quieres seleccionar un hijo en particular,
+                                <code>$('#padre').children('#tercera')</code></li>
+                            <li><b>.siblings()</b> selecciona los elementos hermanos. Ejemplo: <code>$('#tercera').siblings().fadeOut();</code></li>
+                            <li><b>.prev()</b> Selecciona el elemento anterior. Ejemplo: <code>$('#tercera').prev().css({});</code> </li>
+                            <li><b>.next()</b> Selecciona el elemento siguiente. <code>$('#tercera').next().css({});</code></li>
+                            <li><b>.prevAll()</b> Selecciona todos los elementos anteriores al seleccionado. Ejemplo: <code>$('#tercera').prevAll().css({});</code></li>
+                            <li><b>.prev()</b> Selecciona todos los elementos siguienes al seleccionado. Ejemplo: <code>$('#tercera').nextAll().css({});</code></li>
+                            <li><b></b></li>
+                            <li><b></b></li>
+
+
+                            <h3>encadenar en jquery</h3>
+                            <li><code>$('#tercera').parent().css({})</code></li>
+
                         </ul>
+
+                    </div>
+
+                    <div class="d-flex">
+                        <ul>
+                            <h2>Funciones de Jquery</h2>
+                            <li><b>.fadeOut(500);</b> desaparece los elementos en medio segundo. ejemplo: <code>$('#padre').children().fadeOut(500);</code></li>
+                            <li><b>.slideUp(500);</b> desaparece los elementos hacia arriba en medio segundo <code>$('#padre').children().slideUp(500);</code></li>
+                            <li><b>.find()</b> te encuentra etiquetas, clases y ids. Ejemplo: <code>$('#padre').find('div.caja').slideUp(500);</code></li>
+                        </ul>
+
 
                     </div>
 
