@@ -16,6 +16,45 @@ no queden cargados con muchas funciones y organizar el codigo, hace que una func
 nuestro código sea fácil de mantener, 
 */
 
+class Animal {
+    //El constructor es un metodo especial que se ejecuta en el momento de instancia de la clase
+    constructor(nombre, genero) {
+        this.nombre = nombre;
+        this.genero = genero;
+    }
+
+    //Metodos
+    sonar() {
+        console.log("Hago sonidos porque estoy vivo");
+    }
+    saludar() {
+        console.log(`HOla me llamo ${this.nombre}`);
+    }
+}
+
+class Perro extends Animal {
+    constructor(nombre, genero, tamanio) {
+        //Con el metodo super() se manda llamar al constructor de la clase padre
+        super(nombre, genero);
+        this.tamanio = tamanio;
+    }
+    sonar() {
+        console.log("Soy un perro y mi sonido es un ladrido");
+    }
+
+    ladrar() {
+        console.log("GUa gua");
+    }
+}
+
+const scooby = new Perro("Scooby", "Macho", "Grande");
+console.log(scooby);
+scooby.sonar();
+scooby.ladrar();
+scooby.saludar();
+//object deriva del prototipo del objeto primitivo de javascript y ahí vienen todos los objetos primitivos del object 
+//Esto no convierte a JavaScript en un lenguaje orientado a objetos basado en clases, sigue siendo un lenguaje orientado a objetos basado en prototipos
+
 
 /**
 Ejercicio 1
@@ -23,11 +62,21 @@ Crea una clase con 2 propiedades y luego crea un objeto
 class Usuario {
     constructor() {
         this.nombre = "Ricardo",
-            this.edad = 33
+        this.edad = 33
     }
 }
 const ric = new Usuario();
 document.write(ric.nombre);
+
+EJERCICIO 1.1: Create one class with 2 properties without constructor and later you create one object
+class Usuario {
+    nombre = "Ricardo";
+    edad = 33;
+
+}
+const ric = new Usuario();
+document.write(ric.edad);
+
 
 Ejercicio 2
 Crea una clase con 2 propiedades y luego crea un objeto, las propiedades deben de ser dinámicas, osea
@@ -285,14 +334,17 @@ class Estudiante extends Usuario {
 const ric = new Estudiante("Ric ", 33, 'correo@correo.com');
 document.write(ric.mostrarInfo());
 
+
+
+
 EJERCICIO 12
 Sobreescribe un constructor heredado y SUPER para traer los valores a la función, también sobre escribe
 el metodo que mostrará toda la info, agregandole el valor de empleo
 class Usuario {
     constructor(nombre, edad, correo) {
         this.nombre = nombre,
-            this.edad = edad,
-            this.correo = correo
+        this.edad = edad,
+        this.correo = correo
     }
     saludo(a) {
         return a;
@@ -303,12 +355,12 @@ class Usuario {
         edad: ${this.edad} <br>
         correo: ${this.correo} <br>`;
     }
-
 }
 
 class Estudiante extends Usuario {
     constructor(nombre, edad, correo, empleo) {
         super(nombre, edad, correo);
+        //empleo es exclusivo de la clase Estudiante
         this.empleo = empleo;
     }
     mostrarInfo() {
@@ -321,6 +373,10 @@ class Estudiante extends Usuario {
 }
 const ric = new Estudiante("Ric ", 33, 'correo@correo.com', 'Angular Developer');
 document.write(ric.mostrarInfo());
+
+EJERCICIO 12.1: Sobre escribe un metodo.
+
+
 
 EJERCICIO 13
 Imprime un metodo estatico

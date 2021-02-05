@@ -811,7 +811,7 @@
                                                                 <p class="card-text espacio-codigo0"><code>this.nombre = nombre;</code></p>
                                                                 <p class="card-text espacio-codigo0"><code>this.genero = genero;</code></p>
                                                                 <p class="card-text espacio-codigo0"><code>}</code></p>
-                                                                <p class="card-text espacio-codigo1"><code>//Metodos agregados desde afuera, esto evita la duplicidad de metodos</code></p>
+                                                                <p class="card-text espacio-codigo1"><code>//Metodos agregados desde afuera, esto evita la duplicidad de metodos en la función constructora</code></p>
                                                                 <p class="card-text espacio-codigo0"><code>animal.prototype.sonar = function() {</code></p>
                                                                 <p class="card-text espacio-codigo0"><code>console.log("Hago sonidos porque estoy vivo");</code></p>
                                                                 <p class="card-text espacio-codigo0"><code>}</code></p>
@@ -821,7 +821,125 @@
                                                             </div>
                                                         </div>
                                                     </li>
-                                                    <li></li>
+                                                    <h2>Herencia prototipica en objetos antiguos de Javascripts</h2>
+                                                    <li>
+                                                        <div class="card" style="width: 18rem;">
+                                                            <div class="card-body">
+                                                                <p class="card-text espacio-codigo0">HERENCIA PROTOTIPICA:Heredar las propiedades y metodos de otra funcion constructora </p>
+                                                                <p class="card-text espacio-codigo1"><code>function animal(nombre, genero) {</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>//Propiedades</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>this.nombre = nombre;</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>this.genero = genero;</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>}</code></p>
+                                                                <p class="card-text espacio-codigo1"><code>//Metodos agregados desde afuera, esto evita la duplicidad de metodos en la función constructora</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>animal.prototype.sonar = function() {</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>console.log("Hago sonidos porque estoy vivo");</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>}</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>const snoopy = new animal("Snoopy", "Macho");</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>const lolaBunny = new animal("Lola Bunny", "Hembra");</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>lolaBunny.sonar();</code></p>
+                                                                <p class="card-text espacio-codigo0">-----------------------------------</p>
+                                                                <p class="card-text espacio-codigo0"><code>function perro(nombre, genero, tamanio) {</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>//super sirve para invocar al constructor padre</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>this.super = animal;</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>this.super(nombre, genero);</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>this.tamanio = tamanio;</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>}</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>perro.prototype = new animal();</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>perro.prototype.constructor = perro;</code></p>
+                                                                <p class="card-text espacio-codigo0">al igualarlo al mismo constructor, obtendra todo lo que hay en la funcion perro incluso los prototipos, como el .sonar que tiene</p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="card" style="width: 18rem;">
+                                                            <div class="card-body">
+                                                                <p class="card-text espacio-codigo0">HERENCIA PROTOTIPICA:Heredar las propiedades y metodos de otra funcion constructora </p>
+                                                                <p class="card-text espacio-codigo1"><code>function animal(nombre, genero) {</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>//Propiedades</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>this.nombre = nombre;</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>this.genero = genero;</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>}</code></p>
+                                                                <p class="card-text espacio-codigo1"><code>//Metodos agregados desde afuera, esto evita la duplicidad de metodos en la función constructora</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>animal.prototype.sonar = function() {</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>console.log("Hago sonidos porque estoy vivo");</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>}</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>const snoopy = new animal("Snoopy", "Macho");</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>const lolaBunny = new animal("Lola Bunny", "Hembra");</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>lolaBunny.sonar();</code></p>
+                                                                <p class="card-text espacio-codigo0">-----------------------------------</p>
+                                                                <p class="card-text espacio-codigo0"><code>function perro(nombre, genero, tamanio) {</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>//super sirve para invocar al constructor padre</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>this.super = animal;</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>this.super(nombre, genero);</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>this.tamanio = tamanio;</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>}</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>perro.prototype = new animal();</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>perro.prototype.constructor = perro;</code></p>
+                                                                <p class="card-text espacio-codigo0">al igualarlo al mismo constructor, obtendra todo lo que hay en la funcion perro incluso los prototipos, como el .sonar que tiene</p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="card" style="width: 18rem;">
+                                                            <div class="card-body">
+                                                                <p class="card-text espacio-codigo0">SOBREESCRIBIENDO UN METODO HEREDADO DE UNA FUNCION(JAVASCRIPT VIEJITO) </p>
+                                                                <p class="card-text espacio-codigo1"><code>function animal(nombre, genero) {</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>//Propiedades</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>this.nombre = nombre;</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>this.genero = genero;</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>}</code></p>
+                                                                <p class="card-text espacio-codigo1"><code>//Metodos agregados desde afuera, esto evita la duplicidad de metodos en la función constructora</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>animal.prototype.sonar = function() {</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>console.log("Hago sonidos porque estoy vivo");</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>}</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>const snoopy = new animal("Snoopy", "Macho");</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>const lolaBunny = new animal("Lola Bunny", "Hembra");</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>lolaBunny.sonar();</code></p>
+                                                                <p class="card-text espacio-codigo0">-----------------------------------</p>
+                                                                <p class="card-text espacio-codigo0"><code>function perro(nombre, genero, tamanio) {</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>//super sirve para invocar al constructor padre</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>this.super = animal;</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>this.super(nombre, genero);</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>this.tamanio = tamanio;</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>}</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>perro.prototype = new animal();</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>perro.prototype.constructor = perro;</code></p>
+                                                                <p class="card-text espacio-codigo0">al igualarlo al mismo constructor, obtendra todo lo que hay en la funcion perro incluso los prototipos, como el .sonar que tiene</p>
+
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="card" style="width: 18rem;">
+                                                            <div class="card-body">
+                                                                <p class="card-text espacio-codigo0">AGREGANDO UN METODO A UNA FUNCION HEREDADA </p>
+                                                                <p class="card-text espacio-codigo1"><code>function animal(nombre, genero) {</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>//Propiedades</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>this.nombre = nombre;</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>this.genero = genero;</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>}</code></p>
+                                                                <p class="card-text espacio-codigo1"><code>//Metodos agregados desde afuera, esto evita la duplicidad de metodos en la función constructora</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>animal.prototype.sonar = function() {</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>console.log("Hago sonidos porque estoy vivo");</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>}</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>const snoopy = new animal("Snoopy", "Macho");</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>const lolaBunny = new animal("Lola Bunny", "Hembra");</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>lolaBunny.sonar();</code></p>
+                                                                <p class="card-text espacio-codigo0">-----------------------------------</p>
+                                                                <p class="card-text espacio-codigo0"><code>function perro(nombre, genero, tamanio) {</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>//super sirve para invocar al constructor padre</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>this.super = animal;</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>this.super(nombre, genero);</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>this.tamanio = tamanio;</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>}</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>perro.prototype = new animal();</code></p>
+                                                                <p class="card-text espacio-codigo0"><code>perro.prototype.constructor = perro;</code></p>
+                                                                <p class="card-text espacio-codigo0">al igualarlo al mismo constructor, obtendra todo lo que hay en la funcion perro incluso los prototipos, como el .sonar que tiene</p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+
                                                 </ul>
                                             </div>
                                         </div>
@@ -871,7 +989,8 @@
                                                         <li>
                                                             <div class="card" style="width: 18rem;">
                                                                 <div class="card-body">
-                                                                    <p class="card-text espacio-codigo0">OJO: si Javascript nota que el primer resultado dará false, ya no seguirá revisando más cosas, por eso primero pon el true, se usa mucho cuando quieres ejecutar funciones de manera condicional</p>
+                                                                    <p class="card-text espacio-codigo0">OJO: si Javascript nota que el primer resultado dará false, ya no seguirá revisando más cosas, por eso primero pon el true, se usa mucho cuando quieres ejecutar funciones de manera condicional
+                                                                    </p>
                                                                     <p class="card-text espacio-codigo1"><code>let box = () => {</code></p>
                                                                     <p class="card-text espacio-codigo1"><code>console.log("Regresa true");</code></p>
                                                                     <p class="card-text espacio-codigo0"><code>return true;</code></p>
@@ -1599,6 +1718,8 @@
                                                 <li><b>Poner comillas en el texto:</b> \' </li>
                                                 <li><b>Algebra</b>:Multiplicaciones y divisiones primero, luego sumas y restas</li>
                                                 <li><b>const</b> cuando tiene dentro un arreglo, puede modificarse un espacio del arreglo pero no el arreglo entero</li>
+                                                <li>JS utiliza el paradigma de la programación orientada a objetos no basado en clases como la mayoría de los lenguajes si no basado en <b>prototipos</b></li>
+                                                <li></li>
                                             </ul>
                                         </div>
 
@@ -2539,7 +2660,8 @@
                                         <li>En los archivos <b>.json</b> es obligatorio que lleven comillas cada cosa descriptiva</li>
                                         <li>INSTALO <b>npm install webpack webpack-cli --save-dev</b> el <b>--save-dev</b> quiere decir que esto lo ponga como una dependencia de desarrollo, osea que no va a ir a producción </li>
                                         <li>Entrar al archivo package.json y agregar <code>"scripts": {"test": "echo \"Error: no test specified\" && exit 1","build": "webpack"}</code> con esto estoy indicando a mi aplicacion que cuando yo ejecute el comando
-                                            <b>build</b> dispare webpack con su configuración por defecto, y por defecto va a buscar la carpeta src, la carpeta js y va a unificar los archivos de js, los va a comprimir, y los va a dejar listos para producción</li>
+                                            <b>build</b> dispare webpack con su configuración por defecto, y por defecto va a buscar la carpeta src, la carpeta js y va a unificar los archivos de js, los va a comprimir, y los va a dejar listos para producción
+                                        </li>
                                         <li>EJECUTAR el comando <code>npm run build</code> y creara SIEMPRE la carpeta <b>dist</b> y <b>node modules</b></li>
                                         <li>SIEMPREque hagas modificacion en tus archivos, vuelve a correr <code>npm run build</code></li>
                                     </ol>
@@ -2589,7 +2711,8 @@
                                             </div>
                                         </li>
                                         <li>INSTALAR el servidor de desarrollo de webpack <code>npm i -D webpack-dev-server</code></li>
-                                        <li>CONFIGURAR <b>package.json</b> agregando a los scripts <code>"start": "webpack-dev-server --open"</code> para que inmediatamente se ejecute el servidor webpack te abra la pestaña, porque estamos usando la url <b>file://</b>                                            cuando necesitamos <b>http://</b>, a mi en Ubuntu me abrió <b>localhost:8080/</b> después de correr el comando <code>npm start</code></li>
+                                        <li>CONFIGURAR <b>package.json</b> agregando a los scripts <code>"start": "webpack-dev-server --open"</code> para que inmediatamente se ejecute el servidor webpack te abra la pestaña, porque estamos usando la url
+                                            <b>file://</b> cuando necesitamos <b>http://</b>, a mi en Ubuntu me abrió <b>localhost:8080/</b> después de correr el comando <code>npm start</code></li>
                                         <li></li>
                                         <li></li>
                                     </ol>

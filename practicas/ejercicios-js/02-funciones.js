@@ -1,8 +1,32 @@
 //try catch cuando no quieres que se detenga la ejecución de tu programa
 //Usalo cuando las funciones no sabes si vayan a tener datos, si llegan vacias, no llenes tu codigo de try catch
 
+function animal(nombre, genero) {
+    //Propiedades
+    this.nombre = nombre;
+    this.genero = genero;
+}
 
+//Metodos agregados desde afuera, esto evita la duplicidad de metodos en la función constructora
+animal.prototype.sonar = function() {
+    console.log("Hago sonidos porque estoy vivo");
+}
 
+function perro(nombre, genero, tamanio) {
+    //super sirve para invocar al constructor padre
+    this.super = animal;
+    this.super(nombre, genero);
+    this.tamanio = tamanio;
+}
+perro.prototype = new animal();
+perro.prototype.constructor = perro;
+
+perro.prototype.ladrar = function() {
+    console.log("Wof!! wof!!");
+}
+
+const snoopy = new perro("guffy", "masculino", "grande");
+console.log(snoopy);
 /*
 
 Ejercicio 1
@@ -327,6 +351,92 @@ const snoopy = new animal("Snoopy", "Macho");
 const lolaBunny = new animal("Lola Bunny", "Hembra");
 
 lolaBunny.sonar();
+
+Ejercicio 27: Heredar prototipos
+
+function animal(nombre, genero) {
+    //Propiedades
+    this.nombre = nombre;
+    this.genero = genero;
+}
+
+//Metodos agregados desde afuera, esto evita la duplicidad de metodos en la función constructora
+animal.prototype.sonar = function() {
+    console.log("Hago sonidos porque estoy vivo");
+}
+
+function perro(nombre, genero, tamanio) {
+    //super sirve para invocar al constructor padre
+    this.super = animal;
+    this.super(nombre, genero);
+    this.tamanio = tamanio;
+}
+perro.prototype = new animal();
+perro.prototype.constructor = perro;
+al igualarlo al mismo constructor, obtendra todo lo que hay en la funcion perro
+incluso los prototipos, como el .sonar que tiene
+
+Ejercicio 28: Sobreescribir, un prototipo heredado, (recuerda que esto es javascript viejito)
+
+function animal(nombre, genero) {
+    //Propiedades
+    this.nombre = nombre;
+    this.genero = genero;
+}
+
+//Metodos agregados desde afuera, esto evita la duplicidad de metodos en la función constructora
+animal.prototype.sonar = function() {
+    console.log("Hago sonidos porque estoy vivo");
+}
+
+function perro(nombre, genero, tamanio) {
+    //super sirve para invocar al constructor padre
+    this.super = animal;
+    this.super(nombre, genero);
+    this.tamanio = tamanio;
+}
+perro.prototype = new animal();
+perro.prototype.constructor = perro;
+al igualarlo al mismo constructor, obtendra todo lo que hay en la funcion perro
+incluso los prototipos, como el .sonar que tiene
+
+perro.prototype.sonar = function() {
+    console.log("Wof!! wof!!");
+}
+
+perro.prototype.sonar();
+
+
+EJERCICIO 29: Escribirle un metodo prototipado a la función heredada del javascript viejito
+
+function animal(nombre, genero) {
+    Propiedades
+    this.nombre = nombre;
+    this.genero = genero;
+}
+
+Metodos agregados desde afuera, esto evita la duplicidad de metodos en la función constructora
+animal.prototype.sonar = function() {
+    console.log("Hago sonidos porque estoy vivo");
+}
+
+function perro(nombre, genero, tamanio) {
+    //super sirve para invocar al constructor padre
+    this.super = animal;
+    this.super(nombre, genero);
+    this.tamanio = tamanio;
+}
+perro.prototype = new animal();
+perro.prototype.constructor = perro;
+al igualarlo al mismo constructor, obtendra todo lo que hay en la funcion perro
+incluso los prototipos, como el .sonar que tiene
+
+perro.prototype.ladrar = function() {
+    console.log("Wof!! wof!!");
+}
+
+perro.prototype.ladrar();
+
 
 
 */

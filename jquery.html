@@ -188,9 +188,13 @@
                             <li><b>.next()</b> Selecciona el elemento siguiente. <code>$('#tercera').next().css({});</code></li>
                             <li><b>.prevAll()</b> Selecciona todos los elementos anteriores al seleccionado. Ejemplo: <code>$('#tercera').prevAll().css({});</code></li>
                             <li><b>.prev()</b> Selecciona todos los elementos siguienes al seleccionado. Ejemplo: <code>$('#tercera').nextAll().css({});</code></li>
-                            <li><b></b></li>
-                            <li><b></b></li>
+                            <li><b>.first()</b> Selecciona el primer elemento de todos los seleccionados Ejemplo: <code>$('.caja').first().css({});</code></li>
+                            <li><b>.last()</b> Selecciona el ultimo elemento de todos los seleccionados Ejemplo: <code>$('.caja').last().css({});</code></li>
+                            <li><b>.eq()</b> Selecciona el elemento por su indice, el 0 es el 1 y el 1 es el 2 Ejemplo: <code>$('.caja').eq(0).css({background: '#000'});</code></li>
 
+                            <li><b>.filter()</b> Selecciona el elemento que le indiques y <b>puedes seleccionar más cajas</b> a diferencia de <b>eq()</b>. Ejemplo: <code>$('.caja').filter(".naranja").css({background: '#000'});</code></li>
+                            <li><b>.not()</b> Selecciona todas las cajas menos la que le indiques. Ejemplo: <code>$('.caja').not(".naranja").css({background: '#000'});</code</li>
+                            <li><b></b></li>
 
                             <h3>encadenar en jquery</h3>
                             <li><code>$('#tercera').parent().css({})</code></li>
