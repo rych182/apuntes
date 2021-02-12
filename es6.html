@@ -505,7 +505,121 @@
                                                         </div>
                                                     </div>
                                                 </li>
-
+                                            </ul>
+                                            <ul>
+                                                <h2>Clases y objetos en Javascript</h2>
+                                                <li>El <b>constructor</b> es un metodo especial que se ejecuta en el momento de instancia de la clase</li>
+                                                <li>
+                                                    <p>Propiedades y metodos <b>estaticos</b>: sirven para agregarle un valor a la clase fuera de una clase sin necesidad de instanciar la clase para crear un objeto. Ejemplo</p>
+                                                    <div class="card" style="width: 18rem;">
+                                                        <div class="card-body">
+                                                            <p class="card-text espacio-codigo0"><code>class Animal {</code></p>
+                                                            <p class="card-text espacio-codigo1">//El constructor es un metodo especial que se ejecuta en el momento de instancia de la clase</p>
+                                                            <p class="card-text espacio-codigo1"><code>constructor(nombre, genero) {</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>this.nombre = nombre;</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>this.genero = genero;</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>}</code></p>
+                                                            <p class="card-text espacio-codigo1">//Metodos</p>
+                                                            <p class="card-text espacio-codigo1"><code>sonar() {</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>console.log("Hago sonidos porque estoy vivo");</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>}</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>saludar() {</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>console.log(`HOla me llamo ${this.nombre}`);</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>}</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>}</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>class Perro extends Animal {</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>constructor(nombre, genero, tamanio) {</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>//Con el metodo super() se manda llamar al constructor de la clase padre</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>super(nombre, genero);</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>this.tamanio = tamanio;</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>}</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>sonar() {</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>console.log("Soy un perro y mi sonido es un ladrido");</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>}</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>ladrar() {</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>console.log("GUa gua");</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>}</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>static queEres() {</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>console.log("Soy el mejor amigo del hombre");</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>}</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>}</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>Perro.queEres();</code></p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <p><b>Getters y Setters</b> son metodos especiales que nos permiten establecer y obtener los valores y atributos de nuestra clase. Los sets se acostumbra recibir un valor y no deben tener el mismo nombre
+                                                        que la propiedad que quieres modificar</p>
+                                                </li>
+                                                <li>
+                                                    <p>Ejemplo de Set:</p>
+                                                    <div class="card" style="width: 18rem;">
+                                                        <div class="card-body">
+                                                            <p class="card-text espacio-codigo0"><code>class Persona {</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>nombre = '';</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>codigo = '';</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>codigo = '';</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>frase = '';</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>comida = '';</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>constructor(nombre = 'sin nombre', codigo = 'sin codigo', frase = 'sin frase') {</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>this.nombre = nombre;</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>this.codigo = codigo;</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>this.frase = frase;</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>}</code></p>
+                                                            <p class="card-text espacio-codigo1">//los sets se acostumbra recibir un valor y no deben tener el mismo nombre que la propiedad que quieres modificar</p>
+                                                            <p class="card-text espacio-codigo1"><code>set setComidaFavorita(comida) {</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>this.comida = comida;</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>}</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>quienSoy() {</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>return `soy ${this.nombre} y mi identidad es ${this.codigo}`;</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>}</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>otraFuncion() {</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>return this.quienSoy();</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>}</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>}</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>const spiderman = new Persona('ric', 'asd', 'hurra!');</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>spiderman.setComidaFavorita= 'Los chilaquiles';</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>console.log(spiderman);</code></p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <p>Ejemplo de Get:</p>
+                                                    <div class="card" style="width: 18rem;">
+                                                        <div class="card-body">
+                                                            <p class="card-text espacio-codigo0"><code>class Persona {</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>nombre = '';</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>codigo = '';</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>codigo = '';</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>frase = '';</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>comida = '';</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>constructor(nombre = 'sin nombre', codigo = 'sin codigo', frase = 'sin frase') {</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>this.nombre = nombre;</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>this.codigo = codigo;</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>this.frase = frase;</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>}</code></p>
+                                                            <p class="card-text espacio-codigo1">//los sets se acostumbra recibir un valor y no deben tener el mismo nombre que la propiedad que quieres modificar</p>
+                                                            <p class="card-text espacio-codigo1"><code>set setComidaFavorita(comida) {</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>this.comida = comida.toUpperCase();</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>}</code></p>
+                                                            <p class="card-text espacio-codigo1">//El get es para recuperar un valor</p>
+                                                            <p class="card-text espacio-codigo1"><code>get getComidaFavorita() {</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>return `La comida favorita de ${this.nombre} es ${this.comida}`;</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>}</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>quienSoy() {</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>return `soy ${this.nombre} y mi identidad es ${this.codigo}`;</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>}</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>otraFuncion() {</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>return this.quienSoy();</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>}</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>}</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>const spiderman = new Persona('ric', 'asd', 'hurra!');</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>spiderman.setComidaFavorita = 'una jericalla';</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>console.log(spiderman.getComidaFavorita);</code></p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li></li>
                                             </ul>
                                         </div>
                                         <div>
@@ -1474,6 +1588,11 @@
                                                         </div>
                                                     </div>
                                                 </li>
+                                                <li><b>Math.PI</b> te da el valor de PI</li>
+                                                <li><b>Math.floor(7.8)</b> te redondea hacia abajo</li>
+                                                <li><b>Math.abs(-7.8)</b> te da el valor absoluto de un número(si es positivo te lo pone positivo y si es negativo te lo pone positivo)</li>
+                                                <li><b>Math.sign(8)</b> te da un 1 o -1 dependiendo si el número es positivo o negativo</li>
+                                                <li><b></b></li>
                                                 <li>
                                                     <b>Math.ceil(2.49)</b> redondea hacia arriba siempre
                                                     <div class="card" style="width: 18rem;">
@@ -1620,10 +1739,96 @@
 
                                                 <li><b>Obtener la fecha:</b> <code>let hoy = new Date(); console.log(hoy);</code></li>
                                                 <li><b>Obtener el día:</b> <code>let hoy = new Date(); let dia = hoy.getDay(); console.log(dia);</code></li>
+                                                <li><b></b></li>
+                                                <li><b></b></li>
+                                                <li><b></b></li>
+                                                <li><b></b></li>
+                                                <li><b></b></li>
                                                 <li><b>throw</b>: te da un mensaje de error, ejemplo : <code>throw "No hay cartas en el deck";</code></li>
                                                 <li><b>Object.keys(ric);</b> te da los llaves(los nombres de las propiedades del objeto) del objeto <code>console.log(Object.keys(ric));</code></li>
                                                 <li><b>objeto.hasOwnProperty("nombre")</b>imprimira true or false para decirte si existe o no la propiedad en el objeto </li>
                                                 <li><b></b></li>
+
+                                                <h2>Metodos que se usan en console.</h2>
+                                                <ul>
+                                                    <li><b>console.error()</b> te imprime el resultado de color rojo</li>
+                                                    <li><b>console.warn()</b> te imprime el resultado de color amarillo</li>
+                                                    <li><b>console.info()</b>te imprime el resultado de color normal</li>
+                                                    <li><b>Imprimir como en C</b> con <code>console.log("Mi nombre es %s",nombre)</code> </li>
+                                                    <li><b>console.clear()</b> limpiar toda la consola</li>
+                                                    <li><b>console.log(window)</b> te muestra las propiedades del objeto window</li>
+                                                    <li><b>console.log(document)</b> es la representación del documento html a traves de javascript, te muestra el contenido(las etiquetas html) </li>
+                                                    <li><b>console.dir(document)</b> te muestra todas las propiedades y objetos que tiene document</li>
+                                                    <li><b>console.group("Un titulo")</b> sirve para crear una lista con console.log. Ejemplo:
+                                                        <div class="card" style="width: 18rem;">
+                                                            <div class="card-body">
+                                                                <p class="card-text espacio-codigo0"><code>console.group("Titulo del grupo")</code></p>
+                                                                <p class="card-text espacio-codigo1"><code>console.log("Un nombre");</code></p>
+                                                                <p class="card-text espacio-codigo1"><code>console.log("Otro nombre");</code></p>
+                                                                <p class="card-text espacio-codigo1"><code>console.groupEnd();</code></p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li><b>console.groupEnd();</b> sirve para cerrar el grupo</li>
+                                                    <li><b>console.table(Object.entries(console).sort())</b> te crea una tabla con todos les metodos que puede usar el objeto <b>console</b> y el sort lo puse para que me lo ponga en orden alfabetico
+                                                        <div class="card" style="width: 18rem;">
+                                                            <div class="card-body">
+                                                                <p class="card-text espacio-codigo1"><code>const numeros = [1,2,3,4,5];</code></p>
+                                                                <p class="card-text espacio-codigo1"><code>console.log(numeros);</code></p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card" style="width: 18rem;">
+                                                            <div class="card-body">
+                                                                <p class="card-text espacio-codigo1"><code>const vocales = ["a","e","i","o","u"];</code></p>
+                                                                <p class="card-text espacio-codigo1"><code>console.log(vocales);</code></p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card" style="width: 18rem;">
+                                                            <div class="card-body">
+                                                                <p class="card-text espacio-codigo1"><code>const gato = {nombre: "Alvin",color: "albinegro",raza:"mestizo"};</code></p>
+                                                                <p class="card-text espacio-codigo1"><code>console.log(gato);</code></p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li><b>console.time();</b> Te dice cuanto tiempo tarda tu código en ejecutarse Ejemplo:
+                                                        <div class="card" style="width: 28rem;">
+                                                            <div class="card-body">
+                                                                <p class="card-text espacio-codigo1"><code>console.time("Cuanto tiempo tarda");</code></p>
+                                                                <p class="card-text espacio-codigo1"><code>const arreglo = Array(1000000);</code></p>
+                                                                <p class="card-text espacio-codigo1"><code>for(let i = 0; arreglo.length; i++);{</code></p>
+                                                                <p class="card-text espacio-codigo1"><code>arreglo[i] = i;</code></p>
+                                                                <p class="card-text espacio-codigo1"><code>}</code></p>
+                                                                <p class="card-text espacio-codigo1"><code>console.timeEnd("Cuanto tiempo tarda");</code></p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li><b></b> Te dice cuantas veces se ha ejecutado tu código, por ejemplo cuantas veces el usuario ejecuto el evento al darle click a un boton ó cuantas conexiones tuvo que hacer para llegar a cierta solicitud.
+                                                        Ejemplo:
+                                                        <div class="card" style="width: 28rem;">
+                                                            <div class="card-body">
+                                                                <p class="card-text espacio-codigo1"><code>for(let i = 0; arreglo.length; i++);{</code></p>
+                                                                <p class="card-text espacio-codigo1"><code>console.count("Codigo for");</code></p>
+                                                                <p class="card-text espacio-codigo1"><code>console.log(i);</code></p>
+                                                                <p class="card-text espacio-codigo1"><code>}</code></p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li><b>console.assert()</b> sirve para comenzar aprender pruebas unitarias Ejemplo:
+                                                        <div class="card" style="width: 28rem;">
+                                                            <div class="card-body">
+                                                                <p class="card-text espacio-codigo1"><code>let x = 3;</code></p>
+                                                                <p class="card-text espacio-codigo1"><code>let y = 2;</code></p>
+                                                                <p class="card-text espacio-codigo1"><code>pruebaXY = "Se espera que X siempre sea mayor";</code></p>
+                                                                <p class="card-text espacio-codigo1"><code>console.assets(x < y (x,y,pruebaXY));</code></p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li><b></b></li>
+                                                    <li><b></b></li>
+                                                    <li><b></b></li>
+                                                    <li><b></b></li>
+
+                                                </ul>
                                             </ul>
                                         </div>
                                         <div>
@@ -1719,6 +1924,42 @@
                                                 <li><b>Algebra</b>:Multiplicaciones y divisiones primero, luego sumas y restas</li>
                                                 <li><b>const</b> cuando tiene dentro un arreglo, puede modificarse un espacio del arreglo pero no el arreglo entero</li>
                                                 <li>JS utiliza el paradigma de la programación orientada a objetos no basado en clases como la mayoría de los lenguajes si no basado en <b>prototipos</b></li>
+                                                <li>Los <b>operadores corto circuito</b> se utilizan mucho en <b>React</b>, el <b>OR</b> valida a <b>true</b> y el <b>AND</b> valida a los <b>false</b></li>
+                                                <li><b>4 tipos de funciones anonimas autoejecutables</b>
+                                                    <div class="card" style="width: 18rem;">
+                                                        <div class="card-body">
+                                                            <p class="card-text espacio-codigo1">//clasica</p>
+                                                            <p class="card-text espacio-codigo1"><code>(function() {</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>console.log("Soy una función anónima autoejecutable CLASICA");</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>})();</code></p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card" style="width: 18rem;">
+                                                        <div class="card-body">
+                                                            <p class="card-text espacio-codigo1">//Crockford</p>
+                                                            <p class="card-text espacio-codigo1"><code>((function() {</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>console.log("Soy una función anónima autoejecutable CROCKFORD");</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>})());</code></p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card" style="width: 18rem;">
+                                                        <div class="card-body">
+                                                            <p class="card-text espacio-codigo1">//UNARIA</p>
+                                                            <p class="card-text espacio-codigo1"><code>+function() {</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>console.log("Soy una función anónima autoejecutable UNARIA");</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>}();</code></p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card" style="width: 18rem;">
+                                                        <div class="card-body">
+                                                            <p class="card-text espacio-codigo1">//FACEBOOk</p>
+                                                            <p class="card-text espacio-codigo1"><code>! function() {</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>console.log("Soy una función anónima autoejecutable ESTILO FACEBOOK");</code></p>
+                                                            <p class="card-text espacio-codigo1"><code>}</code></p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li></li>
                                                 <li></li>
                                             </ul>
                                         </div>
@@ -1769,16 +2010,41 @@
                                                     <code>perro = 'solovino';</code>
                                                 </li>
                                                 <li><b>Obtener la fecha:</b> <code>let hoy = new Date(); console.log(hoy);</code></li>
-                                                <li><b>Obtener el día:</b> <code>let hoy = new Date(); let dia = hoy.getDay(); console.log(dia);</code></li>
-                                                <li><b>Obtener el año:</b> <code>let fecha = new Date().getFullYear();console.log(fecha);</code> </li>
-                                                <li><b>Obtener el minuto:</b> <code>let dia = new Date(); let dato = dia.getMinutes(); console.log(dato);</code></li>
-                                                <li><b>Obtener la hora:</b> <code>let dia = new Date(); let dato = dia.getHours(); console.log(dato);</code></li>
+                                                <li><b>Obtener el día: getDay()</b> <code>let hoy = new Date(); let dia = hoy.getDay(); console.log(dia);</code></li>
+                                                <li><b>Obtener el año: getFullYear()</b> <code>let fecha = new Date().getFullYear();console.log(fecha);</code> </li>
+                                                <li><b>Obtener el minuto: getMinutes()</b> <code>let dia = new Date(); let dato = dia.getMinutes(); console.log(dato);</code></li>
+                                                <li><b>Obtener la hora: getHours()</b> <code>let dia = new Date(); let dato = dia.getHours(); console.log(dato);</code></li>
+                                                <li><b>Obtener segundos: getSeconds()</b> <code>console.log(fecha.getSeconds());</code></li>
+                                                <li><b>Obtener fecha con letras: toDateString()</b> <code>console.log(fecha.toDateString);</code></li>
+                                                <li><b>Obtener fecha local: toLocalString()</b> <code>console.log(fecha.toLocalString);</code></li>
+                                                <li><b>Obtener hora local: toLocalTimeString()</b> <code>console.log(fecha.toLocalTimeString);</code></li>
                                                 <li><b>Crear una fecha que ya paso:</b> <code>let navidad2019 = new Date('2019-25-12'); console.log(navidad2019);</code></li>
                                                 <li><b>getMinutes y getHours</b> sirven para usarlas en proyectos donde tengas que comparar la hora de inicio y final, y crear una variable donde pongas la diferencia</li>
                                                 <li><b>Modificar una fecha:</b> <code>let dia = new Date(); let dato = dia.setFullYear(2016); dato = dia.getFullYear(); console.log(dato);</code> </li>
                                                 <li><b>Cambiar fechas,minutos, hrs</b> de la misma manera que puedes usar getHours, puedes usar setHours y todo lo demás</li>
                                                 <li><a href="https://javascript-minifier.com/">javascript-minifier</a> para minificar el código</li>
                                                 <li><b><a href="https://jsonplaceholder.typicode.com/guide/">jsonplaceholder</a></b> la API REST para frontends más usada</li>
+                                                <li>Las <b>expresiones regulares</b> son patrones que se utilizan para hacer coincidir combinaciones de caracteres en cadenas. En JavaScript, las expresiones regulares también son objetos. Estos patrones se
+                                                    utilizan con los métodos exec() y test() de RegExp, y con match(), matchAll(), replace(), replaceAll(), search() y split() métodos de String Ejemplo: <br>
+
+                                                    <div class="card" style="width: 18rem;">
+                                                        <div class="card-body">
+                                                            <p class="card-text espacio-codigo0"><code>let cadena = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum";</code></p>
+                                                            <p class="card-text espacio-codigo0"><code>let expReg = new RegExp("lorem", "ig");</code></p>
+                                                            <p class="card-text espacio-codigo0">//g representa que debe de buscar en todo el texto y la i , que ignore si es mayuscula o minuscula</p>
+                                                            <p class="card-text espacio-codigo0"><code>let expReg2 = /lorem{2}/ig</code></p>
+                                                            <p class="card-text espacio-codigo0">//el de arriba es el formato más usado de las expresions regulares</p>
+                                                            <p class="card-text espacio-codigo0">//Las llaves es para indicar cuantas veces debe estar repetida en el texto la palabra que se está buscando</p>
+                                                            <p class="card-text espacio-codigo0"><code>console.log(expReg.test(cadena));</code></p>
+                                                            <p class="card-text espacio-codigo0"><code>console.log(expReg.exec(cadena));</code></p>
+                                                            <p class="card-text espacio-codigo0"><code>console.log(expReg2.test(cadena));</code></p>
+                                                            <p class="card-text espacio-codigo0"><code>console.log(expReg2.exec(cadena));</code></p>
+                                                            <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Regular_Expressions">Bibliografia chingona</a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li></li>
+
                                             </ul>
                                         </div>
                                     </div>
@@ -2853,7 +3119,7 @@
                                                     <a href="https://lokeshdhakar.com/projects/lightbox2/">lightbox2</a> Puedes hacer galerías
                                                 </li>
                                                 <li>
-                                                    <a href=""></a>
+                                                    <a href="https://momentjs.com/">Moment JS</a> Sirve para los usos horarios y el tiempo.
                                                 </li>
                                                 <li>
                                                     <a href=""></a>

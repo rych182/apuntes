@@ -1,32 +1,32 @@
 //try catch cuando no quieres que se detenga la ejecución de tu programa
 //Usalo cuando las funciones no sabes si vayan a tener datos, si llegan vacias, no llenes tu codigo de try catch
 
-function animal(nombre, genero) {
-    //Propiedades
-    this.nombre = nombre;
-    this.genero = genero;
+
+
+//clasica
+(function() {
+    console.log("Soy una función anónima autoejecutable CLASICA");
+})();
+
+//Crockford
+((function() {
+    console.log("Soy una función anónima autoejecutable CROCKFORD");
+})());
+
+//UNARIA
++
+
+function() {
+    console.log("Soy una función anónima autoejecutable UNARIA");
+}();
+
+//FACEBOOk
+! function() {
+    console.log("Soy una función anónima autoejecutable ESTILO FACEBOOK");
 }
 
-//Metodos agregados desde afuera, esto evita la duplicidad de metodos en la función constructora
-animal.prototype.sonar = function() {
-    console.log("Hago sonidos porque estoy vivo");
-}
 
-function perro(nombre, genero, tamanio) {
-    //super sirve para invocar al constructor padre
-    this.super = animal;
-    this.super(nombre, genero);
-    this.tamanio = tamanio;
-}
-perro.prototype = new animal();
-perro.prototype.constructor = perro;
 
-perro.prototype.ladrar = function() {
-    console.log("Wof!! wof!!");
-}
-
-const snoopy = new perro("guffy", "masculino", "grande");
-console.log(snoopy);
 /*
 
 Ejercicio 1
@@ -35,6 +35,31 @@ let nombre = () => {
     console.log("Ricardo");
 }
 nombre();
+
+EJERCICIO 1.01: Imprimir un valor predefinido
+function saludar(nombre) {
+    nombre = nombre || "Desconocido";
+    console.log(`Hola ${nombre}`);
+}
+saludar();
+
+EJERCICIO 1.02: Ejemplos de corto circuito OR
+function saludar(nombre) {
+    nombre = nombre || "Desconocido";
+    console.log(`Hola ${nombre}`);
+}
+saludar(19 || "valor de la derecha");
+saludar(true || "valor de la derecha");
+saludar({} || "valor de la derecha");
+saludar([] || "valor de la derecha");
+saludar(false || "valor de la derecha");
+saludar(null || "valor de la derecha");
+saludar(undefined || "valor de la derecha");
+saludar("" || "valor de la derecha");
+saludar(-2 || "valor de la derecha");
+saludar(0 || "valor de la derecha");
+
+EJERCICIO 1.03: Ejemplos de corto circuito con AND
 
 Ejercicio2
 Imprimir mi nombre en una función flecha, asignandole el nombre en los parentesis
@@ -437,6 +462,44 @@ perro.prototype.ladrar = function() {
 
 perro.prototype.ladrar();
 
+
+EJERCICIO 30: Crear una funcion anónima autoinvocada
+(function() {
+    console.log("Soy una función autoinvocada");
+})()
+
+EJERCICIO 31: Crear una funcion anónima autoinvocada que reciba parametros
+(function(w, d, c) {
+    console.log("Soy una función autoinvocada");
+    console.log(w);
+    console.log(d);
+    console.log(c);
+    c.log("Estoy usando console.log recibiendo el console como un parametro");
+})(window, document, console)
+
+EJERCICIO 31: Crear las 4 funciones anónimas autoinvocadas
+
+//clasica
+(function() {
+    console.log("Soy una función anónima autoejecutable CLASICA");
+})();
+
+//Crockford
+((function() {
+    console.log("Soy una función anónima autoejecutable CROCKFORD");
+})());
+
+//UNARIA
++
+
+function() {
+    console.log("Soy una función anónima autoejecutable UNARIA");
+}();
+
+//FACEBOOk
+! function() {
+    console.log("Soy una función anónima autoejecutable ESTILO FACEBOOK");
+}
 
 
 */

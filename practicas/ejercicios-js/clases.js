@@ -16,42 +16,7 @@ no queden cargados con muchas funciones y organizar el codigo, hace que una func
 nuestro código sea fácil de mantener, 
 */
 
-class Animal {
-    //El constructor es un metodo especial que se ejecuta en el momento de instancia de la clase
-    constructor(nombre, genero) {
-        this.nombre = nombre;
-        this.genero = genero;
-    }
-
-    //Metodos
-    sonar() {
-        console.log("Hago sonidos porque estoy vivo");
-    }
-    saludar() {
-        console.log(`HOla me llamo ${this.nombre}`);
-    }
-}
-
-class Perro extends Animal {
-    constructor(nombre, genero, tamanio) {
-        //Con el metodo super() se manda llamar al constructor de la clase padre
-        super(nombre, genero);
-        this.tamanio = tamanio;
-    }
-    sonar() {
-        console.log("Soy un perro y mi sonido es un ladrido");
-    }
-
-    ladrar() {
-        console.log("GUa gua");
-    }
-}
-
-const scooby = new Perro("Scooby", "Macho", "Grande");
-console.log(scooby);
-scooby.sonar();
-scooby.ladrar();
-scooby.saludar();
+console.table(Object.entries(console).sort());
 //object deriva del prototipo del objeto primitivo de javascript y ahí vienen todos los objetos primitivos del object 
 //Esto no convierte a JavaScript en un lenguaje orientado a objetos basado en clases, sigue siendo un lenguaje orientado a objetos basado en prototipos
 
@@ -193,7 +158,6 @@ class Persona {
         return this.quienSoy();
     }
 }
-
 const spiderman = new Persona('ric', 'asd', 'hurra!');
 spiderman.setComidaFavorita = 'Los chilaquiles';
 console.log(spiderman);
@@ -267,6 +231,44 @@ class Persona {
 const spiderman = new Persona('ric', 'asd', 'hurra!');
 spiderman.setComidaFavorita = 'una jericalla';
 console.log(spiderman.getComidaFavorita);
+
+
+EJERCICIO 9.01: Crea un metodo estatico dentro de una clase que herede otros metodos y propiedades, ya sabes que no necesitas instanciar la clase
+class Animal {
+    //El constructor es un metodo especial que se ejecuta en el momento de instancia de la clase
+    constructor(nombre, genero) {
+        this.nombre = nombre;
+        this.genero = genero;
+    }
+
+    //Metodos
+    sonar() {
+        console.log("Hago sonidos porque estoy vivo");
+    }
+    saludar() {
+        console.log(`HOla me llamo ${this.nombre}`);
+    }
+}
+
+class Perro extends Animal {
+    constructor(nombre, genero, tamanio) {
+        //Con el metodo super() se manda llamar al constructor de la clase padre
+        super(nombre, genero);
+        this.tamanio = tamanio;
+    }
+    sonar() {
+        console.log("Soy un perro y mi sonido es un ladrido");
+    }
+
+    ladrar() {
+        console.log("GUa gua");
+    }
+
+    static queEres() {
+        console.log("Soy el mejor amigo del hombre");
+    }
+}
+Perro.queEres();
 
 
 EJERCICIO 10
