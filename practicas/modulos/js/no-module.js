@@ -1,0 +1,1 @@
+console.log("No soporto +ES6");

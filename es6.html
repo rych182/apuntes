@@ -1861,6 +1861,86 @@
                                                 <li><b>if-else corto</b> se llama formalmente "operador ternario" <code>let eresMayor=(edad >= 18) ? "eres mayor de edad" : "Eres menor de edad";</code></li>
                                                 <li></li>
                                             </ul>
+
+                                            <ul>
+                                                <h2>Import y export</h2>
+                                                <li><b>Import</b>: es una función que sirve para usar el valor/accion de una constante, variable ó función para que se use en otro archivo de javascript(modulo). Ejemplo: <br>
+                                                    <div class="card-body">
+                                                        <p class="card-text espacio-codigo0"><code>import { pi } from './constantes.js';</code></p>
+                                                        <p class="card-text espacio-codigo0"><code>import { aritmetica } from './aritmetica.js';</code></p>
+                                                        <p class="card-text espacio-codigo0"><code>console.log(pi);</code></p>
+                                                        <p class="card-text espacio-codigo0"><code>console.log(aritmetica.sumar(3, 4));</code></p>
+                                                    </div>
+                                                </li>
+                                                <li><b>Export:</b> es una función que permite compartir el valor de una variable, constante o función. Ejemplo <br>
+                                                    <div class="card-body">
+                                                        <p class="card-text espacio-codigo0"><code>export const pi = Math.PI;</code></p>
+                                                        <p class="card-text espacio-codigo0"><code>export let usuario = "Ric";</code></p>
+                                                        <p class="card-text espacio-codigo0"><code>let password = 123;</code></p>
+                                                        <p class="card-text espacio-codigo0"><code>export default function saludar() {</code></p>
+                                                        <p class="card-text espacio-codigo0"><code>console.log("Hola Modulos +ES6");</code></p>
+                                                        <p class="card-text espacio-codigo0"><code>}</code></p>
+                                                    </div>
+                                                </li>
+                                                <li><b>export default</b> es una función que sirve para exportar valores y funciones a tu modulo principal, sin la necesidad de importarla en el modulo principal, la función lo hará por ti y podrás usarla. Ejemplo
+                                                    <br>
+                                                    <div class="card-body">
+                                                        <p class="card-text espacio-codigo0">ARCHIVO constants.js</p>
+                                                        <p class="card-text espacio-codigo0"><code>export default function saludar() {</code></p>
+                                                        <p class="card-text espacio-codigo0"><code>console.log("Hola Modulos +ES6");</code></p>
+                                                        <p class="card-text espacio-codigo0"><code>}</code></p>
+                                                        <p class="card-text espacio-codigo0">Archivo modulos.js</p>
+                                                        <p class="card-text espacio-codigo0"><code>import saludar, { pi } from './constantes.js';</code></p>
+                                                        <p class="card-text espacio-codigo0"><code>saludar();</code></p>
+                                                    </div>
+                                                    <h3 class="text-danger">Nota importante</h3>
+                                                    <p class="text-danger">El export default sirve también en las variables y funciones pero se tiene que declarar en un renglon distinto a donde declaramos la variable o constante. Ejemplo:</p>
+                                                    <div class="card-body">
+                                                        <p class="card-text espacio-codigo0">ARCHIVO constants.js</p>
+                                                        <p class="card-text espacio-codigo0"><code>let password = 123;</code></p>
+                                                        <p class="card-text espacio-codigo0"><code>export default password;</code></p>
+                                                        <p class="card-text espacio-codigo0">Archivo modulo.js</p>
+                                                        <p class="card-text espacio-codigo0"><code>import password, { pi, saludar } from './constantes.js';</code></p>
+                                                        <p class="card-text espacio-codigo0"><code>console.log(password);</code></p>
+                                                    </div>
+                                                    <h3>También se puede exportar por default una clase</h3>
+
+                                                    <div class="card-body">
+                                                        <p class="card-text espacio-codigo0">Archivo constantes.js</p>
+                                                        <p class="card-text espacio-codigo0"><code>export default class padre {</code></p>
+                                                        <p class="card-text espacio-codigo0"><code>constructor() {</code></p>
+                                                        <p class="card-text espacio-codigo0"><code>console.log("Hola hijo");</code></p>
+                                                        <p class="card-text espacio-codigo0"><code>}</code></p>
+                                                        <p class="card-text espacio-codigo0"><code>}</code></p>
+                                                        <p class="card-text espacio-codigo0">Archivo modulos.js</p>
+                                                        <p class="card-text espacio-codigo0"><code>import padre, { pi, password, saludar } from './constantes.js';</code></p>
+                                                        <p class="card-text espacio-codigo0"><code>let hijo = new padre;</code></p>
+                                                        <p class="card-text espacio-codigo0"><code>hijo;</code></p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <b>Alias</b> sirve para cambiarle el nombre a la función que estás importando. Ejemplo:
+                                                    <div class="card-body">
+                                                        <p class="card-text espacio-codigo0">Archivo aritmetica.js</p>
+
+
+
+                                                        <p class="card-text espacio-codigo0"><code>function sumar(a, b) {</code></p>
+                                                        <p class="card-text espacio-codigo0"><code>return a + b;</code></p>
+                                                        <p class="card-text espacio-codigo0"><code>}</code></p>
+                                                        <p class="card-text espacio-codigo0"><code>function restar(a, b) {</code></p>
+                                                        <p class="card-text espacio-codigo0"><code>return a - b;</code></p>
+                                                        <p class="card-text espacio-codigo0"><code>}</code></p>
+                                                        <p class="card-text espacio-codigo0"><code>export const aritmetica = {</code></p>
+                                                        <p class="card-text espacio-codigo0"><code>sumar,</code></p>
+                                                        <p class="card-text espacio-codigo0"><code>restar</code></p>
+                                                        <p class="card-text espacio-codigo0"><code>}</code></p>
+                                                        <p class="card-text espacio-codigo0">Archivo modulos.js</p>
+                                                        <p class="card-text espacio-codigo0"><code>import { aritmetica as calculos } from './aritmetica.js';</code></p>
+                                                        <p class="card-text espacio-codigo0"><code>console.log(calculos.sumar(3, 4));</code></p>
+                                                    </div>
+                                                </li>
+                                            </ul>
                                         </div>
                                     </div>
                                     <hr>
