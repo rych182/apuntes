@@ -10,6 +10,8 @@ Nota: Es muy raro tener 3 niveles de arrays
 
 
 
+
+
 /*
 Ejercicio 1 
 Array que tenga strings
@@ -443,6 +445,14 @@ const persona = ['Ricard', , 33, 'Mexico'];
 const [nombre, estadoCivil, edad, pais, profesion = "Programador"] = persona;
 let imprimir = (persona) => console.log(profesion);
 imprimir(persona);
+
+EJERCICIO 23.1: SPREAD, copiar un array y ponerlo dentro de otro
+const arreglo = [1, 2, 3, 4];
+let arreglo2 = [...arreglo, 5];
+console.log(arreglo2);
+
+
+
 
 Ejercicio 24
 Deestructurar objeto e imprimiendo con una función
