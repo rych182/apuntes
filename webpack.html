@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Apuntes por tema</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="index.html">My project</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="ebooks.html">e-books <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="vsc.html">VSC</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Comandos
+      </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="terminal.html">Terminal</a>
+                        <a class="dropdown-item" href="git.html">Git & Github</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Frontend
+      </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="css3.html">CSS3</a>
+                        <a class="dropdown-item" href="sass.html">SASS</a>
+                        <a class="dropdown-item" href="bootstrap4.html">Bootstrap 4</a>
+                        <a class="dropdown-item" href="es6.html">JS</a>
+                        <a class="dropdown-item" href="pugjs.html">PUG JS</a>
+                        <a class="dropdown-item" href="jquery.html">Jquery</a>
+                        <a class="dropdown-item" href="typescript.html">TypeScript</a>
+                        <a class="dropdown-item" href="react.html">React</a>
+                        <a class="dropdown-item" href="angular.html">Angular</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Backend
+      </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="node.html">NODE JS</a>
+                        <a class="dropdown-item" href="expressjs.html">Express JS</a>
+                        <a class="dropdown-item" href="php.html">PHP</a>
+                        <a class="dropdown-item" href="c.html">C</a>
+                        <a class="dropdown-item" href="wordpress.html">Wordpress</a>
+                        <a class="dropdown-item" href="sql.html">SQL</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Tools
+      </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="npm.html">NPM</a>
+                        <a class="dropdown-item" href="webpack.html">Webpack</a>
+                        <a class="dropdown-item" href="babeljs.html">Babeljs</a>
+                        <a class="dropdown-item" href="pugjs.html">Pug JS</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Temas varios
+      </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="jobs.html">Jobs</a>
+                        <a class="dropdown-item" href="international.html">International Events</a>
+                        <a class="dropdown-item" href="seo.html">SEO</a>
+                        <a class="dropdown-item" href="ux.html">UX/UI</a>
+                        <a class="dropdown-item" href="marketing.html">Marketing</a>
+                        <a class="dropdown-item" href="design.html">Design</a>
+                        <a class="dropdown-item" href="business.html">Business</a>
+                        <a class="dropdown-item" href="frontend-pages.html">Cool Frontend Pages</a>
+                        <a class="dropdown-item" href="canada.html">Canada</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container menusColapso">
+        <div class="card colapsos">
+            <div class="card-header" id="sass-0">
+                <a data-toggle="collapse" href="#cuatro" role="button" aria-expanded="false">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed colorTitulo" type="button" data-toggle="collapse" data-target="#cuatro" aria-expanded="false">
+                            <img src="img/webpack.png"> WebPack
+                        </button>
+                    </h2>
+                </a>
+            </div>
+            <div id="cuatro" class="collapse" aria-labelledby="sass-0" data-parent="#accordionExample">
+                <div class="card-body">
+                    <div class="card  colapsos">
+                        <div class="card-header" id="js-5-1">
+                            <a data-toggle="collapse" href="#js-5-1-1" role="button" aria-expanded="false">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed colorTitulo1" data-toggle="collapse" data-target="#js-5-1-1" aria-expanded="false">
+                                        <img src="img/webpack.png"> 
+                                    </button>
+                                </h5>
+                            </a>
+                        </div>
+                        <div id="js-5-1-1" class="collapse" aria-labelledby="js-5-1" data-parent="#es6">
+                            <div class="card-body">
+                                <h2>¿Qué es Webpack?</h2>
+                                <p>Es un empaquetador de modulos</p>
+                                <h2>¿Para que sirve?</h2>
+                                <p>Es una herramienta que nos facilita trabajar con módulos. Los módulos son archivos que contienen clases, funciones etc. El objetivo de dividir todo en muchos archivos es que todo este más organizado, más fácil de mantener
+                                    y actualizarlo. Osea, separar nuestro código en muchos archivos Javascript, pero los navegadores no tienen forma de juntar todos nuestros archivos, es aquí donde entra webpack, que junta todos nuestros archivos en unos
+                                    solo, en ves de agregar muchos archivos js en nuestro archivo html. Sin el perderíamos compatibilidad y flexibilidad</p>
+                                <p>Gestiona las dependencias(los paquetes que descargas para tus trabajos), monta rápido servidores de prueba para acelera el proceso de producción, cargar modulos ya que a veces segmentamos nuestra aplicación convertir a
+                                    diferentes formatos(por ejemplo es8 a es5),minimizar codigo, compilar sass a css, compilar TypeScript a ES6, nos permite trabajar con ES6 moderno
+                                </p>
+                                <p>En Webpack se conoce el punto de origen en donde se va a compilar todo en un único archivo</p>
+                                <hr>
+                                <h2>Notas varias</h2>
+                                <ol>
+                                    <li>React y Angular ya tienen webpack por defecto</li>
+                                    <li>Webpack detecta por default la carpeta <b>src</b>
+                                    </li>
+                                    <li>Da un orden de archivos webpack</li>
+                                    <li>Cuando no configuramos, por defecto, webpack corre todo en modo de producción, y quita comentarios, dejar codigo limpio, simplificarlo, pero cuando estamos desarrollando yo necesito mis comentarios, para eso configuramos
+                                        tomo en modo <b>development</b></li>
+                                    <li>Los <b>rules</b> sirven para decirle a webpack que hacer con cierto tipo de archivos</li>
+                                    <li>NOTA: a las personas que están acostumbradas a trabajar con Angular, esta es la razón por la cual no hay otras importaciones adicionales de scripts aquí(en el index.html), porque webpack lo hace por nosotros
+                                    </li>
+                                    <li><code>npm i -D</code>quiere decir que se instalara la dependencia como desarrollo, no producción</li>
+                                    <li>Gulp y Grunt</li> Son task runners y los procesos se van haciendo de manera separada
+                                    <li><b>webpack.conf.js</b> es donde se configuran todos los procesos de construcción, que se escribe con NODE, no con js de los navegadores</li>
+                                    <li><b>Create react app</b> es un builder que nos permite empezar a crear un proyecto inmediatamente y desarrollar en react sin necesidad de configurar webpack</li>
+                                    <li><b>loaders</b> son paquetes de <b>node</b> que nos van a permitir realizar transformaciones de archivos, por ejemplo, para compilar el CSS, otro para interpretar JSX la sintaxis de React, otro para la sintaxis de TypeScript,
+                                        otro para la sintaxis de Vue</li>
+                                    <li><b>Pluggins o modulos</b> realizan una acción en concreto, por ejemplo un modulo para inyectar todas las dependencias al archivo principal .html , para extraer el código CSS a una hoja independiente etc</li>
+                                    <li>
+                                        <ul>
+                                            <h3>Webpack tiene 4 conceptos clave:</h3>
+                                            <li><b>Entry:</b>Indica cuál es el punto(s) de entrada.</li>
+                                            <li><b>Output:</b> Indica cuál es el punto(s) de salida.</li>
+                                            <li><b>Loaders:</b> Realizan transformaciones en los archivos.</li>
+                                            <li><b>Plugins:</b> Realizan acciones en los archivos.</li>
+                                        </ul>
+                                    </li>
+                                    <li></li>
+                                    <li></li>
+                                </ol>
+
+
+                                <hr>
+                                <h2>Estilo John Mircha</h2>
+                                <ol>
+                                    <li><b>npm init</b> en la carpeta donde vayamos a desarrollar para crear el archivo <b>package.json</b></li>
+                                    <li><b>npm i -D webpack webpack-cli</b> en la misma carpeta</li>
+                                    <li>
+                                        <div class="card " style="width: 38rem; ">
+                                            <div class="card-body" id="js-length">
+                                                <p class="card-text espacio-codigo0 ">Entrar al archivo <b>package.json</b> y agregar lo siguiente</p>
+                                                <p class="card-text espacio-codigo0 "><code>"scripts" : {</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>"build" : "webpack"</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>Ejecuta el comando <b>npm run build</b></li>
+                                    <li>Crear la carpeta <b>src</b></li>
+                                    <li>Crear archivo <b>index.js</b> en la carpeta <b>src</b></li>
+                                    <li>
+                                        <div class="card " style="width: 38rem; ">
+                                            <div class="card-body" id="js-length">
+                                                <p class="card-text espacio-codigo0 ">Entrar al archivo <b>package.json</b> y agregar lo siguiente</p>
+                                                <p class="card-text espacio-codigo0 "><code>"main": "src/index.js",</code></p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>Correr <b>npm run build</b> de nuevo para que te genere el archivo de salida <b> ./dist/main,js </b></li>
+                                    <li>
+                                        <div class="card " style="width: 38rem; ">
+                                            <div class="card-body" id="js-length">
+                                                <p class="card-text espacio-codigo0 ">Modificar el archivo <b>package.json</b> y agregar:</p>
+                                                <p class="card-text espacio-codigo0 "><code>{</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>"presets": "@babel/preset-env"</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>},</code></p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>Instalar <b>Babel</b> para transpilar JS usando el comando <b>npm i -D babel-loader @babel/core @babel/preset-env</b></li>
+                                    <li>Crea el archivo en la raíz, que es el archivo de congiguración de Babel y decirle que presets de Babel vamos a utilizar</li>
+                                    <li>
+                                        <div class="card " style="width: 38rem; ">
+                                            <div class="card-body" id="js-length">
+                                                <p class="card-text espacio-codigo0 ">Agregar el preset que vamos a usar en <b>.babelrc</b></p>
+                                                <p class="card-text espacio-codigo0 "><code>"scripts": {</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>"dev": "webpack --mode development --entry ./foo/src/index.js --output-path ./foo/dist",</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>"build": "webpack --mode production --entry ./foo/src/index.js --output-path ./foo/dist"</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>},</code></p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="card " style="width: 38rem; ">
+                                            <div class="card-body" id="js-length">
+                                                <p class="card-text espacio-codigo0 ">Crear el archivo <b>webpack.config.js</b></p>
+                                                <p class="card-text espacio-codigo0 "><code>module.exports = {</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>module: {</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>rules: [{</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>test: /\.js$/i,</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>exclude: /node_modules/,</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>use: {</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>loader: "babel-loader",</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>},</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>}, ],</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>},</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>};</code></p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>Crea un archivo <b>index.html</b></li>
+                                    <li>
+                                        <div class="card " style="width: 38rem; ">
+                                            <div class="card-body" id="js-length">
+                                                <p class="card-text espacio-codigo0 ">Agrega esta otra configuración al archivo <b>webpack.config.js</b></p>
+                                                <p class="card-text espacio-codigo0 "><code>//Se pueden usar diferentes sintaxis en el USE</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>//Se exportan los pluggins porque es código de NODE JS</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>const HtmlWebpackPlugin = require("html-webpack-plugin");</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>module.exports = {</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>module: {</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>rules: [{</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>// i acepta cualquier archivo js en mayúsculas y minúsculas</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>test: /\.js$/i,</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>exclude: /node_modules/,</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>use: {</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>loader: "babel-loader",</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>},</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>},</code></p>
+                                                <p class="card-text espacio-codigo0 "><code> { //Creo otra regla</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>test: /\.html/i, //La i es para que acepte mayúsculas y minúsculas</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>use: [{</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>loader: "html-loader",</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>options: {</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>minimize: true,</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>}</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>}],</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>},</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>],</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>},</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>plugins: [</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>new HtmlWebpackPlugin({</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>//el archivo en el cual se va a basar para generar el archivo final</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>template: "./src/index.html",</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>//como quiero que se llame el archivo en la carpeta de distribución</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>filename: "./index.html"</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>})</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>]</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>};</code></p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="card " style="width: 38rem; ">
+                                            <div class="card-body" id="js-length">
+                                                <p class="card-text espacio-codigo0 ">Vamos a agregar OTRA configuración a <b>webpack.config.js</b> para transpilar CSS</p>
+                                                <p class="card-text espacio-codigo0 "><code>//Se pueden usar diferentes sintaxis en el USE</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>//Se exportan los pluggins porque es código de NODE JS</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>const HtmlWebpackPlugin = require("html-webpack-plugin");</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>module.exports = {</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>module: {</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>rules: [{</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>// i acepta cualquier archivo js en mayúsculas y minúsculas</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>test: /\.js$/i,</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>exclude: /node_modules/,</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>use: {</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>loader: "babel-loader",</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>},</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>},</code></p>
+                                                <p class="card-text espacio-codigo0 "><code> { //Creo otra regla</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>test: /\.html/i, //La i es para que acepte mayúsculas y minúsculas</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>use: [{</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>loader: "html-loader",</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>options: {</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>minimize: true,</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>}</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>}],</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>},</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>{</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>test: /\.css$/i,</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>use: [MiniCssExtractPlugin.loader, "css-loader"]</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>}</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>],</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>},</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>plugins: [</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>new HtmlWebpackPlugin({</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>//el archivo en el cual se va a basar para generar el archivo final</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>template: "./src/index.html",</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>//como quiero que se llame el archivo en la carpeta de distribución</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>filename: "./index.html"</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>}),</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>new MiniCssExtractPlugin(),</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>]</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>};</code></p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>Crear un archivo <b>style.css</b> en la carpeta <b>src</b></li>
+                                    <li>Instalar el servidor de Webpack con el comando <b>npm i -D webpack-dev-server
+                                    </b></li>
+
+                                    <li>
+                                        <div class="card " style="width: 38rem; ">
+                                            <div class="card-body" id="js-length">
+                                                <p class="card-text espacio-codigo0 ">Agrega otro comando en el archivo <b>package.json</b></p>
+                                                <p class="card-text espacio-codigo0 "><code>"scripts": {</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>"start": "webpack serve --mode development --open"</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>},</code></p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>Para hacer trabajar al servidor, usar el comando <b>npm start</b></li>
+
+                                    <li></li>
+                                    <li></li>
+                                </ol>
+                                <hr>
+
+
+
+
+
+
+
+
+
+
+
+
+                                <h2>Instalación y configuración(Checar instalación previa en la sección de Babel js)</h2>
+                                <ol>
+                                    <li>Instalar webpack <code>npm install --save-dev webpack</code></li>
+                                    <li>Instalar webpack-CLI <code>npm install --save-dev webpack-cli</code></li>
+                                    <li>Crear el archivo de configuracion de webapck llamado webpack.config.js en la raiz</li>
+                                    <li>En el archivo <b>package.json</b> debes crear un script y modificar el que ya tenías llamado <b>build</b>
+                                        <div class="card " style="width: 18rem; ">
+                                            <div class="card-body" id="js-length">
+                                                <p class="card-text espacio-codigo1 "><code>"scripts": {</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>"build": "webpack",</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>"build-babel": "babel src -d output --watch"</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>},</code></p>
+                                                <p class="card-text espacio-codigo1 ">Nota: correr los comandos <b>npm run build</b> y <b>npm run dev</b> para checar la diferencia en el archivo <b>main.js</b></p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>Ir a esta sección de webpack <a href="https://webpack.js.org/guides/getting-started/#modules">Modules</a> y copias la parte de <b>webpack.config.js</b> y pegarlo en tu archivo <b>webpack.config.js</b></li>
+                                    <li>xEplicación del código: <br>
+                                        <div class="card " style="width: 18rem; ">
+                                            <div class="card-body" id="js-length">
+                                                <p class="card-text espacio-codigo1 "><code>const path = require('path'); //Esta expotando un modulo de nodejs que te dice la ruta</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>module.exports = { //le dice la configuración a webpack de lo que queremos exportar</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>entry: './src/index.js', //archivo de entrada, es el archivo principal, donde importaremos todos los demás archivos</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>output: {</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>filename: 'main.js',</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>path: path.resolve(__dirname, 'dist'),</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>},</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>};</code></p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>Crearemos el archivo <b>app.js</b> en la carpeta <b>src</b> y en nuestro archivo <b>webpack.config.js</b> vamos a modificar la ruta a <b>entry: './src/app.js'</b> </li>
+                                    <li>Luego le cambiamos el archivo de salida a <b>filename: 'bundle.js',</b> que es el nombre estandar que usan los desarrolladores donde tendrá todo el código de nuestra aplicación web</li>
+                                    <li>En esta linea de código <b>path: path.resolve(__dirname, 'dist'),</b> modificaremos y quedará así <b>path: path.join(__dirname, '/'),</b> esto para que, <b>__dirname</b> lo que hace es obtener la ruta de todo nuestro
+                                        proyecto , el / es para decir que lo queremos en la raíz</li>
+                                    <li>Te aparecerá un archivo bundle.js en la raiz que trae código, pero ahí viene todo el código de tu aplicación</li>
+                                    <li>Enlaza el archivo bundle.js a tu archivo html</li>
+                                    <li>Ahora necesitamos que Babel haga uso de webpack, para eso vamos a este <a href="https://babeljs.io/setup#installation">Link</a> y das click en Webpack</li>
+                                    <li>Vas a instalar lo siguiente en la linea de comandos <code>npm install --save-dev babel-loader</code> porque @babel/core ya lo tenemos instalado</li>
+                                    <li>Vas a copiar el código en el sitio de babel del paso 3 y debe de quedar así : <br>
+                                        <div class="card " style="width: 18rem; ">
+                                            <div class="card-body" id="js-length">
+                                                <p class="card-text espacio-codigo1 "><code>const path = require('path'); //Esta expotando un modulo de nodejs que te dice la ruta</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>module.exports = { //le dice la configuración a webpack de lo que queremos exportar</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>entry: './src/index.js', //archivo de entrada, es el archivo principal, donde importaremos todos los demás archivos</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>output: {</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>filename: 'main.js',</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>path: path.resolve(__dirname, 'dist'),</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>},</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>module: {</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>rules: [</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>{ test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" }</code> con exclude: /node_modules/ excluimos la carpeta de node_modules que contiene infinidad de archivos js que hacen funcionar
+                                                    nuestro proyecto y solo se fija en el loader: "babel-loader", que es <b>lo que me va a permitir conectar Babel con webpack</b></p>
+                                                <p class="card-text espacio-codigo1 "><code>]</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>};</code></p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>En el archivo <b>app.js</b> vas a importar todos los archivos que tengas usando la sig sintaxis <b>import { mensajeAlerta } from './modulos/mensajeAlerta';</b> OJO: NUNCA debes de poner .js , solo el nombre de los archivos
+                                    </li>
+                                    <li>Cuando vayas a exporta, pones la palabra export a cada funcion que vayas a querer usar, Ejemplo:
+                                        <br>
+                                        <div class="card " style="width: 18rem; ">
+                                            <div class="card-body" id="js-length">
+                                                <p class="card-text espacio-codigo1 "><code>export const mensajeAlerta = (datos) => {</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>alert(datos);</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                            </div>
+                                        </div>
+                                        <br> Y en el archivo<b>app.js</b> mandas llamar tu función <code>mensajeAlerta("Hello World");</code>
+                                    </li>
+                                    <li>Otra manera de <b>exportar</b> es que hasta abajo del archivo exportar las funciones <code> export {mensajeAlerta};</code></li>
+                                    <li>Para no tener que compilar siempre, en el archivo <b>package.json</b> modifica el script <b>build</b> y ponle <b>"build": "webpack --watch",</b></li>
+
+                                    <li>Lo que más se exporta son funciones y clases, ejemplo: <br>
+                                        <div class="card " style="width: 18rem; ">
+                                            <div class="card-body" id="js-length">
+                                                <p class="card-text espacio-codigo1 "><code>export class Persona {</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>constructor(nombre, edad) {</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>this.nombre = nombre;</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>this.edad = edad;</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>mostrarInfo() {</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>console.log(`${this.nombre} tiene ${this.edad} años`);</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                            </div>
+                                        </div>
+                                        Y lo importas en tu archivo <b>app.js</b> así <code>import { Persona } from './modulos/clasePersona';</code>
+                                    </li>
+                                    <li>Otra manera de exportar tus clases es así:
+                                        <div class="card " style="width: 18rem; ">
+                                            <div class="card-body" id="js-length">
+                                                <p class="card-text espacio-codigo1 "><code>class Persona {</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>constructor(nombre, edad) {</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>this.nombre = nombre;</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>this.edad = edad;</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>mostrarInfo() {</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>console.log(`${this.nombre} tiene ${this.edad} años`);</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>export { Persona };</code></p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>También puedes <b>exportar por defecto</b> y cuando la importes <b>la puedes llamar como quieras</b> y omitir las llaves, el export por default solo lo puedes hacer unas vez por archivo , ejemplo:
+                                        <div class="card " style="width: 18rem; ">
+                                            <div class="card-body" id="js-length">
+                                                <p class="card-text espacio-codigo1 "><code>export default class Persona {</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>constructor(nombre, edad) {</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>this.nombre = nombre;</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>this.edad = edad;</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>mostrarInfo() {</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>console.log(`${this.nombre} tiene ${this.edad} años`);</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>}</code></p>
+
+                                            </div>
+                                        </div>
+                                        Y lo importas en tu archivo <b>app.js</b> así <code>import Perro from './modulos/clasePersona';</code> <br> Incluso cuando llames la clase, también puedes mandarla a llamar con el nuevo nombre:
+                                        <br>
+                                        <code>const ric = new Perro('Ricardo', 33);</code><br>
+                                        <code>ric.mostrarInfo();</code> <br> Otra manera de <b>exportar por default seria</b>
+                                        <li>Otra manera de exportar tus clases es así:
+                                            <div class="card " style="width: 18rem; ">
+                                                <div class="card-body" id="js-length">
+                                                    <p class="card-text espacio-codigo1 "><code>class Persona {</code></p>
+                                                    <p class="card-text espacio-codigo1 "><code>constructor(nombre, edad) {</code></p>
+                                                    <p class="card-text espacio-codigo1 "><code>this.nombre = nombre;</code></p>
+                                                    <p class="card-text espacio-codigo1 "><code>this.edad = edad;</code></p>
+                                                    <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                                    <p class="card-text espacio-codigo1 "><code>mostrarInfo() {</code></p>
+                                                    <p class="card-text espacio-codigo1 "><code>console.log(`${this.nombre} tiene ${this.edad} años`);</code></p>
+                                                    <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                                    <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                                    <p class="card-text espacio-codigo1 "><code>export default Persona;</code></p>
+                                                </div>
+                                            </div>
+                                            Y lo importas en tu archivo <b>app.js</b> así <code>import Persona from './modulos/clasePersona';</code> y lo mandas llamar como <b>Persona</b> para no complicarlo<br>
+                                            <code>const ric = new Persona('Ricardo', 33);</code><br>
+                                            <code>ric.mostrarInfo();</code>
+                                        </li>
+                                    </li>
+
+                                    <li>Lo que más se exporta son funciones y clases</li>
+                                    <li><b>export default</b> es otra forma de exportar, sirve para exportar <b>SOLO UNA COSA</b>, ya que <b>usualmente(no siempre)</b> los programadores, tienen una clase o función por archivo, y así exportan de manera más
+                                        rápida, e incluso le puedes cambiar el nombre a la clase cuandola importes</li>
+                                    <li></li>
+
+
+                                </ol>
+
+                                <hr>
+
+                                <h2>Webpack tutorial Fernando Herrera</h2>
+                                <ol>
+                                    <li>Crea tu archivo <b>.json</b> posicionandote con la terminal en la carpeta done crearas tu proyectos usando el comando <code>npm init</code></li>
+                                    <li>Indicaras el nombre de tu <b>package name</b> la version, descripcion, <b>test comand</b> sirve por si hay un comando de pruebas automaticas,git repository, <b>keywords</b>en el que caso de que quieran subir su paquete
+                                        al grupo de repositorios de Node, <b>author</b> tu nombre y licencia <b>ISC</b></li>
+                                    <li>En los archivos <b>.json</b> es obligatorio que lleven comillas cada cosa descriptiva</li>
+                                    <li>INSTALO <b>npm install webpack webpack-cli --save-dev</b> el <b>--save-dev</b> quiere decir que esto lo ponga como una dependencia de desarrollo, osea que no va a ir a producción </li>
+                                    <li>Entrar al archivo package.json y agregar <code>"scripts": {"test": "echo \"Error: no test specified\" && exit 1","build": "webpack"}</code> con esto estoy indicando a mi aplicacion que cuando yo ejecute el comando
+                                        <b>build</b> dispare webpack con su configuración por defecto, y por defecto va a buscar la carpeta src, la carpeta js y va a unificar los archivos de js, los va a comprimir, y los va a dejar listos para producción
+                                    </li>
+                                    <li>EJECUTAR el comando <code>npm run build</code> y creara SIEMPRE la carpeta <b>dist</b> y <b>node modules</b></li>
+                                    <li>SIEMPREque hagas modificacion en tus archivos, vuelve a correr <code>npm run build</code></li>
+                                </ol>
+                                <h2>Configuración de webpack</h2>
+                                <ol>
+                                    <li>CREAR el archivo <b>webpack.config.js</b> en la raiz, donde está el archivo <b>package.json</b></li>
+                                    <li>Los <b>rules</b> sirven para decirle a webpack que hacer con cierto tipo de archivos </li>
+                                    <li>INSTALAR <code>npm i -D html-loader html-webpack-plugin</code> que sirven para que webpack mueva el archivo index.html a la carpeta <b>dist</b> y que incruste el bundle.js en el index, <code>npm i -D</code> quiere decir
+                                        que se instalara la dependencia como desarrollo, no producción</li>
+                                    <li>al final de esta lista pondre el código, para saber como debe estar todo </li>
+                                    <li><b>test</b> es la condición que webpack tiene que hacer cuando este evaluando archivo por archivo, y esta condición se va a aplicar si el archivo cumple la siguiente expresión regular(una expresion regular me permite
+                                        buscar coincidencias de lo que ya sea que especifique aquí dentro de un string). Ejemplo: <code>test: /\.html$/</code> esto quiere decir que le diga a webpack que aplique esta regla si es un archivo con extension
+                                        html
+                                    </li>
+                                    <li>Agregamos <b>const HtmlWebPackPlugin = require('html-webpack-plugin');</b> que es una manera en que node para cargar estos archivos de otros paquetes </li>
+                                    <li>Al correr de nuevo <code>npm run build</code> me pasara el index.html a la carpeta <b>dist</b> con 2 importaciones al <b>main.js</b>, podemos borrar la etiqueta script con el <b>../dist/main.js</b>dde mi index.html
+                                        que esta en la carpeta <b>dist</b> por que webpack lo agregara por mi cuando haga el <b>build</b>, incluso si borro el <b>main.js</b> me lo agregara. NOTA: a las personas que están acostumbradas a trabajar con Angular,
+                                        esta es la razón por la cual no hay otras importaciones adicionales de scripts aquí(en el index.html), porque webpack lo hace por nosotros </li>
+                                    <li>Si queremos que minifique el codigo, agregamos: <code>minimize: false</code> en la parte de options</li>
+                                    <li>
+                                        <div class="card " style="width: 18rem; ">
+                                            <div class="card-body" id="js-length">
+                                                <p class="card-text espacio-codigo1 ">
+                                                    La configuración completa
+                                                </p>
+                                                <p class="card-text espacio-codigo1 "><code>const HtmlWebPackPlugin = require('html-webpack-plugin');</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>module.exports = {</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>mode: 'development',</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>module: {</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>rules: [{</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>test: /\.html$/i,</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>loader: 'html-loader',</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>options: {</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>attributes: false,</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>minimize: false</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>},</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>}]</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>},</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>plugins: [</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>new HtmlWebPackPlugin({</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>template: './src/index.html',</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>filename: './index.html'</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>}),</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>]</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>INSTALAR el servidor de desarrollo de webpack <code>npm i -D webpack-dev-server</code></li>
+                                    <li>CONFIGURAR <b>package.json</b> agregando a los scripts <code>"start": "webpack-dev-server --open"</code> para que inmediatamente se ejecute el servidor webpack te abra la pestaña, porque estamos usando la url
+                                        <b>file://</b> cuando necesitamos <b>http://</b>, a mi en Ubuntu me abrió <b>localhost:8080/</b> después de correr el comando <code>npm start</code></li>
+                                    <li><code>npm start</code> para correr el servidor de webpack</li>
+                                    <li></li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script>
+            //jquery para el tooltip
+            $(function() {
+                $('[data-toggle="tooltip "]').tooltip()
+            })
+
+            //Jquery para usar el PopOver
+            $(function() {
+                $('[data-toggle="popover "]').popover()
+            })
+        </script>
+</body>
+
+</html>
