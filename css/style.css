@@ -4,10 +4,15 @@
     margin-top: 75px;
 }
 
+.margenEjercicios {
+    width: 30rem;
+    margin-bottom: 20px;
+}
+
 
 /*---------------FINISH GENERAL STYLES--------------*/
 
-margin-top: 75px !important .contenedor {
+.contenedor {
     border: solid 1px green;
 }
 

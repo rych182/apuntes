@@ -3,27 +3,6 @@
 
 
 
-//clasica
-(function() {
-    console.log("Soy una función anónima autoejecutable CLASICA");
-})();
-
-//Crockford
-((function() {
-    console.log("Soy una función anónima autoejecutable CROCKFORD");
-})());
-
-//UNARIA
-+
-
-function() {
-    console.log("Soy una función anónima autoejecutable UNARIA");
-}();
-
-//FACEBOOk
-! function() {
-    console.log("Soy una función anónima autoejecutable ESTILO FACEBOOK");
-}
 
 
 

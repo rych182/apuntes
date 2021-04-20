@@ -9,8 +9,7 @@ const persona = {
     }
 }
 
-console.log(persona.nombre);
-persona.frase();
+console.log(persona.edad);
 
 /**
 Ejercicio 1: Imprimir con template strings
@@ -47,14 +46,7 @@ const cadena = ["Mexico", "USA", "Canada"];
 cadena.push("Greenland");
 console.log(cadena);
 
-***EJERCICIO 7: agrega datos de distintas maneras a un objeto
-let unPinshiObjeto = {
-    nombre: 'Pedro',
-    apellido: "Martinez",
-    edad: 24
-}
-
-***EJERCICIO 8: Agrega datos a una constante objeto
+***EJERCICIO 7: Agrega datos a una constante objeto
 const unPinshiObjeto = {
     nombre: 'Pedro',
     apellido: "Martinez",
@@ -63,7 +55,7 @@ const unPinshiObjeto = {
 unPinshiObjeto.correo = "correo@correo.com";
 console.log(unPinshiObjeto);
 
-***Ejercicio 9: Agregar datos a un objeto desde una variable
+***Ejercicio 8: Agregar datos a un objeto desde una variable
 let nombre = "ric";
 let edad = 33;
 
@@ -74,10 +66,10 @@ const persona = {
         console.log("Eres un crack!");
     }
 }
+console.log(persona.edad);
 
-persona.frase();
 
-***Ejercicio 10: Resumir la escritura del ejercicio anterior
+***Ejercicio 9: Resumir la escritura del ejercicio anterior
 
 let nombre = "ric";
 let edad = 33;
