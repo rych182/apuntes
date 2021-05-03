@@ -3,9 +3,10 @@
 
 
 
+
 /*
 Ejercicio 1, hacer los días de la semana con if-else-else if
-
+let dia = 1;
 if (dia === 0) {
     console.log(`Es Domingo`);
 } else if (dia === 1) {
@@ -31,49 +32,35 @@ const hoy = new Date();
 let dia = hoy.getDay();
 console.log(dia);
 
-Ejercicio 4, programa que imprima si es fin de semana ó entre semana
-Y si está abierto o cerrado 
-const dia = 0;
-const horaActual = 7;
-let horaApertura;
-let mensaje;
-
-if (dia === 0 || dia === 6) {
-    console.log('Fin de semana');
-    horaApertura = 9;
+Ejercicio 4, programa que imprima si es fin de semana ó entre semana Y si está abierto o cerrado 
+dia = 0;
+apertura = 9;
+if (dia === 6 || dia === 0) {
+    console.log(`It's weekend!`);
 } else {
-    console.log("Entre semana")
-    horaApertura = 9;
+    console.log(`It's weekday!`);
 }
 
-if (horaActual >= horaApertura) {
-    mensaje = "Esta abierto";
+if (apertura >= 8 || apertura <= 21) {
+    console.log(`It's open`);
 } else {
-    mensaje = `Esta cerrado, hoy abrimos a las ${horaApertura}`;
+    console.log(`It's close!`);
 }
-console.log(horaApertura, mensaje);
 
 Ejercicio 5, hacer el ejercicio 4 con el metodo "includes"
 
-const dia = 0;
-const horaActual = 7;
-let horaApertura;
-let mensaje;
-
+dia = 1;
+apertura = 7;
 if ([0, 6].includes(dia)) { //metodo que tienen los arreglos para preguntar si algo existe dentro de ese arreglo
-    console.log('Fin de semana'); //Osea, verifica si es fin de semana o entre semana 
-    horaApertura = 9;
+    console.log(`It's weekend!`);
 } else {
-    console.log("Entre semana")
-    horaApertura = 9;
+    console.log(`It's weekday!`);
 }
-
-if (horaActual >= horaApertura) {
-    mensaje = "Esta abierto";
+if (apertura >= 8 && apertura <= 21) {
+    console.log(`It's open`);
 } else {
-    mensaje = `Esta cerrado, hoy abrimos a las ${horaApertura}`;
+    console.log(`It's close!`);
 }
-console.log(horaApertura, mensaje);
 
 Ejercicio 6, resumir el ejercicio 4 y 5 con if corto(se llama en si, operador condicional ternario)
 Regla, fin de semana abrimos 9am, entre semana 11am
@@ -86,6 +73,7 @@ let mensaje;
 horaApertura = ([0, 6].includes(dia)) ? 9 : 11;
 mensaje = (horaActual >= horaApertura) ? "Esta abierto" : `Esta cerrado, hoy abrimos a las ${horaApertura}`;
 console.log(horaApertura, mensaje);
+
 
 Ejercicio 7, imprime el número mayor con el operador ternario(if-else corto)
 const numeroMayor = (a, b) => {
