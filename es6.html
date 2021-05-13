@@ -2452,7 +2452,11 @@
                             <div id="js-6-1-1" class="collapse" aria-labelledby="js-6-1" data-parent="#es6">
                                 <div class="card-body">
                                     <div class="d-flex flex-wrap justify-content-between">
-
+                                        <h2>try catch</h2>
+                                        <p>Cuando no quieres que se detenga la ejecución de tu programa</p>
+                                        <p>Usalo cuando las funciones no sabes si vayan a tener datos, si llegan vacias, no llenes tu codigo de try catch</p>
+                                        <p>Normalmente se usa cuando descargas un listado de clientes, NO LO USES para agregar una clase o algo en el html</p>
+                                        <p>Esto solo se puede con las funciones antiguas de JS, con las flechas primero se declara la funcion</p>
                                         <div class=" card margenEjercicios">
                                             <div class="card-body ">
                                                 <p class="card-text espacio-codigo0 ">Ejercicio 1: Imprimir con template strings</p>
@@ -2787,6 +2791,60 @@
                                                 <p class="card-text espacio-codigo0 "><code>console.log(logueado === true ? "SI se logueo" : "NO se logueo");</code></p>
                                             </div>
                                         </div>
+
+                                        <div class=" card margenEjercicios">
+                                            <div class="card-body ">
+                                                <p class="card-text espacio-codigo0 ">EJERCICIO 17: Cualquier edad puede entrar menos 18</p>
+                                                <p class="card-text espacio-codigo0 "><code>let edad = 17;</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>if (edad != 18) {</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>console.log("Puede entrar");</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>} else {</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>console.log("NO Puede entrar!");</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>}</code></p>
+                                            </div>
+                                        </div>
+
+                                        <div class=" card margenEjercicios">
+                                            <div class="card-body ">
+                                                <p class="card-text espacio-codigo0 ">EJERCICIO 18: Comparar las cantidades y decidir si puedes pagar o no</p>
+                                                <p class="card-text espacio-codigo0 "><code>let efectivo = 500;</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>let carritoCompras = 300;</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>if (efectivo > carritoCompras) {</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>console.log("Puedes pagar");</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>} else {</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>console.log("Te falt dinero para la compra");</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>}</code></p>
+                                            </div>
+                                        </div>
+
+                                        <div class=" card margenEjercicios">
+                                            <div class="card-body ">
+                                                <p class="card-text espacio-codigo0 ">EJERCICIO 19: Resumir el código del ejercicio 22 NO SE RECOMIENDA ESTA SINTAXIS</p>
+                                                <p class="card-text espacio-codigo0 "><code>let efectivo = 500;</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>let carritoCompras = 300;</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>if (efectivo > carritoCompras)</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>console.log("Puedes pagar");</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>else</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>console.log("Te falt dinero para la compra");</code></p>
+                                            </div>
+                                        </div>
+
+                                        <div class=" card margenEjercicios">
+                                            <div class="card-body ">
+                                                <p class="card-text espacio-codigo0 ">EJERCICIO 20: Ejericio scope global y bloque(dentro de un if)</p>
+                                                <p class="card-text espacio-codigo0 "><code>var a = 'a';</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>let b = 'b';</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>const c = 'c';</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>if (true) {</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>var a = 'AA';</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>let b = 'BB';</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>const c = 'CC';</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>console.log('BLOQUE: ', a, b, c);</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>}</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>console.log('GLOBALES: ', a, b, c);</code></p>
+                                            </div>
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -2994,6 +3052,285 @@
                                                 <p class="card-text espacio-codigo1 "><code>imprimirPropiedades(persona);</code></p>
                                             </div>
                                         </div>
+
+                                        <div class=" card margenEjercicios">
+                                            <div class="card-body ">
+                                                <p class="card-text espacio-codigo0 ">Ejercicio 15: Cuantos caracteres tiene un array </p>
+                                                <p class="card-text espacio-codigo0 "><code>const nombres = ['Carlos', 'Alejandro', 'Manuel', 'Cesar'];</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>const numero_caracteres = nombres.map((nombre) => {</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>console.log(`${nombre} tiene ${nombre.length} letras`);</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>})</code></p>
+                                            </div>
+                                        </div>
+
+                                        <div class=" card margenEjercicios">
+                                            <div class="card-body ">
+                                                <p class="card-text espacio-codigo0 ">Ejercicio 16:resumir el ejercicio 15 </p>
+                                                <p class="card-text espacio-codigo0 "><code>const nombres = ['Carlos', 'Alejandro', 'Manuel', 'Cesar'];</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>const numero_caracteres = nombres.map(nombre => `${nombre} tiene ${nombre.length} letras`)</code></p>
+                                            </div>
+                                        </div>
+
+                                        <div class=" card margenEjercicios">
+                                            <div class="card-body ">
+                                                <p class="card-text espacio-codigo0 ">Ejercicio 17 </p>
+                                                <p class="card-text espacio-codigo0 "><code>Crea una función con una variable por default si alguna vez alguien no rellena el dato</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>let saludar = (nombre = "visitante") => {</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>return `Hola ${nombre}`;</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>console.log(saludar("Sutano"));</code></p>
+                                            </div>
+                                        </div>
+
+                                        <div class=" card margenEjercicios">
+                                            <div class="card-body ">
+                                                <p class="card-text espacio-codigo0 ">Ejercicio 18:Crea una funcion dentro del valor de un objeto y usala </p>
+                                                <p class="card-text espacio-codigo1 "><code>let saludar = {</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>accion: function saludar(a) {</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>return `Hola ${a}`;</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>},</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>otraAccion: function hablar(b) {</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>return `${b}`;</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>console.log(saludar.otraAccion("Blablabla"));</code></p>
+                                            </div>
+                                        </div>
+
+                                        <div class=" card margenEjercicios">
+                                            <div class="card-body ">
+                                                <p class="card-text espacio-codigo0 ">Ejercicio 19:Hacer una función que cree un objeto </p>
+                                                <p class="card-text espacio-codigo0 "><code>let crearObjeto = (nombre, edad) => {</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>return {</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>name: nombre,</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>age: edad</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>};</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>console.log(crearObjeto("Ric", 33));</code></p>
+                                            </div>
+                                        </div>
+
+                                        <div class=" card margenEjercicios">
+                                            <div class="card-body ">
+                                                <p class="card-text espacio-codigo0 ">Ejercicio 20:Resumir el codigo del ejercicio 26 </p>
+                                                <p class="card-text espacio-codigo0 "><code>let crearObjeto = (nombre, edad) => {</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>return {</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>nombre,</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>edad</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>};</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>console.log(crearObjeto("Ric", 33));</code></p>
+                                            </div>
+                                        </div>
+
+                                        <div class=" card margenEjercicios">
+                                            <div class="card-body ">
+                                                <p class="card-text espacio-codigo0 ">Ejercicio 21:Agregar una funcion dentro del objeto del ejercicio 26 y ejecutarla </p>
+                                                <p class="card-text espacio-codigo0 "><code>let crearObjeto = (nombre, edad) => {</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>return {</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>nombre,</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>edad,</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>imprimir: () => {</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>return `My name is ${nombre} y tengo ${edad}`;</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>};</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>console.log(crearObjeto("Ric", 33).imprimir());</code></p>
+                                            </div>
+                                        </div>
+
+                                        <div class=" card margenEjercicios">
+                                            <div class="card-body ">
+                                                <p class="card-text espacio-codigo0 ">Ejercicio 22 </p>
+                                                <p class="card-text espacio-codigo0 "><code>let crearObjeto = (nombre, edad) => {</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>return {</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>nombre,</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>edad,</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>imprimir() {</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>return `My name is ${nombre} y tengo ${edad}`;</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>};</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>console.log(crearObjeto("Ric", 33).imprimir());</code></p>
+                                            </div>
+                                        </div>
+
+                                        <div class=" card margenEjercicios">
+                                            <div class="card-body ">
+                                                <p class="card-text espacio-codigo0 ">Ejercicio 23: try catch cuando no quieres que se detenga la ejecución de tu programa </p>
+                                                <p class="card-text espacio-codigo0 "></p>
+                                                <p class="card-text espacio-codigo0 "><code>Usalo cuando las funciones no sabes si vayan a tener datos, si llegan vacias, no llenes tu codigo de try catch</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>Normalmente se usa cuando descargas un listado de clientes, NO LO USES para agregar una clase o algo en el html</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>Esto solo se puede con las funciones antiguas de JS, con las flechas primero se declara la funcion.</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>try {</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>algo();</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>} catch (error) {</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>console.log(error);</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>clientes();</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>function clientes() {</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>console.log("Descargando...");</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>setTimeout(() => {</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>console.log("Completado!");</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>}, 3000);</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>}</code></p>
+
+                                            </div>
+                                        </div>
+
+                                        <div class=" card margenEjercicios">
+                                            <div class="card-body ">
+                                                <p class="card-text espacio-codigo0 ">Ejercicio 24: TRY-CATCH-FINALLY Finally ejecuta pase lo que pase </p>
+                                                <p class="card-text espacio-codigo0 "><code>try {</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>clientes();</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>} catch (error) {</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>console.log(error);</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>} finally {</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>console.log("Ejecuta esto pase lo que pase");</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>}</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>function clientes() {</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>console.log("Descargando...");</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>setTimeout(() => {</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>console.log("Completado!");</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>}, 3000);</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                            </div>
+                                        </div>
+
+                                        <div class=" card margenEjercicios">
+                                            <div class="card-body ">
+                                                <p class="card-text espacio-codigo0 ">Ejercicio 25:Escribe un objeto como se hacía de antaño. </p>
+                                                <p class="card-text espacio-codigo1 "><code>function animal(nombre, genero) {</code></p>
+                                                <p class="card-text espacio-codigo0 ">//Propiedades</p>
+                                                <p class="card-text espacio-codigo0 "><code>this.nombre = nombre;</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>this.genero = genero;</code></p>
+                                                <p class="card-text espacio-codigo1 ">//Metodos</p>
+                                                <p class="card-text espacio-codigo1 "><code>this.sonar = function() {</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>console.log("Hago sonidos porque estoy vivo");</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>const snoopy = new animal("Snoopy", "Macho");</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>const lolaBunny = new animal("Lola Bunny", "Hembra");</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>console.log(snoopy);</code></p>
+                                            </div>
+                                        </div>
+
+                                        <div class=" card margenEjercicios">
+                                            <div class="card-body ">
+                                                <p class="card-text espacio-codigo0 ">Ejercicio 26: Agrega un metodo a un objeto de antaño usando prototype.</p>
+                                                <p class="card-text espacio-codigo1 "><code>function animal(nombre, genero) {</code></p>
+                                                <p class="card-text espacio-codigo1 ">//Propiedades</p>
+                                                <p class="card-text espacio-codigo1 "><code>this.nombre = nombre;</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>this.genero = genero;</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>}</code></p>
+                                                <p class="card-text espacio-codigo1 ">//Metodos agregados desde afuera, esto evita la duplicidad de metodos</p>
+                                                <p class="card-text espacio-codigo1 "><code>animal.prototype.sonar = function() {</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>console.log("Hago sonidos porque estoy vivo");</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>const snoopy = new animal("Snoopy", "Macho");</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>const lolaBunny = new animal("Lola Bunny", "Hembra");</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>lolaBunny.sonar();</code></p>
+                                            </div>
+                                        </div>
+
+                                        <div class=" card margenEjercicios">
+                                            <div class="card-body ">
+                                                <p class="card-text espacio-codigo0 ">Ejercicio 27:Heredar prototipos </p>
+                                                <p class="card-text espacio-codigo1 "><code>function animal(nombre, genero) {</code></p>
+                                                <p class="card-text espacio-codigo1 ">//Propiedades</p>
+                                                <p class="card-text espacio-codigo0 "><code>this.nombre = nombre;</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>this.genero = genero;</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                                <p class="card-text espacio-codigo1 ">Metodos agregados desde afuera, esto evita la duplicidad de metodos en la función constructora</p>
+                                                <p class="card-text espacio-codigo1 "><code>animal.prototype.sonar = function() {</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>console.log("Hago sonidos porque estoy vivo");</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>function perro(nombre, genero, tamanio) {</code></p>
+                                                <p class="card-text espacio-codigo0 ">//super sirve para invocar al constructor padre</p>
+                                                <p class="card-text espacio-codigo0 "><code>this.super = animal;</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>this.super(nombre, genero);</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>this.tamanio = tamanio;</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>perro.prototype = new animal();</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>perro.prototype.constructor = perro;</code></p>
+                                                <p class="card-text espacio-codigo0 ">al igualarlo al mismo constructor, obtendra todo lo que hay en la funcion perro</p>
+                                                <p class="card-text espacio-codigo1 ">incluso los prototipos, como el .sonar que tiene</p>
+                                            </div>
+                                        </div>
+
+                                        <div class=" card margenEjercicios">
+                                            <div class="card-body ">
+                                                <p class="card-text espacio-codigo0 ">Ejercicio 28: Sobreescribir, un prototipo heredado, (recuerda que esto es javascript viejito) </p>
+                                                <p class="card-text espacio-codigo0 "><code>function animal(nombre, genero) {</code></p>
+                                                <p class="card-text espacio-codigo0 ">//Propiedades</p>
+                                                <p class="card-text espacio-codigo1 "><code>this.nombre = nombre;</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>this.genero = genero;</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                                <p class="card-text espacio-codigo1 ">//Metodos agregados desde afuera, esto evita la duplicidad de metodos en la función constructora</p>
+                                                <p class="card-text espacio-codigo1 "><code>animal.prototype.sonar = function() {</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>console.log("Hago sonidos porque estoy vivo");</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>function perro(nombre, genero, tamanio) {</code></p>
+                                                <p class="card-text espacio-codigo1 ">//super sirve para invocar al constructor padre</p>
+                                                <p class="card-text espacio-codigo1 "><code>this.super = animal;</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>this.super(nombre, genero);</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>this.tamanio = tamanio;</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>perro.prototype = new animal();</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>perro.prototype.constructor = perro;</code></p>
+                                                <p class="card-text espacio-codigo1 ">al igualarlo al mismo constructor, obtendra todo lo que hay en la funcion perro</p>
+                                                <p class="card-text espacio-codigo1 ">incluso los prototipos, como el .sonar que tiene</p>
+                                                <p class="card-text espacio-codigo1 "><code>perro.prototype.sonar = function() {</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>console.log("Wof!! wof!!");</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>perro.prototype.sonar();</code></p>
+                                            </div>
+                                        </div>
+
+                                        <div class=" card margenEjercicios">
+                                            <div class="card-body ">
+                                                <p class="card-text espacio-codigo0 ">Ejercicio 29 </p>
+                                                <p class="card-text espacio-codigo0 "><code></code></p>
+                                                <p class="card-text espacio-codigo0 "><code></code></p>
+                                                <p class="card-text espacio-codigo1 "><code></code></p>
+                                                <p class="card-text espacio-codigo1 "><code></code></p>
+                                                <p class="card-text espacio-codigo1 "><code></code></p>
+                                            </div>
+                                        </div>
+
+                                        <div class=" card margenEjercicios">
+                                            <div class="card-body ">
+                                                <p class="card-text espacio-codigo0 ">Ejercicio 30 </p>
+                                                <p class="card-text espacio-codigo0 "><code></code></p>
+                                                <p class="card-text espacio-codigo0 "><code></code></p>
+                                                <p class="card-text espacio-codigo1 "><code></code></p>
+                                                <p class="card-text espacio-codigo1 "><code></code></p>
+                                                <p class="card-text espacio-codigo1 "><code></code></p>
+                                            </div>
+                                        </div>
+
+                                        <div class=" card margenEjercicios">
+                                            <div class="card-body ">
+                                                <p class="card-text espacio-codigo0 ">Ejercicio 31 </p>
+                                                <p class="card-text espacio-codigo0 "><code></code></p>
+                                                <p class="card-text espacio-codigo0 "><code></code></p>
+                                                <p class="card-text espacio-codigo1 "><code></code></p>
+                                                <p class="card-text espacio-codigo1 "><code></code></p>
+                                                <p class="card-text espacio-codigo1 "><code></code></p>
+                                            </div>
+                                        </div>
+
+                                        <div class=" card margenEjercicios">
+                                            <div class="card-body ">
+                                                <p class="card-text espacio-codigo0 ">Ejercicio 32 </p>
+                                                <p class="card-text espacio-codigo0 "><code></code></p>
+                                                <p class="card-text espacio-codigo0 "><code></code></p>
+                                                <p class="card-text espacio-codigo1 "><code></code></p>
+                                                <p class="card-text espacio-codigo1 "><code></code></p>
+                                                <p class="card-text espacio-codigo1 "><code></code></p>
+                                            </div>
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>

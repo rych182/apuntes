@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="todo">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Apuntes por tema</title>
+    <script src="js/angular1.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="index.html">My project</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="ebooks.html">e-books <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="vsc.html">VSC</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Comandos
+      </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="terminal.html">Terminal</a>
+                        <a class="dropdown-item" href="git.html">Git & Github</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Frontend
+      </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="css3.html">CSS3</a>
+                        <a class="dropdown-item" href="sass.html">SASS</a>
+                        <a class="dropdown-item" href="bootstrap4.html">Bootstrap 4</a>
+                        <a class="dropdown-item" href="es6.html">JS</a>
+                        <a class="dropdown-item" href="pugjs.html">PUG JS</a>
+                        <a class="dropdown-item" href="jquery.html">Jquery</a>
+                        <a class="dropdown-item" href="typescript.html">TypeScript</a>
+                        <a class="dropdown-item" href="react.html">React</a>
+                        <a class="dropdown-item" href="angular.html">Angular</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Backend
+      </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="node.html">NODE JS</a>
+                        <a class="dropdown-item" href="expressjs.html">Express JS</a>
+                        <a class="dropdown-item" href="php.html">PHP</a>
+                        <a class="dropdown-item" href="c.html">C</a>
+                        <a class="dropdown-item" href="wordpress.html">Wordpress</a>
+                        <a class="dropdown-item" href="sql.html">SQL</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Tools
+      </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="npm.html">NPM</a>
+                        <a class="dropdown-item" href="webpack.html">Webpack</a>
+                        <a class="dropdown-item" href="babeljs.html">Babeljs</a>
+                        <a class="dropdown-item" href="pugjs.html">Pug JS</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Temas varios
+      </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="jobs.html">Jobs</a>
+                        <a class="dropdown-item" href="international.html">International Events</a>
+                        <a class="dropdown-item" href="seo.html">SEO</a>
+                        <a class="dropdown-item" href="ux.html">UX/UI</a>
+                        <a class="dropdown-item" href="marketing.html">Marketing</a>
+                        <a class="dropdown-item" href="design.html">Design</a>
+                        <a class="dropdown-item" href="business.html">Business</a>
+                        <a class="dropdown-item" href="frontend-pages.html">Cool Frontend Pages</a>
+                        <a class="dropdown-item" href="canada.html">Canada</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- MENÚ COLLAPSE-->
+    <div class="container menusColapso">
+        <div class="card colapsos">
+            <div class="card-header" id="javascript-0">
+                <a data-toggle="collapse" href="#seis" role="button" aria-expanded="false">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed colorTitulo" type="button" data-toggle="collapse" data-target="#seis" aria-expanded="false">
+                            <i class="fab fa-js-square icono-js"></i> AngularJS
+              </button>
+                    </h2>
+                </a>
+            </div>
+            <div id="seis" class="collapse" aria-labelledby="javascript-0" data-parent="#accordionExample">
+                <div class="card-body">
+                    <div id="es6">
+
+                        <div class="d-flex">
+                            <ol>
+                                <h2>Pasos para usar </h2>
+                                <li>Adjuntar libreria</li>
+                                <li>Añadir la directiva <code>ng-app</code> en tu etiqueta html y ponerle un nombre </li>
+                                <li>Inicializas la aplicacion: <code>var cualquierNombre = angular.module('expresiones', []);</code></li>
+                                <li>Creas tu controlador:
+                                    <div class=" card margenEjercicios">
+                                        <div class="card-body ">
+                                            <p class="card-text espacio-codigo0 "><code>cualquierNombre.controller('miControlador', function($scope) {</code></p>
+                                            <p class="card-text espacio-codigo0 "><code>$scope.mensaje = "Hola mundo ";</code></p>
+                                            <p class="card-text espacio-codigo0 "><code>});</code></p>
+                                        </div>
+                                    </div>
+                                    <h2 style="color: red;">OJO: no dejes espacios al declarar el controlador en el HTML o no funcionara</h2>
+                                </li>
+                            </ol>
+                            <ul>
+                                <h2>Links importantes de AngularJS</h2>
+                                <li>
+                                    <a href="https://docs.angularjs.org/api/ng/filter" target="_blank">Funciones</a>
+                                </li>
+                                <li>
+                                    <a href="" target="_blank"></a>
+                                </li>
+                                <li>
+                                    <a href="" target="_blank"></a>
+                                </li>
+                                <li>
+                                    <a href="" target="_blank"></a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="d-flex">
+                            <div ng-controller="miControlador">
+                                {{mensaje}}
+                            </div>
+                            <br>
+                            <div>
+                                {{'funcion uppercase para tener todas las letras en mayúsculas' | uppercase}}
+                                <ul ng-controller="controladorObjeto">
+                                    <h2>Estoy mostrando los datos de un objeto usando <code>ng-controller</code></h2>
+                                    <li>El nombre del autor es: {{mensaje.autor}}</li>
+                                    <li>El nombre del titulo es: {{mensaje.titulo}}</li>
+                                    <li>El nombre del editorial es: {{mensaje.editorial}}</li>
+                                    <strong>No importa si se repite el nombre de la variable, porque está en otro controlador, por eso puse a proposito la variable "mensaje"</strong>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var cualquierNombre = angular.module('todo', []);
+        cualquierNombre.controller('miControlador', function($scope) {
+            $scope.mensaje = "Hola mundo ";
+        });
+        cualquierNombre.controller('controladorObjeto', function($scope) {
+            $scope.mensaje = {};
+            $scope.mensaje.autor = "Pedro Gonzales";
+            $scope.mensaje.titulo = "Historias del Mar";
+            $scope.mensaje.editorial = "Milenio";
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
+
+</html>

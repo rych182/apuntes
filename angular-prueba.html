@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="todo">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/angular1.js"></script>
+    <title></title>
+</head>
+
+<body>
+
+    <div ng-controller="miControlador">
+        {{mensaje}}
+    </div>
+
+    <div>
+        {{'funcion para tener todas las letras en mayúsculas' | uppercase}}
+    </div>
+
+    <script>
+        var cualquierNombre = angular.module('todo', []);
+        cualquierNombre.controller('miControlador', function($scope) {
+            $scope.mensaje = "Hola mundo ";
+        });
+    </script>
+</body>
+
+
+</html>

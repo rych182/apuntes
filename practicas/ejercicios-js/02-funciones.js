@@ -170,8 +170,7 @@ const persona = (nombre, apellido) =>
 const { nombre: nombreNuevo } = persona('Ricardo', 'Garrido');
 console.log({ nombreNuevo });
 
-Ejercicio 14 PROTIP
-Reestructuracion de argumentos en un objeto cuando hace falta un valor .
+Ejercicio 14 PROTIP: Reestructuracion de argumentos en un objeto cuando hace falta un valor .
 MANERA 1
 const persona = {
     nombre: 'Ricardo',
@@ -207,207 +206,16 @@ const imprimirPropiedades = ({ nombre, apellido, edad = 32, hobbies }) => {
 
 imprimirPropiedades(persona);
 
-Ejercicio 15
-Cuantos caracteres tiene un array
+Ejercicio 15: Cuantos caracteres tiene un array
 const nombres = ['Carlos', 'Alejandro', 'Manuel', 'Cesar'];
 const numero_caracteres = nombres.map((nombre) => {
     console.log(`${nombre} tiene ${nombre.length} letras`);
 })
 
-Ejercicio 16
-resumir el ejercicio 15
+Ejercicio 16: resumir el ejercicio 15
 const nombres = ['Carlos', 'Alejandro', 'Manuel', 'Cesar'];
 const numero_caracteres = nombres.map(nombre => `${nombre} tiene ${nombre.length} letras`)
 
-Ejercicio 17
-Crea una función con una variable por default si alguna vez alguien no rellena el dato
-let saludar = (nombre = "visitante") => {
-    return `Hola ${nombre}`;
-}
-console.log(saludar("Sutano"));
-
-EJERCICIO 18
-Crea una funcion dentro del valor de un objeto y usala
-let saludar = {
-    accion: function saludar(a) {
-        return `Hola ${a}`;
-    },
-    otraAccion: function hablar(b) {
-        return `${b}`;
-    }
-}
-console.log(saludar.otraAccion("Blablabla"));
-
-EJERCICIO 19 TRY-CATCH
-//try catch cuando no quieres que se detenga la ejecución de tu programa
-//Usalo cuando las funciones no sabes si vayan a tener datos, si llegan vacias, no llenes tu codigo de try catch
-//Normalmente se usa cuando descargas un listado de clientes, NO LO USES para agregar una clase o algo en el html
-//Esto solo se puede con las funciones antiguas de JS, con las flechas primero se declara la funcion.
-try {
-    algo();
-} catch (error) {
-    console.log(error);
-}
-clientes();
-
-function clientes() {
-    console.log("Descargando...");
-
-    setTimeout(() => {
-        console.log("Completado!");
-    }, 3000);
-}
-
-EJERCICIO 20 TRY-CATCH-FINALLY
-Finally ejecuta pase lo que pase
-try {
-    clientes();
-} catch (error) {
-    console.log(error);
-} finally {
-    console.log("Ejecuta esto pase lo que pase");
-}
-
-function clientes() {
-    console.log("Descargando...");
-
-    setTimeout(() => {
-        console.log("Completado!");
-    }, 3000);
-}
-
-EJERCICIO 21
-Cualquier edad puede entrar menos 18
-let edad = 17;
-if (edad != 18) {
-    console.log("Puede entrar");
-} else {
-    console.log("NO Puede entrar!");
-}
-
-Ejercicio 22
-Comparar las cantidades y decidir si puedes pagar o no 
-let efectivo = 500;
-let carritoCompras = 300;
-if (efectivo > carritoCompras) {
-    console.log("Puedes pagar");
-} else {
-    console.log("Te falt dinero para la compra");
-}
-
-EJERCICIO 23
-Resumir el código del ejercicio 22 NO SE RECOMIENDA ESTA SINTAXIS
-let efectivo = 500;
-let carritoCompras = 300;
-if (efectivo > carritoCompras)
-    console.log("Puedes pagar");
-else
-    console.log("Te falt dinero para la compra");
-
-
-EJERCICIO 24
-//Ejericio scope global y bloque(dentro de un if)
-var a = 'a';
-let b = 'b';
-const c = 'c';
-
-if (true) {
-    var a = 'AA';
-    let b = 'BB';
-    const c = 'CC';
-    console.log('BLOQUE: ', a, b, c);
-}
-
-console.log('GLOBALES: ', a, b, c);
-
-EJERCICIO 25: Escribe un objeto como se hacía de antaño.
-function animal(nombre, genero) {
-    //Propiedades
-    this.nombre = nombre;
-    this.genero = genero;
-
-    //Metodos
-    this.sonar = function() {
-        console.log("Hago sonidos porque estoy vivo");
-    }
-}
-
-const snoopy = new animal("Snoopy", "Macho");
-const lolaBunny = new animal("Lola Bunny", "Hembra");
-
-console.log(snoopy);
-
-
-EJERCICIO 26: Agrega un metodo a un objeto de antaño usando prototype.
-function animal(nombre, genero) {
-    //Propiedades
-    this.nombre = nombre;
-    this.genero = genero;
-}
-
-//Metodos agregados desde afuera, esto evita la duplicidad de metodos
-animal.prototype.sonar = function() {
-    console.log("Hago sonidos porque estoy vivo");
-}
-
-const snoopy = new animal("Snoopy", "Macho");
-const lolaBunny = new animal("Lola Bunny", "Hembra");
-
-lolaBunny.sonar();
-
-Ejercicio 27: Heredar prototipos
-
-function animal(nombre, genero) {
-    //Propiedades
-    this.nombre = nombre;
-    this.genero = genero;
-}
-
-//Metodos agregados desde afuera, esto evita la duplicidad de metodos en la función constructora
-animal.prototype.sonar = function() {
-    console.log("Hago sonidos porque estoy vivo");
-}
-
-function perro(nombre, genero, tamanio) {
-    //super sirve para invocar al constructor padre
-    this.super = animal;
-    this.super(nombre, genero);
-    this.tamanio = tamanio;
-}
-perro.prototype = new animal();
-perro.prototype.constructor = perro;
-al igualarlo al mismo constructor, obtendra todo lo que hay en la funcion perro
-incluso los prototipos, como el .sonar que tiene
-
-Ejercicio 28: Sobreescribir, un prototipo heredado, (recuerda que esto es javascript viejito)
-
-function animal(nombre, genero) {
-    //Propiedades
-    this.nombre = nombre;
-    this.genero = genero;
-}
-
-//Metodos agregados desde afuera, esto evita la duplicidad de metodos en la función constructora
-animal.prototype.sonar = function() {
-    console.log("Hago sonidos porque estoy vivo");
-}
-
-function perro(nombre, genero, tamanio) {
-    //super sirve para invocar al constructor padre
-    this.super = animal;
-    this.super(nombre, genero);
-    this.tamanio = tamanio;
-}
-perro.prototype = new animal();
-perro.prototype.constructor = perro;
-al igualarlo al mismo constructor, obtendra todo lo que hay en la funcion perro
-incluso los prototipos, como el .sonar que tiene
-
-perro.prototype.sonar = function() {
-    console.log("Wof!! wof!!");
-}
-
-perro.prototype.sonar();
 
 
 EJERCICIO 29: Escribirle un metodo prototipado a la función heredada del javascript viejito
@@ -479,56 +287,5 @@ function() {
     console.log("Soy una función anónima autoejecutable ESTILO FACEBOOK");
 }
 
---------------------------------------------------------------------------------
-OTRAS FUNCIONES QUE ME ENCONTRE
 
-EJERCICIOS FUNCIONES
-
-Ejercicio 25
-Hacer una función que cree un objeto
-let crearObjeto = (nombre, edad) => {
-    return {
-        name: nombre,
-        age: edad
-    };
-}
-console.log(crearObjeto("Ric", 33));
-
-Ejercicio 26
-Resumir el codigo del ejercicio 26
-let crearObjeto = (nombre, edad) => {
-    return {
-        nombre,
-        edad
-    };
-}
-console.log(crearObjeto("Ric", 33));
-
-EJERCICIO 27
-Agregar una funcion dentro del objeto del ejercicio 26 y ejecutarla
-let crearObjeto = (nombre, edad) => {
-    return {
-        nombre,
-        edad,
-        imprimir: () => {
-            return `My name is ${nombre} y tengo ${edad}`;
-        }
-    };
-}
-console.log(crearObjeto("Ric", 33).imprimir());
-
-Ejercicio 28
-Resumir la función dentro del objeto del ejercicio 27
-let crearObjeto = (nombre, edad) => {
-    return {
-        nombre,
-        edad,
-        imprimir() {
-            return `My name is ${nombre} y tengo ${edad}`;
-        }
-    };
-}
-console.log(crearObjeto("Ric", 33).imprimir());
-
-TERMINAR EJERCICIOS FUNCIÓN
 */
