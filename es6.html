@@ -3289,48 +3289,76 @@
 
                                         <div class=" card margenEjercicios">
                                             <div class="card-body ">
-                                                <p class="card-text espacio-codigo0 ">Ejercicio 29 </p>
-                                                <p class="card-text espacio-codigo0 "><code></code></p>
-                                                <p class="card-text espacio-codigo0 "><code></code></p>
-                                                <p class="card-text espacio-codigo1 "><code></code></p>
-                                                <p class="card-text espacio-codigo1 "><code></code></p>
-                                                <p class="card-text espacio-codigo1 "><code></code></p>
+                                                <p class="card-text espacio-codigo0 ">Ejercicio 29: Escribirle un metodo prototipado a la función heredada del javascript viejito </p>
+                                                <p class="card-text espacio-codigo0 "><code>function animal(nombre, genero) {</code></p>
+                                                <p class="card-text espacio-codigo0 ">Propiedades</p>
+                                                <p class="card-text espacio-codigo1 "><code>this.nombre = nombre;</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>this.genero = genero;</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                                <p class="card-text espacio-codigo0 ">Metodos agregados desde afuera, esto evita la duplicidad de metodos en la función constructora</p>
+                                                <p class="card-text espacio-codigo0 "><code>animal.prototype.sonar = function() {</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>console.log("Hago sonidos porque estoy vivo");</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>function perro(nombre, genero, tamanio) {</code></p>
+                                                <p class="card-text espacio-codigo0 ">//super sirve para invocar al constructor padre</p>
+                                                <p class="card-text espacio-codigo0 "><code>this.super = animal;</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>this.super(nombre, genero);</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>this.tamanio = tamanio;</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>perro.prototype = new animal();</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>perro.prototype.constructor = perro;</code></p>
+                                                <p class="card-text espacio-codigo1 ">al igualarlo al mismo constructor, obtendra todo lo que hay en la funcion perro</p>
+                                                <p class="card-text espacio-codigo1 ">incluso los prototipos, como el .sonar que tiene</p>
+                                                <p class="card-text espacio-codigo1 "><code>perro.prototype.ladrar = function() {</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>console.log("Wof!! wof!!");</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>}</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>perro.prototype.ladrar();</code></p>
                                             </div>
                                         </div>
 
                                         <div class=" card margenEjercicios">
                                             <div class="card-body ">
-                                                <p class="card-text espacio-codigo0 ">Ejercicio 30 </p>
-                                                <p class="card-text espacio-codigo0 "><code></code></p>
-                                                <p class="card-text espacio-codigo0 "><code></code></p>
-                                                <p class="card-text espacio-codigo1 "><code></code></p>
-                                                <p class="card-text espacio-codigo1 "><code></code></p>
-                                                <p class="card-text espacio-codigo1 "><code></code></p>
+                                                <p class="card-text espacio-codigo0 ">EJERCICIO 30: Crear una funcion anónima autoinvocada</p>
+                                                <p class="card-text espacio-codigo1 "><code>(function() {</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>console.log("Soy una función autoinvocada");</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>})()</code></p>
                                             </div>
                                         </div>
 
                                         <div class=" card margenEjercicios">
                                             <div class="card-body ">
-                                                <p class="card-text espacio-codigo0 ">Ejercicio 31 </p>
-                                                <p class="card-text espacio-codigo0 "><code></code></p>
-                                                <p class="card-text espacio-codigo0 "><code></code></p>
-                                                <p class="card-text espacio-codigo1 "><code></code></p>
-                                                <p class="card-text espacio-codigo1 "><code></code></p>
-                                                <p class="card-text espacio-codigo1 "><code></code></p>
+                                                <p class="card-text espacio-codigo0 ">Ejercicio 31: Crear una funcion anónima autoinvocada que reciba parametros </p>
+                                                <p class="card-text espacio-codigo0 "><code>(function(w, d, c) {</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>console.log("Soy una función autoinvocada");</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>console.log(w);</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>console.log(d);</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>console.log(c);</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>c.log("Estoy usando console.log recibiendo el console como un parametro");</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>})(window, document, console)</code></p>
                                             </div>
                                         </div>
 
                                         <div class=" card margenEjercicios">
                                             <div class="card-body ">
-                                                <p class="card-text espacio-codigo0 ">Ejercicio 32 </p>
-                                                <p class="card-text espacio-codigo0 "><code></code></p>
-                                                <p class="card-text espacio-codigo0 "><code></code></p>
-                                                <p class="card-text espacio-codigo1 "><code></code></p>
-                                                <p class="card-text espacio-codigo1 "><code></code></p>
-                                                <p class="card-text espacio-codigo1 "><code></code></p>
+                                                <p class="card-text espacio-codigo0 ">Ejercicio 32: Crear las 4 funciones anónimas autoinvocadas</p>
+                                                <p class="card-text espacio-codigo1 ">//clasica</p>
+                                                <p class="card-text espacio-codigo1 "><code>(function() {</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>console.log("Soy una función anónima autoejecutable CLASICA");</code></p>
+                                                <p class="card-text espacio-codigo0 "><code>})();</code></p>
+                                                <p class="card-text espacio-codigo0 ">//Crockford</p>
+                                                <p class="card-text espacio-codigo1 "><code>((function() {</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>console.log("Soy una función anónima autoejecutable CROCKFORD");</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>})());</code></p>
+                                                <p class="card-text espacio-codigo1 ">//UNARIA</p>
+                                                <p class="card-text espacio-codigo1 "><code>+function() {</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>console.log("Soy una función anónima autoejecutable UNARIA");</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>}();</code></p>
+                                                <p class="card-text espacio-codigo1 ">//FACEBOOk</p>
+                                                <p class="card-text espacio-codigo1 ">!function() {</p>
+                                                <p class="card-text espacio-codigo1 "><code>console.log("Soy una función anónima autoejecutable ESTILO FACEBOOK");</code></p>
+                                                <p class="card-text espacio-codigo1 "><code>}</code></p>
                                             </div>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
