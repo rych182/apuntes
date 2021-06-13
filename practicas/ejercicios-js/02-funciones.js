@@ -263,7 +263,7 @@ EJERCICIO 31: Crear una funcion anónima autoinvocada que reciba parametros
     c.log("Estoy usando console.log recibiendo el console como un parametro");
 })(window, document, console)
 
-EJERCICIO 31: Crear las 4 funciones anónimas autoinvocadas
+EJERCICIO 32: Crear las 4 funciones anónimas autoinvocadas
 
 //clasica
 (function() {
