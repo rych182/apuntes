@@ -1,0 +1,9 @@
+.contenedor {
+    display: grid;
+    /*El tamaño de las columnas, FR significa fraccion y si pones 2fr, toma el doble de 1fr(el navegador lo pone en automatico), el espacio sobrante se lo divide entre las columnas sobrantes*/
+    grid-template-columns: 2fr 1fr 1fr;
+    /*El tamaño de las filas*/
+    grid-template-rows: 150px 300px;
+    /*Espaciados tipo margin*/
+    grid-gap: 20px;
+}
