@@ -99,6 +99,7 @@
         </div>
     </nav>
 
+    <!--JS NOTES-->
     <div class="container menusColapso">
         <div class="card colapsos">
             <div class="card-header" id="javascript-0">
@@ -1867,10 +1868,10 @@
                         </div>
 
 
-                        <!--Sección 15-->
+                        <!--Sección 15: CallBacks, promesas, Async - Await -->
                         <div class="card  colapsos">
                             <div class="card-header" id="orden-16-1">
-                                <a data-toggle="collapse" href="#orden-10-1-1" role="button" aria-expanded="false">
+                                <a data-toggle="collapse" href="#orden-16-1-1" role="button" aria-expanded="false">
                                     <h5 class="mb-0">
                                         <button class="btn btn-link collapsed colorTitulo1" data-toggle="collapse" data-target="#orden-16-1-1" aria-expanded="false">
                                         <span style="font-size: 24px; color: black;">
@@ -1884,6 +1885,55 @@
                             <div id="orden-16-1-1" class="collapse" aria-labelledby="orden-16-1" data-parent="#es6">
                                 <div class="card-body">
                                     <div class="d-flex flex-wrap">
+
+                                        <h2>Callback</h2>
+                                        <p>Una función que se coloca como argumento a otra función(Explicacion FH) Es un función que se pasa como argumento a un operación asincrona, con la espectativa de que dicha función sea ejecutada una vez esta termine(Explicacion
+                                            Uriel CF)</p>
+                                        <p><b>Definicion sencilla de un callback</b> Es una función que nos permite recibir como parametro otra función, es una función que se pasa a otra función como argumento, son una forma de asegurarnos que un determinado
+                                            codigo no se ejecute hasta que un determinado codigo allá terminado de ejecutarse, es muy útil cuando los tiempos de respuesta ó carga del servidor tienen una demora </p>
+
+                                        <h2>Promesas</h2>
+                                        <p>es un objeto que puede producir un valor único en algún momento en el futuro: un valor resuelto o una razón por la que no se resuelve. Ejemplo:</p>
+                                        <div class="card margenEjercicios">
+                                            <div class="card-body">
+                                                <p class="card-text espacio-codigo0">Crea una promesa </p>
+                                                <p class="card-text espacio-codigo1"><code>const promesa = new Promise((resolve, reject) => {</code></p>
+                                                <p class="card-text espacio-codigo1"><code>$caja = false;</code></p>
+                                                <p class="card-text espacio-codigo0"><code>if ($caja) {</code></p>
+                                                <p class="card-text espacio-codigo0"><code>resolve();</code></p>
+                                                <p class="card-text espacio-codigo1"><code>} else {</code></p>
+                                                <p class="card-text espacio-codigo1"><code>reject();</code></p>
+                                                <p class="card-text espacio-codigo0"><code>}</code></p>
+                                                <p class="card-text espacio-codigo0"><code>});</code></p>
+                                                <p class="card-text espacio-codigo1"><code>promesa.then(() => {</code></p>
+                                                <p class="card-text espacio-codigo1"><code>alert("Exito!");</code></p>
+                                                <p class="card-text espacio-codigo0"><code>}).catch(() => {</code></p>
+                                                <p class="card-text espacio-codigo0"><code>alert("No funciono!");</code></p>
+                                                <p class="card-text espacio-codigo0"><code>});</code></p>
+                                            </div>
+                                        </div>
+
+                                        <ul>
+                                            <h2>Definiciones varias</h2>
+                                            <li><b>Procesamiento Single thread y multi thread</b></li>
+                                            <li><b>Single thread</b>: solo puede ejecutar una cosa a la vez</li>
+                                            <li><b>Operaciones de CPU y Operaciones de I/O</b></li>
+                                            <li><b>Operaciones de CPU</b>: siempre están procesando como un FOR en el navegador</li>
+                                            <li><b>Operaciones de I/O</b>: Están esperando una respuesta como cuando se procesa un pago en linea</li>
+                                            <li><b>Operaciones concurrentes y paralelas</b></li>
+                                            <li><b>Concurrencia</b>: 2 o más tareas progresan simultaneamente(una empezo antes y otra después), se ejecutan al mismo tiempo</li>
+                                            <li><b>Paralelismo:</b> 2 o más tareas se ejecutan al mismo tiempo(al unisono)</li>
+                                            <li><b>Operaciones bloqueantes y No bloqueantes</b>: se refiere a la fase de espera cada que se va ejecutando una operación de nuestro codigo</li>
+                                            <li><b>Bloqueante</b>: es aquella que no va a devolverle el control a la aplicacion hasta que termine su tarea</li>
+                                            <li><b>No Bloqueante</b>: se ejecutan y devuelven inmediatamente el control al hilo principal sin importar si han terminado la tarea</li>
+                                            <li><b>Operaciones Sincronas y Asincronas</b> se refiere a cuando tendra lugar la respuesta</li>
+                                            <li><b>Sincrono:</b> sucede en el tiempo inmediato, una funcion sincrona espera el resultado y sigue con otra operacion</li>
+                                            <li><b>Asincrono:</b> la respuesta sucede en el futuro, no va a esperar el resultado, suelta el control del hilo JS es asincrono y no bloqueante, no se bloquea el unico hilo, JS ees altamente concurrente JS tiene
+                                                un solo hilo de ejecucion JS la ultima tarea en entrar es la primera en salir. LIFO(last in-First out)</li>
+                                            <li>En JS hay 2 tipos de codigo:</li>
+                                            <li><b>-Sincrono bloqueante:</b> cada operacion se hace de una vez bloqueando el flujo del hilo principal, una vez se procese pasa a la sig operacion hasta que se terminen las operaciones</li>
+                                            <li><b>-Asincrono no bloqueante: </b> se manda la labor a la fila de tareas y sigue con otra y no bloquea el flujo del hilo</li>
+                                        </ul>
 
 
                                     </div>
@@ -3100,6 +3150,7 @@
         </div>
     </div>
 
+    <!--EJERCICIOS JS-->
     <div class="container menusColapso">
         <div class="card colapsos">
             <div class="card-header" id="javascript-1">
@@ -5254,6 +5305,9 @@
     </script>
 </body>
 
+</html>
+
+</html>
 </html>
 
 </html>
