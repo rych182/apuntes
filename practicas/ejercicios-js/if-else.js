@@ -168,5 +168,48 @@ Ejercicio con if-corto
 let logueado = true;
 console.log(logueado === true ? "SI se logueo" : "NO se logueo");
 
+EJERCICIO 17
+Cualquier edad puede entrar menos 18
+let edad = 17;
+if (edad != 18) {
+    console.log("Puede entrar");
+} else {
+    console.log("NO Puede entrar!");
+}
+
+Ejercicio 18
+Comparar las cantidades y decidir si puedes pagar o no 
+let efectivo = 500;
+let carritoCompras = 300;
+if (efectivo > carritoCompras) {
+    console.log("Puedes pagar");
+} else {
+    console.log("Te falt dinero para la compra");
+}
+
+EJERCICIO 19
+Resumir el código del ejercicio 22 NO SE RECOMIENDA ESTA SINTAXIS
+let efectivo = 500;
+let carritoCompras = 300;
+if (efectivo > carritoCompras)
+    console.log("Puedes pagar");
+else
+    console.log("Te falt dinero para la compra");
+
+
+EJERCICIO 20
+//Ejericio scope global y bloque(dentro de un if)
+var a = 'a';
+let b = 'b';
+const c = 'c';
+
+if (true) {
+    var a = 'AA';
+    let b = 'BB';
+    const c = 'CC';
+    console.log('BLOQUE: ', a, b, c);
+}
+
+console.log('GLOBALES: ', a, b, c);
 
 */

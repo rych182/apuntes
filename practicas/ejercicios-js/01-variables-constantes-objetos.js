@@ -1,14 +1,12 @@
-let nombre = "ric";
-let edad = 33;
-
 const persona = {
-    nombre,
-    edad,
-    frase() {
-        console.log("Eres un crack!");
+    edad: edad,
+    nombre: "ric",
+    frase: function() {
+        console.log("eres un crack");
     }
 }
-
+let edad = 18;
+persona.edad = edad;
 console.log(persona.edad);
 
 /**

@@ -216,6 +216,24 @@ Ejercicio 16: resumir el ejercicio 15
 const nombres = ['Carlos', 'Alejandro', 'Manuel', 'Cesar'];
 const numero_caracteres = nombres.map(nombre => `${nombre} tiene ${nombre.length} letras`)
 
+EJERCICIO 17
+Crea una funcion dentro del valor de un objeto y usala
+let saludar = {
+    accion: function saludar(a) {
+        return `Hola ${a}`;
+    },
+    otraAccion: function hablar(b) {
+        return `${b}`;
+    }
+}
+console.log(saludar.otraAccion("Blablabla"));
+
+Ejercicio 18
+Crea una función con una variable por default si alguna vez alguien no rellena el dato
+let saludar = (nombre = "visitante") => {
+    return `Hola ${nombre}`;
+}
+console.log(saludar("Sutano"));
 
 
 EJERCICIO 29: Escribirle un metodo prototipado a la función heredada del javascript viejito

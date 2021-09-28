@@ -11,13 +11,9 @@
 //no estamos afectando el mismo valor de memoria, estamos pasando unicamente el valor
 
 
-const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-for (let i = 0; i < numeros.length; i++) {
-    if (i === 5) {
-        continue;
-    }
-    console.log(numeros[i]);
-}
+
+
+
 
 
 
@@ -44,10 +40,25 @@ do {
 
 ========================================================================================
                                 EJERCICIOS CON FOR
-EJERCICIO 1:Haz un ciclo con for
-                                
+APUNTES:
+-Cada let i declarada en un FOR, vive en ese lapso de tiempo del ciclo
+-Cuando hacer un ciclo dentro de otro ciclo se acostumbra cambiar la variable de nombre
+
+EJERCICIO 1:Haz un ciclo con for                                
  for (i = 0; i <= 10; i++) {
     console.log(i);
+}
+
+Ejercicio 1.1, Hacer un for que imprima mis amigos
+let countries = ['Mexico', 'USA', 'Canada', 'Japan', 'SOuth Korea'];
+for (let i = 0; i < 5; i++) {
+    console.log(countries[i]);
+}
+
+Ejercicio 1.3, Hacer el ejercicio 1 pero con una función que cuente cuantos espacios tiene el array y que los imprima
+let countries = ['Mexico', 'USA', 'Canada', 'Japan', 'SOuth Korea'];
+for (let i = 0; i < countries.length; i++) {
+    console.log(countries[i]);
 }
 
 EJERCICIO 2: Recorre una cadena con for usando break
@@ -69,6 +80,172 @@ for (let i = 0; i < numeros.length; i++) {
     }
     console.log(numeros[i]);
 }
+
+EJERCICIO 4, usar un IF dentro de un FOR
+for (let i = 0; i <= 10; i++) {
+    if (i == 5) {
+        console.log(`Voy en el ${i}`);
+        continue;
+    }
+    console.log(i);
+}
+
+EJERCICIO 6, detener el FOR en el número 5
+for (let i = 0; i <= 10; i++) {
+    if (i == 5) {
+        console.log(`Voy en el ${i}`);
+        break;
+    }
+    console.log(i);
+}
+
+Ejercicio 7, imprime si el número es par o inpar
+for (let i = 0; i <= 10; i++) {
+    if (i % 2 == 0) {
+        console.log(`El ${i} es par`);
+    } else {
+        console.log(`El ${i} es inpar`);
+    }
+}
+
+Ejercicio 8, imprimir un arreglo usando forEach(), perro es el index, osea la posición en el arreglo, es una caracteristica que tiene la función forEach()
+let countries = ['Mexico', 'USA', 'Canada', 'Japan', 'SOuth Korea'];
+countries.forEach((country, perro) => {
+    console.log(`${perro} ${country}`);
+})
+
+Ejercicio 9, for anidado.
+for (let i = 0; i < 3; i++) {
+    let a = i + ".";
+    //const element = array[index];
+    for (let j = 0; j < 5; j++) {
+        //const element = array[j];
+        console.log(a + j);
+    }
+}
+
+Ejercicio 10, imprimir el número de datos que tiene cada array dentro del array
+var alumno = [
+    [10, 8, 4, 6, 9],
+    [10, 8, 4, 6, 9],
+    [10, 8, , 6, 9],
+    [10, 8, 10, 6, 9]
+];
+
+for (let i = 0; i < alumno.length; i++) {
+    console.log(alumno[i]);
+}
+
+Ejercicio 11, imprimir(recorrer,asi le dicen) la cantidad de datos que se encuentran dentro del array
+var alumno = [
+    [10, 8, 4, 6, 9],
+    [10, 8, 4, 6, 9],
+    [10, 8, 2, 6, 9],
+    [10, 8, 10, 6, 9]
+];
+
+for (let i = 0; i < alumno.length; i++) {
+    for (let j = 0; j < alumno.length; j++) {
+        console.log(alumno[i][j]);
+    }
+}
+
+ERROR QUE COMETÍA: Al quitarle [i] en el segundo bucle recorria  5 veces cada array porque conto que habia 5 arrays, entonces, da 20, si hubieran sido 4 arrays, hubiera dado 16.  
+
+var alumno = [
+    [10, 8, 4, 6, 9],
+    [10, 8, 4, 6, 9],
+    [10, 8, 2, 6, 9],
+    [10, 8, 10, 6, 9],
+    [10, 8, 10, 6, 9]
+];
+let materias = 0;
+for (let i = 0; i < alumno.length; i++) {
+    for (let j = 0; j < alumno.length; j++) {
+        materias++;
+    }
+}
+console.log(materias);
+
+
+Ejercicio 12: Sumar las calificaciones
+
+var alumno = [
+    [10, 8, 4, 6, 9],
+    [10, 8, 4, 6, 9],
+    [10, 8, 2, 6, 9],
+    [10, 8, 10, 6, 9],
+    [10, 8, 10, 6, 9]
+];
+let sumaCalificaciones = 0;
+let materias = 0;
+for (let i = 0; i < alumno.length; i++) {
+    for (let j = 0; j < alumno.length; j++) {
+        sumaCalificaciones += alumno[i][j];
+        materias++;
+    }
+}
+console.log(sumaCalificaciones);
+
+Ejercicio 13: Sacar la media de las calificaciones.
+
+var alumno = [
+    [10, 8, 4, 6, 9],
+    [10, 8, 4, 6, 9],
+    [10, 8, 2, 6, 9],
+    [10, 8, 10, 6, 9],
+    [10, 8, 10, 6, 9]
+];
+let sumaCalificaciones = 0;
+let materias = 0;
+
+for (let i = 0; i < alumno.length; i++) {
+    for (let j = 0; j < alumno.length; j++) {
+        sumaCalificaciones += alumno[i][j];
+        materias++;
+    }
+}
+let total = sumaCalificaciones / materias;
+console.log(total);
+
+Ejercicio 14: Imprime repobado cada que haya sacado menos de 6 en una materias
+var alumno = [
+    [10, 8, 4, 6, 9],
+    [10, 8, 4, 6, 9],
+    [10, 8, 2, 6, 9],
+    [10, 8, 10, 6, 9],
+    [10, 8, 10, 6, 9]
+];
+for (let i = 0; i < alumno.length; i++) {
+    for (let j = 0; j < alumno[i].length; j++) {
+        if (alumno[i][j] > 5) {
+            console.log("Aprobado");
+        } else {
+            console.log("Reprobado");
+        }
+    }
+}
+
+Ejercicio 15: busca en los arrays cuantas materias reprobo el alumno
+var alumno = [
+    [10, 8, 4, 6, 9],
+    [10, 8, 4, 6, 9],
+    [10, 8, 2, 6, 9],
+    [10, 8, 10, 6, 9],
+    [10, 8, 10, 6, 9]
+];
+let reprobadas = 0;
+for (let i = 0; i < alumno.length; i++) {
+    for (let j = 0; j < alumno[i].length; j++) {
+        if (alumno[i][j] < 6) {
+            reprobadas++;
+        }
+    }
+}
+console.log(`Reprobaste ${reprobadas} materias ¿Para eso te pago la escuela?`);
+
+
+
 ========================================================================================
                                 EJERCICIOS CON FOR IN
 EJERCICIO 1:Haz un ciclo con for in para recorrer un objeto
@@ -80,6 +257,26 @@ let objeto = {
 for (const propiedad in objeto) {
     console.log(`Key: ${propiedad} --- Value: ${objeto[propiedad]}`);
 }
+
+Ejercicio 2, haz el ejercicio 1 pero usando FOR IN, 
+let countries = ['Mexico', 'USA', 'Canada', 'Japan', 'SOuth Korea'];
+for (let i in countries) {
+    console.log(countries[i]);
+}
+
+
+EJERCICIO 3: Recorrer un objeto utilizando FOR IN
+const automovil = {
+    modelo: 'Camaro',
+    motor: 6.1,
+    anio: 1969,
+    marca: "Chevrolet"
+}
+for (const auto in automovil) {
+    console.log(`${auto}: ${automovil[auto]}`);
+}
+
+
 ===========================================================================================
                                 EJERCICIOS CON FOR OF
 EJERCICIO 1:Haz un ciclo con for of para recorrer un array o cadena de texto
@@ -89,80 +286,67 @@ let cadena = [1, 2, 3, 4, 5];
 for (const iterator of cadena) {
     console.log(iterator);
 }
-*/
 
-
-
-
-/*Ejemplo 1 
-PARTE 1:Esto sobre escribe el valor en ambos objetos, esto es un problema, se solucionara en la parte 2
-let juan = { nombre: 'Juan' };
-let ana = juan;
-ana.nombre = 'Ana';
-console.log(juan, ana);
-
- Parte 2 
-let juan = { nombre: 'Juan' };
-let ana = {...juan };
-ana.nombre = 'Ana';
-console.log(juan, ana);
-*/
-
-
-
-/*Quien sabe que hacia esto aquí
-const frutas = ['Manzana', 'Pera', 'Piña'];
-const otrasFrutas = [...frutas];
-
-otrasFrutas.push('Mango');
-console.table({ frutas, otrasFrutas });
-*/
-
-
-/* Ejemplo 2
-Parte1
-const cambiarNombre = (persona) => {
-    persona.nombre = 'Tony'
-    return persona;
+Ejercicio 2, hacer el ejercicio 1 con FOR OF
+let countries = ['Mexico', 'USA', 'Canada', 'Japan', 'SOuth Korea'];
+for (let i of countries) {
+    console.log(i);
+}
+Pero se acostumbra poner el sengular del nombre del array
+for (let country of countries) {
+    console.log(country);
 }
 
-let peter = { nombre: 'Peter' };
-let tony = cambiarNombre(peter);
-console.log(peter, tony);
 
-Parte2
-const cambiarNombre = ({...persona }) => {
-    persona.nombre = 'Tony'
-    return persona;
+EJERCICIO 3, usando "for of" lo mismo que el ejercicio 11 pero usando la función .map(), "transforma" los datos en ARRAY la función .entries()
+const datos = new Map();
+datos.set("nombre", "juan");
+datos.set("profesion", "desarrollo web");
+
+for (const entrada of datos.entries()) {
+    console.log(entrada);
 }
 
-let peter = { nombre: 'Peter' };
-let tony = cambiarNombre(peter);
-console.log(peter, tony);
-*/
-
-//parametro spread: Cuando utilizas los tres puntos fuera de una funcion(EN CUALQUIER LUGAR), es un parametro SPREAD y simboliza, "separa los elementos", la ventaja es que rompe la referencia de Javascript y así podemos trabajar con objetos y hacer igualaciones que apunten a diferentes espacios en memoria
-//parametro rest: Es una sintaxis, cuando lo pongo como argumento dentro de una función, ES UN PARAMETRO REST, y quiere decir "Une todos los argumentos en una sola variable y transformalo como un areglo"
-/**
-Explicación del ejercicio:
-let juan = { nombre: 'Juan' };
-let ana = juan;
-Apunta al mismo espacio de memoria, por eso se sobreescriben, necesitamos que dejen de apuntar al mismo espacio, entonces utilizamos SPREAD
-SPREAD lo que hace es "apuntar a distintos espacios en memoria" y así no se sobreescribe.
-
- */
-
-
-//EJEMPLO: pasando datos por REFERENCIA (Todos los objetos se pasan por referencia)
-//En Javascript todos los objetos son pasados por referencia
-//En javascript todo es un objeto excepto los primitivos
-
-/*
-Ejercicio 1
-Checa el scope de las variables let, son locales, no globales, por eso en esta función no lo muestra
-let edad = 18;
-if (edad => 18) {
-    let eresAdulto = true;
+EJERCICIO 4, cada espacio del array lo convierte en un array
+const ordenes = new Set([123, 231, 131, 102]);
+for (const iterator of ordenes.entries()) {
+    console.log(iterator);
 }
-console.log(eresAdulto);
+
+Ejercicio 5, imprime los valores de un array usando FOR OF y la función .values()
+const ciudades = ['Mexico', 'Canada', 'USA', 'Groelandia', 'Brasil'];
+for (let entrada of ciudades.values()) {
+    console.log(entrada);
+}
+
+EJERCICIO 6, nos regresa solo los valores del Map, pero no los indices(llaves fue lo que dijo el profe)
+const datos = new Map();
+datos.set("nombre", "juan");
+datos.set("profesion", "desarrollo web");
+
+for (const entrada of datos.values()) {
+    console.log(entrada);
+}
+
+Ejercicio 7, usamos la función .keys() con FOR OF para conseguir el indice(o key dijo el profe)
+const ciudades = ['Mexico', 'Canada', 'USA', 'Groelandia', 'Brasil'];
+for (let entrada of ciudades.keys()) {
+    console.log(entrada);
+}
+
+Ejercicio 8, nos va a regresar nuestro indice pero en este caso el índice es nombre y profesión PORQUE ES UN OBJETO
+const datos = new Map();
+datos.set("nombre", "juan");
+datos.set("profesion", "desarrollo web");
+
+for (const entrada of datos.keys()) {
+    console.log(entrada);
+}
+
+EJERCICIO 9, imprime con un for, arrays creados con la función .entries(), usando los espacios de memoria y datos de 1 solo array
+const ciudades = ['Mexico', 'Canada', 'USA', 'Groelandia', 'Brasil'];
+for (let entrada of ciudades.entries()) {
+    console.log(entrada);
+}
+
 */
