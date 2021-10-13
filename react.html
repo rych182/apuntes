@@ -42,6 +42,7 @@
         Frontend
       </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="html.html">HTML5</a>
                         <a class="dropdown-item" href="css3.html">CSS3</a>
                         <a class="dropdown-item" href="sass.html">SASS</a>
                         <a class="dropdown-item" href="bootstrap4.html">Bootstrap 4</a>
@@ -123,6 +124,188 @@
                             <li></li>
                             <li></li>
                         </ul>
+
+                        <ul>
+                            <h2>Browsers and VSC Pluggins of React</h2>
+                            <li> <a href="https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=es">React developer tools</a> </li>
+                            <li><b>Simple react snippets</b> pluggin de VSC</li>
+                            <li></li>
+                        </ul>
+
+                        <ul>
+                            <h2>Bibliography and courses</h2>
+                            <li><a href="https://roadmap.sh/react" target="_blank" rel="noopener noreferrer">The react.js roadmap</a></li>
+                            <li><a href="https://es.reactjs.org/" target="_blank" rel="noopener noreferrer">React JS spanish documentation</a></li>
+                            <li><a href="https://learnreact.design/courses" target="_blank" rel="noopener noreferrer">learnreact.design</a> <b>Courses</b></li>
+                            <li>
+                                <a href="https://epicreact.dev/" target="_blank" rel="noopener noreferrer">Epic React</a>the react developers say that it's the super star of react, I have to check if He teaches well
+                            </li>
+                            <li>
+                                <a href="https://egghead.io/lessons/react-a-beginners-guide-to-react-introduction" target="_blank" rel="noopener noreferrer">Curso Básico React</a> of Kent C. Dods
+                            </li>
+                            <li>
+                                <a href="https://kentcdodds.com/blog/javascript-to-know-for-react" target="_blank" rel="noopener noreferrer">Requirements to begin with React JS</a>
+                            </li>
+                            <li>
+                                <a href="https://reactbootcamp.com/blog/" target="_blank" rel="noopener noreferrer">ReactBootcamp</a>
+                            </li>
+                            <li>
+                                <a href="https://ui.dev/react/" target="_blank" rel="noopener noreferrer">ui.dev</a> Other React Bootcamp
+                            </li>
+                            <li>
+                                <a href="https://alexkondov.com/tao-of-react/" target="_blank" rel="noopener noreferrer">Tao of React</a>
+                            </li>
+                            <li>
+                                <a href="" target="_blank" rel="noopener noreferrer"></a>
+                            </li>
+                            <li>
+                                <a href="" target="_blank" rel="noopener noreferrer"></a>
+                            </li>
+                        </ul>
+
+                        <ul>
+                            <h2>Mentors</h2>
+                            <li><a href="https://frontend.cafe/" target="_blank" rel="noopener noreferrer">frontend cafe/</a></li>
+                            <li>
+                                <a href="" target="_blank" rel="noopener noreferrer"></a>
+                            </li>
+                            <li>
+                                <a href="" target="_blank" rel="noopener noreferrer"></a>
+                            </li>
+                            <li>
+                                <a href="" target="_blank" rel="noopener noreferrer"></a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <div class="">
+
+                        <ol>
+                            <h2>Primeros pasos en React</h2>
+                            <li>La manera sucia de usar react: <br>
+                                <div class=" card margenEjercicios">
+                                    <div class="card-body ">
+                                        <p class="card-text espacio-codigo0 ">//guardamos la ubicación de nuestro div</p>
+                                        <p class="card-text espacio-codigo0 "><code>const contenedor = document.getElementById('app');</code></p>
+                                        <p class="card-text espacio-codigo0 ">//Creamos un encabezado,en las comillas va la etiqueta html en los {} van los atributos</p>
+                                        <p class="card-text espacio-codigo0 "><code>const encabezado = React.createElement('strong', {}, 'Hola Mundo')</code></p>
+                                        <p class="card-text espacio-codigo0 ">//Renderizamos el encabezado dentro delcontenedor</p>
+                                        <p class="card-text espacio-codigo0 "><code>ReactDOM.render(encabezado, contenedor);</code></p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>Click derecho en la carpeta y escribir <code>npx create-react-app NombreDelProyecto</code></li>
+                            <li>Correr el nombre del proyecto con el comando <code>npm start</code></li>
+                            <li>El codigo hace lo mismo en ambos casos: <br>
+                                <div class=" card margenEjercicios">
+                                    <div class="card-body ">
+                                        <p class="card-text espacio-codigo0 "><code>import React from 'react';</code></p>
+                                        <p class="card-text espacio-codigo0 "><code>import ReactDOM from 'react-dom';</code></p>
+                                        <p class="card-text espacio-codigo0 "><code>ReactDOM.render(<React.StrictMode></React.StrictMode></code></p>
+                                        <p class="card-text espacio-codigo0 "><code><h1> Hola mundo </h1> </React.StrictMode> ,</code></p>
+                                        <p class="card-text espacio-codigo0 "><code>document.getElementById('root')</code></p>
+                                        <p class="card-text espacio-codigo0 "><code>);</code></p>
+                                    </div>
+                                </div>
+
+                                <div class=" card margenEjercicios">
+                                    <div class="card-body ">
+                                        <p class="card-text espacio-codigo0 "><code>import React from 'react';</code></p>
+                                        <p class="card-text espacio-codigo0 "><code>import ReactDOM from 'react-dom';</code></p>
+                                        <p class="card-text espacio-codigo0 "><code>ReactDOM.render(<h1 > Hola mundo </h1> ,document.getElementById('root'));</code></p>
+                                    </div>
+                                </div>
+                            </li>
+                            <p>El <b>ID root</b> se encuentra en el archivo index.html en la carpeta public</p>
+                            <li></li>
+                        </ol>
+
+                        <hr>
+                        <div class="">
+                            <h2>JSX</h2>
+                            <p>Son como etiquetas similares a html, necesitas importar <b>react</b> para poder usar <b>JSX</b>.</p>
+
+                            <div class=" card margenEjercicios">
+                                <div class="card-body ">
+                                    <p class="card-text espacio-codigo0 "><code>import React from 'react';</code></p>
+                                    <p class="card-text espacio-codigo0 "><code>import ReactDOM from 'react-dom';</code></p>
+                                    <p class="card-text espacio-codigo0 "><code>ReactDOM.render(&lt;h1&gt; Hola mundo &lt;/h1&gt; ,document.getElementById('root'));</code></p>
+                                </div>
+                            </div>
+
+                            <p>En el código JSX puedes ejecutar dentro de el código Javascript, ejemplo: <br></p>
+                            <div class=" card margenEjercicios">
+                                <div class="card-body ">
+                                    <p class="card-text espacio-codigo0 "><code>import React from 'react';</code></p>
+                                    <p class="card-text espacio-codigo0 "><code>import ReactDOM from 'react-dom';</code></p>
+                                    <p class="card-text espacio-codigo0 "><code>const nombre = 'Ric';</code></p>
+                                    <p class="card-text espacio-codigo0 "><code>const JSX = &lt;h1&gt; Mi nombre es { nombre } y la suma de 2 más 2 es { 2 + 2 } &lt;/h1&gt;</code></p>
+                                    <p class="card-text espacio-codigo0 "><code>ReactDOM.render(JSX ,document.getElementById('root'));</code></p>
+                                </div>
+                            </div>
+
+                            <p>Si quieres usar varias etiquetas, tienes que crear un <b>contenedor</b>, ejemplo:</p>
+                            <div class=" card margenEjercicios">
+                                <div class="card-body ">
+                                    <p class="card-text espacio-codigo0 "><code>import React from 'react';</code></p>
+                                    <p class="card-text espacio-codigo0 "><code>import ReactDOM from 'react-dom';</code></p>
+                                    <p class="card-text espacio-codigo0 "><code>const JSX = (</code></p>
+                                    <p class="card-text espacio-codigo0 "><code>&lt;div&gt;</code></p>
+                                    <p class="card-text espacio-codigo0 "><code>&lt;h1&gt; Soy ric &lt;/h1&gt;</code></p>
+                                    <p class="card-text espacio-codigo0 "><code>&lt;p&gt; Y estoy usando React JS &lt;/p&gt;</code></p>
+                                    <p class="card-text espacio-codigo0 "><code> &lt;div&gt; </code></p>
+                                    <p class="card-text espacio-codigo0 "><code>)</code></p>
+                                    <p class="card-text espacio-codigo0 "><code>ReactDOM.render(JSX ,document.getElementById('root'));</code></p>
+                                </div>
+                            </div>
+
+                            <p>También puedes resumir las etiquetas de esta manera, e igual te encerrara todo en un div.</p>
+                            <div class=" card margenEjercicios">
+                                <div class="card-body ">
+                                    <p class="card-text espacio-codigo0 "><code>import React from 'react';</code></p>
+                                    <p class="card-text espacio-codigo0 "><code>import ReactDOM from 'react-dom';</code></p>
+                                    <p class="card-text espacio-codigo0 "><code>const JSX = (</code></p>
+                                    <p class="card-text espacio-codigo0 "><code>&lt;&gt;</code></p>
+                                    <p class="card-text espacio-codigo0 "><code>&lt;h1&gt; Soy ric &lt;/h1&gt;</code></p>
+                                    <p class="card-text espacio-codigo0 "><code>&lt;p&gt; Y estoy usando React JS &lt;/p&gt;</code></p>
+                                    <p class="card-text espacio-codigo0 "><code> &lt;&gt; </code></p>
+                                    <p class="card-text espacio-codigo0 "><code>)</code></p>
+                                    <p class="card-text espacio-codigo0 "><code>ReactDOM.render(JSX ,document.getElementById('root'));</code></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p>Para usar clases y estilos, tengo que poner <b>className</b> y en la etiqueta style, utilizar corchetes dobles <b>{{}}</b> porque se ponen objetos </p>
+                        <div class=" card margenEjercicios">
+                            <div class="card-body ">
+                                <p class="card-text espacio-codigo0 "><code>import React from 'react';</code></p>
+                                <p class="card-text espacio-codigo0 "><code>import ReactDOM from 'react-dom';</code></p>
+                                <p class="card-text espacio-codigo0 "><code>const JSX = (</code></p>
+                                <p class="card-text espacio-codigo0 "><code>&lt;&gt;</code></p>
+                                <p class="card-text espacio-codigo0 "><code>&lt;h1 className="titulo" style={{color: 'red'}} &gt; Soy ric &lt;/h1&gt;</code></p>
+                                <p class="card-text espacio-codigo0 "><code>&lt;p&gt; Y estoy usando React JS &lt;/p&gt;</code></p>
+                                <p class="card-text espacio-codigo0 "><code> &lt;&gt; </code></p>
+                                <p class="card-text espacio-codigo0 "><code>)</code></p>
+                                <p class="card-text espacio-codigo0 "><code>ReactDOM.render(JSX ,document.getElementById('root'));</code></p>
+                            </div>
+                        </div>
+
+                        <p>Pero esta no es la forma correcta.</p>
+                        <div class=" card margenEjercicios">
+                            <div class="card-body ">
+                                <p class="card-text espacio-codigo0 "><code>import React from 'react';</code></p>
+                                <p class="card-text espacio-codigo0 "><code>import ReactDOM from 'react-dom';</code></p>
+                                <p class="card-text espacio-codigo0 "><code>const JSX = (</code></p>
+                                <p class="card-text espacio-codigo0 "><code>const verde = 'green';</code></p>
+                                <p class="card-text espacio-codigo0 "><code>&lt;&gt;</code></p>
+                                <p class="card-text espacio-codigo0 "><code>&lt;h1 className="titulo" style={{color: verde}} &gt; Soy ric &lt;/h1&gt;</code></p>
+                                <p class="card-text espacio-codigo0 "><code>&lt;p&gt; Y estoy usando React JS &lt;/p&gt;</code></p>
+                                <p class="card-text espacio-codigo0 "><code> &lt;&gt; </code></p>
+                                <p class="card-text espacio-codigo0 "><code>)</code></p>
+                                <p class="card-text espacio-codigo0 "><code>ReactDOM.render(JSX ,document.getElementById('root'));</code></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

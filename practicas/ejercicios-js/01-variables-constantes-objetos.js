@@ -1,13 +1,10 @@
-const persona = {
-    edad: edad,
-    nombre: "ric",
-    frase: function() {
-        console.log("eres un crack");
-    }
-}
-let edad = 18;
-persona.edad = edad;
-console.log(persona.edad);
+const producto1 = "Monitos 20 pulgadas";
+const producto2 = String("Monitor 24 pulgadas");
+const producto3 = new String('Monitor 27 pulgadas');
+console.log(producto1);
+console.log(producto2);
+console.log(producto3);
+console.log(typeof(producto3));
 
 /**
 Ejercicio 1: Imprimir con template strings
@@ -15,6 +12,9 @@ let name = "Ricardo";
 let age = 33;
 let country = "Mexico";
 console.log(`My name is ${name} I am ${age} and I am from ${country}`);
+
+Ejercicio 1.01: 
+
 
 
 EJERCICIO 2: Declarar constantes e imprimirlas
