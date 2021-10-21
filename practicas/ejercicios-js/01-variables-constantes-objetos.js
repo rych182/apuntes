@@ -1,10 +1,42 @@
-const producto1 = "Monitos 20 pulgadas";
-const producto2 = String("Monitor 24 pulgadas");
-const producto3 = new String('Monitor 27 pulgadas');
-console.log(producto1);
-console.log(producto2);
-console.log(producto3);
-console.log(typeof(producto3));
+var hello = "hello world";
+console.log(hello);
+console.log(window);
+console.log(window.hello);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /**
 Ejercicio 1: Imprimir con template strings
