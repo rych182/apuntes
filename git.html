@@ -143,6 +143,19 @@
 
                     <h4>VER commits</h4>
                     <code>git log</code><br>
+                    <h4>ELIMINAR último commit(perdiendo confirmaciones anteriores)</h4>
+                    <code>git reset --hard HEAD~1</code>
+                    <p>Solución si NO hemos subido el commit a nuestro repositorio remoto (no hemos realizado push) y perdemos los cambios</p><br>
+
+                    <h4>ELIMINAR último commit</h4>
+                    <p>no perdemos los cambios de los commits posteriores. Todos los cambios aparecerán como pendientes para realizar un commit.</p>
+                    <code>git reset --soft HEAD~1 </code>
+
+                    <h4>ELIMINAR último commit(cuando ya se hizo push)</h4>
+                    <code>git revert HEAD</code>
+                    <p>De esta forma cualquier usuario que se tenga actualizado el contenido del repositorio remoto puede obtener el cambio simplemente haciendo pull.</p><br>
+
+
                     <h4>SALIR de los commits</h4>
                     <code>q</code><br>
                     <h4>Create a branch</h4>

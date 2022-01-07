@@ -1,8 +1,23 @@
-var hello = "hello world";
-console.log(hello);
-console.log(window);
-console.log(window.hello);
+let name = 'Ric';
+let lastName = 'Garrido'
+let age = 34;
+const secondLastName = 'Cruz';
+let paises = ['Canada', 'Murica', 'Mexalandia'];
+let empleo = {
+    sueldo: 30000,
+    antiguedad: 2,
+    puesto: ['Frontend', 'Backend', 'DevOps'],
+    frase() { console.log(`craaaaaack`) }
+}
+empleo.provincia = 'Morelos';
 
+
+let message = 'hello';
+//var message = 'hola';
+console.log(`My name is ${name} ${lastName} ${secondLastName} and my age is ${age} years old, and live in ${paises[2]} and my job position is ${empleo.puesto[0]}`);
+console.log(message);
+console.log(empleo);
+console.log(empleo.frase());
 
 
 
