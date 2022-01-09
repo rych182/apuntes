@@ -1,4 +1,5 @@
 let name = 'Ric';
+name = 'Richard';
 let lastName = 'Garrido'
 let age = 34;
 const secondLastName = 'Cruz';
@@ -18,6 +19,7 @@ console.log(`My name is ${name} ${lastName} ${secondLastName} and my age is ${ag
 console.log(message);
 console.log(empleo);
 console.log(empleo.frase());
+
 
 
 
