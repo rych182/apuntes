@@ -1,0 +1,102 @@
+/*
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/nit_responsive.png);
+    background-repeat: no-repeat;
+}
+
+.form {
+    background-color: DarkSlateGrey;
+    border-radius: 10px;
+    width: 80%;
+    height: 70vh;
+    margin-top: 80px;
+    position: relative;
+}
+
+section {
+    display: flex;
+    flex-flow: column;
+    margin: auto;
+}
+*/
+
+@font-face {
+    font-family: 'MyriadPro-Black';
+    src: url(../fonts/Fonts/MyriadPro-Black.otf);
+}
+
+.image {
+    background-image: url(../img/nit_responsive.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 50vh;
+    margin: auto;
+    position: absolute;
+    margin-top: -176px;
+    /*max-width: 100%;
+    overflow-x: hidden;*/
+}
+
+.form {
+    background-color: DarkSlateGrey;
+    border-radius: 10px;
+    width: 100%;
+    height: 100vh;
+    max-width: 90%;
+    display: flex;
+    margin-bottom: 100px;
+    position: static;
+    margin: auto;
+    margin-top: 200px;
+}
+
+.son {
+    background-color: Gray;
+    border-radius: 10px;
+    width: 95%;
+    height: 95vh;
+    margin: auto;
+}
+
+form {
+    padding: 10px;
+}
+
+textarea {
+    width: 95%;
+}
+
+.nombre {
+    font-size: 10px;
+    color: whitesmoke;
+    font-family: 'MyriadPro-Black';
+}
+
+.comentario {
+    color: whitesmoke;
+    font-family: 'MyriadPro-Black';
+}
+
+.titulo {
+    text-align: center;
+    font-family: 'MyriadPro-Black';
+}
+
+input {
+    margin-bottom: 10px;
+    width: 95%;
+}
+
+input[type="email"],
+input[type="text"],
+input[type="tel"]::-webkit-input-placeholder {
+    font-family: 'MyriadPro-Black';
+}
+
+input[type="text"]::-webkit-input-value {
+    font-family: 'MyriadPro-Black';
+}
