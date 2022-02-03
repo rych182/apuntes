@@ -158,34 +158,41 @@
 
                     <h4>SALIR de los commits</h4>
                     <code>q</code><br>
+
                     <h4>Create a branch</h4>
                     <code>git brach test-narvbar</code><br>
                     <h4>Show all the branchs(include the hide branchs)</h4>
                     <code>git branch -a</code><br>
+
                     <h4>Move to other commmits</h4>
                     <code>git checkout xxxxxxxxxxxxxxxxxxxxxxxxx(commit number)</code><br>
                     <h4>Move to other branchs</h4>
                     <code>git checkout branchName</code><br>
                     <h4>Return to last commit</h4>
                     <code>git checkout master</code><br>
+
                     <h4>Borrar el commit pero que no borre el código</h4>
                     <code>git reset --soft xxxxxxxxxxx(aquí va el commit que quieres borrar)</code><br>
                     <h4>Borrar el commit y el código</h4>
                     <code>git reset --hard xxxxxxxxxxx(aquí va el commit que quieres borrar)</code><br>
+
                     <h4>Show Branchs</h4>
                     <code>git branch</code><br>
                     <h4>Create branchs</h4>
                     <code>git branch NombreRama</code><br>
                     <h4>FUSIONAR ramas</h4>
                     <code>posicionarte en Master y luego "git merge rama"</code><br>
+
                     <h4>Conectarte con un repositorio en github</h4>
                     <code>git remote add origin xxxxxx(poner url del repositorio)</code><br>
                     <h4>Vereificar si se conecto bien</h4>
                     <code>git remote -v</code><br>
                     <h4>Borrar conexión remota</h4>
                     <code>git remote remove origin</code><br>
+
                     <h4>Subir a servidor</h4>
                     <code>git push origin master</code><br>
+
                     <h4>Crear un Tag</h4>
                     <code>git tag v0.1</code><br>
                     <p>Sirve para poner la versión del proyecto</p>
@@ -195,6 +202,8 @@
                     <h4>Tags anotadas</h4>
                     <code>git tag -a v1.4 -m 'This is my version 1.4'</code>
                     <p>Se guarda como un commit, tiene información sobre el tag <b>PERO se guarda el tag antes que un commit</b></p>
+                    <h4>Show the last 3 tags</h4>
+                    <code>git describe --tags $(git rev-list --tags --max-count=3</code>
                     <h4>git show </h4>
                     <code>git show v0.3</code>
                     <p>Te muestra el tag con su información</p>
