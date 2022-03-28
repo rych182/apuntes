@@ -208,6 +208,53 @@
                                 ]<br>
                             }<br>
                         </code>
+                        <ul>
+                            <h2>Notas</h2>
+                            <li>Puedes hacerlo con cada lenguaje de programación</li>
+                            <li>El back slag <b>\</b> se utiliza cuando quiere poner un caracter especial como <b>comillas dobles o simples</b></li>
+                            <li>POner una descripción después del body usando una , después del corchete, así: <br>
+                                <code>
+                                    "media query": {<br>
+                                        "prefix": "mq",<br>
+                                        "body": [<br>
+                                            "@media (min-width: $1) {\n\t$0\n}"<br>
+                                        ],<br>
+                                        "description": "Te escribe el script principal para empezar a escribir tu Media Query en CSS"
+                                    }<br>
+                                </code>
+                            </li>
+                            <li>Si quiero que el curso quede en algún lugar específico, escribo $1 donde quiero que este el cursor<br></li>
+                            <li>Si quiero que seleccione todo una vez que use mi snippet, escribo esto: <br>
+                                <code>
+                                    "media query": {<br>
+                                        "prefix": "mq",<br>
+                                        "body": [<br>
+                                            "@media (${2:min-width: }) {\n\t$0\n}"<br>
+                                        ],<br>
+                                        "description": "Te escribe el script principal para empezar a escribir tu Media Query en CSS"
+                                    }<br>
+                                </code> <br> En pocas palabras: <b>${2:LoQueQUieroQueSeModifiqueVaEntreLasLlavesYDespuésDeLosDosPuntos}</b>
+                            </li>
+                            <li>Otra manera de generar un salto de linea sin usar <b>\n</b> es:<br>
+                                <code>
+                                    "Generar Clase": {
+                                        "prefix": "clase",<br>
+                                        "body": [<br>
+                                            "export class ${1:nombreClase} {",<br>
+                                            "",<br><!--así es como dejo el salto de linea-->
+                                            "   constructor() {",<br><!--así es como dejo un espacio de tabulador-->
+                                            "      $2",<br><!--el $2 es para que al presionar tabulador me mande a esa posición VSC-->
+                                            "   }",<br>
+                                            "}"<br>
+                                        ],<br>
+                                        "description": "Te escribe el script principal para empezar a escribir tu Media Query en CSS"
+                                    }<br>
+                                </code> Al dejar las <b>comillas dobles</b> vacías es como un salto de linea, puedes dejar espacio usando barra espaciadora por que el tabulador no lo acepta, por ejemplo donde está el constructor,
+                                el <b>$2</b> es para que al presionar tabulador me mande a esa posición VSC
+                            </li>
+                            <li></li>
+                            <li></li>
+                        </ul>
 
 
 
