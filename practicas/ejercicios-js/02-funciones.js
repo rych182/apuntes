@@ -2,8 +2,8 @@
 //Usalo cuando las funciones no sabes si vayan a tener datos, si llegan vacias, no llenes tu codigo de try catch
 
 
-
-
+const numeros = [1, 2, 3, 4, 5];
+numeros.forEach((elemento, index) => console.log(`El elemento ${elemento} esta en la posicion ${index}`));
 
 /*
 
@@ -13,6 +13,13 @@ let nombre = () => {
     console.log("Ricardo");
 }
 nombre();
+
+OPTION 2
+(() => {
+    console.log("rIC");
+})()
+
+
 
 EJERCICIO 1.01: Imprimir un valor predefinido
 function saludar(nombre) {
@@ -98,8 +105,14 @@ Crea una función con un número aleatorio del 0 al 1, con funciones flechas y r
 let numero = () => Math.random();
 console.log(numero());
 
+Ejercicio 8.1
+Crea una función con un número aleatorio del 0 al 100, con funciones flechas y resumidas
+let numero = () => Math.random()* 100;
+console.log(numero());
+
+
 Ejercicio 9 PROTIP
-Crear una funcion flecha con "return" que retorne un objeto y luego resume ese objeto
+Crear una funcion flecha con "return" que "retorne un objeto" y luego resume ese objeto
 const persona = (nombre, apellido) => {
     return {
         nombre: nombre,

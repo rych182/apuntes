@@ -5,28 +5,123 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ES6 Exercises</title>
+    <style>
+        body {
+            background-color: grey;
+        }
+        
+        p {
+            color: white;
+            background-color: black;
+        }
+        
+        h1 {
+            color: yellow;
+        }
+        
+        li>a {
+            color: red;
+        }
+        
+        li>a.fondoVerde {
+            background-color: greenyellow;
+        }
+        
+        a {
+            color: orange;
+        }
+        
+        .fondoAzul {
+            background-color: aquamarine;
+        }
+    </style>
 </head>
 
 <body>
 
-    <script src="01-variables-constantes-objetos.js"></script>
+    <ul>
+        <li>
+            <a href="#titulo1">Titulo 1</a> </li>
+        <li>
+            <a href="#titulo2">Titulo 2</a></li>
+        <li>
+            <a href="#titulo3" class="fondoVerde">Titulo 3</a></li>
+        <li>
+            <a href="#titulo4">Titulo 4</a></li>
+    </ul>
 
-    <!--
+
+    <div>
+        <h1 id="titulo1">Titulo 1</h1>
+        <p><a href="#">Lorem</a> ipsum, dolor sit amet consectetur adipisicing elit. Non ratione ea corporis eos harum accusamus qui optio, inventore dignissimos tempore laboriosam placeat quas suscipit voluptatibus officia natus? Recusandae, eligendi sint!</p>
+        <p class="fondoAzul">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non ratione ea corporis eos harum accusamus qui optio, inventore dignissimos tempore laboriosam placeat quas suscipit voluptatibus officia natus? Recusandae, eligendi sint!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non ratione ea corporis eos harum accusamus qui optio, inventore dignissimos tempore laboriosam placeat quas suscipit voluptatibus officia natus? Recusandae, eligendi sint!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non ratione ea corporis eos harum accusamus qui optio, inventore dignissimos tempore laboriosam placeat quas suscipit voluptatibus officia natus? Recusandae, eligendi sint!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non ratione ea corporis eos harum accusamus qui optio, inventore dignissimos tempore laboriosam placeat quas suscipit voluptatibus officia natus? Recusandae, eligendi sint!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non ratione ea corporis eos harum accusamus qui optio, inventore dignissimos tempore laboriosam placeat quas suscipit voluptatibus officia natus? Recusandae, eligendi sint!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non ratione ea corporis eos harum accusamus qui optio, inventore dignissimos tempore laboriosam placeat quas suscipit voluptatibus officia natus? Recusandae, eligendi sint!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non ratione ea corporis eos harum accusamus qui optio, inventore dignissimos tempore laboriosam placeat quas suscipit voluptatibus officia natus? Recusandae, eligendi sint!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non ratione ea corporis eos harum accusamus qui optio, inventore dignissimos tempore laboriosam placeat quas suscipit voluptatibus officia natus? Recusandae, eligendi sint!</p>
+    </div>
+
+    <div>
+        <h1 id="titulo2">Titulo 2</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non ratione ea corporis eos harum accusamus qui optio, inventore dignissimos tempore laboriosam placeat quas suscipit voluptatibus officia natus? Recusandae, eligendi sint!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non ratione ea corporis eos harum accusamus qui optio, inventore dignissimos tempore laboriosam placeat quas suscipit voluptatibus officia natus? Recusandae, eligendi sint!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non ratione ea corporis eos harum accusamus qui optio, inventore dignissimos tempore laboriosam placeat quas suscipit voluptatibus officia natus? Recusandae, eligendi sint!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non ratione ea corporis eos harum accusamus qui optio, inventore dignissimos tempore laboriosam placeat quas suscipit voluptatibus officia natus? Recusandae, eligendi sint!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non ratione ea corporis eos harum accusamus qui optio, inventore dignissimos tempore laboriosam placeat quas suscipit voluptatibus officia natus? Recusandae, eligendi sint!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non ratione ea corporis eos harum accusamus qui optio, inventore dignissimos tempore laboriosam placeat quas suscipit voluptatibus officia natus? Recusandae, eligendi sint!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non ratione ea corporis eos harum accusamus qui optio, inventore dignissimos tempore laboriosam placeat quas suscipit voluptatibus officia natus? Recusandae, eligendi sint!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non ratione ea corporis eos harum accusamus qui optio, inventore dignissimos tempore laboriosam placeat quas suscipit voluptatibus officia natus? Recusandae, eligendi sint!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non ratione ea corporis eos harum accusamus qui optio, inventore dignissimos tempore laboriosam placeat quas suscipit voluptatibus officia natus? Recusandae, eligendi sint!</p>
+    </div>
+
+    <div>
+        <h1 id="titulo3">Titulo 3</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non ratione ea corporis eos harum accusamus qui optio, inventore dignissimos tempore laboriosam placeat quas suscipit voluptatibus officia natus? Recusandae, eligendi sint!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non ratione ea corporis eos harum accusamus qui optio, inventore dignissimos tempore laboriosam placeat quas suscipit voluptatibus officia natus? Recusandae, eligendi sint!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non ratione ea corporis eos harum accusamus qui optio, inventore dignissimos tempore laboriosam placeat quas suscipit voluptatibus officia natus? Recusandae, eligendi sint!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non ratione ea corporis eos harum accusamus qui optio, inventore dignissimos tempore laboriosam placeat quas suscipit voluptatibus officia natus? Recusandae, eligendi sint!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non ratione ea corporis eos harum accusamus qui optio, inventore dignissimos tempore laboriosam placeat quas suscipit voluptatibus officia natus? Recusandae, eligendi sint!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non ratione ea corporis eos harum accusamus qui optio, inventore dignissimos tempore laboriosam placeat quas suscipit voluptatibus officia natus? Recusandae, eligendi sint!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non ratione ea corporis eos harum accusamus qui optio, inventore dignissimos tempore laboriosam placeat quas suscipit voluptatibus officia natus? Recusandae, eligendi sint!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non ratione ea corporis eos harum accusamus qui optio, inventore dignissimos tempore laboriosam placeat quas suscipit voluptatibus officia natus? Recusandae, eligendi sint!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non ratione ea corporis eos harum accusamus qui optio, inventore dignissimos tempore laboriosam placeat quas suscipit voluptatibus officia natus? Recusandae, eligendi sint!</p>
+    </div>
+
+    <div>
+        <h1 id="titulo4">Titulo 4</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non ratione ea corporis eos harum accusamus qui optio, inventore dignissimos tempore laboriosam placeat quas suscipit voluptatibus officia natus? Recusandae, eligendi sint!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non ratione ea corporis eos harum accusamus qui optio, inventore dignissimos tempore laboriosam placeat quas suscipit voluptatibus officia natus? Recusandae, eligendi sint!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non ratione ea corporis eos harum accusamus qui optio, inventore dignissimos tempore laboriosam placeat quas suscipit voluptatibus officia natus? Recusandae, eligendi sint!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non ratione ea corporis eos harum accusamus qui optio, inventore dignissimos tempore laboriosam placeat quas suscipit voluptatibus officia natus? Recusandae, eligendi sint!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non ratione ea corporis eos harum accusamus qui optio, inventore dignissimos tempore laboriosam placeat quas suscipit voluptatibus officia natus? Recusandae, eligendi sint!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non ratione ea corporis eos harum accusamus qui optio, inventore dignissimos tempore laboriosam placeat quas suscipit voluptatibus officia natus? Recusandae, eligendi sint!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non ratione ea corporis eos harum accusamus qui optio, inventore dignissimos tempore laboriosam placeat quas suscipit voluptatibus officia natus? Recusandae, eligendi sint!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non ratione ea corporis eos harum accusamus qui optio, inventore dignissimos tempore laboriosam placeat quas suscipit voluptatibus officia natus? Recusandae, eligendi sint!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non ratione ea corporis eos harum accusamus qui optio, inventore dignissimos tempore laboriosam placeat quas suscipit voluptatibus officia natus? Recusandae, eligendi sint!</p>
+    </div>
+
+
+    <script src="08-rest-spread-operators.js"></script>
     <script>
-        function swap(x, y) {
-            let a = 2;
-            let b = 3;
+        /*
+                                                                                                                                                                                function swap(x, y) {
+                                                                                                                                                                                    let a = 2;
+                                                                                                                                                                                    let b = 3;
 
-            a = a + b; // 2 +3 = 5
-            b = a - b; // 5 - 3 = 2
-            a = a - b; // 5 - 2 = 3
+                                                                                                                                                                                    a = a + b; // 2 +3 = 5
+                                                                                                                                                                                    b = a - b; // 5 - 3 = 2
+                                                                                                                                                                                    a = a - b; // 5 - 2 = 3
 
-            return [a, b];
-        }
+                                                                                                                                                                                    return [a, b];
+                                                                                                                                                                                }
 
-        console.log(swap(2, 3));
+                                                                                                                                                                                console.log(swap(2, 3));
+                                                                                                                                                                                */
     </script>
--->
+
 </body>
 
 </html>

@@ -1,4 +1,20 @@
-/*const persona = {
+/*
+Parametros REST:
+-Es una sintaxis, cuando lo pongo como argumento dentro de una función y quiere decir
+ "Une todos los argumentos en una sola variable y transformalo como un areglo"
+-no pueden llevar nada después de ellos y sirven para poder mostrar varios datos como un array
+
+
+
+
+Parametros Spread:
+-Cuando utilizas los tres puntos fuera de una funcion(EN CUALQUIER LUGAR), es un parametro SPREAD y simboliza,
+"separa los elementos", la ventaja es que rompe la referencia de Javascript y así podemos trabajar con objetos
+y hacer igualaciones que apunten a diferentes espacios en memoria
+-Sirve para separar los datos, Cuando utilizas los tres puntos fuera de una funcion(EN CUALQUIER LUGAR)
+
+
+const persona = {
     nombre: "rick",
     apellido: "Garrido",
     edad: 45,
@@ -12,12 +28,16 @@ const persona2 = {...persona };
 console.log(persona2);
 */
 
+
 const arreglo = [1, 2, 3, 4];
 let arreglo2 = [...arreglo, 5];
 const arreglo3 = arreglo2.map(function(numero) {
     return numero * 2;
 });
 console.log(arreglo3);
+
+
+
 /*
 Ejercicio 0 : SPREAD, copiar un array y ponerlo dentro de otro
 
@@ -67,7 +87,7 @@ let ana = juan;
 ana.nombre = 'Ana';
 console.log(juan, ana);
 
- Parte 2 
+Parte 2 
 let juan = { nombre: 'Juan' };
 let ana = {...juan };
 ana.nombre = 'Ana';
@@ -127,5 +147,15 @@ if (edad => 18) {
     let eresAdulto = true;
 }
 console.log(eresAdulto);
+
+EJERCICIO 10: imprime los datos del array c
+
+const arreglo = [1, 2, 3, 4];
+let arreglo2 = [...arreglo, 5];
+const arreglo3 = arreglo2.map(function(numero) {
+    return numero * 2;
+});
+console.log(arreglo3);
+
 
 */
