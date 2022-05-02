@@ -1,9 +1,11 @@
 //try catch cuando no quieres que se detenga la ejecución de tu programa
 //Usalo cuando las funciones no sabes si vayan a tener datos, si llegan vacias, no llenes tu codigo de try catch
 
+let ejercicio = (name, lastName) => ({ name, lastName })
 
-const numeros = [1, 2, 3, 4, 5];
-numeros.forEach((elemento, index) => console.log(`El elemento ${elemento} esta en la posicion ${index}`));
+
+const box = ejercicio("uli", "perez");
+console.log(box);
 
 /*
 

@@ -2,14 +2,9 @@
 //El setTimeOut es una tarea aunque el tiempo sea 0, 
 //Console.log es una tarea sincrona inmediata
 
-function callback() {
-    console.log("Soy un callback")
-}
 
-function mensaje(fn) {
-    fn();
-}
-mensaje(callback);
+let mult = 2 * word;
+console.log(mult);
 
 /*
   Codigo Asincrono bloqueante 
@@ -31,6 +26,35 @@ mensaje(callback);
     console.log("Fin")
 })();
 
+===============================================EJERCICIO 1===================================
+RECUERDA: La función va dentro deñ "setTimeOut"
+function uno(dos) {
+    setTimeout(() => {
+        console.log("PRIMERO");
+        dos();
+    }, 3000);
+}
+
+function dos() {
+    console.log("SEGUNDO");
+}
+
+uno(dos);
+
+
+
+===============================================EJERCICIO 2===================================
+function callback() {
+    console.log("Soy un callback")
+}
+
+function mensaje(fn) {
+    fn();
+}
+mensaje(callback);
+
+
+
 */
 
 /*
@@ -47,6 +71,7 @@ Herramienta:
 http://latentflip.com/loupe/?code=JC5vbignYnV0dG9uJywgJ2NsaWNrJywgZnVuY3Rpb24gb25DbGljaygpIHsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24gdGltZXIoKSB7CiAgICAgICAgY29uc29sZS5sb2coJ1lvdSBjbGlja2VkIHRoZSBidXR0b24hJyk7ICAgIAogICAgfSwgMjAwMCk7Cn0pOwoKY29uc29sZS5sb2coIkhpISIpOwoKc2V0VGltZW91dChmdW5jdGlvbiB0aW1lb3V0KCkgewogICAgY29uc29sZS5sb2coIkNsaWNrIHRoZSBidXR0b24hIik7Cn0sIDUwMDApOwoKY29uc29sZS5sb2coIldlbGNvbWUgdG8gbG91cGUuIik7!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D
 
 
+Ejercicio 3
 function cuadradoCallback(value, callback) {
     setTimeout(() => {
         callback(value, value * value);

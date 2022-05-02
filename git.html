@@ -151,6 +151,9 @@
                     <p>no perdemos los cambios de los commits posteriores. Todos los cambios aparecerán como pendientes para realizar un commit.</p>
                     <code>git reset --soft HEAD~1 </code>
 
+                    <h4>Modificar commit</h4>
+                    <code>git commit --amend -m "cambio en el commit"</code> quizás github no deje subir la modificación, entonces usar <code>git push origin master -f</code> para forzar el push
+
                     <h4>ELIMINAR último commit(cuando ya se hizo push)</h4>
                     <code>git revert HEAD</code>
                     <p>De esta forma cualquier usuario que se tenga actualizado el contenido del repositorio remoto puede obtener el cambio simplemente haciendo pull.</p><br>
@@ -182,6 +185,8 @@
                     <code>git branch NombreRama</code><br>
                     <h4>FUSIONAR ramas</h4>
                     <code>posicionarte en Master y luego "git merge rama"</code><br>
+                    <h4>BORRAR RAMAS</h4>
+                    <code>git branch -D</code>
 
                     <h4>Conectarte con un repositorio en github</h4>
                     <code>git remote add origin xxxxxx(poner url del repositorio)</code><br>
@@ -204,6 +209,8 @@
                     <p>Se guarda como un commit, tiene información sobre el tag <b>PERO se guarda el tag antes que un commit</b></p>
                     <h4>Show the last 3 tags</h4>
                     <code>git describe --tags $(git rev-list --tags --max-count=3)</code>
+                    <h4>Asignar un tag a un commit ya creado</h4>
+                    <code>git tag v0.9 -m "mensaje" xxxxxxxxxxxxxx</code>
                     <h4>git show </h4>
                     <code>git show v0.3</code>
                     <p>Te muestra el tag con su información</p>

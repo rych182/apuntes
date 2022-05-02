@@ -1,57 +1,17 @@
-let name = 'Ric';
-name = 'Richard';
-let lastName = 'Garrido'
-let age = 34;
-const secondLastName = 'Cruz';
-let paises = ['Canada', 'Murica', 'Mexalandia'];
-let empleo = {
-    sueldo: 30000,
-    antiguedad: 2,
-    puesto: ['Frontend', 'Backend', 'DevOps'],
-    frase() { console.log(`craaaaaack`) }
+let nombre = "ric";
+let edad = 34;
+const lastName = 'Garrido';
+let mascotas = ['Perro', 'Gato', 'Pez', true];
+mascotas.push('Perico');
+let persona = {
+    nacionalidad: 'Mexicana',
+    edad: 35,
+    sexo: 'Masculíno',
+    mascotas: ['Gallina', 'Conejo']
 }
-empleo.provincia = 'Morelos';
-
-
-let message = 'hello';
-//var message = 'hola';
-console.log(`My name is ${name} ${lastName} ${secondLastName} and my age is ${age} years old, and live in ${paises[2]} and my job position is ${empleo.puesto[0]}`);
-console.log(message);
-console.log(empleo);
-console.log(empleo.frase());
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+persona.correo = "correo@correo.com";
+mascotas.push('Tortuga', 'Iguana');
+console.log(`MY name is ${nombre} ${lastName}, my age is ${persona.edad}. I have a ${mascotas[3]}, my email is ${persona.correo} and I want to buy a ${persona.mascotas[0]} and ${persona.mascotas[1]}`);
 
 
 
@@ -63,8 +23,6 @@ let country = "Mexico";
 console.log(`My name is ${name} I am ${age} and I am from ${country}`);
 
 Ejercicio 1.01: 
-
-
 
 EJERCICIO 2: Declarar constantes e imprimirlas
 const caja = 21;
