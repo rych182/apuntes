@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            width: 100px;
+            height: 120px;
+            padding: 5px;
+            border: 2px solid blue;
+            box-sizing: content-box;
+        }
+        
+        .box2 {
+            width: 100px;
+            height: 120px;
+            padding: 5px;
+            border: 2px solid blue;
+            box-sizing: border-box;
+            margin-left: 10px;
+        }
+        
+        .box3 {
+            width: 100px;
+            height: 120px;
+            padding: 5px;
+            border: 2px solid blue;
+            margin-left: 10px;
+        }
+        
+        .caja {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="caja">
+        <div class="box1">caja1, </div>
+        <div class="box2">caja2, </div>
+        <div class="box3">caja3, </div>
+    </div>
+    <h1>ric alv</h1>
+    <script>
+        let date = new Date();
+        const dateOptions = {
+
+        }
+        console.log(date.toLocaleDateString('es-MX', dateOptions));
+    </script>
+
+</body>
+
+</html>
