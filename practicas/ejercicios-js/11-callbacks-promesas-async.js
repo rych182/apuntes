@@ -2,9 +2,39 @@
 //El setTimeOut es una tarea aunque el tiempo sea 0, 
 //Console.log es una tarea sincrona inmediata
 
+function cuadradoCallback(value, callback) {
+    setTimeout(() => {
+        callback(value, value * value);
+    }, 3000)
+}
 
-let mult = 2 * word;
-console.log(mult);
+
+
+cuadradoCallback(1, (value, result) => {
+    console.log("Inicia Callback");
+    console.log(`Callback: ${value}, ${result}`);
+    cuadradoCallback(2, (value, result) => {
+        console.log("Inicia Callback");
+        console.log(`Callback: ${value}, ${result}`);
+        cuadradoCallback(3, (value, result) => {
+            console.log("Inicia Callback");
+            console.log(`Callback: ${value}, ${result}`);
+            cuadradoCallback(4, (value, result) => {
+                console.log("Inicia Callback");
+                console.log(`Callback: ${value}, ${result}`);
+                cuadradoCallback(5, (value, result) => {
+                    console.log("Inicia Callback");
+                    console.log(`Callback: ${value}, ${result}`);
+                })
+            })
+        })
+    })
+
+})
+
+
+
+
 
 /*
   Codigo Asincrono bloqueante 
@@ -96,6 +126,13 @@ cuadradoCallback(3, (value, result) => {
         });
     });
 });
+
+-Javascript es un lenguaje "single thread"(lenguaje de un solo hilo), solo puede hacer una cosa a la vez.
+-No se pueden hacer operaciones largas como el acceso a la red, sin que se bloque el hilo principal
+-Imaginate que pides datos a una API, dependiendo de la red o servidor, puede tardar mucho/poco tiempo y mientras el hilo principal se puede bloquear 
+-La asincronía permite realizarlargas solicitudes de red sin bloquear el hila principal
+-JAVASCRIPT trabaja dentro de un modelo, ASINCRONO y NO BLOQUEANTE, y tiene un loop de eventos implementados de UN SOLO HILO para operaciones de ENTRADA Y SALIDA, gracias a esto JS es un lenguaje altamente concurrente, 
+
 
 
 

@@ -1,11 +1,24 @@
 //try catch cuando no quieres que se detenga la ejecución de tu programa
 //Usalo cuando las funciones no sabes si vayan a tener datos, si llegan vacias, no llenes tu codigo de try catch
 
-let ejercicio = (name, lastName) => ({ name, lastName })
+let saludos = () => {
+    console.log(`Hello world`);
+}
 
+let suma = (a, b) => a + b;
 
-const box = ejercicio("uli", "perez");
-console.log(box);
+function imprime1() {
+    console.log("Hola");
+}
+
+function imprime2() {
+    console.log("Mundo");
+}
+
+function imprime3(a, b) {
+    return a() + b()
+}
+imprime3(imprime1, imprime2);
 
 /*
 

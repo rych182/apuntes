@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>max-with</title>
+    <style>
+        div {
+            max-width: 600px;
+            min-width: 300px;
+            min-height: 100px;
+            max-height: 400px;
+            background-color: blueviolet;
+            border: 2px blue solid;
+            margin: 30px;
+            outline: tomato 2px solid;
+            outline-offset: 20px;
+        }
+        
+        div.dos {
+            max-width: 1200px;
+            min-width: 300px;
+            min-height: 100px;
+            max-height: 400px;
+            background-color: blueviolet;
+            border: 2px blue solid;
+            margin: 30px;
+            outline: tomato 2px solid;
+            outline-offset: 20px;
+        }
+        
+        .parrafoUno {
+            text-decoration: overline;
+            text-transform: uppercase;
+        }
+        
+        .parrafoDos {
+            text-decoration: line-through;
+            text-transform: capitalize;
+        }
+        
+        .parrafoTres {
+            text-decoration: underline;
+            text-transform: lowercase;
+        }
+        
+        .parrafoCuatro {
+            text-decoration: underline overline;
+            text-indent: 20px;
+            letter-spacing: 2px;
+            word-spacing: 10px;
+            line-height: 2.5;
+        }
+        
+        h1 {
+            text-align: center;
+            border: solid 2px green;
+            text-shadow: 2px 2px 5px red;
+            /* efecto blur*/
+        }
+        
+        h2 {
+            text-align: left;
+            border: solid 2px yellow;
+            text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+        }
+        
+        h3 {
+            text-align: right;
+            border: solid 2px yellowgreen;
+            color: white;
+            text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+        }
+        
+        h4 {
+            text-align: justify;
+            border: solid 2px firebrick;
+            color: coral;
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p class="parrafoUno">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam, sint eos cum dicta placeat suscipit voluptatum quo praesentium excepturi possimus aliquid magnam, quasi dolorem consequatur impedit esse cupiditate iste! Veniam.</p>
+        <p class="parrafoDos">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam, sint eos cum dicta placeat suscipit voluptatum quo praesentium excepturi possimus aliquid magnam, quasi dolorem consequatur impedit esse cupiditate iste! Veniam.</p>
+        <p class="parrafoTres">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam, sint eos cum dicta placeat suscipit voluptatum quo praesentium excepturi possimus aliquid magnam, quasi dolorem consequatur impedit esse cupiditate iste! Veniam.</p>
+        <p class="parrafoCuatro">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam, sint eos cum dicta placeat suscipit voluptatum quo praesentium excepturi possimus aliquid magnam, quasi dolorem consequatur impedit esse cupiditate iste! Veniam.</p>
+    </div>
+
+    <div class="dos">
+        <h1>Text-align: center; text-shadow: 2px 2px 5px red; efecto blur</h1>
+        <h2>Text-align: left;</h2>
+        <h3>Text-align: right;</h3>
+        <h4>Text-align: justify; Text shadow con borde</h3>
+    </div>
+</body>
+
+</html>
