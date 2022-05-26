@@ -1,9 +1,12 @@
 //console.log(profesion, edad, estadoCivil);
 
 
-
-
 /*
+
+
+DEFINICION, permite desempacar valores de arreglos y propiedades de objetos en distintas variables.  
+
+
 Ejercicio 1, explica la deestructuración
 const numeros = [1, 2, 3];
 //Sin destructuración
@@ -22,6 +25,23 @@ Deestructura un arreglo
 const persona = ['Ricard', 33, 'Mexico'];
 const [nombre, edad, pais] = persona;
 console.log(nombre);
+
+Ejercicio 2.1: Otra manera de deestructurar
+let mascotas = ['Pez', 'Gato', 'Perro', 'Ave', 'Tortuga'];
+let [valor1, , , , valor5] = mascotas;
+console.log(valor5);
+
+Ejercicio 2.2: Otra manera de deestructurar
+let mascotas = ['Pez', 'Gato', 'Perro', 'Ave', 'Tortuga'];
+let [valor1, , , ...restoMascotasRest] = mascotas;
+console.log(restoMascotasRest);
+
+Ejercicio 2.3: Utilizar metodos en la deestructuración
+
+const palabra = "hola";
+const { length } = palabra;
+console.log(length);
+
 
 Ejercicio 3
 Destructurar un arreglo y ponerle un valor por defecto
