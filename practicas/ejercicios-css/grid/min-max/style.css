@@ -1,4 +1,8 @@
 .contenedor {
     display: grid;
-    grid-gap: 20px
+    grid-gap: 20px;
+    grid-template-columns: minmax(300px, 1fr) 1fr;
+    /*se utiliza para responsive pero se combina con media-queries*/
+    grid-template-rows: minmax(150px, auto) 400px;
+    /*también puedes poner AUTO, para que utilice el "tamaño que necesite"*/
 }
