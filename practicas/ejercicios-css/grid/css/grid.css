@@ -1,0 +1,10 @@
+.contenedor {
+    display: grid;
+    /*cuantas columnas quieres tener
+    especificas el 'tamaño' que quieres tener de la columna, las medidas son: px,% y fr(fracción)*/
+    grid-template-columns: 1fr 2fr 1fr;
+    /*le pone un tamaño a las columnas pero esta vez por fila y las filas que tengas por default les pone un tamaño por default*/
+    grid-template-rows: 100px 80px 200px;
+    /*Le pone unos espaciados */
+    grid-gap: 20px;
+}
