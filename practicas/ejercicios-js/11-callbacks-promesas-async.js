@@ -2,36 +2,17 @@
 //El setTimeOut es una tarea aunque el tiempo sea 0, 
 //Console.log es una tarea sincrona inmediata
 
-function cuadradoCallback(value, callback) {
-    setTimeout(() => {
-        callback(value, value * value);
-    }, 3000)
+function uno() {
+    console.log("Primero");
+    dos();
 }
 
+function dos() {
+    console.log("Segundo");
+}
 
-
-cuadradoCallback(1, (value, result) => {
-    console.log("Inicia Callback");
-    console.log(`Callback: ${value}, ${result}`);
-    cuadradoCallback(2, (value, result) => {
-        console.log("Inicia Callback");
-        console.log(`Callback: ${value}, ${result}`);
-        cuadradoCallback(3, (value, result) => {
-            console.log("Inicia Callback");
-            console.log(`Callback: ${value}, ${result}`);
-            cuadradoCallback(4, (value, result) => {
-                console.log("Inicia Callback");
-                console.log(`Callback: ${value}, ${result}`);
-                cuadradoCallback(5, (value, result) => {
-                    console.log("Inicia Callback");
-                    console.log(`Callback: ${value}, ${result}`);
-                })
-            })
-        })
-    })
-
-})
-
+uno();
+//https: //www.freecodecamp.org/espanol/news/que-es-una-funcion-callback-javascript/
 
 
 

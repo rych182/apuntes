@@ -5,7 +5,7 @@ let saludos = () => {
     console.log(`Hello world`);
 }
 
-let suma = (a, b) => a + b;
+//let suma = (a, b) => a + b;
 
 function imprime1() {
     console.log("Hola");
@@ -18,8 +18,18 @@ function imprime2() {
 function imprime3(a, b) {
     return a() + b()
 }
-imprime3(imprime1, imprime2);
 
+function frase1(a, b) {
+    let caja = b + a;
+    b(caja);
+    console.log("Abuelita");
+}
+
+function frase2(palabra) {
+    console.log(palabra);
+}
+
+frase1(", soy tu nieto", frase2);
 /*
 
 Ejercicio 1
