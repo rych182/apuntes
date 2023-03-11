@@ -1,35 +1,15 @@
 //try catch cuando no quieres que se detenga la ejecución de tu programa
 //Usalo cuando las funciones no sabes si vayan a tener datos, si llegan vacias, no llenes tu codigo de try catch
 
-let saludos = () => {
-    console.log(`Hello world`);
-}
+
 
 //let suma = (a, b) => a + b;
 
-function imprime1() {
-    console.log("Hola");
-}
+let funcion = (nombre, apellido) => ({ nombre, apellido })
+console.log(funcion("ric", "garrido"));
 
-function imprime2() {
-    console.log("Mundo");
-}
 
-function imprime3(a, b) {
-    return a() + b()
-}
 
-function frase1(a, b) {
-    let caja = b + a;
-    b(caja);
-    console.log("Abuelita");
-}
-
-function frase2(palabra) {
-    console.log(palabra);
-}
-
-frase1(", soy tu nieto", frase2);
 /*
 
 Ejercicio 1
@@ -109,7 +89,8 @@ console.log(almacen);
 
 Ejercicio 7
 Regresar 2 valores en un return, primero la manera mala y luego la buena
-MALA
+
+MALA(solo imprimira el número 2)
 let nombre = (nombre) => {
     console.log(nombre);
     return 1, 2;

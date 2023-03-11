@@ -8,26 +8,15 @@ La deestruccturacion de objetos y arreglos se usan mucho en frameworks y libreri
 Nota: Es muy raro tener 3 niveles de arrays
 */
 
-//Ejercicio 13.02: crear un objeto e imprime una datos que estén dentro usando THIS
+let datos = [19,
+    'Gato',
+    true,
+    null,
+    function cadena() {},
+    ["Canada", "Suiza", "Germany"]
+];
+console.log(datos[5][1]);
 
-let ric = {
-    nombre: "Ricardo",
-    edad: 33,
-    redes: ["Twitter", "Instagram", "GitHub"],
-    amigos: {
-        secu: "Urrutia",
-        prepa: "Nacho",
-        uni: "Lau",
-        vida: "Diego"
-    },
-    accion: function saludar() {
-        console.log("Hello World");
-    },
-    otraAccion: function() {
-        console.log(`MI nombre es ${this.nombre} y tengo ${this.edad} años`);
-    }
-}
-console.log(Object.keys(ric));
 
 
 
@@ -73,6 +62,10 @@ console.log(datos[3]);
 Ejercicio 5: Array que tenga strings, números, boleanos, nulos y funciones
 let datos = [19, 'Gato', true, null, function name() {}];
 console.log(datos[4]);
+
+Ejercicio 5.1: Imprimir la función que esté en el array
+let datos = [19, 'Gato', true, null, function name() { return "hola" }];
+console.log(datos[4].name);
 
 Ejercicio 6: Array que tenga strings, números, boleanos, nulos, funciones y un array con datos anteriores 
 let datos = [19,
