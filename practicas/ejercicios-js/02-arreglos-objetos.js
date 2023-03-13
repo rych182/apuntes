@@ -22,28 +22,58 @@ console.log(datos[5][1]);
 
 
 /*
+--------------------------OBJETOS--------------------------------------
+***EJERCICIO 0: declara un objeto e imprimelo
+let unPinshiObjeto = {
+    nombre: 'Pedro',
+    apellido: "Martinez",
+    edad: 24
+}
+console.log(unPinshiObjeto);
+
+***Ejercicio 1: Resumir la escritura del ejercicio anterior
+
+let nombre = "ric";
+let edad = 33;
+
+const persona = {
+    nombre,
+    edad,
+    frase() {
+        console.log("Eres un crack!");
+    }
+}
+
+console.log(persona.nombre);
+persona.frase();
+
+***EJERCICIO 2: Agrega datos a una constante objeto
+const unPinshiObjeto = {
+    nombre: 'Pedro',
+    apellido: "Martinez",
+    edad: 24
+}
+unPinshiObjeto.correo = "correo@correo.com";
+console.log(unPinshiObjeto);
+
+***Ejercicio 3: Agregar datos a un objeto desde una variable
+let nombre = "ric";
+let edad = 33;
+
+const persona = {
+    nombre: nombre,
+    edad: edad,
+    frase: function() {
+        console.log("Eres un crack!");
+    }
+}
+console.log(persona.edad);
+
+----------------------------ARRAYS--------------------------------------------------
+
 Ejercicio 1 : Array que tenga strings
 let animales = ['Perro', 'Gato', 'Pez'];
 console.log(animales[2]);
-
-Ejercicio 1.01: Array creado de una forma nueva
-let cadena = Array.of("hola", 2, true, [1, 2, "mundo"]);
-console.log(cadena);
-
-Ejercicio 1.02: Una forma de llenar un array de datos
-let cadena = Array(10).fill(false);
-console.log(cadena);
-
-Ejercicio 1.03: Otra forma de crear un arreglo.
-const e = new Array();
-console.log(e);
-
-Ejercicio 1.04: Imprimir un arreglo usando el metodo .forEach();
-let colores = ["Azul", "Rojo", "Verde"];
-colores.forEach(function(element, index) {
-    console.log(`<li id='${index}'>${element}</li>`);
-});
-
 
 
 Ejercicio 2
