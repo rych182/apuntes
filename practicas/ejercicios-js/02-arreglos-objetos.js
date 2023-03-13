@@ -112,36 +112,7 @@ Ejercicio 7: Usa el metodo "length" que te dice cuantos cupos hay en el array
 let mascotas = ["perro", "gato", "perico"];
 console.log(mascotas.length);
 
-Ejercicio 8 Usa el metodo .push() que te agrega un nuevo dato a tu array al final(agrega un objeto de preferencia)
-let mascotas = ["perro", "gato", "perico"];
-mascotas.push("Pez");
-console.log(mascotas.length);
-console.log(mascotas);
 
-Ejercicio 9 Usa el metodo unshift(); que te agrega un nuevo dato a tu array pero al inicio
-let mascotas = ["perro", "gato", "perico"];
-mascotas.unshift("Caracol");
-console.log(mascotas.length);
-console.log(mascotas);
-
-Ejercicio 10 Borrar el último dato de tu array y muestra lo que hayas borrado
-let mascotas = ["perro", "gato", "perico"];
-let borrado = mascotas.pop();
-console.log(mascotas.length);
-console.log(mascotas);
-console.log("La mascota que se borro fue: " + borrado);
-
-Ejercicios 11 Elimina el rango de elementos que tu le digas, dentro de un array
-let mascotas = ["perro", "gato", "perico", "pez", "hamster", "mapache"];
-let elementosBorrados = mascotas.splice(1, 4);
-console.log(mascotas.length);
-console.log(mascotas);
-console.log(elementosBorrados);
-
-Ejercicio 12 Te dice el lugar en donde se encuentra el dato que buscas, OJO: debes ponerlo exacto, mayúsculas y minúsculas
-let mascotas = ["perro", "gato", "perico", "pez", "hamster", "mapache"];
-let indice = mascotas.indexOf("pez");
-console.log(indice);
 
 Ejercicio 13 Crear un objeto con diferentes tipos de datos y mostrar su contenido
 let persona = {
@@ -246,30 +217,6 @@ let ric = {
 }
 console.log(Object.values(ric));
 
-
-EJERCICIO 13.05: Usar el metodo .hasOwnProperty para preguntar si existe una propiedad del metodo, imprimira true or false para decirte si existe o no
-
-let ric = {
-    nombre: "Ricardo",
-    edad: 33,
-    redes: ["Twitter", "Instagram", "GitHub"],
-    amigos: {
-        secu: "Urrutia",
-        prepa: "Nacho",
-        uni: "Lau",
-        vida: "Diego"
-    },
-    accion: function saludar() {
-        console.log("Hello World");
-    },
-    otraAccion: function() {
-        console.log(`MI nombre es ${this.nombre} y tengo ${this.edad} años`);
-    }
-}
-console.log(ric.hasOwnProperty("nombre"));
-
-
-
 Ejercicio 14 Crear un objeto y mostrar su contenido Y BORRAR una propiedad del objeto ,Crear un objeto y mostrar su contenido
 let persona = {
     nombre: "Ricardo",
@@ -294,32 +241,7 @@ let persona = {
 delete persona.vivo;
 console.log(persona);
 
-Ejercicio 15
-Convertir todo un objeto en un array
-let persona = {
-    nombre: "Ricardo",
-    edad: 33,
-    vivo: true,
-    amigos: ["El capi",
-        "Luis",
-        "Nacho"
-    ],
-    otrosAmigos: {
-        unila: ["Ruben",
-            "Jessica"
-        ],
-        secu1: "Urrutia",
-        uni: {
-            elMorro: "Samuel",
-            yuri: "Yuriliana",
-            Laurrirrichan: "Laura"
-        }
-    }
-}
-delete persona.vivo;
 
-const entriesPares = Object.entries(persona);
-console.log(entriesPares);
 
 Ejercicio 16 Agregar una nueva propiedad al objeto
 let persona = {
@@ -346,149 +268,9 @@ let persona = {
 persona.casado = false;
 console.log(persona);
 
-Ejercicio 17 Crea un objeto y bloquea una modificación usando el metodo Object.freeze, que sirve para congelar tu objeto y se quede como lo dejaste
-const persona = {
-    nombre: "Ricardo",
-    edad: 33,
-    vivo: true,
-    amigos: ["El capi",
-        "Luis",
-        "Nacho"
-    ],
-    otrosAmigos: {
-        unila: ["Ruben",
-            "Jessica"
-        ],
-        secu1: "Urrutia",
-        uni: {
-            elMorro: "Samuel",
-            yuri: "Yuriliana",
-            Laurrirrichan: "Laura"
-        }
-    }
-}
-Object.freeze(persona);
-Object.freeze(persona.amigos);
-persona.amigos[0] = "Andres";
-persona.edad = 18;
-console.log(persona);
-
-Ejercicio 18 Usa el metodo Object.getOwnPropertyNames(); que te muestra las propiedades que le pusiste a tu objeto, pero en un Array
-let persona = {
-    nombre: "Ricardo",
-    edad: 33,
-    vivo: true,
-    amigos: ["El capi",
-        "Luis",
-        "Nacho"
-    ],
-    otrosAmigos: {
-        unila: ["Ruben",
-            "Jessica"
-        ],
-        secu1: "Urrutia",
-        uni: {
-            elMorro: "Samuel",
-            yuri: "Yuriliana",
-            Laurrirrichan: "Laura"
-        }
-    }
-}
-
-const propiedades = Object.getOwnPropertyNames(persona);
-console.log(propiedades);
-
-Ejercicio 19 Muestra en un array los valores que tengas dentro de las propiedades que están dentro de tu objeto, usando Object.value()
-let persona = {
-    nombre: "Ricardo",
-    edad: 33,
-    vivo: true,
-    amigos: ["El capi",
-        "Luis",
-        "Nacho"
-    ],
-    otrosAmigos: {
-        unila: ["Ruben",
-            "Jessica"
-        ],
-        secu1: "Urrutia",
-        uni: {
-            elMorro: "Samuel",
-            yuri: "Yuriliana",
-            Laurrirrichan: "Laura"
-        }
-    }
-}
-
-const valores = Object.values(persona);
-console.log(valores);
 --------------------------------------------------------------------------------------------
 
-Ejercicio 20 Imprimir los objetos dentro de un array usando For
-const autos = [
-    { modelo: "Mustang", anio: 1962 },
-    { modelo: "360z", anio: 2010 },
-    { modelo: "Civic", anio: 2007 }
-];
 
-for (let i = 0; i < autos.length; i++) {
-    console.log(autos[i]);
-}
 
-EJERCICIO 21 Imprimir los objetos dentro del array con for pero imprimiendo nombre y modelo
-const autos = [
-    { modelo: "Mustang", anio: 1962 },
-    { modelo: "360z", anio: 2010 },
-    { modelo: "Civic", anio: 2007 }
-];
 
-for (let i = 0; i < autos.length; i++) {
-    console.log(autos[i].modelo + ' del año ' + autos[i].anio);
-}
-
-EJERCICIO 22 Hacer el ejercicio 30 pero imprimiendo con interpolacion
-const autos = [
-    { modelo: "Mustang", anio: 1962 },
-    { modelo: "360z", anio: 2010 },
-    { modelo: "Civic", anio: 2007 }
-];
-
-for (let i = 0; i < autos.length; i++) {
-    console.log(`${autos[i].modelo} del año ${autos[i].anio}`);
-}
-
-Ejercicio 23 Agregaga un objeto a un array const e imprimelo
-const autos = [
-    { modelo: "Mustang", anio: 1962 },
-    { modelo: "360z", anio: 2010 },
-    { modelo: "Civic", anio: 2007 }
-];
-
-autos.push({ modelo: "Mercedez Benz", anio: 2016 });
-for (let i = 0; i < autos.length; i++) {
-    console.log(autos[i].modelo + 'del año' + autos[i].anio);
-}
-
-EJERCICIO 24 Modifica objeto dentro de un array const desde afuera(es la unica manera en la que se puede).
-const autos = [
-    { modelo: "Mustang", anio: 1962 },
-    { modelo: "360z", anio: 2010 },
-    { modelo: "Civic", anio: 2007 }
-];
-
-autos[1].modelo = "Mercedez Benz";
-console.log(autos[1].modelo);
-
-Ejercicio 29: extrae información de objetos dentro de un arreglo usando la función map, para crear un nuevo arreglo(que es lo que hace la función .map)
-let carrito = [
-    { id: 1, producto: 'libro' },
-    { id: 2, producto: 'Camisa' },
-    { id: 3, producto: 'Guitarra' },
-    { id: 4, producto: 'Tablet' }
-];
-
-const nombreProducto = carrito.map((carrito) => {
-    return carrito.producto;
-})
-console.log(nombreProducto);
 */
