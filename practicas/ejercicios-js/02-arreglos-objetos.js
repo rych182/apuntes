@@ -8,14 +8,26 @@ La deestruccturacion de objetos y arreglos se usan mucho en frameworks y libreri
 Nota: Es muy raro tener 3 niveles de arrays
 */
 
-let datos = [19,
-    'Gato',
-    true,
-    null,
-    function cadena() {},
-    ["Canada", "Suiza", "Germany"]
-];
-console.log(datos[5][1]);
+
+let ric = {
+    nombre: "Ricardo",
+    edad: 33,
+    redes: ["Twitter", "Instagram", "GitHub"],
+    amigos: {
+        secu: "Urrutia",
+        prepa: "Nacho",
+        uni: "Lau",
+        vida: "Diego"
+    },
+    accion: function saludar() {
+        console.log("Hello World");
+    },
+    otraAccion: function() {
+        console.log(`MI nombre es ${this.nombre} y tengo ${this.edad} años`);
+    },
+    otraAccion2:
+}
+ric.otraAccion();
 
 
 
@@ -69,52 +81,7 @@ const persona = {
 }
 console.log(persona.edad);
 
-----------------------------ARRAYS--------------------------------------------------
-
-Ejercicio 1 : Array que tenga strings
-let animales = ['Perro', 'Gato', 'Pez'];
-console.log(animales[2]);
-
-
-Ejercicio 2
-Array que tenga strings y números
-let datos = [19, 'Gato', 22];
-console.log(datos[0]);
-
-Ejercicio 3: Array que tenga strings, números y boleanos
-let datos = [19, 'Gato', true];
-console.log(datos[2]);
-
-Ejercicio 4: Array que tenga strings, números, boleanos y nulos
-let datos = [19, 'Gato', true, null];
-console.log(datos[3]);
-
-Ejercicio 5: Array que tenga strings, números, boleanos, nulos y funciones
-let datos = [19, 'Gato', true, null, function name() {}];
-console.log(datos[4]);
-
-Ejercicio 5.1: Imprimir la función que esté en el array
-let datos = [19, 'Gato', true, null, function name() { return "hola" }];
-console.log(datos[4].name);
-
-Ejercicio 6: Array que tenga strings, números, boleanos, nulos, funciones y un array con datos anteriores 
-let datos = [19,
-    'Gato',
-    true,
-    null,
-    function name() {},
-    ["Canada", "Suiza", "Germany"]
-];
-console.log(datos[5][1]);
-
-
-Ejercicio 7: Usa el metodo "length" que te dice cuantos cupos hay en el array
-let mascotas = ["perro", "gato", "perico"];
-console.log(mascotas.length);
-
-
-
-Ejercicio 13 Crear un objeto con diferentes tipos de datos y mostrar su contenido
+Ejercicio 4 Crear un objeto con diferentes tipos de datos y mostrar su contenido
 let persona = {
     nombre: "Ricardo",
     edad: 33,
@@ -137,7 +104,7 @@ let persona = {
 }
 console.log(persona.otrosAmigos.unila[1]);
 
-Ejercicio 13.01:  Crear un objeto e inicializar un metodo interior que tenga
+Ejercicio 4.01:  Crear un objeto e inicializar un metodo interior que tenga
 let ric = {
     nombre: "Ricardo",
     edad: 33,
@@ -154,7 +121,54 @@ let ric = {
 }
 ric.accion();
 
-Ejercicio 13.02: crear un objeto e imprime una datos que estén dentro usando THIS
+Ejercicio 4.02 ejecutar una variable pasandole un valor por defecto 
+let ric = {
+    nombre: "Ricardo",
+    edad: 33,
+    redes: ["Twitter", "Instagram", "GitHub"],
+    amigos: {
+        secu: "Urrutia",
+        prepa: "Nacho",
+        uni: "Lau",
+        vida: "Diego"
+    },
+    accion: function saludar() {
+        console.log("Hello World");
+    },
+    accion2: function nombre(name) {
+        console.log("Mi nombre es" + name);
+    },
+    accion3: function suma(num1, num2) {
+        console.log(num1 + num2)
+    }
+}
+ric.accion3(2, 3);
+
+Ejercicio 4.03 ejecutar una variable pasandole un valor por defecto PARA SUMAR
+let ric = {
+    nombre: "Ricardo",
+    edad: 33,
+    redes: ["Twitter", "Instagram", "GitHub"],
+    amigos: {
+        secu: "Urrutia",
+        prepa: "Nacho",
+        uni: "Lau",
+        vida: "Diego"
+    },
+    accion: function saludar() {
+        console.log("Hello World");
+    },
+    accion2: function nombre(name) {
+        console.log("Mi nombre es" + name);
+    },
+    accion3: function suma(num1, num2) {
+        console.log(num1 + num2)
+    }
+}
+ric.accion3(2, 3);
+
+
+Ejercicio 4.04: crear un objeto e imprime una datos que estén dentro usando THIS
 
 let ric = {
     nombre: "Ricardo",
@@ -267,6 +281,53 @@ let persona = {
 
 persona.casado = false;
 console.log(persona);
+
+
+----------------------------ARRAYS--------------------------------------------------
+
+Ejercicio 1 : Array que tenga strings
+let animales = ['Perro', 'Gato', 'Pez'];
+console.log(animales[2]);
+
+
+Ejercicio 2
+Array que tenga strings y números
+let datos = [19, 'Gato', 22];
+console.log(datos[0]);
+
+Ejercicio 3: Array que tenga strings, números y boleanos
+let datos = [19, 'Gato', true];
+console.log(datos[2]);
+
+Ejercicio 4: Array que tenga strings, números, boleanos y nulos
+let datos = [19, 'Gato', true, null];
+console.log(datos[3]);
+
+Ejercicio 5: Array que tenga strings, números, boleanos, nulos y funciones
+let datos = [19, 'Gato', true, null, function name() {}];
+console.log(datos[4]);
+
+Ejercicio 5.1: Imprimir la función que esté en el array
+let datos = [19, 'Gato', true, null, function name() { return "hola" }];
+console.log(datos[4].name);
+
+Ejercicio 6: Array que tenga strings, números, boleanos, nulos, funciones y un array con datos anteriores 
+let datos = [19,
+    'Gato',
+    true,
+    null,
+    function name() {},
+    ["Canada", "Suiza", "Germany"]
+];
+console.log(datos[5][1]);
+
+
+Ejercicio 7: Usa el metodo "length" que te dice cuantos cupos hay en el array
+let mascotas = ["perro", "gato", "perico"];
+console.log(mascotas.length);
+
+
+
 
 --------------------------------------------------------------------------------------------
 
