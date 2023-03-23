@@ -1,4 +1,11 @@
 /*
+
+Ejercicio 1.3, Hacer el ejercicio 1 pero con una función que cuente cuantos espacios tiene el array y que los imprima
+let countries = ['Mexico', 'USA', 'Canada', 'Japan', 'SOuth Korea'];
+for (let i = 0; i < countries.length; i++) {
+    console.log(countries[i]);
+}
+
 Ejercicio 20 Imprimir los objetos dentro de un array usando For
 const autos = [
     { modelo: "Mustang", anio: 1962 },

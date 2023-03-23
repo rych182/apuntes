@@ -54,16 +54,7 @@ if (apertura >= 8 && apertura <= 21) {
     console.log(`It's close!`);
 }
 
-Ejercicio 10, crear un array que dentro tenga un if corto.
-let compa = false;
-const amigos = [
-    'Urrutia',
-    'fulano',
-    'sutano',
-    'mengano',
-    compa ? 'perengano' : "el capi"
-];
-console.log(amigos);
+
 
 Ejercicio 11, imprimir la calificación usando el operador ternario(if-else corto)
 let calificacion = 65;
