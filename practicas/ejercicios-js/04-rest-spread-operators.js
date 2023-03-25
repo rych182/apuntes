@@ -1,4 +1,28 @@
+const person = { name: 'John', age: 30 };
+const clone = {...person };
+console.log(clone); // Output: { name: 'John', age: 30 }
 /*
+CHATGPT
+Rest y Spread son dos características de JavaScript que se introdujeron en la versión ES6 (también conocida como ES2015) y que permiten trabajar con arrays y objetos de una manera más fácil y elegante.
+
+Rest:
+Permite empaquetar múltiples elementos en un array. 
+En una función, el Rest permite aceptar cualquier número de argumentos y empaquetarlos en un array.
+Se utiliza el operador de tres puntos (...) para indicar que queremos empaquetar los elementos restantes en un array.
+
+Spread:
+Permite desempaquetar elementos de un array o un objeto.
+Se utiliza el operador de tres puntos (...) para indicar que queremos desempaquetar los elementos. 
+Ejemplos:
+
+const numbers = [1, 2, 3, 4, 5];
+console.log(...numbers); // Output: 1 2 3 4 5
+
+const person = { name: 'John', age: 30 };
+const clone = { ...person };
+console.log(clone); // Output: { name: 'John', age: 30 }
+
+
 Parametros REST:
 -Es una sintaxis, cuando lo pongo como argumento dentro de una función y quiere decir
  "Une todos los argumentos en una sola variable y transformalo como un areglo"
