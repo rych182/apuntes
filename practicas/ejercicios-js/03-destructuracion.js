@@ -1,8 +1,9 @@
 //console.log(profesion, edad, estadoCivil);
 
 
-
-
+const persona = ['Ricard', , 33, 'Mexico']; //dejo un espacio vacio entre el nombre y la edad 
+const [nombre, estadoCivil, edad, pais, profesion = "Programador"] = persona;
+console.log(nombre, estadoCivil, edad);
 
 
 
