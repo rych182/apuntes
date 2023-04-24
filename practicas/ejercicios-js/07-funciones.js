@@ -323,6 +323,199 @@ function() {
 ! function() {
     console.log("Soy una función anónima autoejecutable ESTILO FACEBOOK");
 }
+-------------------------------------------------------------------------------------
+        Arrays con funciones
+Ejercicio 5: Array que tenga strings, números, boleanos, nulos y funciones
+let datos = [19, 'Gato', true, null, function name() {}];
+console.log(datos[4]);
+
+Ejercicio 5.1: Imprimir la función que esté en el array
+let datos = [19, 'Gato', true, null, function name() { return "hola" }];
+console.log(datos[4].name);
+
+Ejercicio 6: Array que tenga strings, números, boleanos, nulos, funciones y un array con datos anteriores 
+let datos = [19,
+    'Gato',
+    true,
+    null,
+    function name() {},
+    ["Canada", "Suiza", "Germany"]
+];
+console.log(datos[5][1]);
+
+
+-------------------------------------------------------------------------------------
+        Objetos con funciones
+
+***Ejercicio 3: Agregar datos a un objeto desde una variable
+let nombre = "ric";
+let edad = 33;
+
+const persona = {
+    nombre: nombre,
+    edad: edad,
+    frase: function() {
+        console.log("Eres un crack!");
+    }
+}
+console.log(persona.edad);
+
+
+Ejercicio 4 Crear un objeto con diferentes tipos de datos y mostrar su contenido
+let persona = {
+    nombre: "Ricardo",
+    edad: 33,
+    vivo: true,
+    amigos: ["El capi",
+        "Luis",
+        "Nacho"
+    ],
+    otrosAmigos: {
+        unila: ["Ruben",
+            "Jessica"
+        ],
+        secu1: "Urrutia",
+        uni: {
+            elMorro: "Samuel",
+            yuri: "Yuriliana",
+            Laurrirrichan: "Laura"
+        }
+    }
+}
+console.log(persona.otrosAmigos.unila[1]);
+
+
+Ejercicio 5:  Crear un objeto e inicializar un metodo interior que tenga
+let ric = {
+    nombre: "Ricardo",
+    edad: 33,
+    redes: ["Twitter", "Instagram", "GitHub"],
+    amigos: {
+        secu: "Urrutia",
+        prepa: "Nacho",
+        uni: "Lau",
+        vida: "Diego"
+    },
+    accion: function saludar() {
+        console.log("Hello World");
+    }
+}
+ric.accion();
+
+Ejercicio 4.02 ejecutar una variable pasandole un valor por defecto 
+let ric = {
+    nombre: "Ricardo",
+    edad: 33,
+    redes: ["Twitter", "Instagram", "GitHub"],
+    amigos: {
+        secu: "Urrutia",
+        prepa: "Nacho",
+        uni: "Lau",
+        vida: "Diego"
+    },
+    accion: function saludar() {
+        console.log("Hello World");
+    },
+    accion2: function nombre(name) {
+        console.log("Mi nombre es" + name);
+    },
+    accion3: function suma(num1, num2) {
+        console.log(num1 + num2)
+    }
+}
+ric.accion3(2, 3);
+
+Ejercicio 4.03 ejecutar una variable pasandole un valor por defecto PARA SUMAR
+let ric = {
+    nombre: "Ricardo",
+    edad: 33,
+    redes: ["Twitter", "Instagram", "GitHub"],
+    amigos: {
+        secu: "Urrutia",
+        prepa: "Nacho",
+        uni: "Lau",
+        vida: "Diego"
+    },
+    accion: function saludar() {
+        console.log("Hello World");
+    },
+    accion2: function nombre(name) {
+        console.log("Mi nombre es" + name);
+    },
+    accion3: function suma(num1, num2) {
+        console.log(num1 + num2)
+    }
+}
+ric.accion3(2, 3);
+
+
+Ejercicio 4.04: crear un objeto e imprime una datos que estén dentro usando THIS
+
+let ric = {
+    nombre: "Ricardo",
+    edad: 33,
+    redes: ["Twitter", "Instagram", "GitHub"],
+    amigos: {
+        secu: "Urrutia",
+        prepa: "Nacho",
+        uni: "Lau",
+        vida: "Diego"
+    },
+    accion: function saludar() {
+        console.log("Hello World");
+    },
+    otraAccion: function() {
+        console.log(`MI nombre es ${this.nombre} y tengo ${this.edad} años`);
+    }
+}
+ric.otraAccion();
+
+
+EJERCICIO 13.03: Obtener los nombres de las propiedades del objeto
+
+let ric = {
+    nombre: "Ricardo",
+    edad: 33,
+    redes: ["Twitter", "Instagram", "GitHub"],
+    amigos: {
+        secu: "Urrutia",
+        prepa: "Nacho",
+        uni: "Lau",
+        vida: "Diego"
+    },
+    accion: function saludar() {
+        console.log("Hello World");
+    },
+    otraAccion: function() {
+        console.log(`MI nombre es ${this.nombre} y tengo ${this.edad} años`);
+    }
+}
+console.log(Object.keys(ric));
+
+
+EJERCICIO 13.04: Obtener los valores de las propiedades del objeto
+let ric = {
+    nombre: "Ricardo",
+    edad: 33,
+    redes: ["Twitter", "Instagram", "GitHub"],
+    amigos: {
+        secu: "Urrutia",
+        prepa: "Nacho",
+        uni: "Lau",
+        vida: "Diego"
+    },
+    accion: function saludar() {
+        console.log("Hello World");
+    },
+    otraAccion: function() {
+        console.log(`MI nombre es ${this.nombre} y tengo ${this.edad} años`);
+    }
+}
+console.log(Object.values(ric));
+
+
+
+
 
 
 */

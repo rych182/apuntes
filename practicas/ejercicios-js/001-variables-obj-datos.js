@@ -13,9 +13,23 @@ BigInt.
 Symbol.
 Null.
 ---------
-Object: NO ES un tipo de dato no primitivo
+Object: NO ES un tipo de dato no primitivo,  son una colección de propiedades
+---------
+"use strict"
+Es una opción disponible en JavaScript que restringe ciertas acciones,
+hace que el código sea más seguro y ayuda a evitar errores comunes. Para activar el modo estricto,
+simplemente agregue el siguiente código al principio de su archivo JavaScript o de una función específica:
+'use strict';
 
+Restricciones que se aplican en el modo estricto:
+-La creación de variables sin declarar con "var", "let" o "const" arrojará un error.
+-La asignación a propiedades de solo lectura arrojará un error.
+-El uso de palabras clave reservadas como "eval" y "arguments" como nombres de variables arrojará un error.
+-Las funciones no pueden tener parámetros o nombres de parámetros duplicados.
+-No se puede eliminar una variable, función o argumento de función.
 
+El modo estricto es una buena práctica recomendada para escribir un código más seguro y
+prevenir errores comunes.
 
                         TIPOS DE DATOS
 El valor null en JavaScript se utiliza para representar la ausencia intencional de cualquier objeto o valor. 
