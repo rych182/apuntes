@@ -62,6 +62,7 @@ console.log(arreglo3);
 
 
 
+
 /*
 Ejercicio 0 : SPREAD, copiar un array y ponerlo dentro de otro
 
