@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Selectores descendentes. */
+        
+        section article p {
+            color: blue;
+        }
+        
+        a[target="_blank"] {
+            /*Este selector selecciona las etiqueta a con el "atributo" _blank */
+            color: red;
+            text-decoration: underline;
+        }
+        
+        [alt~="gato"] {
+            /*Este selector selecciona las etiqueta con el "atributo" alt que tenga la palabra "gato" */
+            border: 5px solid green;
+        }
+        
+        [class|="top"] {
+            /*Este selector selecciona las etiqueta que contengan la palabra "caja" aunque este separada por un guion */
+            background: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <article>
+            <p>Hola mundo</p>
+        </article>
+    </section>
+
+    <a href="#" target="_blank">Soy un link con target blank</a>
+    <br>
+    <a href="#">Soy un link SIN target blank</a>
+    <br>
+    <img src="img/gato-enojado.jpg" width="400" height="200" alt="gato enojado">
+    <br>
+    <img src="img/gato-sorprendido.jpg" width="400" height="200" alt="gato sorprendido">
+    <br>
+    <img src="img/gato-siames.jpg" width="400" height="200" alt="siames">
+
+</body>
+
+</html>
