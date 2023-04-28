@@ -24,7 +24,7 @@ mientras que los constructores personalizados se crean por el usuario utilizando
 funciones constructoras.
 
 -------------------------METODOS PARA ARRAYS------------------------------------------------------- 
-Los métodos que se escriben con un punto antes del nombre del método se llaman métodos de objeto.
+Los métodos que se escriben con un punto antes del nombre del método se llaman "métodos de objeto".
 Estos métodos son aquellos que están asociados con un objeto en particular y actúan sobre ese objeto.
 Por ejemplo, el método .length se utiliza para encontrar la longitud de una cadena o matriz y
 solo se puede usar en objetos de tipo cadena o matriz.
@@ -67,33 +67,6 @@ Array.of(): Crea una nueva matriz con un número variable de argumentos.
 Array.prototype.sort(): Ordena los elementos de la matriz (modificando la matriz original) y devuelve la matriz ordenada.
 Array.prototype.reverse(): Invierte el orden de los elementos de la matriz (modificando la matriz original) y devuelve la matriz invertida.
 
-
-------------------------------METODOS MÁS USADOS----------------------------------------------------
-
-Los métodos de objeto más usados en JavaScript pueden variar según el caso de uso y el tipo de objeto, pero aquí hay algunos ejemplos comunes:
-
-Object.keys(obj): devuelve un array de las propiedades de un objeto obj.
-Object.values(obj): devuelve un array de los valores de las propiedades de un objeto obj.
-Object.entries(obj): devuelve un array de arrays, donde cada subarray contiene una clave y su valor correspondiente para cada propiedad del objeto obj.
-obj.hasOwnProperty(prop): devuelve un booleano que indica si un objeto obj tiene una propiedad propia llamada prop.
-JSON.stringify(obj): convierte un objeto obj en una cadena JSON.
-JSON.parse(str): convierte una cadena JSON str en un objeto JavaScript.
-
-Los métodos de JavaScript que "utilizan paréntesis" se conocen como METODOS DE FUNCIÓN y se aplican a los valores que son del tipo de datos función. Algunos ejemplos comunes de métodos de función en JavaScript son:
-
-Array.prototype.forEach(callback): llama a una función callback una vez por cada elemento en un array.
-Array.prototype.map(callback): crea un nuevo array con los resultados de llamar a una función callback en cada elemento en un array.
-Array.prototype.filter(callback): crea un nuevo array con todos los elementos de un array que pasan una prueba implementada por la función callback.
-Array.prototype.reduce(callback): aplica una función callback acumulativamente a los elementos de un array para reducirlo a un solo valor.
-String.prototype.split(separator): divide una cadena en un array de subcadenas en cada ocurrencia del separador especificado.
-Math.random(): devuelve un número aleatorio entre 0 y 1.
-
------------------------------------------METODOS M
-
-
-
-
-
 ----------------------------ARRAYS--------------------------------------------------
 
 Ejercicio 1 : Array que tenga strings
@@ -114,7 +87,8 @@ let datos = [19, 'Gato', true, null];
 console.log(datos[3]);
 
 
-----------------------------FUNCIONES ARRAYS--------------------------------------------------
+
+----------------------------ARRAYS con funciones predefinidas--------------------------------------------------
 
 Ejercicio 1: Usa el metodo "length" que te dice cuantos cupos hay en el array
 let mascotas = ["perro", "gato", "perico"];

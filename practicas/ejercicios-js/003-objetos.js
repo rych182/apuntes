@@ -36,8 +36,7 @@ unPinshiObjeto.correo = "correo@correo.com";
 console.log(unPinshiObjeto);
 
 
-Ejercicio 3 Crear un objeto y mostrar su contenido Y BORRAR una propiedad del objeto 
-Crear un objeto y mostrar su contenido
+Ejercicio 3 Crear un objeto, mostrar su contenido Y BORRAR una propiedad del objeto 
 let persona = {
     nombre: "Ricardo",
     edad: 33,
@@ -82,8 +81,9 @@ let persona = {
         }
     }
 }
-
 persona.casado = false;
 console.log(persona);
+
+
 
 */
