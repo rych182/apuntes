@@ -16,6 +16,15 @@ let imprimir = ({ nombre, profesion }) => {
 imprimir(usuario);
 
 
+EJERCICIO 33
+Modifica objeto dentro de un array const desde afuera(es la unica manera en la que se puede).
+const autos = [
+    { modelo: "Mustang", anio: 1962 },
+    { modelo: "360z", anio: 2010 },
+    { modelo: "Civic", anio: 2007 }
+];
 
+autos[1].modelo = "Mercedez Benz";
+console.log(autos[1].modelo);
 
  */
