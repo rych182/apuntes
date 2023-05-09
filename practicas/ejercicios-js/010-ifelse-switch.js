@@ -1,3 +1,11 @@
+let efectivo = 500;
+let carritoCompras = 300;
+if (efectivo > carritoCompras)
+    console.log("Puedes pagar");
+else
+    console.log("Te falt dinero para la compra");
+
+
 /*
 
 Ejercicio 1, hacer los días de la semana con if-else-else if
@@ -73,7 +81,7 @@ if (edad != 18) {
 }
 
 
-Ejercicio 6 (IMPORTANTR)
+Ejercicio 6 (IMPORTANTE) IF-ELSE COMO PHYTON
 Comparar las cantidades y decidir si puedes pagar o no 
 let efectivo = 500;
 let carritoCompras = 300;
@@ -83,7 +91,7 @@ if (efectivo > carritoCompras) {
     console.log("Te falt dinero para la compra");
 }
 
-CODIGO RESUMIDO
+CODIGO RESUMIDO IF-ELSE COMO PHYTON
 let efectivo = 500;
 let carritoCompras = 300;
 if (efectivo > carritoCompras)
@@ -105,4 +113,15 @@ if (true) {
 }
 console.log('GLOBALES: ', a, b, c);
 
+
+Ejercicio 8, crear un array que dentro tenga un if corto.
+let compa = false;
+const amigos = [
+    'Urrutia',
+    'fulano',
+    'sutano',
+    'mengano',
+    compa ? 'perengano' : "el capi"
+];
+console.log(amigos);
 */
