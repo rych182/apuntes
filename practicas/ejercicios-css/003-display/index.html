@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dashed {
+            width: 200px;
+            height: 200px;
+            border: dashed 2px red;
+            margin-top: 20px;
+            background-color: aquamarine;
+            display: block;
+        }
+        
+        .dotted {
+            width: 200px;
+            height: 200px;
+            border: dotted 2px blue;
+            margin-top: 20px;
+            background-color: aquamarine;
+        }
+        
+        .double {
+            width: 200px;
+            height: 200px;
+            border: double 2px green;
+            margin-top: 20px;
+            background-color: aquamarine;
+        }
+        
+        .solid {
+            width: 200px;
+            height: 200px;
+            border: solid 2px brown;
+            margin-top: 20px;
+            background-color: aquamarine;
+        }
+        
+        .radius {
+            width: 200px;
+            height: 200px;
+            border: solid 2px grey;
+            margin-top: 20px;
+            border-radius: 20px;
+            /*el padding hace crecer el contenedor*/
+            padding: 10px 10px;
+            background-color: aquamarine;
+        }
+        
+        section {
+            background-color: coral;
+            display: flex;
+            flex-wrap: wrap
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Display: block/inline/inline-block/flex/none/grid y bordes</h2>
+
+    <section>
+        <div class="dashed">Borde Dashed</div>
+        <div class="dotted">Borde Dotted</div>
+        <div class="double">Borde double</div>
+        <div class="solid">Borde Solid</div>
+        <div class="radius">Border radius</div>
+    </section>
+</body>
+
+</html>
