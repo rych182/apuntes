@@ -65,10 +65,7 @@ const Gato = new Animal("Perlita", "Hembra");
 console.log(Perro);
 console.log(Gato);
 
-//Miercoles 11am-1am,
-//Martes, por confirmar Lunes
-//Viernes, 4-6pm
-//expo ingenieria
+//3min
 
 
 
