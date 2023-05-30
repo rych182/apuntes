@@ -2,9 +2,9 @@
 JS es un lenguaje orientado a objeto basado en prototipos, no en clases
 Javascript es un lenguaje multiparadigma(estilos), coom la programación funcional, orientada a objetos.
 En javascript es un poco distinta a la programación orientada a objetos.
--Apartir del 2015 (estandar 2016) ya tenemos clases, estas se les conoce como "azucar sintactica" osea
+-Apartir del 2015 (estandar 2016) 'ya tenemos CLASES', estas se les conoce como "azucar sintactica" osea
 una manera más fácil que nos provee el lenguaje "para poder hacer la programación ORIENTADA A PROTOTIPOS",
-el navegador convertira las clasesa funciones prototipicas
+el navegador convertira las clases a funciones prototipicas
 -La POO sus 4 conceptos importantes son:
     *Clases: un modelo a seguir, como un machote, como un calca
     *Objetos: es una instancia de la clase, osease una copia del modelo a seguir
@@ -13,13 +13,16 @@ el navegador convertira las clasesa funciones prototipicas
         como "getElementById" ó console.log ó console.warm etc
 
 Cuando en JS tu escribes una clase, el compilador la transforma a una función prototipal
+
 Prototipos en JS: es un mecanismo al cual un objeto puede heredar atributos y metodos de un objeto padre.
 En JS la herencia se da por la cadena de prototipos 
 
 -Cuando tu creas un objeto, tienes propiedades y metodos, pero el prototipo más primitivo es el Object,
-y tiene las definiciones de sus getters y setters 
+y tiene las definiciones de sus getters y setters, es este: __proto__: Object .
 
 //IMPORTANTISIMO ARROW FUNCTIONS:Las arrow functions detectan el this del objeto en el que se encuentran
+
+NOTA IMPORTANTE EJERCICIOS: imprimir los 4 console.log, para ver la diferencia en los objetos creados
 */
 
 
@@ -38,6 +41,9 @@ const animal2 = {
 
     }
 }
+
+console.log(animal);
+console.log(animal2);
 
 
 //Creando una función constructora
@@ -65,7 +71,7 @@ const Gato = new Animal("Perlita", "Hembra");
 console.log(Perro);
 console.log(Gato);
 
-//3min
+//28.57min
 
 
 

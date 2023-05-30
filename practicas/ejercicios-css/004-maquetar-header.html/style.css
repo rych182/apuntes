@@ -1,0 +1,53 @@
+/*              GENERALS            */
+*{
+    margin: 0;
+}
+
+@font-face{
+    font-family: 'Pangolin', cursive;
+    src: url(Pangolin-Regular.ttf);
+}
+
+header{
+    background-color: darkblue;
+}
+nav{
+    border: solid 1px red;
+    display: flex;
+}
+
+
+.logo{
+    border: 1px solid blue;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+}
+img{
+    border: solid 1px orange;
+    
+}
+
+.submenu{
+    border: 1px solid green;
+    width: 75%;
+}
+
+ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+li{
+    list-style-type: none;
+    border: 1px solid brown;
+    margin-top: 35px;
+    
+}
+
+a{
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Pangolin', cursive;
+    color: gray;
+}
