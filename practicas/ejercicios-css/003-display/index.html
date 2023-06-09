@@ -14,6 +14,7 @@
             margin-top: 20px;
             background-color: aquamarine;
             display: block;
+            margin-left: 20px;
         }
         
         .dotted {
@@ -22,6 +23,7 @@
             border: dotted 2px blue;
             margin-top: 20px;
             background-color: aquamarine;
+            margin-left: 20px;
         }
         
         .double {
@@ -30,6 +32,7 @@
             border: double 2px green;
             margin-top: 20px;
             background-color: aquamarine;
+            margin-left: 20px;
         }
         
         .solid {
@@ -38,6 +41,7 @@
             border: solid 2px brown;
             margin-top: 20px;
             background-color: aquamarine;
+            margin-left: 20px;
         }
         
         .radius {
@@ -49,26 +53,34 @@
             /*el padding hace crecer el contenedor*/
             padding: 10px 10px;
             background-color: aquamarine;
+            margin-left: 20px;
         }
         
-        section {
+        section.ejemploUno {
             background-color: coral;
             display: flex;
             flex-wrap: wrap
+        }
+        
+        .centrado {
+            text-align: center;
         }
     </style>
 </head>
 
 <body>
-    <h2>Display: block/inline/inline-block/flex/none/grid y bordes</h2>
+    <h1>Display: block/inline/inline-block/flex/none/grid y bordes</h1>
 
-    <section>
+    <h2 class="centrado">display: flex;</h2>
+    <section class="ejemploUno">
         <div class="dashed">Borde Dashed</div>
         <div class="dotted">Borde Dotted</div>
         <div class="double">Borde double</div>
         <div class="solid">Borde Solid</div>
         <div class="radius">Border radius</div>
     </section>
+
+    <h2 class="centrado">display: block</h2>
 </body>
 
 </html>

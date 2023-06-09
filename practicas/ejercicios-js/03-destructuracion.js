@@ -127,7 +127,7 @@ Deestructura un arreglo
 const persona = ['Ricard', 33, 'Mexico'];
 const [nombre, edad, pais] = persona;
 console.log(nombre);
-
+//christian lacaud
 Ejercicio 2.1: Otra manera de deestructurar
 let mascotas = ['Pez', 'Gato', 'Perro', 'Ave', 'Tortuga'];
 let [valor1, , , , valor5] = mascotas;
