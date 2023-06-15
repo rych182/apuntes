@@ -13,7 +13,6 @@
             border: dashed 2px red;
             margin-top: 20px;
             background-color: aquamarine;
-            display: block;
             margin-left: 20px;
         }
         
@@ -62,6 +61,21 @@
             flex-wrap: wrap
         }
         
+        section.ejemploDos {
+            background-color: coral;
+            display: block;
+        }
+        
+        section.ejemploTres {
+            background-color: coral;
+            display: inline;
+        }
+        
+        section.ejemploCuatro {
+            background-color: coral;
+            display: inline-block;
+        }
+        
         .centrado {
             text-align: center;
         }
@@ -81,6 +95,43 @@
     </section>
 
     <h2 class="centrado">display: block</h2>
+    <section class="ejemploDos">
+        <div class="dashed">Borde Dashed</div>
+        <div class="dotted">Borde Dotted</div>
+        <div class="double">Borde double</div>
+        <div class="solid">Borde Solid</div>
+        <div class="radius">Border radius</div>
+    </section>
+
+    <h2 class="centrado">display: inline</h2>
+    <section class="ejemploTres" style="margin: 10px;">
+        <div class="dashed">Borde Dashed</div>
+        <div class="dotted">Borde Dotted</div>
+        <div class="double">Borde double</div>
+        <div class="solid">Borde Solid</div>
+        <div class="radius">Border radius</div>
+    </section>
+
+    <h2 class="centrado">display: inline-block</h2>
+    <p><b>Inline-block</b>: este se comporta como un elemento en línea (inline) pero también puede tener dimensiones (ancho y alto) y aceptar márgenes y rellenos (margins and paddings), al igual que un elemento de bloque (block). </p>
+    <p>Se utiliza comúnmente para crear diseños de página en los que se desea que los elementos fluyan uno al lado del otro</p>
+    <p>Ejemplos de su uso:</p>
+    <ul>
+        <li><b>Creación de galerías de imágenes:</b> Al utilizar "display: inline-block" en los elementos de imagen, se pueden mostrar varias imágenes en una fila, con la capacidad de ajustar el tamaño y los márgenes de cada imagen.</li>
+        <li><b>Creación de menús de navegación horizontales:</b> Al aplicar "display: inline-block" a los elementos del menú, se puede lograr que se muestren uno al lado del otro en una sola línea.</li>
+        <li><b></b> Creación de elementos de formulario personalizados: Al aplicar "display: inline-block" a los elementos de formulario, como cajas de verificación (checkboxes) o botones de opción (radio buttons), se pueden alinear en una sola línea.</li>
+    </ul>
+
+    <section class="ejemploCuatro">
+        <div class="dashed">Borde Dashed</div>
+        <div class="dotted">Borde Dotted</div>
+        <div class="double">Borde double</div>
+        <div class="solid">Borde Solid</div>
+        <div class="radius">Border radius</div>
+    </section>
+
+
+
 </body>
 
 </html>

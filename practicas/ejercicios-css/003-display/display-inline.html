@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section.padreUno {
+            background-color: blue;
+            margin-top: 20px;
+            display: inline;
+        }
+        
+        section.padreDos {
+            background-color: darkkhaki;
+            margin-top: 20px;
+            display: inline;
+        }
+        
+        div.cuadrado {
+            width: 100px;
+            height: 100px;
+            border: solid 2px red;
+            margin: 20px;
+            background-color: blueviolet;
+            display: inline;
+        }
+        
+        main {
+            background-color: cadetblue;
+        }
+        
+        h3 {
+            background-color: burlywood;
+            margin-top: 20px;
+            display: inline;
+        }
+        
+        div {
+            background-color: darkcyan;
+            display: inline;
+        }
+        
+        img {
+            border: solid 2px red;
+            border-radius: 20px;
+            width: 200px;
+            height: 100px;
+        }
+        
+        section.padreTres {
+            background-color: burlywood;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Section con divs dentro</h2>
+    <P>El <b>Display: inline; </b>abarca el contenido que contenga la etiqueta y se pone uno al lado del otro, <b>no importa que tu le hayas puesto un width y height especificas</b> también si el contenedor padre tiene display: inline, <b>los dos contenedores mayores se pondran uno al lado del otro</b></P>
+    <section>
+        <div class="cuadrado">Hola mundo</div>
+        <div class="cuadrado">Hello world</div>
+        <div class="cuadrado">Gerardo</div>
+        <div class="cuadrado">Marioni</div>
+    </section>
+
+    <h2>Main con h3 dentro</h2>
+    <main>
+        <h3>Primer</h3>
+        <h3>Segundo</h3>
+        <h3>Tercero</h3>
+        <h3>Cuarto</h3>
+    </main>
+
+    <h2>2 section con varios divs dentro a ver que pasa con el display:inline;</h2>
+    <ol>
+        <li>Los contenedores pequeños solo toman el tamaño de su contenido</li>
+        <li>Los contenedores padres toman solo el tamaño de lo que contengan los contenedores pequeños</li>
+        <li>Los contenedores padres se ponen uno al lado del otro</li>
+    </ol>
+
+    <section class="padreUno">
+        <div>Gola mundo</div>
+        <div>Hello world</div>
+        <div>Hola mundo con más texto</div>
+    </section>
+
+    <section class="padreDos">
+        <div>Gola mundo</div>
+        <div>Hello world</div>
+        <div>Hola mundo con más texto</div>
+    </section>
+
+    <h2>Las imagenes tienen un comportamiento por default de "display:inline"</h2>
+    <section class="padreTres">
+        <img src="Img/jquery.png" alt="">
+        <img src="Img/js-logo-moderno.png" alt="">
+        <img src="Img/reactjs.png" alt="">
+    </section>
+</body>
+
+</html>
