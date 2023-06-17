@@ -5,35 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        section {
-            background-color: cornflowerblue;
-            border: solid 1px red;
-            margin-top: 20px;
-        }
-        
-        .uno {
-            vertical-align: middle;
-        }
-        
-        div {
-            border: solid 1px green;
-            margin-top: 20px;
-            display: inline-block;
-            font-size: 20px;
-        }
-        
-        h3 {
-            background-color: darkgoldenrod;
-            display: inline-block;
-        }
-    </style>
+    <link rel="stylesheet" href="css/style-inline-block.css">
 </head>
 
 <body>
     <ol>
-        <li>"display:inline-block" se diferencia de display inline porque "tiene ancho, alto, márgenes y rellenos"</li>
-        <li>A diferencia de los elementos en línea, puedes usar <b>vertical-align</b> para alinearlos de manera vertical</li>
+        <li>"display:inline-block" se diferencia de display inline porque "tiene ancho, alto, márgenes y rellenos" y <b>display: inline NO </b></li>
         <li>combina las características de los elementos en línea y los elementos de bloque, lo que permite un mejor control en la maquetación de la página</li>
     </ol>
     <h2>3 h3 dentro de un section</h2>
@@ -54,13 +31,96 @@
 
     <hr>
 
-    <h2>section con 3 divs dentros</h2>
+    <h2>Así reaccionan 2 section con 3 divs dentros cada uno</h2>
 
     <section class="uno">
         <div>Hola mundo</div>
         <div>Hola mundo</div>
         <div>Hola mundo</div>
     </section>
+
+    <section class="dos">
+        <div>Hola mundo</div>
+        <div>Hola mundo</div>
+        <div>Hola mundo</div>
+    </section>
+
+    <hr>
+
+    <h2>2 Sections con 3 divs cada uno</h2>
+    <ul>
+        <li>El section es el elemento padre que tiene un <b>display:inline-block</b> para que así cada section se ponga uno al lado del otro</li>
+        <li>El section debe de tener una medida de ancho la cual haga que quepan todos sus elementos, de lo contrario <b>recorreran hacia abajo al elemento hijo(algún div)</b></li>
+        <li>El tamaño de los hijos<b>(div)</b> no se ve afectado cuando el elemento padre <b>(section)</b> modifica su tamaño</li>
+        <li>Cuando el ancho o el alto no tiene medidas específicas, crecera todo lo que necesiten crecer por default</li>
+        <li></li>
+    </ul>
+
+    <hr>
+
+    <h2>Sections sin medida de ancho</h2>
+
+    <section class="cuatro">
+        <img src="img/250-angel.png" alt="">
+        <img src="Img/250-cisco.png" alt="">
+        <img src="Img/250-sap.jpg" alt="">
+    </section>
+
+    <section class="cuatro">
+        <img src="img/250-angel.png" alt="">
+        <img src="Img/250-cisco.png" alt="">
+        <img src="Img/250-sap.jpg" alt="">
+    </section>
+
+    <hr>
+
+    <h2>Sections "CON" medida de ancho</h2>
+
+    <section class="cinco">
+        <img src="img/250-angel.png" alt="">
+        <img src="Img/250-cisco.png" alt="">
+        <img src="Img/250-sap.jpg" alt="">
+    </section>
+
+    <section class="cinco">
+        <img src="img/250-angel.png" alt="">
+        <img src="Img/250-cisco.png" alt="">
+        <img src="Img/250-sap.jpg" alt="">
+    </section>
+
+    <hr>
+
+    <h2>Modificando los margins de las imagenes</h2>
+
+    <section class="seis">
+        <img src="img/250-angel.png" alt="">
+        <img src="Img/250-cisco.png" alt="">
+        <img src="Img/250-sap.jpg" alt="">
+    </section>
+
+    <section class="seis">
+        <img src="img/250-angel.png" alt="">
+        <img src="Img/250-cisco.png" alt="">
+        <img src="Img/250-sap.jpg" alt="">
+    </section>
+
+    <hr>
+
+    <h2>Poniendo un ancho y alto definido al contenedor padre con displar:inline-block</h2>
+
+    <section class="siete">
+        <img src="img/250-angel.png" alt="">
+        <img src="Img/250-cisco.png" alt="">
+        <img src="Img/250-sap.jpg" alt="">
+    </section>
+
+    <section class="siete">
+        <img src="img/250-angel.png" alt="">
+        <img src="Img/250-cisco.png" alt="">
+        <img src="Img/250-sap.jpg" alt="">
+    </section>
+
+    <hr>
 </body>
 
 </html>

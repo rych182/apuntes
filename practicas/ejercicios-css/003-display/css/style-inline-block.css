@@ -1,0 +1,54 @@
+section {
+    background-color: cornflowerblue;
+    border: solid 1px red;
+    margin-top: 20px;
+}
+
+section.uno {
+    display: inline-block;
+}
+
+div {
+    border: solid 1px green;
+    display: inline-block;
+    font-size: 20px;
+}
+
+section.dos {
+    display: inline-block;
+}
+
+h3 {
+    background-color: darkgoldenrod;
+    display: inline-block;
+}
+
+section.cuatro {
+    display: inline-block;
+}
+
+img {
+    border: solid 1px black;
+    border-radius: 20px;
+}
+
+section.cinco {
+    display: inline-block;
+    width: 48%;
+}
+
+section.seis {
+    display: inline-block;
+    width: 48%;
+}
+
+.seis img {
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+section.siete {
+    display: inline-block;
+    width: 48%;
+    height: 400px;
+}
