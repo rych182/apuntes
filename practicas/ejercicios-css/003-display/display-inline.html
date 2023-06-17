@@ -18,13 +18,14 @@
             display: inline;
         }
         
-        div.cuadrado {
-            width: 100px;
-            height: 100px;
+        .uno {
+            background-color: aqua;
+        }
+        
+        .cuadrado {
             border: solid 2px red;
-            margin: 20px;
             background-color: blueviolet;
-            display: inline;
+            display: inline
         }
         
         main {
@@ -47,10 +48,33 @@
             border-radius: 20px;
             width: 200px;
             height: 100px;
+            margin-top: 80px;
+            display: inline;
         }
         
         section.padreTres {
             background-color: burlywood;
+            width: 50%;
+            height: 150px;
+        }
+        
+        section.padreCuatro {
+            background-color: cadetblue;
+        }
+        
+        p {
+            background-color: brown;
+            display: inline;
+            width: 500px;
+        }
+        
+        .padreCinco {
+            background-color: darkcyan;
+        }
+        
+        span {
+            background-color: red;
+            width: 200px;
         }
     </style>
 </head>
@@ -58,12 +82,22 @@
 <body>
     <h2>Section con divs dentro</h2>
     <P>El <b>Display: inline; </b>abarca el contenido que contenga la etiqueta y se pone uno al lado del otro, <b>no importa que tu le hayas puesto un width y height especificas</b> también si el contenedor padre tiene display: inline, <b>los dos contenedores mayores se pondran uno al lado del otro</b></P>
-    <section>
+    <ul>
+        <li>Las propiedades <b>width y heigt</b> no funcionan cuando usas <b>display:inline;</b> con divs, P , etiquetas H, span </li>
+        <li>Si quieres modificar el ancho de una caja que tiene display: inline, puedes usar la propiedad <b>padding</b></li>
+        <li>Las propiedades <b>width y height. SI tienen efecto en las etiquetas IMG</b></li>
+    </ul>
+    <hr>
+
+    <h2>section con divs dentro, tienen ancho y alto, "PERO NO FUNCIONAN" porque tienen la propiedad display:inline</h2>
+    <section class="uno">
         <div class="cuadrado">Hola mundo</div>
         <div class="cuadrado">Hello world</div>
         <div class="cuadrado">Gerardo</div>
         <div class="cuadrado">Marioni</div>
     </section>
+
+    <hr>
 
     <h2>Main con h3 dentro</h2>
     <main>
@@ -72,6 +106,8 @@
         <h3>Tercero</h3>
         <h3>Cuarto</h3>
     </main>
+
+    <hr>
 
     <h2>2 section con varios divs dentro a ver que pasa con el display:inline;</h2>
     <ol>
@@ -92,11 +128,30 @@
         <div>Hola mundo con más texto</div>
     </section>
 
+    <hr>
     <h2>Las imagenes tienen un comportamiento por default de "display:inline"</h2>
     <section class="padreTres">
         <img src="Img/jquery.png" alt="">
         <img src="Img/js-logo-moderno.png" alt="">
         <img src="Img/reactjs.png" alt="">
+    </section>
+
+    <hr>
+    <h2>Un section con etiquetas P dentro usando display:inline, no respeta el width en las etiquetas P</h2>
+    <section class="padreCuatro">
+        <p>HoLA mundo</p>
+        <p>Hola mamá, soy Juanito</p>
+        <p>No se que más escribir, es media noche</p>
+    </section>
+
+    <hr>
+
+    <h2>Una etiqueta section con etiquetas span dentro</h2>
+    <section class="padreCinco">
+        <span>Hla mundo</span>
+        <span>Mama soy juanito</span>
+        <span>Mas y más texto, no se que escribri</span>
+        <span>más texto, porque ya no se que escrivir pero no quierousar un lorem </span>
     </section>
 </body>
 
