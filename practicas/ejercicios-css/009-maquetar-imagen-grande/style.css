@@ -2,6 +2,8 @@
 
 * {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -73,6 +75,25 @@ li a::after {
 li a:hover::after {
     width: 100%;
     transition: width 0.9s linear;
+}
+
+
+/*          IMAGEN PRINCIPAL        */
+
+.imagen-principal {
+    width: 100%;
+    height: 500px;
+    background-image: url('servidor.webp');
+    background-size: 100% 100%;
+}
+
+.texto-imagen-principal {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-30%, -45%);
+    color: white;
 }
 
 
