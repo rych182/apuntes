@@ -1,0 +1,107 @@
+/*      ESTILOS PRINCIPALES     */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*      HEADER       */
+
+.logo {
+    width: 100%;
+    height: 35vh;
+}
+
+li {
+    margin-top: 10px;
+    text-align: center;
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+}
+
+
+/*          RESPONSIVE DESIGN            */
+
+
+/* Extra small devices (phones, 600px and down) */
+
+@media only screen and (max-width: 600px) {
+    body {
+        background: red;
+    }
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+@media only screen and (min-width: 400px) {
+    body {
+        background: green;
+    }
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+
+@media only screen and (min-width: 768px) {
+    body {
+        background: blue;
+    }
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+@media only screen and (min-width: 992px) {
+    body {
+        background: orange;
+    }
+    header {
+        display: flex;
+        border: 1px solid black;
+    }
+    .logo {
+        height: 25vh;
+    }
+    .desktop-caja-logo {
+        width: 25%;
+    }
+    .desktop-caja-logo img {
+        border-radius: 90px;
+    }
+    .menu {
+        border: 5px solid yellow;
+        width: 75%;
+        display: flex;
+    }
+    ul {
+        border: blue 5px solid;
+        width: 100%;
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    li {
+        border: 1px brown solid;
+    }
+}
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) 
+
+@media only screen and (min-width: 1200px) {
+    body {
+        background: pink;
+    }
+    header {
+        display: flex;
+    }
+}
+*/

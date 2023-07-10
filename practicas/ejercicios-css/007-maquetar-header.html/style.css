@@ -2,6 +2,8 @@
 
 * {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -80,4 +82,13 @@ li a:hover::after {
 
 h1 .animate__animated.animate__bounce:hover {
     --animate-duration: 2s;
+}
+
+
+/*          Responsive Design    */
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
 }
