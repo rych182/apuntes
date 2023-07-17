@@ -1,0 +1,50 @@
+/*          ESTILOS GENERALES           */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.letraRoja {
+    color: red;
+}
+
+section {
+    width: 95%;
+    height: 70vh;
+    border: solid 2px red;
+    display: flex;
+}
+
+div {
+    width: 320px;
+    height: 200px;
+    border: solid 1px black;
+}
+
+.foto-uno {
+    background-image: url('../img/batman.jpg');
+    background-size: 100% 100%;
+}
+
+.foto-dos {
+    background-image: url('../img/bill-gates.png');
+    background-size: auto;
+}
+
+.foto-tres {
+    background-image: url('../img/cristiano.jpg');
+}
+
+.foto-cuatro {
+    background-image: url('../img/one-piece.jpe');
+}
+
+main {
+    width: 95%;
+    height: 50vh;
+    border: solid 2px red;
+    background-image: url('../img/bill-gates.png');
+    background-size: 300px 200px;
+}

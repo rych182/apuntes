@@ -1,0 +1,10 @@
+.icon-styles {
+    font-size: 30px;
+    color: red;
+}
+
+i.icon-styles:hover {
+    font-size: 50px;
+    color: blue;
+    transition: 2s;
+}
