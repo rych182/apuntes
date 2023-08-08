@@ -41,10 +41,34 @@ div {
     background-image: url('../img/one-piece.jpe');
 }
 
+.cajaArticleUno {
+    width: 100%;
+    height: 40vh;
+    border: solid burlywood 3px;
+    background-image: url('../img/one-piece.jpe');
+    background-size: 60%;
+}
+
 main {
     width: 95%;
     height: 50vh;
     border: solid 2px red;
     background-image: url('../img/bill-gates.png');
-    background-size: 300px 200px;
+    background-size: 50% 33%;
+}
+
+.cajaArticleDos {
+    width: 70%;
+    height: 50vh;
+    border: 3px solid black;
+    background-image: url('../img/cristiano.jpg');
+    background-size: 100% 100%;
+}
+
+.cajaArticleTres {
+    width: 70%;
+    height: 50vh;
+    border: 3px solid rgb(253, 12, 12);
+    background-image: url('../img/cristiano.jpg');
+    background-size: 500px 300px;
 }
