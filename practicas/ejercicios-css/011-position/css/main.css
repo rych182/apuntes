@@ -1,0 +1,62 @@
+section {
+    width: 90%;
+    height: 90vh;
+    background-color: cadetblue;
+    border: black solid 2px;
+    position: relative;
+}
+
+.caja-1 {
+    width: 30%;
+    height: 200px;
+    background-image: url('../img/conejo.jpg');
+    background-size: 100% 100%;
+    border: 5px solid grey;
+    border-radius: 10px;
+    position: absolute;
+}
+
+.caja-2 {
+    width: 30%;
+    height: 200px;
+    background-image: url('../img/puerco.jpg');
+    background-size: 100% 100%;
+    border: 5px solid grey;
+    border-radius: 10px;
+    position: absolute;
+    margin-top: 30%;
+    z-index: -1;
+}
+
+.caja-3 {
+    width: 30%;
+    height: 200px;
+    background-image: url('../img/zorro.jpg');
+    background-size: 100% 100%;
+    border: 5px solid grey;
+    border-radius: 10px;
+    position: absolute;
+    left: 20%;
+    z-index: 1;
+    overflow: scroll;
+}
+
+.caja-3>span {
+    font-weight: 600;
+    font-size: 20px;
+    display: flex;
+    height: 100%;
+    align-items: flex-end;
+}
+
+.parrafo {
+    color: crimson!important;
+}
+
+#parrafo {
+    color: blue;
+}
+
+#parrafo {
+    color: green;
+}
