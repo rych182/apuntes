@@ -13,7 +13,8 @@ BigInt.
 Symbol.
 Null.
 ---------
-Object: NO ES un tipo de dato no primitivo,  son una colección de propiedades
+Object: Es un tipo de dato "no primitivo",  llamado Object, que puede almacenar colecciones de datos y funciones.
+funciones: son un tipo de dato "no ´primitivo"
 ---------
 "use strict"
 Es una opción disponible en JavaScript que restringe ciertas acciones,

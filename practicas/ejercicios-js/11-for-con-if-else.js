@@ -1,4 +1,11 @@
 /*
+las condicionales son un concepto más fundamental y, por lo tanto, es recomendable aprenderlas antes que los bucles.
+
+Esto se debe a que las condicionales son necesarias para tomar decisiones en el código y
+para controlar el flujo de ejecución en función de esas decisiones. Los bucles, por otro lado,
+son útiles para repetir tareas varias veces, pero para ello es necesario tener un control de flujo adecuado,
+lo que se logra a través del uso de condicionales.
+
 
 EJERCICIO 2: Recorre una cadena con for usando break
 
