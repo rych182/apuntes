@@ -12,9 +12,9 @@
     <title>Hello, world!</title>
     <style>
         main {
-            /*Para quitarle los espacios y si abarque el 100%*/
+            /*Para quitarle los espacios y si abarque el 100%
             padding-right: 0!important;
-            padding-left: 0!important;
+            padding-left: 0!important;*/
         }
     </style>
 </head>
@@ -74,7 +74,9 @@
             <!--Contenedor-->
             <div class="container">
                 <!--Logotipo-->
-                <a href="#" class="navbar-brand">Logotipo</a>
+                <a href="#" class="navbar-brand">
+                    <img src="img/mac-1.png" alt="" width="50" height="50">
+                </a>
                 <!--Menu Hamburguesa
                 class="navbar-toggler, sirve para que tenga el boton con el ícono
                 type="button" para que los dispositivos sepa que este boton funciona como un boton
@@ -131,8 +133,8 @@
         </nav>
     </header>
 
-    <!-- Contenedor de Bootstrap -->
-    <main class="container-fluid ">
+    <!-- Container-fluid para que agarre todo el ancho -->
+    <main class="container mt-4 mt-sm-4 mt-lg-4">
 
         <!--            SLIDER              -->
         <div class="row ">
@@ -150,21 +152,35 @@
                     </div>
 
                     <div class="carousel-inner">
-                        <div class="carousel-item active">
+                        <div class="carousel-item active" data-bs-interval="20000">
                             <img src="img/carousel1.jpg" alt="" class="d-block w-100">
-
+                            <div class="carousel-caption d-none d-block">
+                                <h5 class="">Titulo de la imagen 1</h5>
+                                <p class="">Este es un texto de ejemplo, con el tamaño de un parrafo.</p>
+                            </div>
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item" data-bs-interval="2000">
                             <img src="img/carousel2.jpg" alt="" class="d-block w-100">
-
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Titulo de la imagen 2</h5>
+                                <p>Este es un texto de ejemplo, con el tamaño de un parrafo.</p>
+                            </div>
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item" data-bs-interval="2000">
                             <img src="img/carousel3.jpg" alt="" class="d-block w-100">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Titulo de la imagen 4</h5>
+                                <p>Este es un texto de ejemplo, con el tamaño de un parrafo.</p>
+                            </div>
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item" data-bs-interval="2000">
                             <img src="img/lula-640.jpg" alt="" class="d-block w-100">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Titulo de la imagen 5</h5>
+                                <p>Este es un texto de ejemplo, con el tamaño de un parrafo.</p>
+                            </div>
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item" data-bs-interval="2000">
                             <img src="img/pena-obama.jpg" alt="" class="d-block w-100">
                         </div>
                     </div>
@@ -189,6 +205,7 @@
 
         </div>
 
+        <!--            Galería             -->
         <div class="row py-5">
             <div class="col">
                 <div class="border-bottom">
@@ -196,6 +213,122 @@
                 </div>
             </div>
         </div>
+
+        <div class="row">
+            <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                <div class="card">
+                    <img src="img/1.jpg" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h3 class="card-title text-center">iMac</h3>
+                        <p class="card-text text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <div class="d-flex justify-content-center">
+                            <a href="#" class="btn btn-sm btn-primary m-auto">Comprar</a>
+                            <a href="#" class="btn btn-sm btn-secondary m-auto">Detalles</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                <div class="card">
+                    <img src="img/1.jpg" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h3 class="card-title text-center">iMac</h3>
+                        <p class="card-text text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <div class="d-flex justify-content-center">
+                            <a href="#" class="btn btn-sm btn-primary m-auto">Comprar</a>
+                            <a href="#" class="btn btn-sm btn-secondary m-auto">Detalles</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                <div class="card">
+                    <img src="img/1.jpg" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h3 class="card-title text-center">iMac</h3>
+                        <p class="card-text text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <div class="d-flex justify-content-center">
+                            <a href="#" class="btn btn-sm btn-primary m-auto">Comprar</a>
+                            <a href="#" class="btn btn-sm btn-secondary m-auto">Detalles</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                <div class="card">
+                    <img src="img/1.jpg" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h3 class="card-title text-center">iMac</h3>
+                        <p class="card-text text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <div class="d-flex justify-content-center">
+                            <a href="#" class="btn btn-sm btn-primary m-auto">Comprar</a>
+                            <a href="#" class="btn btn-sm btn-secondary m-auto">Detalles</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                <div class="card">
+                    <img src="img/1.jpg" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h3 class="card-title text-center">iMac</h3>
+                        <p class="card-text text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <div class="d-flex justify-content-center">
+                            <a href="#" class="btn btn-sm btn-primary m-auto">Comprar</a>
+                            <a href="#" class="btn btn-sm btn-secondary m-auto">Detalles</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                <div class="card">
+                    <img src="img/1.jpg" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h3 class="card-title text-center">iMac</h3>
+                        <p class="card-text text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <div class="d-flex justify-content-center">
+                            <a href="#" class="btn btn-sm btn-primary m-auto">Comprar</a>
+                            <a href="#" class="btn btn-sm btn-secondary m-auto">Detalles</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                <div class="card">
+                    <img src="img/1.jpg" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h3 class="card-title text-center">iMac</h3>
+                        <p class="card-text text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <div class="d-flex justify-content-center">
+                            <a href="#" class="btn btn-sm btn-primary m-auto">Comprar</a>
+                            <a href="#" class="btn btn-sm btn-secondary m-auto">Detalles</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                <div class="card">
+                    <img src="img/1.jpg" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h3 class="card-title text-center">iMac</h3>
+                        <p class="card-text text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <div class="d-flex justify-content-center">
+                            <a href="#" class="btn btn-sm btn-primary m-auto">Comprar</a>
+                            <a href="#" class="btn btn-sm btn-secondary m-auto">Detalles</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
     </main>
 
