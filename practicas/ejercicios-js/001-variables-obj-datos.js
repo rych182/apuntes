@@ -1,9 +1,13 @@
 /**
  
 Temas:
--Tipos de datos(Variables,constantes)
+-Variables y Tipos de datos(VAR vs LET)
 -Template stings
 -Valores primitivos
+
+
+
+--------------------------------------------------------------------------------------
 Los 8 tipos de datos en JavaScript
 Undefined.
 Boolean.
@@ -79,6 +83,8 @@ EJERCICIO 4: declara un array e imprimelo
 let cadena = ["Mexico", "USA", "Canada"];
 console.log(cadena);
 
-
+Ejercicio 5:
+Creame un Array que contenga estados de la república y que dentro tenga un objeto que contenga capitales de la republica,
+después de debes imprimir con template string 2 estados de la república con su correspondiente capital.
 
 */
