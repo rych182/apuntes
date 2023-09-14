@@ -21,7 +21,7 @@ Permite extraer propiedades específicas de un objeto y asignarlas a variables d
 
 CONCLUSIÓN
 La destructuración en JavaScript es una forma conveniente de extraer valores de arreglos y objetos de manera más legible y eficiente.
-
+La deestruccturacion de objetos y arreglos se usan mucho en frameworks y librerias
 DEFINICION, permite desempacar valores de arreglos y propiedades de objetos en distintas variables.  
 
 

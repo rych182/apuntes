@@ -26,16 +26,17 @@ ROADMAP según yo:
 
 TEMAS Generales, sin entrar en detalles
 
-1-Variables
--tipos de datos
-2-constantes
-3-if-else/shorts
+1-Variables, tipos de datos y constantes
+2-arrays
+3-objetos
+4-if-else
+5-if shorts
 -Ciclos: for - while
-4-funciones normales/flechas
+-funciones normales
+-funciones flecha
+--------------------(Ordenar hasta aquí, después vemos lo demás, porque seguro saldrán más cosas)
 -destructuración
 -Parametros rest/spread
-
-
 -callback
 -promesas
 -DOM

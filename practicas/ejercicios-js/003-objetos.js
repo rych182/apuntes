@@ -9,23 +9,6 @@ let unPinshiObjeto = {
 console.log(unPinshiObjeto);
 
 
-***Ejercicio 1: Resumir la escritura del ejercicio anterior
-
-let nombre = "ric";
-let edad = 33;
-
-const persona = {
-    nombre,
-    edad,
-    frase() {
-        console.log("Eres un crack!");
-    }
-}
-
-console.log(persona.nombre);
-persona.frase();
-
-
 ***EJERCICIO 2: Agrega datos a una constante objeto
 const unPinshiObjeto = {
     nombre: 'Pedro',
