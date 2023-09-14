@@ -30,10 +30,12 @@ TEMAS Generales, sin entrar en detalles
 -tipos de datos
 2-constantes
 3-if-else/shorts
--destructuración
--Parametros rest/spread
 -Ciclos: for - while
 4-funciones normales/flechas
+-destructuración
+-Parametros rest/spread
+
+
 -callback
 -promesas
 -DOM

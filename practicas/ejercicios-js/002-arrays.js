@@ -1,5 +1,5 @@
 /*
--Hacer varios ejercicios de arrgelos
+-Hacer varios ejercicios de arreglos
 -Deben de contener: strings, numbers, booleans, arrays y funciones
 -Después vemos como las muestras o ejecutas pero ve haciendolas
 -Ten un archivo de practica donde las puedas ver todas y ten un archivo donde solo codies como con los ejercicios de php
@@ -18,9 +18,11 @@ existen varios constructores integrados para tipos de datos básicos como
 -Number() 
 -Boolean()
 -Date()
-Existen dos tipos: constructores nativos (o integrados) y constructores personalizados. 
-Los constructores nativos son aquellos que se proporcionan por defecto en JavaScript,
-mientras que los constructores personalizados se crean por el usuario utilizando la sintaxis de clases o
+
+Existen dos tipos:
+Constructores nativos (o integrados) y constructores personalizados. 
+-Los constructores nativos son aquellos que se proporcionan por defecto en JavaScript,
+-Los constructores personalizados se crean por el usuario utilizando la sintaxis de clases o
 funciones constructoras.
 
 -------------------------METODOS PARA ARRAYS------------------------------------------------------- 
