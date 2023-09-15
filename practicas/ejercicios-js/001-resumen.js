@@ -31,7 +31,10 @@ TEMAS Generales, sin entrar en detalles
 3-objetos
 4-if-else
 5-if shorts
--Ciclos: for - while
+6-for(arrays) y while
+7-for in(objetos)
+8-for-of
+9-for con if
 -funciones normales
 -funciones flecha
 --------------------(Ordenar hasta aquí, después vemos lo demás, porque seguro saldrán más cosas)
