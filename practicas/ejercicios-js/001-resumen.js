@@ -29,8 +29,9 @@ TEMAS Generales, sin entrar en detalles
 1-Variables
 -tipos de datos
 2-constantes
-3-if-else/shorts
--Ciclos: for - while
+3-if-else
+4-if-shorts
+5-Ciclos: for - while
 4-funciones normales/flechas
 -destructuración
 -Parametros rest/spread
