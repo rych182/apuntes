@@ -1,4 +1,21 @@
 /*
+
+***Ejercicio 1: Resumir la escritura del ejercicio anterior
+
+let nombre = "ric";
+let edad = 33;
+
+const persona = {
+    nombre,
+    edad,
+    frase() {
+        console.log("Eres un crack!");
+    }
+}
+
+console.log(persona.nombre);
+persona.frase();
+
 Ejercicio 1:  Crear un objeto e inicializar un metodo interior que tenga
 let ric = {
     nombre: "Ricardo",
