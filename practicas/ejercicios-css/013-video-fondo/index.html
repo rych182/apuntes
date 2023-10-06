@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+        }
+        
+        video {
+            width: 100%;
+            height: 100%;
+            /* Ajusta el video para llenar el contenedor sin deformar */
+            object-fit: cover;
+            /* Fija el video en su lugar para que ocupe toda la pantalla */
+            position: fixed;
+            top: 0;
+            left: 0;
+            /* Coloca el video detrás de otros elementos en la página */
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+    <video autoplay loop muted>
+        <source src="video/production_id_3864903 (240p).mp4" type="video/mp4">
+        Tu navegador no soporta el elemento de video.
+      </video>
+
+</body>
+
+</html>
