@@ -26,15 +26,6 @@ ROADMAP según yo:
 
 TEMAS Generales, sin entrar en detalles
 
-<<<<<<< HEAD
-1-Variables
--tipos de datos
-2-constantes
-3-if-else
-4-if-shorts
-5-Ciclos: for - while
-4-funciones normales/flechas
-=======
 1-Variables, tipos de datos y constantes
 2-arrays
 3-objetos
@@ -47,7 +38,6 @@ TEMAS Generales, sin entrar en detalles
 -funciones normales
 -funciones flecha
 --------------------(Ordenar hasta aquí, después vemos lo demás, porque seguro saldrán más cosas)
->>>>>>> 0d1453a383eb8255ce3117a2aeb026f8f34b8ff1
 -destructuración
 -Parametros rest/spread
 -callback

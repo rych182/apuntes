@@ -1,9 +1,9 @@
 //console.log(profesion, edad, estadoCivil);
 
 
-const persona = ['Ricard', , 33, 'Mexico']; //dejo un espacio vacio entre el nombre y la edad 
-const [nombre, estadoCivil, edad, pais, profesion = "Programador"] = persona;
-console.log(nombre, estadoCivil, edad);
+const obj = { a: 1 };
+const { a = 0 } = obj;
+console.log(a); // output: 1
 
 
 
@@ -36,7 +36,7 @@ const { a, b } = obj;
 console.log(a); // output: 1
 console.log(b); // output: 2
 
-Ejemplo 0.3: establecer un valor predeterminado de 0 
+Ejemplo 0.3: establecer un valor predeterminado de 0 (si "a" no tuviera un valor)
 const obj = { a: 1 };
 const { a = 0 } = obj;
 console.log(a); // output: 1
