@@ -9,4 +9,8 @@
 -Crear un short if
 -Diferencia entre una función simple y una arrow function 
 -Explicar el this
+
+Futuros proyectos:
+cotizador de seguros de autos
+https://www.youtube.com/watch?v=qzdRas77zQI
  */

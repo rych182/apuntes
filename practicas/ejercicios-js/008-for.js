@@ -1,21 +1,29 @@
-<<<<<<< HEAD
 var alumno = [
     [10, 8, 4, 6, 9],
     [10, 8, 4, 6, 9],
     [10, 8, 2, 6, 9],
     [10, 8, 10, 6, 9],
     [10, 8, 10, 6, 9]
-];
-let materias = 0;
-for (let i = 0; i < alumno.length; i++) {
-    for (let j = 0; j < alumno.length; j++) {
-        materias++;
+    ];
+    
+    let reprobadas = 0;
+    for (let i = 0; i < alumno.length; i++) {
+        for (let j = 0; j < alumno[i].length; j++) {
+            if (alumno[i][j] < 6) {
+                reprobadas++;
+            }
+        }
     }
-}
-console.log(materias);
+    console.log(`Reprobaste ${reprobadas} materias ¿Para eso te pago la escuela?`);
 
-=======
->>>>>>> 0d1453a383eb8255ce3117a2aeb026f8f34b8ff1
+
+/*
+for (let i = 0; i <= amigos.length; i++) {
+    console.log(nombre[i]);
+}
+*/
+
+
 /*
 Aprender condiciones y bucles antes que funciones en JavaScript puede ser beneficioso para evitar confusiones 
 porque son conceptos más simples y fundamentales en la programación en general.
@@ -28,7 +36,7 @@ Por otro lado, aunque las funciones son una parte fundamental de la programació
 a veces pueden ser más abstractas y complicadas de entender para alguien que recién está empezando.
 Las funciones pueden involucrar conceptos como ámbito de variables, retorno de valores y parámetros,
 que pueden ser difíciles de comprender sin una base sólida en los conceptos más básicos como las condiciones y bucles.
-<<<<<<< HEAD
+
 */
 
 /* 
@@ -42,23 +50,37 @@ do {
 console.log(x);
 x++;
 } while (x < 17);
-
-========================================================================================
-EJERCICIOS CON FOR
-=======
-
 ========================================================================================
                                 EJERCICIOS CON FOR
->>>>>>> 0d1453a383eb8255ce3117a2aeb026f8f34b8ff1
 APUNTES:
 -Cada let i declarada en un FOR, vive en ese lapso de tiempo del ciclo
 -Cuando hacer un ciclo dentro de otro ciclo se acostumbra cambiar la variable de nombre
 
 EJERCICIO 1:Haz un ciclo con for                                
-<<<<<<< HEAD
 for (i = 0; i <= 10; i++) {
 console.log(i);
 }
+
+Ejercicio 1.1: Haz un ciclo que vaya del 10 al 0
+for (let i = 10; i > 0; i--) {
+    console.log(i);
+}
+
+Ejercicio 1.2: imprime del 1 al 10 pero llegando al 5 se detenga
+for (let i = 1; i <= 10; i++) {
+  if (i === 5) {
+    break; // Se detiene cuando i es igual a 5
+  }
+  console.log(i); // Imprime el valor de i
+}
+
+Ejercicio 1.3: imprime del 1 al 10 pero que salte el número 5
+for (let i = 1; i <= 10; i++) {
+    if (i === 4) {
+      continue; // Salta el número 5
+    }
+    console.log(i); // Imprime el valor de i
+  }
 
 Ejercicio 2, Hacer un for que imprima mis amigos
 let countries = ['Mexico', 'USA', 'Canada', 'Japan', 'SOuth Korea'];
@@ -76,17 +98,6 @@ console.log(a + j);
 }
 }
 
-Ejercicio 4, imprimir el número de datos que tiene cada array dentro del array
-var alumno = [
-[10, 8, 4, 6, 9],
-[10, 8, 4, 6, 9],
-[10, 8, , 6, 9],
-[10, 8, 10, 6, 9]
-];
-
-for (let i = 0; i < alumno.length; i++) {
-console.log(alumno[i]);
-}
 
 Ejercicio 5, imprimir(recorrer,asi le dicen) la cantidad de datos que se encuentran dentro del array
 var alumno = [
@@ -97,18 +108,9 @@ var alumno = [
 ];
 
 for (let i = 0; i < alumno.length; i++) {
-for (let j = 0; j < alumno.length; j++) {
-console.log(alumno[i][j]);
-}
-=======
- for (i = 0; i <= 10; i++) {
-    console.log(i);
-}
-
-Ejercicio 1.1, Hacer un for que imprima mis amigos
-let countries = ['Mexico', 'USA', 'Canada', 'Japan', 'SOuth Korea'];
-for (let i = 0; i < 5; i++) {
-    console.log(countries[i]);
+    for (let j = 0; j < alumno.length; j++) {
+        console.log(alumno[i][j]);
+    }
 }
 
 Ejercicio 9, for anidado.
@@ -120,19 +122,7 @@ for (let i = 0; i < 3; i++) {
         console.log(a + j);
     }
 }
-
-Ejercicio 10, imprimir el número de datos que tiene cada array dentro del array
-var alumno = [
-    [10, 8, 4, 6, 9],
-    [10, 8, 4, 6, 9],
-    [10, 8, , 6, 9],
-    [10, 8, 10, 6, 9]
-];
-
-for (let i = 0; i < alumno.length; i++) {
-    console.log(alumno[i]);
-}
-
+-------------------------------------------------------------------------------------------
 Ejercicio 11, imprimir(recorrer,asi le dicen) la cantidad de datos que se encuentran dentro del array
 var alumno = [
     [10, 8, 4, 6, 9],
@@ -145,12 +135,11 @@ for (let i = 0; i < alumno.length; i++) {
     for (let j = 0; j < alumno.length; j++) {
         console.log(alumno[i][j]);
     }
->>>>>>> 0d1453a383eb8255ce3117a2aeb026f8f34b8ff1
+
 }
 
 ERROR QUE COMETÍA: Al quitarle [i] en el segundo bucle recorria  5 veces cada array porque conto que habia 5 arrays, entonces, da 20, si hubieran sido 4 arrays, hubiera dado 16.  
 
-<<<<<<< HEAD
 Se le tiene que crear una variable para que se reescriba el conteo cada que haga una cosa
 var alumno = [
 [10, 8, 4, 6, 9],
@@ -159,39 +148,14 @@ var alumno = [
 [10, 8, 10, 6, 9],
 [10, 8, 10, 6, 9]
 ];
+
 let materias = 0;
-for (let i = 0; i < alumno.length; i++) {
-for (let j = 0; j < alumno.length; j++) {
-materias++;
-}
-=======
-var alumno = [
-    [10, 8, 4, 6, 9],
-    [10, 8, 4, 6, 9],
-    [10, 8, 2, 6, 9],
-    [10, 8, 10, 6, 9],
-    [10, 8, 10, 6, 9]
-];
-let materias = 0;
-for (let i = 0; i < alumno.length; i++) {
-    for (let j = 0; j < alumno.length; j++) {
+    for (let i = 0; i < alumno.length; i++) {
+        for (let j = 0; j < alumno.length; j++) {
         materias++;
     }
->>>>>>> 0d1453a383eb8255ce3117a2aeb026f8f34b8ff1
-}
-console.log(materias);
 
-
-<<<<<<< HEAD
-Ejercicio 6: Sumar las calificaciones
-
-var alumno = [
-[10, 8, 4, 6, 9],
-[10, 8, 4, 6, 9],
-[10, 8, 2, 6, 9],
-[10, 8, 10, 6, 9],
-[10, 8, 10, 6, 9]
-=======
+----------------------------------------------------------
 Ejercicio 12: Sumar las calificaciones
 
 var alumno = [
@@ -200,84 +164,51 @@ var alumno = [
     [10, 8, 2, 6, 9],
     [10, 8, 10, 6, 9],
     [10, 8, 10, 6, 9]
->>>>>>> 0d1453a383eb8255ce3117a2aeb026f8f34b8ff1
+
 ];
 let sumaCalificaciones = 0;
 let materias = 0;
 for (let i = 0; i < alumno.length; i++) {
-<<<<<<< HEAD
+
 for (let j = 0; j < alumno.length; j++) {
 sumaCalificaciones += alumno[i][j];
 materias++;
 }
-=======
-    for (let j = 0; j < alumno.length; j++) {
-        sumaCalificaciones += alumno[i][j];
-        materias++;
-    }
->>>>>>> 0d1453a383eb8255ce3117a2aeb026f8f34b8ff1
+
 }
 console.log(sumaCalificaciones);
 
+----------------------------------------------------------------------------------
 Ejercicio 13: Sacar la media de las calificaciones.
 
 var alumno = [
-<<<<<<< HEAD
-[10, 8, 4, 6, 9],
-[10, 8, 4, 6, 9],
-[10, 8, 2, 6, 9],
-[10, 8, 10, 6, 9],
-[10, 8, 10, 6, 9]
-=======
     [10, 8, 4, 6, 9],
     [10, 8, 4, 6, 9],
     [10, 8, 2, 6, 9],
     [10, 8, 10, 6, 9],
     [10, 8, 10, 6, 9]
->>>>>>> 0d1453a383eb8255ce3117a2aeb026f8f34b8ff1
+
 ];
 let sumaCalificaciones = 0;
 let materias = 0;
 
 for (let i = 0; i < alumno.length; i++) {
-<<<<<<< HEAD
-for (let j = 0; j < alumno.length; j++) {
-sumaCalificaciones += alumno[i][j];
-materias++;
-}
-=======
     for (let j = 0; j < alumno.length; j++) {
         sumaCalificaciones += alumno[i][j];
         materias++;
     }
->>>>>>> 0d1453a383eb8255ce3117a2aeb026f8f34b8ff1
 }
 let total = sumaCalificaciones / materias;
 console.log(total);
 
+---------------------------------------------------------------------------------------------------
 Ejercicio 14: Imprime repobado cada que haya sacado menos de 6 en una materias
 var alumno = [
-<<<<<<< HEAD
 [10, 8, 4, 6, 9],
 [10, 8, 4, 6, 9],
 [10, 8, 2, 6, 9],
 [10, 8, 10, 6, 9],
 [10, 8, 10, 6, 9]
-];
-for (let i = 0; i < alumno.length; i++) {
-for (let j = 0; j < alumno[i].length; j++) {
-if (alumno[i][j] > 5) {
-console.log("Aprobado");
-} else {
-console.log("Reprobado");
-}
-}
-=======
-    [10, 8, 4, 6, 9],
-    [10, 8, 4, 6, 9],
-    [10, 8, 2, 6, 9],
-    [10, 8, 10, 6, 9],
-    [10, 8, 10, 6, 9]
 ];
 for (let i = 0; i < alumno.length; i++) {
     for (let j = 0; j < alumno[i].length; j++) {
@@ -287,32 +218,18 @@ for (let i = 0; i < alumno.length; i++) {
             console.log("Reprobado");
         }
     }
->>>>>>> 0d1453a383eb8255ce3117a2aeb026f8f34b8ff1
 }
+-------------------------------------------------------------------------------------------
 
 Ejercicio 15: busca en los arrays cuantas materias reprobo el alumno
 var alumno = [
-<<<<<<< HEAD
 [10, 8, 4, 6, 9],
 [10, 8, 4, 6, 9],
 [10, 8, 2, 6, 9],
 [10, 8, 10, 6, 9],
 [10, 8, 10, 6, 9]
 ];
-let reprobadas = 0;
-for (let i = 0; i < alumno.length; i++) {
-for (let j = 0; j < alumno[i].length; j++) {
-if (alumno[i][j] < 6) {
-reprobadas++;
-}
-}
-=======
-    [10, 8, 4, 6, 9],
-    [10, 8, 4, 6, 9],
-    [10, 8, 2, 6, 9],
-    [10, 8, 10, 6, 9],
-    [10, 8, 10, 6, 9]
-];
+
 let reprobadas = 0;
 for (let i = 0; i < alumno.length; i++) {
     for (let j = 0; j < alumno[i].length; j++) {
@@ -320,12 +237,11 @@ for (let i = 0; i < alumno.length; i++) {
             reprobadas++;
         }
     }
->>>>>>> 0d1453a383eb8255ce3117a2aeb026f8f34b8ff1
 }
 console.log(`Reprobaste ${reprobadas} materias ¿Para eso te pago la escuela?`);
+--------------------------------------------------------------------------------------------------
 
 
-<<<<<<< HEAD
 Ejercicio 8, imprimir un arreglo usando forEach(), perro es el index, osea la posición en el arreglo, es una caracteristica que tiene la función forEach()
 let countries = ['Mexico', 'USA', 'Canada', 'Japan', 'SOuth Korea'];
 countries.forEach((country, perro) => {
@@ -333,6 +249,3 @@ console.log(`${perro} ${country}`);
 })
 
 */
-=======
-*/ 
->>>>>>> 0d1453a383eb8255ce3117a2aeb026f8f34b8ff1

@@ -1,3 +1,16 @@
+var a = 'a';
+let b = 'b';
+const c = 'c';
+
+if (true) {
+    var a = 'AA';
+    let b = 'BB';
+    const c = 'CC';
+    console.log('BLOQUE: ', a, b, c);
+}
+console.log('GLOBALES: ', a, b, c);
+
+
 /*
 
 las condicionales son un concepto más fundamental y, por lo tanto, es recomendable aprenderlas antes que los bucles.

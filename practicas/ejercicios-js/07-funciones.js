@@ -5,106 +5,13 @@
 
 //let suma = (a, b) => a + b;
 
-let funcion = (nombre, apellido) => ({ nombre, apellido })
-console.log(funcion("ric", "garrido"));
+
 
 
 
 /*
 
-Ejercicio 1
-Imprimir mi nombre con una función flecha
-let nombre = () => {
-    console.log("Ricardo");
-}
-nombre();
 
-OPTION 2
-(() => {
-    console.log("rIC");
-})()
-
-
-
-EJERCICIO 1.01: Imprimir un valor predefinido
-function saludar(nombre) {
-    nombre = nombre || "Desconocido";
-    console.log(`Hola ${nombre}`);
-}
-saludar();
-
-EJERCICIO 1.02: Ejemplos de corto circuito OR
-function saludar(nombre) {
-    nombre = nombre || "Desconocido";
-    console.log(`Hola ${nombre}`);
-}
-saludar(19 || "valor de la derecha");
-saludar(true || "valor de la derecha");
-saludar({} || "valor de la derecha");
-saludar([] || "valor de la derecha");
-saludar(false || "valor de la derecha");
-saludar(null || "valor de la derecha");
-saludar(undefined || "valor de la derecha");
-saludar("" || "valor de la derecha");
-saludar(-2 || "valor de la derecha");
-saludar(0 || "valor de la derecha");
-
-EJERCICIO 1.03: Ejemplos de corto circuito con AND
-
-Ejercicio2
-Imprimir mi nombre en una función flecha, asignandole el nombre en los parentesis
-let nombre = (nombre1) => {
-    console.log(nombre1);
-}
-nombre("Ricardo");
-
-Ejercicio3
-Hace una suma de 2 números asignandoselos en el parentesis, con una función flecha
-let operacion = (num1, num2) => {
-    console.log(num1 + num2);
-}
-
-Ejercicio4
-Hace una suma de 2 números asignandoselos en el parentesis, con una función flecha PERO usando return
-let operacion = (num1, num2) => {
-    return num1 + num2;
-}
-console.log(operacion(2, 3));
-
-Ejercicio 5
-Hace una suma de 2 números asignandoselos en el parentesis, con una función flecha PERO resumiendo la sintaxis
-let operacion = (num1, num2) => num1 + num2;
-console.log(operacion(2, 3));
-
-Ejercicio 6
-Toda función devuelve "UNDIFINED", porque todas las funciones tienen un "return aunque no este escrito"
-cuando se tiene una función y no tiene un return "específico", devolverá "undifined"
-Demuestra esto
-let nombre = (nombre) => {
-    console.log(nombre);
-    return 1000;
-}
-const almacen = nombre("Ricardo");
-console.log(almacen);
-
-Ejercicio 7
-Regresar 2 valores en un return, primero la manera mala y luego la buena
-
-MALA(solo imprimira el número 2)
-let nombre = (nombre) => {
-    console.log(nombre);
-    return 1, 2;
-}
-const almacen = nombre("Ricardo");
-console.log(almacen);
-
-BUENA(volverlo un array)
-let nombre = (nombre) => {
-    console.log(nombre);
-    return [1, 2];
-}
-const almacen = nombre("Ricardo");
-console.log(almacen[0], almacen[1]);
 
 Ejercicio 8
 Crea una función con un número aleatorio del 0 al 1, con funciones flechas y resumidas
@@ -116,24 +23,6 @@ Crea una función con un número aleatorio del 0 al 100, con funciones flechas y
 let numero = () => Math.random()* 100;
 console.log(numero());
 
-
-Ejercicio 9 PROTIP
-Crear una funcion flecha con "return" que "retorne un objeto" y luego resume ese objeto
-const persona = (nombre, apellido) => {
-    return {
-        nombre: nombre,
-        apellido: apellido
-    }
-}
-const caja = persona('Ricardo', 'Garrido');
-console.log(caja);
-
-RESUMIDA
-const persona = (nombre, apellido) =>
-    ({ nombre, apellido })
-
-const caja = persona('Ricardo', 'Garrido');
-console.log(caja);
 
 Ejercicio 9.1: resumir una función, sin parenteses(solo se puede cuando es una cosa, no 2 como en el ejercicio anterior)
 const saludo = texto => {

@@ -3,37 +3,7 @@ const funcionExpresada = function() {
 }
 
 /*
- Tipos de datos primitivos:
- -string
- -number
- -boolean
- -null
- -undefined
- -NaN
 
- Tipos de datos compuestos:
- -Objeto{}
- -Array[]
- -funciones{}  <---
- -Class
- -etc
-
- Funciones: bloque de código autocontenido, independiente al scope o ambito global(tiene su propio scope),
- se definen 1 sola vez, que se puede ejecutar en cualquier momento y reutilizarla,
- puede o no recibir parametros(datos).
- En Javscript las funciones también se consideran un objeto
- Las funciones tu las puedes asignar como un valor, en vez de retornar solo texto, puedes retornar la ejecución de una función 
- -Se puedem pasar como argumentos
- -Se pueden retornar como valores
-
- Diferentes formas de declarar una función.
- -FUNCIONES DECLARAS
- La ventaja de las declaraciones de función es que se pueden llamar antes
- de la declaración en el código, ya que JavaScript primero "eleva" las
- declaraciones de función durante la fase de compilación. 
- Esto significa que puedes llamar a la función antes de que aparezca en el
- código.
- Ejemplo:
 
  console.log(sum(2, 3)); // Output: 5
  function sum(a, b) {
@@ -61,15 +31,18 @@ y las "funciones expresadas" es que las expresiones de función NO
 Las expresiones de función se utilizan en JavaScript por varias razones:
 -Closures: Las expresiones de función permiten crear closures, 
 que son funciones que tienen acceso al ámbito (scope)
-de su entorno externo. Esto significa que pueden acceder y
+de su entorno externo. 
+Esto significa que pueden acceder y
 manipular variables definidas en el ámbito superior
 incluso después de que la función haya sido ejecutada.
+
 Los closures son útiles en situaciones donde se requiere preservar el 
 estado de las variables a lo largo del tiempo,
 como en callbacks o en la implementación de módulos.
 
 -Asignación dinámica: Las expresiones de función se pueden asignar
 dinámicamente a variables y pasar como argumentos a otras funciones.
+
 Esto permite una mayor flexibilidad en la manipulación de funciones,
 ya que se pueden crear funciones bajo ciertas condiciones 
 y asignarlas a diferentes variables o utilizarlas como argumentos en
@@ -78,7 +51,8 @@ diferentes contextos.
 -IIFE (Immediately Invoked Function Expression): Una expresión de función
 puede envolverse entre paréntesis y luego ser invocada inmediatamente
 agregando otro par de paréntesis al final (function() { // código  })();.
-Esto es útil para crear un ámbito local para evitar la contaminación del
+
+    Esto es útil para crear un ámbito local para evitar la contaminación del
 ámbito global y para ejecutar un bloque de código sin necesidad de llamar
 a la función en otro lugar.
 
