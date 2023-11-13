@@ -39,3 +39,35 @@ const perro = {
     }
 }
 console.log(perro);
+
+/*
+EJERCICIO 29: Escribirle un metodo prototipado a la función heredada del javascript viejito
+
+function animal(nombre, genero) {
+    Propiedades
+    this.nombre = nombre;
+    this.genero = genero;
+}
+
+Metodos agregados desde afuera, esto evita la duplicidad de metodos en la función constructora
+animal.prototype.sonar = function() {
+    console.log("Hago sonidos porque estoy vivo");
+}
+
+function perro(nombre, genero, tamanio) {
+    //super sirve para invocar al constructor padre
+    this.super = animal;
+    this.super(nombre, genero);
+    this.tamanio = tamanio;
+}
+perro.prototype = new animal();
+perro.prototype.constructor = perro;
+al igualarlo al mismo constructor, obtendra todo lo que hay en la funcion perro
+incluso los prototipos, como el .sonar que tiene
+
+perro.prototype.ladrar = function() {
+    console.log("Wof!! wof!!");
+}
+
+perro.prototype.ladrar();
+*/

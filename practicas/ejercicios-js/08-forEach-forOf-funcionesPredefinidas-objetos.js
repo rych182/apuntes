@@ -33,15 +33,25 @@ do {
 } while (x < 17);
 
 ----------------------------------------------------------------------------------------------------------
+                                                FOREACH
+Ejercicio 1: Recorrer array con un .forEach
+const numeros = [1, 2, 3, 4, 5];
+numeros.forEach((elemento, index) => {
+    console.log(`El elemento ${elemento} esta en la posicion ${index}`);
+});
 
-Ejercicio 8, imprimir un arreglo usando forEach(), perro es el index, osea la posición en el arreglo, es una caracteristica que tiene la función forEach()
+Ejercicio 2: Resume el codigo de arriba quitandole las llaves
+const numeros = [1, 2, 3, 4, 5];
+numeros.forEach((elemento, index) => console.log(`El elemento ${elemento} esta en la posicion ${index}`));
+
+Ejercicio 3: imprimir un arreglo usando forEach(), perro es el index, osea la posición en el arreglo, es una caracteristica que tiene la función forEach()
 let countries = ['Mexico', 'USA', 'Canada', 'Japan', 'SOuth Korea'];
 countries.forEach((country, perro) => {
     console.log(`${perro} ${country}`);
 })
 
 ------------------------------------------------------------------------------------------------------
-
+                                                FOR OF
 
 EJERCICIO 3, usando "for of" lo mismo que el ejercicio 11 pero usando la función .map(), "transforma" los datos en ARRAY la función .entries()
 const datos = new Map();

@@ -182,5 +182,30 @@ const arreglo3 = arreglo2.map(function(numero) {
 });
 console.log(arreglo3);
 
+---------------------------------------------------------------------
+Ejercicio 10 PROTIP
+Crear una función con parametros REST, el argumento rest no puede llevar nada despues de el, solo antes
+
+let persona = (nombre, ...args) => {
+    return [nombre, args];
+}
+console.log(persona("Ricardo", true, 32, ["Perro", "Canada"]));
+----------------------------------------------------------------------------
+Ejercicio 11 PROTIP
+Deestructuración: sirve para darle nombres a los valores que tiene un arreglo, en vez de crear una variable por cada posicion del arreglo. Ejemplo
+let persona = (...args) => {
+    return args;
+}
+
+const [nombre, soltero, edad, aficiones] = persona("Ricardo", true, 32, ["Perro", "Canada"]);
+console.log(aficiones);
+-------------------------------------------------------------------------------------
+Ejercicio 12 PROTIP
+Deestructuración con un objeto RESUMIDO
+const persona = (nombre, apellido) =>
+    ({ nombre, apellido })
+
+const { nombre } = persona('Ricardo', 'Garrido');
+console.log({ nombre });
 
 */

@@ -201,8 +201,8 @@ let nombre = (nombre) => {
 const almacen = nombre("Ricardo");
 console.log(almacen[0], almacen[1]);
 
-
-Ejercicio 9 PROTIP
+------------------------------------------------------------------------------------------------
+Ejercicio 8 PROTIP
 Crear una funcion flecha con "return" que "retorne un objeto" y luego resume ese objeto
 const persona = (nombre, apellido) => {
     return {
@@ -219,7 +219,37 @@ const persona = (nombre, apellido) =>
 
 const caja = persona('Ricardo', 'Garrido');
 console.log(caja);
+----------------------------------------------------------------------------------------------
+Ejercicio 9
+Crea una función con una variable por default si alguna vez alguien no rellena el dato
+let saludar = (nombre = "visitante") => {
+    return `Hola ${nombre}`;
+}
+console.log(saludar("Sutano"));
+-------------------------------------------------------------------------------------------
+EJERCICIO 10: Crear las 4 funciones anónimas autoinvocadas
 
+//clasica
+(function() {
+    console.log("Soy una función anónima autoejecutable CLASICA");
+})();
+
+//Crockford
+((function() {
+    console.log("Soy una función anónima autoejecutable CROCKFORD");
+})());
+
+//UNARIA
++
+
+function() {
+    console.log("Soy una función anónima autoejecutable UNARIA");
+}();
+
+//FACEBOOk
+! function() {
+    console.log("Soy una función anónima autoejecutable ESTILO FACEBOOK");
+}
 
 
 */

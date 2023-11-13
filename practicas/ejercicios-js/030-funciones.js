@@ -100,7 +100,7 @@ particular.
  let valorDeLaFunción = unaFuncionQueDevuelveValor();
  console.log(valorDeLaFunción); //imprime el valor que devuelve
 
-Hoisting: javascript eleva primero las vaeriables y luego las funciones
+Hoisting: javascript eleva primero las variables y luego las funciones
 
 
 EJEMPLO: Pasando valores y agregando "valores por defecto"
