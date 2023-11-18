@@ -1,3 +1,27 @@
+//primer dato lo toma como un número que hace una operación
+//True y False se toman como 1 y 0
+//Undifined NO ES un número, define algo que no es un valor
+//Infinity es un valor especial que se utiliza para representar matemáticamente un número que es mayor
+//que cualquier otro número posible en JavaScript.Infinity es un tipo de dato primitivo(number)
+
+
+console.log(true+'1')//true1
+console.log(true-'1')//0
+console.log(true*'1')//1
+console.log(false*'1')//0
+console.log(true*1)//1
+console.log(true+1)//2
+console.log(false+1)//1
+//True se toma como número pero  "undifined" no es un número
+console.log(true+undefined)//Nan
+console.log(true+NaN)//Nan
+console.log(true+null)//1
+console.log(true+true)//2
+console.log(true+false)//1
+console.log(true*false)//0
+console.log(true/false)//infinity
+console.log(true/0)//infinity
+console.log(true/null)
 /**
  
 Temas:
@@ -86,5 +110,71 @@ console.log(cadena);
 Ejercicio 5:
 Creame un Array que contenga estados de la república y que dentro tenga un objeto que contenga capitales de la republica,
 después de debes imprimir con template string 2 estados de la república con su correspondiente capital.
+
+-----------------------------------------------------------------------------------------------------------------
+=========SE RECOMIENDAN PARA IR DESARROLLANDO LA LÓGICA, SE LOS PUEDES ENSEÑAR DESPUÉS DE VER FUNCIONES===========
+Ejercicios con distintos tipos de datos
+Ejercicio 6: que imprime en la consola
+console.log(1+2+3);
+console.log('1'+2+3);
+console.log(1+2+'3');
+console.log(1+2+3)
+console.log(1+2+"3"+4+5+6)//33456
+------------------------------------------------
+Ejercicios con distintos tipos de datos
+Ejercicio 7: que imprime en la consola
+
+console.log(("1"+4)+2+3)//145
+console.log(('1'+5)+(2+3))//155
+console.log(('1'+6)+(2+4)+(5+'7'))//16657
+-----------------------------------------------------
+Ejercicios con distintos tipos de datos
+Ejercicio 8: que imprime en la consola
+
+console.log(true+'1')//true1
+console.log((false+3)+'4'+false+(8+9));//34false17
+console.log(false+1)//0+1 =
+console.log(true*8)//1*8 = 8
+console.log("hola"*2)//NaN(Not a Number)
+console.log("mundo"-2)//NaN
+console.log(2*4-("hola"))//NaN
+console.log(true-"mundo")//NaN
+console.log(NaN + true)//true ó 1
+console.log(null + true)//1
+console.log(null + "hola")//hola
+console.log(null + 4)//4
+console.log(null + 0)//0
+
+---------------------------------------------------------
+Ejercicios con distintos tipos de datos
+Ejercicio 9: que imprime en la consola, datos boleanos con otros
+
+---------------------------------------------
+Ejercicio 7: ¿que imprime la consola?
+let arr = [1,2,3,4,5];
+arr.length = 2;
+console.log(arr);
+un array de 2 espacios
+---------------------------------------------
+Ejercicio 8;
+(function() {
+  let a = b = 5;
+})()
+console.log(b)
+
+5
+-------------------------
+Ejercicio 9: cual es el resultado de este código
+for (let i = 0; i < 5; i++) {
+  setTimeout(function(){
+    console.log(i);
+  }, i * 1000)
+
+  0,1,2,3,4
+  ----------------------------
+  Ejercicio 10: que error marca(error de sintaxis)
+  'use strict';
+let x = 021;
+----------------------------------------------------------
 
 */
