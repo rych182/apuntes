@@ -13,7 +13,6 @@ animal: function(nombre, genero) {
 console.log(objeto.animal("hola","mundo"));
 
 /*
-
 Ejercicio 8
 Crea una función con un número aleatorio del 0 al 1, con funciones flechas y resumidas
 let numero = () => Math.random();
