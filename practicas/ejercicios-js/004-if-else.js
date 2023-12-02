@@ -20,7 +20,6 @@ para controlar el flujo de ejecución en función de esas decisiones.
 Los bucles, son útiles para repetir tareas varias veces,
 pero para ello es necesario tener un control de flujo adecuado, lo que se logra a través del uso de condicionales.
 
-
 Aprender condiciones y bucles antes que funciones en JavaScript puede ser beneficioso para evitar confusiones porque
 son conceptos más simples y fundamentales en la programación en general.
 
