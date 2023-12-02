@@ -18,7 +18,6 @@ for (let i in countries) {
     console.log(countries[i]);
 }
 
-
 EJERCICIO 3: Recorrer un objeto utilizando FOR IN
 const automovil = {
     modelo: 'Camaro',

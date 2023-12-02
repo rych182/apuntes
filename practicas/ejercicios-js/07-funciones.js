@@ -1,8 +1,6 @@
 //try catch cuando no quieres que se detenga la ejecución de tu programa
 //Usalo cuando las funciones no sabes si vayan a tener datos, si llegan vacias, no llenes tu codigo de try catch
 
-
-
 //let suma = (a, b) => a + b;
 
 let objeto ={
@@ -13,9 +11,6 @@ animal: function(nombre, genero) {
 }
 }
 console.log(objeto.animal("hola","mundo"));
-
-
-
 
 /*
 
