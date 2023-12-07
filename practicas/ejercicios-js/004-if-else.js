@@ -1,15 +1,17 @@
-var a = 'a';
-let b = 'b';
-const c = 'c';
-
-if (true) {
-    var a = 'AA';
-    let b = 'BB';
-    const c = 'CC';
-    console.log('BLOQUE: ', a, b, c);
+let hora = "q";
+if (hora < 12 && hora >= 5) {
+    console.log("BUenos días!");
+} else if (hora >= 12 && hora < 19) {
+    console.log("BUenas tardes!");
+} else if (hora >= 19 && hora <= 24 || hora < 5 && hora > 0) {
+    console.log("BUenas noches!");
+} else {
+    console.log("Hora no valida");
 }
-console.log('GLOBALES: ', a, b, c);
+/*
 
+
+*/
 
 /*
 

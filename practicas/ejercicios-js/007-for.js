@@ -1,21 +1,3 @@
-var alumno = [
-    [10, 8, 4, 6, 9],
-    [10, 8, 4, 6, 9],
-    [10, 8, 2, 6, 9],
-    [10, 8, 10, 6, 9],
-    [10, 8, 10, 6, 9]
-    ];
-    
-    let reprobadas = 0;
-    for (let i = 0; i < alumno.length; i++) {
-        for (let j = 0; j < alumno[i].length; j++) {
-            if (alumno[i][j] < 6) {
-                reprobadas++;
-            }
-        }
-    }
-    console.log(`Reprobaste ${reprobadas} materias ¿Para eso te pago la escuela?`);
-
 
 /*
 for (let i = 0; i <= amigos.length; i++) {
