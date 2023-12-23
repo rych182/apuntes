@@ -98,5 +98,18 @@ setTimeout(function() {
 -----------------------------------------------------------------------
 Ejercicio 13
 
+console.log(document.html)
+console.log(document.head)
+console.log(document.body)
+
+
+// Imprimir el documento HTML en la consola
+// Seleccionar el documento HTML
+let doc = document.documentElement;
+// Imprimir el documento HTML en la consola
+console.log(doc);
 
 */
+console.log(document.styleSheets)
+
+
