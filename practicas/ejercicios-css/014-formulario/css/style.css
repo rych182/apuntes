@@ -1,0 +1,77 @@
+body{
+    background-image: url('../dalle-oficina.png');
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+}
+
+form{
+    width: 450px;
+    margin: auto;
+    background: rgba(0, 0,0, 0.6);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    /* box-sizing: border-box
+    Hace que tengas el padding, sin
+    modificar el tamaño del form, osea
+    ,para que no crezca la caja, pero
+    el padding se lo sigue dando a los 
+    lados, osea, como que lo acomoda.
+    */
+    margin-top: 5vh;
+    border-radius: 20px;
+    font-size: 16px;
+    
+}
+
+h2{
+    color: white;
+    text-align: center;
+    margin: 0;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+label{
+    color: white;
+}
+
+select{
+    margin-top: 5px;
+}
+
+input, select, textarea{
+    width: 100%;
+    margin-bottom: 20px;
+    /*El padding lo usamos para que ocupe el 100% del ancho
+    pero como se sale de la caja del form, utilizamos
+    box-sizing para que quede bien */
+    padding: 7px;
+    box-sizing: border-box;
+    border: none;
+}
+
+textarea{
+    /*Para que uno no pueda alargar el textarea con el 
+    mouse, por que se hace grande hacia todos los lados*/
+    min-height: 50px;
+    max-height: 100px;
+    max-width: 100%;
+}
+
+#boton{
+    background: #31384a;
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+#boton:hover{
+    cursor: pointer;
+}
+
+/*Esto es como un if, si se */
+@media (max-width:480px){
+    form{
+        width: 100%;
+    }
+}
