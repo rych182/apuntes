@@ -1,9 +1,9 @@
 //console.log(profesion, edad, estadoCivil);
 
 
-const obj = { a: 1 };
-const { a = 0 } = obj;
-console.log(a); // output: 1
+const palabra = "hola";
+const { length } = palabra;
+console.log(length);
 
 
 
@@ -64,7 +64,7 @@ miFuncion({ b: 30 }); // output: 1 30
 // Probamos la función con un objeto que no tiene ninguna de las propiedades 'a' ni 'b'
 miFuncion({}); // output: 1 2
 
-
+------------------------------------------------------------------------------------------------------------------
                           CHATGPT
 NOTAS: ¿En que caso practico o real una función recibiría un objeto, muestrame un caso de la vida real? Respuesta CHATGPT
 Las funciones que reciben objetos como parámetros son muy comunes en la programación, especialmente en JavaScript. 
@@ -155,14 +155,14 @@ console.log(profesion);
 
 Ejercicio 4
 
-Deestructurar un arreglo, luego mostrarlo cuando le hace falta un valor al array
+Deestructurar un arreglo,dejando un espacio de memoria sin datos, luego mostrar ese espacio vacio al array
 const persona = ['Ricard', , 33, 'Mexico']; //dejo un espacio vacio entre el nombre y la edad 
 const [nombre, estadoCivil, edad, pais, profesion = "Programador"] = persona;
 console.log(nombre, estadoCivil, edad);
 
 Ejercicio 5
 
-Deestructurar un arreglo y usando solo el dato que quieres usar, usando una función
+usando una función,Deestructurar un arreglo, pasando el valor por parametro e imprimir algún dato
 const persona = ['Ricard', , 33, 'Mexico'];
 const [nombre, estadoCivil, edad, pais, profesion = "Programador"] = persona;
 let imprimir = ([nombre, estadoCivil, edad, pais]) => {
@@ -212,7 +212,7 @@ let imprimir = ({ nombre, profesion }) => {
 }
 imprimir(usuario);
 
-
+Ejercicio 8
 DESCUBRIMIENTO://Fijate en el error, use edad de Ricardo en esta deestructuracion y me puso 33 a pesar de que nunca declare la constante "persona"
 
 const persona = ['Ricard', 33, , 'Mexalandia', "Bar Tender"];
