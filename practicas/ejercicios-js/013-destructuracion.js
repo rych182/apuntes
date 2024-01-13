@@ -17,7 +17,8 @@ Destructuración de arreglos
 permite tomar uno o varios elementos de un arreglo y asignarlos a variables distintas de una manera más concisa y legible
 
 Destructuración de objetos
-Permite extraer propiedades específicas de un objeto y asignarlas a variables distintas
+Permite extraer propiedades específicas de un objeto y asignarlas a variables distintas. Las propiedades se deben
+de llamar igual que las variables que le asignaremos en la destructuración
 
 CONCLUSIÓN
 La destructuración en JavaScript es una forma conveniente de extraer valores de arreglos y objetos de manera más legible y eficiente.
