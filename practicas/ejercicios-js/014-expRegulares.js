@@ -12,4 +12,12 @@ console.log(expReg2.exec(cadena));
 
 /**
  https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Regular_Expressions
+
+Expresiones regulares
+Secuencia de caracteres que buscan un patrón de busqueda y que principalmente se usa en la busqueda de cadenas
+de texto.
+Cualquier lenguaje usa expresiones regulares, se utiliza para validar caracteres, cuales aceptan y cuales no.
+No te lo aprendas de memoria, ya que las validaciones las puedes googlear
+ 
+Como se define una expresión regular
  */

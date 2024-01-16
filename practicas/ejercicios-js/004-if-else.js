@@ -143,4 +143,12 @@ if (true) {
 }
 console.log('GLOBALES: ', a, b, c);
 
+Ejercicio 8
+Checa el scope de las variables let, son locales, no globales, por eso en esta función no lo muestra
+let edad = 18;
+if (edad => 18) {
+    let eresAdulto = true;
+}
+console.log(eresAdulto);
+
 */
