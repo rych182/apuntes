@@ -1,5 +1,4 @@
 /*
-
 EJERCICIO 1: Agrega datos a una constante objeto
 const unPinshiObjeto = {
     nombre: 'Pedro',
@@ -8,6 +7,7 @@ const unPinshiObjeto = {
 }
 unPinshiObjeto.correo = "correo@correo.com";
 console.log(unPinshiObjeto);
+
 ----------------------------------------------------------
 Ejercicio 3 Crear un objeto, mostrar su contenido Y BORRAR una propiedad del objeto 
 let persona = {

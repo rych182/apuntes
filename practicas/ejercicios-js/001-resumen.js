@@ -51,8 +51,9 @@ Temas que se verán, ya con temás a profundidad
 -constantes
 -arrays: arrays multidimencionales y usando muchos tipos de datos(sin funciones aún)
 -objetos: usarlos(sin funciones aún)
+-Operadores: mayor, menor, tipos de datos, etc
 -Condicionales: if-else/if-if else-else
--bucles: for, for of, for in, forEach , cuando usarlos
+-bucles: for (sin usar for of, for in, forEach) 
 
 
 

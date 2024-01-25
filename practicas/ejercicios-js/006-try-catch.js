@@ -1,9 +1,4 @@
-
-
-
-
 /*
-
 
 TRY-CATCH-FINALLY: Es una estructura de control que nos ayuda en el manejo de errores, Evalua ciertos fragmentos de código y cuando haya algún fragmento de error, se vaa capturar en el catch
 -Try: si en el código de "try" hay algún error, el código de catch lo capturara
@@ -86,7 +81,5 @@ try {
 } catch (error) {
     console.log(`Algo salio mal ${error}`);
 }
-
-
 
 */

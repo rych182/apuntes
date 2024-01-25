@@ -1,18 +1,25 @@
-
-
-
 /*
+Funciones(definicion): bloque de código autocontenido, independiente al scope o ambito global(tiene su propio scope),
+ se definen 1 sola vez, que se puede ejecutar en cualquier momento y reutilizarla,
+ puede o no recibir parametros(datos).
+ En Javscript las funciones también se consideran un objeto
+ 
+ Las funciones tu las puedes asignar como un valor, en vez de retornar solo texto, puedes retornar la ejecución de una función 
+ -Se pueden pasar como argumentos
+ -Se pueden retornar como valores
 
+
+Ejercicio 1: Explicar la función declarada
 Funciones Declaradas:
 // Declaración de función
 function funcionDeclarada() {
   console.log("Hola desde función declarada");
 }
-
 // Llamada a la función
 funcionDeclarada(); // Puedes llamar a la función antes de su declaración
 
-
+----------------------------------------------------------------------------------------
+Ejercicio 2: Explicar la función Expresada
 Funciones Expresadas:
 // Expresión de función
 const funcionExpresada = function() {
@@ -28,22 +35,18 @@ En una función declarada, defines una función utilizando la palabra clave func
 Esta definición se "eleva" al inicio del ámbito en el que se encuentra, 
 lo que significa que puedes llamar a la función incluso antes de haberla definido en tu código.
 
+ La ventaja de las declaraciones de función es que se pueden llamar antes
+ de la declaración en el código, ya que JavaScript primero "eleva" las
+ declaraciones de función durante la fase de compilación. 
+ Esto significa que puedes llamar a la función antes de que aparezca en el código.
+
+
 Funciones Expresadas:
 En una función expresada, defines una función como una expresión en una variable, 
 por lo que la función solo está disponible para ser llamada después de haber sido definida.
+Las funciones expresadas son útiles en "callbacks, funciones anónimas, Clausuras (closures) y Asignación dinámica"
 
-Las funciones expresadas son útiles en callbacks,Funciones anónimas, Clausuras (closures) y Asignación dinámica:
-
-EJEMPLO EN CALLBACKS
-A menudo necesitas pasar funciones como argumentos a otras funciones,
-como en el caso de los callbacks. 
-Las funciones expresadas son ideales para esto,
-ya que puedes definir la función directamente en el lugar donde la necesitas.
-Por ejemplo, al trabajar con funciones de temporización como setTimeout o addEventListener:
-
-setTimeout(function() {
-  console.log("Esto es un callback después de 2 segundos");
-}, 2000);
+------------------------------------------------------------------------------------------------------------------
 
 EJEMPLO EN FUNCIONES ANÓNIMAS
 Son funciones sin nombre. Se utilizan para ejecutar código que no se necesita en ningún otro lugar del programa.
@@ -84,8 +87,7 @@ if (condicion) {
 }
 console.log(operacion(2, 3)); // Suma o multiplicación según la condición
 
-
-
+------------------------------------------------------------------------------------------------------------------
  Tipos de datos primitivos:
  -string
  -number
@@ -101,24 +103,8 @@ console.log(operacion(2, 3)); // Suma o multiplicación según la condición
  -Class
  -etc(Nuevos tipos de datos como: )
 
- Funciones: bloque de código autocontenido, independiente al scope o ambito global(tiene su propio scope),
- se definen 1 sola vez, que se puede ejecutar en cualquier momento y reutilizarla,
- puede o no recibir parametros(datos).
- En Javscript las funciones también se consideran un objeto
- 
- Las funciones tu las puedes asignar como un valor, en vez de retornar solo texto, puedes retornar la ejecución de una función 
- -Se pueden pasar como argumentos
- -Se pueden retornar como valores
 
- Diferentes formas de declarar una función.
- -FUNCIONES DECLARAS
- La ventaja de las declaraciones de función es que se pueden llamar antes
- de la declaración en el código, ya que JavaScript primero "eleva" las
- declaraciones de función durante la fase de compilación. 
- Esto significa que puedes llamar a la función antes de que aparezca en el
- código.
- Ejemplo:
-
+ ---------------------------------------------------------------------------------------------------------------
 
 
 Ejercicio 1
@@ -133,14 +119,25 @@ Ejercicio 2: imprimir tu nombre con una función autoejecutable
     console.log("rIC");
 })()
 
-EJERCICIO 1.01: Imprimir un valor predefinido
+EJERCICIO 3: Crear una funcion anónima autoinvocada que reciba parametros
+(function(w, d, c) {
+    console.log("Soy una función autoinvocada");
+    console.log(w);
+    console.log(d);
+    console.log(c);
+    c.log("Estoy usando console.log recibiendo el console como un parametro");
+})(window, document, console)
+
+
+EJERCICIO 4: Imprimir un valor predefinido
 function saludar(nombre) {
     nombre = nombre || "Desconocido";
     console.log(`Hola ${nombre}`);
 }
 saludar();
 
-EJERCICIO 1.02: Ejemplos de corto circuito OR
+
+Ejercicio 5: Ejemplos de corto circuito OR
 Este es un ejercicio que sirven para aprender que imprimira el navegador
 
 function saludar(nombre) {
@@ -158,20 +155,22 @@ saludar("" || "valor de la derecha");
 saludar(-2 || "valor de la derecha");
 saludar(0 || "valor de la derecha");
 
-Ejercicio3
+Ejercicio 6
 Hace una suma de 2 números asignandoselos en el parentesis, con una función flecha
 let operacion = (num1, num2) => {
     console.log(num1 + num2);
 }
 
-Ejercicio4
+
+Ejercicio 7
 Hace una suma de 2 números asignandoselos en el parentesis, con una función flecha PERO usando return
 let operacion = (num1, num2) => {
     return num1 + num2;
 }
 console.log(operacion(2, 3));
 
-Ejercicio 6 (Otra manera de ejecutar una función guardandola en una variable)
+
+Ejercicio 8 (Otra manera de ejecutar una función guardandola en una variable)
 Toda función devuelve "UNDIFINED", porque todas las funciones tienen un "return aunque no este escrito"
 cuando se tiene una función y no tiene un return "específico", devolverá "undifined"
 Demuestra esto
@@ -182,7 +181,8 @@ let nombre = (nombre) => {
 const almacen = nombre("Ricardo");
 console.log(almacen);
 
-Ejercicio 7
+
+Ejercicio 9
 Regresar 2 valores en un return, primero la manera mala y luego la buena
 
 MALA(solo imprimira el número 2)
@@ -202,7 +202,7 @@ const almacen = nombre("Ricardo");
 console.log(almacen[0], almacen[1]);
 
 ------------------------------------------------------------------------------------------------
-Ejercicio 8 PROTIP
+Ejercicio 10 PROTIP
 Crear una funcion flecha con "return" que "retorne un objeto" y luego resume ese objeto
 const persona = (nombre, apellido) => {
     return {
@@ -220,14 +220,14 @@ const persona = (nombre, apellido) =>
 const caja = persona('Ricardo', 'Garrido');
 console.log(caja);
 ----------------------------------------------------------------------------------------------
-Ejercicio 9
+Ejercicio 11
 Crea una función con una variable por default si alguna vez alguien no rellena el dato
 let saludar = (nombre = "visitante") => {
     return `Hola ${nombre}`;
 }
 console.log(saludar("Sutano"));
 -------------------------------------------------------------------------------------------
-EJERCICIO 10: Crear las 4 funciones anónimas autoinvocadas
+EJERCICIO 12: Crear las 4 funciones anónimas autoinvocadas
 
 //clasica
 (function() {
