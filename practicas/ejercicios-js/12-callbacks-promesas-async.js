@@ -18,6 +18,18 @@ uno();
 
 
 /*
+EJEMPLO EN CALLBACKS
+A menudo necesitas pasar funciones como argumentos a otras funciones,
+como en el caso de los callbacks. 
+Las funciones expresadas son ideales para esto,
+ya que puedes definir la función directamente en el lugar donde la necesitas.
+Por ejemplo, al trabajar con funciones de temporización como setTimeout o addEventListener:
+
+setTimeout(function() {
+  console.log("Esto es un callback después de 2 segundos");
+}, 2000);
+------------------------------------------------------------------------------
+
   Codigo Asincrono bloqueante 
 (() => {
     console.log("Codigo SIncrono");
