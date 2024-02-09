@@ -1,3 +1,6 @@
+const arreglo = [1, 2, 3, 4];
+let arreglo2 = [...arreglo, 5];
+console.log(arreglo2);
 /*
 JON MIRCHA: LISTO
 
@@ -10,18 +13,18 @@ CHATGPT
 Rest y Spread son dos características de JavaScript que se introdujeron en la versión ES6 (también conocida como ES2015) y que permiten trabajar con arrays y objetos de una manera más fácil y elegante.
 
 Rest:
-Permite empaquetar múltiples elementos en un array. 
+Permite "empaquetar" múltiples elementos en un array. 
 En una función, el Rest permite aceptar cualquier número de argumentos y empaquetarlos en un array.
 Se utiliza el operador de tres puntos (...) para indicar que queremos empaquetar los elementos restantes en un array.
 La capacidad de tener parametros infinitos
 
 Spread:
-Permite desempaquetar elementos de un array o un objeto.
+Permite "desempaquetar" elementos de un array o un objeto.
 Se utiliza el operador de tres puntos (...) para indicar que queremos desempaquetar los elementos. 
 
 Parametros REST:
--Es una sintaxis, cuando lo pongo como argumento dentro de una función y quiere decir
- "Une todos los argumentos en una sola variable y transformalo como un areglo"
+-Es una sintaxis, cuando lo ingresas como argumento dentro de una función y quiere decir
+ "Une todos los argumentos en una sola variable y transformalo como un arreglo"
 -no pueden llevar nada después de ellos y sirven para poder mostrar varios datos como un array
 
 Parametros Spread:
@@ -35,15 +38,16 @@ y hacer igualaciones que apunten a diferentes espacios en memoria
 
 Ejemplos:
 
-Ejercicio 1:
+Ejercicio 1: Si pones "numbers", te imprime un "array" con 5 datos, pero si pones los 3 puntos
+imprimira los datos
 const numbers = [1, 2, 3, 4, 5];
 console.log(...numbers); // Output: 1 2 3 4 5
-
-Ejercicio2:
+-----------------------------------------------------------------------
+Ejercicio2: 
 const person = { name: 'John', age: 30 };
 const clone = { ...person };
 console.log(clone); // Output: { name: 'John', age: 30 }
-
+------------------------------------------------------------------------
 
 Ejercicio 3:
 const persona = {
@@ -58,30 +62,15 @@ const persona = {
 const persona2 = {...persona };
 
 console.log(persona2);
-
+-------------------------------------------------------------------------------
 
 Ejercicio 4 : SPREAD, copiar un array y ponerlo dentro de otro
 const arreglo = [1, 2, 3, 4];
 let arreglo2 = [...arreglo, 5];
 console.log(arreglo2);
+--------------------------------------------------------------------------------
 
-
-Ejercicio 5: Imprime una función utilizando parametro REST
-const mostrarDatos = (...datos) => {
-    console.log(...datos);
-}
-mostrarDatos('Carlos', 23, 'correo@correo.com', 'Mexico');
-
-
-Ejercicio 6: Imprime datos de la función utilizando parametro spread
-const mostrarDatos = (...arreglo) => {
-    console.log(arreglo);
-}
-let arreglo = ['Carlos', 23, 'correo@correo.com', 'Mexico'];
-mostrarDatos(...arreglo);
-
-
-EJERCICIO 7: Escribe 2 arreglos y Unelos usando SPREAD
+EJERCICIO 5: Escribe 2 arreglos y Unelos usando SPREAD
 const arr1 = [1, 2, 3, 4, 5];
 const arr2 = [6, 7, 8, 9, 0];
 const arr3 = [...arr1, ...arr2];
@@ -89,7 +78,7 @@ console.log(arr3);
 console.log(typeof(arr3));
 
 
-Ejercicio 8 
+Ejercicio 6 
 PARTE 1:Esto sobre escribe el valor en ambos objetos, esto es un problema, se solucionara en la parte 2
 let juan = { nombre: 'Juan' };
 let ana = juan;
@@ -109,7 +98,7 @@ Esto solo cambia el objeto ana y no afecta al objeto juan, ya que ana y juan son
 console.log( juan);
 
 
-EJERCICIO 9
+EJERCICIO 7
 Quien sabe que hacia esto aquí
 const frutas = ['Manzana', 'Pera', 'Piña'];
 const otrasFrutas = [...frutas];
@@ -119,84 +108,5 @@ console.table({ frutas, otrasFrutas });
 //parametro rest: Es una sintaxis, cuando lo pongo como argumento dentro de una función, ES UN PARAMETRO REST, y quiere decir "Une todos los argumentos en una sola variable y transformalo como un areglo"
 
 
-Ejercicio 10: Escribe una función que use el parámetro rest para tomar un número indefinido de
-argumentos (todos números) y devuelva la suma de todos estos números.
-function suma(...numeros) {
-  let total = 0;
-  for (let numero of numeros) {
-    total += numero;
-  }
-  return total;
-}
-
-// Prueba la función
-console.log(suma(1, 2, 3)); // Debería imprimir 6
-console.log(suma(10, 20, 30, 40)); // Debería imprimir 100
-
-
-Ejercicio 11: Concatenación de Cadenas
-Crea una función que use el parámetro rest para aceptar un número indefinido de cadenas de texto y
-las concatene en una sola cadena, separando cada una por un espacio.
-function concatenaCadenas(...cadenas) {
-  let resultado = '';
-  for (let cadena of cadenas) {
-    if (resultado) {
-      resultado += ' ';
-    }
-    resultado += cadena;
-  }
-  return resultado;
-}
-
-// Prueba la función
-console.log(concatenaCadenas("Hola", "mundo")); // Debería imprimir "Hola mundo"
-console.log(concatenaCadenas("Este", "es", "un", "ejemplo")); // Debería imprimir "Este es un ejemplo"
-
----------------------------------------------------------------------
-Ejercicio 12 PROTIP
-Crear una función con parametros REST,
-pasa 4 argumentos en la función, la función debe "retornar" solo 2 valores, pero en esos 2 valores deben venir los 4
-
-let persona = (nombre, ...args) => {
-    return [nombre, args];
-}
-console.log(persona("Ricardo", true, 32, ["Perro", "Canada"]));
-----------------------------------------------------------------------------
-Ejercicio 13 PROTIP
-Deestructuración: sirve para darle nombres a los valores que tiene un arreglo, en vez de crear una variable por cada posicion del arreglo. Ejemplo
-let persona = (...args) => {
-    return args;
-}
-
-const [nombre, soltero, edad, aficiones] = persona("Ricardo", true, 32, ["Perro", "Canada"]);
-console.log(aficiones);
 -------------------------------------------------------------------------------------
-Ejercicio 14 PROTIP
-Deestructuración con un objeto RESUMIDO
-const persona = (nombre, apellido) =>
-    ({ nombre, apellido })
-
-const { nombre } = persona('Ricardo', 'Garrido');
-console.log({ nombre });
-
-
-Ejercicio 15
-Parte1
-const cambiarNombre = (persona) => {
-    persona.nombre = 'Tony'
-    return persona;
-}
-let peter = { nombre: 'Peter' };
-let tony = cambiarNombre(peter);
-console.log(peter, tony);
-
-Parte2
-const cambiarNombre = ({...persona }) => {
-    persona.nombre = 'Tony'
-    return persona;
-}
-let peter = { nombre: 'Peter' };
-let tony = cambiarNombre(peter);
-console.log(peter, tony);
-
 */
