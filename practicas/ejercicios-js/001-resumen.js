@@ -31,12 +31,13 @@ TEMAS Generales, sin entrar en detalles
 3-objetos
 4-if-else
 5-if shorts
-6-for(arrays) y while
-7-for in(objetos)
-8-for-of
-9-for con if
--funciones normales
--funciones flecha
+6-try-catch
+7-for(arrays) y while
+8-for in(objetos)
+9-for-of
+10-for con if
+11-funciones normales
+12-funciones flecha
 --------------------(Ordenar hasta aquí, después vemos lo demás, porque seguro saldrán más cosas)
 -destructuración
 -Parametros rest/spread
