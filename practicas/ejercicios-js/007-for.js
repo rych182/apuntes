@@ -39,7 +39,16 @@ que pueden ser difíciles de comprender sin una base sólida en los conceptos m�
 */
 
 /* 
+ ====================================================================================
+                                Ejercicios con WHILE
+ 
+ Ejercicio 1: imprimir de 1 en 1 hasta que se cumpla la condición
 
+ let x = 0;
+while (x < 17) {
+    console.log(x);
+    x++;
+}
 =====================================================================================
 EJERCICIOS CON DO-WHILE
 EJERCICIO 1:Haz un ciclo con do-while

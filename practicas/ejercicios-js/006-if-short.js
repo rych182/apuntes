@@ -18,10 +18,6 @@ a veces pueden ser más abstractas y complicadas de entender para alguien que re
 Las funciones pueden involucrar conceptos como ámbito de variables, retorno de valores y parámetros, 
 que pueden ser difíciles de comprender sin una base sólida en los conceptos más básicos como las condiciones y bucles.
 
-
-
-
-
 // '?' es 'if' ,':' es el 'else'
 //if (nombre === undefined) { nombre = "visitante" } otra manera de hacer un IF
 
