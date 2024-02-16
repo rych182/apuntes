@@ -1,3 +1,14 @@
+//JON MIRCHA CHAPTER 9: NULL, UNDIFINED Y NAN: LISTO
+
+//Null:Representa un valor ausente, es decir, una variable que no tiene valor PERO se utiliza
+//para indicar la ausencia de un valor asignado de manera "intencional", para decir que "esta vacía".
+//-------------------------------------------------------------------------------------------------------------
+//Undifined:Representa un valor ausente, es decir, una variable que no tiene valor PERO esta es una variable que no ha sido inicializada.
+//Osea una variable que no se le asigno valor y que aparte no se le asigno ninguno cuando se creo,
+//entonces cuando javascript detecta una variable no tiene valor, le asigna "undefined"
+//-------------------------------------------------------------------------------------------------------------
+//NaN: cuando quieres hacer una operación aritmetica con un dato que no es un número.
+
 //primer dato lo toma como un número que hace una operación
 //True y False se toman como 1 y 0
 //Undifined NO ES un número, define algo que no es un valor
@@ -5,10 +16,11 @@
 //Infinity es un valor especial que se utiliza para representar matemáticamente un número que es mayor
 //que cualquier otro número posible en JavaScript.Infinity es un tipo de dato primitivo(number)
 
-//null se utiliza específicamente para indicar la ausencia de un valor asignado de manera intencional.
+//null se utiliza específicamente para indicar la ausencia de un valor asignado de manera "intencional", para decir que "esta vacía".
 //null es diferente de undefined. undefined se utiliza cuando una variable no tiene un valor asignado o cuando se intenta acceder a una propiedad inexistente
 
-/* JavaScript interpreta esto como una operación que tiende hacia el infinito positivo o negativo, 
+/* Explicación infinity
+JavaScript interpreta esto como una operación que tiende hacia el infinito positivo o negativo, 
 dependiendo del signo del número. En este caso específico,
 true se convierte internamente en 1 al ser tratado como un número en una operación matemática,
 y null es interpretado como 0 en este contexto. Entonces, 1 / 0 resulta en Infinity.
@@ -77,6 +89,7 @@ Null.
 ---------
 Object: Es un tipo de dato "no primitivo",  llamado Object, que puede almacenar colecciones de datos y funciones.
 funciones: son un tipo de dato "no ´primitivo"
+clases:
 ---------
 "use strict"
 Es una opción disponible en JavaScript que restringe ciertas acciones,

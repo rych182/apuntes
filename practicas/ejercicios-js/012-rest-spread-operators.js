@@ -114,4 +114,13 @@ Esto solo cambia el objeto ana y no afecta al objeto juan, ya que ana y juan son
 console.log( juan);
 
 -------------------------------------------------------------------------------------
+
+en términos generales, la ubicación de la destructuración, rest y spread en la posición 6 de tu road map parece razonable desde el punto de vista del "contexto de aprendizaje". Aquí hay algunas razones para respaldar esta decisión:
+
+    Preparación con funciones: Destructuración, rest y spread a menudo se utilizan en conjunto con funciones, especialmente al trabajar con parámetros de función. Colocar estos temas después de las funciones permite a los estudiantes comprender primero cómo funcionan las funciones antes de introducir conceptos relacionados.
+
+    Sintaxis de desestructuración: La desestructuración es una característica importante, pero puede ser más fácil de comprender una vez que los estudiantes tienen una sólida comprensión de cómo funcionan las variables y los tipos de datos.
+
+    Relación con arrays y objetos: La destructuración, rest y spread se utilizan comúnmente con arrays y objetos. Si ya has cubierto variables y tipos de datos, los estudiantes tendrán una base para entender cómo estas características trabajan con estructuras de datos más complejas.
+
 */

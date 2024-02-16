@@ -1,4 +1,7 @@
 /*
+
+Jon Mircha:
+
 Funciones(definicion): bloque de código autocontenido, independiente al scope o ambito global(tiene su propio scope),
  se definen 1 sola vez, que se puede ejecutar en cualquier momento y reutilizarla,
  puede o no recibir parametros(datos).
