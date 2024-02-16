@@ -9,8 +9,8 @@ ROADMAP según yo:
 1-Variables y tipos de datos
 2-Condicionales
 3-Bucles
-4-Funciones
-5-Destructuración, rest y spread
+4-Funciones (tradicional y arrow functions)
+5-this
 6-Callbacks
 7-Closures
 8-Promesas
@@ -22,7 +22,9 @@ ROADMAP según yo:
 14-Clases
 15-NPM
 16-jQuery
-17-React
+17-Destructuración, rest y spread
+18-BigInt y Symbol
+19-Vue JS
 
 TEMAS Generales, sin entrar en detalles
 
@@ -32,7 +34,7 @@ TEMAS Generales, sin entrar en detalles
 4-if-else
 5-if shorts
 6-try-catch
-7-for(arrays) y while
+7-for(arrays) y while-do-while
 8-for in(objetos)
 9-for-of
 10-for con if
