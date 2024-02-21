@@ -286,30 +286,29 @@ const perro = { //Aquí nos devuelve el objeto "windows" del navegador
 perro.saludar();
 ----------------------------------------------------------------
 
-Ejercicio 0
+Ejercicio 18
 funcion flecha más básica pasando parametros
 const saludar = () => console.log("ric");
 saludar();
 
-Ejercicio 0.1
+Ejercicio 19
 funcion flecha más básica pasando parametros
 const saludar = (name) => console.log(name);
 saludar("ric");
 
-Ejercicio 0.2
+Ejercicio 20
 funcion flecha más básica pasando parametros y reduciendo el código
 const saludar = name => console.log(name);//Esto es un return implicito
 saludar("ric");
 
 
-
-Ejercicio 0.3
+Ejercicio 21
 Función flecha, suma sin return
 let suma =(a,b)=>a +b;
 suma(2,3);
 
 
-Ejercicio 1
+Ejercicio 22
  Hacer una función que cree un objeto
  let crearObjeto = (nombre, edad) => {
      return {
@@ -319,7 +318,7 @@ Ejercicio 1
  }
  console.log(crearObjeto("Ric", 33));
 
-Ejercicio 2
+Ejercicio 23
  Resumir el codigo del ejercicio 26
  let crearObjeto = (nombre, edad) => {
      return {
@@ -330,8 +329,7 @@ Ejercicio 2
  console.log(crearObjeto("Ric", 33));
 
 
-
-EJERCICIO 3
+EJERCICIO 24
  Agregar una funcion dentro del objeto del ejercicio 26 y ejecutarla
  let crearObjeto = (nombre, edad) => {
      return {
@@ -344,8 +342,7 @@ EJERCICIO 3
  }
  console.log(crearObjeto("Ric", 33).imprimir());
 
-Ejercicio 4
- Resumir la función dentro del objeto del ejercicio 27
+Ejercicio 25: Resumir la función dentro del objeto del ejercicio 27
  let crearObjeto = (nombre, edad) => {
      return {
          nombre,
@@ -358,21 +355,18 @@ Ejercicio 4
  console.log(crearObjeto("Ric", 33).imprimir());
 
 
-
-
-
-Ejercicio 18: Imprimir mi nombre con una función flecha
+Ejercicio 26: Imprimir mi nombre con una función flecha
 let nombre = () => {
     console.log("Ricardo");
 }
 nombre();
 
-Ejercicio 19: imprimir tu nombre con una función autoejecutable
+Ejercicio 27: imprimir tu nombre con una función autoejecutable
 (() => {
     console.log("rIC");
 })()
 
-EJERCICIO 20: Crear una funcion anónima autoinvocada que reciba parametros
+EJERCICIO 28: Crear una funcion anónima autoinvocada que reciba parametros
 (function(w, d, c) {
     console.log("Soy una función autoinvocada");
     console.log(w);
@@ -382,7 +376,7 @@ EJERCICIO 20: Crear una funcion anónima autoinvocada que reciba parametros
 })(window, document, console)
 
 
-EJERCICIO 21: Imprimir un valor predefinido
+EJERCICIO 29: Imprimir un valor predefinido
 function saludar(nombre) {
     nombre = nombre || "Desconocido";
     console.log(`Hola ${nombre}`);
@@ -390,7 +384,7 @@ function saludar(nombre) {
 saludar();
 
 
-Ejercicio 22: Ejemplos de corto circuito OR
+Ejercicio 30: Ejemplos de corto circuito OR
 Este es un ejercicio que sirven para aprender que imprimira el navegador
 
 function saludar(nombre) {
@@ -409,14 +403,14 @@ saludar(-2 || "valor de la derecha");
 saludar(0 || "valor de la derecha");
 ---------------------------------------------------------------------------
 
-Ejercicio 23
+Ejercicio 31
 Hace una suma de 2 números asignandoselos en el parentesis, con una función flecha
 let operacion = (num1, num2) => {
     console.log(num1 + num2);
 }
 ---------------------------------------------------------------------------------------
 
-Ejercicio 24
+Ejercicio 32
 Hace una suma de 2 números asignandoselos en el parentesis, con una función flecha PERO usando return
 
 let operacion = (num1, num2) => {
@@ -425,7 +419,7 @@ let operacion = (num1, num2) => {
 console.log(operacion(2, 3));
 --------------------------------------------------------------------------------------------------------
 
-Ejercicio 25 (Otra manera de ejecutar una función guardandola en una variable)
+Ejercicio 33 (Otra manera de ejecutar una función guardandola en una variable)
 Toda función devuelve "UNDIFINED", porque todas las funciones tienen un "return aunque no este escrito"
 cuando se tiene una función y no tiene un return "específico", devolverá "undifined"
 Demuestra esto
@@ -437,7 +431,7 @@ const almacen = nombre("Ricardo");
 console.log(almacen);
 ------------------------------------------------------------------------------------------------------------
 
-Ejercicio 26
+Ejercicio 34
 Regresar 2 valores en un return, primero la manera mala y luego la buena
 
 MALA(solo imprimira el número 2)
@@ -457,7 +451,7 @@ const almacen = nombre("Ricardo");
 console.log(almacen[0], almacen[1]);
 
 ------------------------------------------------------------------------------------------------
-Ejercicio 27 PROTIP
+Ejercicio 35 PROTIP
 Crear una funcion flecha con "return" que "retorne un objeto" y luego resume ese objeto
 const persona = (nombre, apellido) => {
     return {
@@ -475,14 +469,14 @@ const persona = (nombre, apellido) =>
 const caja = persona('Ricardo', 'Garrido');
 console.log(caja);
 ----------------------------------------------------------------------------------------------
-Ejercicio 28
+Ejercicio 36
 Crea una función con una variable por default si alguna vez alguien no rellena el dato
 let saludar = (nombre = "visitante") => {
     return `Hola ${nombre}`;
 }
 console.log(saludar("Sutano"));
 -------------------------------------------------------------------------------------------
-EJERCICIO 29: Crear las 4 funciones anónimas autoinvocadas
+EJERCICIO 37: Crear las 4 funciones anónimas autoinvocadas
 
 //clasica
 (function() {
