@@ -1,3 +1,6 @@
+var miCadena = "Hola, mundo!";
+var miCadenaObjeto = new String("Hola, mundo!");
+console.log(typeof miCadenaObjeto)
 
 /*
 
