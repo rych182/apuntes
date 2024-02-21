@@ -98,6 +98,31 @@ console.log(objeto.nombreYapellido(1)); // Esto mostrará "mengano Garrido"
 console.log(objeto.nombreYapellido(0)); // Esto mostrará "fulano Garrido"
 console.log(objeto.nombreYapellido(3)); // Esto mostrará "Amigo no encontrado"
 -----------------------------------------------------------------------------------------
+Ejemplo(con función antigua)
+function saludar() { //el objeto this se vuelve "window" del navegador
+    console.log(this); 
+}
+saludar();
+
+Ejemplo(con un objeto de javascript que dentro tiene una función vieja)
+const perro = { //aquí el this nos devuelve el objeto
+    nombre: "docky",
+    saludar: function() {
+        console.log(this);
+    }
+}
+perro.saludar();
+
+
+Ejemplo(objeto con arrow function)
+const perro = { //Aquí nos devuelve el objeto "windows" del navegador
+    nombre: "docky", //Las arrow functions capturan el contexto del objeto en el que se encuentran
+    saludar: () => {
+        console.log(this);
+    }
+}
+perro.saludar();
+
 
 
 */

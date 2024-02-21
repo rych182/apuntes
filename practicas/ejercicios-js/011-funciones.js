@@ -1,7 +1,6 @@
 var miCadena = "Hola, mundo!";
 var miCadenaObjeto = new String("Hola, mundo!");
 console.log(typeof miCadenaObjeto)
-
 /*
 
 Jon Mircha: CAPITULO TERMINADO
@@ -243,21 +242,137 @@ console.log(operacion(2, 3)); // Suma o multiplicación según la condición
 
 
  ---------------------------------------------------------------------------------------------------------------
+Ejercicio 17:
+ function sum(a, b) {
+     return a + b;
+ }
+console.log(sum(2, 3)); // Output: 5
+
+Arrow functions: 
+-Es una nueva forma de declarar "funciones anónimas expresadas"(las que van dentro de variables)
+-Capturan el objeto dentro del contexto en el que se encuentren
+-NOTA: hay que tener mucho cuidado con utilizar arrow functions para declarar metodos dentro de objetos literales
+porque tendriamos el problema del this que toma el contexto del objeto, pero a su vez es una ventaja por que
+hereda el contexto de donde se encuentra "su objeto padre"
+-NOTA: Las arrow functions son muy importantes en react, por ejemplo si creamos un componente basado en clases, y 
+generamos metodos, que queremos asociar a algún evento de ese componente, no encuentra el this hay que hacer un proceso
+que se llama "enlazar el contexto" a travez de "bind,call,apply"(que son funciones que nos permiten enlazar otros 
+contextos)a un metodo o un objeto y ahí es muy comodo que para no estar usando "bind" en cada uno de los metodos 
+en el constructor de la clase, es más fácil usar arrow functions 
+
+Ejemplo(con función antigua)
+function saludar() { //el objeto this se vuelve "window" del navegador
+    console.log(this); 
+}
+saludar();
+
+Ejemplo(con un objeto de javascript que dentro tiene una función vieja)
+const perro = { //aquí el this nos devuelve el objeto
+    nombre: "docky",
+    saludar: function() {
+        console.log(this);
+    }
+}
+perro.saludar();
 
 
-Ejercicio 17
-Imprimir mi nombre con una función flecha
+Ejemplo(objeto con arrow function)
+const perro = { //Aquí nos devuelve el objeto "windows" del navegador
+    nombre: "docky", //Las arrow functions capturan el contexto del objeto en el que se encuentran
+    saludar: () => {
+        console.log(this);
+    }
+}
+perro.saludar();
+----------------------------------------------------------------
+
+Ejercicio 0
+funcion flecha más básica pasando parametros
+const saludar = () => console.log("ric");
+saludar();
+
+Ejercicio 0.1
+funcion flecha más básica pasando parametros
+const saludar = (name) => console.log(name);
+saludar("ric");
+
+Ejercicio 0.2
+funcion flecha más básica pasando parametros y reduciendo el código
+const saludar = name => console.log(name);//Esto es un return implicito
+saludar("ric");
+
+
+
+Ejercicio 0.3
+Función flecha, suma sin return
+let suma =(a,b)=>a +b;
+suma(2,3);
+
+
+Ejercicio 1
+ Hacer una función que cree un objeto
+ let crearObjeto = (nombre, edad) => {
+     return {
+         name: nombre,
+         age: edad
+     };
+ }
+ console.log(crearObjeto("Ric", 33));
+
+Ejercicio 2
+ Resumir el codigo del ejercicio 26
+ let crearObjeto = (nombre, edad) => {
+     return {
+         nombre,
+         edad
+     };
+ }
+ console.log(crearObjeto("Ric", 33));
+
+
+
+EJERCICIO 3
+ Agregar una funcion dentro del objeto del ejercicio 26 y ejecutarla
+ let crearObjeto = (nombre, edad) => {
+     return {
+         nombre,
+         edad,
+         imprimir: () => {
+             return `My name is ${nombre} y tengo ${edad}`;
+         }
+     };
+ }
+ console.log(crearObjeto("Ric", 33).imprimir());
+
+Ejercicio 4
+ Resumir la función dentro del objeto del ejercicio 27
+ let crearObjeto = (nombre, edad) => {
+     return {
+         nombre,
+         edad,
+         imprimir() {
+             return `My name is ${nombre} y tengo ${edad}`;
+         }
+     };
+ }
+ console.log(crearObjeto("Ric", 33).imprimir());
+
+
+
+
+
+Ejercicio 18: Imprimir mi nombre con una función flecha
 let nombre = () => {
     console.log("Ricardo");
 }
 nombre();
 
-Ejercicio 18: imprimir tu nombre con una función autoejecutable
+Ejercicio 19: imprimir tu nombre con una función autoejecutable
 (() => {
     console.log("rIC");
 })()
 
-EJERCICIO 19: Crear una funcion anónima autoinvocada que reciba parametros
+EJERCICIO 20: Crear una funcion anónima autoinvocada que reciba parametros
 (function(w, d, c) {
     console.log("Soy una función autoinvocada");
     console.log(w);
@@ -267,7 +382,7 @@ EJERCICIO 19: Crear una funcion anónima autoinvocada que reciba parametros
 })(window, document, console)
 
 
-EJERCICIO 20: Imprimir un valor predefinido
+EJERCICIO 21: Imprimir un valor predefinido
 function saludar(nombre) {
     nombre = nombre || "Desconocido";
     console.log(`Hola ${nombre}`);
@@ -275,7 +390,7 @@ function saludar(nombre) {
 saludar();
 
 
-Ejercicio 21: Ejemplos de corto circuito OR
+Ejercicio 22: Ejemplos de corto circuito OR
 Este es un ejercicio que sirven para aprender que imprimira el navegador
 
 function saludar(nombre) {
@@ -294,14 +409,14 @@ saludar(-2 || "valor de la derecha");
 saludar(0 || "valor de la derecha");
 ---------------------------------------------------------------------------
 
-Ejercicio 22
+Ejercicio 23
 Hace una suma de 2 números asignandoselos en el parentesis, con una función flecha
 let operacion = (num1, num2) => {
     console.log(num1 + num2);
 }
 ---------------------------------------------------------------------------------------
 
-Ejercicio 23
+Ejercicio 24
 Hace una suma de 2 números asignandoselos en el parentesis, con una función flecha PERO usando return
 
 let operacion = (num1, num2) => {
@@ -310,7 +425,7 @@ let operacion = (num1, num2) => {
 console.log(operacion(2, 3));
 --------------------------------------------------------------------------------------------------------
 
-Ejercicio 24 (Otra manera de ejecutar una función guardandola en una variable)
+Ejercicio 25 (Otra manera de ejecutar una función guardandola en una variable)
 Toda función devuelve "UNDIFINED", porque todas las funciones tienen un "return aunque no este escrito"
 cuando se tiene una función y no tiene un return "específico", devolverá "undifined"
 Demuestra esto
@@ -322,7 +437,7 @@ const almacen = nombre("Ricardo");
 console.log(almacen);
 ------------------------------------------------------------------------------------------------------------
 
-Ejercicio 25
+Ejercicio 26
 Regresar 2 valores en un return, primero la manera mala y luego la buena
 
 MALA(solo imprimira el número 2)
@@ -342,7 +457,7 @@ const almacen = nombre("Ricardo");
 console.log(almacen[0], almacen[1]);
 
 ------------------------------------------------------------------------------------------------
-Ejercicio 26 PROTIP
+Ejercicio 27 PROTIP
 Crear una funcion flecha con "return" que "retorne un objeto" y luego resume ese objeto
 const persona = (nombre, apellido) => {
     return {
@@ -360,14 +475,14 @@ const persona = (nombre, apellido) =>
 const caja = persona('Ricardo', 'Garrido');
 console.log(caja);
 ----------------------------------------------------------------------------------------------
-Ejercicio 27
+Ejercicio 28
 Crea una función con una variable por default si alguna vez alguien no rellena el dato
 let saludar = (nombre = "visitante") => {
     return `Hola ${nombre}`;
 }
 console.log(saludar("Sutano"));
 -------------------------------------------------------------------------------------------
-EJERCICIO 28: Crear las 4 funciones anónimas autoinvocadas
+EJERCICIO 29: Crear las 4 funciones anónimas autoinvocadas
 
 //clasica
 (function() {
