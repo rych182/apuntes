@@ -6,25 +6,37 @@ rápido, luego ya veo.
 3-Checar todos los cursos de Javascript que tengo, para ver con que sigo
 
 ROADMAP según yo:
-1-Variables y tipos de datos
-2-Condicionales
-3-Bucles
-4-Funciones (tradicional y arrow functions)
-5-this
-6-Callbacks
-7-Closures
-8-Promesas
-9-DOM
-10-Consumo de APIs
-11-Ajax
-12-Async/await
-13-Prototipos
-14-Clases
-15-NPM
-16-jQuery
-17-Destructuración, rest y spread
-18-BigInt y Symbol
-19-Vue JS
+-Variables y constantes LISTO
+1-Tipos de datos LISTO
+2-arrays LISTO
+3-objetos LISTO
+4-if-else LISTO
+5-TIpos de operadores LISTO
+6-if shorts
+7-try-catch LISTO
+8-while
+9-do-while
+10-for 
+11-for of
+12-for in
+13-funciones
+14-funciones flecha
+15-this
+16-Destructuración (Pueden ir aquí )
+17-Rest & Spread (Pueden ir aquí )
+18-Prototipos
+19-clases y herencia
+20-callback
+21-Promesas
+22-DOm
+23-Consumo de API's
+24-Ajax
+25-Async/await
+26-NPM
+27-JQuery
+28-Destructuracion, rest & spread (Pueden ir aquí )
+29-BigInt & Symbol
+30-Vue JS
 
 TEMAS Generales, sin entrar en detalles
 
