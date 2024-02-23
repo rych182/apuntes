@@ -1,13 +1,15 @@
 /*
-EJERCICIO 1: Agrega datos a una constante objeto
-const unPinshiObjeto = {
-    nombre: 'Pedro',
-    apellido: "Martinez",
-    edad: 24
-}
-unPinshiObjeto.correo = "correo@correo.com";
-console.log(unPinshiObjeto);
+JON MIRCHA: LISTO
+Ejemplo de objetos literales:(Nueva caracteristica en ES6)
 
+ const dog = {
+    nombre,
+    edad,
+    raza: "callejero",
+    ladrar(){ //se puede poner directamente la función, sin tener que ponerle ":" y la palabra reservada "function"
+        console.log("gua gua");
+    }
+ }
 ----------------------------------------------------------
 Ejercicio 3 Crear un objeto, mostrar su contenido Y BORRAR una propiedad del objeto 
 let persona = {

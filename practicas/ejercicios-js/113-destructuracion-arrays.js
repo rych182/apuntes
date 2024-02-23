@@ -1,3 +1,5 @@
+
+//JON MIRCHA: LISTO
 //console.log(profesion, edad, estadoCivil);
 
 const palabra = "hola";
@@ -66,24 +68,7 @@ Al probar la función con diferentes objetos que representen los datos del formu
 
 
 ------------------------------------------------------------------------------------------------------
-Ejemplo 1: Destructuración de objetos
-const obj = { a: 3, b: 4 };
-const { a, b } = obj;
-console.log(a); // output: 1
-console.log(b); // output: 2
 
-Ejemplo 2: establecer un valor predeterminado de 0 (si "a" no tuviera un valor)
-const obj = { a: 1 };
-const { a = 0 } = obj;
-console.log(a); // output: 1
-
-Ejemplo 3: estableciendo "varios" valores "predeterminados"
-const obj = { a: 1, b: 2 };
-const { a = 0, b = 0, c = 0, d = 0 } = obj;
-console.log(a); // output: 1
-console.log(b); // output: 2
-console.log(c); // output: 0
-console.log(d); // output: 0
 
 Ejercicio 4, explica la deestructuración
 const numeros = [1, 2, 3];

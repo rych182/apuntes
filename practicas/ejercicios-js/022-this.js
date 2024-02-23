@@ -1,4 +1,9 @@
 /*
+
+Nota: Las arrow functiones capturan el contexto de donde se encuentra
+el objeto, osea lo que está afuera del objeto, normalmente es el objeto window
+osea pueden saltar el contexto en el que están y reconocer el contexto en el que se encuentra su "objeto padre"
+
 OBJETO THIS
 La palabra clave this se refiere al objeto al que pertenece la función que la está utilizando. 
 El valor de this se determina en tiempo de ejecución y depende de cómo se llama a la función y en qué contexto

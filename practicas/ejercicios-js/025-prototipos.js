@@ -6,7 +6,7 @@ En javascript es un poco distinta a la programación orientada a objetos.
 una manera más fácil que nos provee el lenguaje "para poder hacer la programación ORIENTADA A PROTOTIPOS",
 el navegador convertira las clases a funciones prototipicas
 -La POO sus 4 conceptos importantes son:
-    *Clases: un modelo a seguir, como un machote, como un calca
+    *Clases: un modelo a seguir, como un machote, como una calca
     *Objetos: es una instancia de la clase, osease una copia del modelo a seguir
         **Atributos:Es una propiedad del objeto(son variables dentro de un objeto)
         **Metodos: Son las acciones que un objeto puede realizar(son funciones dentro de un objeto). NOTA: por eso las funciones son muy descriptibas

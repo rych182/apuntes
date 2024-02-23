@@ -18,7 +18,7 @@ countries.forEach((country, perro) => {
 })
 
 
-Ejercicio 7: Imprimir un arreglo usando el metodo .forEach();
+Ejercicio 4: Imprimir un arreglo usando el metodo .forEach();
 let colores = ["Azul", "Rojo", "Verde"];
 colores.forEach(function(element, index) {
     console.log(`<li id='${index}'>${element}</li>`);

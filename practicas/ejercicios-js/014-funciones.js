@@ -285,6 +285,22 @@ const perro = { //Aquí nos devuelve el objeto "windows" del navegador
 }
 perro.saludar();
 ----------------------------------------------------------------
+Nota: Las arrow functiones capturan el contexto de donde se encuentra
+el objeto, osea lo que está afuera del objeto, normalmente es el objeto window
+osea pueden saltar el contexto en el que están y reconocer el contexto en el que se encuentra su "objeto padre"
+
+Nota 2: tu no deberías crear arrow functions dentro de un objeto literal, se considera "mala practica",
+usa la función tradicional, de esta manera:
+
+const perro = {
+  nombre: "firulais",
+  ladrar(){ //así mero
+    console.log(this)
+  }
+}
+perro.ladrar();
+
+
 
 Ejercicio 18
 funcion flecha más básica pasando parametros
