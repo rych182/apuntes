@@ -31,30 +31,8 @@ NOTA IMPORTANTE EJERCICIOS: imprimir los 4 console.log, para ver la diferencia e
 /*}
 Ejercicio 1: Comparo todos los objetos(los literales, con los instanciados con la palabra reservada new)
 
-const animal = {
-    nombre: "Perro",
-    accion() {
-        console.log("Ladrar: guagua");
-    }
-}
-
-const animal2 = {
-    nombre: "Gato",
-    accion() {
-        console.log("Maullar: Miau miau");
-    }
-}
-
-Cuando imprimes estos 2 objetos, en la consola de navegador te aparecen sin ningún nombre porque son objetos literales
-y su prototipo es "object"
-
-console.log(animal);
-console.log(animal2);
-
-
-Creando una función constructora
 function Animal(nombre, genero) {
-    atributos, recibiremos su valor por el parametro
+    //atributos, recibiremos su valor por el parametro
     this.nombre = nombre;
     this.genero = genero;
     // Mostrar cmo me marca error de esas 2 maneras
@@ -66,45 +44,117 @@ function Animal(nombre, genero) {
     //La sintaxis de los objetos literales, no aplican cuando haces una función constructora
     //Lo ideal, es que los metodos se saquen de la función constructora y los peguemos al prototipo
     this.sonar = function() {
-        console.log("Haciendo un sonido y mi nombre es:"+" "+ this.nombre)
+        console.log("Hago sonidos porque estoy vivo y mi nombre es:"+" "+ this.nombre)
     }
 }
 
 //Aquí creamos la instancia con la palabra reservada "new" podría ser una instancia de tipo
 // "que le especifiquemos", puede ser "new String" ó "new Array"
 //Yo lo que quiero crear es un objeto con la función constructora "Animal"
-//const Perro = new Animal("Snoopy", "Macho");
-//const Gato = new Animal("Perlita", "Hembra");
+const Snoopy = new Animal("Snoopy", "Macho");
+const LolaBunny = new Animal("LolaBunny", "Hembra");
 
 //Estos 2 objetos aparecen en la consola PERO son algo que se llama "Animal" y su función constructora es "Animal"
-//console.log(Perro);
-//console.log(Gato);
+console.log(Snoopy);
+console.log(LolaBunny);
+
 
 //Todo esto evita que estes copiando y pegando la "estructura de un objeto literal", 
 //si vamos a usar varias instancias de ese tipo que estemos creando, nos conviene usar una función constructora
-*/
 
-/*
+-----------------------------------------------------------------------------------
+
     EJERCICIO 2: FUnción constructora donde asignamos los metodos al prototipo, no a la función como tal 
 //FUnción constructora donde asignamos los metodos al prototipo, no a la función como tal
 function Animal(nombre, genero) {
     this.nombre = nombre;
     this.genero = genero;
 }
-//Estos son los metodos agregados al prototipo de la función constructora, esto va a generar, rendimiento y espacio
+//Estos son los metodos agregados al "prototipo" de la función constructora, esto va a generar, rendimiento y espacio
 //en memoria, si tu despliegas el objeto, te darás cuenta de que no aparecen los metodos, pero si aparecen en el "prototype"
 Animal.prototype.sonar = function() {
-    console.log("Haciendo un sonido y mi nombre es:"+" "+ this.nombre)
+    console.log("Hago sonidos porque estoy vivo");
 }
-Animal.prototype.saludar = function() {
-    console.log("Hola, mi nombre es:"+" "+ this.nombre)
+Animal.prototype.saludar = function(){
+    console.log(`Hola me llamo ${this.nombre}`);
 }
 
-const Perro = new Animal("Snoopy", "Macho");
-const Gato = new Animal("Perlita", "Hembra");
-console.log(Perro)
-Perro.saludar();
-Perro.sonar();
+const Snoopy = new Animal("Snoopy", "Macho");
+const LolaBunny = new Animal("LolaBunny", "Hembra");
+
+console.log(Snoopy);
+console.log(LolaBunny);
+
+Snoopy.sonar();
+Snoopy.saludar();
+
+LolaBunny.sonar();
+LolaBunny.saludar();
 
 COnstructor:es un metodo especial que se ejecuta cuando se crea una nueva instancia de ese objeto 
+
+HERENCIA PROTOTIPICA
+Es la capacidad de poder heredar caracteristicas de un padre a un hijo, se da con las
+clases, pero en JS, se da en "cadena prototipica".
+
+SUper: es un metodo que manda llamar el constructor de la clase padre
+----------------------------------------------------------------------------------------------------------------------
+Ejercicio 3: Ejercicio de herencia prototipica
+La POO en JS no esta basada en clases si no en prototipos
+
+function Animal(nombre, genero) {
+    this.nombre = nombre;
+    this.genero = genero;
+}
+
+Animal.prototype.sonar = function() {
+    console.log("Hago sonidos porque estoy vivo");
+}
+Animal.prototype.saludar = function(){
+    console.log(`Hola me llamo ${this.nombre}`);
+}
+
+//Herencia prototipica
+function Perro(nombre,genero,tamanio) {
+    //aquí le decimos que el elemento padre es Animal, invocas al constructor
+    this.super = Animal;
+    this.super(nombre,genero);
+    this.tamanio = tamanio;
+}
+//asignando al prototipo de Perro, una instancia de animal
+//Perro esta heredando de ANimal
+Perro.prototype = new Animal();
+//Generandole su funcion constructora
+Perro.prototype.constructor = Perro;
+
+//SObreescritura de metodos del prototipo padre en el hijo
+Perro.prototype.sonar= function(){
+    console.log("SOy un perro y mi sonido es un ladrido");
+}
+Perro.prototype.ladrar = function(){
+    console.log("GUa gua")
+}
+
+//Aquí cambio la instancia de "Animal" por "Perro", y le agregamos el tamaño
+const Snoopy = new Perro("Snoopy", "Macho","Mediano");
+const LolaBunny = new Animal("LolaBunny", "Hembra");
+
+//Analizamos el console.log de snoopy, ya no dice animal, dice Perro a comparación
+//del de LolaBunny y en sus prototipos están los metodos sonar y ladrar
+//también dos scopes(object y animal) y la función que "saludar" que no he usado
+console.log(Snoopy);
+console.log(LolaBunny);
+
+//Aquí sobreescribí el metodo "sonar"
+Snoopy.sonar();
+Snoopy.saludar();
+//EL nuevo metodo que le creamos a Snoopy
+Snoopy.ladrar();
+
+LolaBunny.sonar();
+LolaBunny.saludar();
+
 */
+
+
+
