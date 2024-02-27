@@ -102,7 +102,7 @@ if (efectivo >= pago) {
 
 
 EJERCICIO 5
-Cualquier edad puede entrar menos 18
+Cualquier edad puede entrar menos 18(USANDO el operandor "diferente")
 let edad = 17;
 if (edad != 18) {
     console.log("Puede entrar");
