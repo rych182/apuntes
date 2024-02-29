@@ -1,4 +1,7 @@
 /*
+el dom representa la ventana del navegador
+el document es la representacion del documento html atravees del javascript y así es como atraves
+de los nodos y elementos, podemos acceder mediante javascript a las etiquetas HTML
 El DOM es una API de Javascript del navegador, es lo que nos permite Manejar HTML con Javascript atraves de los navegadores
 Todo lo que imprimes es un elemento del DOM
 El objeto GLOBAL de los navegadores es WINDOW

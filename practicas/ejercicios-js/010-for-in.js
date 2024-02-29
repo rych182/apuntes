@@ -2,10 +2,10 @@
 /*
 ========================================================================================
 Explicación FOR IN
-La elección más común para utilizar for...in en JavaScript es para iterar sobre las propiedades de un objeto.
+La elección más común para utilizar for...in en JavaScript es para iterar sobre las propiedades de un "objeto".
 
 -Se utiliza para iterar sobre las propiedades enumerables de un objeto, incluyendo propiedades heredadas del prototipo.
--Devuelve las claves (o índices en el caso de arrays) en lugar de los valores.
+-Devuelve los índices (en el caso de arrays) en lugar de los valores.
 
 
                                 EJERCICIOS CON FOR IN
@@ -28,7 +28,7 @@ for (const propiedad in objeto) {
     console.log(`Key: ${propiedad} --- Value: ${objeto[propiedad]}`);
 }
 
-Ejercicio 2, haz el ejercicio 1 pero usando FOR IN, 
+Ejercicio 2, recorre el array con for in 
 let countries = ['Mexico', 'USA', 'Canada', 'Japan', 'SOuth Korea'];
 for (let i in countries) {
     console.log(countries[i]);

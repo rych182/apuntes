@@ -20,6 +20,8 @@ find(): Devuelve el primer elemento de la matriz que cumple con la condición es
 findIndex(): Devuelve el índice del primer elemento de la matriz que cumple con la condición especificada en una función de prueba.
 every(): Comprueba si todos los elementos de la matriz pasan la prueba implementada por una función proporcionada.
 some(): Comprueba si al menos un elemento de la matriz pasa la prueba implementada por una función proporcionada.
+
+
 Los métodos de función más comunes para matrices son los siguientes:
 
 Array.from(): Crea una nueva matriz a partir de un objeto similar a una matriz o iterable.

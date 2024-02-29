@@ -3,7 +3,7 @@ For of Explicación
 
 -Se utiliza para iterar sobre elementos iterables, como arrays, strings, mapas, conjuntos, etc.
 -Proporciona una forma más sencilla y legible de recorrer los elementos de una estructura iterable.
--No proporciona acceso directo a los índices o claves, sino a los valores de los elementos.
+-No proporciona acceso directo a los "índices", sino a los valores de los elementos.
 
 
 ===========================================================================================
