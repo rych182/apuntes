@@ -103,6 +103,10 @@ Metodos estaticos: aquel que se puede ejecutar sin necesidad de instanciar la cl
 Metodos especiales "getters y setters", que nos permiten establecer o modificar el valor de 
 una propiedad dentro de una clase 
 
+los getters y setters son una característica de los objetos que te permiten
+definir métodos para obtener y establecer el valor de una propiedad específica de un objeto.
+
+
 Y las cosas que aún "no existen": no podemos tener un clase con atributos o metodos "privados",
 esos sirven para que solo se puedan utilizar dentro del cuerpo de la clase,
 tampoco existen las clases abstractas, y los getters y setters aquí se comportan como
@@ -166,7 +170,6 @@ class Perro extends Animal{
 }
 
 
-
 const mimi = new Animal("Mimi","Hembra");
 const scooby = new Perro("Scooby","Macho","gigante")
 //Te imprime el objeto identifico, y los metodos aparecen en el objeto más primitivo
@@ -197,9 +200,205 @@ console.log(scooby.getRaza);//Aquí ya imprime "gran danes"
 //este setter, modifica el valor de null que tiene la propiedad raza
 //si revisamos los "metodos" en la consola en el "prototipo perro" ahí estan los metodos
 //"getRaza" y "setRaza" pero de tipo get y set
-
-------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
 Ejercicio 4
+PRACTICANDO EL EJERCICIO 3 sin comentarios
+class Animal{
+    constructor(nombre,genero){
+        this.nombre = nombre;
+        this.genero = genero;
+        this.raza = null;
+    }
+    sonar(){
+        console.log("Hago sonidos porque estoy vivo")
+    }
+    saludar(){
+        console.log(`Hola me llamo ${this.nombre}`)
+    }
+}
+class Perro extends Animal{
+    constructor(nombre,genero,tamanio){
+        super(nombre, genero);
+        this.tamanio = tamanio;
+    }
+    sonar(){
+        console.log("SOy un perro y mi sonido es un ladrido");
+    }
+    ladrar(){
+        console.log("GUa gua");
+    }   
+    static queEres(){
+        console.log("Los perros somos animales mamiferos, somos el mejor amigo del hombre");
+    }
+    get getRaza(){//un metodo obtenedor solo "retorna"
+        return this.raza;
+    }
+    set setRaza(raza){//al valor de raza, asignale el parametro que estamos recibiendo entre parentesis
+        this.raza = raza;
+    }
+}
+
+const mimi = new Animal("Mimi","Hembra");
+const scooby = new Perro("Scooby","Macho","gigante")
+
+console.log(mimi)
+mimi.saludar()
+mimi.sonar()
+
+console.log(scooby)
+scooby.saludar()
+
+scooby.sonar()
+scooby.ladrar()
+
+Perro.queEres();
+
+//CHeca como sale error si lo ejecutas como metodo el set
+//scooby.setRaza();
+
+//Aquí verifico su valor
+//console.log(scooby.getRaza) aparecera null
+
+scooby.setRaza = "gran danes"//Aquí lo declaramos
+console.log(scooby.getRaza);//Aquí ya imprime "gran danes"
+-----------------------------------------------------------------------------------------
+Ejercicio 5: MOstrando como se puede usar un getter sin tener forzosamente un setter
+
+class Persona {
+    constructor(nombre, edad) {
+      this.nombre = nombre;
+      this.edad = edad;
+    }
+  
+    // Método para obtener la edad
+    obtenerEdad() {
+      return this.edad;
+    }
+  
+    // Getter para obtener el nombre
+    get obtenerNombre() {
+      return this.nombre;
+    }
+  }
+  
+  const persona1 = new Persona("Juan", 30);
+
+console.log(persona1.obtenerEdad()); // Salida: 30
+console.log(persona1.obtenerNombre); // Salida: Juan
+----------------------------------------------------------------------------
+Ejercicio 6: mostrando como NO se puede modificar una propiedad desde un "getter"
+class Persona {
+    constructor(nombre, edad) {
+      this.nombre = nombre;
+      this.edad = edad;
+    }
+  
+    // Método para obtener la edad
+    obtenerEdad() {
+      return this.edad;
+    }
+  
+    // Getter para obtener el nombre
+    get obtenerNombre() {
+      return this.nombre;
+    }
+  }
+  
+  const persona1 = new Persona("Juan", 30);
+  
+  console.log(persona1.obtenerEdad()); // Salida: 30
+  console.log(persona1.obtenerNombre); // Salida: Juan
+  persona1.obtenerEdad="pedro";
+  console.log(persona1.obtenerNombre);// Salida Juan 
+  -----------------------------------------------------------------------------------------
+  Ejercicio 7: Mostrando como se puede modifica una propiedad desde el "setter"
+  class Persona {
+    constructor(nombre, edad) {
+      this.nombre = nombre;
+      this.edad = edad;
+    }
+  
+    // Método para obtener la edad
+    obtenerEdad() {
+      return this.edad;
+    }
+  
+    // Getter para obtener el nombre
+    get obtenerNombre() {
+      return this.nombre;
+    }
+
+    set darNombre(nombre) {
+        this.nombre = nombre;
+      }
+  }
+  
+  const persona1 = new Persona("Juan", 30);
+  
+  console.log(persona1.obtenerEdad()); // Salida: 30
+  console.log(persona1.obtenerNombre); // Salida: Juan
+  persona1.darNombre="pedro";
+  console.log(persona1.obtenerNombre); //pedro
+
+  El verdadero propósito de un getter es permitir un acceso controlado a una propiedad. 
+Esto significa que puedes realizar validaciones,
+cálculos u otras acciones cada vez que alguien intente acceder a la propiedad.
+Sin embargo, en tu ejemplo, 
+el getter simplemente devuelve el valor de la propiedad nombre sin aplicar ninguna lógica adicional.
+-------------------------------------------------------------------------------------------------------
+Ejercicio 8: quiero que por default me aparezca el tamaño del perro sin que se lo asigne en un parametro
+
+class Animal {
+    constructor(nombre,genero){
+        this.nombre = nombre;
+        this.genero = genero;
+    }
+    sonar(){
+        console.log("hago sonidos porque estoy vivo");
+    }
+    saludar(param){
+        console.log(param)
+    }
+}  
+
+class Perro extends Animal{
+    constructor(nombre,genero,tamanio){
+        super(nombre,genero)
+        this.tamanio = tamanio || "gigante";
+    }
+    saludar(){
+        console.log('SOBREESCRIBIENDO solo porque "puedo"')
+    }
+    ladrar(){
+        console.log("gua gua");
+    }
+    static estatica(){
+        console.log("Soy un metodo estatico");
+    }
+    get getRaza(){
+        return this.raza
+    }
+    set setRaza(raza){
+        this.raza = raza;
+    }
+}
+
+let conejo = new Animal("bugs","masculino");
+let scooby = new Perro("Escubi","macho");
+
+conejo.sonar();
+conejo.saludar("Hola mundo");
+
+scooby.saludar();
+scooby.ladrar();
+
+Perro.estatica()
+
+console.log(scooby.tamanio);
+scooby.setRaza = "gran danes"
+console.log(scooby.getRaza)
+------------------------------------------------------------------------------------------
+Ejercicio 8
 
 class Persona {
     constructor(nombre, edad) {
@@ -256,10 +455,148 @@ console.log(`Nueva Edad: ${persona1.edad}`);
 
 //Esto proporciona un control más preciso sobre cómo se accede y modifica la información de una instancia de la clase Persona.
 
+---------------------------------------------------------------------------------------------------------------------
+PRACTICANDO EL EJERCICIO 3
+class Animal{
+    constructor(nombre,genero){
+        this.nombre = nombre;
+        this.genero = genero;
+        this.raza = null;
+    }
+    sonar(){
+        console.log("Hago sonidos porque estoy vivo")
+    }
+    saludar(){
+        console.log(`Hola me llamo ${this.nombre}`)
+    }
+}
+class Perro extends Animal{
+    constructor(nombre,genero,tamanio){
+        super(nombre, genero);
+        this.tamanio = tamanio;
+    }
+    sonar(){
+        console.log("SOy un perro y mi sonido es un ladrido");
+    }
+    ladrar(){
+        console.log("GUa gua");
+    }   
+    static queEres(){
+        console.log("Los perros somos animales mamiferos, somos el mejor amigo del hombre");
+    }
+    get getRaza(){//un metodo obtenedor solo "retorna"
+        return this.raza;
+    }
+    set setRaza(raza){//al valor de raza, asignale el parametro que estamos recibiendo entre parentesis
+        this.raza = raza;
+    }
+}
+
+const mimi = new Animal("Mimi","Hembra");
+const scooby = new Perro("Scooby","Macho","gigante")
+
+console.log(mimi)
+mimi.saludar()
+mimi.sonar()
+
+console.log(scooby)
+scooby.saludar()
+
+scooby.sonar()
+scooby.ladrar()
+
+Perro.queEres();
+
+//CHeca como sale error si lo ejecutas como metodo el set
+//scooby.setRaza();
+
+//Aquí verifico su valor
+//console.log(scooby.getRaza) aparecera null
+
+scooby.setRaza = "gran danes"//Aquí lo declaramos
+console.log(scooby.getRaza);//Aquí ya imprime "gran danes"
+
+*/
+//Intentos:13 Errores:9 AciertosCompletos:4.
+
+
+/*
+
+
+
+
 
 
 
 */
+
+class Animal {
+    constructor(nombre,genero){
+        this.nombre = nombre;
+        this.genero = genero;
+    }
+    sonar(){
+        console.log("hago sonidos porque estoy vivo");
+    }
+    saludar(param){
+        console.log(param)
+    }
+}  
+
+class Perro extends Animal{
+    constructor(nombre,genero,tamanio){
+        super(nombre,genero)
+        this.tamanio = tamanio || "gigante";
+    }
+    saludar(){
+        console.log('SOBREESCRIBIENDO solo porque "puedo"')
+    }
+    ladrar(){
+        console.log("gua gua");
+    }
+    static estatica(){
+        console.log("Soy un metodo estatico");
+    }
+    get getRaza(){
+        return this.raza
+    }
+    set setRaza(raza){
+        this.raza = raza;
+    }
+}
+
+let conejo = new Animal("bugs","masculino");
+let scooby = new Perro("Escubi","macho");
+
+conejo.sonar();
+conejo.saludar("Hola mundo");
+
+scooby.saludar();
+scooby.ladrar();
+
+Perro.estatica()
+
+console.log(scooby.tamanio);
+scooby.setRaza = "gran danes"
+console.log(scooby.getRaza)
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
 
 
 

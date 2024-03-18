@@ -48,7 +48,7 @@ if (numero1 !== numero2) {
 } else {
   console.log("Los números son iguales en valor y tipo.");
 }
-
+---------------------------------------------------------------
 Ejemplo 2: Usando !=
 const numero1 = 5;
 const numero2 = "5";
