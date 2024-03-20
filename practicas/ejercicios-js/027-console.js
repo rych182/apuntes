@@ -55,8 +55,18 @@ situaciones posibles:
 -cuantas peticiones hizo a una API
 
 for (let i = 0; i <=100; i++) {
-    console.log("codigo for");
+    console.count("codigo for");
     console(i)   
 }
 
+-------------------------------------------------------------------
+Ejercicio 8: haciendo pruebas con console.assert()
+
+
+let x = 3;
+let y = 2;
+let pruebaXY = "X debe ser siempre MENOR que Y";
+//pones una condición y un objeto con las variables
+console.assert(x<y,{x,y,pruebaXY})
+//cuando es correcto no ejecuta nada, pero cuando esta mal, lanza el error
 */

@@ -517,70 +517,54 @@ scooby.setRaza = "gran danes"//Aquí lo declaramos
 console.log(scooby.getRaza);//Aquí ya imprime "gran danes"
 
 */
-//Intentos:13 Errores:9 AciertosCompletos:4.
+//Intentos:15 Errores:10 AciertosCompletos:5.
 
-
-/*
-
-
-
-
-
-
-
-*/
-
-class Animal {
+class Animal{
     constructor(nombre,genero){
         this.nombre = nombre;
         this.genero = genero;
     }
-    sonar(){
+    sonido(){
         console.log("hago sonidos porque estoy vivo");
     }
-    saludar(param){
-        console.log(param)
+    saludar(){
+        console.log("Hola mundo");
     }
-}  
-
+}
 class Perro extends Animal{
     constructor(nombre,genero,tamanio){
-        super(nombre,genero)
-        this.tamanio = tamanio || "gigante";
+        super(nombre,genero);
+        this.tamanio = tamanio;
     }
     saludar(){
-        console.log('SOBREESCRIBIENDO solo porque "puedo"')
+        console.log("estoy modificando este metodo desde la clase hijo")
     }
     ladrar(){
-        console.log("gua gua");
+        console.log("guau guau");
     }
     static estatica(){
-        console.log("Soy un metodo estatico");
+        console.log("soy un metodo que no necesita ser instanciado")
     }
     get getRaza(){
         return this.raza
     }
     set setRaza(raza){
-        this.raza = raza;
+        this.raza = raza
     }
 }
 
 let conejo = new Animal("bugs","masculino");
 let scooby = new Perro("Escubi","macho");
 
-conejo.sonar();
-conejo.saludar("Hola mundo");
+conejo.sonido();
+conejo.saludar();
 
 scooby.saludar();
 scooby.ladrar();
+Perro.estatica();
 
-Perro.estatica()
-
-console.log(scooby.tamanio);
-scooby.setRaza = "gran danes"
-console.log(scooby.getRaza)
-
-
+scooby.setRaza = "gran danes";
+console.log(scooby.getRaza);
 
 
 
