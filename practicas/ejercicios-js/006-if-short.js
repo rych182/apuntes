@@ -34,9 +34,5 @@ const grado = calificacion >= 95 ? "A+" :
 console.log(calificacion, grado);
 
 
-EJERCICIO 2
-Ejercicio con if-corto
 
-let logueado = true;
-console.log(logueado === true ? "SI se logueo" : "NO se logueo");
 */
