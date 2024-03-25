@@ -1,5 +1,15 @@
+@font-face {
+    font-family: 'EduNSWACTFoundation-Regular';
+    src: url('../fonts/EduNSWACTFoundation-Regular.ttf');
+}
+@font-face {
+    font-family: 'Pacifico-Regular';
+    src: url('../fonts/Pacifico-Regular.ttf');
+}
+
 h1{
     text-align: center;
+    font-family: 'EduNSWACTFoundation-Regular';
 }
 
 h2{
@@ -30,6 +40,13 @@ div img{
     background-size: 100% 100%;
     border: 2px solid blue;
     border-radius: 30px;
+    /* Sombras con offset-x: 0, offset-y: 0, blur-radius: 10px, color: negro con 50% de opacidad */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+}
+
+p{
+    font-family: 'Pacifico-Regular';
+    font-size: 20px;
 }
 
 /*      DESKTOP        
