@@ -16,6 +16,11 @@ h2{
     text-align: center;
 }
 
+p{
+    font-family: 'Pacifico-Regular';
+    font-size: 20px;
+}
+
 section{
     width: 100%;
     height: 100%;
@@ -41,20 +46,28 @@ div img{
     border: 2px solid blue;
     border-radius: 30px;
     /* Sombras con offset-x: 0, offset-y: 0, blur-radius: 10px, color: negro con 50% de opacidad */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+    transition: box-shadow 0.5s ease;
 }
 
-p{
-    font-family: 'Pacifico-Regular';
-    font-size: 20px;
+div img:hover{
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5); 
 }
 
-/*      DESKTOP        
+
+
+/*          GALERIA ONE PIECE           */
+
+
+
+
+
+
+
+
+ /*      DESKTOP        
 este estaba mal
 @media only screen and (min-width:768px)
 */
-
- 
 @media only screen and (min-width: 678px) {
     section{
         display: flex;
