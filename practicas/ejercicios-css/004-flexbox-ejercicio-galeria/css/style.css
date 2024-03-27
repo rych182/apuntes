@@ -54,12 +54,67 @@ div img:hover{
 }
 
 
-
 /*          GALERIA ONE PIECE           */
 
+.one-piece-1{
+    background-image: url('../img/one-piece/final.jpg');
+    background-size: 100% 100%;
+    border: 2px solid blue;
+    border-radius: 30px;
+    transition: box-shadow 0.5s ease;
+}
 
+.one-piece-1:hover{
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5); 
+}
 
+.one-piece-2{
+    background-image: url('../img/one-piece/live.png');
+    background-size: 100% 100%;
+    border: 2px solid blue;
+    border-radius: 30px;
+    transition: box-shadow 0.5s ease;
+}
 
+.one-piece-2:hover{
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5); 
+}
+
+.one-piece-3{
+    background-image: url('../img/one-piece/mosaico.jpeg');
+    background-size: 100% 100%;
+    border: 2px solid blue;
+    border-radius: 30px;
+    transition: box-shadow 0.5s ease;
+}
+
+.one-piece-3:hover{
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5); 
+}
+
+.one-piece-4{
+    background-image: url('../img/one-piece/negro.webp');
+    background-size: 100% 100%;
+    border: 2px solid blue;
+    border-radius: 30px;
+    transition: box-shadow 0.5s ease;
+}
+
+.one-piece-4:hover{
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5); 
+}
+
+.one-piece-5{
+    background-image: url('../img/one-piece/team.jpeg');
+    background-size: 100% 100%;
+    border: 2px solid blue;
+    border-radius: 30px;
+    transition: box-shadow 0.5s ease;
+}
+
+.one-piece-5:hover{
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5); 
+}
 
 
 
