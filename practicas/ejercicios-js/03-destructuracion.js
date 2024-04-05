@@ -1,9 +1,10 @@
 //console.log(profesion, edad, estadoCivil);
 
 
-const obj = { a: 1 };
-const { a = 0 } = obj;
-console.log(a); // output: 1
+//Ejercicio 2.1: Otra manera de deestructurar
+let mascotas = ['Pez', 'Gato', 'Perro', 'Ave', 'Tortuga'];
+let [valor1, , , , valor5] = mascotas;
+console.log();
 
 
 
@@ -66,7 +67,8 @@ miFuncion({}); // output: 1 2
 
 
                           CHATGPT
-NOTAS: ¿En que caso practico o real una función recibiría un objeto, muestrame un caso de la vida real? Respuesta CHATGPT
+NOTAS: ¿En que caso practico o real una función recibiría un objeto, muestrame un caso de la vida real?
+Respuesta CHATGPT
 Las funciones que reciben objetos como parámetros son muy comunes en la programación, especialmente en JavaScript. 
 Un caso práctico en el que una función podría recibir un objeto es cuando se trabaja con formularios HTML.
 
@@ -127,19 +129,19 @@ Deestructura un arreglo
 const persona = ['Ricard', 33, 'Mexico'];
 const [nombre, edad, pais] = persona;
 console.log(nombre);
+
 //christian lacaud
 Ejercicio 2.1: Otra manera de deestructurar
 let mascotas = ['Pez', 'Gato', 'Perro', 'Ave', 'Tortuga'];
 let [valor1, , , , valor5] = mascotas;
 console.log(valor5);
 
-Ejercicio 2.2: Otra manera de deestructurar
+Ejercicio 2.2: Otra manera de deestructurar usando PARAMETROS REST/SPREAD
 let mascotas = ['Pez', 'Gato', 'Perro', 'Ave', 'Tortuga'];
 let [valor1, , , ...restoMascotasRest] = mascotas;
 console.log(restoMascotasRest);
 
 Ejercicio 2.3: Utilizar metodos en la deestructuración
-
 const palabra = "hola";
 const { length } = palabra;
 console.log(length);
@@ -152,7 +154,6 @@ const [nombre, edad, pais, profesion = "Programador"] = persona;
 console.log(profesion);
 
 Ejercicio 4
-
 Deestructurar un arreglo, luego mostrarlo cuando le hace falta un valor al array
 const persona = ['Ricard', , 33, 'Mexico']; //dejo un espacio vacio entre el nombre y la edad 
 const [nombre, estadoCivil, edad, pais, profesion = "Programador"] = persona;

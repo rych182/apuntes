@@ -98,5 +98,56 @@ setTimeout(function() {
 -----------------------------------------------------------------------
 Ejercicio 13
 
+Ejercicio 1
+console.log(document.scripts);// nos mcuenta el número de etiquetas script que hay en mi archivo index.html
 
+Ejercicio 2
+sirve para mostrar lo que seleccionaste con el mouse
+
+setTimeout(() => {
+    console.log(document.getSelection().toString())//sirve para mostrar lo que seleccionaste con el mouse    
+}, 3000);
+
+Ejercicio 3: Escribir en el DOM, te lo pone hasta el final
+document.write("<h1>Hola desde el DOM</h1>")
+
+DOM: es una API que tiene Javascript, para interpretar documentos html y xml
+
+Nodos
+-Hay diferentes tipos de nodos(HTMLColection,NodeList)
+    *los comnetarios de html son un nodo
+    *Las etiquetas son otro tipo de nodo
+    *los parrafos y los encabezados, también son nodos
+No confundir con una etiqueta html con un nodo
 */
+
+console.log(document.getElementsByTagName("li"))//captura los elementos(plural) que tengan esa misma etiqueta
+console.log(document.getElementsByClassName("card"))//No necesitas poner el punto, solo el nombre de la clase
+console.log(document.getElementsByName("nombre"));//el name en los inputs
+console.log(document.getElementById("menu"))//Te devuelve el codigo html que tiene ese ID
+
+//querySelector tiene mejor rendimiento y puedes seleccionar clases, id y etiquetas html
+//pero solo te va a traer el primer selector que le hayas indicado
+console.log(document.querySelector("#menu"))
+console.log(document.querySelector(".card"))
+console.log(document.querySelector("li"))
+//querySelectorAll te selecciona varias clases o etiquetas
+console.log(document.querySelectorAll("a"));
+console.log(document.querySelectorAll("a").length);
+//Ejercicio imprimiendo selectores
+document.querySelectorAll("a").forEach((el)=>console.log(el));
+/**
+ * Los 3 selectores más usados son
+ * querySelectorAll
+ * querySelector
+ * getElementById
+ * querySelectorAll y querySelector, devuelven NodeList 
+ */
+
+console.log(document.querySelectorAll("#menu li"));//todos los li que estén dentro del ID menu
+console.log(document.querySelectorAll(".card")[2]);//selecciona el selector en la posición 2 que se encuentre dentro de la clase .card
+
+//Te puedes olvidar de ellos, porque casi no se utilizan: getElementsByTagName, getElementsByClassName, getElementsByName
+
+//Como acceder a los atributos HTML
+console.log(document.documentElement.lang)
