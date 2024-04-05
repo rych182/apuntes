@@ -36,6 +36,7 @@ div{
     height: 25vh;
     margin-top: 20px;
     margin-bottom: 20px;
+    transition: 1s;
 }
 
 div img{
@@ -49,6 +50,10 @@ div img{
     transition: box-shadow 0.5s ease;
 }
 
+
+div:hover{
+    transform: scale(1.2,1.2)
+}
 div img:hover{
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.5); 
 }
