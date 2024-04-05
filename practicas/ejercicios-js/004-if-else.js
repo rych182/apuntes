@@ -1,15 +1,17 @@
-var a = 'a';
-let b = 'b';
-const c = 'c';
-
-if (true) {
-    var a = 'AA';
-    let b = 'BB';
-    const c = 'CC';
-    console.log('BLOQUE: ', a, b, c);
+let hora = "q";
+if (hora < 12 && hora >= 5) {
+    console.log("BUenos días!");
+} else if (hora >= 12 && hora < 19) {
+    console.log("BUenas tardes!");
+} else if (hora >= 19 && hora <= 24 || hora < 5 && hora > 0) {
+    console.log("BUenas noches!");
+} else {
+    console.log("Hora no valida");
 }
-console.log('GLOBALES: ', a, b, c);
+/*
 
+
+*/
 
 /*
 
@@ -19,7 +21,6 @@ Esto se debe a que las condicionales son necesarias para tomar decisiones en el 
 para controlar el flujo de ejecución en función de esas decisiones. 
 Los bucles, son útiles para repetir tareas varias veces,
 pero para ello es necesario tener un control de flujo adecuado, lo que se logra a través del uso de condicionales.
-
 
 Aprender condiciones y bucles antes que funciones en JavaScript puede ser beneficioso para evitar confusiones porque
 son conceptos más simples y fundamentales en la programación en general.
@@ -101,7 +102,7 @@ if (efectivo >= pago) {
 
 
 EJERCICIO 5
-Cualquier edad puede entrar menos 18
+Cualquier edad puede entrar menos 18(USANDO el operandor "diferente")
 let edad = 17;
 if (edad != 18) {
     console.log("Puede entrar");
@@ -141,5 +142,13 @@ if (true) {
     console.log('BLOQUE: ', a, b, c);
 }
 console.log('GLOBALES: ', a, b, c);
+
+Ejercicio 8
+Checa el scope de las variables let, son locales, no globales, por eso en esta función no lo muestra
+let edad = 18;
+if (edad => 18) {
+    let eresAdulto = true;
+}
+console.log(eresAdulto);
 
 */

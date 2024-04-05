@@ -1,0 +1,2 @@
+-Falta hacerlo responsivo primero
+-saber dominar position: absolute;

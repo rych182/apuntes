@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <form action="#">
+        <h2>Contacto</h2>
+        <!-- El atributo "required" hace que requieras llenar los campos
+        el texto cambia según el navegador que estés usando, al presionar enviar
+        -->
+        <input type="text" name="nombre" placeholder="Nombre" required pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$">
+        <input type="text" name="email" placeholder="Email" required pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$">
+        <input type="text" name="telefono" placeholder="Telefono" required pattern="^\d{10}$">
+        <label for="cars">Servicio:</label>
+        <select name="servicios" id="services">
+            <option value="service-1">Service 1</option>
+            <option value="service-2">Service 2</option>
+            <option value="service-3">Service 3</option>
+            <option value="service-4">Service 4</option>
+        </select>
+        <textarea name="mensaje" placeholder="Dejanos tu mensaje" id="" cols="30" rows="10" pattern="^.{1,255}$"></textarea>
+        <input type="submit" value="Enviar" id="boton">
+    </form>
+</body>
+</html>

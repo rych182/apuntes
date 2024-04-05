@@ -1,0 +1,118 @@
+JAVASCRIPT INTERMEDIO: 300-500HRS ---- 
+*Checar que es pre-intermedio, intermedio y pre-avanzado
+
+dom: 449 + 655:1054min = 18.4hrs x3 = 55.5hrs de practica
+AJAX y Fetch API:991 = 16.5hrs x 3 = 49.5hrs de practica
+Callbacks, Promises, Async/Await: 96min = 1hr 36min = 4hrs 48min
+Programación Orientada a Objetos (OOP):95min = 1hr 35min = 4hrs 45min
+Data structures: 22hrs x 3 = 66hrs
+
+
+-DOM Manipulation: 				15min
+*nodos,elementos y selectores			21
+*atributos y data-attributes			25
+*estilos y variables css			31
+*clases css					13
+*texto y html					12
+*DOM traversing: Recorriendo el DOM		14
+*Creando elementos y fragmentos			28
+*Templates HTML					13
+*Modificando elementos(old style)		11
+*Modificando elementos(new style)		16
+*Manejadores de eventos				25
+*Eventos con parametros y remover eventos	17
+*Flujo de eventos(burbuja y captura)		20
+*StopPropagation y preventDefault		12
+*Delegacion de eventos				17
+*BOM:Propiedades y eventos			23
+*BOM:Metodos					15
+*Bom: Objetos: Url, Historial, navegador	25
+*DOM: Ejercicios practicos,presentación		13
+*DOM: Ejercicios practicos, Menú Hamburguesa	54
+*DOM: Ejercicios practicos, reloj digital	15
+*DOM: Ejercicios practicos, alarma sonora	14
+*DOM: Ejercicios practicos, Eventos del teclado(atajos)				22
+*DOM: Ejercicios practicos, Eventos del teclado(movimientos y colisiones)	37
+*DOM: Ejercicios practicos, cuenta regresiva					32
+*DOM: Ejercicios practicos, Boton de scroll					21
+*DOM: Ejercicios practicos, Tema Dark/light					27
+*DOM: Ejercicios practicos, API Local Storage					26
+*DOM: Ejercicios practicos, Responsive con Javascript				36
+*DOM: Ejercicios practicos, Responsive con tester				22
+*DOM: Ejercicios practicos, Detección de dispositivo User Agent			49
+*DOM: Ejercicios practicos, Detección del estado de la red			20
+*DOM: Ejercicios practicos, Detección de la web cam				20
+*DOM: Ejercicios practicos, Detección de GeoLocalización			29
+*DOM: Ejercicios practicos, Filtros de busqueda					32
+*DOM: Ejercicios practicos, Sorteo Digital					29
+*DOM: Ejercicios practicos, Responsive slider					42
+*DOM: Ejercicios practicos, ScrollSpy con Intersection Observer			54
+*DOM: Ejercicios practicos, video inteligente					28
+*DOM: Ejercicios practicos, validación de formularios				39
+*DOM: Ejercicios practicos, validación de formularios				30
+*DOM: Ejercicios practicos, envío de formularios				29
+*DOM: Ejercicios practicos, Narrador(Lector de voz)				31
+
+-Event Handling: Manejo de eventos del usuario como clics, cambios de estado, etc.
+AJAX y Fetch API: Realización de peticiones asíncronas a servidores para obtener o enviar datos.
+*Ajax: 				31
+*Objeto XMLHttpRequest 		46
+*API Fetch			24	
+*API Fetch + async/await	17
+*Libreria Axios			16
+*Libreria Axios + async/await	16
+*API REST			24
+*API REST JSON SERVER-API falsa 24
+*API REST consume datos		21
+*API REST CRUD			20
+*API REST CRUD con AJAX(1/2)	42
+*API REST CRUD con AJAX(2/2)	30
+*API REST CRUD con Fetch(1/2)	16
+*API REST CRUD con Fetch(2/2)	27
+*API REST CRUD con Axios(1/2)	11
+*API REST CRUD con Axios(2/2)	23			
+*Ejercicio Ajax APIs:						10
+*Ejercicio Ajax APIs:SitioWeb Ajax				36
+*Ejercicio Ajax APIs:Incluir archivos html			32
+*Ejercicio Ajax APIs:Uploader con AJAX				37
+*Ejercicio Ajax APIs:Uploader AJAX con barra progreso		25
+*Ejercicio Ajax APIs:Uploader AJAX con Drag & Drop		29
+*Ejercicio Ajax APIs:Envío form con Fecth y FormSubmit		29
+*Ejercicio Ajax APIs:Envío form & CORS con Fetch y PHP		49
+*Ejercicio Ajax APIs:Pagos Online con Fetch y Stripe(1/4)	30
+*Ejercicio Ajax APIs:Pagos Online con Fetch y Stripe(2/4)	27	
+*Ejercicio Ajax APIs:Pagos Online con Fetch y Stripe(3/4)	38
+*Ejercicio Ajax APIs:Pagos Online con Fetch y Stripe(4/4)	33
+*Ejercicio Ajax APIs: Blog con Markdown y showdown		22
+*Ejercicio Ajax APIs:Paginación de pokemon con fetch(1/2)	32
+*Ejercicio Ajax APIs:Paginación de pokemon con fetch(2/2)	15
+*Ejercicio Ajax APIs:Buscador de shows con fetch y tvmaze API	47
+*Ejercicio Ajax APIs:Buscador de Canciones con Fetch + Async	49
+*Ejercicio Ajax APIs:selects anidados con Fetch			31
+
+
+Callbacks, Promises, Async/Await: Manejo de asincronía en JavaScript.
+*Asincronia y el Event Loop: 	40
+*Callbacks			18
+*Promesas			19
+*Async - Await			19
+
+
+Programación Orientada a Objetos (OOP): Uso de objetos, clases, herencia y encapsulamiento.
+*prototipos				39
+*Herencia prototipica			22
+*clases y herencia			18
+*Metodos estaticos, getters y setters	16
+
+superprof
+USA:		5
+Jamaica:	1
+Australia:	2
+Francia:	3
+Italia:		2
+England:	4
+Portugal:	2
+España:		1
+India:		4
+Germany:	1
+Indonesia:	2

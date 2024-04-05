@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+}
+
+video {
+    width: 100%;
+    height: 100vh;
+    /* Ajusta el video para llenar el contenedor sin deformar */
+    object-fit: cover;
+     /*Fija el video en su lugar para que ocupe toda la pantalla */
+    position: fixed;
+    top: 0;
+    left: 0;
+     /*Coloca el video detrás de otros elementos en la página */
+    z-index: -1;
+}
+
+
+body {
+    background-color: azure;
+}
+
+@font-face {
+    font-family: 'Pangolin', cursive;
+    src: url(Pangolin-Regular.ttf);
+}
+
+header {
+    background-color: transparent;
+}
+
+/*
+
+*/
+
+/*
+.logo {
+    border: 1px solid blue;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+}
+*/
+
+.logo{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+img {
+    border: solid 2px orange;
+    border-radius: 30px;
+}
+
+.submenu {
+    border: 2px solid green;
+    width: 100%;
+    align-items: center;
+}
+ul{
+   border: 2px grey solid ;
+   padding-inline-start: 0;
+}
+
+/*
+ul {
+    border: solid 1px yellow;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+*/
+
+li {
+    border: 1px solid brown;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    font-size: 24px;
+    font-family: 'Pangolin', cursive;
+    color: black;
+    font-weight: 800;
+}
+
+
+/*          EFECTO HOVER        */
+
+li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: wheat;
+    margin: auto;
+    display: block;
+}
+
+li a:hover::after {
+    width: 100%;
+    transition: width 0.9s linear;
+}
+
+
+/*          Librería animate CSS    */
+
+h1 .animate__animated.animate__bounce:hover {
+    --animate-duration: 2s;
+}
+
+/*          Responsive Design    */
+
+@media only screen and (min-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+    header{
+        display: flex;
+    }
+    .logo{
+        width: 30%;
+        display: flex;
+        align-items: center;
+        margin-bottom: 0;
+    }
+    .submenu{
+        width: 70%;
+    }
+    ul{
+        display: flex;
+        justify-content: space-around;
+        height: 100%;
+        align-items: center;
+        border: 2px solid pink;
+        list-style-type: none;
+    }
+}

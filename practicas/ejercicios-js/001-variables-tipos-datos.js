@@ -1,27 +1,73 @@
+//JON MIRCHA CHAPTER 9: NULL, UNDIFINED Y NAN: LISTO
+
+//Null:Representa un valor ausente, es decir, una variable que no tiene valor PERO se utiliza
+//para indicar la ausencia de un valor asignado de manera "intencional", para decir que "esta vacía".
+//-------------------------------------------------------------------------------------------------------------
+//Undifined:Representa un valor ausente, es decir, una variable que no tiene valor PERO esta es una variable que no ha sido inicializada.
+//Osea una variable que no se le asigno valor y que aparte no se le asigno ninguno cuando se creo,
+//entonces cuando javascript detecta una variable no tiene valor, le asigna "undefined"
+//-------------------------------------------------------------------------------------------------------------
+//NaN: cuando quieres hacer una operación aritmetica con un dato que no es un número.
+
 //primer dato lo toma como un número que hace una operación
 //True y False se toman como 1 y 0
 //Undifined NO ES un número, define algo que no es un valor
+
 //Infinity es un valor especial que se utiliza para representar matemáticamente un número que es mayor
 //que cualquier otro número posible en JavaScript.Infinity es un tipo de dato primitivo(number)
 
+//null se utiliza específicamente para indicar la ausencia de un valor asignado de manera "intencional", para decir que "esta vacía".
+//null es diferente de undefined. undefined se utiliza cuando una variable no tiene un valor asignado o cuando se intenta acceder a una propiedad inexistente
 
-console.log(true+'1')//true1
-console.log(true-'1')//0
-console.log(true*'1')//1
-console.log(false*'1')//0
-console.log(true*1)//1
-console.log(true+1)//2
-console.log(false+1)//1
-//True se toma como número pero  "undifined" no es un número
-console.log(true+undefined)//Nan
-console.log(true+NaN)//Nan
-console.log(true+null)//1
-console.log(true+true)//2
-console.log(true+false)//1
-console.log(true*false)//0
-console.log(true/false)//infinity
-console.log(true/0)//infinity
-console.log(true/null)
+/* Explicación infinity
+JavaScript interpreta esto como una operación que tiende hacia el infinito positivo o negativo, 
+dependiendo del signo del número. En este caso específico,
+true se convierte internamente en 1 al ser tratado como un número en una operación matemática,
+y null es interpretado como 0 en este contexto. Entonces, 1 / 0 resulta en Infinity.
+ */
+
+console.log(undefined + 'hola');//undifinedhola
+console.log(undefined * 'hola');//NaN
+console.log(undefined + true);//NaN
+console.log(undefined - true);//NaN
+console.log(undefined + 1);//NaN
+console.log(undefined + null);//NAn
+console.log(undefined + undefined);//NaN
+console.log(undefined + []);//Undefined
+console.log(undefined + {});//Undefined[object object]
+console.log(undefined * []);//Nan
+console.log(undefined * {});//Nan
+console.log("-----------------------------");
+console.log(undefined + 'hola');//undifinedhola
+console.log(null + 'hola');//nullhola
+console.log(null *1);//0, NaN no tiene valor
+console.log(null + true);//1
+console.log(null +false);//0
+console.log(null *[]);//0
+console.log(null *{});//Nan
+console.log(null + null);//0
+console.log(null + undefined);//NaN
+console.log(null +[]);//Null
+console.log(null + {});//Null [object object]
+console.log("-----------------------------");
+console.log([]+'hola');//"hola"
+console.log([]*'hola');//Nan
+console.log([]+1);//"hola"
+console.log([]*1);//0
+console.log([]+false);//false
+console.log([]+true);//true
+console.log([]+null);//null
+console.log([]*null);//0
+console.log([]+undefined);//undifined
+console.log([]*undefined);//Nan
+console.log([]+{});//[object object]
+console.log([]*{});//Nan
+console.log("-----------------------------");
+console.log({}+'hola');//[object object]"hola"
+console.log({}*'hola');//Nan
+console.log({}+2);//[object object]2
+
+
 /**
  
 Temas:
@@ -43,6 +89,7 @@ Null.
 ---------
 Object: Es un tipo de dato "no primitivo",  llamado Object, que puede almacenar colecciones de datos y funciones.
 funciones: son un tipo de dato "no ´primitivo"
+clases:
 ---------
 "use strict"
 Es una opción disponible en JavaScript que restringe ciertas acciones,
@@ -116,8 +163,8 @@ después de debes imprimir con template string 2 estados de la república con su
 Ejercicios con distintos tipos de datos
 Ejercicio 6: que imprime en la consola
 console.log(1+2+3);
-console.log('1'+2+3);
-console.log(1+2+'3');
+console.log('1'+2+3);//123
+console.log(1+2+'3');//
 console.log(1+2+3)
 console.log(1+2+"3"+4+5+6)//33456
 ------------------------------------------------
@@ -139,22 +186,45 @@ console.log("hola"*2)//NaN(Not a Number)
 console.log("mundo"-2)//NaN
 console.log(2*4-("hola"))//NaN
 console.log(true-"mundo")//NaN
-console.log(NaN + true)//true ó 1
+console.log(NaN + true)//NaN
 console.log(null + true)//1
-console.log(null + "hola")//hola
+console.log(null + "hola")//nullhola
 console.log(null + 4)//4
 console.log(null + 0)//0
-
+------------------------------------------------------------------
+console.log(true+'1')//true1
+console.log(true-'1')//0
+console.log(true*'1')//1
+console.log(false*'1')//0
+console.log(true*1)//1
+console.log(true+1)//2
+console.log(false+1)//1
+//True se toma como número pero  "undifined" no es un número
+console.log(true+undefined)//Nan
+console.log(true+NaN)//Nan
+console.log(true+null)//1
+console.log(true+true)//2
+console.log(true+false)//1
+console.log(true*false)//0
+console.log(true/false)//infinity
+console.log(true/0)//infinity
+ JavaScript interpreta esto como una operación que tiende hacia el infinito positivo o negativo, 
+dependiendo del signo del número. En este caso específico,
+true se convierte internamente en 1 al ser tratado como un número en una operación matemática,
+y null es interpretado como 0 en este contexto. Entonces, 1 / 0 resulta en Infinity.
+ 
+console.log(true/null)//Infinity
+----------------------------------------------------------------------------------------------------
 ---------------------------------------------------------
 Ejercicios con distintos tipos de datos
 Ejercicio 9: que imprime en la consola, datos boleanos con otros
 
+
+
+
+
 ---------------------------------------------
-Ejercicio 7: ¿que imprime la consola?
-let arr = [1,2,3,4,5];
-arr.length = 2;
-console.log(arr);
-un array de 2 espacios
+
 ---------------------------------------------
 Ejercicio 8;
 (function() {

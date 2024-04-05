@@ -1,4 +1,6 @@
 /*
+JON MIRCHA: LISTO
+
 --------------------------OBJETOS--------------------------------------
 ***EJERCICIO 0: declara un objeto e imprimelo
 let unPinshiObjeto = {
