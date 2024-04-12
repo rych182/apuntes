@@ -1,13 +1,14 @@
-let hora = "q";
-if (hora < 12 && hora >= 5) {
-    console.log("BUenos días!");
-} else if (hora >= 12 && hora < 19) {
-    console.log("BUenas tardes!");
-} else if (hora >= 19 && hora <= 24 || hora < 5 && hora > 0) {
-    console.log("BUenas noches!");
-} else {
-    console.log("Hora no valida");
+var a = 'a';
+let b = 'b';
+const c = 'c';
+
+if (true) {
+    var a = 'AA';
+    let b = 'BB';
+    const c = 'CC';
+    console.log('BLOQUE: ', a, b, c);
 }
+console.log('GLOBALES: ', a, b, c);
 /*
 
 
@@ -130,7 +131,8 @@ else
     console.log("Te falt dinero para la compra");
 
 EJERCICIO 7
-Ejericio scope global y bloque(dentro de un if)
+Ejericio scope global y bloque(dentro de un if), sirve para ver lo que imprime y como 
+la palabra reservada VAR se vuelve global
 var a = 'a';
 let b = 'b';
 const c = 'c';

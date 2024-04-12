@@ -1,5 +1,17 @@
 //JON MIRCHA CHAPTER 9: NULL, UNDIFINED Y NAN: LISTO
 
+/*
+Number: Números enteros y de punto flotante, como 1, 3.14, -10, etc.
+String: Secuencias de caracteres, como "Hola mundo", 'JavaScript', etc.
+Boolean: Representa un valor lógico verdadero o falso, es decir, true o false.
+Null: Representa la ausencia intencional de cualquier valor o valor nulo.
+Undefined: Representa un valor no definido. Se asigna automáticamente a las variables que no se han inicializado.
+NaN se utiliza para representar un valor numérico que no es un número válido según la especificación de JavaScript. Este valor se genera típicamente como resultado de operaciones aritméticas inválidas, como dividir cero por cero o tratar de convertir una cadena no numérica en un número.
+Symbol: Introducido en ECMAScript 6 (ES6), representa un identificador único e inmutable.
+bigint; es un tipo de dato primitivo introducido en ECMAScript 2020. Este tipo de dato se utiliza para representar números enteros arbitrariamente grandes, que van más allá del límite de precisión que proporciona el tipo de dato number.
+
+*/
+
 //Null:Representa un valor ausente, es decir, una variable que no tiene valor PERO se utiliza
 //para indicar la ausencia de un valor asignado de manera "intencional", para decir que "esta vacía".
 //-------------------------------------------------------------------------------------------------------------
