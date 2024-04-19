@@ -36,7 +36,30 @@ JavaScript interpreta esto como una operación que tiende hacia el infinito posi
 dependiendo del signo del número. En este caso específico,
 true se convierte internamente en 1 al ser tratado como un número en una operación matemática,
 y null es interpretado como 0 en este contexto. Entonces, 1 / 0 resulta en Infinity.
- */
+ 
+NULL NO ES OBJECT
+
+let num1 = null;
+console.log(typeof num1)
+
+Originalmente, en JavaScript, typeof null devolvía 'object', lo cual era incorrecto. 
+Este fue un error en la implementación inicial de JavaScript en los navegadores de Netscape
+y fue replicado en otras implementaciones para mantener la compatibilidad. 
+Sin embargo, esto se considera un error de diseño de JavaScript
+y no es representativo de cómo se trata null en el lenguaje.
+
+En realidad, null es un valor primitivo en JavaScript y no un objeto. La función typeof null ahora devuelve 'object' por razones de compatibilidad con versiones anteriores, pero en términos precisos, null es un tipo de dato primitivo y no un objeto.
+Para verificar si un valor es null, lo mejor es usar una comparación estricta (===) con null. Por ejemplo:
+var myVar = null;
+if (myVar === null) {
+    console.log("myVar es null");
+} else {
+    console.log("myVar no es null");
+}
+
+
+
+*/
 
 console.log(undefined + 'hola');//undifinedhola
 console.log(undefined * 'hola');//NaN

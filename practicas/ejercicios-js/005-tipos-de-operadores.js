@@ -1,3 +1,6 @@
+console.log('2'>'12');//TRUE  
+
+
 /*
 
 OPERADORES
@@ -154,7 +157,7 @@ console.log('2'>true)//true
 
 /* Multiplicación UNICAMENTE con parentesis */
 
-/* Multiplicacion SIN  y CON parentesis */
+/* Multiplicacion SIN  y CON parentesis 
 //console.log(3(3*4));//error por que el 3 lo toma como si fuera una función 
 console.log(2*(3*4));//24
 //console.log((2*3)(3*4)); así no funciona, tienes que ponerle un signo en medio
@@ -165,4 +168,4 @@ console.log((2*3)>(3*4));//false
 console.log((3*8)<(7/4));//false
 console.log((2/3)===(6/4));//true
 
-
+*/

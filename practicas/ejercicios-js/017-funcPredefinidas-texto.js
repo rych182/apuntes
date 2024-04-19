@@ -1,3 +1,8 @@
+let numero = 300;
+let convertir = numero.toString()
+console.log(typeof convertir);
+
+
 
 /*let texto = "Hola mundo";
 let amigos = ['Nacho', 'Urrutia', 'Jessica', 'Lau'];
@@ -68,6 +73,64 @@ Devuelven la posición (índice) de la primera y última ocurrencia de una subca
 const texto = "Hola, Hola, Mundo";
 console.log(texto.indexOf("Hola")); // Salida: 0
 console.log(texto.lastIndexOf("Hola")); // Salida: 6
+
+
+Ejercicio 9: trimstart() , te quita los espacios pero no reduce el número de caracteres
+puedes checar el espacio del final, con el mouse en la consola del navegador
+
+const frase = "    Hola, cómo estás   ";
+const palabras = frase.length;
+console.log(frase);
+console.log(palabras); 
+console.log(frase.trimStart())
+console.log(palabras);
+
+Ejercicio 10:te quita los espacios pero no reduce el número de caracteres
+puedes checar el espacio del inicio, con el mouse en la consola del navegador
+
+const frase = "    Hola, cómo estás   ";
+const palabras = frase.length;
+console.log(frase);
+console.log(palabras); 
+console.log(frase.trimEnd())
+console.log(palabras);
+
+Ejercicio 11: también puede usarse una función seguida de otra función
+
+const frase = "    Hola, cómo estás   ";
+console.log(frase.trimStart().trimEnd())
+
+Ejercicio 12: 
+reemplaza una cadena de texto con lo que le digas
+const frase = "    Hola, cómo estás   ";
+console.log(frase.replace("Hola", "Hello"))
+
+Ejercicio 13:
+SLice para decirle donde empezar y terminar de cortar
+const frase = "Hola, cómo estás";
+console.log(frase.slice(0,4))
+//Si el segundo número es máyor que el primero, no escribe nada
+//si solo pones 1 número, corta lo primero y te imprime lo que sobra.
+//la diferencia con substring es que a substring si lo tratas de engañar con un número menor, te los invierte
+const frase = "Hola, cómo estás";
+console.log(frase.substring(4,0))
+
+
+Ejercicio 14: chartArt recorta la letra que este en la posicion que le digas
+const frase = "Hola, cómo estás";
+console.log(frase.charAt(2))
+
+Ejercicio 15: Te va a repetir una cadena de texto, si le pónes números decimales te lo redondea
+let frase = "Monitor de 20 pulgadas";
+let frase2 = "OFERTON!!".repeat(2);
+console.log(`${frase} ${frase2}`);
+
+Ejercicio 16: convertir un número a stringlet numero = 300;
+let numero = 300;
+let convertir = numero.toString()
+console.log(typeof convertir);
+
+
 
 */
 
