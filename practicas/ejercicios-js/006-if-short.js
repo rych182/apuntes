@@ -33,6 +33,9 @@ const grado = calificacion >= 95 ? "A+" :
     calificacion >= 60 ? "D" : "F";
 console.log(calificacion, grado);
 
-
+------------------------------------------
+Ejercicio 2: ejemplo sencillo de operador ternario(short if)
+let autenticado = true;
+console.log( autenticado ? "estas logeado": "no puedes pasar");
 
 */

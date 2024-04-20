@@ -1,8 +1,7 @@
 /**
  Objeto math: es un objeto que tiene muchas funciones para matematicas
  */
-let num1 = null;
-console.log(typeof num1)
+
 
 /*
 Ejercicio 1: imprimir PI

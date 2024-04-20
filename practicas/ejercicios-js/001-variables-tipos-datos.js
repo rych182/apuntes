@@ -1,5 +1,7 @@
 //JON MIRCHA CHAPTER 9: NULL, UNDIFINED Y NAN: LISTO
 
+
+
 /*
 Number: Números enteros y de punto flotante, como 1, 3.14, -10, etc.
 String: Secuencias de caracteres, como "Hola mundo", 'JavaScript', etc.
@@ -281,5 +283,14 @@ for (let i = 0; i < 5; i++) {
   'use strict';
 let x = 021;
 ----------------------------------------------------------
+EJERCICIO 11: No hacer esto en un exámen técnico
+
+let autenticado = true;
+//de por si da true
+if (autenticado === true) {
+  console.log("si puedes ver netflix")
+}else{
+  console.log("No no puedes verlo");
+}
 
 */

@@ -68,5 +68,6 @@ let persona = {
 }
 persona.casado = false;
 console.log(persona);
+-------------------------------------------------
 
 */
