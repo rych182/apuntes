@@ -131,5 +131,16 @@ if (apertura >= 8 && apertura <= 21) {
     console.log(`It's close!`);
 }
 
+EJercicio 17
+Agregaga un objeto a un array const e imprimelo
+const autos = [
+    { modelo: "Mustang", anio: 1962 },
+    { modelo: "360z", anio: 2010 },
+    { modelo: "Civic", anio: 2007 }
+];
 
+autos.push({ modelo: "Mercedez Benz", anio: 2016 });
+for (let i = 0; i < autos.length; i++) {
+    console.log(autos[i].modelo + 'del año' + autos[i].anio);
+}
  */

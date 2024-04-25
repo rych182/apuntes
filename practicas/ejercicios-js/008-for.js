@@ -120,23 +120,8 @@ for (let i = 0; i < alumno.length; i++) {
         console.log(alumno[i][j]);
     }
 }
--------------------------------------------------------------------------------------------
-Ejercicio 8, imprimir(recorrer,asi le dicen) la cantidad de datos que se encuentran dentro del array
-var alumno = [
-    [10, 8, 4, 6, 9],
-    [10, 8, 4, 6, 9],
-    [10, 8, 2, 6, 9],
-    [10, 8, 10, 6, 9]
-];
-
-for (let i = 0; i < alumno.length; i++) {
-    for (let j = 0; j < alumno.length; j++) {
-        console.log(alumno[i][j]);
-    }
-}
-
 ----------------------------------------------------------
-Ejercicio 9: Sumar las calificaciones
+Ejercicio 8: Sumar las calificaciones
 
 var alumno = [
     [10, 8, 4, 6, 9],
@@ -245,7 +230,7 @@ for (let i = 0; i < autos.length; i++) {
 }
 ---------------------------------------------------------------
 EJERCICIO 16
-Hacer el ejercicio 30 pero imprimiendo con interpolacion
+Hacer el mismo ejercicio per imprimiendo con interpolacion
 const autos = [
     { modelo: "Mustang", anio: 1962 },
     { modelo: "360z", anio: 2010 },
@@ -256,16 +241,5 @@ for (let i = 0; i < autos.length; i++) {
     console.log(`${autos[i].modelo} del año ${autos[i].anio}`);
 }
 ---------------------------------------------------------------
-EJercicio 17
-Agregaga un objeto a un array const e imprimelo
-const autos = [
-    { modelo: "Mustang", anio: 1962 },
-    { modelo: "360z", anio: 2010 },
-    { modelo: "Civic", anio: 2007 }
-];
 
-autos.push({ modelo: "Mercedez Benz", anio: 2016 });
-for (let i = 0; i < autos.length; i++) {
-    console.log(autos[i].modelo + 'del año' + autos[i].anio);
-}
 */

@@ -1,5 +1,5 @@
 /*
-
+//el destructuring ademas de extraer el valor, crea la variable
 //JON MIRCHA: LISTO
 
 Ejemplo 1: Destructuración de objetos
@@ -73,5 +73,18 @@ let persona = {
 }
 let { apellido, edad, nombre } = persona;
 console.log(nombre, apellido, edad);
+
+Ejercicio 12: explicación rápida del destructuring
+
+//el destructuring ademas de extraer el valor, crea la variable
+
+const producto = {
+    nombre: "nomintor",
+    precio: 300,
+    disponible:true
+}
+//destructuring
+const {nombre, precio,disponible,noExiste}= producto;
+console.log(noExiste);
 
  */

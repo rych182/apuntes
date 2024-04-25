@@ -292,5 +292,9 @@ if (autenticado === true) {
 }else{
   console.log("No no puedes verlo");
 }
+--------------------------------------------------------
+Ejercicio 12: 
+
+
 
 */
