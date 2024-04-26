@@ -28,4 +28,19 @@ for (const entrada of datos.entries()) {
 Ejercicio 4: resumir el ejercicio 15
 const nombres = ['Carlos', 'Alejandro', 'Manuel', 'Cesar'];
 const numero_caracteres = nombres.map(nombre => `${nombre} tiene ${nombre.length} letras`)
+
+---------------------------------------------------------------------------------
+Ejercicio 29: extrae información de objetos dentro de un arreglo usando la función map, para crear un nuevo arreglo(que es lo que hace la función .map)
+let carrito = [
+    { id: 1, producto: 'libro' },
+    { id: 2, producto: 'Camisa' },
+    { id: 3, producto: 'Guitarra' },
+    { id: 4, producto: 'Tablet' }
+];
+
+const nombreProducto = carrito.map((carrito) => {
+    return carrito.producto;
+})
+console.log(nombreProducto);
+
 */
