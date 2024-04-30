@@ -1,7 +1,5 @@
 //JON MIRCHA CHAPTER 9: NULL, UNDIFINED Y NAN: LISTO
 
-
-
 /*
 Number: Números enteros y de punto flotante, como 1, 3.14, -10, etc.
 String: Secuencias de caracteres, como "Hola mundo", 'JavaScript', etc.
@@ -58,10 +56,7 @@ if (myVar === null) {
 } else {
     console.log("myVar no es null");
 }
-
-
-
-*/
+------------------------------------------------------------
 
 console.log(undefined + 'hola');//undifinedhola
 console.log(undefined * 'hola');//NaN
@@ -103,7 +98,7 @@ console.log("-----------------------------");
 console.log({}+'hola');//[object object]"hola"
 console.log({}*'hola');//Nan
 console.log({}+2);//[object object]2
-
+*/
 
 /**
  

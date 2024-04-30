@@ -4,7 +4,7 @@
 Explicación FOR IN
 La elección más común para utilizar for...in en JavaScript es para iterar sobre las propiedades de un "objeto".
 
--Se utiliza para iterar sobre las propiedades enumerables de un objeto, incluyendo propiedades heredadas del prototipo.
+-Se utiliza para iterar(recorrer) sobre las propiedades enumerables de un objeto, incluyendo propiedades heredadas del prototipo.
 -Devuelve los índices (en el caso de arrays) en lugar de los valores.
 
 
@@ -27,6 +27,7 @@ let objeto = {
 for (const propiedad in objeto) {
     console.log(`Key: ${propiedad} --- Value: ${objeto[propiedad]}`);
 }
+-----------------------------------------------------------------------
 
 Ejercicio 2, recorre el array con for in 
 let countries = ['Mexico', 'USA', 'Canada', 'Japan', 'SOuth Korea'];
@@ -34,6 +35,7 @@ for (let i in countries) {
     console.log(countries[i]);
 }
 
+-----------------------------------------------------------------------
 EJERCICIO 3: Recorrer un objeto utilizando FOR IN
 const automovil = {
     modelo: 'Camaro',
@@ -46,20 +48,5 @@ for (const auto in automovil) {
 }
 
 ----------------------------------------------------------------------------
-Ejercicio 4:
-Iterar sobre propiedades heredadas:
 
-function Animal() {
-  this.legs = 4;
-}
-
-Animal.prototype.sound = "Hiss";
-
-let cat = new Animal();
-
-for (let prop in cat) {
-  console.log(prop, cat[prop]);
-}
-
-Aquí, for...in itera sobre las propiedades del objeto cat, incluyendo las propiedades heredadas del prototipo (sound en este caso).
 */

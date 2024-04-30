@@ -18,7 +18,7 @@ try{
     console.log("el bloque finally se ejecutara siempre al final de un bloque try-catch")
 }
 
-
+-----------------------------------------------------------------------------
 EJERCICIO 1: Hacer un try-catch-finally
 try {
     console.log("Todo bien");
@@ -30,7 +30,7 @@ try {
 } finally {
     console.log("Funcione o no funcione me imprimire");
 }
-
+-----------------------------------------------------------------------------------
 
 2-Finally ejecuta pase lo que pase
 try {

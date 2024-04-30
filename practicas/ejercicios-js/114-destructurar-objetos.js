@@ -1,3 +1,24 @@
+const producto = {
+    nombre: "monitor",
+    precio: 300,
+    disponible: true,
+    informacion:{
+        medidas:{
+            peso:"1kg",
+            medida:"1m"
+        },
+        fabricacion:{
+            pais:"China"
+        }
+    }
+}
+
+const { nombre, informacion,informacion:{fabricacion:pais}} = producto;
+
+console.log(nombre);
+console.log(pais);
+console.log(informacion);
+console.log(pais);
 /*
 //el destructuring ademas de extraer el valor, crea la variable
 //JON MIRCHA: LISTO
@@ -20,7 +41,7 @@ console.log(a); // output: 1
 console.log(b); // output: 2
 console.log(c); // output: 0
 console.log(d); // output: 0
-
+----------------------------------------------------------------------
 Ejercicio 1: Deestructurar objeto e imprimiendo con una función
 let usuario = {
     nombre: 'Ric',
@@ -36,36 +57,8 @@ let imprimir = ({ nombre, profesion }) => {
 }
 imprimir(usuario);
 
-
-EJERCICIO 33
-Modifica objeto dentro de un array const desde afuera(es la unica manera en la que se puede).
-const autos = [
-    { modelo: "Mustang", anio: 1962 },
-    { modelo: "360z", anio: 2010 },
-    { modelo: "Civic", anio: 2007 }
-];
-
-autos[1].modelo = "Mercedez Benz";
-console.log(autos[1].modelo);
-
-
-Deestructurar objeto e imprimiendo con una función
-let usuario = {
-    nombre: 'Ric',
-    apellido: 'gARRido',
-    edad: 33,
-    pais: 'mexaland',
-    profesion: 'developer'
-}
-let { nombre, apellido, profesion } = usuario;
-
-let imprimir = ({ nombre, profesion }) => {
-    console.log(`Mi nombres es ${nombre} y soy ${profesion}`);
-}
-imprimir(usuario);
-
-
-EJERCICIO 11:  Deestructurar un objeto. Fijarme que el orden de la destructuración no afecta.
+----------------------------------------------------------------------
+EJERCICIO 2:  Deestructurar un objeto. Fijarme que el orden de la destructuración no afecta.
 let persona = {
     nombre: "Ric",
     apellido: "Garrido",
@@ -73,8 +66,8 @@ let persona = {
 }
 let { apellido, edad, nombre } = persona;
 console.log(nombre, apellido, edad);
-
-Ejercicio 12: explicación rápida del destructuring
+-----------------------------------------------------------------------------
+Ejercicio 3: explicación rápida del destructuring
 
 //el destructuring ademas de extraer el valor, crea la variable
 
@@ -86,5 +79,30 @@ const producto = {
 //destructuring
 const {nombre, precio,disponible,noExiste}= producto;
 console.log(noExiste);
+---------------------------------------------------------------------------
+Ejercicio 4: destructurando un objeto anidado
+
+const producto = {
+    nombre: "monitor",
+    precio: 300,
+    disponible: true,
+    informacion:{
+        medidas:{
+            peso:"1kg",
+            medida:"1m"
+        },
+        fabricacion:{
+            pais:"China"
+        }
+    }
+}
+
+const { nombre, informacion,informacion:{fabricacion:pais}} = producto;
+
+console.log(nombre);
+console.log(pais);
+console.log(informacion);
+console.log(pais);
+------------------------------------------------------------------------------
 
  */

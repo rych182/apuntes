@@ -127,6 +127,24 @@ const perro = { //Aquí nos devuelve el objeto "windows" del navegador
     }
 }
 perro.saludar();
+--------------------------------------------------------------------------
+
+Ejercicio 10:
+Iterar sobre propiedades heredadas:
+
+function Animal() {
+  this.legs = 4;
+}
+
+Animal.prototype.sound = "Hiss";
+
+let cat = new Animal();
+
+for (let prop in cat) {
+  console.log(prop, cat[prop]);
+}
+
+Aquí, for...in itera sobre las propiedades del objeto cat, incluyendo las propiedades heredadas del prototipo (sound en este caso).
 
 
 

@@ -1,3 +1,5 @@
+
+
 /*
 JON MIRCHA: LISTO
 
@@ -82,5 +84,54 @@ console.log(autos[1].modelo);
 
 ----------------------------------------------------------
 
+Ejercicio 6: modificar un valor de una constante
+const persona = {
+  nombre: "ric",
+  edad: 37
+}
+
+persona.edad = 36;
+console.log(persona.edad);
+------------------------------------------------------------------
+--------------------------------------------------------------------
+Ejercicio 7: agregarlo datos a un objeto dentro de una constante
+const persona = {
+  nombre: "ric",
+  edad: 37
+}
+
+persona.sexo = "masculino";
+console.log(persona.sexo);
+--------------------------------------------------------------------------
+Ejercicio 8
+Borrar un dato de un objeto dentro de una constante
+const persona = {
+  nombre: "ric",
+  edad: 37
+}
+
+persona.sexo = "masculino";
+delete persona.nombre;
+console.log(persona);
+-----------------------------------------------------------------
+Ejercicio 9: congelar un objeto para que no sea modificado
+"use strict";
+const persona = {
+    name: "ric",
+    age: 37
+}
+Object.freeze(persona);
+persona.name = "alvin";
+console.log(persona.name)
+
+En JavaScript, Object es un objeto incorporado que proporciona un conjunto de métodos
+y propiedades para trabajar con objetos en el lenguaje.
+freeze() es uno de esos métodos que pertenece al objeto Object.
+
+Tampoco permite eliminar
+
+Object es un objeto incorporado que proporciona un conjunto de métodos y propiedades
+para trabajar con objetos.Aunque Object es un objeto en sí mismo,
+es más preciso describirlo como una función constructora que puede crear objetos.
 
 */
