@@ -6,7 +6,7 @@ para controlar el flujo de ejecución en función de esas decisiones. Los bucles
 son útiles para repetir tareas varias veces, pero para ello es necesario tener un control de flujo adecuado,
 lo que se logra a través del uso de condicionales.
 
-
+--------------------------------------------------------
 EJERCICIO 2: Recorre una cadena con for usando break
 
 const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -16,7 +16,7 @@ for (let i = 0; i < numeros.length; i++) {
     }
     console.log(numeros[i]);
 }
-
+--------------------------------------------------------
 EJERCICIO 3: Recorre una cadena con for usando continue
 
 const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -26,7 +26,7 @@ for (let i = 0; i < numeros.length; i++) {
     }
     console.log(numeros[i]);
 }
-
+----------------------------------------------------
 EJERCICIO 4, usar un IF dentro de un FOR
 for (let i = 0; i <= 10; i++) {
     if (i == 5) {
@@ -35,7 +35,7 @@ for (let i = 0; i <= 10; i++) {
     }
     console.log(i);
 }
-
+----------------------------------------------------
 EJERCICIO 6, detener el FOR en el número 5
 for (let i = 0; i <= 10; i++) {
     if (i == 5) {
@@ -44,6 +44,7 @@ for (let i = 0; i <= 10; i++) {
     }
     console.log(i);
 }
+--------------------------------------------------------
 
 Ejercicio 7, imprime si el número es par o inpar
 for (let i = 0; i <= 10; i++) {

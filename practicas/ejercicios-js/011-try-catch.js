@@ -62,6 +62,7 @@ try {
   console.log('¡Esto siempre se ejecuta!');
 }
 
+
 Ejercicio 4: Personalizar el mensaje de error
 try {
     let numero = "y"

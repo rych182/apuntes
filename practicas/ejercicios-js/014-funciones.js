@@ -1,6 +1,7 @@
-var miCadena = "Hola, mundo!";
-var miCadenaObjeto = new String("Hola, mundo!");
-console.log(typeof miCadenaObjeto)
+function unaFuncion(){
+  console.log("Uno")
+}
+unaFuncion()
 /*
 
 Jon Mircha: CAPITULO TERMINADO
@@ -8,6 +9,7 @@ Jon Mircha: CAPITULO TERMINADO
 Funciones(definicion): bloque de código autocontenido, independiente al scope o ambito global(tiene su propio scope),
 se definen 1 sola vez, que se puede ejecutar en cualquier momento y reutilizarla,
 puede o no recibir parametros(datos).
+
 En Javscript las funciones también se consideran un objeto
  
 Las funciones tu las puedes asignar como un valor, en vez de retornar solo texto, puedes retornar la ejecución de una función 
@@ -42,26 +44,29 @@ funcionExpresada(); // Debes llamar a la función después de su definición
 
 
 Funciones Declaradas:
-En una función declarada, defines una función utilizando la palabra clave function seguida del nombre de la función.
+En una función declarada, defines una función utilizando la palabra clave "function" seguida del nombre de la función.
 Esta definición se "eleva" al inicio del ámbito en el que se encuentra, 
 lo que significa que puedes llamar a la función incluso antes de haberla definido en tu código.
 
  La ventaja de las declaraciones de función es que se pueden llamar antes
  de la declaración en el código, ya que JavaScript primero "eleva" las
- declaraciones de función durante la fase de compilación. 
+ declaraciones de función "durante la fase de compilación". 
  Esto significa que puedes llamar a la función antes de que aparezca en el código.
 
 
 Funciones Expresadas:
 En una función expresada, defines una función como una expresión en una variable, 
 por lo que la función solo está disponible para ser llamada después de haber sido definida.
-Las funciones expresadas son útiles en "callbacks, funciones anónimas, Clausuras (closures) y Asignación dinámica"
+Las funciones expresadas son útiles en:
+1- "callbacks
+2- funciones anónimas
+3- Clausuras (closures)
+4- Asignación dinámica"
 ------------------------------------------------------------------------------------------
 Ejercicio 3: Mostrar en consola un return
 //En este caso el return se puede ver siempre y cuando se ejecute en la consola del navegador
 //un comportamiento específico del entorno de ejecución
 //algunas extensiones pueden tener configuraciones predeterminadas que pueden afectar la forma en que se maneja la salida
-
 
 function unaFuncion{
   console.log("Uno")
@@ -75,7 +80,7 @@ unaFuncion();
 Ejercicio 4: Mostrando como que se puede ejecutar una función, si la mandas ejecutarse y la guardas en una variable
 
 //La razón por la que ves la salida en la consola cuando asignas el resultado a una variable es que estás forzando
-// la ejecución de la función al realizar la llamada 
+// la ejecución de la función al realizar la llamada , si le quitas los parentesis no ejecuta nada.
 function unaFuncion(){
   console.log("Uno")
   console.log("Dos")
