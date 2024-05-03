@@ -82,7 +82,7 @@ const persona = {
 Object.seal(persona);
 console.log(Object.isSealed(persona));
 --------------------------------------------------------------------------------
-EJERCICIO 1: Obtener los nombres de las propiedades del objeto
+EJERCICIO 3: Obtener los nombres de las propiedades del objeto y te regresa los valores dentro de un array
 let ric = {
     nombre: "Ricardo",
     edad: 33,
@@ -101,9 +101,9 @@ let ric = {
     }
 }
 console.log(Object.keys(ric));
+------------------------------------------------------------------------------------------------------
 
-
-EJERCICIO 2: Obtener los valores de las propiedades del objeto
+EJERCICIO 4: Obtener los valores de las propiedades del objeto que está dentro del objeto
 let ric = {
     nombre: "Ricardo",
     edad: 33,
@@ -118,13 +118,30 @@ let ric = {
         console.log("Hello World");
     },
     otraAccion: function() {
-        console.log(`MI nombre es ${this.nombre} y tengo ${this.edad} años`);
+        console.log(`Mi nombre es ${this.nombre} y tengo ${this.edad} años`);
     }
+};
+
+console.log(Object.keys(ric.amigos));
+
+---------------------------------------------------------------------------------------------
+Ejercicio 5: fusionar 2 objetos en 1
+let persona = {
+    nombre: "ric",
+    edad: 3
 }
-console.log(Object.values(ric));
+
+let animal = {
+    tipo: "canino",
+    raza: "chihuahua"
+}
+
+let fusion = Object.assign(persona,animal);
+console.log(fusion)
+-----------------------------------------------------------------------------------------------
 
 
-EJERCICIO 3: Usar el metodo .hasOwnProperty para preguntar si existe una propiedad del metodo, imprimira true or false para decirte si existe o no
+EJERCICIO 6: Usar el metodo .hasOwnProperty para preguntar si existe una propiedad del metodo, imprimira true or false para decirte si existe o no
 let ric = {
     nombre: "Ricardo",
     edad: 33,
@@ -143,9 +160,9 @@ let ric = {
     }
 }
 console.log(ric.hasOwnProperty("nombre"));
+-----------------------------------------------------------------------------------------------------------
 
-
-Ejercicio 4
+Ejercicio 7
 Convertir todo un objeto en un array
 let persona = {
     nombre: "Ricardo",
@@ -169,9 +186,9 @@ let persona = {
 }
 const entriesPares = Object.entries(persona);
 console.log(entriesPares);
+--------------------------------------------------------------------------------------
 
-
-Ejercicio 5
+Ejercicio 8
 Crea un objeto y bloquea una modificación usando el metodo Object.freeze, que sirve para congelar tu objeto y se quede como lo dejaste
 const persona = {
     nombre: "Ricardo",
@@ -198,9 +215,9 @@ Object.freeze(persona.amigos);
 persona.amigos[0] = "Andres";
 persona.edad = 18;
 console.log(persona);
+--------------------------------------------------------------------------------------------------------
 
-
-Ejercicio 6
+Ejercicio 9
 Usa el metodo Object.getOwnPropertyNames(); que te muestra las propiedades que le pusiste a tu objeto, pero en un Array
 let persona = {
     nombre: "Ricardo",
@@ -224,9 +241,9 @@ let persona = {
 }
 const propiedades = Object.getOwnPropertyNames(persona);
 console.log(propiedades);
+-----------------------------------------------------------------------------------
 
-
-Ejercicio 7
+Ejercicio 9
 Muestra en un array los valores que tengas dentro de las propiedades que están dentro de tu objeto, usando Object.value()
 let persona = {
     nombre: "Ricardo",
