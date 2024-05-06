@@ -10,9 +10,23 @@
 
 <body>
     <h1>Modulos en Javascript</h1>
-
+    <!-- Necesitas poner el atributo type="module" en la etiqueta script -->
     <script src="js/modulos.js" type="module"></script>
+    <!-- 
+    -Por cuestion de jerarquia, se ejecuta PRIMERO el que no tiene type="module"
+    -Al usar el atributo nomodule en la etiqueta script, ya no se ejecuta, esto
+    se hace para que no se duplique la funcionalidad de tu código 
+    -->
+    <script src="js/no-modulos.js" nomodule></script>
 
+    <!--
+        -Cuando tu trabajas con modulos, lo primero que se debe de hacer es ejecutar
+        importacion de modulos, no puedes tener linea de codigo ejecutando antes que
+        los modulos
+        -lo segundo, declaración de variables
+        -lo tercero, declaración de funciones
+        -Y por último, ejecución de código
+    -->
 </body>
 
 </html>
