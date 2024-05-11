@@ -1,6 +1,6 @@
 /*
 JON MIRCHA: LISTO
-Ejemplo de objetos literales:(Nueva caracteristica en ES6)
+Ejercicio 1: Ejemplo de objetos literales:(Nueva caracteristica en ES6)
 
  const dog = {
     nombre,
@@ -11,7 +11,7 @@ Ejemplo de objetos literales:(Nueva caracteristica en ES6)
     }
  }
 ----------------------------------------------------------
-Ejercicio 3 Crear un objeto, mostrar su contenido Y BORRAR una propiedad del objeto 
+Ejercicio 2 Crear un objeto, mostrar su contenido Y BORRAR una propiedad del objeto 
 let persona = {
     nombre: "Ricardo",
     edad: 33,

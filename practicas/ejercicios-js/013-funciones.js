@@ -1,7 +1,4 @@
-function unaFuncion(){
-  console.log("Uno")
-}
-unaFuncion()
+
 /*
 
 Jon Mircha: CAPITULO TERMINADO
@@ -215,7 +212,7 @@ console.log(incrementar()); // 2
 Ejercicio 16
 EJEMPLO CON ASIGNACIÓN DINÁMICA
 Puedes asignar funciones expresadas a variables en tiempo de ejecución,
-lo que te permite cambiar qué función se ejecutará en función de las condiciones del programa.
+lo que te permite cambiar "qué función se ejecutará en función de las condiciones del programa".
 
 let operacion;
 if (condicion) {
@@ -363,7 +360,7 @@ EJERCICIO 24
  }
  console.log(crearObjeto("Ric", 33).imprimir());
 
-Ejercicio 25: Resumir la función dentro del objeto del ejercicio 27
+Ejercicio 25: agregar una función dentro del objeto y ejecutarla usando los datos dentro del objeto
  let crearObjeto = (nombre, edad) => {
      return {
          nombre,
@@ -376,18 +373,12 @@ Ejercicio 25: Resumir la función dentro del objeto del ejercicio 27
  console.log(crearObjeto("Ric", 33).imprimir());
 
 
-Ejercicio 26: Imprimir mi nombre con una función flecha
-let nombre = () => {
-    console.log("Ricardo");
-}
-nombre();
-
-Ejercicio 27: imprimir tu nombre con una función autoejecutable
+Ejercicio 26: imprimir tu nombre con una función autoejecutable
 (() => {
     console.log("rIC");
 })()
 
-EJERCICIO 28: Crear una funcion anónima autoinvocada que reciba parametros
+EJERCICIO 27: Crear una funcion anónima autoinvocada que reciba parametros
 (function(w, d, c) {
     console.log("Soy una función autoinvocada");
     console.log(w);
@@ -397,7 +388,7 @@ EJERCICIO 28: Crear una funcion anónima autoinvocada que reciba parametros
 })(window, document, console)
 
 
-EJERCICIO 29: Imprimir un valor predefinido
+EJERCICIO 28: Imprimir un valor predefinido
 function saludar(nombre) {
     nombre = nombre || "Desconocido";
     console.log(`Hola ${nombre}`);
@@ -405,7 +396,7 @@ function saludar(nombre) {
 saludar();
 
 
-Ejercicio 30: Ejemplos de corto circuito OR
+Ejercicio 29: Ejemplos de corto circuito OR
 Este es un ejercicio que sirven para aprender que imprimira el navegador
 
 function saludar(nombre) {
@@ -422,13 +413,6 @@ saludar(undefined || "valor de la derecha");
 saludar("" || "valor de la derecha");
 saludar(-2 || "valor de la derecha");
 saludar(0 || "valor de la derecha");
----------------------------------------------------------------------------
-
-Ejercicio 31
-Hace una suma de 2 números asignandoselos en el parentesis, con una función flecha
-let operacion = (num1, num2) => {
-    console.log(num1 + num2);
-}
 ---------------------------------------------------------------------------------------
 
 Ejercicio 32

@@ -1,6 +1,7 @@
 //javascript es un lenguaje single thread que solo ejecuta una cosa a la vez
 
 /*
+JON MIRCHA: 
 
 Ejercicio 8: TEORIA
 javascript es un lenguaje single thread que solo ejecuta una cosa a la vez
@@ -53,4 +54,28 @@ Además, en entornos concurrentes, es importante que el recolector de basura sea
 En resumen, el recolector de basura en el contexto de la concurrencia sigue siendo responsable de liberar la memoria no utilizada, pero debe adaptarse para manejar los desafíos únicos asociados con la ejecución concurrente de múltiples hilos.
 
 
+  CONCEPTO EVENTLOOP
+    Primero hay que entender estos 5 conceptos:
+    -Procesamiento Single THread y multithread.
+    -Operaciones de CPU y operaciones de I/O.
+    -Operaciones concurrentes y paralelas.
+    -Operaciones bloqueantes y no bloqueantes
+    -Operaciones sincronas y asicronas
+   
+   Los hilos son las unidades básicas de ejecución de cada proceso que realiza nuestra maquina.
+   Por ejemplo: cada que tu abres el navegador y/o tu editor de código se levanta un proceso, e internamente
+   esos procesos, pueden correr varios hilos o un solo hilo, que es lo que ejecuta su funcionalidad.
+   Entonces, dependiendo de las caracteristicas del lenguaje, van a haber lenguajes que trabajan en un solo hilo
+   y lenguajes que trabajan en multi hilos.(JAVASCRIPT tiene un solo hilo de ejecución).
+   
+   Imagen: asincronia-01
+   El "CALL STACK" son las peticiones que va haciendo la aplicación, o incluso las interacciones del usuario, 
+   estas van trabajando en este unico hilo(el hilo es el circulo de color amarillo)y tenemos una cola de eventos o de mensajes(event queue), que "van apilando esas tareas" y conforme van terminando, van enviando los mensajes y todos se van comunicando "en un mismo hilo"
+   
+   Imagen: asincronia-02-eventloop
+   Tanto en los navegadores(frontend) como en los servidores(node js backend) js se comporta de la misma manera.
+   
+   javascript tiene diferentes mecanismos para trabajar la asincronias
+   
+   min 8:14
 */
