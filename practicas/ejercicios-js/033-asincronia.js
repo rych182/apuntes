@@ -1,5 +1,15 @@
 //javascript es un lenguaje single thread que solo ejecuta una cosa a la vez
 
+console.log("Inicio");
+
+// Tarea asíncrona
+setTimeout(function() {
+    console.log("Tarea asíncrona completada.");
+}, 2000);
+
+console.log("Fin");
+
+
 /*
 JON MIRCHA: 
 
