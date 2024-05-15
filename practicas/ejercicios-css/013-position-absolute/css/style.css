@@ -4,17 +4,31 @@
 }
 
 .img{
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
 
     display: block;
-    margin: 4rem;
+    margin: 2rem;
 
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 0 6px;
+
 }
 
-.relative{
+.juan-pis{
     border: 5px solid red;
+    position: relative;
+    top: 350px;
+}
+
+.puma{
+    border: 5px solid blue;
+    position: relative;
+    top:350px
+}
+
+.php{
+    border: 5px solid green;
+    position: relative;
 }

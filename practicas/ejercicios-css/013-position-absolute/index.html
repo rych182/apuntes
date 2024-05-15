@@ -4,11 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Submenu</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <img src="" alt="" class="img relative">
-    <img src="" alt="" class="img ">
-    <img src="" alt="" class="img ">
+
+    <h3>Todos los elementos tienen un "position static" por default, todo lo que tenga
+        un position relative, absolute o fixed, son elementos "posicionados" </h3>
+    <br>
+    <h3>Cuando utilizas "position: relative", desbloqueas 4 metodos de CSS que son de
+        desplazamiento:4 TOP, BOTTOM, LEFT y RIGHT, esto permite desplazar al elemento "sin
+        desplazar" a los demás elementos como en el caso de "la propiedad margin"</h3>
+        <br>
+    <h3>Al usar "position relative" y moverlo con TOP, BOTTOM, LEFT y RIGHT, este se 
+        "encima" sobre elementos que tienen "position static"
+    </h3>
+    <br>
+    <h3>Si todos los elementos tuvieran "position relative" el elemento de arriba se pone 
+        DEBAJO del siguiente elemento con position relative
+    </h3>
+
+    <img src="img/one-piece.png" alt="" class="img juan-pis">
+    <img src="img/puma.png" alt="" class="img puma">
+    <img src="img/logo-php.png" alt="" class="img php">
    
 </body>
 </html>
