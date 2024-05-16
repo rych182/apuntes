@@ -139,7 +139,7 @@ let ric = {
 }
 ric.accion();
 -------------------------------------------------------------------
-Ejercicio 11 ejecutar una variable pasandole un valor por defecto 
+Ejercicio 11 ejecutar una función dentro de un objeto pasandole un valor por defecto 
 let ric = {
     nombre: "Ricardo",
     edad: 33,
@@ -161,9 +161,9 @@ let ric = {
     }
 }
 ric.accion3(2, 3);
+-------------------------------------------------------------------
 
-
-Ejercicio 12 ejecutar una variable pasandole un valor por defecto PARA SUMAR
+Ejercicio 12 ejecutar una función dentro de un objeto pasandole un valor por defecto PARA SUMAR
 let ric = {
     nombre: "Ricardo",
     edad: 33,

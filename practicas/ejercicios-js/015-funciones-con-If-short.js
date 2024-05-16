@@ -1,6 +1,4 @@
 /*
-
-
 Ejercicio 1, crea un programa que tenga una función flecha que reciba 2 parametos 
 y con el operador ternario(if-else corto) imprima el número mayor 
 const numeroMayor = (a, b) => {

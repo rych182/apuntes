@@ -20,6 +20,7 @@
     border: 5px solid red;
     position: relative;
     top: 350px;
+    z-index: 1;
 }
 
 .puma{
@@ -31,4 +32,9 @@
 .php{
     border: 5px solid green;
     position: relative;
+}
+
+.guion-bajo{
+    text-decoration: underline;
+    color: red;
 }

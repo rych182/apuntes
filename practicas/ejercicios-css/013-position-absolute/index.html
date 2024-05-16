@@ -8,20 +8,36 @@
 </head>
 <body>
 
-    <h3>Todos los elementos tienen un "position static" por default, todo lo que tenga
-        un position relative, absolute o fixed, son elementos "posicionados" </h3>
+    <h3>Todos los elementos tienen un <span class="guion-bajo">"position static"</span> por default, todo lo que tenga
+        un position relative, absolute o fixed, son elementos <span class="guion-bajo">"posicionados"</span></h3>
     <br>
-    <h3>Cuando utilizas "position: relative", desbloqueas 4 metodos de CSS que son de
-        desplazamiento:4 TOP, BOTTOM, LEFT y RIGHT, esto permite desplazar al elemento "sin
-        desplazar" a los demás elementos como en el caso de "la propiedad margin"</h3>
+    <h3>Cuando utilizas <span class="guion-bajo">"position: relative"</span>, desbloqueas 4 metodos de CSS que son de
+        desplazamiento:4 <span class="guion-bajo">TOP, BOTTOM, LEFT y RIGHT</span>, esto permite desplazar al elemento <span class="guion-bajo">"sin
+            desplazar"</span> a los demás elementos como en el caso de <span class="guion-bajo">"la propiedad margin"</span></h3>
         <br>
-    <h3>Al usar "position relative" y moverlo con TOP, BOTTOM, LEFT y RIGHT, este se 
-        "encima" sobre elementos que tienen "position static"
+    <h3>Al usar <span class="guion-bajo">"position relative"</span> y moverlo con <span class="guion-bajo">TOP, BOTTOM, LEFT y RIGHT</span>, este se 
+        <span class="guion-bajo">"encima"</span> sobre elementos que tienen <span class="guion-bajo">"position static"</span>
     </h3>
     <br>
-    <h3>Si todos los elementos tuvieran "position relative" el elemento de arriba se pone 
-        DEBAJO del siguiente elemento con position relative
+    <h3>Si todos los elementos tuvieran <span class="guion-bajo">"position relative"</span> el elemento de arriba se pone 
+        <span class="guion-bajo">DEBAJO</span> del siguiente elemento con position relative
     </h3>
+    <br>
+    <h3>Si <span class="guion-bajo">TODOS</span> tienen <span class="guion-bajo">"position: relative"</span>, el primero, 
+        <span class="guion-bajo">"se pondría debajo"</span> de los
+        <span class="guion-bajo">"siguientes"</span>, esto se debe a que todos los elementos
+        tienen una mayor relevancia en el <span class="guion-bajo">Eje Z</span> 
+    </h3>
+    <br>
+    <h3>Si quisiera poner por encima un elemento que tiene <span class="guion-bajo">position: relative</span>
+    encima del siguiente elemento que <span class="guion-bajo">también tiene position: relative</span>
+    debo de usar la propiedad <span class="guion-bajo">z-index</span> con un número
+    <span class="guion-bajo">positivo</span>, el <span class="guion-bajo">z-index</span>
+    se desbloquea solo cuando los elementos tienen un position <span class="guion-bajo">DISTINTO</span>
+    al <span class="guion-bajo">position: STATIC</span> 
+    </h3>
+    <br>
+    <h3></h3>
 
     <img src="img/one-piece.png" alt="" class="img juan-pis">
     <img src="img/puma.png" alt="" class="img puma">

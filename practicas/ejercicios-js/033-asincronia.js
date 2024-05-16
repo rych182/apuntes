@@ -82,10 +82,62 @@ En resumen, el recolector de basura en el contexto de la concurrencia sigue sien
    El "CALL STACK" son las peticiones que va haciendo la aplicación, o incluso las interacciones del usuario, 
    estas van trabajando en este unico hilo(el hilo es el circulo de color amarillo)y tenemos una cola de eventos o de mensajes(event queue), que "van apilando esas tareas" y conforme van terminando, van enviando los mensajes y todos se van comunicando "en un mismo hilo"
    
-   Imagen: asincronia-02-eventloop
+   Imagen: asincronia-02-eventloop(este diagrama es más al estilo NOde JS)
+   
    Tanto en los navegadores(frontend) como en los servidores(node js backend) js se comporta de la misma manera.
    
    javascript tiene diferentes mecanismos para trabajar la asincronias
+   EL primer mecanismo que tenemos para trabajar la asincronía son las funciones "callback"
    
-   min 8:14
+   , en el "intensive operation" se van registrando las funciones, dependiendo del tipo de petición
+   que vayamos a hacer, por ejemplo, acceso a los ficheros de los sistemas, solicitar datos de una
+   base de datos, hacer procesamiento, etc , 
+   obvio en el navegador no tenemos acceso al file system , pero podría ser:
+   
+   -el consumo de una API, 
+   -archivos JSON, 
+   -ó esperar la respuesta de una operación aritmetica
+   
+   Conforme estas "terminen" REGRESAN AL EVENTLOOP que le manda un DISPARADOR(trigger) que le manda una 
+   "notificación" al usuario .
+   
+   DE ESTO SE TRATA EL EVENTLOOP.
+   
+   ===CONCEPTO CALL STACK===
+   Va apilando las tareas , dependiendo si son "sincronas" o "asincronas", podemos ver como cada una se va 
+   liberando.
+   
+   Javascript trabaja bajo la filosofía LIFO(Last In, First Out) osea, "la última en entrar es la primera en 		salir" , es la manera en la que se va ejecutando las operaciones.
+
+   asincronia-04(este diagrama va más a los navegadores)
+   
+   en la imagen son web API's y se van apilando las tareas(el rectangulo con cuadrados de colores), aquí está la petición del usuario(la lista de cosas de la web API) y el eventloop va solicitando las NOTIFICACIONES conforme
+   se van terminando
+   
+   
+   OPERACIONES DE CPU Y OPERACIONES DE I/O(entrada y salida)
+   
+   OPERACIONES DE CPU
+
+   Operaciones de CPU son las que la mayoría del tiempo van a estar consumiendo los procesos, 
+   de nuestro CPU, por ejemplo:
+
+    
+   Los loops , si caemos en un error lógico y se vuelve lógico, eso empezará a consumir la 
+   memoria de nuestro navegador y esto ocasionará que se trave, ESTO ES UNA OPERACIÓN DE CPU
+   porque consume mas rendimiento de la maquina.
+   
+   OPERACIONES DE I/O
+   
+   Son aquellas que pasan la mayor parte del tiempo esperando la peticion del recurso que han
+   solicitado y por recurso me refiero a:
+   -enviar un formulario que se procese en un servidor que envie una notificacion de que se a procesado tu información 
+   -cuando haces un "pago en linea"y esperas la notificación de el pago
+   -cuando haces una petición a una API y esperas a que esa API te envíe una información en un
+   archivo JSON.
+   
+   Javascript se comporta haciendo operaciones de I/O
+
+   
+ 
 */
