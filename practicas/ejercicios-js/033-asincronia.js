@@ -137,6 +137,134 @@ En resumen, el recolector de basura en el contexto de la concurrencia sigue sien
    archivo JSON.
    
    Javascript se comporta haciendo operaciones de I/O
+   -------------------------------------------------------------------------------
+   --------------------------------------------------------------------------------------------------------
+   CONCURRENCIA Y PARALELISMO
+   
+   CONCURRENCIA
+   La concurrencia es cuando 2 o más tareas PROGRESAN SIMULTANEAMENTE, es decir, se estpan ejecutando al 
+   mismo tiempo y van avanzando simultaneamente.
+   Podemos tener concurrencia en un entorno sincrono y asincrono
+   
+   PARALELISMO
+   Es cuando 2 o más tareas se "ejecutan" al mismo tiempo
+   También existe paralelismo en single thread(asincrono), porque la gente piensa que solo es en multi thread.
+   aunque "single thread" esta más relacionado a "concurrencia", "no bloqueante" y "asincrono PERO
+   JAVASCRIPT ES SINGLE THREAD Y PODEMOS TENER OPERACIONES SINCRONAS Y ASINCRONAS  
+-----------------------------------------------------------------------------------------------------
+
+	OPERACION BLOQUEANTE Y NO BLOQUEANTE
+	
+	Se refiere a la "fase de espera" cada que se va ejecutando una operación de nuestro código, esto
+	se refiere a como toma esa fase de espera.
+	
+	OPERACION BLOQUEANTE
+	Es aquella que no va a devolver el control a la aplicación hasta que haya terminado toda su tarea,
+	Osea no van a devolver la ejecución al hilo principal hasta que haya terminado sus tareas  
+	
+	NO BLOQUEANTE
+	Significa que las operaciones se ejecutan , devuelven inmediatamente el control al hilo principal 
+	no importando si ha terminado o no la tarea, en el momento que una tarea no bloqueante se acabe
+	va a mandar una notificación entonces ya se avisará al hilo principal y en caso de que se haya 
+	terminado devolvera los datos solicitados o mensaje correspondiente, entonces se podrá manejar 
+	incluso un código de error
+	
+----------------------------------------------------------------------------------------------------------
+	
+	OPERACIONES SINCRONA Y ASINCRONAS
+	
+	se refiere a cuando tendra lugar la respuesta, pensando en el presente, pasado y futuro, 
+	"sincrono" se refiere a cuando la respuesta sucede en el presente, el tiempo inmediato, una 
+	operación sincrona espera el resultado en tiempo presente y sigue otra operación y así
+	sucesivamente 
+	
+	ASINCRONO
+	
+	La respuesta sucede en un futuro, se ejecuta pero no saber cuando va a venir la respuesta, 
+	es decir la operación "asincrona" no espera los resultados, es por eso que suelta el control
+	y se lo regresa al hilo principal, por eso es que generalmente se suelen asociar estos conceptos de
+	BLOQUEANTE CON SINCRONO Y NO BLOQUEANTE CON ASINCRONO .
+	
+	Incluso puede existir código sincrono "bloqueante y no bloqueante".
+	EL código asincrono si va a ser "no bloqueante"
+	
+	Hablando "particularmente de JAVASCRIPT" con lo anterior explicado, vamos a tener 2 tipos de código
+	1- SIncrono bloqueante
+	2- asincrono no bloqueante
+	
+	El código "single thread" y la mayoria de sus "operaciones I/O"
+	
+	-------------------------------------------------------------------------------
+	CODIGO SINCRONO BLOQUEANTE
+	( ()=>{
+		console.log("codigo sincrono");
+		console.log("INicio");
+		
+		function dos(){
+			console.log("DOS")
+		}
+		
+		function uno(){
+			console.log("UNO")
+			dos();
+			console.log("TRES");
+		}
+		uno();
+		console.log("FIN")
+	})();
+	
+	HERRAMIENTA latentflip.com
+	 http://latentflip.com/loupe/?code=JC5vbignYnV0dG9uJywgJ2NsaWNrJywgZnVuY3Rpb24gb25DbGljaygpIHsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24gdGltZXIoKSB7CiAgICAgICAgY29uc29sZS5sb2coJ1lvdSBjbGlja2VkIHRoZSBidXR0b24hJyk7ICAgIAogICAgfSwgMjAwMCk7Cn0pOwoKY29uc29sZS5sb2coIkhpISIpOwoKc2V0VGltZW91dChmdW5jdGlvbiB0aW1lb3V0KCkgewogICAgY29uc29sZS5sb2coIkNsaWNrIHRoZSBidXR0b24hIik7Cn0sIDUwMDApOwoKY29uc29sZS5sb2coIldlbGNvbWUgdG8gbG91cGUuIik7!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D
+	 
+	 QUE NO SEA CODIGO ES6, si no javascript viejito, porque no permite let ni arrow functions
+	 
+	 Imagen: asincronia-02-eventloop(este diagrama es más al estilo NOde JS)
+	 
+	 Cuando se ejecuta la "función uno", Se mantiene  en el stack se mantiene todo el
+	 conjunto de tareas que está en la función 1.
+	 
+	 ENtra en función 2 y ejecuta la tarea
+	 
+	 "cada operacion bloquea el hilo principal del EVENTLOOP DE JS"
+	 
+	 ---------------------------------------------------------------------------------
+	 
+	 CODIGO ASINCRONO NO BLOQUEANTE
+	 ( ()=>{
+	 	console.log("Codigo asincrono");
+	 	console.log("Inicio");
+	 	
+	 	function dos(){
+	 		setTimeout(function(){
+	 			console.log("Dos")
+	 		},1000)
+	 	}
+	 	
+	 	function uno(){
+	 		setTimeout(function(){
+	 			console.log("Uno")
+	 		},0)
+	 		dos();
+	 		console.log("Tres")
+	 	}
+	 	
+	 	uno();
+	 	console.log("FIN");
+	})();
+	 
+	 -El setTimeout es un mecanismo de asincronismo porque va a tardar el tiempo que nosotros
+	 le dijimos.
+	 -AUnque un setTimeout tenga 0 en tiempo, como es una función, pasa a la fila del call stack
+	 -Los console.log tienen preferencia al ejecutarse aunque sea una función
+	 -Este ejercicio es una mezcla de codigo sincrono y asincrono y juntos hacen un ejercicio asincrono
+	 -Y esto cumple con cualquiera de los diagramas que mostre en las 4 imagenes
+	 
+	 En resumen:
+	 
+	 Javascript usa un modelo asincrono y no bloqueante, con un loop de eventos(eventloop)
+	 implementados en un solo hilo(single thread) para operaciones de entrada y salida
+	 (I/O) 
+
 
    
  
