@@ -1,28 +1,34 @@
-/*
-informatica dp
-https://www.youtube.com/watch?v=zQVnDW8SaA0
 
+/*
 CALLBACK
 
 FALCONMASTERS
 Los callback son funciones que podemos pasar como parametro a otra función
 esto es con el fin de que una función pueda llamar a otra función y ejecutarla.
 
-Imaginate que usas una librería que se conecta a una base de datos que te pasa
-los post de un usuario, esta librería te va a dar una función que se llama
-"obtenerPostsDeUsuario"
+La mayoría del tiempo, tu no vas a hacer esto, lo van a hacer los paquetes/librerías
 
-ESPAÑOL (Adrian Gallardo)
-EL codigo de JS se ejecuta secuencialmente, el callback es una función que se
-va ejecutar cuando haya pasado determinado tiempo ó evento
+const obtenerPostsDeUsuario = (usuario,callback)=>{
+  console.log(`Obteniendo los post de ${usuario}`);
 
+  setTimeout(()=>{
+    let posts = ['post1','post2','post3'];
+    callback(posts[1]);
+  },2000)
+}
+
+obtenerPostsDeUsuario('fulanito',(posts)=>{
+  console.log(posts);
+});
+---------------------------------------------------
 ARGENTINO
-La función puede tener una demora, como cuando consultamos una API y que
-nos devuelva algún valor, el internet o el servidor está lento, para 
-simular la demora utilizaré el setTimeout.
+Una función callback es una función que se pasa como argumento a otra función
+que luego se invoca dentro de la función externa para completar algun tipo de rutina
+Javascript es un lenguaje interpretado y en los lenguajes interpretados se
+el código se ejecuta de arriba a abajo y el resultado se devuelve inmediatamente
 
-setTImeout recibe 2 valores el primero es una función y el segundo es un valor,
-en el primer valor recibe lo que ejecutaremos y el segundo el tiempo
+
+
 
 Ejercicio 1: Explicación del porque es importante un CallBack
 function primero() {
@@ -33,9 +39,69 @@ function segundo() {
 }
 primero();
 segundo();
-......................................................................
-Ejercicio 2:
 
+¿Que pasaría si hacemos esto?
+
+function primero() {
+  setTimeout(function(){
+    console.log("PRIMERO")
+  },3000)
+}
+function segundo() {
+    console.log("SEGUNDO")
+}
+primero();
+segundo();
+
+Para arreglarlo lo hacemos con esot
+function primero(segundo) {
+  setTimeout(function(){
+    console.log("PRIMERO")
+    segundo();
+  },3000)
+}
+function segundo() {
+    console.log("SEGUNDO")
+}
+primero(segundo);
+
+Y aunque tenga una demora de 3 segundos, se va a ejecutar en el orden correcto 
+......................................................................
+Ejercicio 2:crea 2 funciones, una que sume y otra que reste, 
+
+function suma(a,resta) {
+  console.log(a + resta());
+}
+function resta() {
+  return 2-3;
+}
+suma(4,resta)
+
+También se puede ejecutar desde la llamada de la función
+
+function suma(a,resta) {
+  console.log(a + resta);
+}
+function resta() {
+  return 2-3;
+}
+suma(4,resta())
+-------------------------------------------------------------------------------
+Ejercicio 3 de un callback recibiendo parametros, mientras se ejecuta dentro de la función
+La mayoría del tiempo, tu no vas a hacer esto, lo van a hacer los paquetes/librerías
+
+const obtenerPostsDeUsuario = (usuario,callback)=>{
+  console.log(`Obteniendo los post de ${usuario}`);
+
+  setTimeout(()=>{
+    let posts = ['post1','post2','post3'];
+    callback(posts[1]);
+  },2000)
+}
+
+obtenerPostsDeUsuario('fulanito',(posts)=>{
+  console.log(posts);
+});
 ------------------------------------------------------------------------
 Ejercicio 3: callback por evento
 Para esto creamos un boton en html que tenga un id
@@ -155,13 +221,13 @@ https://www.w3schools.com/js/js_htmldom_eventlistener.asp
 
 CALLBACKS
 
-4min Adrian Gallardo
-5min INFORMATICA DP
+4min Adrian Gallardo                            LISTO
+5min INFORMATICA DP                             LISTO
 6min James Q Quick Callback
 7min MIdudev
 7min Albert Hernandez
 7min CodigoMentor
-9min FALCON MASTERS
+9min FALCON MASTERS                             LISTO
 9min JOrge Garnica Blanco
 10min Midudev callbacks vs promises
 10min aprogramar callbacks
