@@ -1,12 +1,46 @@
 
 /*
-CALLBACK
 
+--------------------------------
+const tareaSimple = (tarea) => console.log(tarea);
+
+const tareaPesada = (tarea) =>{
+  console.log(`Empezando tarea ${tarea}...`)
+  //el for solo es para que calcule y se tarde mucho
+  for (let i = 0; i < 100000000; i++) {
+    Math.random() - Math.random() * Math.random();
+  }
+  console.log(`Tarea ${tarea} terminada`);
+}
+
+const tareaFulanito = (tarea,callback,tiempo) =>{
+  console.log(tarea);
+  setTimeout(callback, tiempo);
+}
+
+const laboresYoutuber = [
+  () => tareaSimple("escribir un guión"),
+  () => tareaFulanito("hacer una imagen miniatura para el video",()=>tareaSimple("revisar miniatura"),3000),
+  () => tareaPesada("grabar el vídeo"),
+  () => tareaFulanito("Editar el vídeo",()=>tareaSimple("revisar el vídeo"),5000)
+];
+
+for (const labor of laboresYoutuber) {
+  labor()
+}
+*/
+/*
+CALLBACK
+Una función que recibe otra función como parametro y luego la ejecuta
 FALCONMASTERS
 Los callback son funciones que podemos pasar como parametro a otra función
 esto es con el fin de que una función pueda llamar a otra función y ejecutarla.
 
+Un Callback puede usarse tanto para un codigo sincromo como asincrono
+
 La mayoría del tiempo, tu no vas a hacer esto, lo van a hacer los paquetes/librerías
+
+CASI TODO EN JAVASCRIPT RECIBE UN CALLBACK
 
 const obtenerPostsDeUsuario = (usuario,callback)=>{
   console.log(`Obteniendo los post de ${usuario}`);
@@ -86,8 +120,20 @@ function resta() {
   return 2-3;
 }
 suma(4,resta())
+----------------------------------------------------------------------------------
+Ejercicio 3: Otra manera de pasar por parametro una función
+
+let inicio = function (valor,callback) {
+  //la función anónima aquí se le llama "parametro callback" y recibe el valor del parametro valor en la linea 123,
+  //y la linea 123, lo recibe de la linea 128, donde escribes el nombre
+  callback(valor);
+}
+inicio("fulanito",function(valor){
+  console.log(`Bienvenido ${valor}`)
+})
+
 -------------------------------------------------------------------------------
-Ejercicio 3 de un callback recibiendo parametros, mientras se ejecuta dentro de la función
+Ejercicio 4 de un callback recibiendo parametros, mientras se ejecuta dentro de la función
 La mayoría del tiempo, tu no vas a hacer esto, lo van a hacer los paquetes/librerías
 
 const obtenerPostsDeUsuario = (usuario,callback)=>{
@@ -103,7 +149,7 @@ obtenerPostsDeUsuario('fulanito',(posts)=>{
   console.log(posts);
 });
 ------------------------------------------------------------------------
-Ejercicio 3: callback por evento
+Ejercicio 5: callback por evento
 Para esto creamos un boton en html que tenga un id
 
 //función que sirve para que puedas seleccionar un id, clase o etiqueta html
@@ -112,7 +158,7 @@ document.querySelector('#btn').addEventListener('click',()=>{
 })
 
 ----------------------------------------------------------------------------
-Ejercicio 4: callback por evento, ejemplo 2
+Ejercicio 6: callback por evento, ejemplo 2
 Para esto creamos un boton en html que tenga un id
 
 function fecha() {
@@ -136,113 +182,71 @@ console.log(fecha);  // Ejemplo de salida: Fri May 17 2024 12:34:56 GMT+0000 (Co
 let fechaEspecifica = new Date(2024, 4, 17);  // Mes es 0-indexado, por lo que 4 representa mayo.
 console.log(fechaEspecifica);  // Ejemplo de salida: Fri May 17 2024 00:00:00 GMT+0000 (Coordinated Universal Time)
 -----------------------------------------------------------------------------------------------------------------------
-Ejercicio 5: ejecuta una función anonima que contiene una funcion predefinida del lenguaje
-Para esto creamos un boton en html que tenga un id
-
-document.getElementById("alerta").addEventListener("click", function() {
-    alert("Hello World!");
-  });
---------------------------------------------------------------------------------------------------
-EJercicio 6: Ejecutando 2 funciones con addEventListener y guardando la selección en una variable
-Para esto creamos un boton en html que tenga un id
-
-let x = document.getElementById("dosFunciones");
-x.addEventListener("click", funcionUno);
-x.addEventListener("click", funcionDos);
-
-function funcionUno() {
-  alert ("SOy la primer función!");
-}
-
-function funcionDos() {
-  alert ("Me ejecuto despues de la función uno, SOY LA FUNCION 2");
-}
-----------------------------------------------------------------------------------------------------------
-EJercicio 7: te imprime texto cuando estas sobre el boton, quitas el mouse encima del boton y cuando das click.
-
-let x = document.getElementById("variasFunciones");
-x.addEventListener("mouseover", myFunction);
-x.addEventListener("click", mySecondFunction);
-x.addEventListener("mouseout", myThirdFunction);
-
-function myFunction() {
-  document.getElementById("imprimir").innerHTML += "El raton está sobre mi!<br>";
-}
-
-function mySecondFunction() {
-  document.getElementById("imprimir").innerHTML += "Me diste click!<br>";
-}
-
-function myThirdFunction() {
-  document.getElementById("imprimir").innerHTML += "QUitaste el mouse de encima de mi!<br>";
-}
------------------------------------------------------------------------------------------------------
-Ejercicio 8 y 9 : te imprime el tamaño de la ventana del navegador
-
-En esta se ejecuta "cuando se redimensiona", osea que tienes que hacer chico el navegador para que imprima
-window.addEventListener("resize", function(){
-    let width = window.innerWidth;
-    let height = window.innerHeight;
-    document.getElementById("demo").innerHTML = "Width: " + width + "px, Height: " + height + "px";
-  });
-
-
-EN este te imprime de inmediato el tamaño que tenga
-  (function(){
-    var width = window.innerWidth;
-    var height = window.innerHeight;
-    document.getElementById("demo").innerHTML = "Width: " + width + "px, Height: " + height + "px";
-  })();
-
---------------------------------------------------------------------------------------------------------
-Ejercicio 10: Este ejemplo demuestra cómo pasar valores de parámetros cuando se utiliza el método addEventListener()
-y esta siendo llamada por una función anónima.
-
-let p1 = 5;
-let p2 = 7;
-document.getElementById("suma").addEventListener("click", function() {
-  myFunction(p1, p2);
-});
-
-function myFunction(a, b) {
-  document.getElementById("demo1").innerHTML = a * b;
-}
-----------------------------------------------------------------------------------
-Ejercicio 11: El ejercicio de arriba con menos código
-
-document.getElementById("suma").addEventListener("click", function() {
-    let p1 = 5;
-    let p2 = 7;
-    document.getElementById("demo1").innerHTML = p1 * p2;
-});
-
 --------------------------------------------------------------------------------------
 https://www.w3schools.com/js/js_htmldom_eventlistener.asp
 
+----------------------------------------------------------------------------------------
+Ejercicio 7: probando como no siempre las funciones callback tardan lo mismo
+
+console.time("prueba");
+setTimeout(()=> console.timeEnd("prueba"),3000)
+
+---------------------------------------------------------------------------------------
+Ejercicio 8: creando un callback utilizando funciones predefinidas del lenguaje
+y quiero que me lo explique el alumno linea por linea
+const animales =['perro','gato',"caballo"];
+function modificar(array,callback) {
+  animales.push("iguana")
+  callback(array)
+}
+
+console.log(animales)
+modificar(animales,function(array){
+  console.log(`He modificado el array y ahora es de ${array.length} elementos`,animales)
+})
+
+Esto puede ser asincrono de esta manera
+
+const animales =['perro','gato',"caballo"];
+function modificar(array,callback) {
+  animales.push("iguana")
+  setTimeout(() => {
+    callback(array)
+  }, 3000);
+  
+}
+
+console.log(animales)
+modificar(animales,function(array){
+  console.log(`He modificado el array y ahora es de ${array.length} elementos`,animales)
+})
+--------------------------------------------------------------------------------------------
+Ejercicio 9: creando nuestro propio forEach
+const nombres = ["pedro","pablo","susana","perla"];
+const miPropioForEach = (array,callback) =>{
+  for (let i= 0; i < array.length; i++) {
+    const element = array[i];
+    callback(element);
+  }
+}
+
+miPropioForEach(nombres,(nombre)=>{
+  console.log(nombre)
+})
+-----------------------------------------------------------
+Ejercicio 10: Ejercicio de callback
+
+
+
+-Las funciones son ciudadanos de primera clase
+-que es una high order function
+
+------------------------------------------------------------------------------------------
+
+
 CALLBACKS
 
-4min Adrian Gallardo                            LISTO
-5min INFORMATICA DP                             LISTO
-6min James Q Quick Callback
-7min MIdudev
-7min Albert Hernandez
-7min CodigoMentor
-9min FALCON MASTERS                             LISTO
-9min JOrge Garnica Blanco
-10min Midudev callbacks vs promises
-10min aprogramar callbacks
-11min uskokrum callbacks
-14min code with Ania callback in javascript
-14min fazt callbacks,promesas, async/await
-15min BlueWeeb(conceptos avanzados)
-17min Jon Mircha
-40min Blueweeb callback, promises, async/await
 
-https://www.youtube.com/results?search_query=callbacks+javascript
-
-https://www.youtube.com/watch?v=zQVnDW8SaA0
-https://www.youtube.com/watch?v=Eh-s-n_6zNQ&t=921s
-https://www.youtube.com/watch?v=jTSwOhECHtE
 */
 
 

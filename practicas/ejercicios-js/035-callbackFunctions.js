@@ -1,3 +1,5 @@
+
+
 /*
                 AddEventListener
 Ejercicio 5: ejecuta una función anonima que contiene una funcion predefinida del lenguaje
@@ -79,6 +81,60 @@ document.getElementById("suma").addEventListener("click", function() {
     let p2 = 7;
     document.getElementById("demo1").innerHTML = p1 * p2;
 });
+-------------------------------------------------------------------------------
+                            forEach
+Ejercicio 12
+const names = ["Pedro","Paco","LOla","gerardo"];
+names.forEach((name)=>{
+    console.log(name)
+})
+-------------------------------------------------------------
+                            .map()
+Ejercicio 13: Utilizando la función .map
+Este método crea un nuevo array con los resultados de aplicar dicha función de callback a cada elemento del array original.
+
+const numeros = [1, 2, 3, 4, 5];
+
+const dobles = numeros.map(function(elemento) {
+  return elemento * 2;
+});
+
+console.log(dobles); // [2, 4, 6, 8, 10]
+-------------------------------------------------------
+Ejercicio 14: el ejemplo de arriba pero usando los otros parámetros que la función de callback
+
+const numeros = [1, 2, 3, 4, 5];
+
+const resultado = numeros.map(function(elemento, indice, array) {
+  console.log('Elemento:', elemento); // Imprime el elemento actual
+  console.log('Índice:', indice);     // Imprime el índice del elemento actual
+  console.log('Array:', array);       // Imprime el array original
+  return elemento * 2;
+});
+
+console.log(resultado); // [2, 4, 6, 8, 10]
+-----------------------------------------------------------------------
+
+Ejercicio 15: Podemos usar thisArg para cambiar el contexto de this dentro de la función callback:
+const multiplicador = {
+  factor: 3
+};
+
+const numeros = [1, 2, 3, 4, 5];
+
+const resultado = numeros.map(function(elemento) {
+  return elemento * this.multiplicador;
+}, multiplicador);
+
+console.log(resultado); // [3, 6, 9, 12, 15]
 
 
+Resumen
+
+    La función callback de .map() se aplica a cada elemento del array.
+    Devuelve un nuevo array con los resultados de la función callback aplicada a cada elemento.
+    callback recibe hasta tres argumentos: elemento, índice, y arrayOriginal.
+    thisArg puede ser usado para establecer el valor de this en la función callback.
+
+.map() es útil cuando necesitas transformar cada elemento de un array de manera consistente.
 */
