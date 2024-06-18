@@ -1,6 +1,7 @@
 //JON MIRCHA CHAPTER 9: NULL, UNDIFINED Y NAN: LISTO
 
 /*
+DATOS PRIMITIVOS
 Number: Números enteros y de punto flotante, como 1, 3.14, -10, etc.
 String: Secuencias de caracteres, como "Hola mundo", 'JavaScript', etc.
 Boolean: Representa un valor lógico verdadero o falso, es decir, true o false.

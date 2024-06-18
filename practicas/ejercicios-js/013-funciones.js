@@ -286,7 +286,8 @@ const perro = { //Aquí nos devuelve el objeto "windows" del navegador
     }
 }
 perro.saludar();
-----------------------------------------------------------------
+
+
 Nota: Las arrow functiones capturan el contexto de donde se encuentra
 el objeto, osea lo que está afuera del objeto, normalmente es el objeto window
 osea pueden saltar el contexto en el que están y reconocer el contexto en el que se encuentra su "objeto padre"
@@ -302,7 +303,7 @@ const perro = {
 }
 perro.ladrar();
 
-
+-------------------------------------------------------------------------------------------
 
 Ejercicio 18
 funcion flecha más básica pasando parametros

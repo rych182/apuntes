@@ -1,3 +1,23 @@
+// Crear una nueva promesa con nombres personalizados para los parámetros
+let myPromise = new Promise((cumplir, rechazar) => {
+  let condition = true; // Puedes cambiar esta condición para ver diferentes resultados
+
+  if (condition) {
+    cumplir("La promesa se cumplió con éxito!");
+  } else {
+    rechazar("Hubo un error al cumplir la promesa.");
+  }
+});
+
+// Usar la promesa
+myPromise
+  .then((successMessage) => {
+    console.log(successMessage); // Esto se ejecutará si la promesa se cumple
+  })
+  .catch((errorMessage) => {
+    console.error(errorMessage); // Esto se ejecutará si la promesa se rechaza
+  });
+
 
 /*
 
@@ -42,6 +62,10 @@ La mayoría del tiempo, tu no vas a hacer esto, lo van a hacer los paquetes/libr
 
 CASI TODO EN JAVASCRIPT RECIBE UN CALLBACK
 
+¿Porque necesitamos los callbacks?
+Porque cuando interactuamos con otros dispositivos(computadoras), no siempre tendremos de inmediato la 
+respuesta, si no que la vamos a tener después de X cantidad de tiempo
+
 const obtenerPostsDeUsuario = (usuario,callback)=>{
   console.log(`Obteniendo los post de ${usuario}`);
 
@@ -61,8 +85,18 @@ que luego se invoca dentro de la función externa para completar algun tipo de r
 Javascript es un lenguaje interpretado y en los lenguajes interpretados se
 el código se ejecuta de arriba a abajo y el resultado se devuelve inmediatamente
 
+---------------------------------------------------------------
+Ejercicio 0: Hacer un callback sencillo que imprima texto
+function texto(params) {
+  console.log("soy un callback")
+}
 
+function otraFuncion(callback) {
+  callback()
+}
 
+otraFuncion(texto)
+--------------------------------------------------------------------
 
 Ejercicio 1: Explicación del porque es importante un CallBack
 function primero() {
@@ -234,9 +268,136 @@ miPropioForEach(nombres,(nombre)=>{
   console.log(nombre)
 })
 -----------------------------------------------------------
-Ejercicio 10: Ejercicio de callback
+Ejercicio 10: creo una función callback que reciba 2 dígitos y los sume
 
+const sum = (a,b,callback) => {
+  callback(a + b);
+};
 
+sum(1,2,(result)=>{
+  console.log("result: ",result)
+})
+------------------------------------------------------------------
+Ejercicio 11: Haz que el alumno encuentre el error para que imprima los datos(obvio se necesita un callback)
+const getUsers = ()=>{
+  setTimeout(() => {
+    const users = [
+      {id:1, name: 'pepe'},
+      {id:2, name: 'pedro'}
+    ];
+    return users;
+  }, 500);
+}
+//hacemos uso de la función
+const users = getUsers();
+//Esto sacará un undifined porque va 500mili seg atrasado
+console.log("Users:", users);
+
+//Para obtener los resultados tenemos que hacer lo siguiente:
+
+const getUsers = (callback)=>{
+  setTimeout(() => {
+    const users = [
+      {id:1, name: 'pepe'},
+      {id:2, name: 'pedro'}
+    ];
+    callback(users);
+  }, 500);
+}
+
+getUsers((users)=>{
+  console.log("Users:", users);
+});
+
+//Por esto fue que se introdujeron los callbacks
+-----------------------------------------------------------------------------------------------------------
+Ejercicio 12: hacer un callback que muestre el dato en el dom
+
+function suma(callback,x,y) {
+  let operacion = x + y;
+  callback(operacion);
+}
+
+function mostrarEnConsola(param){
+  console.log(param)
+}
+
+function mostrarEnPagina(param){
+  document.getElementById('myh1').textContent = param; 
+}
+
+suma(mostrarEnPagina,2,4)
+----------------------------------------------------------------------
+Ejercicio 13: Crea una función callback que reciba objetos y los recorra,
+pero debes asegurarte que los datos que reciban sean objetos y funciones, de lo 
+contrario, que te muestren un error
+
+explicame que hace este código
+
+let usuarios = [];
+
+//funcion de logeo generico
+function logeo(data) {
+  if ('strings' == typeof data) return console.log(data)
+  if ('object' == typeof data) {
+    for (let key in data){
+      console.log(key + ': ' + data[key])
+    }
+  }
+}
+
+function ingresar(input,callback) {
+  usuarios.push(input)
+  if ('function' == typeof callback) {
+    callback(input)
+  }else{
+    console.log("El dato que ingresaste NO es una función")
+  }    
+}
+
+ingresar({users:'fulanito',speciality:'javaScript'},"hola")
+
+-----------------------------------------------------------------------
+Ejercicio 14: ejemplo de callback hell
+// Simulación de una serie de operaciones asíncronas usando setTimeout
+
+function firstOperation(callback) {
+  setTimeout(() => {
+    console.log("Primera operación completada");
+    callback();
+  }, 1000);
+}
+
+function secondOperation(callback) {
+  setTimeout(() => {
+    console.log("Segunda operación completada");
+    callback();
+  }, 1000);
+}
+
+function thirdOperation(callback) {
+  setTimeout(() => {
+    console.log("Tercera operación completada");
+    callback();
+  }, 1000);
+}
+
+// Uso de callbacks anidados (callback hell)
+firstOperation(() => {
+  secondOperation(() => {
+    thirdOperation(() => {
+      console.log("Todas las operaciones completadas");
+    });
+  });
+});
+-----------------------------------------------------------------------------
+Ejercicio 15: crea una función callback que multiplique 2 valores y use una función flecha resumida
+
+let operacion = (num1,num2,callback) => {
+  return callback(num1,num2)
+}
+console.log(operacion(2,4,(a,b)=> a*b))
+---------------------------------------------------------------------------
 
 -Las funciones son ciudadanos de primera clase
 -que es una high order function
@@ -248,7 +409,4 @@ CALLBACKS
 
 
 */
-
-
-
 
