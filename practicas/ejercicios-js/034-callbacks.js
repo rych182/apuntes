@@ -1,22 +1,3 @@
-// Crear una nueva promesa con nombres personalizados para los parámetros
-let myPromise = new Promise((cumplir, rechazar) => {
-  let condition = true; // Puedes cambiar esta condición para ver diferentes resultados
-
-  if (condition) {
-    cumplir("La promesa se cumplió con éxito!");
-  } else {
-    rechazar("Hubo un error al cumplir la promesa.");
-  }
-});
-
-// Usar la promesa
-myPromise
-  .then((successMessage) => {
-    console.log(successMessage); // Esto se ejecutará si la promesa se cumple
-  })
-  .catch((errorMessage) => {
-    console.error(errorMessage); // Esto se ejecutará si la promesa se rechaza
-  });
 
 
 /*
@@ -61,6 +42,7 @@ Un Callback puede usarse tanto para un codigo sincromo como asincrono
 La mayoría del tiempo, tu no vas a hacer esto, lo van a hacer los paquetes/librerías
 
 CASI TODO EN JAVASCRIPT RECIBE UN CALLBACK
+Los Callback se usan mucho en NodeJS(backend)
 
 ¿Porque necesitamos los callbacks?
 Porque cuando interactuamos con otros dispositivos(computadoras), no siempre tendremos de inmediato la 
@@ -96,9 +78,37 @@ function otraFuncion(callback) {
 }
 
 otraFuncion(texto)
+-----------------------------------------------------------------
+Ejercicio 1: un callback sencillo
+
+const fun1 = (callback) =>{
+  console.log("Inicio");
+  callback();
+  console.log("Fin")
+}
+
+const fun2 = () =>{
+  console.log("proceso intermedio")
+}
+
+fun1(fun2);
+------------------------------------------------------------------
+Ejercicio 2: otro callback sencillo 
+
+function comprar(articulo1,articulo2,funcion) {
+  let gastado = articulo1 + articulo2;
+  funcion(gastado)
+}
+
+function imprimir(mensaje) {//es como si aca dijera 7
+  console.log(`el monto gastado es de ${mensaje}`)
+}
+
+comprar(2,5,imprimir)
+
 --------------------------------------------------------------------
 
-Ejercicio 1: Explicación del porque es importante un CallBack
+Ejercicio 3: Explicación del porque es importante un CallBack
 function primero() {
     console.log("PRIMERO");
 }
@@ -135,7 +145,7 @@ primero(segundo);
 
 Y aunque tenga una demora de 3 segundos, se va a ejecutar en el orden correcto 
 ......................................................................
-Ejercicio 2:crea 2 funciones, una que sume y otra que reste, 
+Ejercicio 4:crea 2 funciones, una que sume y otra que reste, 
 
 function suma(a,resta) {
   console.log(a + resta());
@@ -155,7 +165,7 @@ function resta() {
 }
 suma(4,resta())
 ----------------------------------------------------------------------------------
-Ejercicio 3: Otra manera de pasar por parametro una función
+Ejercicio 5: Otra manera de pasar por parametro una función
 
 let inicio = function (valor,callback) {
   //la función anónima aquí se le llama "parametro callback" y recibe el valor del parametro valor en la linea 123,
@@ -167,7 +177,7 @@ inicio("fulanito",function(valor){
 })
 
 -------------------------------------------------------------------------------
-Ejercicio 4 de un callback recibiendo parametros, mientras se ejecuta dentro de la función
+Ejercicio 6 de un callback recibiendo parametros, mientras se ejecuta dentro de la función
 La mayoría del tiempo, tu no vas a hacer esto, lo van a hacer los paquetes/librerías
 
 const obtenerPostsDeUsuario = (usuario,callback)=>{
@@ -183,7 +193,7 @@ obtenerPostsDeUsuario('fulanito',(posts)=>{
   console.log(posts);
 });
 ------------------------------------------------------------------------
-Ejercicio 5: callback por evento
+Ejercicio 7: callback por evento
 Para esto creamos un boton en html que tenga un id
 
 //función que sirve para que puedas seleccionar un id, clase o etiqueta html
@@ -192,7 +202,7 @@ document.querySelector('#btn').addEventListener('click',()=>{
 })
 
 ----------------------------------------------------------------------------
-Ejercicio 6: callback por evento, ejemplo 2
+Ejercicio 8: callback por evento, ejemplo 2
 Para esto creamos un boton en html que tenga un id
 
 function fecha() {
@@ -220,13 +230,13 @@ console.log(fechaEspecifica);  // Ejemplo de salida: Fri May 17 2024 00:00:00 GM
 https://www.w3schools.com/js/js_htmldom_eventlistener.asp
 
 ----------------------------------------------------------------------------------------
-Ejercicio 7: probando como no siempre las funciones callback tardan lo mismo
+Ejercicio 9: probando como no siempre las funciones callback tardan lo mismo
 
 console.time("prueba");
 setTimeout(()=> console.timeEnd("prueba"),3000)
 
 ---------------------------------------------------------------------------------------
-Ejercicio 8: creando un callback utilizando funciones predefinidas del lenguaje
+Ejercicio 10: creando un callback utilizando funciones predefinidas del lenguaje
 y quiero que me lo explique el alumno linea por linea
 const animales =['perro','gato',"caballo"];
 function modificar(array,callback) {
@@ -255,7 +265,7 @@ modificar(animales,function(array){
   console.log(`He modificado el array y ahora es de ${array.length} elementos`,animales)
 })
 --------------------------------------------------------------------------------------------
-Ejercicio 9: creando nuestro propio forEach
+Ejercicio 11: creando nuestro propio forEach
 const nombres = ["pedro","pablo","susana","perla"];
 const miPropioForEach = (array,callback) =>{
   for (let i= 0; i < array.length; i++) {
@@ -268,7 +278,7 @@ miPropioForEach(nombres,(nombre)=>{
   console.log(nombre)
 })
 -----------------------------------------------------------
-Ejercicio 10: creo una función callback que reciba 2 dígitos y los sume
+Ejercicio 12: creo una función callback que reciba 2 dígitos y los sume
 
 const sum = (a,b,callback) => {
   callback(a + b);
@@ -278,7 +288,7 @@ sum(1,2,(result)=>{
   console.log("result: ",result)
 })
 ------------------------------------------------------------------
-Ejercicio 11: Haz que el alumno encuentre el error para que imprima los datos(obvio se necesita un callback)
+Ejercicio 13: Haz que el alumno encuentre el error para que imprima los datos(obvio se necesita un callback)
 const getUsers = ()=>{
   setTimeout(() => {
     const users = [
@@ -311,7 +321,7 @@ getUsers((users)=>{
 
 //Por esto fue que se introdujeron los callbacks
 -----------------------------------------------------------------------------------------------------------
-Ejercicio 12: hacer un callback que muestre el dato en el dom
+Ejercicio 14: hacer un callback que muestre el dato en el dom
 
 function suma(callback,x,y) {
   let operacion = x + y;
@@ -328,7 +338,7 @@ function mostrarEnPagina(param){
 
 suma(mostrarEnPagina,2,4)
 ----------------------------------------------------------------------
-Ejercicio 13: Crea una función callback que reciba objetos y los recorra,
+Ejercicio 15: Crea una función callback que reciba objetos y los recorra,
 pero debes asegurarte que los datos que reciban sean objetos y funciones, de lo 
 contrario, que te muestren un error
 
@@ -358,7 +368,7 @@ function ingresar(input,callback) {
 ingresar({users:'fulanito',speciality:'javaScript'},"hola")
 
 -----------------------------------------------------------------------
-Ejercicio 14: ejemplo de callback hell
+Ejercicio 16: ejemplo de callback hell
 // Simulación de una serie de operaciones asíncronas usando setTimeout
 
 function firstOperation(callback) {
@@ -391,19 +401,37 @@ firstOperation(() => {
   });
 });
 -----------------------------------------------------------------------------
-Ejercicio 15: crea una función callback que multiplique 2 valores y use una función flecha resumida
+Ejercicio 17: crea una función callback que multiplique 2 valores y use una función flecha resumida
 
 let operacion = (num1,num2,callback) => {
   return callback(num1,num2)
 }
 console.log(operacion(2,4,(a,b)=> a*b))
 ---------------------------------------------------------------------------
+Ejercicio 18: sumar dos números que han sido selecionados por un input
+
 
 -Las funciones son ciudadanos de primera clase
 -que es una high order function
 
 ------------------------------------------------------------------------------------------
+Ejercicio 19
 
+const sumar = (num1, num2, callback) => {
+  return callback(num1 + num2);
+}
+document.getElementById('btn1').addEventListener('click', () => {
+  let num1 = parseInt(document.getElementById('num1').value);
+  let num2 = parseInt(document.getElementById('num2').value);
+
+//.value: Obtiene el valor actual del elemento seleccionado. 
+//Este valor es típicamente el texto dentro de un campo de entrada (<input>), 
+//un área de texto (<textarea>), o una opción seleccionada en un elemento select (<select>).
+
+  sumar(num1, num2, (resultado) => {
+    console.log('El resultado es: ' + resultado);
+  });
+});
 
 CALLBACKS
 
