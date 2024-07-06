@@ -1,5 +1,6 @@
 
 
+
 /*
 
 --------------------------------
@@ -106,6 +107,33 @@ function imprimir(mensaje) {//es como si aca dijera 7
 
 comprar(2,5,imprimir)
 
+-----------------------------------------------------------------------
+Exercise 3: repair the code, I need that first wait 5 seconds and later wait 3 seconds
+
+function firstAction() {
+  console.log("I'm the first action")
+  setTimeout(callback,5000)
+}
+
+function secondAction() {
+  console.log("I'm the second action")
+}
+
+setTimeout(,3000);
+
+=======CORRECT ANSWER===========
+
+function firstAction(callback) {
+  console.log("I'm the first action")
+  setTimeout(callback,4000)
+}
+
+function secondAction() {
+  console.log("I'm the second action")
+}
+
+setTimeout(()=>firstAction(secondAction),3000);
+
 --------------------------------------------------------------------
 
 Ejercicio 3: Explicación del porque es importante un CallBack
@@ -192,15 +220,6 @@ const obtenerPostsDeUsuario = (usuario,callback)=>{
 obtenerPostsDeUsuario('fulanito',(posts)=>{
   console.log(posts);
 });
-------------------------------------------------------------------------
-Ejercicio 7: callback por evento
-Para esto creamos un boton en html que tenga un id
-
-//función que sirve para que puedas seleccionar un id, clase o etiqueta html
-document.querySelector('#btn').addEventListener('click',()=>{
-	console.log("Has dado click y se ha activado ka función callback que dispara este console.log")
-})
-
 ----------------------------------------------------------------------------
 Ejercicio 8: callback por evento, ejemplo 2
 Para esto creamos un boton en html que tenga un id
@@ -415,7 +434,7 @@ Ejercicio 18: sumar dos números que han sido selecionados por un input
 -que es una high order function
 
 ------------------------------------------------------------------------------------------
-Ejercicio 19
+Ejercicio 19: Imprimir el resultado de los números seleccionados en los inputs
 
 const sumar = (num1, num2, callback) => {
   return callback(num1 + num2);
@@ -433,8 +452,75 @@ document.getElementById('btn1').addEventListener('click', () => {
   });
 });
 
-CALLBACKS
+------------------------------------------------------------------------------------------------
+Ejercicio 20: Hazme una función callback que al iniciarze tarde 5seg en ejecutarsee imprima texto
+ y en el segundo lapso vuelva a imprimir texto
+
+function firstAction(callback) {
+  console.log("soy la primer accion")
+  callback("soy la segunda acción")
+}
+
+function secondAction(data) {
+  setTimeout(()=>{
+    console.log(data)
+  },2000)
+}
+
+setTimeout(()=> firstAction(secondAction),5000)
+----------------------------------------------------------------
+
+Ejercicio 21: Hacer el ejercicio anterior pero la función callback debde de
+recibir 2 parametros, la función y texto. También para ejecutar la función
+callback, debes utilizar un setTimeout
 
 
+function firstAction(callback,message) {
+  console.log(message)
+  callback()
+}
+
+function secondAction(message) {
+  console.log(message)
+}
+
+setTimeout(()=> firstAction(() => secondAction("i'm the secondAction"),"i'm the firstAction"),5000)
+
+
+//FORMA1 DE EJECUTARSE
+//setTimeout( () => firstAction( ()=> secondAction("soy el segundo dato") ,"soy el primer dato") ,3000 ) 
+
+FORMA2 DE EJECUTARSE
+setTimeout(() => {
+  firstAction( () =>{
+    secondAction("soy el segundo dato")
+  }  , "Soy el primer dato" )
+}, 3000);
+
+FORMA 3 RESUMIDA, PARA EJECUTARSE
+
+setTimeout(() => {
+  //esto es una función anonima que por dentro tiene la función secondAction "ejecutandose de inmediato"
+  firstAction( ()=> secondAction("soy el segundo dato"),"soy el primer texto")
+}, 3000);
+
+FORMA 4 RESUMIDA EN 1 SOLA LINEA PARA EJECUTARSE
+setTimeout(firstAction( ()=> secondAction("texto 2"),"texto 1" ), 4000);
+Al usar una función anónima, controlas exactamente cuándo se ejecuta secondAction,
+asegurando que se ejecute después de imprimir "soy el primer texto".
+
+EL ERROR EXPLICADO
+Al hacer esto:
+setTimeout(firstAction(secondAction("texto 2"),"texto1") ,4000)
+
+Estas ejecutando inmediatamente "soy el segundo dato" en la consola. 
+incluso se imprime sin la necesidad de que dentro de la función firstAction se escriba el callback
+Aquí el ejemplo:
+
+function firstAction(callback,data) {
+  console.log(data)
+  //callback
+}
 */
+
 
