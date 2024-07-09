@@ -17,6 +17,7 @@ body {
 
 header {
     background-color: darkblue;
+    
 }
 
 /*
@@ -64,6 +65,8 @@ li {
     list-style-type: none;
     border: 1px solid brown;
     text-align: center;
+    margin: 10px 0;
+    padding: 13px 0;
 }
 
 a {
@@ -71,25 +74,29 @@ a {
     font-size: 18px;
     font-family: 'Pangolin', cursive;
     color: white;
+    border: 1px solid whitesmoke;
+    padding: 10px;
+    transition: transform 0.5s ease-in-out;
+    display: inline-block;
+    /*
+    Los elementos inline, como los enlaces (<a>), 
+    se comportan de manera que solo ocupan el espacio necesario para su contenido y
+    no respetan propiedades como width, height, padding y transform como los elementos block o inline-block.
+    Esto puede limitar la capacidad de aplicar ciertos estilos, "especialmente transformaciones".
+
+    Al cambiar un elemento a inline-block, se comporta como un elemento inline (alineado en línea con el texto),
+    pero también puede tener un ancho y alto definidos, respetar márgenes y padding, y aplicar transformaciones
+    como transform. Esto te da más control sobre su apariencia y comportamiento sin cambiar su alineación en línea.
+    
+    */
 }
 
 
 /*          EFECTO HOVER        */
 
-li a::after {
-    content: '';
-    width: 0;
-    height: 3px;
-    background-color: wheat;
-    margin: auto;
-    display: block;
+a:hover{
+   transform: scale(1.5);
 }
-
-li a:hover::after {
-    width: 100%;
-    transition: width 0.9s linear;
-}
-
 
 /*          Librería animate CSS    */
 
@@ -106,6 +113,7 @@ h1 .animate__animated.animate__bounce:hover {
     }
     header{
         display: flex;
+        
     }
     .logo{
         width: 30%;

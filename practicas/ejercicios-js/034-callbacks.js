@@ -521,6 +521,38 @@ function firstAction(callback,data) {
   console.log(data)
   //callback
 }
-*/
 
+-----------------------------------------------------------------------------------
+Exercise 22:
+Hacer el ejercicio anterior pero la función callback debde de
+recibir 3 parametros, la función, texto y otra función callback. También para ejecutar la función
+callback, debes utilizar un setTimeout
+
+
+function firstAction(callback,message,anotherCallback) {
+  console.log(message)
+  callback()
+  setTimeout(() => {
+    anotherCallback()    
+  }, 3000);
+}
+
+function secondAction(message) {
+  console.log(message)
+}
+
+function thirdAction(message) {
+  console.log(message)
+}
+
+setTimeout(() => {
+  firstAction( () => {
+    secondAction("segunda acción")
+  },"primera accion", () =>{
+    thirdAction("tercera acción")
+    })
+}, 3000);
+
+
+*/
 
