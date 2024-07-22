@@ -285,6 +285,127 @@ findPostById(1,(post)=>{
   console.log(post)
 })
 
+AHORA PREGUNTANDO SI EL ID EXISTE,  USA "CONVENCIÓN" Y EXPLICA PORQUE SON IMPORTANTES LAS CONVECIONES
+
+const posts = [
+  {
+      userId: 1,
+      id: 1,
+      title: "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      body: "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+  },
+  {
+      userId: 1,
+      id: 2,
+      title: "qui est esse",
+      body: "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla",
+  },
+  {
+      userId: 1,
+      id: 3,
+      title: "ea molestias quasi exercitationem repellat qui ipsa sit aut",
+      body: "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut",
+  },
+];
+
+//quiero pasarle un id y que me devuelva especificamente el objeto señalado
+
+const findPostById = (id,callback) => {
+  //esto es para filtrar el id
+  //es igual a nuestro array que es posts 
+  //cuando el item sea igual al id, nos lo guarda en la constante post
+  const post = posts.find( (item) => item.id === id )
+
+  if (post) {
+  //el null siempre va a ser el error, y el post la respuesta de éxito
+  //En caso de que exista el post, viajara como null, por lo tanto, esto no se ejecuta:
+  // if (err) return console.log(err)
+    callback(null,post)
+  } else {
+    callback("El ID " + id + " no existe")
+  }
+
+}
+
+findPostById(5,(err,post)=>{
+  //if resumido
+  if (err) return console.log(err)
+  
+  console.log(post)
+})
+
+//Explicación de la convención
+
+El uso de null como primer argumento en una función callback se ha convertido en una convención
+por varias razones. 
+
+1-Consistencia y Estándar: En muchas "bibliotecas y APIs de JavaScript, especialmente en Node.js",
+el primer argumento de un callback se reserva para los errores. Si no hay errores,
+este argumento se establece en null.
+Esta convención ayuda a mantener un estándar consistente en el manejo de errores y resultados,
+lo que facilita la comprensión y el mantenimiento del código.
+
+
+Imagina que tienes una función que lee un archivo y luego ejecuta un callback.
+Si ocurre un error durante la lectura del archivo,
+el callback recibe el error como primer argumento. Si la lectura es exitosa,
+el primer argumento es null y el segundo argumento contiene el contenido del archivo.
+
+
+const fs = require('fs');
+
+// Función que lee un archivo y usa un callback para manejar el resultado
+function readFile(filePath, callback) {
+    fs.readFile(filePath, 'utf8', (err, data) => {
+        if (err) {
+            // Si hay un error, pasamos el error al callback
+            return callback(err);
+        }
+        // Si no hay error, pasamos null como primer argumento y los datos como segundo argumento
+        callback(null, data);
+    });
+}
+
+// Uso de la función readFile con un callback
+readFile('example.txt', (err, data) => {
+    if (err) {
+        // Manejo del error
+        console.error('Error reading file:', err);
+        return;
+    }
+    // Procesamiento del resultado
+    console.log('File content:', data);
+});
+
+
+--------
+2-Manejo de Errores:
+Esto permite a los desarrolladores verificar la presencia de un error de forma inmediata y 
+actuar en consecuencia antes de procesar el resultado esperado. Por ejemplo:
+
+function callback(err, result) {
+    if (err) {
+        // Manejo del error
+        console.error(err);
+        return;
+    }
+    // Procesamiento del resultado
+    console.log(result);
+}
+--------
+3-Legibilidad y Claridad:.
+Los desarrolladores que están familiarizados con esta convención pueden entender rápidamente
+la estructura de las funciones callback y cómo se manejan los errores y los resultados.
+--------
+4-Compatibilidad con Librerías Existentes:
+Muchas librerías y frameworks, especialmente en el ecosistema de Node.js, 
+esperan que los callbacks sigan esta convención.
+Al adherirse a este estándar, se garantiza que las funciones sean compatibles con una amplia
+variedad de herramientas y utilidades.
+
+
+
 
 */
+
 

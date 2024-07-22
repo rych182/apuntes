@@ -38,7 +38,7 @@ FALCONMASTERS
 Los callback son funciones que podemos pasar como parametro a otra función
 esto es con el fin de que una función pueda llamar a otra función y ejecutarla.
 
-Un Callback puede usarse tanto para un codigo sincromo como asincrono
+Un Callback puede usarse tanto para un codigo sincrono como asincrono
 
 La mayoría del tiempo, tu no vas a hacer esto, lo van a hacer los paquetes/librerías
 
