@@ -53,7 +53,7 @@ Ejercicio 4: Array creado de una forma nueva
 let cadena = Array.of("hola", 2, true, [1, 2, "mundo"]);
 console.log(cadena);
 
-Ejercicio 3: Una forma de llenar un array de datos
+Ejercicio 5: Una forma de llenar un array de datos
 **Explicación antes del ejercicio
 En el caso de Array(10).fill(false),
 Array() es un constructor que se utiliza para crear un nuevo objeto de tipo Array con una longitud específica
@@ -81,43 +81,43 @@ En este caso, se puede usar new Array(n) para crear un array con n elementos vac
 y luego asignar valores a cada elemento utilizando la sintaxis de corchetes o algún método de array.
 
 
-Ejercicio 8: Usa el metodo "length" que te dice cuantos cupos hay en el array
+Ejercicio 7: Usa el metodo "length" que te dice cuantos cupos hay en el array
 let mascotas = ["perro", "gato", "perico"];
 console.log(mascotas.length);
 
-Ejercicio 9 Usa el metodo .push() que te agrega un nuevo dato a tu array al final(agrega un objeto de preferencia)
+Ejercicio 8 Usa el metodo .push() que te agrega un nuevo dato a tu array al final(agrega un objeto de preferencia)
 let mascotas = ["perro", "gato", "perico"];
 mascotas.push("Pez");
 console.log(mascotas.length);
 console.log(mascotas);
 
-Ejercicio 10 Usa el metodo unshift(); que te agrega un nuevo dato a tu array pero al inicio
+Ejercicio 9: Usa el metodo unshift(); que te agrega un nuevo dato a tu array pero al inicio
 let mascotas = ["perro", "gato", "perico"];
 mascotas.unshift("Caracol");
 console.log(mascotas.length);
 console.log(mascotas);
 
-Ejercicio 11 Borrar el último dato de tu array y muestra lo que hayas borrado
+Ejercicio 10 Borrar el último dato de tu array y muestra lo que hayas borrado
 let mascotas = ["perro", "gato", "perico"];
 let borrado = mascotas.pop();
 console.log(mascotas.length);
 console.log(mascotas);
 console.log("La mascota que se borro fue: " + borrado);
 
-Ejercicios 12 Elimina el rango de elementos que tu le digas, dentro de un array
+Ejercicios 11: Elimina el rango de elementos que tu le digas, dentro de un array
 let mascotas = ["perro", "gato", "perico", "pez", "hamster", "mapache"];
 let elementosBorrados = mascotas.splice(1, 4);
 console.log(mascotas.length);
 console.log(mascotas);
 console.log(elementosBorrados);
 
-Ejercicio 13 Te dice el lugar en donde se encuentra el dato que buscas, OJO: debes ponerlo exacto, mayúsculas y minúsculas
+Ejercicio 12: Te dice el lugar en donde se encuentra el dato que buscas, OJO: debes ponerlo exacto, mayúsculas y minúsculas
 let mascotas = ["perro", "gato", "perico", "pez", "hamster", "mapache"];
 let indice = mascotas.indexOf("pez");
 console.log(indice);
 
 
-Ejercicio 14, hacer el ejercicio 4 con el metodo "includes"
+Ejercicio 13: hacer el ejercicio 4 con el metodo "includes"
 dia = 1;
 apertura = 7;
 if ([0, 6].includes(dia)) { //metodo que tienen los arreglos para preguntar si algo existe dentro de ese arreglo
@@ -131,8 +131,7 @@ if (apertura >= 8 && apertura <= 21) {
     console.log(`It's close!`);
 }
 
-EJercicio 17
-Agregaga un objeto a un array const e imprimelo
+EJercicio 14: Agregaga un objeto a un array const e imprimelo
 const autos = [
     { modelo: "Mustang", anio: 1962 },
     { modelo: "360z", anio: 2010 },

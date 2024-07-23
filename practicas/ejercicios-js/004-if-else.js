@@ -1,14 +1,3 @@
-var a = 'a';
-let b = 'b';
-const c = 'c';
-
-if (true) {
-    var a = 'AA';
-    let b = 'BB';
-    const c = 'CC';
-    console.log('BLOQUE: ', a, b, c);
-}
-console.log('GLOBALES: ', a, b, c);
 /*
 
 
@@ -154,3 +143,17 @@ if (edad => 18) {
 console.log(eresAdulto);
 
 */
+const cadenaDeTexto = "hola";
+const numero = 12;
+const indefinido = undefined;
+const nulo = null;
+const vector = [1,"hola"]
+const objeto={name:"ric",apellido:"garrido"}
+const funcion = function() {
+    return 3;
+}
+if (null) {
+    console.log("imprime algo")
+}else{
+    console.log("Otra cosa")
+}

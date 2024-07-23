@@ -268,6 +268,7 @@ function saludar() { //el objeto this se vuelve "window" del navegador
 }
 saludar();
 
+
 Ejemplo(con un objeto de javascript que dentro tiene una función vieja)
 const perro = { //aquí el this nos devuelve el objeto
     nombre: "docky",
@@ -506,5 +507,23 @@ function() {
     console.log("Soy una función anónima autoejecutable ESTILO FACEBOOK");
 }
 
+--------------------------------------------------------------------------------
+
 
 */
+
+function ejercicioDosParametros(param1,param2) {
+  
+}
+
+//ejercicioDosParametros(5,(err,post))
+
+function unaFuncion(){
+  console.log("Uno")
+  return (function imprimir(){
+    console.log("hola mundo")
+    //return 1
+  })()
+}
+let caja = unaFuncion();
+console.log(caja);

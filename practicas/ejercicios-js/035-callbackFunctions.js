@@ -403,9 +403,128 @@ esperan que los callbacks sigan esta convención.
 Al adherirse a este estándar, se garantiza que las funciones sean compatibles con una amplia
 variedad de herramientas y utilidades.
 
+--------------------------------------------------------------------------------
+Exercise 21: EXPLICANDO MAS A FONDO EL EJERCICIO ANTERIOR
+PRIMERO NECESITAMOS EXPLICAR ESTO DE LOS IF-ELSE
+
+const cadenaDeTexto = "hola";
+const numero = 12;
+const indefinido = undefined;
+const nulo = null;
+const vector = [1,"hola"]
+const objeto={name:"ric",apellido:"garrido"}
+const funcion = function() {
+    return 3;
+}
+if (objeto) {
+    console.log("imprime algo")
+}else{
+    console.log("Otra cosa")
+}
+
+LUEGO NECESITAMOS EXPLICAR COMO REACCIONAN EN LAS FUNCIONES
+//CREO QUE TIENE PRIORIDAD EL PRIMER PARAMETRO,
+//POR ESO LE PONEN UN NULL PARA QUE TOME EL SEGUNDO DATO
 
 
+const posts = [
+  {
+      userId: 1,
+      id: 1,
+      title: "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      body: "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+  },
+  {
+      userId: 1,
+      id: 2,
+      title: "qui est esse",
+      body: "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla",
+  },
+  {
+      userId: 1,
+      id: 3,
+      title: "ea molestias quasi exercitationem repellat qui ipsa sit aut",
+      body: "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut",
+  },
+];
+
+const findPostById = (id,callback) => {
+  //esto es para filtrar el id
+  //es igual a nuestro array que es posts 
+  //cuando el item sea igual al id, nos lo guarda en la constante post
+  const post = posts.find( (item) => item.id === id )
+
+  if (post) {
+  //el null siempre va a ser el error, y el post la respuesta de éxito
+  //En caso de que exista el post, viajara como null, por lo tanto, esto no se ejecuta:
+  // if (err) return console.log(err)
+    callback(null,post)
+  } else {
+    callback("El ID " + id + " no existe")
+  }
+
+}
+
+findPostById(5,(err,post)=>{
+  //if resumido
+  if (err) return console.log(err)
+  
+  console.log(post)
+})
 
 */
 
 
+const posts = [
+  {
+      userId: 1,
+      id: 1,
+      title: "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      body: "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+  },
+  {
+      userId: 1,
+      id: 2,
+      title: "qui est esse",
+      body: "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla",
+  },
+  {
+      userId: 1,
+      id: 3,
+      title: "ea molestias quasi exercitationem repellat qui ipsa sit aut",
+      body: "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut",
+  },
+];
+
+const findPostById = (id,callback) => {
+  //esto es para filtrar el id
+  //es igual a nuestro array que es posts 
+  //cuando el item sea igual al id, nos lo guarda en la constante post
+  const post = posts.find( (item) => item.id === id )
+  console.log(post)//undifined
+  if (post) {
+  //el null siempre va a ser el error, y el post la respuesta de éxito
+  //En caso de que exista el post, viajara como null, por lo tanto, esto no se ejecuta:
+  // if (err) return console.log(err)
+  //Aquí se verifica si el primer argumento del callback (err) es no null.
+  //Si err tiene un valor (es decir, hay un error), 
+  //la función imprime el error y sale.
+
+
+  //CREO QUE TIENE PRIORIDAD EL PRIMER PARAMETRO, POR ESO LE PONEN UN NULL PARA QUE TOME EL SEGUNDO DATO
+    callback(null,post)
+  } else {
+    callback("El ID " + id + " no existe")
+  }
+
+}
+
+findPostById(1,(err,post)=>{
+  //if resumido
+  //Aquí se verifica si el primer argumento del callback (err) es no null.
+  //Si err tiene un "valor" (es decir, hay un error), 
+  //la función imprime el error y sale.
+  if (err) return console.log(err + "no se que es err")
+
+  console.log(post)
+})
