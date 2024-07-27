@@ -1,4 +1,3 @@
-
 /*
 
 Jon Mircha: CAPITULO TERMINADO
@@ -507,23 +506,33 @@ function() {
     console.log("Soy una función anónima autoejecutable ESTILO FACEBOOK");
 }
 
+EJERCICIO 38:
+Etse ejercicio sirve para ver como se ejecuta un dato y a veces no
+dependiendo que dato sea.
+
+//probar todos los datos: string,number,boolear,function,[],{}
+function ejercicioParametros(param1,param2,callback) {
+    callback({},param2)  
+}
+
+//string: hay un error
+//number: hay un error
+//true:  hay un error
+//false: NO PASA NADA
+//array: hay un error
+//object: hay un error
+
+
+ejercicioParametros(5,{},(err,post)=>{
+  //basta con que exista algo para que se active el IF
+  if (err) {
+    console.log ("hay un error");
+  }
+  console.log(post)
+})
+
 --------------------------------------------------------------------------------
 
 
 */
 
-function ejercicioDosParametros(param1,param2) {
-  
-}
-
-//ejercicioDosParametros(5,(err,post))
-
-function unaFuncion(){
-  console.log("Uno")
-  return (function imprimir(){
-    console.log("hola mundo")
-    //return 1
-  })()
-}
-let caja = unaFuncion();
-console.log(caja);

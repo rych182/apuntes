@@ -9,20 +9,23 @@
 <body>
     <div class="parent">
         <div class="absolute">
-            Absolute
+            <div class="texto-absolute-centrado">
+                Absolute
+            </div>
         </div>
-        Absolute, modifica completamente, el posicionamiento y el flujo del elemento.
-        Es ignorado por su padre y desplaza su contenido para poner el parrafo, porque
-        lo que hace absolute "es sacar del flujo al elemento y ya no pertenece a ninguna
-        parte en especifica en el navegador" y me permite posicionar al elemento a 
-        voluntad "cualquier parte que yo quiera"
-        Position absolute tiene por default un "z-index:auto", por eso siempre se posiciona
-        sobre otros elementos.
-
-        Si relative se posicionaba en base a su posicion original, 
-        "absolute se posiciona en base a su contenedor más cercano PERO su contenedor
-        debe de estar posicionado con cualquier otro position QUE NO SEA STATIC"y si ningun
-        padre tiene un position distinto a static, entonces se posiciona al body ó vierwport
+        <h1>Caracteristicas del <span class="subrayado">position absolute</span> </h1>
+        <ul>
+            <li>Absolute, modifica completamente, el posicionamiento y el flujo del elemento.</li>
+            <li>Lo que hace absolute "es sacar del flujo al elemento y ya no pertenece a ninguna
+                parte en especifica en el navegador" y me permite posicionar al elemento a 
+                voluntad "cualquier parte que yo quiera"</li>
+            <li>Position absolute tiene por default un "z-index:auto", por eso siempre se posiciona
+                sobre otros elementos.</li>
+            <li class="subrayado">Relative se posicionaba en base a su posicion original</li>
+            <li>Absolute se posiciona en base a su contenedor más cercano PERO su contenedor
+                debe de estar posicionado con cualquier otro position <span class="subrayado">QUE NO SEA STATIC</span> y si ningun
+                padre tiene un position distinto a static, entonces se posiciona al body ó vierwport</li>
+        </ul>
         
     </div>
 </body>
