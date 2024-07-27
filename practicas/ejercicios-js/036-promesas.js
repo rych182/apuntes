@@ -2,14 +2,17 @@
 
 TEORIA
 
+CHILENO:
+Espera 2 respuestas, que cumplas tu promesa o que no la cumplas
+Es un objeto que representa la terminación o el fracaso de una operacion asincrona
+
 Una promesa en JavaScript es un objeto que representa la eventual finalización (o falla)
 de una operación asíncrona y su valor resultante. 
 Las promesas son una forma de manejar operaciones asíncronas en JavaScript de manera más legible 
 y manejable que el uso tradicional de callbacks, evitando problemas como el "callback hell".
 
 una promesa en JavaScript es un objeto.
-Específicamente, una promesa es un objeto que representa la eventual finalización (o falla) de una operación asíncrona y su valor resultante.
-  
+ 
 Características Clave de una Promesa
 
     Estados de la Promesa:
@@ -148,7 +151,7 @@ firstOperation()
     console.log("Todas las operaciones completadas");
   });
 ------------------------------------------------------------------------------------
-  Ejercicio 4: haciendo un callback con una Promesa
+  Ejercicio 4: haciendo un callback con una Promesa(y la promesa solo recibe un valor)
 
   const asincroniaConCallBack =(num1,num2,callback) => {
   const resultado = num1 + num2;
@@ -173,5 +176,154 @@ asincroniaConCallBack(1,2,(parametro)=>{
 asincroniaConPromesas(3,4)
   .then(resultado => console.log(resultado))
 ------------------------------------------------------------
+Ejercicio 5: haciendo el ejercicio 22 del archivo 034-callbacks.js
+que es un callback hell
+
+const posts = [
+  {
+      userId: 1,
+      id: 1,
+      title: "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      body: "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+  },
+  {
+      userId: 1,
+      id: 2,
+      title: "qui est esse",
+      body: "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla",
+  },
+  {
+      userId: 1,
+      id: 3,
+      title: "ea molestias quasi exercitationem repellat qui ipsa sit aut",
+      body: "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut",
+  },
+];
+
+//Con la "promesa" no te tienes que estar inventando el NULL
+
+const findPostById = (id) => {
+  const post = posts.find( (item) => item.id === id );
+
+  //devolver la promesa
+
+  return new Promise( (resolve,reject) => {
+    //resolve
+
+    if (post) {
+      resolve(post)
+    } else {
+      reject("No encontrado por id: " + id)
+    }
+
+  })
+}
+
+findPostById(1)
+  .then( (post) => console.log(post) )
+  .catch( (err) => console.log(err) )
+  .finally( () => console.log("fin de la promesa") )
+
+findPostById(2)
+  .then( (post) => console.log(post) )
+  .catch( (err) => console.log(err) )
+  .finally( () => console.log("fin de la promesa") )
+
+findPostById(3)
+  .then( (post) => console.log(post) )
+  .catch( (err) => console.log(err) )
+  .finally( () => console.log("fin de la promesa") )
+
+------------------------------------------------------------------------
+EJERCICIO 6:Refactorizando el ejercicio anterior( el 5 que es una promesa)
+
+//HAY FUNCIONES QUE RETORNAN DE INMEDIATO LA PROMESA
+//Esto no va a resultar porque estamos pidiendo un ID, pero así te lo puedes llegar a encontrar en otros códigos
+//const findPostById = new Promise( (resolve, reject) => 
+
+
+const posts = [
+  {
+      userId: 1,
+      id: 1,
+      title: "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      body: "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+  },
+  {
+      userId: 1,
+      id: 2,
+      title: "qui est esse",
+      body: "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla",
+  },
+  {
+      userId: 1,
+      id: 3,
+      title: "ea molestias quasi exercitationem repellat qui ipsa sit aut",
+      body: "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut",
+  },
+];
+
+const findPostById = (id) => new Promise( (resolve, reject) => {
+  const post = posts.find( (item) => item.id === id);
+  if (post) {
+    resolve(post);
+  } else {
+    reject("no se encontro id" + id)
+  }
+})
+
+findPostById(3)
+  .then( (post) => console.log(post) )
+  .catch( (err) => console.log(err) )
+
+  --------------------------------------------------------------------------------
+
+Ejercicio 7: Ejemplo de PROMISES HELL
+
+const posts = [
+  {
+      userId: 1,
+      id: 1,
+      title: "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      body: "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
+  },
+  {
+      userId: 1,
+      id: 2,
+      title: "qui est esse",
+      body: "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla",
+  },
+  {
+      userId: 1,
+      id: 3,
+      title: "ea molestias quasi exercitationem repellat qui ipsa sit aut",
+      body: "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut",
+  },
+];
+
+const findPostById = (id) => new Promise( (resolve, reject) => {
+  const post = posts.find( (item) => item.id === id);
+  if (post) {
+    resolve(post);
+  } else {
+    reject("no se encontro id" + id)
+  }
+})
+
+findPostById(1)
+  .then( (post) =>{
+    console.log(post) 
+    return findPostById(2)
+  })
+  .then( (post) =>{
+    console.log(post) 
+    return findPostById(3)
+  })
+  .then( (post) =>{
+    console.log(post) 
+    return findPostById(4)
+  })
+  .catch( (err) => console.log(err) )
+-----------------------------------------------------------------
   */
 
