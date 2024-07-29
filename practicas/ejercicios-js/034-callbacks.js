@@ -1,5 +1,13 @@
+function cuadradoCallback(value,callback) {
+  setTimeout(() => {
+    callback(value, value * value)
+  }, 3000);
+}
 
-
+cuadradoCallback(4,(value,result)=>{
+  console.log("inicia callback")
+  console.log(`valor: ${result}`)
+})
 
 /*
 
@@ -45,6 +53,26 @@ La mayoría del tiempo, tu no vas a hacer esto, lo van a hacer los paquetes/libr
 CASI TODO EN JAVASCRIPT RECIBE UN CALLBACK
 Los Callback se usan mucho en NodeJS(backend)
 
+ARGENTINO
+Una función callback es una función que se pasa como argumento a otra función
+que luego se invoca dentro de la función externa para completar algun tipo de rutina
+Javascript es un lenguaje interpretado y en los lenguajes interpretados se
+el código se ejecuta de arriba a abajo y el resultado se devuelve inmediatamente
+
+EXPLICACION JON MIRCHA
+
+Los callback son ciudadanos de "primer ORDEN", porque podemos hacer casi todo:
+1-simular la orientacion de objetos a traves de funciones constructoras
+2-retornar una funcion como el valor de retorno de otra
+3-Pasar como parametros funciones
+4-crear funciones autoinvocadas anonimas
+
+El callback es el mecanismo que tiene javascript para poder trabajar con la asincronia
+
+RECURSIVIDAD se ve en la asincronia y callbacks
+-Las funciones son ciudadanos de primer orden
+-que es una high order function
+
 ¿Porque necesitamos los callbacks?
 Porque cuando interactuamos con otros dispositivos(computadoras), no siempre tendremos de inmediato la 
 respuesta, si no que la vamos a tener después de X cantidad de tiempo
@@ -61,12 +89,6 @@ const obtenerPostsDeUsuario = (usuario,callback)=>{
 obtenerPostsDeUsuario('fulanito',(posts)=>{
   console.log(posts);
 });
----------------------------------------------------
-ARGENTINO
-Una función callback es una función que se pasa como argumento a otra función
-que luego se invoca dentro de la función externa para completar algun tipo de rutina
-Javascript es un lenguaje interpretado y en los lenguajes interpretados se
-el código se ejecuta de arriba a abajo y el resultado se devuelve inmediatamente
 
 ---------------------------------------------------------------
 Ejercicio 0: Hacer un callback sencillo que imprima texto
@@ -159,7 +181,8 @@ function segundo() {
 primero();
 segundo();
 
-Para arreglarlo lo hacemos con esot
+Para arreglarlo lo hacemos con esot:
+
 function primero(segundo) {
   setTimeout(function(){
     console.log("PRIMERO")
@@ -285,6 +308,7 @@ modificar(animales,function(array){
 })
 --------------------------------------------------------------------------------------------
 Ejercicio 11: creando nuestro propio forEach
+
 const nombres = ["pedro","pablo","susana","perla"];
 const miPropioForEach = (array,callback) =>{
   for (let i= 0; i < array.length; i++) {
@@ -427,31 +451,23 @@ let operacion = (num1,num2,callback) => {
 }
 console.log(operacion(2,4,(a,b)=> a*b))
 ---------------------------------------------------------------------------
-Ejercicio 18: sumar dos números que han sido selecionados por un input
+Ejercicio 18:  Haciendo un función que reciba 2 parametros, un número y una función, esta función
+que se recibe debe de elevar al cuadrado el valor que se le paso como parametro, 
+después de 3 segundos.
 
+function cuadradoCallback(value,callback) {
+  setTimeout(() => {
+    callback(value, value * value)
+  }, 3000);
+}
 
--Las funciones son ciudadanos de primera clase
--que es una high order function
+cuadradoCallback(4,(value,result)=>{
+  console.log("inicia callback")
+  console.log(`valor: ${result}`)
+})
 
 ------------------------------------------------------------------------------------------
-Ejercicio 19: Imprimir el resultado de los números seleccionados en los inputs
-
-const sumar = (num1, num2, callback) => {
-  return callback(num1 + num2);
-}
-document.getElementById('btn1').addEventListener('click', () => {
-  let num1 = parseInt(document.getElementById('num1').value);
-  let num2 = parseInt(document.getElementById('num2').value);
-
-//.value: Obtiene el valor actual del elemento seleccionado. 
-//Este valor es típicamente el texto dentro de un campo de entrada (<input>), 
-//un área de texto (<textarea>), o una opción seleccionada en un elemento select (<select>).
-
-  sumar(num1, num2, (resultado) => {
-    console.log('El resultado es: ' + resultado);
-  });
-});
-
+Ejercicio 19: 
 ------------------------------------------------------------------------------------------------
 Ejercicio 20: Hazme una función callback que al iniciarze tarde 5seg en ejecutarsee imprima texto
  y en el segundo lapso vuelva a imprimir texto
