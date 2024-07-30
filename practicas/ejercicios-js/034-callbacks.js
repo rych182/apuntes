@@ -7,6 +7,19 @@ function cuadradoCallback(value,callback) {
 cuadradoCallback(4,(value,result)=>{
   console.log("inicia callback")
   console.log(`valor: ${result}`)
+
+  cuadradoCallback(5,(value,result)=>{
+    console.log(`valor: ${result}`)
+  
+    cuadradoCallback(6,(value,result)=>{
+      console.log(`valor: ${result}`)
+      
+      cuadradoCallback(7,(value,result)=>{
+        console.log(`valor: ${result}`)
+        console.log("Termina el callback hell")
+      })
+    })
+  })
 })
 
 /*
@@ -53,6 +66,9 @@ La mayoría del tiempo, tu no vas a hacer esto, lo van a hacer los paquetes/libr
 CASI TODO EN JAVASCRIPT RECIBE UN CALLBACK
 Los Callback se usan mucho en NodeJS(backend)
 
+Los callback sirven para que esperes el resultado por si necesitas algo del proceso anterior
+en el siguiente proceso 3
+
 ARGENTINO
 Una función callback es una función que se pasa como argumento a otra función
 que luego se invoca dentro de la función externa para completar algun tipo de rutina
@@ -76,6 +92,11 @@ RECURSIVIDAD se ve en la asincronia y callbacks
 ¿Porque necesitamos los callbacks?
 Porque cuando interactuamos con otros dispositivos(computadoras), no siempre tendremos de inmediato la 
 respuesta, si no que la vamos a tener después de X cantidad de tiempo
+
+Un ejemplo son los LOADERS en los sitios webs, o los productos terminandose de mostrar en los e-commerce
+
+Callback hell: muchos callback anidados, el problema es que si yo quiero manipular el error
+lo tengo que hacer en cada una de las funciones
 
 const obtenerPostsDeUsuario = (usuario,callback)=>{
   console.log(`Obteniendo los post de ${usuario}`);
@@ -467,7 +488,30 @@ cuadradoCallback(4,(value,result)=>{
 })
 
 ------------------------------------------------------------------------------------------
-Ejercicio 19: 
+Ejercicio 19: hacer el ejercicio pasado imprimiendo los cuadrados de 4 dígitos, ocasionando un callback hell
+function cuadradoCallback(value,callback) {
+  setTimeout(() => {
+    callback(value, value * value)
+  }, 3000);
+}
+
+cuadradoCallback(4,(value,result)=>{
+  console.log("inicia callback")
+  console.log(`valor: ${result}`)
+
+  cuadradoCallback(5,(value,result)=>{
+    console.log(`valor: ${result}`)
+  
+    cuadradoCallback(6,(value,result)=>{
+      console.log(`valor: ${result}`)
+      
+      cuadradoCallback(7,(value,result)=>{
+        console.log(`valor: ${result}`)
+        console.log("Termina el callback hell")
+      })
+    })
+  })
+})
 ------------------------------------------------------------------------------------------------
 Ejercicio 20: Hazme una función callback que al iniciarze tarde 5seg en ejecutarsee imprima texto
  y en el segundo lapso vuelva a imprimir texto

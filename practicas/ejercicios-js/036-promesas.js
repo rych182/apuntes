@@ -12,7 +12,11 @@ Las promesas son una forma de manejar operaciones asíncronas en JavaScript de m
 y manejable que el uso tradicional de callbacks, evitando problemas como el "callback hell".
 
 una promesa en JavaScript es un objeto.
- 
+
+Una promesa la podemos ver como un if-else, el "resolve" es como un "return positivo" y el "reject"
+es como un "return negativo".
+Las promesas ya nos convienen cuando tenemos una concatenacion de varios procesos asincronos.
+
 Características Clave de una Promesa
 
     Estados de la Promesa:
@@ -327,3 +331,21 @@ findPostById(1)
 -----------------------------------------------------------------
   */
 
+function cuadradoPromise(value) {
+  return new Promise( (resolve,reject) => {
+    setTimeout(() => {
+      resolve({ //Aquí yo creo un objeto, para tener los 2 valores
+        value,
+        result: value * value
+      })
+    }, 3000);
+  })
+}
+
+cuadradoPromise(4)
+  .then( (miObjeto) => {
+    //console.log(miObjeto);
+    console.log("Inicio Promise");
+    console.log(`Promise: ${miObjeto.value} , ${miObjeto.result} `)
+  })
+  .catch('error')
