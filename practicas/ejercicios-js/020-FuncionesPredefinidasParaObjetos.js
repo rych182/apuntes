@@ -1,5 +1,6 @@
+
 /*
-EJERCICIO 13.05: Usar el metodo .hasOwnProperty para preguntar si existe una propiedad del metodo, imprimira true or false para decirte si existe o no
+EJERCICIO 1: Usar el metodo .hasOwnProperty para preguntar si existe una propiedad del metodo, imprimira true or false para decirte si existe o no
 let ric = {
     nombre: "Ricardo",
     edad: 33,
@@ -19,8 +20,7 @@ let ric = {
 }
 console.log(ric.hasOwnProperty("nombre"));
 
-Ejercicio 15
-Convertir todo un objeto en un array
+Ejercicio 2: Convertir todo un objeto en un array
 let persona = {
     nombre: "Ricardo",
     edad: 33,
@@ -46,7 +46,7 @@ delete persona.vivo;
 const entriesPares = Object.entries(persona);
 console.log(entriesPares);
 
-Ejercicio 17 Crea un objeto y bloquea una modificación usando el metodo Object.freeze, que sirve para congelar tu objeto y se quede como lo dejaste
+Ejercicio 3: Crea un objeto y bloquea una modificación usando el metodo Object.freeze, que sirve para congelar tu objeto y se quede como lo dejaste
 const persona = {
     nombre: "Ricardo",
     edad: 33,
@@ -74,7 +74,7 @@ persona.edad = 18;
 console.log(persona);
 
 
-Ejercicio 18 Usa el metodo Object.getOwnPropertyNames(); que te muestra las propiedades que le pusiste a tu objeto, pero en un Array
+Ejercicio 4: Usa el metodo Object.getOwnPropertyNames(); que te muestra las propiedades que le pusiste a tu objeto, pero en un Array
 let persona = {
     nombre: "Ricardo",
     edad: 33,
@@ -99,7 +99,7 @@ let persona = {
 const propiedades = Object.getOwnPropertyNames(persona);
 console.log(propiedades);
 
-Ejercicio 19 Muestra en un array los valores que tengas dentro de las propiedades que están dentro de tu objeto, usando Object.value()
+Ejercicio 5: Muestra en un array los valores que tengas dentro de las propiedades que están dentro de tu objeto, usando Object.value()
 let persona = {
     nombre: "Ricardo",
     edad: 33,

@@ -40,7 +40,8 @@ console.log(sumaDiez(5)); // Salida: 15
 
 
 ---------------------------------------------------------------------------------------------------------------------------
-Ejercicio 0
+Ejercicio 1: crea un objeto con 2 propiedades y despues utiliza el objeto Object con la propiedad freeze, e intenta 
+modificaruna de esas propiedades, ve el resultado en un console.log
 
 "use strict";
 const persona = {
@@ -59,7 +60,7 @@ freeze() es uno de esos métodos que pertenece al objeto Object.
 Object es un objeto incorporado que proporciona un conjunto de métodos y propiedades para trabajar con objetos. Aunque Object es un objeto en sí mismo, es más preciso describirlo como una función constructora que puede crear objetos.
 
 ---------------------------------------------------------------------------------
-Ejercicio 1: Object.seal() Sirve para sellar el objeto, Permite agregar ni borrar pero si modificar las existentes
+Ejercicio 2: Object.seal() Sirve para sellar el objeto, Permite agregar ni borrar pero si modificar las existentes
 "use strict";
 const persona = {
     name: "ric",
@@ -71,7 +72,7 @@ persona.name = "alvin";
 persona.correo = "correo@correo.com";
 console.log(persona.correo)
 -----------------------------------------------------------------------------------
-Ejercicio 2: comprobar que un objeto esté sellado o no con
+Ejercicio 3: comprobar que un objeto esté sellado o no con
 
 "use strict";
 const persona = {
@@ -82,7 +83,7 @@ const persona = {
 Object.seal(persona);
 console.log(Object.isSealed(persona));
 --------------------------------------------------------------------------------
-EJERCICIO 3: Obtener los nombres de las propiedades del objeto y te regresa los valores dentro de un array
+EJERCICIO 4: Obtener los nombres de las propiedades del objeto y te regresa los valores dentro de un array
 let ric = {
     nombre: "Ricardo",
     edad: 33,
@@ -103,7 +104,7 @@ let ric = {
 console.log(Object.keys(ric));
 ------------------------------------------------------------------------------------------------------
 
-EJERCICIO 4: Obtener los valores de las propiedades del objeto que está dentro del objeto
+EJERCICIO 5: Obtener los valores de las propiedades del objeto que está dentro del objeto
 let ric = {
     nombre: "Ricardo",
     edad: 33,
@@ -125,7 +126,7 @@ let ric = {
 console.log(Object.keys(ric.amigos));
 
 ---------------------------------------------------------------------------------------------
-Ejercicio 5: fusionar 2 objetos en 1
+Ejercicio 6: fusionar 2 objetos en 1
 let persona = {
     nombre: "ric",
     edad: 3
@@ -141,7 +142,7 @@ console.log(fusion)
 -----------------------------------------------------------------------------------------------
 
 
-EJERCICIO 6: Usar el metodo .hasOwnProperty para preguntar si existe una propiedad del metodo, imprimira true or false para decirte si existe o no
+EJERCICIO 7: Usar el metodo .hasOwnProperty para preguntar si existe una propiedad del metodo, imprimira true or false para decirte si existe o no
 let ric = {
     nombre: "Ricardo",
     edad: 33,
@@ -162,7 +163,7 @@ let ric = {
 console.log(ric.hasOwnProperty("nombre"));
 -----------------------------------------------------------------------------------------------------------
 
-Ejercicio 7
+Ejercicio 8
 Convertir todo un objeto en un array
 let persona = {
     nombre: "Ricardo",
@@ -188,7 +189,7 @@ const entriesPares = Object.entries(persona);
 console.log(entriesPares);
 --------------------------------------------------------------------------------------
 
-Ejercicio 8
+Ejercicio 9
 Crea un objeto y bloquea una modificación usando el metodo Object.freeze, que sirve para congelar tu objeto y se quede como lo dejaste
 const persona = {
     nombre: "Ricardo",
@@ -217,7 +218,7 @@ persona.edad = 18;
 console.log(persona);
 --------------------------------------------------------------------------------------------------------
 
-Ejercicio 9
+Ejercicio 10
 Usa el metodo Object.getOwnPropertyNames(); que te muestra las propiedades que le pusiste a tu objeto, pero en un Array
 let persona = {
     nombre: "Ricardo",
@@ -243,7 +244,7 @@ const propiedades = Object.getOwnPropertyNames(persona);
 console.log(propiedades);
 -----------------------------------------------------------------------------------
 
-Ejercicio 9
+Ejercicio 11
 Muestra en un array los valores que tengas dentro de las propiedades que están dentro de tu objeto, usando Object.value()
 let persona = {
     nombre: "Ricardo",
