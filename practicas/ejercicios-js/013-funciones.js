@@ -349,7 +349,7 @@ Ejercicio 23
 
 
 EJERCICIO 24
- Agregar una funcion dentro del objeto del ejercicio 26 y ejecutarla
+ Agregar una funcion dentro del objeto y ejecutarla
  let crearObjeto = (nombre, edad) => {
      return {
          nombre,
@@ -417,7 +417,7 @@ saludar(0 || "valor de la derecha");
 ---------------------------------------------------------------------------------------
 
 Ejercicio 32
-Hace una suma de 2 números asignandoselos en el parentesis, con una función flecha PERO usando return
+Hacer una suma de 2 números asignandoselos en el parentesis, con una función flecha PERO usando return
 
 let operacion = (num1, num2) => {
     return num1 + num2;
@@ -505,7 +505,7 @@ function() {
 ! function() {
     console.log("Soy una función anónima autoejecutable ESTILO FACEBOOK");
 }
-
+---------------------------------------------------------------
 EJERCICIO 38:
 Etse ejercicio sirve para ver como se ejecuta un dato y a veces no
 dependiendo que dato sea.

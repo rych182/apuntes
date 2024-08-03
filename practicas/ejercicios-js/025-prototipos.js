@@ -1,7 +1,7 @@
 
 /*
-JS es un lenguaje orientado a objeto basado en prototipos, no en clases
-Javascript es un lenguaje multiparadigma(estilos), coom la programación funcional, orientada a objetos.
+JS es un lenguaje orientado a objetos basado en prototipos, no en clases
+Javascript es un lenguaje multiparadigma(estilos), con la programación funcional, orientada a objetos.
 En javascript es un poco distinta a la programación orientada a objetos.
 -Apartir del 2015 (estandar 2016) 'ya tenemos CLASES', estas se les conoce como "azucar sintactica" osea
 una manera más fácil que nos provee el lenguaje "para poder hacer la programación ORIENTADA A PROTOTIPOS",
@@ -21,7 +21,7 @@ En JS la herencia se da por la cadena de prototipos
 -Cuando tu creas un objeto, tienes propiedades y metodos, pero el prototipo más primitivo es el Object,
 y tiene las definiciones de sus getters y setters, es este: __proto__: Object .
 
-//IMPORTANTISIMO ARROW FUNCTIONS:Las arrow functions detectan el this del objeto en el que se encuentran
+//IMPORTANTISIMO ARROW FUNCTIONS:Las arrow functions detectan el this del objeto "en el que se encuentran"
 
 NOTA IMPORTANTE EJERCICIOS: imprimir los 4 console.log, para ver la diferencia en los objetos creados
 */
@@ -35,17 +35,28 @@ function Animal(nombre, genero) {
     //atributos, recibiremos su valor por el parametro
     this.nombre = nombre;
     this.genero = genero;
-    // Mostrar cmo me marca error de esas 2 maneras
-    //1-sonar(){} 
-    //2-this.sonar(){}
     
     //Metodos
     //se pone this para que forme parte de este contructor
     //La sintaxis de los objetos literales, no aplican cuando haces una función constructora
     //Lo ideal, es que los metodos se saquen de la función constructora y los peguemos al prototipo
     this.sonar = function() {
-        console.log("Hago sonidos porque estoy vivo y mi nombre es:"+" "+ this.nombre)
+        console.log("mi nombre es:"+" "+ this.nombre)
     }
+
+    // Mostrar cmo me marca error de esas 2 maneras
+    //1-sonar(){} 
+    //2-this.sonar(){}
+}
+
+let Snoopy1 = {
+    name: "ric",
+    apellido: "garrid"
+}
+
+let LolaBunny1 = {
+    name: "ric",
+    apellido: "garrid"
 }
 
 //Aquí creamos la instancia con la palabra reservada "new" podría ser una instancia de tipo
@@ -57,6 +68,12 @@ const LolaBunny = new Animal("LolaBunny", "Hembra");
 //Estos 2 objetos aparecen en la consola PERO son algo que se llama "Animal" y su función constructora es "Animal"
 console.log(Snoopy);
 console.log(LolaBunny);
+
+console.log(Snoopy1);
+console.log(LolaBunny1);
+
+console.log(typeof Snoopy)
+console.log(typeof Snoopy1)
 
 
 //Todo esto evita que estes copiando y pegando la "estructura de un objeto literal", 

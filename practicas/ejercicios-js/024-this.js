@@ -39,18 +39,7 @@ let ric = {
 }
 ric.otraAccion();
 -----------------------------------------------------------------------------------------------------------------
-ejercicio 4: usando el this para mandar llamar un dato dentro de un array que esta dentro de un objeto
-
-let objeto = {
-    nombre: "ric",
-    amigos:["fulano","mengano","perengano"],
-    nombreYapellido: function(){
-        return this.amigos[1] + " Garrido";
-    }
-}
-console.log(objeto.nombreYapellido("ricardo"));
------------------------------------------------------------------------------------------------------------------
-Ejercicio 5: mostrando un dato dentro de un metodo, usando la palabra reservada this, la propiedad contiene un array.
+Ejercicio 4: mostrando un dato dentro de un metodo, usando la palabra reservada this, la propiedad contiene un array.
 
 let objeto = {
     nombre: "ric",
@@ -61,7 +50,7 @@ let objeto = {
 }
 console.log(objeto.nombreYapellido());
 ----------------------------------------------------------------------------------------------
-Ejercicio 8: mandando llamar a un metodo dentro de otro metodo y ejecutando ambos, usando la palabra reservada this.
+Ejercicio 5: mandando llamar a un metodo dentro de otro metodo y ejecutando ambos, usando la palabra reservada this.
 
 let objeto = {
     nombre: "ric",
@@ -80,8 +69,9 @@ let objeto = {
 }
 console.log(objeto.nombreCompleto());
 ---------------------------------------------------------------------------------------------------------
-Ejercicio 9: Ejecutar el metodo nombreYapellido, dentro de la función crear un if que me retorne
-el nombre de un valor del atributo amigos, este valor se pasará por parametro
+Ejercicio 6: Ejecutar el metodo nombreYapellido, dentro de la función crear un if que me retorne
+el nombre de un valor del atributo amigos, este valor se pasará por parametro y si no se encuentra
+, entonces que te imprima que no se encuentra el dato
 
 let objeto = {
     nombre: "ric",
@@ -103,6 +93,8 @@ console.log(objeto.nombreYapellido(1)); // Esto mostrará "mengano Garrido"
 console.log(objeto.nombreYapellido(0)); // Esto mostrará "fulano Garrido"
 console.log(objeto.nombreYapellido(3)); // Esto mostrará "Amigo no encontrado"
 -----------------------------------------------------------------------------------------
+EJEMPLO DE COMO FUNCIONA EL THIS SEGÚN LA FUNCIÓN 
+
 Ejemplo(con función antigua)
 function saludar() { //el objeto this se vuelve "window" del navegador
     console.log(this); 
