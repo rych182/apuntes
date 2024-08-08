@@ -1,4 +1,56 @@
 
+function Animal(nombre, genero) {
+    this.nombre = nombre;
+    this.genero = genero;
+}
+
+Animal.prototype.sonar = function() {
+    console.log("Hago sonidos porque estoy vivo");
+}
+Animal.prototype.saludar = function(){
+    console.log(`Hola me llamo ${this.nombre}`);
+}
+
+//Herencia prototipica
+function Perro(nombre,genero,tamanio) {
+    //aquí le decimos que el elemento padre es Animal, invocas al constructor
+    this.super = Animal;
+    this.super(nombre,genero);
+    this.tamanio = tamanio;
+}
+//asignando al prototipo de Perro, una instancia de animal
+//Perro esta heredando de ANimal
+Perro.prototype = new Animal();
+//Generandole su funcion constructora
+Perro.prototype.constructor = Perro;
+
+//SObreescritura de metodos del prototipo padre en el hijo
+Perro.prototype.sonar= function(){
+    console.log("SOy un perro y mi sonido es un ladrido");
+}
+Perro.prototype.ladrar = function(){
+    console.log("GUa gua")
+}
+
+//Aquí cambio la instancia de "Animal" por "Perro", y le agregamos el tamaño
+const Snoopy = new Perro("Snoopy", "Macho","Mediano");
+const LolaBunny = new Animal("LolaBunny", "Hembra");
+
+//Analizamos el console.log de snoopy, ya no dice animal, dice Perro a comparación
+//del de LolaBunny y en sus prototipos están los metodos sonar y ladrar
+//también dos scopes(object y animal) y la función que "saludar" que no he usado
+console.log(Snoopy);
+console.log(LolaBunny);
+
+//Aquí sobreescribí el metodo "sonar"
+Snoopy.sonar();
+Snoopy.saludar();
+//EL nuevo metodo que le creamos a Snoopy
+Snoopy.ladrar();
+
+LolaBunny.sonar();
+LolaBunny.saludar();
+
 /*
 JS es un lenguaje orientado a objetos basado en prototipos, no en clases
 Javascript es un lenguaje multiparadigma(estilos), con la programación funcional, orientada a objetos.
@@ -81,7 +133,7 @@ console.log(typeof Snoopy1)
 
 -----------------------------------------------------------------------------------
 
-    EJERCICIO 2: FUnción constructora donde asignamos los metodos al prototipo, no a la función como tal 
+EJERCICIO 2: FUnción constructora donde asignamos los metodos al prototipo, no a la función como tal 
 //FUnción constructora donde asignamos los metodos al prototipo, no a la función como tal
 function Animal(nombre, genero) {
     this.nombre = nombre;

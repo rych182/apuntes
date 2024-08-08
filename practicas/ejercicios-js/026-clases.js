@@ -1,4 +1,10 @@
 /*
+//Esto NO convierte a JS en un lenguaje orientado a objetos "basado en clase", sigue siendo
+//basado en prototipos
+//ES6 nos dio como actualización poder escribir los objetos como en otros lenguajes, usando clases
+
+
+
 Ejercicio 1: Pasar la función constructora a clase
 function Animal(nombre,genero) {
     //Atributos

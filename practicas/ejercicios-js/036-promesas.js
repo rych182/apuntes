@@ -15,6 +15,7 @@ una promesa en JavaScript es un objeto.
 
 Una promesa la podemos ver como un if-else, el "resolve" es como un "return positivo" y el "reject"
 es como un "return negativo".
+JON MIRCHA
 Las promesas ya nos convienen cuando tenemos una concatenacion de varios procesos asincronos.
 
 Características Clave de una Promesa
@@ -342,10 +343,17 @@ function cuadradoPromise(value) {
   })
 }
 
-cuadradoPromise(4)
+cuadradoPromise(0)
+//puedes resumir esta linea quitandole los parentesis al parametro
   .then( (miObjeto) => {
     //console.log(miObjeto);
     console.log("Inicio Promise");
-    console.log(`Promise: ${miObjeto.value} , ${miObjeto.result} `)
+    console.log(`Promise: Valor: ${miObjeto.value} , valor al cuadrado: ${miObjeto.result} `)
+    return cuadradoPromise(4)
+  })
+  .then( (miObjeto) =>{
+    console.log("Inicio Promise");
+    console.log(`Promise: Valor: ${miObjeto.value} , valor al cuadrado: ${miObjeto.result} `)
+    return cuadradoPromise(5)
   })
   .catch('error')
