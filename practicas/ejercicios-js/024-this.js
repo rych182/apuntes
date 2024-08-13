@@ -49,7 +49,7 @@ let objeto = {
     }
 }
 console.log(objeto.nombreYapellido());
-----------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
 Ejercicio 5: mandando llamar a un metodo dentro de otro metodo y ejecutando ambos, usando la palabra reservada this.
 
 let objeto = {
@@ -65,13 +65,13 @@ let objeto = {
     nombreCompleto: function(){
         return this.nombreYapellido() + " Cruz";
     }
-
 }
 console.log(objeto.nombreCompleto());
 ---------------------------------------------------------------------------------------------------------
-Ejercicio 6: Ejecutar el metodo nombreYapellido, dentro de la función crear un if que me retorne
-el nombre de un valor del atributo amigos, este valor se pasará por parametro y si no se encuentra
-, entonces que te imprima que no se encuentra el dato
+Ejercicio 6:Crear un objeto que dentro tenga 2 propiedades y un metodo, una será un texto, otro un array con apellidos,
+y por último un metodo que imprima el texto con un apellido según sea el valor pasado por parametro
+que se le asigne cuando uno quiera ejecutar ese metodo.
+
 
 let objeto = {
     nombre: "ric",

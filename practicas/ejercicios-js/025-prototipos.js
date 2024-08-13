@@ -1,56 +1,24 @@
 
-function Animal(nombre, genero) {
-    this.nombre = nombre;
-    this.genero = genero;
+function Animal(name,raza) {
+    this.name = name;
+    this.raza = raza;
 }
 
-Animal.prototype.sonar = function() {
-    console.log("Hago sonidos porque estoy vivo");
-}
-Animal.prototype.saludar = function(){
-    console.log(`Hola me llamo ${this.nombre}`);
+Animal.prototype.saludar= function(){
+    console.log("Hola")
 }
 
-//Herencia prototipica
-function Perro(nombre,genero,tamanio) {
-    //aquí le decimos que el elemento padre es Animal, invocas al constructor
-    this.super = Animal;
-    this.super(nombre,genero);
-    this.tamanio = tamanio;
-}
-//asignando al prototipo de Perro, una instancia de animal
-//Perro esta heredando de ANimal
-Perro.prototype = new Animal();
-//Generandole su funcion constructora
-Perro.prototype.constructor = Perro;
-
-//SObreescritura de metodos del prototipo padre en el hijo
-Perro.prototype.sonar= function(){
-    console.log("SOy un perro y mi sonido es un ladrido");
-}
-Perro.prototype.ladrar = function(){
-    console.log("GUa gua")
+Animal.prototype.ruido= function(param1){
+    console.log(param1)
 }
 
-//Aquí cambio la instancia de "Animal" por "Perro", y le agregamos el tamaño
-const Snoopy = new Perro("Snoopy", "Macho","Mediano");
-const LolaBunny = new Animal("LolaBunny", "Hembra");
+Animal.prototype.datos = function(){
+    console.log(`${this.name} es mi perro y es de raza ${this.raza}`)
+}
 
-//Analizamos el console.log de snoopy, ya no dice animal, dice Perro a comparación
-//del de LolaBunny y en sus prototipos están los metodos sonar y ladrar
-//también dos scopes(object y animal) y la función que "saludar" que no he usado
-console.log(Snoopy);
-console.log(LolaBunny);
-
-//Aquí sobreescribí el metodo "sonar"
-Snoopy.sonar();
-Snoopy.saludar();
-//EL nuevo metodo que le creamos a Snoopy
-Snoopy.ladrar();
-
-LolaBunny.sonar();
-LolaBunny.saludar();
-
+let perro = new Animal("Iskra","rotweiller")
+perro.ruido("gua gua");
+perro.datos()
 /*
 JS es un lenguaje orientado a objetos basado en prototipos, no en clases
 Javascript es un lenguaje multiparadigma(estilos), con la programación funcional, orientada a objetos.
@@ -73,12 +41,10 @@ En JS la herencia se da por la cadena de prototipos
 -Cuando tu creas un objeto, tienes propiedades y metodos, pero el prototipo más primitivo es el Object,
 y tiene las definiciones de sus getters y setters, es este: __proto__: Object .
 
-//IMPORTANTISIMO ARROW FUNCTIONS:Las arrow functions detectan el this del objeto "en el que se encuentran"
-
 NOTA IMPORTANTE EJERCICIOS: imprimir los 4 console.log, para ver la diferencia en los objetos creados
+
 */
 
-//Comparo todos los objetos(los literales, con los instanciados con la palabra reservada new)
 
 /*}
 Ejercicio 1: Comparo todos los objetos(los literales, con los instanciados con la palabra reservada new)

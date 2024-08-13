@@ -24,9 +24,53 @@ function toggle() {
 }
 
 button.addEventListener('click',toggle)
+-------------------------------------------------------------
+Ejercicio 3: callback por evento, ejemplo 2
+Para esto creamos un boton en html que tenga un id
+
+function fecha() {
+  document.getElementById("fecha").innerHTML = Date();
+}
+
+Date es una función constructora que se utiliza para crear objetos de tipo fecha.
+Por lo tanto, cuando llamas a Date(), dependiendo de cómo lo uses, puede actuar de dos maneras diferentes:
+
+1-Si llamas a Date() sin el operador new, devuelve una cadena de texto que representa la fecha y hora actual.
+
+let fecha = Date();
+console.log(fecha);  // Ejemplo de salida: "Fri May 17 2024 12:34:56 GMT+0000 (Coordinated Universal Time)"
+
+2-Si usas new Date(), crea un nuevo objeto de tipo Date que representa la fecha y hora actuales,
+ o una fecha específica si proporcionas argumentos.
+
+let fecha = new Date();
+console.log(fecha);  // Ejemplo de salida: Fri May 17 2024 12:34:56 GMT+0000 (Coordinated Universal Time)
+
+let fechaEspecifica = new Date(2024, 4, 17);  // Mes es 0-indexado, por lo que 4 representa mayo.
+console.log(fechaEspecifica);  // Ejemplo de salida: Fri May 17 2024 00:00:00 GMT+0000 (Coordinated Universal Time)
+
+
+
+-----------------------------------------------------------------------------------------------------------
+Ejercicio 4: hacer un callback que muestre el dato en el dom
+
+function suma(callback,x,y) {
+  let operacion = x + y;
+  callback(operacion);
+}
+
+function mostrarEnConsola(param){
+  console.log(param)
+}
+
+function mostrarEnPagina(param){
+  document.getElementById('myh1').textContent = param; 
+}
+
+suma(mostrarEnPagina,2,4)
 
 ---------------------------------------------------------------
-EXERCISE 3: Imprimir el resultado de los números seleccionados en los inputs
+EXERCISE 5: Imprimir el resultado de los números seleccionados en los inputs
 
 const sumar = (num1, num2, callback) => {
   return callback(num1 + num2);
