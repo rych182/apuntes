@@ -1,26 +1,3 @@
-function cuadradoCallback(value,callback) {
-  setTimeout(() => {
-    callback(value, value * value)
-  }, 3000);
-}
-
-cuadradoCallback(4,(value,result)=>{
-  console.log("inicia callback")
-  console.log(`valor: ${result}`)
-
-  cuadradoCallback(5,(value,result)=>{
-    console.log(`valor: ${result}`)
-  
-    cuadradoCallback(6,(value,result)=>{
-      console.log(`valor: ${result}`)
-      
-      cuadradoCallback(7,(value,result)=>{
-        console.log(`valor: ${result}`)
-        console.log("Termina el callback hell")
-      })
-    })
-  })
-})
 
 /*
 
@@ -277,7 +254,7 @@ setTimeout(()=> firstAction(secondAction),5000)
 
 -----------------------------------------------------------------
 
-Ejercicio 9: Hacer el ejercicio anterior pero la función callback debde de
+Ejercicio 9: Hacer el ejercicio anterior pero la función callback debe de
 recibir 2 parametros, la función y texto. También para ejecutar la función
 callback, debes utilizar un setTimeout
 
@@ -296,6 +273,7 @@ setTimeout(()=> firstAction(() => secondAction("i'm the secondAction"),"i'm the 
 
 //FORMA1 DE EJECUTARSE
 //setTimeout( () => firstAction( ()=> secondAction("soy el segundo dato") ,"soy el primer dato") ,3000 ) 
+
 
 FORMA2 DE EJECUTARSE
 setTimeout(() => {
@@ -330,9 +308,8 @@ function firstAction(callback,data) {
 }
 
 -----------------------------------------------------------
-Exercise 10:
-Hacer el ejercicio anterior pero la función callback debde de
-recibir 3 parametros, la función, texto y otra función callback. También para ejecutar la función
+Exercise 10:Hacer el ejercicio anterior pero la función callback debe de recibir 3 parametros,
+la función, texto y otra función callback. También para ejecutar la función
 callback, debes utilizar un setTimeout
 
 

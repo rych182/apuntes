@@ -1,24 +1,78 @@
-
-function Animal(name,raza) {
-    this.name = name;
-    this.raza = raza;
+function Animal(nombre, genero) {
+    this.nombre = nombre;
+    this.genero = genero;
 }
 
-Animal.prototype.saludar= function(){
-    console.log("Hola")
+Animal.prototype.sonar = function() {
+    console.log("Hago sonidos porque estoy vivo");
+}
+Animal.prototype.saludar = function(){
+    console.log(`Hola me llamo ${this.nombre}`);
 }
 
-Animal.prototype.ruido= function(param1){
-    console.log(param1)
+
+function Perro(nombre,genero,tamanio) {
+    this.super = Animal;
+    this.super(nombre,genero);
+    this.tamanio = tamanio;
 }
 
-Animal.prototype.datos = function(){
-    console.log(`${this.name} es mi perro y es de raza ${this.raza}`)
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+//Herencia prototipica
+function Perro(nombre,genero,tamanio) {
+    //aquí le decimos que el elemento padre es Animal, invocas al constructor
+    this.super = Animal;
+    this.super(nombre,genero);
+    this.tamanio = tamanio;
+}
+//asignando al prototipo de Perro, una instancia de animal
+//Perro esta heredando de ANimal
+Perro.prototype = new Animal();
+//Generandole su funcion constructora
+Perro.prototype.constructor = Perro;
+
+//SObreescritura de metodos del prototipo padre en el hijo
+Perro.prototype.sonar= function(){
+    console.log("SOy un perro y mi sonido es un ladrido");
+}
+Perro.prototype.ladrar = function(){
+    console.log("GUa gua")
 }
 
-let perro = new Animal("Iskra","rotweiller")
-perro.ruido("gua gua");
-perro.datos()
+//Aquí cambio la instancia de "Animal" por "Perro", y le agregamos el tamaño
+const Snoopy = new Perro("Snoopy", "Macho","Mediano");
+const LolaBunny = new Animal("LolaBunny", "Hembra");
+
+//Analizamos el console.log de snoopy, ya no dice animal, dice Perro a comparación
+//del de LolaBunny y en sus prototipos están los metodos sonar y ladrar
+//también dos scopes(object y animal) y la función que "saludar" que no he usado
+console.log(Snoopy);
+console.log(LolaBunny);
+
+//Aquí sobreescribí el metodo "sonar"
+Snoopy.sonar();
+Snoopy.saludar();
+//EL nuevo metodo que le creamos a Snoopy
+Snoopy.ladrar();
+
+LolaBunny.sonar();
+LolaBunny.saludar();
+*/
+
+
 /*
 JS es un lenguaje orientado a objetos basado en prototipos, no en clases
 Javascript es un lenguaje multiparadigma(estilos), con la programación funcional, orientada a objetos.
@@ -48,6 +102,7 @@ NOTA IMPORTANTE EJERCICIOS: imprimir los 4 console.log, para ver la diferencia e
 
 /*}
 Ejercicio 1: Comparo todos los objetos(los literales, con los instanciados con la palabra reservada new)
+ESTA ES LA MANERA CORRECTA
 
 function Animal(nombre, genero) {
     //atributos, recibiremos su valor por el parametro
@@ -128,14 +183,15 @@ LolaBunny.saludar();
 
 COnstructor:es un metodo especial que se ejecuta cuando se crea una nueva instancia de ese objeto 
 
+
+----------------------------------------------------------------------------------------------------------------------
+Ejercicio 3: Ejercicio de herencia prototipica
+La POO en JS no esta basada en clases si no en prototipos
 HERENCIA PROTOTIPICA
 Es la capacidad de poder heredar caracteristicas de un padre a un hijo, se da con las
 clases, pero en JS, se da en "cadena prototipica".
 
 SUper: es un metodo que manda llamar el constructor de la clase padre
-----------------------------------------------------------------------------------------------------------------------
-Ejercicio 3: Ejercicio de herencia prototipica
-La POO en JS no esta basada en clases si no en prototipos
 
 function Animal(nombre, genero) {
     this.nombre = nombre;
