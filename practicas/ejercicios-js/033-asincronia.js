@@ -49,6 +49,56 @@ javascript es altamente concurrente a pesar de tener un solo hilo
 ----------------------------------------------------------------------------------------------------------------------
 EVENTLOOP
 
+El *event loop* en JavaScript es un mecanismo fundamental que permite que JavaScript maneje operaciones asíncronas,
+como la ejecución de *callbacks*, la resolución de *promises*, y la gestión de eventos del DOM. 
+Cómo funciona:
+
+
+1. **Call Stack**: JavaScript es un lenguaje de un solo hilo, lo que significa que solo puede ejecutar una tarea a la vez.
+El *call stack* es una pila de tareas donde se apilan las funciones que se van a ejecutar. 
+Cuando una función se llama, se coloca en la cima del *call stack*, y se retira una vez que termina su ejecución.
+
+2. **Web APIs/Node APIs**: Estas son funciones que proporcionan los navegadores o Node.js para manejar operaciones
+como solicitudes HTTP, temporizadores (e.g., `setTimeout`), y otros eventos. Cuando se ejecuta una operación asíncrona,
+como una llamada a `setTimeout`, la función que la maneja se envía a una de estas APIs para su ejecución y
+no bloquea el *call stack*.
+
+3. **Callback Queue (Cola de Tareas)**: Cuando una operación asíncrona completa su ejecución
+(por ejemplo, cuando un temporizador de `setTimeout` expira),
+el *callback* asociado con esa operación se coloca en la *callback queue*, esperando a ser ejecutado.
+
+4. **Event Loop**: El *event loop* es el mecanismo que monitorea tanto el *call stack* como la *callback queue*.
+Si el *call stack* está vacío, el *event loop* toma el primer *callback* de la *callback queue*
+y lo coloca en el *call stack* para su ejecución.
+
+### Ejemplo Simple
+
+```javascript
+console.log('Primero');
+
+setTimeout(() => {
+  console.log('Segundo');
+}, 0);
+
+console.log('Tercero');
+```
+
+#### Resultado:
+
+```
+Primero
+Tercero
+Segundo
+```
+
+### Explicación:
+
+1. `console.log('Primero')` se ejecuta inmediatamente y se muestra en la consola.
+2. `setTimeout` configura un *callback* que debe ejecutarse después de un tiempo (en este caso, 0 milisegundos), pero en lugar de ejecutarlo inmediatamente, se envía a la *callback queue*.
+3. `console.log('Tercero')` se ejecuta inmediatamente después, porque sigue en la pila de llamadas.
+4. Cuando el *call stack* está vacío, el *event loop* mueve el *callback* de `setTimeout` desde la *callback queue* al *call stack*, y finalmente se ejecuta `console.log('Segundo')`.
+
+El *event loop* permite a JavaScript realizar tareas de manera no bloqueante y manejar múltiples operaciones asíncronas de manera eficiente, lo que es especialmente útil en aplicaciones web donde la experiencia del usuario es clave.
 
 -------------------------------------------------------------------------------------------------------------------------
 CONCURRENCIA Y RECOLECTOR DE BASURA

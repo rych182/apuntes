@@ -6,25 +6,33 @@ function Animal(nombre, genero) {
 Animal.prototype.sonar = function() {
     console.log("Hago sonidos porque estoy vivo");
 }
+
 Animal.prototype.saludar = function(){
     console.log(`Hola me llamo ${this.nombre}`);
 }
 
-
-function Perro(nombre,genero,tamanio) {
-    this.super = Animal;
-    this.super(nombre,genero);
+function Perro(nombre, genero, tamanio) {
+    Animal.call(this, nombre, genero); // Llamada correcta al constructor padre
     this.tamanio = tamanio;
 }
 
+Perro.prototype = Object.create(Animal.prototype); // Establece la herencia correcta
+Perro.prototype.constructor = Perro; // Asegura que el constructor apunte a Perro
 
 
+// Crear una instancia de Perro
+let miPerro = new Perro("Firulais", "Macho", "Grande");
+
+// Ejecutar métodos heredados
+miPerro.sonar();   // Imprime: "Hago sonidos porque estoy vivo"
+miPerro.saludar(); // Imprime: "Hola me llamo Firulais"
+
+// Acceder a la propiedad tamanio
+console.log(`El tamaño de mi perro es: ${miPerro.tamanio}`); // Imprime: "El tamaño de mi perro es: Grande"
 
 
-
-
-
-
+console.log(miPerro.constructor === Perro); // true
+console.log(miPerro.constructor === Animal); // false
 
 
 
@@ -38,11 +46,22 @@ function Perro(nombre,genero,tamanio) {
     this.super(nombre,genero);
     this.tamanio = tamanio;
 }
-//asignando al prototipo de Perro, una instancia de animal
-//Perro esta heredando de ANimal
+
+//Aquí, se crea un nuevo objeto dela funcion constructora Animal y se asigna a Perro.prototype.
+//Esto significa que los objetos creados con la función Perro heredarán los métodos de
+//definidos en Animal.prototype (como sonar y saludar).
 Perro.prototype = new Animal();
+
+
+//Estoy apuntandole a la función constructora "Perro" no a la función constructora "Animal"
+//Esto es útil porque asegura que cuando crees una instancia de Perro,
+//su propiedad constructor será Perro,
+//reflejando con precisión el constructor que se utilizó.
+
 //Generandole su funcion constructora
+
 Perro.prototype.constructor = Perro;
+
 
 //SObreescritura de metodos del prototipo padre en el hijo
 Perro.prototype.sonar= function(){
@@ -135,6 +154,7 @@ let LolaBunny1 = {
 //Aquí creamos la instancia con la palabra reservada "new" podría ser una instancia de tipo
 // "que le especifiquemos", puede ser "new String" ó "new Array"
 //Yo lo que quiero crear es un objeto con la función constructora "Animal"
+
 const Snoopy = new Animal("Snoopy", "Macho");
 const LolaBunny = new Animal("LolaBunny", "Hembra");
 
@@ -216,7 +236,17 @@ function Perro(nombre,genero,tamanio) {
 //Perro esta heredando de ANimal
 Perro.prototype = new Animal();
 //Generandole su funcion constructora
+//Estás corrigiendo la referencia de constructor para que apunte nuevamente a Perro en lugar de Animal.
 Perro.prototype.constructor = Perro;
+
+//¿Por qué es Importante?
+
+//Claridad y Consistencia: Garantiza que la propiedad constructor de cualquier instancia de Perro se refiera correctamente
+//a Perro, manteniendo la coherencia en el código.
+
+//Debugging y Refactorización: Facilita la depuración y el mantenimiento del código,
+//ya que las herramientas de desarrollo y los desarrolladores pueden confiar en que constructor apunta al constructor correcto.
+
 
 //SObreescritura de metodos del prototipo padre en el hijo
 Perro.prototype.sonar= function(){
@@ -244,6 +274,97 @@ Snoopy.ladrar();
 
 LolaBunny.sonar();
 LolaBunny.saludar();
+
+--------------------------------------------------------------------------------------------------------------------
+
+Ejercicio 4: Hacer este código con buenas practicas, esto sirve para heredar propiedades y metodos
+
+function Animal(nombre, genero) {
+    this.nombre = nombre;
+    this.genero = genero;
+}
+
+Animal.prototype.sonar = function() {
+    console.log("Hago sonidos porque estoy vivo");
+}
+Animal.prototype.saludar = function(){
+    console.log(Hola me llamo ${this.nombre});
+}
+
+function Perro(nombre,genero,tamanio) {
+    this.super = Animal;
+    this.super(nombre,genero);
+    this.tamanio = tamanio;
+}
+
+Perro.prototype = new Animal();
+
+---------------------                   ------------------------------
+
+
+function Animal(nombre, genero) {
+    this.nombre = nombre;
+    this.genero = genero;
+}
+
+Animal.prototype.sonar = function() {
+    console.log("Hago sonidos porque estoy vivo");
+}
+
+Animal.prototype.saludar = function(){
+    console.log(`Hola me llamo ${this.nombre}`);
+}
+
+function Perro(nombre, genero, tamanio) {
+    //El método call() es una función en JavaScript que pertenece a todas las funciones. 
+    //Se utiliza para invocar una función y, al mismo tiempo, especificar el valor de this dentro de esa función.
+    //En la consola del navegador escribe el nombre de la funcion "ANimal" luego pon . y apareceran todas las funciones disponibles
+    Animal.call(this, nombre, genero); // Llamada correcta al constructor padre 
+    this.tamanio = tamanio;
+
+    //thisArg: Es el valor de this dentro de la función func.
+    //arg1, arg2, ...: Son los argumentos que se pasan a la función func.
+
+    //call() se utiliza para invocar el constructor Animal dentro del contexto de un objeto Perro. 
+    //Esto es esencial para heredar las propiedades del constructor Animal y asegurarse de que this en Animal se refiera
+    // al nuevo objeto Perro que se está creando.
+}
+
+
+
+Perro.prototype = Object.create(Animal.prototype); // Establece la herencia correcta
+Perro.prototype.constructor = Perro; // Asegura que el constructor apunte a Perro
+
+//¿Por qué es Importante?
+
+//Claridad y Consistencia: Garantiza que la propiedad constructor de cualquier instancia de Perro se refiera correctamente
+//a Perro, manteniendo la coherencia en el código.
+
+//Debugging y Refactorización: Facilita la depuración y el mantenimiento del código,
+//ya que las herramientas de desarrollo y los desarrolladores pueden confiar en que constructor apunta al constructor correcto.
+
+
+// Crear una instancia de Perro
+let miPerro = new Perro("Firulais", "Macho", "Grande");
+
+// Ejecutar métodos heredados
+miPerro.sonar();   // Imprime: "Hago sonidos porque estoy vivo"
+miPerro.saludar(); // Imprime: "Hola me llamo Firulais"
+
+// Acceder a la propiedad tamanio
+console.log(`El tamaño de mi perro es: ${miPerro.tamanio}`); // Imprime: "El tamaño de mi perro es: Grande"
+
+
+Ejemplo para Ver la Diferencia
+
+let miPerro = new Perro("Firulais", "Macho", "Grande");
+
+console.log(miPerro.constructor === Perro); // true
+console.log(miPerro.constructor === Animal); // false
+
+//En resumen, Perro.prototype.constructor = Perro; es una buena práctica cuando estás utilizando herencia en JavaScript 
+//para asegurar que las referencias a constructor sean correctas.
+
 
 */
 

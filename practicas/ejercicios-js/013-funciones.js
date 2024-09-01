@@ -495,9 +495,7 @@ EJERCICIO 37: Crear las 4 funciones anónimas autoinvocadas
 })());
 
 //UNARIA
-+
-
-function() {
++function() {
     console.log("Soy una función anónima autoejecutable UNARIA");
 }();
 

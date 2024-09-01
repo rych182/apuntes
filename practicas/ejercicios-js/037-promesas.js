@@ -15,6 +15,22 @@ una promesa en JavaScript es un objeto.
 
 Una promesa la podemos ver como un if-else, el "resolve" es como un "return positivo" y el "reject"
 es como un "return negativo".
+Tanto el metodo resolve omo el metodo reject son metodos estaticos
+
+.then es el siguiente bloque se va a ejecutar una vez que se cumpla la función inicial
+puedes resumir esta linea quitandole los parentesis al parametro
+Podemos tener tantos metodos .then como necesitemos
+el .then() recibe una función que recibe la parte positiva de la promesa, osea el resolve
+//y en el resolve hemos construido un objeto, por eso puse como parametro "miObjeto"
+Aquí los .then() se encuentran al mismo nivel, no como los callback que tienen su callbackhell
+
+
+  //Si solo me quedo en un nivel, conviene el callback.
+  //Las "promesas" solo convienen cuando tenemos una concatenación de varios procesos
+
+
+.catch() es el metodo que va a capturar el error resultante del reject
+
 JON MIRCHA
 Las promesas ya nos convienen cuando tenemos una concatenacion de varios procesos asincronos.
 
@@ -331,11 +347,17 @@ findPostById(1)
   .catch( (err) => console.log(err) )
 -----------------------------------------------------------------
   */
-
+//Ejercicio de Jon Mircha 
+//ya no necesitamos el segundo parametro(que era un callback por si lo olvido en el futuro)
 function cuadradoPromise(value) {
+  //retorna una instancia del objeto Promise
+  //Una promesa recibe una función con 2 valores(resolve, reject)
   return new Promise( (resolve,reject) => {
     setTimeout(() => {
+      //resolve es como el return positivo de la promesa en caso de que se cumpla
+      //reject es como el return negativo
       resolve({ //Aquí yo creo un objeto, para tener los 2 valores
+        //value: value,
         value,
         result: value * value
       })
@@ -343,17 +365,31 @@ function cuadradoPromise(value) {
   })
 }
 
+//Le pones 0 porque es el primer número
+//Si quieres que marque ERROR, pon algo que no sea un número
 cuadradoPromise(0)
+//.then es el siguiente bloque se va a ejecutar una vez que se cumpla la función inicial
 //puedes resumir esta linea quitandole los parentesis al parametro
+//Podemos tener tantos metodos .then como necesitemos
+//el .then() recibe una función que recibe la parte positiva de la promesa, osea el resolve
+//y en el resolve hemos construido un objeto, por eso puse como parametro "miObjeto"
   .then( (miObjeto) => {
     //console.log(miObjeto);
     console.log("Inicio Promise");
     console.log(`Promise: Valor: ${miObjeto.value} , valor al cuadrado: ${miObjeto.result} `)
+    //retorna la ejecución de "cuadradoPromise" solo que con otro valor
     return cuadradoPromise(4)
   })
+  //Los parentesis no son necesarios por que solo es 1 parametro: "miObjeto"
+  //Aquí los .then() se encuentran al mismo nivel, no como los callback que tienen su callbackhell
   .then( (miObjeto) =>{
     console.log("Inicio Promise");
     console.log(`Promise: Valor: ${miObjeto.value} , valor al cuadrado: ${miObjeto.result} `)
     return cuadradoPromise(5)
   })
+  //el metodo .catch es el que captura el error, resultante del reject
   .catch('error')
+
+
+  //Si solo me quedo en un nivel, conviene el callback.
+  //Las "promesas" solo convienen cuando tenemos una concatenación de varios procesos
