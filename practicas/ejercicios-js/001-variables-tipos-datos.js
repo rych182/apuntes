@@ -57,6 +57,78 @@ if (myVar === null) {
 } else {
     console.log("myVar no es null");
 }
+
+PALABRAS RESERVADAS QUE NO SE PUEDEN USAR
+Esto debido a que te marcaría error o te puede afectar en el desarrollo de tu proyecto
+Por ejemplo: 
+var breack = true;
+console.log(break); // unexpected token break
+
+var abstract = true;
+console.log(abstract) // true, si se puede cambiar pero no deberías hacerlo
+
+abstract
+boolean
+break
+byte
+case
+catch
+char
+class
+const
+continue
+debugger
+default
+delete
+do
+double
+else
+enum
+export
+extends
+false
+final
+finally
+float
+for
+function
+goto
+if
+implements
+import
+in
+instanceof
+int         //int no daría un error
+interface
+long
+native
+new           //  si da error
+null
+package
+private
+protected
+public
+return
+short
+static
+super
+switch
+synchronized
+this            //da error
+throw
+throws
+transient
+true
+try
+typeof
+var
+void
+volatile
+while
+with
+
+
+
 ------------------------------------------------------------
 
 console.log(undefined + 'hola');//undifinedhola

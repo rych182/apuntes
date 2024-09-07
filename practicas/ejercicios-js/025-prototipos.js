@@ -114,6 +114,8 @@ En JS la herencia se da por la cadena de prototipos
 -Cuando tu creas un objeto, tienes propiedades y metodos, pero el prototipo más primitivo es el Object,
 y tiene las definiciones de sus getters y setters, es este: __proto__: Object .
 
+__proto__: Object es como el ADN de ese objeto
+
 NOTA IMPORTANTE EJERCICIOS: imprimir los 4 console.log, para ver la diferencia en los objetos creados
 
 */

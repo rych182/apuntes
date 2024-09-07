@@ -44,7 +44,7 @@ CASI TODO EN JAVASCRIPT RECIBE UN CALLBACK
 Los Callback se usan mucho en NodeJS(backend)
 
 Los callback sirven para que esperes el resultado por si necesitas algo del proceso anterior
-en el siguiente proceso 3
+en el siguiente proceso 
 
 ARGENTINO
 Una función callback es una función que se pasa como argumento a otra función
