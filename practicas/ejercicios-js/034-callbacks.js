@@ -307,7 +307,7 @@ function firstAction(callback,data) {
   //callback
 }
 
------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
 Exercise 10:Hacer el ejercicio anterior pero la función callback debe de recibir 3 parametros,
 la función, texto y otra función callback. También para ejecutar la función
 callback, debes utilizar un setTimeout
@@ -429,7 +429,7 @@ firstOperation(() => {
   });
 });
 
----------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------
 Ejercicio 16: hacer el ejercicio pasado imprimiendo los cuadrados de 4 dígitos, ocasionando un callback hell
 function cuadradoCallback(value,callback) {
   setTimeout(() => {

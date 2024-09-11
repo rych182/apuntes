@@ -176,7 +176,8 @@ console.log(typeof Snoopy1)
 
 -----------------------------------------------------------------------------------
 
-EJERCICIO 2: FUnción constructora donde asignamos los metodos al prototipo, no a la función como tal 
+EJERCICIO 2: FUnción constructora donde asignamos los metodos al "prototipo", no a la función como tal 
+
 //FUnción constructora donde asignamos los metodos al prototipo, no a la función como tal
 function Animal(nombre, genero) {
     this.nombre = nombre;
@@ -301,7 +302,7 @@ function Perro(nombre,genero,tamanio) {
 
 Perro.prototype = new Animal();
 
----------------------                   ------------------------------
+---------------------     Buenas practicas              ------------------------------
 
 
 function Animal(nombre, genero) {

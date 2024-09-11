@@ -2,6 +2,11 @@
 
 TEORIA
 
+Ania Kubów
+"¡¡¡¡¡una promesa en JavaScript es un objeto!!!!!"" Que representa la finalización o el fracazo
+de una operación asincrona".
+
+
 CHILENO:
 Espera 2 respuestas, que cumplas tu promesa o que no la cumplas
 Es un objeto que representa la terminación o el fracaso de una operacion asincrona
@@ -11,11 +16,12 @@ de una operación asíncrona y su valor resultante.
 Las promesas son una forma de manejar operaciones asíncronas en JavaScript de manera más legible 
 y manejable que el uso tradicional de callbacks, evitando problemas como el "callback hell".
 
-una promesa en JavaScript es un objeto.
 
 Una promesa la podemos ver como un if-else, el "resolve" es como un "return positivo" y el "reject"
 es como un "return negativo".
-Tanto el metodo resolve omo el metodo reject son metodos estaticos
+Tanto el metodo resolve omo el metodo reject son metodos estaticos, significa que no necesito crear
+una instancia para poder utilizarlos
+
 
 .then es el siguiente bloque se va a ejecutar una vez que se cumpla la función inicial
 puedes resumir esta linea quitandole los parentesis al parametro
@@ -25,14 +31,54 @@ el .then() recibe una función que recibe la parte positiva de la promesa, osea 
 Aquí los .then() se encuentran al mismo nivel, no como los callback que tienen su callbackhell
 
 
-  //Si solo me quedo en un nivel, conviene el callback.
-  //Las "promesas" solo convienen cuando tenemos una concatenación de varios procesos
+Si solo me quedo en un nivel, conviene el callback.
+Las "promesas" solo convienen cuando tenemos una concatenación de varios procesos
 
 
 .catch() es el metodo que va a capturar el error resultante del reject
 
-JON MIRCHA
-Las promesas ya nos convienen cuando tenemos una concatenacion de varios procesos asincronos.
+
+LA EVOLUCION de las promesas.
+Un código mejor ordenado y sobre todo
+UNA MEJOR MANIPULACIÓN DE LOS ERRORES y no tienes que estar repitiendo la validación del error
+En los "callbacks" en cada ejecución tienen que estar validando el error
+Las promesas ya tienen su propio mecanismo para rechazar en cualquier parte del flujo
+donde se de un error, mandarlo y trabajarlo
+
+EJEMPLO: 
+
+fs.readdir(source, function (err, files) {
+  if (err) {
+    console.log('Error finding files: ' + err)            AQUÍ SE VALIDA EL ERROR
+  } else {
+    files.forEach(function (filename, fileIndex) {
+      console.log(filename)
+      gm(source + filename).size(function (err, values) {
+        if (err) {
+          console.log('Error identifying file size: ' + err)          AQUÍ SE VALIDA EL ERROR
+        } else {
+          console.log(filename + ' : ' + values)
+          aspect = (values.width / values.height)
+          widths.forEach(function (width, widthIndex) {
+            height = Math.round(width / aspect)
+            console.log('resizing ' + filename + 'to ' + height + 'x' + height)
+            this.resize(width, height).write(dest + 'w' + width + '_' + filename, function(err) {
+              if (err) console.log('Error writing file: ' + err)                  AQUÍ SE VALIDA EL ERROR
+            })
+          }.bind(this))
+        }
+      })
+    })
+  }
+})
+
+JON MIRCHA: Las promesas ya nos convienen cuando tenemos una concatenacion de varios procesos asincronos.
+
+Hoy en día muchas API'S trabajando retornando promesas.
+Fetch es la forma moderna de "hacer AJAX", todo lo trabaja internamente en un objeto de PROMESA de tal manera que 
+para ir trabajando todos los datos que te devuelve una petición ajax mediante FETCH vas a tener que utilizar estos
+metodos ".then" y ".catch"
+
 
 Características Clave de una Promesa
 
@@ -346,10 +392,53 @@ findPostById(1)
   })
   .catch( (err) => console.log(err) )
 -----------------------------------------------------------------
+
+Ejercicio 8: Ejercicio de Jon Mircha
+Ejercicio donde atrapamos el error en cualquiera de las ejecuciones
+Esto es la evolución de las promesas, un código mejor ordenado y sobre todo
+UNA MEJOR MANIPULACIÓN DE LOS ERRORES y no tienes que estar repitiendo la validación del error
+En los "callbacks" en cada ejecución tienen que estar validando el error.
+Las promesas ya tienen su propio mecanismo para rechazar en cualquier parte del flujo
+donde se de un error, mandarlo y trabajarlo
+
+EJEMPLO: 
+
+fs.readdir(source, function (err, files) {
+  if (err) {
+    console.log('Error finding files: ' + err)  AQUÍ SE VALIDA EL ERROR
+  } else {
+    files.forEach(function (filename, fileIndex) {
+      console.log(filename)
+      gm(source + filename).size(function (err, values) {
+        if (err) {
+          console.log('Error identifying file size: ' + err) AQUÍ SE VALIDA EL ERROR
+        } else {
+          console.log(filename + ' : ' + values)
+          aspect = (values.width / values.height)
+          widths.forEach(function (width, widthIndex) {
+            height = Math.round(width / aspect)
+            console.log('resizing ' + filename + 'to ' + height + 'x' + height)
+            this.resize(width, height).write(dest + 'w' + width + '_' + filename, function(err) {
+              if (err) console.log('Error writing file: ' + err)  AQUÍ SE VALIDA EL ERROR
+            })
+          }.bind(this))
+        }
+      })
+    })
+  }
+})
+
+
   */
 //Ejercicio de Jon Mircha 
-//ya no necesitamos el segundo parametro(que era un callback por si lo olvido en el futuro)
+//ya no necesitamos el segundo parametro(que era una funcion callback por si lo olvido en el futuro)
 function cuadradoPromise(value) {
+//revisa si el tipo de dato es diferente a un número, rechaza la promesa entonces retornara el
+// constructor PROMISE y usamos el metodo reject que manda este mensaje
+if(typeof value !== "number"){
+  //Este error te sirve
+ return Promise.reject(`Error, el valor "${value}" ingresado no es un número`)
+} 
   //retorna una instancia del objeto Promise
   //Una promesa recibe una función con 2 valores(resolve, reject)
   return new Promise( (resolve,reject) => {
@@ -387,9 +476,15 @@ cuadradoPromise(0)
     console.log(`Promise: Valor: ${miObjeto.value} , valor al cuadrado: ${miObjeto.result} `)
     return cuadradoPromise(5)
   })
+  .then( (miObjeto) =>{
+    console.log("Inicio Promise");
+    console.log(`Promise: Valor: ${miObjeto.value} , valor al cuadrado: ${miObjeto.result} `)
+    return cuadradoPromise("hola")
+  })
+  .then( (miObjeto) =>{
+    console.log("Inicio Promise");
+    console.log(`Promise: Valor: ${miObjeto.value} , valor al cuadrado: ${miObjeto.result} `)
+    return cuadradoPromise(7)
+  })
   //el metodo .catch es el que captura el error, resultante del reject
   .catch('error')
-
-
-  //Si solo me quedo en un nivel, conviene el callback.
-  //Las "promesas" solo convienen cuando tenemos una concatenación de varios procesos

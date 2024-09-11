@@ -11,12 +11,6 @@ El valor de this se determina en tiempo de ejecución y depende de cómo se llam
 Ejercicio 1: Viendo que selecciona this
 console.log(this);
 
------------------------------------------------------
-Ejercicio 2: dictar explicación del this
-OBJETO THIS
-La palabra clave this se refiere al objeto al que pertenece la función que la está utilizando. 
-El valor de this se determina en tiempo de ejecución y depende de cómo se llama a la función y en qué contexto
-
 -----------------------------------------------------------------------------------------------------------------
 Ejercicio 3: crear un objeto e imprime una datos que estén dentro usando THIS
 
