@@ -3,7 +3,7 @@
 //basado en prototipos
 //ES6 nos dio como actualización poder escribir los objetos como en otros lenguajes, usando clases
 
-
+//Existen las propiedades privadas en JS 
 
 Ejercicio 1: Pasar la función constructora a clase
 function Animal(nombre,genero) {

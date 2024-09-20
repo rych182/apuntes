@@ -100,7 +100,7 @@ function otraFuncion(callback) {
 
 otraFuncion(texto)
 -----------------------------------------------------------------
-Ejercicio 1: un callback sencillo
+Ejercicio 1: un callback sencillo, ahora usando funciones flecha
 
 const fun1 = (callback) =>{
   console.log("Inicio");

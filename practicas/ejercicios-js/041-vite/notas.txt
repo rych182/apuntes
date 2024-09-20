@@ -1,0 +1,38 @@
+Recuerda que no todas las personas mantienen actualizados sus navegadores. 
+Para evitar estos problemas se crearon los Bundlers.
+
+Bundlers(empaquetadores)
+Nos ayudan a desarrollar una aplicación js moderna,con modulos, separando archivos,
+que podamos importar diferentes tipos de tecnología, que podamos usar SASS,
+todo combinarlo y ejecutarlo , y crear un resultado final listo para producción.
+Minificación de tu codigo también y crear un archivo 'build' para subirlo a producción.
+
+WEBPACK
+Fue el estandar por muchos años, Es el bundler más popular y flexible, 
+ampliamente utilizado en grandes proyectos y frameworks como React y Vue. 
+Permite empaquetar archivos JavaScript y otros recursos como imágenes, CSS, y más.
+
+Webpack y Vite son los más populares en la mayoría de los ecosistemas JavaScript actuales.
+Tiene "billones de descargas" , tiene pluggins para tener servidore en tiempo real para ver los cambios
+, incluso "Angular" aún lo usa hasta su "versión 15". 
+
+
+VITE 
+Muchos se mueven a VITE por "la velocidad" lo que a webpack le toma 5seg, a vite le toma 1seg,
+esto ayuda cuando una persona esta trabajando con modulos que a su vez estan importando funciones 
+de otros archivos o librerias, el proceso es mas lento en webpack.
+No tienes que hacer configuración como con webpack.
+
+
+TURBOPACK
+Es el que reemplazara a webpack, tarda 
+
+
+funcion generadora:
+es una funcion que paulativamente va regresando
+los valores, uno después del otro, 
+
+
+cosas nuevas:
+asterisco en la palabra reservada "function"
+yield: es una palabra reservada

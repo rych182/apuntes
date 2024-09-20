@@ -6,36 +6,38 @@ function Animal(nombre, genero) {
 Animal.prototype.sonar = function() {
     console.log("Hago sonidos porque estoy vivo");
 }
-
 Animal.prototype.saludar = function(){
     console.log(`Hola me llamo ${this.nombre}`);
 }
 
-function Perro(nombre, genero, tamanio) {
-    Animal.call(this, nombre, genero); // Llamada correcta al constructor padre
+function Perro(nombre,genero,tamanio) {
+    this.super = Animal;
+    this.super(nombre,genero);
     this.tamanio = tamanio;
 }
 
-Perro.prototype = Object.create(Animal.prototype); // Establece la herencia correcta
-Perro.prototype.constructor = Perro; // Asegura que el constructor apunte a Perro
+Perro.prototype = new Animal();
+Perro.prototype.constructor = Perro;
 
 
-// Crear una instancia de Perro
-let miPerro = new Perro("Firulais", "Macho", "Grande");
+//SObreescritura de metodos del prototipo padre en el hijo
+Perro.prototype.sonar= function(){
+    console.log("SOy un perro y mi sonido es un ladrido");
+}
 
-// Ejecutar métodos heredados
-miPerro.sonar();   // Imprime: "Hago sonidos porque estoy vivo"
-miPerro.saludar(); // Imprime: "Hola me llamo Firulais"
+Perro.prototype.ladrar = function(){
+    console.log("GUa gua")
+}
 
-// Acceder a la propiedad tamanio
-console.log(`El tamaño de mi perro es: ${miPerro.tamanio}`); // Imprime: "El tamaño de mi perro es: Grande"
-
-
-console.log(miPerro.constructor === Perro); // true
-console.log(miPerro.constructor === Animal); // false
+const Snoopy = new Perro("Snoopy", "Macho","Mediano");
+const LolaBunny = new Animal("LolaBunny", "Hembra");
 
 
+console.log(Snoopy);
 
+Snoopy.sonar();
+Snoopy.saludar();
+Snoopy.ladrar();
 
 
 /*
@@ -114,15 +116,17 @@ En JS la herencia se da por la cadena de prototipos
 -Cuando tu creas un objeto, tienes propiedades y metodos, pero el prototipo más primitivo es el Object,
 y tiene las definiciones de sus getters y setters, es este: __proto__: Object .
 
-__proto__: Object es como el ADN de ese objeto
+__proto__: Object es como el ADN de ese objeto, te dice quien es el padre
 
 NOTA IMPORTANTE EJERCICIOS: imprimir los 4 console.log, para ver la diferencia en los objetos creados
+
+Las "funciones prototipicas" son llamadas también "funciones constructoras" 
 
 */
 
 
 /*}
-Ejercicio 1: Comparo todos los objetos(los literales, con los instanciados con la palabra reservada new)
+Ejercicio 1: Comparo todos los objetos(los literales vs con los instanciados con la palabra reservada new)
 ESTA ES LA MANERA CORRECTA
 
 function Animal(nombre, genero) {
