@@ -2,11 +2,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 header{
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: gray;
 }
 
 .logo{
@@ -14,7 +18,73 @@ header{
 }
 
 .nav-list{
-    display: flex;
     list-style-type: none;
-    gap: 1rem; /*Para separar los items entre si*/
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-list a{
+    text-decoration: none;
+    color: black;
+}
+
+.abrir-menu, .cerrar-menu{
+    display: none;
+}
+
+@media screen and (max-width: 550px) {
+    
+    .abrir-menu, .cerrar-menu{
+        display: block;
+        border: 0;
+        font-size: 1.25rem;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .abrir-menu{
+        color: black;
+    }
+
+    .cerrar-menu{
+        color: white;
+    }
+
+    .nav{
+        opacity: 0;
+        visibility: hidden;
+
+        /*Alineo el boton cerrar*/
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+
+
+        position: absolute;/*Pone el menú por encima del logo*/
+        top: 0;/*Para que este arriba a la izquierda*/
+        right: 0;/*Para que este arriba a la derecha*/
+        background-color: black;
+        padding: 2rem;
+        bottom: 0;/*Para que el menú llegue hasta abajo*/
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .4);
+        transition: .5s;
+    }
+    
+
+    .nav.visible{
+        /*Esto lo agregaremos con JS, cuando demos click en abrir*/
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-list{
+        /*Ya no necesitamos display flex porque lo pusimos arriba*/
+        flex-direction: column;
+        align-items: end;/*Para que las letras estén alineadas a la derecha*/
+    }
+
+    .nav-list a{
+        color: white;
+    }
 }

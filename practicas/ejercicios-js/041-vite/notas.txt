@@ -23,6 +23,10 @@ esto ayuda cuando una persona esta trabajando con modulos que a su vez estan imp
 de otros archivos o librerias, el proceso es mas lento en webpack.
 No tienes que hacer configuración como con webpack.
 
+Vite en si es una aplicación de "NOde js" porque usamos node_modules y package.json , nos ayuda
+a tener un montón de herramientas para trabajar de una manera rápida y eficiente, por eso es que
+podemos utilizar palabras reservadas como "import", funciones generadoras etc
+
 
 TURBOPACK
 Es el que reemplazara a webpack, tarda 
