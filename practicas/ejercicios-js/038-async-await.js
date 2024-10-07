@@ -2,7 +2,7 @@
 
 TEORIA:
 FUNCIONES ASYNCRONAS
-LAS "PROMESAS ASINCRONAS" no vienen a sustituir a las "promesas", trabajan en colaboración
+LAS "PROMESAS ASINCRONAS" no vienen a sustituir a las "promesas", trabajan en conjunto
 
 Las funciones asincronas van a esperar a que algo se cumpla para poder seguir ejecutando el proceso
 que estemos trabajando.
@@ -45,8 +45,7 @@ function cuadradoPromise(value) {
     }
     
     //Le pones 0 porque es el primer número
-    //Si quieres que marque ERROR, pon algo que no sea un número
-    cuadradoPromise(0)
+    cuadradoPromise(0) //Si quieres que marque ERROR, pon algo que no sea un número
     //.then es el siguiente bloque se va a ejecutar una vez que se cumpla la función inicial
     //puedes resumir esta linea quitandole los parentesis al parametro
     //Podemos tener tantos metodos .then como necesitemos
@@ -56,8 +55,7 @@ function cuadradoPromise(value) {
         //console.log(miObjeto);
         console.log("Inicio Promise");
         console.log(`Promise: Valor: ${miObjeto.value} , valor al cuadrado: ${miObjeto.result} `)
-        //retorna la ejecución de "cuadradoPromise" solo que con otro valor
-        return cuadradoPromise(4)
+        return cuadradoPromise(4) //retorna la ejecución de "cuadradoPromise" solo que con otro valor
       })
       //Los parentesis no son necesarios por que solo es 1 parametro: "miObjeto"
       //Aquí los .then() se encuentran al mismo nivel, no como los callback que tienen su callbackhell
@@ -99,7 +97,12 @@ function cuadradoPromise(value) {
 
 //con esto ya puedo trabajar las funciones asincronas dadas de una promesa
 async function funcionAsincronaDeclarada() {
-    
+    try {
+      console.log('Inicio Async Function');
+      let obj = cuadradoPromise(0)//la función "devuelve un OBJETO"
+    } catch (error) {
+      
+    }
 }
 
 
