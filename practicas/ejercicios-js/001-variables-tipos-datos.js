@@ -194,7 +194,7 @@ Null.
 ---------
 Object: Es un tipo de dato "no primitivo",  llamado Object, que puede almacenar colecciones de datos y funciones.
 funciones: son un tipo de dato "no ´primitivo"
-clases:
+clases: 
 ---------
 "use strict"
 Es una opción disponible en JavaScript que restringe ciertas acciones,

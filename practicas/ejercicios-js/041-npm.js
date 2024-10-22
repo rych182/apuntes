@@ -13,6 +13,8 @@ npm i g nombreDelPaquete(lo instala en toda tu maquina)
 npm install react@16.14.0(instalas una versión específica del paquete)
 npm run build(te crea la carpeta que vas a subir a servidor)
 
+NO USAR AL MISMO TIEMPO NPM,YARN O PNPM
+
 scripts
 "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
