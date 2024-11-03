@@ -11,6 +11,7 @@ CHILENO:
 Espera 2 respuestas, que cumplas tu promesa o que no la cumplas
 Es un objeto que representa la terminación o el fracaso de una operacion asincrona
 
+
 Una promesa en JavaScript es un objeto que representa la eventual finalización (o falla)
 de una operación asíncrona y su valor resultante. 
 Las promesas son una forma de manejar operaciones asíncronas en JavaScript de manera más legible 
@@ -23,7 +24,7 @@ Tanto el metodo resolve omo el metodo reject son metodos estaticos, significa qu
 una instancia para poder utilizarlos
 
 
-.then es el siguiente bloque se va a ejecutar una vez que se cumpla la función inicial
+.then es el siguiente bloque que se va a ejecutar una vez que se cumpla la función inicial
 puedes resumir esta linea quitandole los parentesis al parametro
 Podemos tener tantos metodos .then como necesitemos
 el .then() recibe una función que recibe la parte positiva de la promesa, osea el resolve

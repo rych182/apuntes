@@ -217,8 +217,6 @@ suma(4,resta())
 Ejercicio 5: Otra manera de pasar por parametro una función
 
 let inicio = function (valor,callback) {
-  //la función anónima aquí se le llama "parametro callback" y recibe el valor del parametro valor en la linea 123,
-  //y la linea 123, lo recibe de la linea 128, donde escribes el nombre
   callback(valor);
 }
 inicio("fulanito",function(valor){

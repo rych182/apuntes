@@ -10,4 +10,11 @@ yarn run dev, (hace que corra el proyecto en local)
 yarn i g nombreDelPaquete(lo instala en toda tu maquina)
 yarn add react@16.14.0(instalas una versión específica del paquete)
 yarn run build(te crea la carpeta que vas a subir a servidor)
+
+
+Ejercicio
+https://github.com/ColorlibHQ/gentelella
+yarn install
+yarn add gulp
+yarn run gulp
 */
