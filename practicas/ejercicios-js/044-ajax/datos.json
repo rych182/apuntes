@@ -1,0 +1,9 @@
+{
+    "nombre":"ric",
+    "edad":"38",
+    "estadoCivil":"true",
+    "amigos":{
+        "secu":["daniel","mengano","sutano"],
+        "prepa":["jess","nacho","ruben"]
+    }
+}

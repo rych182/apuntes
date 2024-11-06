@@ -1,3 +1,4 @@
+Libro: https://eloquentjs-es.thedojo.mx/
 JAVASCRIPT INTERMEDIO: 300-500HRS ---- 
 *Checar que es pre-intermedio, intermedio y pre-avanzado
 
