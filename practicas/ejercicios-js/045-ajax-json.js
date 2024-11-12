@@ -169,33 +169,78 @@ withCredentials es el status de una API privada, para saber si estamos conectado
 hacia los recursos que podemos utilizar
 
 
-
 */
 
 (()=>{
     const xhr = new XMLHttpRequest(),
     //estas variables las usaré para manipular el DOM
     $xhr = document.getElementById("xhr"),
-    $fragment = document.createDocumentFragment();
+    $fragment = document.createDocumentFragment();//es una sola insecion en vez de cientos con el appenChild
 
     //readystatechange se lanza cuando detecta cualquier cambio en el estado
     //ya sea que la petición se haya abortado, lanzado un error, completado etc
     //por eso digo que todos los eventos de AJAX residen en readystatechange
-    
+    //console.log(xhr) aquí puedes ver lo que tiene el objeto
     //La "e" es el evento
     xhr.addEventListener('readystatechange', e =>{
         //le asignamos el o los eventos que queremos manipular
         //aquí iriá la lógica de la programación
-        console.log(xhr)
-        //nos imprime 4 veces el objeto porque son los 4 estados de petición por los que pasa.
+        //console.log(xhr)
+        //nos imprime 4 veces el objeto porque son los 4 estados de petición por los que pasa, exceptuando el 0
+        //en los 4 dice 4, porque cuando se lanza en la consola, ya ha sido completada la petición
+        if (xhr.readyState !== 4) return; // si no es readyState 4, no retornes nada
+        // se ejecute solo cuando la propiedad readyState el estado sea 4
+        //ya que este cargado puedo hace una manipulación en el DOM
+        //console.log(xhr);el console solo es para ejemplo
+        //checa en el status 200, y el texto
+        
+        if (xhr.status >= 200 && xhr.status < 300) {
+            //console.log("exito")
+            //console.log(xhr.responseText);//la peticion nos envía la respuesta en formato JSON
+            //para imprimir en el html
+            //$xhr.innerHTML = xhr.responseText;
+            //Tengo que convertir la respuesta en formato JSON
+            let json = JSON.parse(xhr.responseText)
+            //console.log(json)//detecta el arreglo de 10 elementos
+            
+            //crea una etiqueta <li> y muestra datos de cada 1 de los 10 objetos
+            json.forEach(el => {
+                const $li = document.createElement("li");
+                $li.innerHTML = `${el.name} -- ${el.email} -- ${el.phone}`;
+                $fragment.appendChild($li);
+            });
+
+            //esto pone cada etiqueta li en el id que se encuentra de $xhr
+            $xhr.appendChild($fragment)
+            console.log(xhr)
+        } else {
+            //Esto se ejecuta cuando el status es diferente del 200-299
+            //por si hay un error en la url o el statusText viene vacío
+            console.log("error")
+            let message = xhr.statusText || "Ocurrio un Error"; //Creamos una variable porque no siempre aparece el mensaje de error
+            $xhr.innerHTML = `Error ${xhr.status}: ${message}`
+        }
     })
 
     //open abre la instrucción
     //parametro1:el metodo por el cual vamos a comunicarnos GET,POST/PUT,HEAD,TRACE
     //GET atraves de la url, POST atraves de la cabecera del documento
     //parametro 2: la url de la API
-    xhr.open("GET","https://jsonplaceholder.typicode.com/users");
+    //xhr.open("GET","https://jsonplaceholder.typicode.com/users");
+
+    xhr.open("GET","044-ajax/datos.json");//checa la ruta del recurso en el objeto xhr en response.url
+    
+    //prueba https://jsonplaceholder.typicode.com/ERRORORTOGRAFICO para que veas el objeto vacio y el status 404 
     //Enviamos la petición
     xhr.send();
 })()
-//min 23
+//min 38
+
+/*
+
+Usos comunes de appendChild()
+
+    Añadir contenido dinámico: Ideal para añadir contenido en respuesta a eventos del usuario, como hacer clic en un botón.
+    Actualizar la interfaz: Útil para manipular la interfaz de una aplicación web sin recargar la página.
+    Trabajar con listas: Puede agregar elementos a listas de forma dinámica, como en menús desplegables, listas de tareas, etc.
+*/
