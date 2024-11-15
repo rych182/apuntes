@@ -31,10 +31,8 @@ for (const labor of laboresYoutuber) {
 */
 /*
 CALLBACK
-Una función que recibe otra función como parametro y luego la ejecuta
-FALCONMASTERS
-Los callback son funciones que podemos pasar como parametro a otra función
-esto es con el fin de que una función pueda llamar a otra función y ejecutarla.
+Una función que recibe otra función como valor, pasa como parametro y luego se ejecuta
+dentro de la función, para completar algun tipo de rutina
 
 Un Callback puede usarse tanto para un codigo sincrono como asincrono
 
@@ -44,11 +42,8 @@ CASI TODO EN JAVASCRIPT RECIBE UN CALLBACK
 Los Callback se usan mucho en NodeJS(backend)
 
 Los callback sirven para que esperes el resultado por si necesitas algo del proceso anterior
-en el siguiente proceso 
+en el siguiente proceso.
 
-ARGENTINO
-Una función callback es una función que se pasa como argumento a otra función
-que luego se invoca dentro de la función externa para completar algun tipo de rutina
 Javascript es un lenguaje interpretado y en los lenguajes interpretados se
 el código se ejecuta de arriba a abajo y el resultado se devuelve inmediatamente
 
@@ -454,8 +449,13 @@ cuadradoCallback(4,(value,result)=>{
 })
 
 -------------------------------------------------------------------------------
-Ejercicio 17: de un callback recibiendo parametros, mientras se ejecuta dentro de la función
-La mayoría del tiempo, tu no vas a hacer esto, lo van a hacer los paquetes/librerías
+Ejercicio 17: Crea un callback que reciba 2 parametros, el primero será un nombre
+, el segundo la función callback.
+Debe imprimir: "Obteniendo los post de ${usuario}", posteriormente en un segundo renglon 2 segundos después, 
+debe de imprimir algún dato dentro de un array
+Mientras se ejecuta dentro de la función
+
+NOTA:La mayoría del tiempo, tu no vas a hacer esto, lo van a hacer los paquetes/librerías
 
 const obtenerPostsDeUsuario = (usuario,callback)=>{
   console.log(`Obteniendo los post de ${usuario}`);
@@ -556,4 +556,17 @@ ingresar({users:'fulanito',speciality:'javaScript'},"hola")
 
 
 */
+
+const obtenerPostsDeUsuario = (usuario,callback)=>{
+  console.log(`Obteniendo los post de ${usuario}`);
+
+  setTimeout(()=>{
+    let posts = ['post1','post2','post3'];
+    callback(posts[1]);
+  },2000)
+}
+
+obtenerPostsDeUsuario('fulanito',(posts)=>{
+  console.log(posts);
+});
 

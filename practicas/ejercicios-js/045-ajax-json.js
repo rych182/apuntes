@@ -237,6 +237,10 @@ hacia los recursos que podemos utilizar
 //min 38
 
 /*
+Ejercicio de TWITTER, usas AJAX y se actualiza cada 20segundos
+https://x.com/notifications
+
+
 
 Usos comunes de appendChild()
 
