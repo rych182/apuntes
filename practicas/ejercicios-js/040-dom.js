@@ -1,4 +1,10 @@
 /*
+
+DOM
+Las etiquetas el DOM se refiere como elementos(checar imagen DOM),
+podemos seleccionar elementos, eliminarlos y modificarlos, el DOM es todo mi código HTML
+, también puedes seleccionar, atributos, clases, id's etc.
+
 Exercise 0: callback per event
 Para esto creamos un boton en html que tenga un id
 

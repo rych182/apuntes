@@ -70,6 +70,24 @@ Un ejemplo son los LOADERS en los sitios webs, o los productos terminandose de m
 Callback hell: muchos callback anidados, el problema es que si yo quiero manipular el error
 lo tengo que hacer en cada una de las funciones
 
+VARIABLES DE ENTORNO
+Dependen de donde se ejecuten, van a tener un valor distinto
+Por ejemplo, puede ser que estés en localhost:5173, pero cuando este en 
+producción cambie la URL.
+EL paquete más famoso se llama DOTENV, estas variables de entorno se guardan
+en un archivo .ENV
+
+Dos casos comunes son:
+La api key es una llav de acceso
+API_KEY=EstaEsMiLlavePrivada
+Aqui nosotros hacemos las peticiones
+y cambiamos la variable de entorno que sería "localhost"
+BASE_URL=http://localhost:123123/cursos/fulano
+
+se recomienda hacer una copia del archivo .env y se llame .env.template
+el archvivo .env no se sube, lo agregas a tu archivo .gitignore para
+que no se suba a github
+
 const obtenerPostsDeUsuario = (usuario,callback)=>{
   console.log(`Obteniendo los post de ${usuario}`);
 

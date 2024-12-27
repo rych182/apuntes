@@ -1,0 +1,3 @@
+======Vue options========
+Es la forma en la que fue construido VUE JS 2 
+
