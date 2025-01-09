@@ -8,6 +8,8 @@
 5. IntelliJ IDE
 6. sublime
 
+hola
+
 #### Explicarle al alumno la diferencia entre un editor y un IDE
 
 ## PLuggins de VSC

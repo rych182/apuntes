@@ -5,9 +5,9 @@ console.log("Inicio");
 // Tarea asíncrona
 setTimeout(function() {
     console.log("Tarea asíncrona completada.");
-}, 2000);
-
+}, 0);
 console.log("Fin");
+
 
 
 /*
@@ -49,7 +49,7 @@ javascript es altamente concurrente a pesar de tener un solo hilo
 ----------------------------------------------------------------------------------------------------------------------
 EVENTLOOP
 
-El *event loop* en JavaScript es un mecanismo fundamental que permite que JavaScript maneje operaciones asíncronas,
+El *event loop* en JavaScript es un mecanismo que permite que JavaScript maneje operaciones asíncronas,
 como la ejecución de *callbacks*, la resolución de *promises*, y la gestión de eventos del DOM. 
 Cómo funciona:
 
