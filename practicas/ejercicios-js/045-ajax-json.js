@@ -241,7 +241,6 @@ Ejercicio de TWITTER, usas AJAX y se actualiza cada 20segundos
 https://x.com/notifications
 
 
-
 Usos comunes de appendChild()
 
     Añadir contenido dinámico: Ideal para añadir contenido en respuesta a eventos del usuario, como hacer clic en un botón.

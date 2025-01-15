@@ -158,18 +158,18 @@ no utilizada, pero debe adaptarse para manejar los desafíos únicos asociados c
    Entonces, dependiendo de las caracteristicas del lenguaje, van a haber lenguajes que trabajan en un solo hilo
    y lenguajes que trabajan en multi hilos.(JAVASCRIPT tiene un solo hilo de ejecución).
    
-   Imagen: asincronia-01
+   IMAGEN: asincronia-01
    El "CALL STACK" son las peticiones que va haciendo la aplicación, o incluso las interacciones del usuario, 
    estas van trabajando en este unico hilo(el hilo es el circulo de color amarillo)y tenemos una cola de eventos o de mensajes(event queue), que "van apilando esas tareas" y conforme van terminando, van enviando los mensajes y todos se van comunicando "en un mismo hilo"
    
-   Imagen: asincronia-02-eventloop(este diagrama es más al estilo NOde JS)
+   IMAGEN: asincronia-02-eventloop(este diagrama es más al estilo NOde JS)
    
    Tanto en los navegadores(frontend) como en los servidores(node js backend) js se comporta de la misma manera.
    
    javascript tiene diferentes mecanismos para trabajar la asincronias
    EL primer mecanismo que tenemos para trabajar la asincronía son las funciones "callback"
    
-   , en el "intensive operation" se van registrando las funciones, dependiendo del tipo de petición
+   , en el "intensive operation"(la imagen 2) se van registrando las funciones, dependiendo del tipo de petición
    que vayamos a hacer, por ejemplo, acceso a los ficheros de los sistemas, solicitar datos de una
    base de datos, hacer procesamiento, etc , 
    obvio en el navegador no tenemos acceso al file system , pero podría ser:
@@ -189,12 +189,13 @@ no utilizada, pero debe adaptarse para manejar los desafíos únicos asociados c
    
    Javascript trabaja bajo la filosofía LIFO(Last In, First Out) osea, "la última en entrar es la primera en 		salir" , es la manera en la que se va ejecutando las operaciones.
 
-   asincronia-04(este diagrama va más a los navegadores)
+   IMAGEN asincronia-04(este diagrama va más a los navegadores)
    
-   en la imagen son web API's y se van apilando las tareas(el rectangulo con cuadrados de colores), aquí está la petición del usuario(la lista de cosas de la web API) y el eventloop va solicitando las NOTIFICACIONES conforme
-   se van terminando
+   en la imagen son web API's y se van apilando las tareas(el rectangulo con cuadrados de colores),
+	aquí está la petición del usuario(la lista de cosas de la web API) y 
+	el eventloop va solicitando las NOTIFICACIONES conforme se van terminando
    
-   
+   ---------------------------------------------------------
    OPERACIONES DE CPU Y OPERACIONES DE I/O(entrada y salida)
    
    OPERACIONES DE CPU
@@ -296,7 +297,7 @@ no utilizada, pero debe adaptarse para manejar los desafíos únicos asociados c
 	HERRAMIENTA latentflip.com
 	 http://latentflip.com/loupe/?code=JC5vbignYnV0dG9uJywgJ2NsaWNrJywgZnVuY3Rpb24gb25DbGljaygpIHsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24gdGltZXIoKSB7CiAgICAgICAgY29uc29sZS5sb2coJ1lvdSBjbGlja2VkIHRoZSBidXR0b24hJyk7ICAgIAogICAgfSwgMjAwMCk7Cn0pOwoKY29uc29sZS5sb2coIkhpISIpOwoKc2V0VGltZW91dChmdW5jdGlvbiB0aW1lb3V0KCkgewogICAgY29uc29sZS5sb2coIkNsaWNrIHRoZSBidXR0b24hIik7Cn0sIDUwMDApOwoKY29uc29sZS5sb2coIldlbGNvbWUgdG8gbG91cGUuIik7!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D
 	 
-	 QUE NO SEA CODIGO ES6, si no javascript viejito, porque no permite let ni arrow functions
+	 "QUE NO SEA CODIGO ES6, si no javascript viejito, porque no permite let ni arrow functions"
 	 
 	 Imagen: asincronia-02-eventloop(este diagrama es más al estilo NOde JS)
 	 

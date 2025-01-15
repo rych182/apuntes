@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+}
+section{
+    display: flex;
+    border: solid black 1px;
+    height: 50vh;
+}
+
+article{
+    background-color: cadetblue;
+    border: solid saddlebrown 1px;
+    width: 50%;
+}
+
+h1{
+    text-align: center;
+}
+
+p{
+    padding-top: 20px;
+}
+
+.cr7{
+    height: 100%;
+    width: 50%;
+    background-image: url('../img/cr7.jpeg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
