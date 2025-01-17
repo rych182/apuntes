@@ -137,6 +137,8 @@ También existen API's externas como servicios, plataformas, redes sociales
 Mejor API para practicar AJAX y consumo e API's
 https://jsonplaceholder.typicode.com/
 
+DESCARGAR JSONVIEW en Google Chrome
+
 Se puede consumir API's externas como archivos JSON en mi computadora
 
 Lo voy a hacer en una función anonima autoejecutable para que no afecte los ejercicios que usaran
@@ -168,9 +170,8 @@ Status es la respuesta del estado HTTP(200,300,404 etc)
 withCredentials es el status de una API privada, para saber si estamos conectados o no
 hacia los recursos que podemos utilizar
 
-
-*/
-
+-----------------------------------------------------------------------------------------------------
+//Exercise 1
 (()=>{
     const xhr = new XMLHttpRequest(),
     //estas variables las usaré para manipular el DOM
@@ -234,9 +235,9 @@ hacia los recursos que podemos utilizar
     //Enviamos la petición
     xhr.send();
 })()
-//min 38
 
-/*
+
+
 Ejercicio de TWITTER, usas AJAX y se actualiza cada 20segundos
 https://x.com/notifications
 
@@ -246,4 +247,32 @@ Usos comunes de appendChild()
     Añadir contenido dinámico: Ideal para añadir contenido en respuesta a eventos del usuario, como hacer clic en un botón.
     Actualizar la interfaz: Útil para manipular la interfaz de una aplicación web sin recargar la página.
     Trabajar con listas: Puede agregar elementos a listas de forma dinámica, como en menús desplegables, listas de tareas, etc.
+----------------------------------------------------------------------------
+EXERCISE 2
 */
+let showCountries = () =>{
+    let xhr = new XMLHttpRequest()
+    //open es lo que usamos para inicializar la solicitud
+    xhr.open("GET","https://restcountries.com/v3.1/all",true)
+    //onload sirve para el manejo de la respuesta
+    xhr.onload = function (){
+        if(xhr.status == 200 ){
+            //console.log("exito")
+            let paises = JSON.parse(this.response)
+            paises.forEach(pais =>{
+                console.log(pais)
+                const countrycard = document.createElement("div");
+                const countrycardimg = document.createElement("img");
+
+
+                countrycard.innerHTML = pais.name.common;
+                countrycardimg.src = pais.flags.png;
+
+                countrycard.appendChild(countrycardimg);
+                document.getElementById("feed").appendChild(countrycard)
+
+            })
+        }
+    }
+    xhr.send();
+}
