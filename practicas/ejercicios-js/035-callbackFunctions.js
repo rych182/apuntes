@@ -2,14 +2,47 @@
 
 /*
                 AddEventListener
-Ejercicio 1: ejecuta una función anonima que contiene una funcion predefinida del lenguaje
+
+Ejercicio 0: darle click a un boton en html y que imprima algo en la consola del navegador
+const button = document.querySelector('.ania');
+button.addEventListener('click', ()=> {
+  console.log("estoy clickeando mama!!");
+})
+
+--------------------------------------------------------------------------------------------
+Ejercicio 1: otra forma de hacer el ejercicio de arriba
+const button = document.querySelector('.ania');
+const alert = () =>{
+  console.log('otra alerta en consola');
+}
+button.addEventListener('click',alert);
+
+---------------------------------------------------------------
+Ejercicio 2: Una segunda forma de hacer el ejercicio 0
+
+const button = document.querySelector('.ania');
+function alert(){
+  console.log('otra alerta en consola');
+}
+button.addEventListener('click',alert);
+----------------------------------------------------------------------------------------------------
+Ejercicio 3: ejecuta una función anonima que contiene una funcion predefinida del lenguaje
 Para esto creamos un boton en html que tenga un id
 
 document.getElementById("alerta").addEventListener("click", function() {
     alert("Hello World!");
   });
+------------------------------------------------------------------------------------------------
+Ejercicio 4:  recorrer un array con una función callback.
+
+const fruits = ['orange','pineapple','kiwi'];
+fruits.forEach( (fruit,index) =>{
+  console.log(index + ': ' + fruit);
+}) 
+
+
 --------------------------------------------------------------------------------------------------
-EJercicio 2: Ejecutando 2 funciones con addEventListener y guardando la selección en una variable
+EJercicio 4: Ejecutando 2 funciones con addEventListener y guardando la selección en una variable
 Para esto creamos un boton en html que tenga un id
 
 let x = document.getElementById("dosFunciones");
@@ -24,7 +57,7 @@ function funcionDos() {
   alert ("Me ejecuto despues de la función uno, SOY LA FUNCION 2");
 }
 ----------------------------------------------------------------------------------------------------------
-EJercicio 3: te imprime texto cuando estas sobre el boton, quitas el mouse encima del boton y cuando das click.
+EJercicio 5: te imprime texto cuando estas sobre el boton, quitas el mouse encima del boton y cuando das click.
 
 let x = document.getElementById("variasFunciones");
 x.addEventListener("mouseover", myFunction);
@@ -43,7 +76,7 @@ function myThirdFunction() {
   document.getElementById("imprimir").innerHTML += "QUitaste el mouse de encima de mi!<br>";
 }
 -----------------------------------------------------------------------------------------------------
-Ejercicio 4 y 5 : te imprime el tamaño de la ventana del navegador
+Ejercicio 6 y 7 : te imprime el tamaño de la ventana del navegador
 
 En esta se ejecuta "cuando se redimensiona", osea que tienes que hacer chico el navegador para que imprima
 window.addEventListener("resize", function(){
@@ -61,7 +94,7 @@ EN este te imprime de inmediato el tamaño que tenga
   })();
 
 --------------------------------------------------------------------------------------------------------
-Ejercicio 6: Este ejemplo demuestra cómo pasar valores de parámetros cuando se utiliza el método addEventListener()
+Ejercicio 8: Este ejemplo demuestra cómo pasar valores de parámetros cuando se utiliza el método addEventListener()
 y esta siendo llamada por una función anónima.
 
 let p1 = 5;
@@ -74,7 +107,7 @@ function myFunction(a, b) {
   document.getElementById("demo1").innerHTML = a * b;
 }
 ----------------------------------------------------------------------------------
-Ejercicio 7: El ejercicio de arriba con menos código
+Ejercicio 9: El ejercicio de arriba con menos código
 
 document.getElementById("suma").addEventListener("click", function() {
     let p1 = 5;
@@ -83,14 +116,14 @@ document.getElementById("suma").addEventListener("click", function() {
 });
 -------------------------------------------------------------------------------
                             forEach
-Ejercicio 8
+Ejercicio 10
 const names = ["Pedro","Paco","LOla","gerardo"];
 names.forEach((name)=>{
     console.log(name)
 })
 -------------------------------------------------------------
                             .map()
-Ejercicio 9: Utilizando la función .map
+Ejercicio 11: Utilizando la función .map
 Este método crea un nuevo array con los resultados de aplicar dicha función de callback a cada elemento del array original.
 
 const numeros = [1, 2, 3, 4, 5];
@@ -101,7 +134,7 @@ const dobles = numeros.map(function(elemento) {
 
 console.log(dobles); // [2, 4, 6, 8, 10]
 -------------------------------------------------------
-Ejercicio 14: el ejemplo de arriba pero usando los otros parámetros que la función de callback
+Ejercicio 12: el ejemplo de arriba pero usando los otros parámetros que la función de callback
 
 const numeros = [1, 2, 3, 4, 5];
 
@@ -115,7 +148,7 @@ const resultado = numeros.map(function(elemento, indice, array) {
 console.log(resultado); // [2, 4, 6, 8, 10]
 -----------------------------------------------------------------------
 
-Ejercicio 15: Podemos usar thisArg para cambiar el contexto de this dentro de la función callback:
+Ejercicio 13: Podemos usar thisArg para cambiar el contexto de this dentro de la función callback:
 const multiplicador = {
   factor: 3
 };
@@ -139,7 +172,7 @@ Resumen
 .map() es útil cuando necesitas transformar cada elemento de un array de manera consistente.
 
 -------------------------------------------------------------------------------------
-Ejercicio 16:Usando el metodo callback llamado .find(), has que me imprima un número mayor 
+Ejercicio 14:Usando el metodo callback llamado .find(), has que me imprima un número mayor 
 a 10.
 
 En este ejemplo, la función de prueba es element => element > 10.
@@ -158,7 +191,7 @@ El método find detiene su ejecución en cuanto encuentra un elemento que cumple
 sin revisar los elementos restantes del array.
 
 --------------------------------------------------------------------------------------------
-Exercise 17: Encuentra la cantidad de alguna fruta utilizando el metodo callback .find() , 
+Exercise 15: Encuentra la cantidad de alguna fruta utilizando el metodo callback .find() , 
 estos datos se encuentran dentro de un array que contiene muchos objetos, 1 en cada posicion de
 memoria, crea ese array con sus objetos, como atributos debe de tener el nombre de una fruta y 
 su cantidad
@@ -179,7 +212,7 @@ const result = inventory.find(fruit => fruit.name === 'cherries');
 console.log(result); // Output: { name: 'cherries', quantity: 5 }
 
 -------------------------------------------------------------------------------------------------
-Exercise 18: Explicando la sintaxis de la función .find() y utilizando un ejemplo 
+Exercise 16: Explicando la sintaxis de la función .find() y utilizando un ejemplo 
 
 array.find(callback(element[, index[, array]])[, thisArg])
 
@@ -217,7 +250,7 @@ const found = array.find((element, index, array) => {
 console.log('Elemento encontrado:', found);
 ---------------------------------------------------------------------------------------------
 
-Exercise 19: Ejemplo utilizando thisArg en el metodo callback .find()
+Exercise 17: Ejemplo utilizando thisArg en el metodo callback .find()
 Creamos un array de objetos que representan productos y 
 queremos encontrar el primer producto cuyo precio sea menor que un cierto valor.
 Podemos usar un objeto separado para almacenar este valor y pasarlo como thisArg al método find.
@@ -244,7 +277,7 @@ console.log(foundProduct); // Output: { name: 'Phone', price: 500 }
 //De esta manera, podemos acceder a this.maxPrice para comparar el precio del producto actual. 
  
 -----------------------------------------------------------------------------------------------------------
-Exercise 20:  Crear un array que contenga objetos con las propiedades userId,id,title,body y
+Exercise 18:  Crear un array que contenga objetos con las propiedades userId,id,title,body y
 que con una función que reciba 2 parametros, el id y un callback, me imprima el objeto con el id seleccionado
 Pista: usar función callback .find()
 
@@ -404,7 +437,7 @@ Al adherirse a este estándar, se garantiza que las funciones sean compatibles c
 variedad de herramientas y utilidades.
 
 --------------------------------------------------------------------------------
-Exercise 21: EXPLICANDO MAS A FONDO EL EJERCICIO ANTERIOR
+Exercise 19: EXPLICANDO MAS A FONDO EL EJERCICIO ANTERIOR
 PRIMERO NECESITAMOS EXPLICAR ESTO DE LOS IF-ELSE
 
 const cadenaDeTexto = "hola";
@@ -452,7 +485,7 @@ ejercicioParametros(5,{},(err,post)=>{
 })
 
 ---------------------------------------------------------------------------
-EJERCICIO 22: el ejercicio 21 but with CALLBACK HELL
+EJERCICIO 20: el ejercicio 21 but with CALLBACK HELL
 
 
 const posts = [
