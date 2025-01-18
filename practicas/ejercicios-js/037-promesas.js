@@ -1,4 +1,33 @@
 
+function firstOperation(callback) {
+  setTimeout(() => {
+    console.log("Primera operación completada");
+    callback();
+  }, 1000);
+}
+
+function secondOperation(callback) {
+  setTimeout(() => {
+    console.log("Segunda operación completada");
+    callback();
+  }, 1000);
+}
+
+function thirdOperation(callback) {
+  setTimeout(() => {
+    console.log("Tercera operación completada");
+    callback();
+  }, 1000);
+}
+
+// Uso de callbacks anidados (callback hell)
+firstOperation(() => {
+  secondOperation(() => {
+    thirdOperation(() => {
+      console.log("Todas las operaciones completadas");
+    });
+  });
+});
 
 
 /*
@@ -202,6 +231,40 @@ hacerAlgo()
 
   ----------------------------------------------------------------------------------------
   Ejercicio 3: ejercicio sencillo de un callback hell arreglado con Promises
+
+  EL CALLBACK HELL
+function firstOperation(callback) {
+  setTimeout(() => {
+    console.log("Primera operación completada");
+    callback();
+  }, 1000);
+}
+
+function secondOperation(callback) {
+  setTimeout(() => {
+    console.log("Segunda operación completada");
+    callback();
+  }, 1000);
+}
+
+function thirdOperation(callback) {
+  setTimeout(() => {
+    console.log("Tercera operación completada");
+    callback();
+  }, 1000);
+}
+
+// Uso de callbacks anidados (callback hell)
+firstOperation(() => {
+  secondOperation(() => {
+    thirdOperation(() => {
+      console.log("Todas las operaciones completadas");
+    });
+  });
+});
+
+-----------------------------------------------------------------------
+  CON PROMESAS 
 
   function firstOperation() {
   return new Promise((resolve) => {
