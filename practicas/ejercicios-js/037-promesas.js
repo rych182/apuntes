@@ -1,3 +1,6 @@
+
+
+
 /*
 
 TEORIA
@@ -20,8 +23,15 @@ y manejable que el uso tradicional de callbacks, evitando problemas como el "cal
 
 Una promesa la podemos ver como un if-else, el "resolve" es como un "return positivo" y el "reject"
 es como un "return negativo".
-Tanto el metodo resolve omo el metodo reject son metodos estaticos, significa que no necesito crear
+Tanto el metodo resolve como el metodo reject son metodos estaticos, significa que no necesito crear
 una instancia para poder utilizarlos
+
+JON MIRCHA: Las promesas ya nos convienen cuando tenemos una concatenacion de varios procesos asincronos.
+
+Hoy en día muchas API'S trabajando retornando promesas.
+Fetch es la forma moderna de "hacer AJAX", todo lo trabaja internamente en un objeto de PROMESA de tal manera que 
+para ir trabajando todos los datos que te devuelve una petición ajax mediante FETCH vas a tener que utilizar estos
+metodos ".then" y ".catch"
 
 
 .then es el siguiente bloque que se va a ejecutar una vez que se cumpla la función inicial
@@ -72,14 +82,7 @@ fs.readdir(source, function (err, files) {
     })
   }
 })
-
-JON MIRCHA: Las promesas ya nos convienen cuando tenemos una concatenacion de varios procesos asincronos.
-
-Hoy en día muchas API'S trabajando retornando promesas.
-Fetch es la forma moderna de "hacer AJAX", todo lo trabaja internamente en un objeto de PROMESA de tal manera que 
-para ir trabajando todos los datos que te devuelve una petición ajax mediante FETCH vas a tener que utilizar estos
-metodos ".then" y ".catch"
-
+-----------------------------------------------------------------------------------------------------------------
 
 Características Clave de una Promesa
 
@@ -130,9 +133,25 @@ miPromesa.then((resultado) => {
     console.log("La promesa se resolvió con:", resultado); // Imprimirá: La promesa se resolvió con: 42
 });
 
- // dentro de .then() siempre debe haber una función que se ejecutará cuando la promesa
+ // dentro de .then() SIEMPRE debe haber una función que se ejecutará cuando la promesa
  //se resuelva correctamente. 
  //Esta función toma un parámetro que representa el valor con el que se resolvió la promesa.
+
+ASÍ SERÍA EL CÓDIGO SI LA OPERACIÓN DIERA UN RESULTADO NEGATIVO 
+
+let miPromesa = new Promise((resolve, reject) => {
+  // Simulamos una operación asíncrona
+  setTimeout(() => {
+      reject(42); 
+  }, 1000); 
+});
+
+//console.log(miPromesa)
+miPromesa.catch( ()=>{
+  console.log("hubo un error")
+})
+
+
 -----------------------------------------------------------------------------
 Ejercicio 1: ejercicio sencillo de una Promesa:
 
@@ -430,7 +449,7 @@ fs.readdir(source, function (err, files) {
 })
 
 
-  */
+
 //Ejercicio de Jon Mircha 
 //ya no necesitamos el segundo parametro(que era una funcion callback por si lo olvido en el futuro)
 function cuadradoPromise(value) {
@@ -489,3 +508,5 @@ cuadradoPromise(0)
   })
   //el metodo .catch es el que captura el error, resultante del reject
   .catch('error')
+
+    */
