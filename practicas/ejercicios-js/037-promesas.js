@@ -1,53 +1,68 @@
-const posts = [
-  {
-      userId: 1,
-      id: 1,
-      title: "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-      body: "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
-  },
-  {
-      userId: 1,
-      id: 2,
-      title: "qui est esse",
-      body: "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla",
-  },
-  {
-      userId: 1,
-      id: 3,
-      title: "ea molestias quasi exercitationem repellat qui ipsa sit aut",
-      body: "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut",
-  },
-];
+//Ejercicio 4: haciendo un callback con una Promesa(y la promesa solo recibe un valor)
 
-
-// Función para encontrar un post por ID usando un callback
-function findPostById(id, callback) {
-  const post = posts.find((item) => item.id === id);
-
-  // Simulación de asincronía
-  setTimeout(() => {
-    if (post) {
-      callback(null, post); // Primer argumento es null para indicar que no hay error
-    } else {
-      callback("No encontrado por id: " + id, null); // Primer argumento es el error
-    }
-  }, 1000);
+const asincroniaConCallBack =(num1,num2,callback) => {
+  const resultado = num1 + num2;
+  return setTimeout( () =>{
+    callback(resultado);
+  },500)
 }
 
+let asincroniaConPromesas = (num1,num2) =>{
+  return new Promise( (resolve,reject)=>{
+    let resultado = num1 + num2;
+    setTimeout(() => {
+      resolve(resultado)
+    }, 2000);
+  } )
+}
 
-// USO DE CALLBACK HELL
-findPostById(1, (error, post1) => {
-  if (error) {
-    console.log(error);
-  } else {
-    console.log(post1);
+asincroniaConPromesas(4,5)
+  .then( (dato)=>{
+    console.log(dato);
+  })
 
-  }
-});
+
+
 
 
 /*
+1-instanciar(se mete una función dentro)
+2-un if-else para el resolve y reject
+3-ejecutar la promesa con un .then o .catch
 
+
+function firstOperation(callback) {
+  setTimeout(() => {
+    console.log("Primera operación completada");
+    callback();
+  }, 1000);
+}
+
+function secondOperation(callback) {
+  setTimeout(() => {
+    console.log("Segunda operación completada");
+    callback();
+  }, 1000);
+}
+
+function thirdOperation(callback) {
+  setTimeout(() => {
+    console.log("Tercera operación completada");
+    callback();
+  }, 1000);
+}
+
+// Uso de callbacks anidados (callback hell)
+firstOperation(() => {
+  secondOperation(() => {
+    thirdOperation(() => {
+      console.log("Todas las operaciones completadas");
+    });
+  });
+});
+
+
+---------------------------------------------------------------------------------------------------------
 TEORIA
 
 Ania Kubów
@@ -75,7 +90,7 @@ JON MIRCHA: Las promesas ya nos convienen cuando tenemos una concatenacion de va
 
 Hoy en día muchas API'S trabajando retornando promesas.
 Fetch es la forma moderna de "hacer AJAX", todo lo trabaja internamente en un objeto de PROMESA de tal manera que 
-para ir trabajando todos los datos que te devuelve una petición ajax mediante FETCH vas a tener que utilizar estos
+para ir trabajando todos los datos que te devuelve una petición ajax mediante FETCH, vas a tener que utilizar estos
 metodos ".then" y ".catch"
 
 
@@ -212,6 +227,30 @@ miPromesa.catch( ()=>{
   console.log("hubo un error")
 })
 
+ASI SERÍA LA OPERACIÓN COMPLETA
+
+function miOperacionConPromesa() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const exito = true; 
+      if (exito) {
+        resolve(42); 
+      } else {
+        reject("Ocurrió un error"); 
+      }
+    }, 1000);
+  });
+}
+
+
+miOperacionConPromesa()
+  .then((resultado) => {
+    console.log("Resultado:", resultado);
+  })
+  .catch((error) => {
+    console.error("Error:", error);
+  });
+
 
 -----------------------------------------------------------------------------
 Ejercicio 1: ejercicio sencillo de una Promesa:
@@ -262,7 +301,7 @@ hacerAlgo()
     });
 
   ----------------------------------------------------------------------------------------
-  Ejercicio 3: ejercicio sencillo de un callback hell arreglado con Promises
+  Ejercicio 3: ejercicio sencillo de un callback hell arreglado con Promises, debe imprimir un mensaje cada segundo durante 3 segundos
 
   EL CALLBACK HELL
 function firstOperation(callback) {
@@ -358,106 +397,6 @@ asincroniaConCallBack(1,2,(parametro)=>{
 asincroniaConPromesas(3,4)
   .then(resultado => console.log(resultado))
 ---------------------------------------------------------------------------------------------------------------------------------------
-Ejercicio 5: Hacer un programa que use la función callback .find() y use promesas, el programa debe de buscar los id dentro de los objetos del
-array(toma de ejemplo el callback hell)
-
-const posts = [
-  {
-      userId: 1,
-      id: 1,
-      title: "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-      body: "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
-  },
-  {
-      userId: 1,
-      id: 2,
-      title: "qui est esse",
-      body: "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla",
-  },
-  {
-      userId: 1,
-      id: 3,
-      title: "ea molestias quasi exercitationem repellat qui ipsa sit aut",
-      body: "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut",
-  },
-];
-
-
-// Función para encontrar un post por ID usando un callback
-function findPostById(id, callback) {
-  const post = posts.find((item) => item.id === id);
-
-  // Simulación de asincronía
-  setTimeout(() => {
-    if (post) {
-      callback(null, post); // Primer argumento es null para indicar que no hay error
-    } else {
-      callback("No encontrado por id: " + id, null); // Primer argumento es el error
-    }
-  }, 1000);
-}
-
-
-// USO DE CALLBACK HELL
-findPostById(1, (error, post1) => {
-  if (error) {
-    console.log(error);
-  } else {
-    console.log(post1);
-
-    findPostById(2, (error, post2) => {
-      if (error) {
-        console.log(error);
-      } else {
-        console.log(post2);
-
-        findPostById(3, (error, post3) => {
-          if (error) {
-            console.log(error);
-          } else {
-            console.log(post3);
-            console.log("Fin de las búsquedas con callback hell");
-          }
-        });
-      }
-    });
-  }
-});
-
-
-//Con la "promesa" no te tienes que estar inventando el NULL
-
-const findPostById = (id) => {
-  const post = posts.find( (item) => item.id === id );
-
-  //devolver la promesa
-
-  return new Promise( (resolve,reject) => {
-    //resolve
-
-    if (post) {
-      resolve(post)
-    } else {
-      reject("No encontrado por id: " + id)
-    }
-
-  })
-}
-
-findPostById(1)
-  .then( (post) => console.log(post) )
-  .catch( (err) => console.log(err) )
-  .finally( () => console.log("fin de la promesa") )
-
-findPostById(2)
-  .then( (post) => console.log(post) )
-  .catch( (err) => console.log(err) )
-  .finally( () => console.log("fin de la promesa") )
-
-findPostById(3)
-  .then( (post) => console.log(post) )
-  .catch( (err) => console.log(err) )
-  .finally( () => console.log("fin de la promesa") )
 
   -------------------------------------------------------------------------------------------------------------------------------------
 
@@ -509,7 +448,7 @@ findPostById(1)
   .catch( (err) => console.log(err) )
 ------------------------------------------------------------------------------------------------------------------
 
-Ejercicio 8: Ejercicio de Jon Mircha
+Ejercicio 8: Ejercicio de Jon Mircha(explicación de evolución de los callbacks a las promesas)
 Ejercicio donde atrapamos el error en cualquiera de las ejecuciones
 Esto es la evolución de las promesas, un código mejor ordenado y sobre todo
 UNA MEJOR MANIPULACIÓN DE LOS ERRORES y no tienes que estar repitiendo la validación del error
@@ -549,12 +488,13 @@ fs.readdir(source, function (err, files) {
 //Ejercicio de Jon Mircha 
 //ya no necesitamos el segundo parametro(que era una funcion callback por si lo olvido en el futuro)
 function cuadradoPromise(value) {
-//revisa si el tipo de dato es diferente a un número, rechaza la promesa entonces retornara el
-// constructor PROMISE y usamos el metodo reject que manda este mensaje
-if(typeof value !== "number"){
-  //Este error te sirve
- return Promise.reject(`Error, el valor "${value}" ingresado no es un número`)
-} 
+  //revisa si el tipo de dato es diferente a un número, rechaza la promesa entonces retornara el
+  // constructor PROMISE y usamos el metodo reject que manda este mensaje
+  if(typeof value !== "number"){
+    //Este error te sirve
+    return Promise.reject(`Error, el valor "${value}" ingresado no es un número`)
+  } 
+
   //retorna una instancia del objeto Promise
   //Una promesa recibe una función con 2 valores(resolve, reject)
   return new Promise( (resolve,reject) => {
