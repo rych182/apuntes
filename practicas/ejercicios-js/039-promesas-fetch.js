@@ -1,5 +1,12 @@
 
     /*
+    PROMISE PENDING
+    let caja = fetch('https://restcountries.com/v3.1/all');
+    console.log(caja) 
+
+--------------------------------------------------------------------
+
+
     CONSUMIENDO API CON FETCH()
     //Codigo Ania
 fetch('https://restcountries.com/v3.1/all')
@@ -17,7 +24,7 @@ fetch('https://restcountries.com/v3.1/all')
     .then( (response)=> {
         return response.json()  
     })
-    .then( (response)=>{
+    .then( json =>{
         let countries = json;
         console.log(countries);
     })
@@ -29,7 +36,7 @@ fetch('https://restcountries.com/v3.1/all')
 
     fetch('https://restcountries.com/v3.1/all')
     .then( response => response.json() )
-    .then( response => {
+    .then( json => {
         let countries = json;
         console.log(countries);
     }).catch(err => console.log('errors:' + err.message))
