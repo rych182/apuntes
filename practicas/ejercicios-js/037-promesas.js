@@ -1,25 +1,7 @@
-//Ejercicio 4: haciendo un callback con una Promesa(y la promesa solo recibe un valor)
 
-const asincroniaConCallBack =(num1,num2,callback) => {
-  const resultado = num1 + num2;
-  return setTimeout( () =>{
-    callback(resultado);
-  },500)
-}
 
-let asincroniaConPromesas = (num1,num2) =>{
-  return new Promise( (resolve,reject)=>{
-    let resultado = num1 + num2;
-    setTimeout(() => {
-      resolve(resultado)
-    }, 2000);
-  } )
-}
 
-asincroniaConPromesas(4,5)
-  .then( (dato)=>{
-    console.log(dato);
-  })
+
 
 
 
@@ -31,34 +13,16 @@ asincroniaConPromesas(4,5)
 3-ejecutar la promesa con un .then o .catch
 
 
-function firstOperation(callback) {
+function miOperacionConCallback(callback) {
+  // Simulamos una operación asíncrona
   setTimeout(() => {
-    console.log("Primera operación completada");
-    callback();
-  }, 1000);
+    callback(42); // Llamamos al callback con el valor 42
+  }, 1000); // Retraso de 1 segundo
 }
 
-function secondOperation(callback) {
-  setTimeout(() => {
-    console.log("Segunda operación completada");
-    callback();
-  }, 1000);
-}
-
-function thirdOperation(callback) {
-  setTimeout(() => {
-    console.log("Tercera operación completada");
-    callback();
-  }, 1000);
-}
-
-// Uso de callbacks anidados (callback hell)
-firstOperation(() => {
-  secondOperation(() => {
-    thirdOperation(() => {
-      console.log("Todas las operaciones completadas");
-    });
-  });
+// Uso del callback
+miOperacionConCallback((resultado) => {
+  console.log("Resultado:", resultado); // Imprime: Resultado: 42
 });
 
 
@@ -196,7 +160,7 @@ miOperacionConCallback((resultado) => {
 
 =======================================
 
-// Ejemplo de promesa simple
+// Ejemplo de promesa simple que se ejecute después de 2segundos
 let miPromesa = new Promise((resolve, reject) => {
     // Simulamos una operación asíncrona
     setTimeout(() => {
@@ -398,54 +362,7 @@ asincroniaConPromesas(3,4)
   .then(resultado => console.log(resultado))
 ---------------------------------------------------------------------------------------------------------------------------------------
 
-  -------------------------------------------------------------------------------------------------------------------------------------
 
-Ejercicio 7: Ejemplo de PROMISES HELL
-
-const posts = [
-  {
-      userId: 1,
-      id: 1,
-      title: "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-      body: "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
-  },
-  {
-      userId: 1,
-      id: 2,
-      title: "qui est esse",
-      body: "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla",
-  },
-  {
-      userId: 1,
-      id: 3,
-      title: "ea molestias quasi exercitationem repellat qui ipsa sit aut",
-      body: "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut",
-  },
-];
-
-const findPostById = (id) => new Promise( (resolve, reject) => {
-  const post = posts.find( (item) => item.id === id);
-  if (post) {
-    resolve(post);
-  } else {
-    reject("no se encontro id" + id)
-  }
-})
-
-findPostById(1)
-  .then( (post) =>{
-    console.log(post) 
-    return findPostById(2)
-  })
-  .then( (post) =>{
-    console.log(post) 
-    return findPostById(3)
-  })
-  .then( (post) =>{
-    console.log(post) 
-    return findPostById(4)
-  })
-  .catch( (err) => console.log(err) )
 ------------------------------------------------------------------------------------------------------------------
 
 Ejercicio 8: Ejercicio de Jon Mircha(explicación de evolución de los callbacks a las promesas)
@@ -516,7 +433,7 @@ cuadradoPromise(0)
 //.then es el siguiente bloque se va a ejecutar una vez que se cumpla la función inicial
 //puedes resumir esta linea quitandole los parentesis al parametro
 //Podemos tener tantos metodos .then como necesitemos
-//el .then() recibe una función que recibe la parte positiva de la promesa, osea el resolve
+//el .then() recibe una función que recibe la parte positiva de la promesa, osea el "resolve"
 //y en el resolve hemos construido un objeto, por eso puse como parametro "miObjeto"
   .then( (miObjeto) => {
     //console.log(miObjeto);
