@@ -8,6 +8,8 @@
 
 
 /*
+LAS PROMESAS REQUIEREN MUCHA PRACTICA
+
 1-instanciar(se mete una función dentro)
 2-un if-else para el resolve y reject
 3-ejecutar la promesa con un .then o .catch
@@ -79,6 +81,22 @@ UNA MEJOR MANIPULACIÓN DE LOS ERRORES y no tienes que estar repitiendo la valid
 En los "callbacks" en cada ejecución tienen que estar validando el error
 Las promesas ya tienen su propio mecanismo para rechazar en cualquier parte del flujo
 donde se de un error, mandarlo y trabajarlo
+
+DIFERENCIAS ENTRE PROMESAS Y CALLBACKS
+
+PROMESAS:
+-Hechas ESPECIFICAMENTE para "operaciones asincronas"
+-Puedes encadenar operaciones usando el metodo .then()
+-las devoluciones siempre se llaman en orden estricto en el que
+se colocan en una cola de eventos
+-el manejo de errores es mucho más fácil al usar .catch()
+-evitan la inversion de control a las devoluciones de llamada que
+pierden el control total de como se ejecutaran las funciones al pasar
+una devolucion de llamada a un tercero
+
+CALLBACKS
+-Encadenar operaciones es mas difícil y desordenado
+
 
 EJEMPLO: 
 
