@@ -1,7 +1,7 @@
 
     /*
    
-
+fetch() es una API que proporciona un método para realizar solicitudes HTTP y devuelve una promesa.
 --------------------------------------------------------------------
 
 

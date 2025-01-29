@@ -3,10 +3,6 @@
 
 
 
-
-
-
-
 /*
 LAS PROMESAS REQUIEREN MUCHA PRACTICA
 
@@ -160,6 +156,65 @@ myPromise
   });
 
 ----------------------------------------------------------------------------
+EXPLICACIÓN DE PORQUE USAR PROMESAS CUANDO HAY UN RETRAZO DE INFORMACIÓN
+(GENERANDO UN ERROR)
+
+const estudiantes = [
+  {
+    name: "fulano",
+    age: 25
+  },
+  {
+    name: "mengana",
+    age: 28
+  }
+]
+
+const datos = () => {
+  setTimeout(() => {
+    return students
+    //hay un retrazo pequeñisimo, pero el console.log se ejecuta al instante
+  }, 50);
+  
+  return estudiantes
+}
+
+//sale "undifine" porque hay un retrazo al usar el setTimeout, y el console.log se ejecuta al instante
+//POR LO TANTO, AUN NO TIENE LOS DATOS DE LA EJECUCION y por eso sale undifine
+//Si quitas el setTimeout, si te muestra los datos
+console.log(datos())
+
+===
+AQUÍ ESTA EL CÓDIGO RESUELTO
+
+const estudiantes = [
+  {
+    name: "fulano",
+    age: 25
+  },
+  {
+    name: "mengana",
+    age: 28
+  }
+]
+
+const datos = () => {
+  return new Promise( (resolve,reject) => {
+    setTimeout(() => {
+      resolve(estudiantes) 
+      //hay un retrazo pequeñisimo, pero el console.log se ejecuta al instante
+    }, 50);
+  } )
+}
+
+datos()
+  .then( (datos)=>{
+    console.log(datos)
+  })
+
+
+------------------------------------------------------------------------------------
+
 Ejercicio 0: ejercicio corto de una promesa
 
 COMO SERIA EN CALLBACK
@@ -283,7 +338,34 @@ hacerAlgo()
     });
 
   ----------------------------------------------------------------------------------------
-  Ejercicio 3: ejercicio sencillo de un callback hell arreglado con Promises, debe imprimir un mensaje cada segundo durante 3 segundos
+
+  Ejercicio 3: haciendo un callback con una Promesa(y la promesa solo recibe un valor)
+
+  const asincroniaConCallBack =(num1,num2,callback) => {
+  const resultado = num1 + num2;
+  return setTimeout( () =>{
+    callback(resultado);
+  },500)
+}
+
+const asincroniaConPromesas = (num3,num4) =>{
+  const resultado = num3 + num4;
+  return new Promise(resolve =>{//una promesa resumida porque solo recibe un valor por parametro
+    setTimeout(() => {
+      resolve(resultado);
+    },500)
+  })
+}
+
+asincroniaConCallBack(1,2,(parametro)=>{
+  console.log(parametro)
+})
+
+asincroniaConPromesas(3,4)
+  .then(resultado => console.log(resultado))
+
+  ----------------------------------------------------------------------------------------------------------
+  Ejercicio 4: ejercicio sencillo de un callback hell arreglado con Promises, debe imprimir un mensaje cada segundo durante 3 segundos
 
   EL CALLBACK HELL
 function firstOperation(callback) {
@@ -354,30 +436,7 @@ firstOperation()
     console.log("Todas las operaciones completadas");
   });
 ------------------------------------------------------------------------------------
-  Ejercicio 4: haciendo un callback con una Promesa(y la promesa solo recibe un valor)
 
-  const asincroniaConCallBack =(num1,num2,callback) => {
-  const resultado = num1 + num2;
-  return setTimeout( () =>{
-    callback(resultado);
-  },500)
-}
-
-const asincroniaConPromesas = (num3,num4) =>{
-  const resultado = num3 + num4;
-  return new Promise(resolve =>{//una promesa resumida porque solo recibe un valor por parametro
-    setTimeout(() => {
-      resolve(resultado);
-    },500)
-  })
-}
-
-asincroniaConCallBack(1,2,(parametro)=>{
-  console.log(parametro)
-})
-
-asincroniaConPromesas(3,4)
-  .then(resultado => console.log(resultado))
 ---------------------------------------------------------------------------------------------------------------------------------------
 
 
