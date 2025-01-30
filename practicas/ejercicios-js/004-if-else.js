@@ -1,8 +1,13 @@
-/*
-
-
-*/
-
+let hora = 0;
+if (hora < 12 && hora >= 5) {
+    console.log("BUenos días!");
+} else if (hora >= 12 && hora < 19) {
+    console.log("BUenas tardes!");
+} else if (hora >= 19 && hora <= 24 || hora < 5 && hora > 0) {
+    console.log("BUenas noches!");
+} else {
+    console.log("Hora no valida");
+}
 /*
 
 las condicionales son un concepto más fundamental y, por lo tanto, es recomendable aprenderlas antes que los bucles.
@@ -142,7 +147,7 @@ if (edad => 18) {
 }
 console.log(eresAdulto);
 
-*/
+
 const cadenaDeTexto = "hola";
 const numero = 12;
 const indefinido = undefined;
@@ -157,3 +162,5 @@ if (null) {
 }else{
     console.log("Otra cosa")
 }
+
+*/

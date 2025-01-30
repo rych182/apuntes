@@ -1,7 +1,24 @@
+const miPromesa = new Promise((resolve, reject) => {
+  console.log("Estás haciendo algo")
+  setTimeout(() => {
+    resolve(Mipromesa2())
+  }, 2000);
+})
 
+const Mipromesa2 = () => {
+  return new Promise((resolve, reject) => {
+    console.log("Estoy haciendo algo más")
+    setTimeout(() => {
+      resolve("Se ha terminado todo")
+    }, 2000);
+  })
+}
 
-
-
+miPromesa.then( resultado =>{
+  console.log(resultado)
+}).catch( message =>{
+  console.log(message)
+} )
 
 /*
 LAS PROMESAS REQUIEREN MUCHA PRACTICA
@@ -157,7 +174,9 @@ myPromise
 
 ----------------------------------------------------------------------------
 EXPLICACIÓN DE PORQUE USAR PROMESAS CUANDO HAY UN RETRAZO DE INFORMACIÓN
-(GENERANDO UN ERROR)
+(GENERANDO UN ERROR) 
+
+EJERCICIO 0: arregla el código que falla porque no me da el dato:
 
 const estudiantes = [
   {
@@ -215,7 +234,7 @@ datos()
 
 ------------------------------------------------------------------------------------
 
-Ejercicio 0: ejercicio corto de una promesa
+Ejercicio 1: ejercicio corto de una promesa
 
 COMO SERIA EN CALLBACK
 
@@ -290,7 +309,7 @@ miOperacionConPromesa()
 
 
 -----------------------------------------------------------------------------
-Ejercicio 1: ejercicio sencillo de una Promesa:
+Ejercicio 2: ejercicio sencillo de una Promesa:
 
         // Crear una nueva promesa
 let myPromise = new Promise((resolve, reject) => {
@@ -312,7 +331,7 @@ myPromise
     console.error(error); // Esto se ejecuta si la promesa se rechaza
   });
 ---------------------------------------------------------------------------------
-Ejercicio2: ejercicio sencillo de una promesa
+Ejercicio 3: ejercicio sencillo de una promesa
   // Creamos una función que devuelve una promesa
 function hacerAlgo() {
     return new Promise((resolve, reject) => {
@@ -339,7 +358,7 @@ hacerAlgo()
 
   ----------------------------------------------------------------------------------------
 
-  Ejercicio 3: haciendo un callback con una Promesa(y la promesa solo recibe un valor)
+  Ejercicio 4: haciendo un callback con una Promesa(y la promesa solo recibe un valor)
 
   const asincroniaConCallBack =(num1,num2,callback) => {
   const resultado = num1 + num2;
@@ -365,7 +384,7 @@ asincroniaConPromesas(3,4)
   .then(resultado => console.log(resultado))
 
   ----------------------------------------------------------------------------------------------------------
-  Ejercicio 4: ejercicio sencillo de un callback hell arreglado con Promises, debe imprimir un mensaje cada segundo durante 3 segundos
+  Ejercicio 5: ejercicio sencillo de un callback hell arreglado con Promises, debe imprimir un mensaje cada segundo durante 3 segundos
 
   EL CALLBACK HELL
 function firstOperation(callback) {
@@ -398,7 +417,7 @@ firstOperation(() => {
   });
 });
 
------------------------------------------------------------------------
+----------------------------------------------------------
   CON PROMESAS 
 
   function firstOperation() {
@@ -437,12 +456,9 @@ firstOperation()
   });
 ------------------------------------------------------------------------------------
 
----------------------------------------------------------------------------------------------------------------------------------------
-
-
 ------------------------------------------------------------------------------------------------------------------
 
-Ejercicio 8: Ejercicio de Jon Mircha(explicación de evolución de los callbacks a las promesas)
+Ejercicio 6: Ejercicio de Jon Mircha(explicación de evolución de los callbacks a las promesas)
 Ejercicio donde atrapamos el error en cualquiera de las ejecuciones
 Esto es la evolución de las promesas, un código mejor ordenado y sobre todo
 UNA MEJOR MANIPULACIÓN DE LOS ERRORES y no tienes que estar repitiendo la validación del error
@@ -538,5 +554,31 @@ cuadradoPromise(0)
   })
   //el metodo .catch es el que captura el error, resultante del reject
   .catch('error')
+
+-----------------------------------------------------------------------------------------
+
+EJERCICIO 7: ejecutar una promesa con otra promesa que esta dentro de una función, debe imprimir solo texto y se debe de ejecutar cada texto con un retrazo de 2 segundos
+
+const miPromesa = new Promise((resolve, reject) => {
+  console.log("Estás haciendo algo")
+  setTimeout(() => {
+    resolve(Mipromesa2())
+  }, 2000);
+})
+
+const Mipromesa2 = () => {
+  return new Promise((resolve, reject) => {
+    console.log("Estoy haciendo algo más")
+    setTimeout(() => {
+      resolve("Se ha terminado todo")
+    }, 2000);
+  })
+}
+
+miPromesa.then( resultado =>{
+  console.log(resultado)
+}).catch( message =>{
+  console.log(message)
+} )
 
     */
