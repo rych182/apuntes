@@ -1,24 +1,3 @@
-const miPromesa = new Promise((resolve, reject) => {
-  console.log("Estás haciendo algo")
-  setTimeout(() => {
-    resolve(Mipromesa2())
-  }, 2000);
-})
-
-const Mipromesa2 = () => {
-  return new Promise((resolve, reject) => {
-    console.log("Estoy haciendo algo más")
-    setTimeout(() => {
-      resolve("Se ha terminado todo")
-    }, 2000);
-  })
-}
-
-miPromesa.then( resultado =>{
-  console.log(resultado)
-}).catch( message =>{
-  console.log(message)
-} )
 
 /*
 LAS PROMESAS REQUIEREN MUCHA PRACTICA
@@ -197,6 +176,7 @@ const datos = () => {
   
   return estudiantes
 }
+console.log(datos())
 
 //sale "undifine" porque hay un retrazo al usar el setTimeout, y el console.log se ejecuta al instante
 //POR LO TANTO, AUN NO TIENE LOS DATOS DE LA EJECUCION y por eso sale undifine
@@ -580,5 +560,100 @@ miPromesa.then( resultado =>{
 }).catch( message =>{
   console.log(message)
 } )
+----------------------------------------------------------------------
+EJERCICIO 8: 
+
+Crea 2 funciones que retornen promesas, la primer funcion al ejecutarse, debe de retornar un objeto con 2 parametros con texto cada. 
+pero al ejecutarse, ese objeto que retorno, debe de usarse como valor en la ejecución de la segunga funcion, y esa segunda función debe de escribir texto
+y concatenar algún parametro del objeto de la primera función que retorna la primer promesa.
+
+function mostrarPhone(mensaje) {
+  return new Promise((resolve, reject) => {
+    if (mensaje) {
+      resolve("obtuviste un "+ mensaje.brand)
+    } else {
+      reject("Error");
+    }
+  })
+}
+
+function miPromesa() {
+  return new Promise((resolve, reject) => {
+    let tarea = true;
+    if (tarea === true) {
+      let phone = {
+        color: "negro",
+        brand: "iPhone"
+      }
+      resolve(phone);
+    } else {
+      reject("No obtuviste un iPhone")
+    }
+  })
+}
+
+miPromesa().then(function(mensaje) {
+  return mostrarPhone(mensaje)
+}).then(function(respuesta){
+  console.log(respuesta)
+}).catch(function(error) {
+  console.log(error);
+})
+
+------------------------------------------------------------------------------------
+EJERCICIO 9: Crea una promesa que después de 2 segundos cuente una palabra que tule hayas ingresado y te diga si tiene más de 20 caracteres o no
+
+const contar = (palabra) =>{
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      nletras = String(palabra).length;
+      if (nletras<20) {
+        resolve("OK")
+      } else {
+        reject("Error")
+      }
+    }, 2000);
+  })
+}
+
+ let respuesta = contar("programacion");
+ respuesta.then( (resolve)=>{
+  console.log(resolve)
+ }).catch( (error)=>{
+  console.log(error)
+ } )
+
+ -----------------------------------------------------------------------------------------------------
+EJERCICIO 10: MODIFICA EL EJERCICIO ANTERIOR Y crea una promesa que procese un objeto y lo convierta en JSON, 
+y cuando ejecutes la promesa, debes hacer que el objeto JSON se convierta de nuevo a un objeto
+ 
+const contar = (palabra) =>{
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      nletras = String(palabra).length;
+      if (nletras<20) {
+        let data={
+          'respuesta': 'ok'
+        };
+        //convierte el objeto a JSON
+        resolve(JSON.stringify(data))
+      } else {
+        reject("Error")
+      }
+    }, 2000);
+  })
+}
+
+ let respuesta = contar("programacion");
+ respuesta.then( (res)=>{
+  return res
+ }).then((res)=>{
+  //convertir la respuesta JSON en un objeto
+  const data = JSON.parse(res)
+  console.log(data)
+ })
+ .catch( (error)=>{
+  console.log(error)
+ } )
 
     */
