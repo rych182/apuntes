@@ -1,22 +1,49 @@
-function generadora() {
+const usuarios = [
+  {id:1,nombre:'ricardo',profesion_id:1},
+  {id:2,nombre:'alejandro',profesion_id:1},
+  {id:3,nombre:'diego',profesion_id:1}
+]
+
+const profesion = {
+  1: 'programador',
+  2: 'diseñador'
+}
+//consejo, hacer que no dependas de una función callback
+function getUsuarios() {
   return new Promise((resolve, reject) => {
-    console.log("Me ejecuto asincronicamente");
     setTimeout(() => {
-      resolve(42)
-    }, 2000);
+      resolve(usuarios)
+    }, 200);  
   })
 }
 
-generadora().then( (res)=>{
-  console.log("Termina mi promesa con", res)
-  return 2 * res
-} ).then( (res)=>{
-  console.log("Termina mi promesa con", res)
-})
+function getUsuario(id) {
+  new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(usuarios.filter(usuario=> usuario.id === id)[0])
+    }, 200);
+  })
+}
 
-console.log("estoy al final del codigo")
+function getProfesion(id) {
+  new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(profesion[id])
+    }, 200);
+  })
+}
 
+getUsuarios( (err,usuarios)=>{
+  const alejandroId = usuarios[1].id;
+  
+  getUsuario(alejandroId , (err,usuario)=>{
+    const profesionId = usuario.profesion_id;
 
+    getProfesion(profesionId, (err,profesion) =>{
+      console.log('La profesion de alejadro es: ', profesion)
+    })
+  } )
+} )
 /*
 LAS PROMESAS REQUIEREN MUCHA PRACTICA
 
@@ -76,6 +103,7 @@ para ir trabajando todos los datos que te devuelve una petición ajax mediante F
 metodos ".then" y ".catch"
 
 Para acceder a un valor de la promesa, primero debes de ejecutar el metodo .then
+LOS ".THEN()" SON FUNCIONES SINCRONAS, SI QUIERES DEVOLVER ALGO ASINCRONO DEBES "RETORNAR" UNA PROMESA
 
 .then es el siguiente bloque que se va a ejecutar una vez que se cumpla la función inicial
 puedes resumir esta linea quitandole los parentesis al parametro
@@ -850,5 +878,96 @@ obtenerUsuario(1)
     console.log(error)
   })
   
+---------------------------------------------------------------------------
+Ejercicio 17: DEMOSTRAR COMO EL .THEN() ES SINCRONO Y NO ASINCRONO, PARA SER ASINCRONO, NECESITAS USAR UNA PROMESA
+
+function generadora() {
+  return new Promise((resolve, reject) => {
+    console.log("Me ejecuto asincronicamente");
+    setTimeout(() => {
+      resolve(42)
+    }, 2000);
+  })
+}
+
+generadora().then( (res)=>{
+  console.log("Termina mi promesa con", res)
+  return 2 * res//este return es código SINCRONO, si quieres hacer codigo ASINCRONO, necesitas devolver una promesa
+} ).then( (res)=>{
+  console.log("Termina mi promesa con", res)
+})
+
+console.log("estoy al final del codigo")
+
+--------------------------------------------------------------
+RETURN con código ASINCRONO
+
+function generadora() {
+  return new Promise((resolve, reject) => {
+    console.log("Me ejecuto asincronicamente");
+    setTimeout(() => {
+      resolve(42)
+    }, 2000);
+    //reject("Ya valio")
+  })
+}
+
+generadora().then( (res)=>{
+  console.log("Termina mi promesa con", res)
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(res *2)
+    }, 2000);
+  })
+} ).then( (res)=>{
+  console.log("Termina mi promesa con", res)
+})
+
+console.log("estoy al final del codigo")
+---------------------------------------------------------------
+EJERCICIO 18: REFACTORIZAR ESTE CALLBACK HELL
+
+const usuarios = [
+  {id:1,nombre:'ricardo',profesion_id:1},
+  {id:2,nombre:'alejandro',profesion_id:1},
+  {id:3,nombre:'diego',profesion_id:1}
+]
+
+const profesion = {
+  1: 'programador',
+  2: 'diseñador'
+}
+
+function getUsuarios(callback) {
+  setTimeout(() => {
+    callback(null,usuarios)
+  }, 200);
+}
+
+function getUsuario(id,callback) {
+  setTimeout(() => {
+    callback(null,usuarios.filter(usuario=> usuario.id === id)[0])
+  }, 200);
+}
+
+function getProfesion(id,callback) {
+  setTimeout(() => {
+    callback(null,profesion[id])
+  }, 200);
+}
+
+getUsuarios( (err,usuarios)=>{
+  const alejandroId = usuarios[1].id;
+  
+  getUsuario(alejandroId , (err,usuario)=>{
+    const profesionId = usuario.profesion_id;
+
+    getProfesion(profesionId, (err,profesion) =>{
+      console.log('La profesion de alejadro es: ', profesion)
+    })
+  } )
+} )
+
+
 
     */
