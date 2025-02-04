@@ -1,3 +1,21 @@
+function generadora() {
+  return new Promise((resolve, reject) => {
+    console.log("Me ejecuto asincronicamente");
+    setTimeout(() => {
+      resolve(42)
+    }, 2000);
+  })
+}
+
+generadora().then( (res)=>{
+  console.log("Termina mi promesa con", res)
+  return 2 * res
+} ).then( (res)=>{
+  console.log("Termina mi promesa con", res)
+})
+
+console.log("estoy al final del codigo")
+
 
 /*
 LAS PROMESAS REQUIEREN MUCHA PRACTICA
@@ -38,11 +56,17 @@ de una operación asíncrona y su valor resultante.
 Las promesas son una forma de manejar operaciones asíncronas en JavaScript de manera más legible 
 y manejable que el uso tradicional de callbacks, evitando problemas como el "callback hell".
 
+Una promesa solo puede tener éxito o fracazar una unica vez.
+No puede tener éxito o fallar por una 2da vez,
+ni cambiar de éxito a fallo posteriormente o viceversa
+
 
 Una promesa la podemos ver como un if-else, el "resolve" es como un "return positivo" y el "reject"
 es como un "return negativo".
 Tanto el metodo resolve como el metodo reject son metodos estaticos, significa que no necesito crear
 una instancia para poder utilizarlos
+
+LA PROMESA SE PUEDE COMPORTAR COMO UNA CLASE: 
 
 JON MIRCHA: Las promesas ya nos convienen cuando tenemos una concatenacion de varios procesos asincronos.
 
@@ -51,6 +75,7 @@ Fetch es la forma moderna de "hacer AJAX", todo lo trabaja internamente en un ob
 para ir trabajando todos los datos que te devuelve una petición ajax mediante FETCH, vas a tener que utilizar estos
 metodos ".then" y ".catch"
 
+Para acceder a un valor de la promesa, primero debes de ejecutar el metodo .then
 
 .then es el siguiente bloque que se va a ejecutar una vez que se cumpla la función inicial
 puedes resumir esta linea quitandole los parentesis al parametro
@@ -89,6 +114,9 @@ una devolucion de llamada a un tercero
 CALLBACKS
 -Encadenar operaciones es mas difícil y desordenado
 
+La ventaja de las promesas sobre async await, es que se puede reutilizar más y vamos a avanzar más rápido
+Las promesas se pueden ir encadenando, osea promesas que devuelvan otras promesas, para hacer más sencillo el manejo de errores
+El setTimeout, lo usamos para simular "llamadas al servidor" ó "escribimos en base de datos" porque tardan un poco en respondernos
 
 EJEMPLO: 
 
@@ -124,6 +152,7 @@ Características Clave de una Promesa
         Pending (pendiente): Estado inicial, la operación aún no se ha completado.
         Fulfilled (cumplida): La operación se completó con éxito.
         Rejected (rechazada): La operación falló.
+        Settled - Ya se ha determinado si la promesa fue fulfilled o reject
 
     Métodos Principales:
         then(onFulfilled, onRejected): Registra callbacks para manejar los casos en que la promesa se cumple o se rechaza.
@@ -655,5 +684,171 @@ const contar = (palabra) =>{
  .catch( (error)=>{
   console.log(error)
  } )
+
+ ---------------------------------------------------------------------------------------
+EJERCICIO 11: crea una promesa que reciba un númer y que cuando se ejecute la promesa se le sume 5, y después me muestre el resultado 
+const p1 = Promise.resolve(1)//promesa que se resuelve inmediatamente
+console.log(p1)
+p1
+  .then(x => x + 5) // el valor de aquí es distinto porque se encuentran el clousures distintos
+  .then(x => console.log(x))
+
+-------------------------------------------------------------------------------------------------------
+EJERCICIO 12:crea una promesa que reciba un númer y que cuando se ejecute la promesa se le sume 5
+y se vuelva a ejecutar, pero en la segunda ejecución, ejecuta una promesa que también sume OTRA VEZ 5
+const p1 = Promise.resolve(1)//promesa que se resuelve inmediatamente
+console.log(p1)
+p1
+  .then(x => x + 5) // el valor de aquí es distinto porque se encuentran el clousures distintos
+  .then(x => Promise.resolve(x+5))
+  .then(x => console.log(x))
+------------------------------------------------------------------------------------------------------------
+Ejercicio 13:
+Promesa de manera SINCRONA 
+ejemplo de como NO SE EJECUTA NADA después del catch y que puedes "ejecutar una promesa con un catch" dentro de un .then
+ESTO ES SUMAMENTE ÚTIL cuando manejas efectos, queremos llamar una API, o queremos escribir en base de datos
+de manera que podemos optimizar todo lo que queremos que haga nuestra aplicación
+
+const p1 = Promise.resolve(1)//promesa que se resuelve inmediatamente
+console.log(p1)
+p1
+  .then(x => x + 5) // el valor de aquí es distinto porque se encuentran el clousures distintos
+  .then(x => Promise.resolve(x+5))
+  .then(x => Promise.reject('Error, algo sucedio'))
+  .then(x => console.log('Esto no se va a ejecutar'))
+  .catch(e => console.log(e))
+
+-----------------------------------------------------------------------------------------------------------------------
+EJERCICIO 14: Crea una función que retorne una promesa y que tenga un retraso de 2seg.
+Ejecuta esa promesa dandole un valor, al que después se le sumara 7.
+Primer deben de pasar 2 segundos y se ejecutara el primer valor que le dijiste, pasaran otros 2 segundos y se sumara el valor + 7
+
+const delayed = (x) =>{
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(x)
+    }, 2000);
+  })
+}
+
+delayed(7)
+  .then( x =>{
+    console.log(x)
+    return delayed(x +7)
+  })
+  .then(x => console.log(x))
+
+AQUÍ ES LA OPERACIÓN EJECUTANDO UN ERROR
+
+const delayed = (x) =>{
+  return new Promise((resolve, reject) => { 
+    setTimeout(() => {
+      resolve(x)
+    }, 2000);
+  })
+}
+
+delayed(7)
+  .then( x =>{
+    console.log(x)
+    return delayed(x +7)
+  })
+  .then(x => console.log(x))
+  .then(x => Promise.reject("hubo un error"))
+  .catch(e => console.log(e))
+
+-------------------------------------------------------------------------------------------------------------------------------
+EJERCICIO 15: ENCADENAMIENTO DE PROMESAS, puedo usar el resultado de la primer promesa en el segundo .then
+quiero que me crees una función que genere una promesa que te de como resultado un número, cuando ejecute por primera ves esa promesa, quiero que me multipliques
+ese número X 2, y que me muestre ese resultado
+
+function generadora() {
+  return new Promise((resolve, reject) => {
+    console.log("Me ejecuto asincronicamente");
+    setTimeout(() => {
+      resolve(42)
+    }, 2000);
+  })
+}
+
+generadora().then( (res)=>{
+  console.log("Termina mi promesa con", res)
+  return 2 * res
+} ).then( (res)=>{
+  console.log("Termina mi promesa con", res)
+})
+
+console.log("estoy al final del codigo")
+---------------------------------------------------------------------------------------------------------------------------
+EJERCICIO 16: 
+Crea dos funciones que retornen una promesa cada 1, ejecuta una promesa que te diga si existe un ID y que te diga si exite el número de teléfono y la persona
+
+let usuarios = [{
+  id:1,
+  nombre:'Marcos'
+},
+{
+  id:2,
+  nombre:'Lena'
+}];
+
+let telefonos = [{
+  id:1,
+  telefono: 12345678
+},{
+id:2,
+telefono:87654321
+}];
+
+const obtenerUsuarios = id =>{
+  return new Promise((resolve, reject) => {
+    if (usuarios.find( usuario => usuario.id === id )) {
+      console.log('el Usuario existe!')
+      resolve(obtenerTelefono(id))
+    } else {
+      reject('El usuario no existe')
+    }
+  })
+}
+
+const obtenerTelefono = id =>{
+  return new Promise((resolve, reject) => {
+    if (telefonos.find(telefono => telefono.id === id)) {
+      resolve('El telefono existe!');
+    } else {
+      reject('el telefono no existe')
+    }
+  })
+};
+
+obtenerUsuario(1)
+  .then( res =>{
+    console.log(res)
+  })
+  .then(mensaje =>{
+    console.log(mensaje)
+  })
+  .catch( error =>{
+    console.log(error)
+  })
+
+  --------------------------------------------------------
+  LO MISMO PERO CON UNA ESTRUCTURA MAS COMPLEJA QUE UNO DEBE DE EVITAR
+
+  obtenerUsuarios(2)
+  .then( res =>{
+    //console.log(res)
+    obtenerTelefono(2)
+    .then(mensaje =>{
+      console.log(mensaje)
+    })
+    .catch(err =>{
+      console.log(err)
+    })
+  })
+  .catch( error =>{
+    console.log(error)
+  })
+  
 
     */
