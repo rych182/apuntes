@@ -6,45 +6,49 @@ const usuarios = [
 
 const profesion = {
   1: 'programador',
-  2: 'diseñador'
-}
-//consejo, hacer que no dependas de una función callback
-function getUsuarios() {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve(usuarios)
-    }, 200);  
-  })
+  2: 'diseñador',
+  3: 'comunity manager',
+  4: 'Marketer'
 }
 
-function getUsuario(id) {
-  new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve(usuarios.filter(usuario=> usuario.id === id)[0])
-    }, 200);
-  })
-}
 
 function getProfesion(id) {
-  new Promise((resolve, reject) => {
+  return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve(profesion[id])
-    }, 200);
+    }, 2000);
   })
 }
 
-getUsuarios( (err,usuarios)=>{
-  const alejandroId = usuarios[1].id;
-  
-  getUsuario(alejandroId , (err,usuario)=>{
-    const profesionId = usuario.profesion_id;
 
-    getProfesion(profesionId, (err,profesion) =>{
-      console.log('La profesion de alejadro es: ', profesion)
-    })
-  } )
-} )
+
+getProfesion(1) //aquí esperamos 2s
+  .then( (profesion) => console.log(profesion))
+  .then( ()=> getProfesion(2)) //aquí esperamos 2s
+  .then( (profesion)=> console.log(profesion) )
+
+
 /*
+//Promise.all nos permite "sincronizar" la respuesta de las promesas y que solo tarde una fracción del tiempo
+//porque se ejecutan simultaneamente, la segunda no depende de la primera
+//si una ejecución es más larga que la otra, tardará lo que tarde el proceso más largo
+Promise.all([getProfesion(1),getProfesion(2),getProfesion(3),getProfesion(4)])
+  .then( (respuesta)=>{
+    console.log(respuesta)
+    console.log(respuesta[1])
+  } )
+
+
+//el problema de este código es que se esperan 2s 
+getProfesion(1) //aquí esperamos 2s
+  .then( (profesion) => console.log(profesion))
+  .then( ()=> getProfesion(2)) //aquí esperamos 2s
+  .then( (profesion)=> console.log(profesion) )
+PERO PODEMOS PEDIR LAS 2 SIMULTANEAMENTE PARA NO ESPERAR MÁS
+------------------------------------------------------------------
+
+
+
 LAS PROMESAS REQUIEREN MUCHA PRACTICA
 
 1-instanciar(se mete una función dentro)
@@ -108,22 +112,18 @@ LOS ".THEN()" SON FUNCIONES SINCRONAS, SI QUIERES DEVOLVER ALGO ASINCRONO DEBES 
 .then es el siguiente bloque que se va a ejecutar una vez que se cumpla la función inicial
 puedes resumir esta linea quitandole los parentesis al parametro
 Podemos tener tantos metodos .then como necesitemos
-el .then() recibe una función que recibe la parte positiva de la promesa, osea el resolve
-//y en el resolve hemos construido un objeto, por eso puse como parametro "miObjeto"
-Aquí los .then() se encuentran al mismo nivel, no como los callback que tienen su callbackhell
-
+Aquí los .then() se encuentran al mismo nivel, no como los callback que tienen su callbackhell al anidarlos
 
 Si solo me quedo en un nivel, conviene el callback.
 Las "promesas" solo convienen cuando tenemos una concatenación de varios procesos
-
 
 .catch() es el metodo que va a capturar el error resultante del reject
 
 
 LA EVOLUCION de las promesas.
-Un código mejor ordenado y sobre todo
+Es un código mejor ordenado y sobre todo tiene
 UNA MEJOR MANIPULACIÓN DE LOS ERRORES y no tienes que estar repitiendo la validación del error
-En los "callbacks" en cada ejecución tienen que estar validando el error
+En los "callbacks" en cada ejecución tienes que estar validando el error
 Las promesas ya tienen su propio mecanismo para rechazar en cualquier parte del flujo
 donde se de un error, mandarlo y trabajarlo
 
@@ -187,6 +187,10 @@ Características Clave de una Promesa
         catch(onRejected): Registra un callback para manejar el caso en que la promesa se rechaza.
         finally(onFinally): Registra un callback para manejar la limpieza después de que la promesa se haya cumplido o rechazado, sin importar el resultado.
 
+
+    //Promise.all nos permite "sincronizar" la respuesta de las promesas y que solo tarde una fracción del tiempo
+    //porque se ejecutan simultaneamente, la segunda no depende de la primera
+    //si una ejecución es más larga que la otra, tardará lo que tarde el proceso más largo
         
         // Crear una nueva promesa
 let myPromise = new Promise((resolve, reject) => {
@@ -368,8 +372,8 @@ myPromise
     console.error(error); // Esto se ejecuta si la promesa se rechaza
   });
 ---------------------------------------------------------------------------------
-Ejercicio 3: ejercicio sencillo de una promesa
-  // Creamos una función que devuelve una promesa
+Ejercicio 3: Crea una función que devuelva una promesa
+  // Creamos una función que devuelva una promesa
 function hacerAlgo() {
     return new Promise((resolve, reject) => {
         // Simulamos una operación asíncrona
@@ -681,7 +685,7 @@ const contar = (palabra) =>{
  } )
 
  -----------------------------------------------------------------------------------------------------
-EJERCICIO 10: MODIFICA EL EJERCICIO ANTERIOR Y crea una promesa que procese un objeto y lo convierta en JSON, 
+EJERCICIO 10: MODIFICA EL EJERCICIO ANTERIOR, la promesa debe procesar un objeto y convertirlo en JSON, 
 y cuando ejecutes la promesa, debes hacer que el objeto JSON se convierta de nuevo a un objeto
  
 const contar = (palabra) =>{
@@ -722,7 +726,7 @@ p1
   .then(x => console.log(x))
 
 -------------------------------------------------------------------------------------------------------
-EJERCICIO 12:crea una promesa que reciba un númer y que cuando se ejecute la promesa se le sume 5
+EJERCICIO 12:crea una función que reciba un númer y que cuando se ejecute la promesa se le sume 5
 y se vuelva a ejecutar, pero en la segunda ejecución, ejecuta una promesa que también sume OTRA VEZ 5
 const p1 = Promise.resolve(1)//promesa que se resuelve inmediatamente
 console.log(p1)
@@ -925,7 +929,7 @@ generadora().then( (res)=>{
 
 console.log("estoy al final del codigo")
 ---------------------------------------------------------------
-EJERCICIO 18: REFACTORIZAR ESTE CALLBACK HELL
+EJERCICIO 18: REFACTORIZAR ESTE CALLBACK HELL y PASALO A PROMESA
 
 const usuarios = [
   {id:1,nombre:'ricardo',profesion_id:1},
@@ -967,6 +971,51 @@ getUsuarios( (err,usuarios)=>{
     })
   } )
 } )
+¡============================
+REFACTORIZADO A PROMESA
+
+const usuarios = [
+  {id:1,nombre:'ricardo',profesion_id:1},
+  {id:2,nombre:'alejandro',profesion_id:1},
+  {id:3,nombre:'diego',profesion_id:1}
+]
+
+const profesion = {
+  1: 'programador',
+  2: 'diseñador'
+}
+//consejo, hacer que no dependas de una función callback
+function getUsuarios() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(usuarios)
+    }, 2000);  
+  })
+}
+
+function getUsuario(id) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(usuarios.filter(usuario=> usuario.id === id)[0])
+    }, 2000);
+  })
+}
+
+function getProfesion(id) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(profesion[id])
+    }, 2000);
+  })
+}
+
+//Pasan 6 segundos y se muestra el resultado
+getUsuarios()
+  .then((usuarios)=> getUsuario(usuarios[1].id))
+  .then( (usuario)=> getProfesion(usuario.profesion_id))
+  .then( (profesion)=> console.log('La profesion de alejadro es: ', profesion))
+
+  -----------------------------------------------------------------------------------------
 
 
 
