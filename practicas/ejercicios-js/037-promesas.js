@@ -1,20 +1,48 @@
 function getWeather() {
   return new Promise(function(resolve,reject) {
-    reject('Sunny')
+    setTimeout(() => {
+      resolve('Partly cloudy')  
+    }, 100);
+  })
+}
+
+function getWeatherIcon(weather) {
+  return new Promise(function(resolve,reject) {
+    setTimeout(() => {
+      switch (weather) {
+        case 'Sunny':
+          resolve('🌞')
+          break;
+      
+        case 'Cloudy':
+          resolve('⛅')
+          break;
+        
+        case 'Rainy':
+          resolve('🌧️')
+          break;
+
+        default:
+          reject('NO ICON FOUND')
+      }
+
+    }, 100);
   })
 }
 
 function onSuccesss(data){
-  console.log(`first param ${data}`)
+  console.log(`Success ${data}`)
 }
 
 function onError(error){
   console.log(`Error: ${error}`)
 }
 
-getWeather().then(onSuccesss,onError)
+getWeather()
+  .then(getWeatherIcon)
+  .then(onSuccesss,onError)
 
-
+//ENCADENAMIENTO DE PROMESAS
 
 /*
 
@@ -422,6 +450,67 @@ function onError(error){
 }
 
 getWeather().then(onSuccesss,onError)
+
+---------------------------------------------------------------------------------------------
+EJERCICIO 6: PROMESA USANDO SWITCH y ENCADENAMIENTO DE PROMESAS
+Hay importantes beneficios de "legibilidad"
+
+
+
+-Crea 4 funciones
+-La primera debe retornar una promesa, con un setTimeout de 1s de retraso, la cual recibirá el clima(lluvioso, despejado etc)
+-La segunda tendrá un parametro, retornada una promesa con un retrazo de 1s y usarás switch para las opciones, cada caso devolverá un icono
+-La función 3 y 4 , la 3 imprimira si fue exitoso y la 4 si fallo
+-Ejecutarás unicamente usando .then() 2 veces
+-Si encuentra el clima, debe imprimirte "exito y mostrar el ícono", si falla, "no se encontro en icono"
+-link para los iconos https://emojipedia.org/
+-TIP1: una ejecución lleva 2 aparametros
+-TIP2: tu no tienes que escribir el valor del parametro dentro de ningún parentesis.
+
+function getWeather() {
+  return new Promise(function(resolve,reject) {
+    setTimeout(() => {
+      resolve('Partly cloudy')  
+    }, 100);
+  })
+}
+
+function getWeatherIcon(weather) {
+  return new Promise(function(resolve,reject) {
+    setTimeout(() => {
+      switch (weather) {
+        case 'Sunny':
+          resolve('🌞')
+          break;
+      
+        case 'Cloudy':
+          resolve('⛅')
+          break;
+        
+        case 'Rainy':
+          resolve('🌧️')
+          break;
+
+        default:
+          reject('NO ICON FOUND')
+      }
+
+    }, 100);
+  })
+}
+
+function onSuccesss(data){
+  console.log(`Success ${data}`)
+}
+
+function onError(error){
+  console.log(`Error: ${error}`)
+}
+
+getWeather()
+  .then(getWeatherIcon)
+  .then(onSuccesss,onError)
+
 
 ------------------------------------------------------------------------------------------
 
