@@ -17,25 +17,6 @@ getWeather().then(onSuccesss,onError)
 
 
 /*
-//Promise.all nos permite "sincronizar" la respuesta de las promesas y que solo tarde una fracción del tiempo
-//porque se ejecutan simultaneamente, la segunda no depende de la primera
-//si una ejecución es más larga que la otra, tardará lo que tarde el proceso más largo
-Promise.all([getProfesion(1),getProfesion(2),getProfesion(3),getProfesion(4)])
-  .then( (respuesta)=>{
-    console.log(respuesta)
-    console.log(respuesta[1])
-  } )
-
-
-//el problema de este código es que se esperan 2s 
-getProfesion(1) //aquí esperamos 2s
-  .then( (profesion) => console.log(profesion))
-  .then( ()=> getProfesion(2)) //aquí esperamos 2s
-  .then( (profesion)=> console.log(profesion) )
-PERO PODEMOS PEDIR LAS 2 SIMULTANEAMENTE PARA NO ESPERAR MÁS
-------------------------------------------------------------------
-
-
 
 LAS PROMESAS REQUIEREN MUCHA PRACTICA
 
@@ -424,7 +405,7 @@ promise.then(
   }
 )
 
--AQUÍ LA REESTRUCTURACION----------------------------------------
+============AQUÍ LA REESTRUCTURACION=========
 
 function getWeather() {
   return new Promise(function(resolve,reject) {
@@ -442,11 +423,9 @@ function onError(error){
 
 getWeather().then(onSuccesss,onError)
 
+------------------------------------------------------------------------------------------
 
-
-  ------------------------------------------------------------------------------------------
-
-  Ejercicio 5: haciendo un callback con una Promesa(y la promesa solo recibe un valor)
+Ejercicio 6: haciendo un callback con una Promesa(y la promesa solo recibe un valor)
 
   const asincroniaConCallBack =(num1,num2,callback) => {
   const resultado = num1 + num2;
@@ -471,8 +450,8 @@ asincroniaConCallBack(1,2,(parametro)=>{
 asincroniaConPromesas(3,4)
   .then(resultado => console.log(resultado))
 
-  ----------------------------------------------------------------------------------------------------------
-  Ejercicio 6: ejercicio sencillo de un callback hell arreglado con Promises, debe imprimir un mensaje cada segundo durante 3 segundos
+----------------------------------------------------------------------------------------------------------
+Ejercicio 7: ejercicio sencillo de un callback hell arreglado con Promises, debe imprimir un mensaje cada segundo durante 3 segundos
 
   EL CALLBACK HELL
 function firstOperation(callback) {
@@ -544,7 +523,7 @@ firstOperation()
   });
 ------------------------------------------------------------------------------------
 
-Ejercicio 7: Ejercicio de Jon Mircha(explicación de evolución de los callbacks a las promesas)
+Ejercicio 8: Ejercicio de Jon Mircha(explicación de evolución de los callbacks a las promesas)
 Ejercicio donde atrapamos el error en cualquiera de las ejecuciones
 Esto es la evolución de las promesas, un código mejor ordenado y sobre todo
 UNA MEJOR MANIPULACIÓN DE LOS ERRORES y no tienes que estar repitiendo la validación del error
@@ -578,7 +557,6 @@ fs.readdir(source, function (err, files) {
     })
   }
 })
-
 
 
 //Ejercicio de Jon Mircha 
@@ -643,7 +621,7 @@ cuadradoPromise(0)
 
 -----------------------------------------------------------------------------------------
 
-EJERCICIO 8: ejecutar una promesa con otra promesa que esta dentro de una función, debe imprimir solo texto y se debe de ejecutar cada texto con un retrazo de 2 segundos
+EJERCICIO 9: ejecutar una promesa con otra promesa que esta dentro de una función, debe imprimir solo texto y se debe de ejecutar cada texto con un retrazo de 2 segundos
 
 const miPromesa = new Promise((resolve, reject) => {
   console.log("Estás haciendo algo")
@@ -667,7 +645,7 @@ miPromesa.then( resultado =>{
   console.log(message)
 } )
 ----------------------------------------------------------------------
-EJERCICIO 9: 
+EJERCICIO 10: 
 
 Crea 2 funciones que retornen promesas, la primer funcion al ejecutarse, debe de retornar un objeto con 2 parametros con texto cada. 
 pero al ejecutarse, ese objeto que retorno, debe de usarse como valor en la ejecución de la segunga funcion, y esa segunda función debe de escribir texto
@@ -707,7 +685,7 @@ miPromesa().then(function(mensaje) {
 })
 
 ------------------------------------------------------------------------------------
-EJERCICIO 10: Crea una promesa que después de 2 segundos cuente una palabra que tule hayas ingresado y te diga si tiene más de 20 caracteres o no
+EJERCICIO 11: Crea una promesa que después de 2 segundos cuente una palabra que tule hayas ingresado y te diga si tiene más de 20 caracteres o no
 
 const contar = (palabra) =>{
   return new Promise((resolve, reject) => {
@@ -730,7 +708,7 @@ const contar = (palabra) =>{
  } )
 
  -----------------------------------------------------------------------------------------------------
-EJERCICIO 11: MODIFICA EL EJERCICIO ANTERIOR, la promesa debe procesar un objeto y convertirlo en JSON, 
+EJERCICIO 12: MODIFICA EL EJERCICIO ANTERIOR, la promesa debe procesar un objeto y convertirlo en JSON, 
 y cuando ejecutes la promesa, debes hacer que el objeto JSON se convierta de nuevo a un objeto
  
 const contar = (palabra) =>{
@@ -763,7 +741,7 @@ const contar = (palabra) =>{
  } )
 
  ---------------------------------------------------------------------------------------
-EJERCICIO 12: crea una promesa que reciba un númer y que cuando se ejecute la promesa se le sume 5, y después me muestre el resultado 
+EJERCICIO 13: crea una promesa que reciba un númer y que cuando se ejecute la promesa se le sume 5, y después me muestre el resultado 
 const p1 = Promise.resolve(1)//promesa que se resuelve inmediatamente
 console.log(p1)
 p1
@@ -771,7 +749,7 @@ p1
   .then(x => console.log(x))
 
 -------------------------------------------------------------------------------------------------------
-EJERCICIO 13:crea una función que reciba un númer y que cuando se ejecute la promesa se le sume 5
+EJERCICIO 14:crea una función que reciba un númer y que cuando se ejecute la promesa se le sume 5
 y se vuelva a ejecutar, pero en la segunda ejecución, ejecuta una promesa que también sume OTRA VEZ 5
 const p1 = Promise.resolve(1)//promesa que se resuelve inmediatamente
 console.log(p1)
@@ -780,7 +758,7 @@ p1
   .then(x => Promise.resolve(x+5))
   .then(x => console.log(x))
 ------------------------------------------------------------------------------------------------------------
-Ejercicio 14:
+Ejercicio 15:
 Promesa de manera SINCRONA 
 ejemplo de como NO SE EJECUTA NADA después del catch y que puedes "ejecutar una promesa con un catch" dentro de un .then
 ESTO ES SUMAMENTE ÚTIL cuando manejas efectos, queremos llamar una API, o queremos escribir en base de datos
@@ -796,7 +774,7 @@ p1
   .catch(e => console.log(e))
 
 -----------------------------------------------------------------------------------------------------------------------
-EJERCICIO 15: Crea una función que retorne una promesa y que tenga un retraso de 2seg.
+EJERCICIO 16: Crea una función que retorne una promesa y que tenga un retraso de 2seg.
 Ejecuta esa promesa dandole un valor, al que después se le sumara 7.
 Primer deben de pasar 2 segundos y se ejecutara el primer valor que le dijiste, pasaran otros 2 segundos y se sumara el valor + 7
 
@@ -835,7 +813,7 @@ delayed(7)
   .catch(e => console.log(e))
 
 -------------------------------------------------------------------------------------------------------------------------------
-EJERCICIO 16: ENCADENAMIENTO DE PROMESAS, puedo usar el resultado de la primer promesa en el segundo .then
+EJERCICIO 17: ENCADENAMIENTO DE PROMESAS, puedo usar el resultado de la primer promesa en el segundo .then
 quiero que me crees una función que genere una promesa que te de como resultado un número, cuando ejecute por primera ves esa promesa, quiero que me multipliques
 ese número X 2, y que me muestre ese resultado
 
@@ -857,7 +835,7 @@ generadora().then( (res)=>{
 
 console.log("estoy al final del codigo")
 ---------------------------------------------------------------------------------------------------------------------------
-EJERCICIO 17: 
+EJERCICIO 18: 
 Crea dos funciones que retornen una promesa cada 1, ejecuta una promesa que te diga si existe un ID y que te diga si exite el número de teléfono y la persona
 
 let usuarios = [{
@@ -928,7 +906,7 @@ obtenerUsuario(1)
   })
   
 ---------------------------------------------------------------------------
-Ejercicio 18: DEMOSTRAR COMO EL .THEN() ES SINCRONO Y NO ASINCRONO, PARA SER ASINCRONO, NECESITAS USAR UNA PROMESA
+Ejercicio 19: DEMOSTRAR COMO EL .THEN() ES SINCRONO Y NO ASINCRONO, PARA SER ASINCRONO, NECESITAS USAR UNA PROMESA
 
 function generadora() {
   return new Promise((resolve, reject) => {
@@ -974,7 +952,7 @@ generadora().then( (res)=>{
 
 console.log("estoy al final del codigo")
 ---------------------------------------------------------------
-EJERCICIO 19: REFACTORIZAR ESTE CALLBACK HELL y PASALO A PROMESA
+EJERCICIO 20: REFACTORIZAR ESTE CALLBACK HELL y PASALO A PROMESA
 
 const usuarios = [
   {id:1,nombre:'ricardo',profesion_id:1},
@@ -1060,7 +1038,7 @@ getUsuarios()
   .then( (usuario)=> getProfesion(usuario.profesion_id))
   .then( (profesion)=> console.log('La profesion de alejadro es: ', profesion))
 
-  ----------------
+  ==========
 
   CODIGO MÁS RESUMIDO(quite funciones que no necesito)
 
@@ -1093,6 +1071,47 @@ getProfesion(1) //aquí esperamos 2s
   .then( ()=> getProfesion(2)) //aquí esperamos 2s
   .then( (profesion)=> console.log(profesion) )
 --------------------------------------------------------------------------------
+EJERCICIO 21
+
+const usuarios = [
+  {id:1,nombre:'ricardo',profesion_id:1},
+  {id:2,nombre:'alejandro',profesion_id:1},
+  {id:3,nombre:'diego',profesion_id:1}
+]
+
+const profesion = {
+  1: 'programador',
+  2: 'diseñador',
+  3: 'comunity manager',
+  4: 'Marketer'
+}
+
+function getProfesion(id) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(profesion[id])
+    }, 2000);
+  })
+}
+
+//Promise.all nos permite "sincronizar" la respuesta de las promesas y que solo tarde una fracción del tiempo
+//porque se ejecutan simultaneamente, la segunda no depende de la primera
+//si una ejecución es más larga que la otra, tardará lo que tarde el proceso más largo
+Promise.all([getProfesion(1),getProfesion(2),getProfesion(3),getProfesion(4)])
+  .then( (respuesta)=>{
+    console.log(respuesta)
+    console.log(respuesta[1])
+  } )
 
 
+//el problema de este código es que se esperan 2s 
+getProfesion(1) //aquí esperamos 2s
+  .then( (profesion) => console.log(profesion))
+  .then( ()=> getProfesion(2)) //aquí esperamos 2s
+  .then( (profesion)=> console.log(profesion) )
+
+//  PERO PODEMOS PEDIR LAS 2 SIMULTANEAMENTE PARA NO ESPERAR MÁS
+---------------------------------------------------------------------------------------------
+
+EJERCICIO 22
     */
