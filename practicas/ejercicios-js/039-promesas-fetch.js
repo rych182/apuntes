@@ -64,12 +64,11 @@ fetch('https://jsonplaceholder.typicode.com/users')
 CHECAR LA EXPLICACION DE CHATGPT QUE NO LEI EN LA NOCHE
 https://chatgpt.com/c/6789910a-b75c-8012-a5c5-14c5b70e7570
 
-EJERCICIO 3:
+EJERCICIO 3: Aquí esta la documentación de la API
 https://weather-gov.github.io/api/general-faqs
 
 ESTAS 2 LIGAS FUNCIONAN PARA COORDENADAS DE 4 DIGITOS
-NOTA:checar las coordenadas en la página 
-https://forecast.weather.gov/MapClick.php?lat=32.7158&lon=-117.1638
+NOTA:checar las coordenadas en esta página:   https://forecast.weather.gov/MapClick.php?lat=32.7158&lon=-117.1638
 
 https://api.weather.gov/gridpoints/LWX/37,12/forecast
 https://api.weather.gov/gridpoints/LWX/29,98/forecast/hourly
