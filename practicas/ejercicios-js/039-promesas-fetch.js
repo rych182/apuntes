@@ -10,8 +10,13 @@ function displayData(weather) {
     console.log(weather)
 }
 
+function onError(err) {
+    console.log(`ERROR ${err}`)
+}
+
 fetchData()
     .then(displayData)
+    .catch(onError)
 
     /*
    
@@ -80,5 +85,3 @@ Esta funciona con más digitos PERO solo ENTEROS
 https://api.weather.gov/gridpoints/MTR/88,126/forecast/hourly
 
     */
-
-console.log("Hola mundo")
