@@ -1,34 +1,27 @@
-function fun1() {
-  return new Promise((resolve, reject) => {
+( function () {
+  function getUsers() {
     setTimeout(() => {
-      reject('404')
-    }, 1000);
-  })
-}
+      console.log("Users are ready!!")
+    }, 3000);
+  }
 
-function fun2() {
-  //console.log('Function 2')//no llega a ejecutar aquí el segundo parametro .then()
-  return new Promise((resolve, reject) => {
+  function getProjects(params) {
     setTimeout(() => {
-      resolve('resuelto')
+      console.log("Projects are ready!!")
     }, 1000);
-  })
-}
+  }
 
-function onSuccesss(data) {
-  console.log(`Success: ${data}`)
-}
+  function getIssues(params) {
+    setTimeout(() => {
+      console.log("Issues are ready!!")
+    }, 2000);
+  }
+  
+  getUsers();
+  getProjects();
+  getIssues();
 
-function onError(errorCode) {
-  console.log(`ERROR: ${errorCode}`)
-}
-
-fun1()
-  .then(fun2)
-  .then(onSuccesss)
-  .catch(onError)
-  //.catch(onError)//.then(onError) ejecutaría el error aunque no lo fuera, porque está encadenado
-
+} )()
 /*
 
 LAS PROMESAS REQUIEREN MUCHA PRACTICA
@@ -154,6 +147,18 @@ fs.readdir(source, function (err, files) {
     })
   }
 })
+  
+-Las promesas y async/await son más fáciles de entender que los prototipos y las clases.
+Las promesas y async/await se utilizan comúnmente para trabajar con tareas asíncronas en JavaScript,
+lo que puede ser más fácil de entender que los conceptos más avanzados de los prototipos y las clases.
+
+-Aprender promesas y async/await puede ayudarte a comprender mejor el flujo de control asíncrono en JavaScript,
+lo que es fundamental para trabajar en cualquier tipo de proyecto web moderno. 
+Los conceptos de los prototipos y las clases pueden ser más complicados y no es necesario comprenderlos al principio
+para construir aplicaciones web básicas.
+
+Consumir apis
+https://www.youtube.com/watch?v=FJ-w0tf3d_w
 -----------------------------------------------------------------------------------------------------------------
 
 Características Clave de una Promesa
@@ -700,6 +705,42 @@ firstOperation()
   .then(() => {
     console.log("Todas las operaciones completadas");
   });
+
+---------------------------------------------------------------------------------------------
+
+Ejercicio 11: Explicación de asincronia con Promesas
+
+//Imagina que lo quieres ejecutar en forma secuencial, ¿Como lo haces con promesas?
+
+( function () {
+  function getUsers() {
+    setTimeout(() => {
+      console.log("Users are ready!!")
+    }, 3000);
+  }
+
+  function getProjects(params) {
+    setTimeout(() => {
+      console.log("Projects are ready!!")
+    }, 1000);
+  }
+
+  function getIssues(params) {
+    setTimeout(() => {
+      console.log("Issues are ready!!")
+    }, 2000);
+  }
+  
+  getUsers();
+  getProjects();
+  getIssues();
+
+} )()
+
+..............
+=======SOLUCIÓN=========
+
+
 ------------------------------------------------------------------------------------
 
 Ejercicio 10: Ejercicio de Jon Mircha(explicación de evolución de los callbacks a las promesas)

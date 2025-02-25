@@ -102,7 +102,7 @@ obtenerPostsDeUsuario('fulanito',(posts)=>{
 });
 
 ---------------------------------------------------------------
-Ejercicio 0: Hacer un callback sencillo que imprima texto
+Ejercicio 0: Hacer un callback "sincrono" sencillo que imprima texto
 function texto(params) {
   console.log("soy un callback")
 }
@@ -113,7 +113,7 @@ function otraFuncion(callback) {
 
 otraFuncion(texto)
 -----------------------------------------------------------------
-Ejercicio 1: un callback sencillo, ahora usando funciones flecha
+Ejercicio 1: un callback sincrono, ahora usando funciones flecha
 
 const fun1 = (callback) =>{
   console.log("Inicio");
@@ -127,7 +127,7 @@ const fun2 = () =>{
 
 fun1(fun2);
 ------------------------------------------------------------------
-Ejercicio 2: otro callback sencillo 
+Ejercicio 2: otro callback sincrono usando template strings 
 
 function comprar(articulo1,articulo2,funcion) {
   let gastado = articulo1 + articulo2;
@@ -207,7 +207,14 @@ primero(segundo);
 
 Y aunque tenga una demora de 3 segundos, se va a ejecutar en el orden correcto 
 ......................................................................
-Ejercicio 4:crea 2 funciones, una que sume y otra que reste, 
+
+Ejercicio 4: probando como no siempre las funciones callback tardan lo mismo
+
+console.time("prueba");
+setTimeout(()=> console.timeEnd("prueba"),3000)
+----------------------------------------------------------------------------
+
+Ejercicio 5:crea 2 funciones, una que sume y otra que reste, 
 
 function suma(a,resta) {
   console.log(a + resta());
@@ -227,7 +234,7 @@ function resta() {
 }
 suma(4,resta())
 ----------------------------------------------------------------------------------
-Ejercicio 5: Otra manera de pasar por parametro una función
+Ejercicio 6: Otra manera de pasar por parametro una función
 
 let inicio = function (valor,callback) {
   callback(valor);
@@ -236,7 +243,7 @@ inicio("fulanito",function(valor){
   console.log(`Bienvenido ${valor}`)
 })
 ----------------------------------------------------------------
-Ejercicio 6: creo una función callback que reciba 2 dígitos y los sume
+Ejercicio 7: creo una función callback que reciba 2 dígitos y los sume
 
 const sum = (a,b,callback) => {
   callback(a + b);
@@ -247,7 +254,7 @@ sum(1,2,(result)=>{
 })
 
 --------------------------------------------------------------
-Ejercicio 7: Hazme una función callback que al iniciarze tarde 5seg en ejecutarsee imprima texto
+Ejercicio 8: Hazme una función callback que al iniciarze tarde 5seg en ejecutarsee imprima texto
  y en el segundo lapso vuelva a imprimir texto
 
 function firstAction(callback) {
@@ -265,7 +272,7 @@ setTimeout(()=> firstAction(secondAction),5000)
 
 -----------------------------------------------------------------
 
-Ejercicio 8: Hacer el ejercicio anterior pero la función callback debe de
+Ejercicio 9: Hacer el ejercicio anterior pero la función callback debe de
 recibir 2 parametros, la función y texto. También para ejecutar la función
 callback, debes utilizar un setTimeout
 
@@ -319,7 +326,7 @@ function firstAction(callback,data) {
 }
 
 --------------------------------------------------------------------------------------------------
-Exercise 9:Hacer el ejercicio anterior pero la función callback debe de recibir 3 parametros,
+Exercise 10:Hacer el ejercicio anterior pero la función callback debe de recibir 3 parametros,
 la función, texto y otra función callback. También para ejecutar la función
 callback, debes utilizar un setTimeout
 
@@ -348,7 +355,7 @@ setTimeout(() => {
     })
 }, 3000);
 ---------------------------------------------------------------------
-Ejercicio 10: crea una función callback que multiplique 2 valores y use una función flecha resumida
+Ejercicio 11: crea una función callback que multiplique 2 valores y use una función flecha resumida
 
 let operacion = (num1,num2,callback) => {
   return callback(num1,num2)
@@ -356,7 +363,7 @@ let operacion = (num1,num2,callback) => {
 console.log(operacion(2,4,(a,b)=> a*b))
 
 -----------------------------------------------------------------
-Ejercicio 11:  Haciendo un función que reciba 2 parametros, un número y una función, esta función
+Ejercicio 12:  Haciendo un función que reciba 2 parametros, un número y una función, esta función
 que se recibe debe de elevar al cuadrado el valor que se le paso como parametro, 
 después de 3 segundos.
 
@@ -370,12 +377,6 @@ cuadradoCallback(4,(value,result)=>{
   console.log("inicia callback")
   console.log(`valor: ${result}`)
 })
-
------------------------------------------------------------------------
-Ejercicio 12: probando como no siempre las funciones callback tardan lo mismo
-
-console.time("prueba");
-setTimeout(()=> console.timeEnd("prueba"),3000)
 
 -------------------------------------------------------------------------
 Ejercicio 13: creando un callback utilizando funciones predefinidas del lenguaje
@@ -487,9 +488,8 @@ const obtenerPostsDeUsuario = (usuario,callback)=>{
 obtenerPostsDeUsuario('fulanito',(posts)=>{
   console.log(posts);
 });
--------------------------------------------------------------------------------------
-https://www.w3schools.com/js/js_htmldom_eventlistener.asp
 
+https://www.w3schools.com/js/js_htmldom_eventlistener.asp
 
 --------------------------------------------------------------------------------------------
 Ejercicio 17: creando nuestro propio forEach
