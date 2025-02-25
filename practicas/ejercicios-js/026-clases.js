@@ -1,3 +1,63 @@
+class Animal{
+    constructor(nombre,genero){
+        this.nombre = nombre;
+        this.genero = genero;
+        this.raza = null;
+    }
+    sonar(){
+        console.log("Hago sonidos porque estoy vivo")
+    }
+    saludar(){
+        console.log(`Hola me llamo ${this.nombre}`)
+    }
+}
+class Perro extends Animal{
+    constructor(nombre,genero,tamanio){
+        super(nombre, genero);
+        this.tamanio = tamanio;
+    }
+    sonar(){
+        console.log("SOy un perro y mi sonido es un ladrido");
+    }
+    ladrar(){
+        console.log("GUa gua");
+    }   
+    static queEres(Perro){
+        console.log(`Los perros somos animales mamiferos, somos el mejor amigo del hombre ${Perro.nombre} ${Perro.genero} ${Perro.tamanio}`);
+    }
+    get getRaza(){//un metodo obtenedor solo "retorna"
+        return this.raza;
+    }
+    set setRaza(raza){//al valor de raza, asignale el parametro que estamos recibiendo entre parentesis
+        this.raza = raza;
+    }
+}
+
+const mimi = new Animal("Mimi","Hembra");
+const scooby = new Perro("Scooby","Macho","gigante")
+
+//console.log(mimi)
+//mimi.saludar()
+//mimi.sonar()
+
+//console.log(scooby)
+//scooby.saludar()
+
+//scooby.sonar()
+//scooby.ladrar()
+
+//Perro.queEres(scooby);
+
+//CHeca como sale error si lo ejecutas como metodo el set
+//scooby.setRaza();
+
+//Aquí verifico su valor
+//console.log(scooby.getRaza) //aparecera null
+
+//scooby.setRaza = "gran danes"//Aquí lo declaramos
+//console.log(scooby.getRaza);//Aquí ya imprime "gran danes"
+
+
 /*
 //Esto NO convierte a JS en un lenguaje orientado a objetos "basado en clase", sigue siendo
 //basado en prototipos
@@ -105,8 +165,8 @@ scooby.ladrar()
 
 -------------------------------------------------------------------------------------------
 Ejercicio 3: 
-Metodos estaticos: aquel que se puede ejecutar sin necesidad de instanciar la clase
-Metodos especiales "getters y setters", que nos permiten establecer o modificar el valor de 
+-Metodos estaticos: aquel que se puede ejecutar sin necesidad de instanciar la clase
+-Metodos especiales "getters y setters": nos permiten establecer o modificar el valor de 
 una propiedad dentro de una clase 
 
 los getters y setters son una característica de los objetos que te permiten
@@ -207,8 +267,18 @@ console.log(scooby.getRaza);//Aquí ya imprime "gran danes"
 //si revisamos los "metodos" en la consola en el "prototipo perro" ahí estan los metodos
 //"getRaza" y "setRaza" pero de tipo get y set
 ---------------------------------------------------------------------------------------------------------------------
-Ejercicio 4
-PRACTICANDO EL EJERCICIO 3 sin comentarios
+Ejercicio 4: PRACTICANDO EL EJERCICIO 3 sin comentarios
+-Crea la clase animal que contenga un constructor con 3 propiedades, 1 de ellas será un parametro por default
+(nombre, genero y raza es la por default)
+-crearas 2 metodos, uno que se llame sonar que imprimira texto, y el otro saludar, que utilice la propiedad
+nombre en el texto que imprimira
+-Crear la clase perro, heredar la clase animal y dentro del constructor hereda las propiedades de la clase animal
+y agrega la propiedad tamaño
+-quiero que modifiques el texto del metodo "sonar" pero desde la clase "Perro" y me crees la clase ladrar y 
+le pongas texto.
+-creame una clase estatica que imprima texto
+
+
 class Animal{
     constructor(nombre,genero){
         this.nombre = nombre;
@@ -233,8 +303,8 @@ class Perro extends Animal{
     ladrar(){
         console.log("GUa gua");
     }   
-    static queEres(){
-        console.log("Los perros somos animales mamiferos, somos el mejor amigo del hombre");
+    static queEres(Perro){
+        console.log(`Los perros somos animales mamiferos, somos el mejor amigo del hombre ${Perro.nombre} ${Perro.genero} ${Perro.tamanio}`);
     }
     get getRaza(){//un metodo obtenedor solo "retorna"
         return this.raza;
@@ -247,26 +317,26 @@ class Perro extends Animal{
 const mimi = new Animal("Mimi","Hembra");
 const scooby = new Perro("Scooby","Macho","gigante")
 
-console.log(mimi)
-mimi.saludar()
-mimi.sonar()
+//console.log(mimi)
+//mimi.saludar()
+//mimi.sonar()
 
-console.log(scooby)
-scooby.saludar()
+//console.log(scooby)
+//scooby.saludar()
 
-scooby.sonar()
-scooby.ladrar()
+//scooby.sonar()
+//scooby.ladrar()
 
-Perro.queEres();
+//Perro.queEres(scooby);
 
 //CHeca como sale error si lo ejecutas como metodo el set
 //scooby.setRaza();
 
 //Aquí verifico su valor
-//console.log(scooby.getRaza) aparecera null
+//console.log(scooby.getRaza) //aparecera null
 
-scooby.setRaza = "gran danes"//Aquí lo declaramos
-console.log(scooby.getRaza);//Aquí ya imprime "gran danes"
+//scooby.setRaza = "gran danes"//Aquí lo declaramos
+//console.log(scooby.getRaza);//Aquí ya imprime "gran danes"
 -----------------------------------------------------------------------------------------
 Ejercicio 5: MOstrando como se puede usar un getter sin tener forzosamente un setter
 
@@ -524,55 +594,6 @@ console.log(scooby.getRaza);//Aquí ya imprime "gran danes"
 
 */
 //Intentos:15 Errores:10 AciertosCompletos:5.
-
-class Animal{
-    constructor(nombre,genero){
-        this.nombre = nombre;
-        this.genero = genero;
-    }
-    sonido(){
-        console.log("hago sonidos porque estoy vivo");
-    }
-    saludar(){
-        console.log("Hola mundo");
-    }
-}
-class Perro extends Animal{
-    constructor(nombre,genero,tamanio){
-        super(nombre,genero);
-        this.tamanio = tamanio;
-    }
-    saludar(){
-        console.log("estoy modificando este metodo desde la clase hijo")
-    }
-    ladrar(){
-        console.log("guau guau");
-    }
-    static estatica(){
-        console.log("soy un metodo que no necesita ser instanciado")
-    }
-    get getRaza(){
-        return this.raza
-    }
-    set setRaza(raza){
-        this.raza = raza
-    }
-}
-
-let conejo = new Animal("bugs","masculino");
-let scooby = new Perro("Escubi","macho");
-
-conejo.sonido();
-conejo.saludar();
-
-scooby.saludar();
-scooby.ladrar();
-Perro.estatica();
-
-scooby.setRaza = "gran danes";
-console.log(scooby.getRaza);
-
-
 
 
   

@@ -247,7 +247,7 @@ sum(1,2,(result)=>{
 })
 
 --------------------------------------------------------------
-Ejercicio 8: Hazme una función callback que al iniciarze tarde 5seg en ejecutarsee imprima texto
+Ejercicio 7: Hazme una función callback que al iniciarze tarde 5seg en ejecutarsee imprima texto
  y en el segundo lapso vuelva a imprimir texto
 
 function firstAction(callback) {
@@ -265,7 +265,7 @@ setTimeout(()=> firstAction(secondAction),5000)
 
 -----------------------------------------------------------------
 
-Ejercicio 9: Hacer el ejercicio anterior pero la función callback debe de
+Ejercicio 8: Hacer el ejercicio anterior pero la función callback debe de
 recibir 2 parametros, la función y texto. También para ejecutar la función
 callback, debes utilizar un setTimeout
 
@@ -319,7 +319,7 @@ function firstAction(callback,data) {
 }
 
 --------------------------------------------------------------------------------------------------
-Exercise 10:Hacer el ejercicio anterior pero la función callback debe de recibir 3 parametros,
+Exercise 9:Hacer el ejercicio anterior pero la función callback debe de recibir 3 parametros,
 la función, texto y otra función callback. También para ejecutar la función
 callback, debes utilizar un setTimeout
 
@@ -348,7 +348,7 @@ setTimeout(() => {
     })
 }, 3000);
 ---------------------------------------------------------------------
-Ejercicio 11: crea una función callback que multiplique 2 valores y use una función flecha resumida
+Ejercicio 10: crea una función callback que multiplique 2 valores y use una función flecha resumida
 
 let operacion = (num1,num2,callback) => {
   return callback(num1,num2)
@@ -356,7 +356,7 @@ let operacion = (num1,num2,callback) => {
 console.log(operacion(2,4,(a,b)=> a*b))
 
 -----------------------------------------------------------------
-Ejercicio 12:  Haciendo un función que reciba 2 parametros, un número y una función, esta función
+Ejercicio 11:  Haciendo un función que reciba 2 parametros, un número y una función, esta función
 que se recibe debe de elevar al cuadrado el valor que se le paso como parametro, 
 después de 3 segundos.
 
@@ -372,13 +372,13 @@ cuadradoCallback(4,(value,result)=>{
 })
 
 -----------------------------------------------------------------------
-Ejercicio 13: probando como no siempre las funciones callback tardan lo mismo
+Ejercicio 12: probando como no siempre las funciones callback tardan lo mismo
 
 console.time("prueba");
 setTimeout(()=> console.timeEnd("prueba"),3000)
 
 -------------------------------------------------------------------------
-Ejercicio 14: creando un callback utilizando funciones predefinidas del lenguaje
+Ejercicio 13: creando un callback utilizando funciones predefinidas del lenguaje
 y quiero que me lo explique el alumno linea por linea
 const animales =['perro','gato',"caballo"];
 function modificar(array,callback) {
@@ -407,7 +407,7 @@ modificar(animales,function(array){
   console.log(`He modificado el array y ahora es de ${array.length} elementos`,animales)
 })
 ----------------------------------------------------------------
-Ejercicio 15: ejemplo de callback hell
+Ejercicio 14: ejemplo de callback hell
 // Simulación de una serie de operaciones asíncronas usando setTimeout
 
 function firstOperation(callback) {
@@ -441,7 +441,7 @@ firstOperation(() => {
 });
 
 -------------------------------------------------------------------------------------------------------------
-Ejercicio 16: hacer el ejercicio pasado imprimiendo los cuadrados de 4 dígitos, ocasionando un callback hell
+Ejercicio 15: hacer el ejercicio pasado imprimiendo los cuadrados de 4 dígitos, ocasionando un callback hell
 function cuadradoCallback(value,callback) {
   setTimeout(() => {
     callback(value, value * value)
@@ -467,7 +467,7 @@ cuadradoCallback(4,(value,result)=>{
 })
 
 -------------------------------------------------------------------------------
-Ejercicio 17: Crea un callback que reciba 2 parametros, el primero será un nombre
+Ejercicio 16: Crea un callback que reciba 2 parametros, el primero será un nombre
 , el segundo la función callback.
 Debe imprimir: "Obteniendo los post de ${usuario}", posteriormente en un segundo renglon 2 segundos después, 
 debe de imprimir algún dato dentro de un array
@@ -492,7 +492,7 @@ https://www.w3schools.com/js/js_htmldom_eventlistener.asp
 
 
 --------------------------------------------------------------------------------------------
-Ejercicio 18: creando nuestro propio forEach
+Ejercicio 17: creando nuestro propio forEach
 
 const nombres = ["pedro","pablo","susana","perla"];
 const miPropioForEach = (array,callback) =>{
@@ -507,7 +507,7 @@ miPropioForEach(nombres,(nombre)=>{
 })
 
 ------------------------------------------------------------------
-Ejercicio 19: Haz que el alumno encuentre el error para que imprima los datos(obvio se necesita un callback)
+Ejercicio 18: Haz que el alumno encuentre el error para que imprima los datos(obvio se necesita un callback)
 const getUsers = ()=>{
   setTimeout(() => {
     const users = [
@@ -541,7 +541,7 @@ getUsers((users)=>{
 //Por esto fue que se introdujeron los callbacks
 
 ----------------------------------------------------------------------
-Ejercicio 20: Crea una función callback que reciba objetos y los recorra,
+Ejercicio 19: Crea una función callback que reciba objetos y los recorra,
 pero debes asegurarte que los datos que reciban sean objetos y funciones, de lo 
 contrario, que te muestren un error
 
@@ -574,17 +574,4 @@ ingresar({users:'fulanito',speciality:'javaScript'},"hola")
 
 
 */
-
-const obtenerPostsDeUsuario = (usuario,callback)=>{
-  console.log(`Obteniendo los post de ${usuario}`);
-
-  setTimeout(()=>{
-    let posts = ['post1','post2','post3'];
-    callback(posts[1]);
-  },2000)
-}
-
-obtenerPostsDeUsuario('fulanito',(posts)=>{
-  console.log(posts);
-});
 
