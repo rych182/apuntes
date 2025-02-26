@@ -1,26 +1,41 @@
 ( function () {
   function getUsers() {
-    setTimeout(() => {
-      console.log("Users are ready!!")
-    }, 3000);
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        console.log("Users are ready!!")
+        resolve([1,2,3,4])//aquí podrías regresar una clase de JS, un objeto, un arreglo de valores, un valor de variable
+      }, 3000);
+    })
   }
 
   function getProjects(params) {
-    setTimeout(() => {
-      console.log("Projects are ready!!")
-    }, 1000);
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        console.log("Projects are ready!!")
+        reject()
+      }, 1000);
+    })
   }
 
   function getIssues(params) {
-    setTimeout(() => {
-      console.log("Issues are ready!!")
-    }, 2000);
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        console.log("Issues are ready!!")
+        resolve()
+      }, 2000);
+    })
   }
   
-  getUsers();
-  getProjects();
-  getIssues();
-
+  getUsers()
+    .then(function (response) {
+      console.log(response)//Cuando quiera atrapar la respuesta, esto puede representar un llamado, una escritura al file system, una conexión nueva a BD
+      //throw "error exception"; //Una vez que se ejecuta esto, ya no se ejecuta lo de abajo
+      return getProjects();
+    })
+    .then(getIssues)
+    .catch( function(error) {
+      console.log("Hubo un error"); 
+    })
 } )()
 /*
 
@@ -113,6 +128,15 @@ se colocan en una cola de eventos
 -evitan la inversion de control a las devoluciones de llamada que
 pierden el control total de como se ejecutaran las funciones al pasar
 una devolucion de llamada a un tercero
+
+
+BUENAS PRACTICAS:
+-No concatenar más de 10 promesas
+-No usar reject sin el catch
+-Si tu función retorna una promesa, siempre PONER EL RETURN, si no , no funcionara
+
+TIPS:
+-puede haber varios catch si quieres que el error que arroje sea distinto
 
 CALLBACKS
 -Encadenar operaciones es mas difícil y desordenado
@@ -739,8 +763,48 @@ Ejercicio 11: Explicación de asincronia con Promesas
 
 ..............
 =======SOLUCIÓN=========
+PREGUNTA
+¿Como atraparías la respuesta del primer resolver que tiene el array [1,2,3,4]
 
+( function () {
+  function getUsers() {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        console.log("Users are ready!!")
+        resolve([1,2,3,4])//aquí podrías regresar una clase de JS, un objeto, un arreglo de valores, un valor de variable
+      }, 3000);
+    })
+  }
 
+  function getProjects(params) {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        console.log("Projects are ready!!")
+        reject()
+      }, 1000);
+    })
+  }
+
+  function getIssues(params) {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        console.log("Issues are ready!!")
+        resolve()
+      }, 2000);
+    })
+  }
+  
+  getUsers()
+    .then(function (response) {
+      console.log(response)//Cuando quiera atrapar la respuesta, esto puede representar un llamado, una escritura al file system, una conexión nueva a BD
+      //throw "error exception"; //Una vez que se ejecuta esto, ya no se ejecuta lo de abajo
+      return getProjects();
+    })
+    .then(getIssues)
+    .catch( function(error) {
+      console.log("Hubo un error"); 
+    })
+} )()
 ------------------------------------------------------------------------------------
 
 Ejercicio 10: Ejercicio de Jon Mircha(explicación de evolución de los callbacks a las promesas)
