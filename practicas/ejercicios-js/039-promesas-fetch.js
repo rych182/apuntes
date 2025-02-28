@@ -1,24 +1,19 @@
-function traditionalFn() {
-    fetch('https://jsonplaceholder.typicode.com/posts').then( (response)=>{
-        return response.json();
+function getUser(id) {
+    fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
+    .then((response)=>{
+        if (response.ok) {
+            return response.json()
+        }
+        throw "Ocurrió un error";
+        
     }).then((data)=>{
-        console.log('traditional Fetch',data)
+        console.log(data)
+    }).catch((error)=>{
+        console.log(error)
     })
-    console.log('Traditional Message')
 }
-//traditionalFn()
 
-//Comparandolo con el async await
-//una función asincrónica que espera a que se resuelva el código asincrónico antes de continuar
-async function asyncfn() {
-    await fetch('https://jsonplaceholder.typicode.com/posts').then((response)=>{
-        return response.json();
-    }).then((data)=>{
-        console.log('Asyncs Fetch',data);
-    });
-    console.log('Async Message')
-}
-asyncfn()
+getUser(3)
 
     /*
    
@@ -138,6 +133,26 @@ async function asyncfn() {
 }
 asyncfn()
 
+------------------------------------------------------------------------
+Ejercicio 7: 
+Crea una función que consuma la api de json place holder y que cuando se ejecute le pases valor por parametro y te traiga el usuario 
+
+function getUser(id) {
+    fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
+    .then((response)=>{
+        if (response.ok) {
+            return response.json()
+        }
+        throw "Ocurrió un error";
+        
+    }).then((data)=>{
+        console.log(data)
+    }).catch((error)=>{
+        console.log(error)
+    })
+}
+
+getUser(3)
 ----------------------------------------------------------------------
 EJERCICIO 6: CONSUMIR LA API DEL CLIMA DE USA
 
