@@ -1,42 +1,6 @@
-( function () {
-  function getUsers() {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        console.log("Users are ready!!")
-        resolve([1,2,3,4])//aquí podrías regresar una clase de JS, un objeto, un arreglo de valores, un valor de variable
-      }, 3000);
-    })
-  }
 
-  function getProjects(params) {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        console.log("Projects are ready!!")
-        reject()
-      }, 1000);
-    })
-  }
 
-  function getIssues(params) {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        console.log("Issues are ready!!")
-        resolve()
-      }, 2000);
-    })
-  }
-  
-  getUsers()
-    .then(function (response) {
-      console.log(response)//Cuando quiera atrapar la respuesta, esto puede representar un llamado, una escritura al file system, una conexión nueva a BD
-      //throw "error exception"; //Una vez que se ejecuta esto, ya no se ejecuta lo de abajo
-      return getProjects();
-    })
-    .then(getIssues)
-    .catch( function(error) {
-      console.log("Hubo un error"); 
-    })
-} )()
+
 /*
 
 LAS PROMESAS REQUIEREN MUCHA PRACTICA
@@ -382,8 +346,40 @@ myPromise
   .catch((error) => {
     console.error(error); // Esto se ejecuta si la promesa se rechaza
   });
+-----------------------------------------------------------------------------------------------
+EJERCICIO 3: Encadenamiento de promesas, puedes ir utilizando el resultado de la promesa anterior
+
+let count = new Promise((resolve, reject) => {
+  resolve(1)
+})
+
+count.then( function (num) {
+  console.log(num)
+  return num +1;
+}).then( function (num) {
+  console.log(num)
+  return num +1;
+}).then( function (num) {
+  console.log(num)
+  return num +1;
+})
+
+-----------------------------------------------------------------------------------
+Ejercicio 4: Otra manera de crear una promesa, no es muy usada, pero hay programadores que lo hacen
+
+new Promise((resolve, reject) => {
+  if (Math.random() < 0.5 ) {
+    reject("Es menor a 0.5")
+  }
+  resolve("Es mayor a 0.5")
+}).then(function (answer) {
+  console.log(answer)
+}).catch( function (error) {
+  console.log(error)
+} )
+
 ---------------------------------------------------------------------------------
-Ejercicio 3: Crea una función que retorne una promesa, tenga un retraso de 2 segundos y quiero que tenga fetch y catch
+Ejercicio 5: Crea una función que retorne una promesa, tenga un retraso de 2 segundos y quiero que tenga fetch y catch
   // Creamos una función que devuelva una promesa
 function hacerAlgo() {
     return new Promise((resolve, reject) => {
@@ -409,7 +405,7 @@ hacerAlgo()
     });
 
   ----------------------------------------------------------------------------------------
-EJERCICIO 4: resolve y reject de una manera distinta, utilizando un segundo parametro en el .then()
+EJERCICIO 6: resolve y reject de una manera distinta, utilizando un segundo parametro en el .then()
 MALA PRACTICA
 function getWeather() {
   return new Promise(function(resolve,reject) {
@@ -427,7 +423,7 @@ promise.then(
   }
 )
 --------------------------------------------------------------------------------------------------
-Ejercicio 5: reestructurando código del ejercicio anterior
+Ejercicio 7: reestructurando código del ejercicio anterior
 
 //Ejercicio anterior(lo copiare porque luego cambio de lugar mis ejercicios y los reenumero)
 MALA PRACTICA
@@ -466,7 +462,7 @@ function onError(error){
 getWeather().then(onSuccesss,onError)
 
 ---------------------------------------------------------------------------------------------
-EJERCICIO 6: PROMESA USANDO SWITCH y ENCADENAMIENTO DE PROMESAS
+EJERCICIO 8: PROMESA USANDO SWITCH y ENCADENAMIENTO DE PROMESAS
 Hay importantes beneficios de "legibilidad"
 
 -Crea 4 funciones
@@ -526,7 +522,7 @@ getWeather()
 
 
 ------------------------------------------------------------------------------------------
-Ejercicio 7:Ejemplo de como .then(onError) ejecutaría el error aunque no lo fuera, PORQUE EL ENCADENAMIENTO DE PROMESAS,
+Ejercicio 9:Ejemplo de como .then(onError) ejecutaría el error aunque no lo fuera, PORQUE EL ENCADENAMIENTO DE PROMESAS,
 POR ESO SE USA EL .catch()
 
 function fun1() {
@@ -632,8 +628,7 @@ fun1()
   .catch(onError)
 ------------------------------------------------------------------------------------------------
 
-
-Ejercicio 8: haciendo un callback con una Promesa(y la promesa solo recibe un valor)
+Ejercicio 10: haciendo un callback con una Promesa(y la promesa solo recibe un valor)
 
   const asincroniaConCallBack =(num1,num2,callback) => {
   const resultado = num1 + num2;
@@ -659,7 +654,7 @@ asincroniaConPromesas(3,4)
   .then(resultado => console.log(resultado))
 
 ----------------------------------------------------------------------------------------------------------
-Ejercicio 9: ejercicio sencillo de un callback hell arreglado con Promises, debe imprimir un mensaje cada segundo durante 3 segundos
+Ejercicio 11: ejercicio sencillo de un callback hell arreglado con Promises, debe imprimir un mensaje cada segundo durante 3 segundos
 
   EL CALLBACK HELL
 function firstOperation(callback) {
@@ -732,7 +727,7 @@ firstOperation()
 
 ---------------------------------------------------------------------------------------------
 
-Ejercicio 11: Explicación de asincronia con Promesas
+Ejercicio 12: Explicación de asincronia con Promesas
 
 //Imagina que lo quieres ejecutar en forma secuencial, ¿Como lo haces con promesas?
 
@@ -807,7 +802,7 @@ PREGUNTA
 } )()
 ------------------------------------------------------------------------------------
 
-Ejercicio 10: Ejercicio de Jon Mircha(explicación de evolución de los callbacks a las promesas)
+Ejercicio 13: Ejercicio de Jon Mircha(explicación de evolución de los callbacks a las promesas)
 Ejercicio donde atrapamos el error en cualquiera de las ejecuciones
 Esto es la evolución de las promesas, un código mejor ordenado y sobre todo
 UNA MEJOR MANIPULACIÓN DE LOS ERRORES y no tienes que estar repitiendo la validación del error
@@ -905,8 +900,8 @@ cuadradoPromise(0)
 
 -----------------------------------------------------------------------------------------
 
-EJERCICIO 11: ejecutar una promesa con otra promesa que esta dentro de una función, debe imprimir solo texto y se debe de ejecutar cada texto con un retrazo de 2 segundos
-
+EJERCICIO 14: crear 2 funciones que retornen promesas, cada una con un retrazo de 2 segundos, 
+una promesa debe de ejecutar a la otra y una de esas funciones debe devolver un texto que diga hola mundo
 const miPromesa = new Promise((resolve, reject) => {
   console.log("Estás haciendo algo")
   setTimeout(() => {
@@ -929,10 +924,10 @@ miPromesa.then( resultado =>{
   console.log(message)
 } )
 ----------------------------------------------------------------------
-EJERCICIO 12: 
+EJERCICIO 15: 
 
-Crea 2 funciones que retornen promesas, la primer funcion al ejecutarse, debe de retornar un objeto con 2 parametros con texto cada. 
-pero al ejecutarse, ese objeto que retorno, debe de usarse como valor en la ejecución de la segunga funcion, y esa segunda función debe de escribir texto
+Crea 2 funciones que retornen promesas, la primer funcion al ejecutarse, debe de retornar un objeto con 2 parametros con texto cada uno. 
+pero al ejecutarse, ese objeto que retorno, debe de usarse como valor en la ejecución de la segunda funcion, y esa segunda función debe de escribir texto
 y concatenar algún parametro del objeto de la primera función que retorna la primer promesa.
 
 function mostrarPhone(mensaje) {
@@ -969,7 +964,7 @@ miPromesa().then(function(mensaje) {
 })
 
 ------------------------------------------------------------------------------------
-EJERCICIO 13: Crea una promesa que después de 2 segundos cuente una palabra que tule hayas ingresado y te diga si tiene más de 20 caracteres o no
+EJERCICIO 16: Crea una promesa que después de 2 segundos cuente una palabra que tu le hayas ingresado y te diga si tiene más de 20 caracteres o no
 
 const contar = (palabra) =>{
   return new Promise((resolve, reject) => {
@@ -992,7 +987,7 @@ const contar = (palabra) =>{
  } )
 
  -----------------------------------------------------------------------------------------------------
-EJERCICIO 14: MODIFICA EL EJERCICIO ANTERIOR, la promesa debe procesar un objeto y convertirlo en JSON, 
+EJERCICIO 17: MODIFICA EL EJERCICIO ANTERIOR, la promesa debe procesar un objeto y convertirlo en JSON, 
 y cuando ejecutes la promesa, debes hacer que el objeto JSON se convierta de nuevo a un objeto
  
 const contar = (palabra) =>{
@@ -1025,7 +1020,7 @@ const contar = (palabra) =>{
  } )
 
  ---------------------------------------------------------------------------------------
-EJERCICIO 15: crea una promesa que reciba un númer y que cuando se ejecute la promesa se le sume 5, y después me muestre el resultado 
+EJERCICIO 18: crea una promesa que reciba un númer y que cuando se ejecute la promesa se le sume 5, y después me muestre el resultado 
 const p1 = Promise.resolve(1)//promesa que se resuelve inmediatamente
 console.log(p1)
 p1
@@ -1033,7 +1028,7 @@ p1
   .then(x => console.log(x))
 
 -------------------------------------------------------------------------------------------------------
-EJERCICIO 16:crea una función que reciba un númer y que cuando se ejecute la promesa se le sume 5
+EJERCICIO 19:crea una función que reciba un númer y que cuando se ejecute la promesa se le sume 5
 y se vuelva a ejecutar, pero en la segunda ejecución, ejecuta una promesa que también sume OTRA VEZ 5
 const p1 = Promise.resolve(1)//promesa que se resuelve inmediatamente
 console.log(p1)
@@ -1042,7 +1037,7 @@ p1
   .then(x => Promise.resolve(x+5))
   .then(x => console.log(x))
 ------------------------------------------------------------------------------------------------------------
-Ejercicio 17:
+Ejercicio 20:
 Promesa de manera SINCRONA 
 ejemplo de como NO SE EJECUTA NADA después del catch y que puedes "ejecutar una promesa con un catch" dentro de un .then
 ESTO ES SUMAMENTE ÚTIL cuando manejas efectos, queremos llamar una API, o queremos escribir en base de datos
@@ -1058,7 +1053,7 @@ p1
   .catch(e => console.log(e))
 
 -----------------------------------------------------------------------------------------------------------------------
-EJERCICIO 18: Crea una función que retorne una promesa y que tenga un retraso de 2seg.
+EJERCICIO 21: Crea una función que retorne una promesa y que tenga un retraso de 2seg.
 Ejecuta esa promesa dandole un valor, al que después se le sumara 7.
 Primer deben de pasar 2 segundos y se ejecutara el primer valor que le dijiste, pasaran otros 2 segundos y se sumara el valor + 7
 
@@ -1097,7 +1092,7 @@ delayed(7)
   .catch(e => console.log(e))
 
 -------------------------------------------------------------------------------------------------------------------------------
-EJERCICIO 19: ENCADENAMIENTO DE PROMESAS, puedo usar el resultado de la primer promesa en el segundo .then
+EJERCICIO 22: ENCADENAMIENTO DE PROMESAS, puedo usar el resultado de la primer promesa en el segundo .then
 quiero que me crees una función que genere una promesa que te de como resultado un número, cuando ejecute por primera ves esa promesa, quiero que me multipliques
 ese número X 2, y que me muestre ese resultado
 
@@ -1119,7 +1114,7 @@ generadora().then( (res)=>{
 
 console.log("estoy al final del codigo")
 ---------------------------------------------------------------------------------------------------------------------------
-EJERCICIO 20: 
+EJERCICIO 23: 
 Crea dos funciones que retornen una promesa cada 1, ejecuta una promesa que te diga si existe un ID y que te diga si exite el número de teléfono y la persona
 
 let usuarios = [{
@@ -1190,7 +1185,7 @@ obtenerUsuario(1)
   })
   
 ---------------------------------------------------------------------------
-Ejercicio 21: DEMOSTRAR COMO EL .THEN() ES SINCRONO Y NO ASINCRONO, PARA SER ASINCRONO, NECESITAS USAR UNA PROMESA
+Ejercicio 24: DEMOSTRAR COMO EL .THEN() ES SINCRONO Y NO ASINCRONO, PARA SER ASINCRONO, NECESITAS USAR UNA PROMESA
 
 function generadora() {
   return new Promise((resolve, reject) => {
@@ -1236,7 +1231,7 @@ generadora().then( (res)=>{
 
 console.log("estoy al final del codigo")
 ---------------------------------------------------------------
-EJERCICIO 22: REFACTORIZAR ESTE CALLBACK HELL y PASALO A PROMESA
+EJERCICIO 25: REFACTORIZAR ESTE CALLBACK HELL y PASALO A PROMESA
 
 const usuarios = [
   {id:1,nombre:'ricardo',profesion_id:1},
@@ -1355,7 +1350,7 @@ getProfesion(1) //aquí esperamos 2s
   .then( ()=> getProfesion(2)) //aquí esperamos 2s
   .then( (profesion)=> console.log(profesion) )
 --------------------------------------------------------------------------------
-EJERCICIO 23
+EJERCICIO 26
 
 const usuarios = [
   {id:1,nombre:'ricardo',profesion_id:1},
@@ -1397,7 +1392,7 @@ getProfesion(1) //aquí esperamos 2s
 //  PERO PODEMOS PEDIR LAS 2 SIMULTANEAMENTE PARA NO ESPERAR MÁS
 ---------------------------------------------------------------------------------------------
 
-EJERCICIO 24
+EJERCICIO 27
 
 
     */
