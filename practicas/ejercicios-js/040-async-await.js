@@ -1,19 +1,39 @@
-async function getArticleByIdErrors(id) {
-  try {
-    let response = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
+function cuadradoPromise(value) {
+  if(typeof value !== "number"){
+    return Promise.reject(`Error, el valor "${value}" ingresado no es un número`)
+  } 
 
-    if (!response.ok) {
-      throw 'hubo un error'
-    }
-    let data = await response.json()
-    console.log(data)
+  return new Promise( (resolve,reject) => {
+    setTimeout(() => {
+      resolve({ //Aquí yo creo un objeto, para tener los 2 valores
+        value,
+        result: value * value
+      })
+    }, 3000);
+  })
+}
+
+async function funcionAsincrona() {
+  try {
+    console.log("Inicio de Async Function");
+
+    let obj = await cuadradoPromise(9)
+    console.log(`Async function: ${obj.value} , ${obj.result}`);
+
+    obj = await cuadradoPromise(27)
+    console.log(`Async function: ${obj.value} , ${obj.result}`);
+
+    obj = await cuadradoPromise(36)
+    console.log(`Async function: ${obj.value} , ${obj.result}`);
+
+    console.log("Fin Async function")
+    
   } catch (error) {
-    console.warn(error);
+    console.log(error)
   }
 }
 
-getArticleByIdErrors(9)
-
+funcionAsincrona()
 /*
 
 TEORIA:
@@ -168,6 +188,63 @@ async function getArticleByIdErrors(id) {
 
 getArticleByIdErrors(9)
 
+------------------------------------------------------------------------------
 
+EJERCICIO 3: reestructurar el ejercicio de número al cuadrado que usa promesas
 
+function cuadradoPromise(value) {
+  if(typeof value !== "number"){
+    return Promise.reject(`Error, el valor "${value}" ingresado no es un número`)
+  } 
+
+  return new Promise( (resolve,reject) => {
+    setTimeout(() => {
+      resolve({ //Aquí yo creo un objeto, para tener los 2 valores
+        value,
+        result: value * value
+      })
+    }, 3000);
+  })
+}
+
+-------------CODIGO REESTRUCTURADO 
+
+NOTA: si tu pones un tipo de dato que no sea número, marcará error y no ejecutará las operaciones siguientes
+
+function cuadradoPromise(value) {
+  if(typeof value !== "number"){
+    return Promise.reject(`Error, el valor "${value}" ingresado no es un número`)
+  } 
+
+  return new Promise( (resolve,reject) => {
+    setTimeout(() => {
+      resolve({ //Aquí yo creo un objeto, para tener los 2 valores
+        value,
+        result: value * value
+      })
+    }, 3000);
+  })
+}
+
+async function funcionAsincrona() {
+  try {
+    console.log("Inicio de Async Function");
+
+    let obj = await cuadradoPromise(9)
+    console.log(`Async function: ${obj.value} , ${obj.result}`);
+
+    obj = await cuadradoPromise(27)
+    console.log(`Async function: ${obj.value} , ${obj.result}`);
+
+    obj = await cuadradoPromise(36)
+    console.log(`Async function: ${obj.value} , ${obj.result}`);
+    
+    console.log("Fin Async function")
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+funcionAsincrona()
+-----------------------------------------------
     */

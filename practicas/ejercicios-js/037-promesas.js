@@ -379,7 +379,7 @@ new Promise((resolve, reject) => {
 } )
 
 ---------------------------------------------------------------------------------
-Ejercicio 5: Crea una función que retorne una promesa, tenga un retraso de 2 segundos y quiero que tenga fetch y catch
+Ejercicio 5: Crea una función que retorne una promesa, tenga un retraso de 2 segundos y quiero que tenga resolve y catch
   // Creamos una función que devuelva una promesa
 function hacerAlgo() {
     return new Promise((resolve, reject) => {
@@ -557,10 +557,10 @@ fun1()
 
 ----------DEMOSTRACIÓN:
 -Primero se ejecuta fun1(), que es un reject, por lo tanto, se ejecutará EL SEGUNDO PARAMETRO DEL "PRIMER" .then() que es "onError"
--en el primer .then() ejecuta la función "onError". que espera un dato en un parametro, el parametro "data" recibira el 404 que esta dentro del reject,
--después de todo eso, se ejecuta "el segundo ,then()" porque el error no lo hicimos con un .catch() si no con un .then() ENTONCES NO SE DETIENE
+-en el primer .then() se ejecuta la función "onError". que espera un dato en un parametro, el parametro "data" recibira el 404 que esta dentro del reject,
+-después de todo eso, se ejecuta "el segundo .then()" porque el error no lo hicimos con un .catch() si no con un .then() ENTONCES NO SE DETIENE
 
--SI TODO ESTA CORRECTO en la fun1() , se ejecuta fun2() en el primer .then() y el texto dentro del resolve() se va a pasar como parametro en la
+-SI TODO ESTA CORRECTO en la fun1() , se ejecuta fun2() en el primer .then(), y el texto dentro del resolve() se va a pasar como parametro en la
 función "onSuccess"
 
 en resumen: NO HACER ESTO, SE MANEJA ERRORES CON .CATCH()
@@ -896,6 +896,46 @@ cuadradoPromise(0)
     return cuadradoPromise(7)
   })
   //el metodo .catch es el que captura el error, resultante del reject
+  .catch('error')
+
+-------------CÓDIGO SIN COMENTARIOS
+
+function cuadradoPromise(value) {
+  if(typeof value !== "number"){
+    return Promise.reject(`Error, el valor "${value}" ingresado no es un número`)
+  } 
+
+  return new Promise( (resolve,reject) => {
+    setTimeout(() => {
+      resolve({ //Aquí yo creo un objeto, para tener los 2 valores
+        value,
+        result: value * value
+      })
+    }, 3000);
+  })
+}
+
+cuadradoPromise(0)
+  .then( (miObjeto) => {
+    console.log("Inicio Promise");
+    console.log(`Promise: Valor: ${miObjeto.value} , valor al cuadrado: ${miObjeto.result} `)
+    return cuadradoPromise(4)
+  })
+  .then( (miObjeto) =>{
+    console.log("Inicio Promise");
+    console.log(`Promise: Valor: ${miObjeto.value} , valor al cuadrado: ${miObjeto.result} `)
+    return cuadradoPromise(5)
+  })
+  .then( (miObjeto) =>{
+    console.log("Inicio Promise");
+    console.log(`Promise: Valor: ${miObjeto.value} , valor al cuadrado: ${miObjeto.result} `)
+    return cuadradoPromise("hola")
+  })
+  .then( (miObjeto) =>{
+    console.log("Inicio Promise");
+    console.log(`Promise: Valor: ${miObjeto.value} , valor al cuadrado: ${miObjeto.result} `)
+    return cuadradoPromise(7)
+  })
   .catch('error')
 
 -----------------------------------------------------------------------------------------
