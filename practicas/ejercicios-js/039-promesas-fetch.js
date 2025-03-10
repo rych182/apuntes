@@ -109,7 +109,6 @@ Promise.all([
     console.log(data)
 })
 -----------------------------------------------------------------------------
-
 Ejercicio 6: diferencia entre promesas y async await 
 
 function traditionalFn() {

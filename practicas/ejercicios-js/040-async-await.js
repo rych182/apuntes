@@ -33,7 +33,25 @@ async function funcionAsincrona() {
   }
 }
 
-funcionAsincrona()
+funcionAsincronaExpresada = async () => {
+  try {
+    console.log("Inicio de Async Function");
+
+    let obj = await cuadradoPromise(9)
+    console.log(`Async function: ${obj.value} , ${obj.result}`);
+
+    obj = await cuadradoPromise(27)
+    console.log(`Async function: ${obj.value} , ${obj.result}`);
+
+    obj = await cuadradoPromise(36)
+    console.log(`Async function: ${obj.value} , ${obj.result}`);
+
+    console.log("Fin Async function")
+    
+  } catch (error) {
+    console.log(error)
+  }
+}
 /*
 
 TEORIA:
@@ -42,7 +60,10 @@ FUNCIONES ASYNCRONAS
 -Las funciones asincronas van a esperar a que algo se cumpla para poder seguir ejecutando el proceso
 que estemos trabajando.
 -Una función "async" siempre va a devolver una "promesa"
--Async Await se pueden usar en conjunto
+-Async Await se pueden usar en conjunto con las promesas
+-El async await nos evita usar muchos .then() y no tener problemas con las llaves
+-Si se te olvida declarar una función como "async", no podrás usar el await
+
 
 EJEMPLO 0: 
 

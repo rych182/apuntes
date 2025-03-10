@@ -1,0 +1,12 @@
+/*      ESPACIOS GENERALES      */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: #232323;
+    color: white;
+    padding: 10px 20px;
+}

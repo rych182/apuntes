@@ -1060,7 +1060,7 @@ const contar = (palabra) =>{
  } )
 
  ---------------------------------------------------------------------------------------
-EJERCICIO 18: crea una promesa que reciba un númer y que cuando se ejecute la promesa se le sume 5, y después me muestre el resultado 
+EJERCICIO 18: crea una promesa que reciba un número y que cuando se ejecute la promesa se le sume 5, y en un segundo .then() me muestre el resultado 
 const p1 = Promise.resolve(1)//promesa que se resuelve inmediatamente
 console.log(p1)
 p1
@@ -1133,8 +1133,8 @@ delayed(7)
 
 -------------------------------------------------------------------------------------------------------------------------------
 EJERCICIO 22: ENCADENAMIENTO DE PROMESAS, puedo usar el resultado de la primer promesa en el segundo .then
-quiero que me crees una función que genere una promesa que te de como resultado un número, cuando ejecute por primera ves esa promesa, quiero que me multipliques
-ese número X 2, y que me muestre ese resultado
+quiero que me crees una función que genere una promesa que te de como resultado un número, cuando se ejecute por primera ves esa promesa, quiero que me multipliques
+ese número X 2, y que me muestre ese resultado en la consola
 
 function generadora() {
   return new Promise((resolve, reject) => {
