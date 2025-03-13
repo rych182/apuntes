@@ -9,4 +9,99 @@ header{
     background-color: #232323;
     color: white;
     padding: 10px 20px;
+    /*Posteriormente a los enlaces le pondremos un position absolute
+    Para que cuando pongamos el menu de hamburguesa aparezac por debajo y no encima*/
+    position: relative;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+h1{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    /*Solo se puede usar GAP si usas display flex*/
+    gap: 15px;
+}
+
+/*
+.nav-links{
+    margin: 0 15px
+}
+
+*/
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.nav-links a:hover {
+    color: orange;
+}
+
+
+/*      ESTILOS HAMBURGUESAS       
+Si tu comentas este código, se mueven los estilos hacia la derecha, porque en teoría,
+están en medio
+*/
+.hamburguer{
+    /*Si le pones display:flex podrás ver el menú*/
+    display: none;
+    /*Para que cada una se posiciones una debajo de la otra Y NO A LOS LADOS*/
+    flex-direction: column;
+}
+
+.bar{
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: .3s;
+}
+
+/*      RESPONSIVE DESIGN       */
+
+/*Estos estilos se aplicaran cuando la pantalla tenga un ANCHO MENOR a 768px */
+@media (max-width:768px) {
+    nav{
+        display: flex;
+        justify-content: space-between;
+    }
+    .nav-links{
+        /*Desaparece el menú cuando está en tamaño de escritorio*/
+        display: none;
+        position: absolute;
+        /*Esto hace que se ajuste si el header tiene un padding mayor*/
+        top: 100%;
+        right: 0;
+        background-color: #333;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links{
+        margin: 0;
+    }
+
+    .hamburguer{
+        /*Hace que muestre el menú de hamburguesa cuando la pantalla sea chica*/
+        display: flex;
+    }
+    /*Esta clase la vamos a ir quitando y poniendo*/
+    .nav-links.show{
+        display: flex;
+        background-color: #232323;
+    }
+
 }

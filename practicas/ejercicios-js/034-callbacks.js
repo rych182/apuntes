@@ -355,7 +355,7 @@ setTimeout(() => {
     })
 }, 3000);
 ---------------------------------------------------------------------
-Ejercicio 11: crea una función callback que multiplique 2 valores y use una función flecha resumida
+Ejercicio 11: crea una función callback que multiplique 2 valores y use una función flecha resumida en la ejecución
 
 let operacion = (num1,num2,callback) => {
   return callback(num1,num2)
@@ -400,7 +400,6 @@ function modificar(array,callback) {
   setTimeout(() => {
     callback(array)
   }, 3000);
-  
 }
 
 console.log(animales)
