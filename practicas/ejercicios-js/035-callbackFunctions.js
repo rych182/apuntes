@@ -1,16 +1,83 @@
 //HACER EJERCICIO CON FILTER
 
+
 /*
+
+Ejercicio 0:  recorrer un array con una función callback.
+
+const fruits = ['orange','pineapple','kiwi'];
+fruits.forEach( (fruit,index) =>{
+  console.log(index + ': ' + fruit);
+}) 
+
+-------------------------------------------------------------
+                            .map()
+
+Es un método de los arrays que se usa para transformar cada elemento de un array en otro valor,
+devolviendo un nuevo array sin modificar el original
+
+                Ejercicio 1: Utilizando la función .map
+Este método crea un nuevo array con los resultados de aplicar dicha función de callback a cada elemento del array
+original.
+
+const numeros = [1, 2, 3, 4, 5];
+
+const dobles = numeros.map(function(elemento) {
+  return elemento * 2;
+});
+
+console.log(dobles); // [2, 4, 6, 8, 10]
+console.log(numeros);    // [1, 2, 3, 4, 5] (se mantiene igual)
+
+--------------------------------------------------------------------------------------------------------
+Ejercicio 2: el ejemplo de arriba pero usando los otros parámetros que la función de callback tiene
+
+const numeros = [1, 2, 3, 4, 5];
+
+const resultado = numeros.map(function(elemento, indice, array) {
+  console.log('Elemento:', elemento); // Imprime el elemento actual
+  console.log('Índice:', indice);     // Imprime el índice del elemento actual
+  console.log('Array:', array);       // Imprime el array original
+  return elemento * 2;
+});
+
+console.log(resultado); // [2, 4, 6, 8, 10]
+
+-------------------------------------------------------------------------------------------------------
+
+Ejercicio 3: Podemos usar thisArg para cambiar el contexto de this dentro de la función callback:
+const multiplicador = {
+  factor: 3
+};
+
+const numeros = [1, 2, 3, 4, 5];
+
+const resultado = numeros.map(function(elemento) {
+  return elemento * this.multiplicador;
+}, multiplicador);
+
+console.log(resultado); // [3, 6, 9, 12, 15]
+
+Resumen
+
+    La función callback de .map() se aplica a cada elemento del array.
+    Devuelve un nuevo array con los resultados de la función callback aplicada a cada elemento.
+    callback recibe hasta tres argumentos: elemento, índice, y arrayOriginal.
+    thisArg puede ser usado para establecer el valor de this en la función callback.
+
+.map() es útil cuando necesitas transformar cada elemento de un array de manera consistente.
+
+----------------------------------------------------------------------------------------------------------
                 AddEventListener
 
-Ejercicio 0: darle click a un boton en html y que imprima algo en la consola del navegador
+Ejercicio 4: darle click a un boton en html y que imprima algo en la consola del navegador
 const button = document.querySelector('.ania');
 button.addEventListener('click', ()=> {
   console.log("estoy clickeando mama!!");
 })
 
 --------------------------------------------------------------------------------------------
-Ejercicio 1: otra forma de hacer el ejercicio de arriba
+Ejercicio 5: otra forma de hacer el ejercicio de arriba
 const button = document.querySelector('.ania');
 const alert = () =>{
   console.log('otra alerta en consola');
@@ -18,7 +85,7 @@ const alert = () =>{
 button.addEventListener('click',alert);
 
 ---------------------------------------------------------------
-Ejercicio 2: Una segunda forma de hacer el ejercicio 0
+Ejercicio 6: Una segunda forma de hacer el ejercicio anterior de darle click al boton
 
 const button = document.querySelector('.ania');
 function alert(){
@@ -26,23 +93,15 @@ function alert(){
 }
 button.addEventListener('click',alert);
 ----------------------------------------------------------------------------------------------------
-Ejercicio 3: ejecuta una función anonima que contiene una funcion predefinida del lenguaje
+Ejercicio 7: ejecuta una función anonima que contiene una funcion predefinida del lenguaje
 Para esto creamos un boton en html que tenga un id
 
 document.getElementById("alerta").addEventListener("click", function() {
     alert("Hello World!");
   });
-------------------------------------------------------------------------------------------------
-Ejercicio 4:  recorrer un array con una función callback.
-
-const fruits = ['orange','pineapple','kiwi'];
-fruits.forEach( (fruit,index) =>{
-  console.log(index + ': ' + fruit);
-}) 
-
 
 --------------------------------------------------------------------------------------------------
-EJercicio 4: Ejecutando 2 funciones con addEventListener y guardando la selección en una variable
+EJercicio 8: Ejecutando 2 funciones con addEventListener y guardando la selección en una variable
 Para esto creamos un boton en html que tenga un id
 
 let x = document.getElementById("dosFunciones");
@@ -57,7 +116,7 @@ function funcionDos() {
   alert ("Me ejecuto despues de la función uno, SOY LA FUNCION 2");
 }
 ----------------------------------------------------------------------------------------------------------
-EJercicio 5: te imprime texto cuando estas sobre el boton, quitas el mouse encima del boton y cuando das click.
+EJercicio 9: te imprime texto cuando estas sobre el boton, quitas el mouse encima del boton y cuando das click.
 
 let x = document.getElementById("variasFunciones");
 x.addEventListener("mouseover", myFunction);
@@ -76,7 +135,7 @@ function myThirdFunction() {
   document.getElementById("imprimir").innerHTML += "QUitaste el mouse de encima de mi!<br>";
 }
 -----------------------------------------------------------------------------------------------------
-Ejercicio 6 y 7 : te imprime el tamaño de la ventana del navegador
+Ejercicio 10 y 11 : te imprime el tamaño de la ventana del navegador
 
 En esta se ejecuta "cuando se redimensiona", osea que tienes que hacer chico el navegador para que imprima
 window.addEventListener("resize", function(){
@@ -94,7 +153,7 @@ EN este te imprime de inmediato el tamaño que tenga
   })();
 
 --------------------------------------------------------------------------------------------------------
-Ejercicio 8: Este ejemplo demuestra cómo pasar valores de parámetros cuando se utiliza el método addEventListener()
+Ejercicio 12: Este ejemplo demuestra cómo pasar valores de parámetros cuando se utiliza el método addEventListener()
 y esta siendo llamada por una función anónima.
 
 let p1 = 5;
@@ -107,69 +166,13 @@ function myFunction(a, b) {
   document.getElementById("demo1").innerHTML = a * b;
 }
 ----------------------------------------------------------------------------------
-Ejercicio 9: El ejercicio de arriba con menos código
+Ejercicio 13: El ejercicio de arriba con menos código
 
 document.getElementById("suma").addEventListener("click", function() {
     let p1 = 5;
     let p2 = 7;
     document.getElementById("demo1").innerHTML = p1 * p2;
-});
--------------------------------------------------------------------------------
-                            forEach
-Ejercicio 10
-const names = ["Pedro","Paco","LOla","gerardo"];
-names.forEach((name)=>{
-    console.log(name)
-})
--------------------------------------------------------------
-                            .map()
-Ejercicio 11: Utilizando la función .map
-Este método crea un nuevo array con los resultados de aplicar dicha función de callback a cada elemento del array original.
-
-const numeros = [1, 2, 3, 4, 5];
-
-const dobles = numeros.map(function(elemento) {
-  return elemento * 2;
-});
-
-console.log(dobles); // [2, 4, 6, 8, 10]
--------------------------------------------------------
-Ejercicio 12: el ejemplo de arriba pero usando los otros parámetros que la función de callback
-
-const numeros = [1, 2, 3, 4, 5];
-
-const resultado = numeros.map(function(elemento, indice, array) {
-  console.log('Elemento:', elemento); // Imprime el elemento actual
-  console.log('Índice:', indice);     // Imprime el índice del elemento actual
-  console.log('Array:', array);       // Imprime el array original
-  return elemento * 2;
-});
-
-console.log(resultado); // [2, 4, 6, 8, 10]
------------------------------------------------------------------------
-
-Ejercicio 13: Podemos usar thisArg para cambiar el contexto de this dentro de la función callback:
-const multiplicador = {
-  factor: 3
-};
-
-const numeros = [1, 2, 3, 4, 5];
-
-const resultado = numeros.map(function(elemento) {
-  return elemento * this.multiplicador;
-}, multiplicador);
-
-console.log(resultado); // [3, 6, 9, 12, 15]
-
-
-Resumen
-
-    La función callback de .map() se aplica a cada elemento del array.
-    Devuelve un nuevo array con los resultados de la función callback aplicada a cada elemento.
-    callback recibe hasta tres argumentos: elemento, índice, y arrayOriginal.
-    thisArg puede ser usado para establecer el valor de this en la función callback.
-
-.map() es útil cuando necesitas transformar cada elemento de un array de manera consistente.
+});}
 
 -------------------------------------------------------------------------------------
 Ejercicio 14:Usando el metodo callback llamado .find(), has que me imprima un número mayor 
@@ -191,6 +194,7 @@ El método find detiene su ejecución en cuanto encuentra un elemento que cumple
 sin revisar los elementos restantes del array.
 
 --------------------------------------------------------------------------------------------
+
 Exercise 15: Encuentra la cantidad de alguna fruta utilizando el metodo callback .find() , 
 estos datos se encuentran dentro de un array que contiene muchos objetos, 1 en cada posicion de
 memoria, crea ese array con sus objetos, como atributos debe de tener el nombre de una fruta y 

@@ -942,6 +942,7 @@ cuadradoPromise(0)
 
 EJERCICIO 14: crear 2 funciones que retornen promesas, cada una con un retrazo de 2 segundos, 
 una promesa debe de ejecutar a la otra y una de esas funciones debe devolver un texto que diga hola mundo
+
 const miPromesa = new Promise((resolve, reject) => {
   console.log("Estás haciendo algo")
   setTimeout(() => {

@@ -1,4 +1,4 @@
-/*      ESPACIOS GENERALES      */
+/*      ESTILOS GENERALES      */
 *{
     margin: 0;
     padding: 0;
@@ -95,7 +95,7 @@ están en medio
         max-height: 0; /* Inicialmente oculto */
         overflow: hidden; /* Evita que se vean los elementos antes de la transición */
         transition: 0.5s ease-in-out; /* Hace la transición más suave */
- }
+    }
 
     .nav-links{
         margin: 0;
