@@ -6,58 +6,55 @@ rápido, luego ya veo.
 3-Checar todos los cursos de Javascript que tengo, para ver con que sigo
 
 ROADMAP según yo:
--Variables y constantes LISTO
-1-Tipos de datos LISTO
-2-arrays LISTO
-3-objetos LISTO
-4-if-else LISTO
-5-TIpos de operadores LISTO
-6-if shorts
-7-try-catch LISTO
-8-while
-9-do-while
-10-for 
-11-for of
-12-for in
-13-funciones
-14-funciones flecha
-15-this
-16-Destructuración (Pueden ir aquí )
-17-Rest & Spread (Pueden ir aquí )
-18-Prototipos
-19-clases y herencia
-20-callback
-21-Promesas
-22-DOm
-23-Consumo de API's
-24-Ajax
-25-Async/await
-26-NPM
-27-JQuery
-28-Destructuracion, rest & spread (Pueden ir aquí )
-29-BigInt & Symbol
-30-Vue JS
+1-Diferencia entre var y let
+2-tipos de datos: string, number, boolean,NaN,undifined, objetos, null, funciones
+3-tipos de operadores
+4-Crear un array multidimensional
+5-Lograr imprimir un NaN
+6-Crear un objeto
+7-tipos de funciones
+8-Crear un short if
+9-Diferencia entre una función simple y una arrow function 
+10-ejecutar funciones dentro de objetos
+11-funciones con un if-short(checar como se llaman realmente)
+12-funciones predefinidas para texto
+13-funciones predefinidas para números
+14-funciones predefinidas para arrays
+15-funciones predefinidas para objetos
+16-obtejos con funciones predefinidas
+17-for of con funciones predefinidas
+18-funciones predefinidas de matematicas 
+19-Explicar el this
+20-POO basado en prototipos
+21-clases
+22-creando objetos de diferente manera
+23- diferentes console
+24-diferencia entre prompt-confirm-alert
+25- expreciones regulares
+26-temporizadores( setTimeout)
+27-asincronia
+28-callbacks
+29-callback functions
+30-clousures
+31-promesas
+32-promesas con callback functions
+33-AJAX-JSON
+34-CONSUMIR promesas usando FETCH
+35-CONSUMIR API's usando AXIOS
+36-npm
+37-yarn
+38-pnpm
+39-vite
+40-Async-Await
+41-DOM
+42-BOM
+43-destructuración-arrays
+44-destructurar objetos
+45-Parametros rest-spread
+46-JQUERY
+47-CONSUMIR API's usando JQuery
+48-VUE JS 3
 
-TEMAS Generales, sin entrar en detalles
-
-1-Variables, tipos de datos y constantes
-2-arrays
-3-objetos
-4-if-else
-5-if shorts
-6-try-catch
-7-for(arrays) y while-do-while
-8-for in(objetos)
-9-for-of
-10-for con if
-11-funciones normales
-12-funciones flecha
---------------------(Ordenar hasta aquí, después vemos lo demás, porque seguro saldrán más cosas)
--destructuración
--Parametros rest/spread
--callback
--promesas
--DOM
 
 Temas que se verán, ya con temás a profundidad
 -VAR vs LET

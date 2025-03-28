@@ -11,21 +11,20 @@ NaN se utiliza para representar un valor numérico que no es un número válido 
 Symbol: Introducido en ECMAScript 6 (ES6), representa un identificador único e inmutable.
 bigint; es un tipo de dato primitivo introducido en ECMAScript 2020. Este tipo de dato se utiliza para representar números enteros arbitrariamente grandes, que van más allá del límite de precisión que proporciona el tipo de dato number.
 
+Object: Es un tipo de dato "no primitivo",  llamado Object, que puede almacenar colecciones de datos y funciones.
+funciones: son un tipo de dato "no ´primitivo"
+clases:
 */
 
 //Null:Representa un valor ausente, es decir, una variable que no tiene valor PERO se utiliza
 //para indicar la ausencia de un valor asignado de manera "intencional", para decir que "esta vacía".
-//-------------------------------------------------------------------------------------------------------------
 //Undifined:Representa un valor ausente, es decir, una variable que no tiene valor PERO esta es una variable que no ha sido inicializada.
 //Osea una variable que no se le asigno valor y que aparte no se le asigno ninguno cuando se creo,
 //entonces cuando javascript detecta una variable no tiene valor, le asigna "undefined"
-//-------------------------------------------------------------------------------------------------------------
 //NaN: cuando quieres hacer una operación aritmetica con un dato que no es un número.
 
-//primer dato lo toma como un número que hace una operación
 //True y False se toman como 1 y 0
 //Undifined NO ES un número, define algo que no es un valor
-
 //Infinity es un valor especial que se utiliza para representar matemáticamente un número que es mayor
 //que cualquier otro número posible en JavaScript.Infinity es un tipo de dato primitivo(number)
 
@@ -38,8 +37,12 @@ dependiendo del signo del número. En este caso específico,
 true se convierte internamente en 1 al ser tratado como un número en una operación matemática,
 y null es interpretado como 0 en este contexto. Entonces, 1 / 0 resulta en Infinity.
  
-NULL NO ES OBJECT
+------------------------------------
 
+EXPLICACIÓN DE NULL
+
+NULL NO ES OBJECT
+EXPLICACION Y EJEMPLO DE NULL
 let num1 = null;
 console.log(typeof num1)
 
@@ -49,15 +52,62 @@ y fue replicado en otras implementaciones para mantener la compatibilidad.
 Sin embargo, esto se considera un error de diseño de JavaScript
 y no es representativo de cómo se trata null en el lenguaje.
 
-En realidad, null es un valor primitivo en JavaScript y no un objeto. La función typeof null ahora devuelve 'object' por razones de compatibilidad con versiones anteriores, pero en términos precisos, null es un tipo de dato primitivo y no un objeto.
-Para verificar si un valor es null, lo mejor es usar una comparación estricta (===) con null. Por ejemplo:
+En realidad, null es un valor primitivo en JavaScript y no un objeto.
+La función typeof null ahora devuelve 'object' por razones de compatibilidad con versiones anteriores,
+pero en términos precisos, null es un tipo de dato primitivo y no un objeto.
+Para verificar si un valor es null, lo mejor es usar una comparación estricta (===) con null. 
+
+Por ejemplo:
 var myVar = null;
 if (myVar === null) {
     console.log("myVar es null");
 } else {
     console.log("myVar no es null");
 }
+--------------------------------------
+"use strict"
+Es una opción disponible en JavaScript que restringe ciertas acciones,
+hace que el código sea más seguro y ayuda a evitar errores comunes. Para activar el modo estricto,
+simplemente agregue el siguiente código al principio de su archivo JavaScript o de una función específica:
+'use strict';
 
+Restricciones que se aplican en el modo estricto:
+-La creación de variables sin declarar con "var", "let" o "const" arrojará un error.
+-La asignación a propiedades de solo lectura arrojará un error.
+-El uso de palabras clave reservadas como "eval" y "arguments" como nombres de variables arrojará un error.
+-Las funciones no pueden tener parámetros o nombres de parámetros duplicados.
+-No se puede eliminar una variable, función o argumento de función.
+
+El modo estricto es una buena práctica recomendada para escribir un código más seguro y
+prevenir errores comunes.
+
+
+Algunos casos comunes en los que se utiliza el valor null incluyen:
+-Cuando se inicializa una variable y aún no se le ha asignado ningún valor.
+-Cuando se quiere indicar que una propiedad de un objeto no tiene un valor asignado.
+-Como un valor de retorno para indicar que una función no ha encontrado un resultado válido.
+Es importante tener en cuenta que null es un valor asignable, 
+lo que significa que una variable puede ser explícitamente establecida en null.
+Sin embargo, también es importante tener en cuenta que null se evalúa como "falso en contextos booleanos",
+lo que significa que una expresión que contiene null se considera falsa en una evaluación booleana.
+
+Por ejemplo:
+La expresión if (null) se evalúa como falsa,
+lo que significa que el bloque de código dentro del if no se ejecutará.
+
+EJEMPLO DEL TIPO DE DATO NULL
+Un ejemplo práctico en el que se podría utilizar el valor null en JavaScript es en la creación de un objeto person con propiedades opcionales, como middleName.
+Supongamos que queremos crear un objeto que represente a una persona con un nombre, un apellido y un posible segundo nombre. Si no se proporciona un segundo nombre, podemos establecer la propiedad middleName en null para indicar que no se ha proporcionado un valor.
+
+let person = {
+  firstName: 'Juan',
+  lastName: 'Pérez',
+  middleName: null
+};
+
+console.log(person.middleName); // null
+
+---------------------------------------------
 PALABRAS RESERVADAS QUE NO SE PUEDEN USAR
 Esto debido a que te marcaría error o te puede afectar en el desarrollo de tu proyecto
 Por ejemplo: 
@@ -127,8 +177,6 @@ volatile
 while
 with
 
-
-
 ------------------------------------------------------------
 
 console.log(undefined + 'hola');//undifinedhola
@@ -173,74 +221,7 @@ console.log({}*'hola');//Nan
 console.log({}+2);//[object object]2
 */
 
-/**
- 
-Temas:
--Variables y Tipos de datos(VAR vs LET)
--Template stings
--Valores primitivos
-
-
-
---------------------------------------------------------------------------------------
-Los 8 tipos de datos en JavaScript
-Undefined.
-Boolean.
-Number.
-String.
-BigInt.
-Symbol.
-Null.
----------
-Object: Es un tipo de dato "no primitivo",  llamado Object, que puede almacenar colecciones de datos y funciones.
-funciones: son un tipo de dato "no ´primitivo"
-clases: 
----------
-"use strict"
-Es una opción disponible en JavaScript que restringe ciertas acciones,
-hace que el código sea más seguro y ayuda a evitar errores comunes. Para activar el modo estricto,
-simplemente agregue el siguiente código al principio de su archivo JavaScript o de una función específica:
-'use strict';
-
-Restricciones que se aplican en el modo estricto:
--La creación de variables sin declarar con "var", "let" o "const" arrojará un error.
--La asignación a propiedades de solo lectura arrojará un error.
--El uso de palabras clave reservadas como "eval" y "arguments" como nombres de variables arrojará un error.
--Las funciones no pueden tener parámetros o nombres de parámetros duplicados.
--No se puede eliminar una variable, función o argumento de función.
-
-El modo estricto es una buena práctica recomendada para escribir un código más seguro y
-prevenir errores comunes.
-
-                        TIPOS DE DATOS
-El valor null en JavaScript se utiliza para representar la ausencia intencional de cualquier objeto o valor. 
-Es decir, se usa para indicar que una variable o propiedad no tiene un valor o referencia a un objeto.
-
-Algunos casos comunes en los que se utiliza el valor null incluyen:
--Cuando se inicializa una variable y aún no se le ha asignado ningún valor.
--Cuando se quiere indicar que una propiedad de un objeto no tiene un valor asignado.
--Como un valor de retorno para indicar que una función no ha encontrado un resultado válido.
-Es importante tener en cuenta que null es un valor asignable, 
-lo que significa que una variable puede ser explícitamente establecida en null.
-Sin embargo, también es importante tener en cuenta que null se evalúa como "falso en contextos booleanos",
-lo que significa que una expresión que contiene null se considera falsa en una evaluación booleana.
-
-Por ejemplo:
-La expresión if (null) se evalúa como falsa,
-lo que significa que el bloque de código dentro del if no se ejecutará.
-
-
-EJEMPLO DEL TIPO DE DATO NULL
-Un ejemplo práctico en el que se podría utilizar el valor null en JavaScript es en la creación de un objeto person con propiedades opcionales, como middleName.
-Supongamos que queremos crear un objeto que represente a una persona con un nombre, un apellido y un posible segundo nombre. Si no se proporciona un segundo nombre, podemos establecer la propiedad middleName en null para indicar que no se ha proporcionado un valor.
-
-let person = {
-  firstName: 'Juan',
-  lastName: 'Pérez',
-  middleName: null
-};
-
-console.log(person.middleName); // null
+/*
 
 
 Ejercicio 1: Imprimir con template strings(las comillas se llaman tildes invertidas)
