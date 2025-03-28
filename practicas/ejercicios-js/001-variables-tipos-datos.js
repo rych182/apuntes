@@ -1,5 +1,7 @@
 //JON MIRCHA CHAPTER 9: NULL, UNDIFINED Y NAN: LISTO
 
+
+
 /*
 DATOS PRIMITIVOS
 Number: Números enteros y de punto flotante, como 1, 3.14, -10, etc.
@@ -240,11 +242,6 @@ EJERCICIO 4: declara un array e imprimelo
 let cadena = ["Mexico", "USA", "Canada"];
 console.log(cadena);
 
-Ejercicio 5:
-Creame un Array que contenga estados de la república y que dentro tenga un objeto que contenga capitales de la republica,
-después de debes imprimir con template string 2 estados de la república con su correspondiente capital.
-
------------------------------------------------------------------------------------------------------------------
 =========SE RECOMIENDAN PARA IR DESARROLLANDO LA LÓGICA, SE LOS PUEDES ENSEÑAR DESPUÉS DE VER FUNCIONES===========
 Ejercicios con distintos tipos de datos
 Ejercicio 6: que imprime en la consola
@@ -300,49 +297,12 @@ true se convierte internamente en 1 al ser tratado como un número en una operac
 y null es interpretado como 0 en este contexto. Entonces, 1 / 0 resulta en Infinity.
  
 console.log(true/null)//Infinity
-----------------------------------------------------------------------------------------------------
----------------------------------------------------------
-Ejercicios con distintos tipos de datos
-Ejercicio 9: que imprime en la consola, datos boleanos con otros
 
-
-
-
-
----------------------------------------------
-
----------------------------------------------
-Ejercicio 8;
-(function() {
-  let a = b = 5;
-})()
-console.log(b)
-
-5
--------------------------
-Ejercicio 9: cual es el resultado de este código
-for (let i = 0; i < 5; i++) {
-  setTimeout(function(){
-    console.log(i);
-  }, i * 1000)
-
-  0,1,2,3,4
-  ----------------------------
+----------------------------
   Ejercicio 10: que error marca(error de sintaxis)
   'use strict';
 let x = 021;
 ----------------------------------------------------------
-EJERCICIO 11: No hacer esto en un exámen técnico
-
-let autenticado = true;
-//de por si da true
-if (autenticado === true) {
-  console.log("si puedes ver netflix")
-}else{
-  console.log("No no puedes verlo");
-}
---------------------------------------------------------
-Ejercicio 12: 
 
 
 

@@ -163,4 +163,17 @@ if (null) {
     console.log("Otra cosa")
 }
 
+----------------------------------------------------------
+
+EJERCICIO 11: No hacer esto en un exámen técnico
+
+let autenticado = true;
+//de por si da true
+if (autenticado === true) {
+  console.log("si puedes ver netflix")
+}else{
+  console.log("No no puedes verlo");
+}
+
+
 */

@@ -1,9 +1,4 @@
 /*
--Hacer varios ejercicios de arreglos
--Deben de contener: strings, numbers, booleans, arrays y funciones
--Después vemos como las muestras o ejecutas pero ve haciendolas
--Ten un archivo de practica donde las puedas ver todas y ten un archivo donde solo codies como con los ejercicios de php
-
 
 Nota: Es muy raro tener 3 niveles de arrays
 
@@ -59,6 +54,5 @@ console.log(datos[2]);
 Ejercicio 4: Array que tenga strings, números, boleanos y nulos
 let datos = [19, 'Gato', true, null];
 console.log(datos[3]);
-
 
 */

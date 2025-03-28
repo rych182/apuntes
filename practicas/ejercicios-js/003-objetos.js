@@ -133,5 +133,4 @@ Tampoco permite eliminar
 Object es un objeto incorporado que proporciona un conjunto de métodos y propiedades
 para trabajar con objetos.Aunque Object es un objeto en sí mismo,
 es más preciso describirlo como una función constructora que puede crear objetos.
-
 */
