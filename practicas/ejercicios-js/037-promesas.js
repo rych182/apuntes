@@ -209,7 +209,6 @@ const datos = () => {
     return students
     //hay un retrazo pequeñisimo, pero el console.log se ejecuta al instante
   }, 50);
-  
   return estudiantes
 }
 console.log(datos())
@@ -219,7 +218,7 @@ console.log(datos())
 //Si quitas el setTimeout, si te muestra los datos
 console.log(datos())
 
-===
+==================================
 AQUÍ ESTA EL CÓDIGO RESUELTO
 
 const estudiantes = [
