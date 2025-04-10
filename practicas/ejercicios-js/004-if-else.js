@@ -1,13 +1,18 @@
-let hora = 0;
-if (hora < 12 && hora >= 5) {
-    console.log("BUenos días!");
-} else if (hora >= 12 && hora < 19) {
-    console.log("BUenas tardes!");
-} else if (hora >= 19 && hora <= 24 || hora < 5 && hora > 0) {
-    console.log("BUenas noches!");
-} else {
-    console.log("Hora no valida");
+const cadenaDeTexto = "hola";
+const numero = 12;
+const indefinido = undefined;
+const nulo = null;
+const vector = [1,"hola"]
+const objeto={name:"ric",apellido:"garrido"}
+const funcion = function() {
+    return 3;
 }
+if (funcion) {
+    console.log("imprime verdadero")
+}else{
+    console.log("imprime falso")
+}
+
 /*
 
 las condicionales son un concepto más fundamental y, por lo tanto, es recomendable aprenderlas antes que los bucles.
@@ -34,7 +39,7 @@ que pueden ser difíciles de comprender sin una base sólida en los conceptos m�
 /*
 
 Ejercicio 1, hacer los días de la semana con if-else-else if
-let dia = 1;
+let dia = "hola";
 if (dia === 0) {
     console.log(`Es Domingo`);
 } else if (dia === 1) {
@@ -46,13 +51,15 @@ if (dia === 0) {
 } else if (dia === 4) {
     console.log(`Es Jueves`);
 } else if (dia === 5) {
-    console.log(`Es VIernes`);
+    console.log(`Es Viernes`);
 } else if (dia === 6) {
     console.log(`Es Sábado`);
+}else{
+    console.log("ese día no existe")
 }
 
 EJERCICIO 2
-Un programa con if que te salude dependiendo la hora
+Hacer un programa con if que te salude dependiendo la hora
 let hora = "q";
 if (hora < 12 && hora >= 5) {
     console.log("BUenos días!");
@@ -76,21 +83,27 @@ if (puntaje > 50) {
 }
 
 
-EJERCICIO 4
-Checa si puedes pagar en efecto ó efectivo + crédito o no puedes pagarlo utilizando if
+EJERCICIO 4: Hacer este ejercicio
+-Solo puedes utilizar if-else, else if , tipos de operadores y console.log
+-Crea 4 posibles respuestas, pagar en efectivo, efectivo + crédito, o no te alcanza para pagarlo,
+el número no puede ser negativo y el dato no es valido 
+
 let efectivo = 300;
 let credito = 300;
-let pago = 200;
+let pago = 500;
 let total = efectivo + credito;
-let cambio0 = efectivo - pago;
 let cambio = (efectivo + credito) - pago;
+let cambio0 = efectivo - pago;
 
-if (efectivo >= pago) {
+
+if (pago < 0) {
+    console.log("El número no puede ser negativo")
+} else if (efectivo >= pago) {
     console.log(`Puedo pagar y me sobra de cambio en efectivo ${cambio0}`);
-} else if (efectivo < pago && total >= pago) {
-    console.log(`No me alcanza, usaré crédito y me sobran ${cambio} de crédito`);
-} else if (pago > total) {
-    console.log("No puedo comprarlo =/");
+} else if (efectivo < pago && efectivo + credito >= pago) {
+    console.log(`No me alcanza, pagare una parte en efectivo y otra a crédito y me sobran ${cambio} de crédito`);
+} else if(pago > total){
+    console.log("No puedo comprarlo, no me alcanza =/");
 } else {
     console.log("Dato no valido");
 }
@@ -122,11 +135,12 @@ let carritoCompras = 300;
 if (efectivo > carritoCompras)
     console.log("Puedes pagar");
 else
-    console.log("Te falt dinero para la compra");
+    console.log("Te falta dinero para la compra");
+
 
 EJERCICIO 7
 Ejericio scope global y bloque(dentro de un if), sirve para ver lo que imprime y como 
-la palabra reservada VAR se vuelve global
+la palabra reservada VAR se vuelve global, entonces imprimira AA tanto en bloque como en global
 var a = 'a';
 let b = 'b';
 const c = 'c';
@@ -139,6 +153,7 @@ if (true) {
 }
 console.log('GLOBALES: ', a, b, c);
 
+
 Ejercicio 8
 Checa el scope de las variables let, son locales, no globales, por eso en esta función no lo muestra
 let edad = 18;
@@ -148,6 +163,7 @@ if (edad => 18) {
 console.log(eresAdulto);
 
 
+EJERCICIO 9: ver que es lo que me muestra
 const cadenaDeTexto = "hola";
 const numero = 12;
 const indefinido = undefined;
@@ -157,10 +173,10 @@ const objeto={name:"ric",apellido:"garrido"}
 const funcion = function() {
     return 3;
 }
-if (null) {
-    console.log("imprime algo")
+if (funcion) {
+    console.log("imprime verdadero")
 }else{
-    console.log("Otra cosa")
+    console.log("imprime falso")
 }
 
 ----------------------------------------------------------

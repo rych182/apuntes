@@ -1,4 +1,5 @@
-console.log('2'>'12');//TRUE  
+
+
 
 
 /*
@@ -28,9 +29,9 @@ Concatenación:  + .
 Operadores de bit a bit: realizan operaciones a nivel de bits en números enteros.
 Algunos ejemplos son & (AND a nivel de bits), | (OR a nivel de bits), ^ (XOR a nivel de bits) y << (desplazamiento a la izquierda).
 
-Condicionales (ternarios):  ? :, permite realizar una evaluación CONDICIONAL en una línea.
+Condicionales (OPERADOT TERNARIO, el if short):  ? :, permite realizar una evaluación CONDICIONAL en una línea.
 
-Operadores de instancia y tipo: como typeof e instanceof, se utilizan para comprobar el tipo de un valor o verificar si un objeto es una instancia de una clase.
+Operadores de "instancia y tipo": como typeof e instanceof, se utilizan para comprobar el tipo de un valor o verificar si un objeto es una instancia de una clase.
 
 Miembros: Estos operadores, como . y [], se utilizan para acceder a propiedades y métodos de objetos.
 
@@ -61,7 +62,7 @@ if (numero1 != numero2) {
 } else {
   console.log("Los números son iguales en valor (sin considerar el tipo).");
 }
-
+-----------------------------------------------------------------
 
 Operadores aritmeticos
 + , - , * , / , %modulo, ()agrupación
@@ -110,15 +111,14 @@ console.log(7===7)// true
 console.log(7==='7')// false
 console.log(0===true)// false
 
-INCREMENTO Y DECREMENTO
+//INCREMENTO , DECREMENTO Y MULTIPLICADOR
 let i = 1;
-
-i = i +2; //esto es igual que lo de abajo
-i +=3;
-restando
-i -= 3;
-multiplicando i*=3
-
+i = i +2//3
+i +=3//6
+i +=4//10
+i -= 3//7
+i*=3 //21
+console.log(i)
 
 
 */

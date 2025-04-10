@@ -23,7 +23,7 @@ unPinshiObjeto.correo = "correo@correo.com";
 console.log(unPinshiObjeto);
 
 
-Ejercicio 3 Crear un objeto, mostrar su contenido Y BORRAR una propiedad del objeto 
+Ejercicio 3 Crear un objeto, mostrar su contenido Y BORRA una propiedad del objeto 
 let persona = {
     nombre: "Ricardo",
     edad: 33,
@@ -46,6 +46,7 @@ let persona = {
 }
 delete persona.vivo;
 console.log(persona);
+
 
 Ejercicio 4 Agregar una nueva propiedad al objeto
 let persona = {
@@ -104,7 +105,7 @@ persona.sexo = "masculino";
 console.log(persona.sexo);
 --------------------------------------------------------------------------
 Ejercicio 8
-Borrar un dato de un objeto dentro de una constante
+Borra un dato de un objeto dentro de una constante
 const persona = {
   nombre: "ric",
   edad: 37
