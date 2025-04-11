@@ -1,12 +1,18 @@
-for (i = 1; i <= 12; i= i+2) {
-    console.log(i);
-}
 
-/*
-for (let i = 0; i <= amigos.length; i++) {
-    console.log(nombre[i]);
+var alumno = [
+    [10, 8, 4, 6, 9],
+    [10, 8, 4, 6, 9],
+    [10, 8, 2, 6, 9],
+    [10, 8, 10, 6, 9],
+    [10, 8, 10, 6, 9]
+];
+let sumaCalificaciones = 0;
+for (let i = 0; i < alumno.length; i++) {
+    for (let j = 0; j < alumno.length; j++) {
+        sumaCalificaciones += alumno[i][j];
+    }
 }
-*/
+console.log(sumaCalificaciones);
 
 
 /*
@@ -62,7 +68,13 @@ for (let i = 10; i > 0; i--) {
     console.log(i);
 }
 
-Ejercicio 3: imprime del 1 al 10 pero llegando al 5 se detenga
+Ejercició 3: Haz un ciclo que imprima los números del 0 al 10 pero que vaya de 2 en 2
+for (i = 1; i <= 12; i= i+2) {
+    console.log(i);
+}
+
+
+Ejercicio 4: imprime del 1 al 10 pero llegando al 5 se detenga
 for (let i = 1; i <= 10; i++) {
   if (i === 5) {
     break; // Se detiene cuando i es igual a 5
@@ -70,7 +82,7 @@ for (let i = 1; i <= 10; i++) {
   console.log(i); // Imprime el valor de i
 }
 
-Ejercicio 4: imprime del 1 al 10 pero que salte el número 5
+Ejercicio 5: imprime del 1 al 10 pero que salte el número 5
 for (let i = 1; i <= 10; i++) {
     if (i === 4) {
       continue; // Salta el número 5
@@ -78,29 +90,30 @@ for (let i = 1; i <= 10; i++) {
     console.log(i); // Imprime el valor de i
   }
 
-Ejercicio 5, Hacer un for que imprima mis amigos
+Ejercicio 6, Hacer un for que imprima mis amigos
 let countries = ['Mexico', 'USA', 'Canada', 'Japan', 'SOuth Korea'];
 for (let i = 0; i < 5; i++) {
-console.log(countries[i]);
+    console.log(countries[i]);
 }
 
-Ejercicio 6, for anidado. Imprime 0.0 , 0.1 hasta 2.4
+Ejercicio 7, for anidado. Imprime 0.0 , 0.1 hasta 2.4
 for (let i = 0; i < 3; i++) {
-let a = i + ".";
-//const element = array[index];
-for (let j = 0; j < 5; j++) {
-//const element = array[j];
-console.log(a + j);
-}
+    let a = i + ".";
+    //const element = array[index];
+    for (let j = 0; j < 5; j++) {
+        //const element = array[j];
+        console.log(a + j);
+    }
 }
 
 
-Ejercicio 7, imprimir(recorrer,asi le dicen) la cantidad de datos que se encuentran dentro del array
+Ejercicio 8: Crear un array multidimensional con números e
+ imprimir(recorrer,asi le dicen) la cantidad de datos que se encuentran dentro del array
 var alumno = [
-[10, 8, 4, 6, 9],
-[10, 8, 4, 6, 9],
-[10, 8, 2, 6, 9],
-[10, 8, 10, 6, 9]
+    [10, 8, 4, 6, 9],
+    [10, 8, 4, 6, 9],
+    [10, 8, 2, 6, 9],
+    [10, 8, 10, 6, 9]
 ];
 
 for (let i = 0; i < alumno.length; i++) {
@@ -109,7 +122,7 @@ for (let i = 0; i < alumno.length; i++) {
     }
 }
 ----------------------------------------------------------
-Ejercicio 8: Sumar las calificaciones
+Ejercicio 9: Sumar las calificaciones
 
 var alumno = [
     [10, 8, 4, 6, 9],
@@ -117,17 +130,12 @@ var alumno = [
     [10, 8, 2, 6, 9],
     [10, 8, 10, 6, 9],
     [10, 8, 10, 6, 9]
-
 ];
 let sumaCalificaciones = 0;
-let materias = 0;
 for (let i = 0; i < alumno.length; i++) {
-
-for (let j = 0; j < alumno.length; j++) {
-sumaCalificaciones += alumno[i][j];
-materias++;
-}
-
+    for (let j = 0; j < alumno.length; j++) {
+        sumaCalificaciones += alumno[i][j];
+    }
 }
 console.log(sumaCalificaciones);
 
@@ -140,7 +148,6 @@ var alumno = [
     [10, 8, 2, 6, 9],
     [10, 8, 10, 6, 9],
     [10, 8, 10, 6, 9]
-
 ];
 let sumaCalificaciones = 0;
 let materias = 0;
@@ -155,7 +162,7 @@ let total = sumaCalificaciones / materias;
 console.log(total);
 
 ---------------------------------------------------------------------------------------------------
-Ejercicio 12: Imprime reprobado cada que haya sacado menos de 6 en una materias
+Ejercicio 11: Imprime reprobado cada que haya sacado menos de 6 en una materias
 var alumno = [
     [10, 8, 4, 6, 9],
     [10, 8, 4, 6, 9],
@@ -173,8 +180,7 @@ var alumno = [
         }
     }
 -------------------------------------------------------------------------------------------
-
-Ejercicio 13: busca en los arrays cuantas materias reprobo el alumno
+Ejercicio 12: busca en los arrays cuantas materias reprobo el alumno
 var alumno = [
 [10, 8, 4, 6, 9],
 [10, 8, 4, 6, 9],
@@ -193,19 +199,17 @@ for (let i = 0; i < alumno.length; i++) {
 }
 console.log(`Reprobaste ${reprobadas} materias ¿Para eso te pago la escuela?`);
 --------------------------------------------------------------------------------------------------
-Ejercicio 14:
-Imprimir los objetos dentro de un array usando For
+Ejercicio 13:Imprimir los objetos dentro de un array usando For
 const autos = [
     { modelo: "Mustang", anio: 1962 },
     { modelo: "360z", anio: 2010 },
     { modelo: "Civic", anio: 2007 }
 ];
-
 for (let i = 0; i < autos.length; i++) {
     console.log(autos[i]);
 }
 -------------------------------------------------------------
-Ejercicio 15
+Ejercicio 14
 Imprimir los objetos dentro del array con for pero imprimiendo nombre y modelo
 const autos = [
     { modelo: "Mustang", anio: 1962 },
@@ -217,8 +221,7 @@ for (let i = 0; i < autos.length; i++) {
     console.log(autos[i].modelo + ' del año ' + autos[i].anio);
 }
 ---------------------------------------------------------------
-EJERCICIO 16
-Hacer el mismo ejercicio per imprimiendo con interpolacion
+EJERCICIO 15: Hacer el mismo ejercicio pero imprimiendo con interpolacion
 const autos = [
     { modelo: "Mustang", anio: 1962 },
     { modelo: "360z", anio: 2010 },

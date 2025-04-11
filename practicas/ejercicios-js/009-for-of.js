@@ -1,7 +1,7 @@
 /*
 For of Explicación
 
--Se utiliza para iterar sobre elementos iterables, como arrays, strings, mapas, conjuntos, etc.
+-Se utiliza para iterar sobre elementos como arrays, strings, mapas, conjuntos, etc.
 -Proporciona una forma más sencilla y legible de recorrer los elementos de una estructura iterable.
 -No proporciona acceso directo a los "índices", sino a los valores de los elementos.
 
@@ -19,7 +19,8 @@ for (let value of array) {
 
 for (let index in array) {
     console.log("Índice:", index, "Valor:", array[index]);
-  }
+}
+
 
 EJERCICIO 1:Haz un ciclo con for of para recorrer un array o cadena de texto
 
@@ -29,12 +30,14 @@ for (const iterator of cadena) {
     console.log(iterator);
 }
 
+
 Ejercicio 2, hacer el ejercicio 1 con FOR OF
 let countries = ['Mexico', 'USA', 'Canada', 'Japan', 'SOuth Korea'];
 for (let i of countries) {
     console.log(i);
 }
-Pero se acostumbra poner en singular del nombre del array
+
+//Pero se acostumbra poner en singular del nombre del array
 for (let country of countries) {
     console.log(country);
 }

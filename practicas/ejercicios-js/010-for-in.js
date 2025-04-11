@@ -10,7 +10,7 @@ La elección más común para utilizar for...in en JavaScript es para iterar sob
 
                                 EJERCICIOS CON FOR IN
 
-Ejercicio 0: recorrer el objeto
+Ejercicio 0: recorrer el objeto usando FOR IN
 let myObject = { a: 1, b: 2, c: 3 };
 
 for (let key in myObject) {
@@ -18,7 +18,7 @@ for (let key in myObject) {
 }
 
 
-EJERCICIO 1:Haz un ciclo con for in para recorrer un objeto
+EJERCICIO 1:Haz un ciclo con FOR IN para recorrer un objeto
 let objeto = {
     nombre: "Ric",
     apellido: "Garrido",
@@ -29,7 +29,7 @@ for (const propiedad in objeto) {
 }
 -----------------------------------------------------------------------
 
-Ejercicio 2, recorre el array con for in 
+Ejercicio 2, recorre el array con FOR IN
 let countries = ['Mexico', 'USA', 'Canada', 'Japan', 'SOuth Korea'];
 for (let i in countries) {
     console.log(countries[i]);
