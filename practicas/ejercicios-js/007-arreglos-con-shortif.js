@@ -1,12 +1,3 @@
-let compa = true;
-const amigos = [
-    'Urrutia',
-    'fulano',
-    'sutano',
-    'mengano',
-    compa ? 'perengano' : "el capi"
-];
-console.log(amigos[4]); 
 
 /**
 Ejercicio 1 
@@ -19,7 +10,7 @@ const amigos = [
     'mengano',
     compa ? 'perengano' : "el capi"
 ];
-console.log(amigos); 
+console.log(amigos[4]); 
 
 
  */

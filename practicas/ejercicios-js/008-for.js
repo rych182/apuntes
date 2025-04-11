@@ -1,20 +1,6 @@
-
-var alumno = [
-    [10, 8, 4, 6, 9],
-    [10, 8, 4, 6, 9],
-    [10, 8, 2, 6, 9],
-    [10, 8, 10, 6, 9],
-    [10, 8, 10, 6, 9]
-    ];
-    for (let i = 0; i < alumno.length; i++) {
-        for (let j = 0; j < alumno[i].length; j++) {
-            if (alumno[i][j] > 5) {
-                console.log( "sacaste "+ alumno[i][j] + " Aprobado");
-            } else {
-                console.log("sacaste "+ alumno[i][j] + " Reprobado");
-            }
-        }
-    }
+for (i = 1; i <= 12; i= i+2) {
+    console.log(i);
+}
 
 /*
 for (let i = 0; i <= amigos.length; i++) {
@@ -24,6 +10,8 @@ for (let i = 0; i <= amigos.length; i++) {
 
 
 /*
+Explicación con ChatGPT de porque debes aprender FOR ANTES QUE FUNCIONES
+
 Aprender condiciones y bucles antes que funciones en JavaScript puede ser beneficioso para evitar confusiones 
 porque son conceptos más simples y fundamentales en la programación en general.
 
@@ -42,9 +30,9 @@ que pueden ser difíciles de comprender sin una base sólida en los conceptos m�
  ====================================================================================
                                 Ejercicios con WHILE
  
- Ejercicio 1: imprimir de 1 en 1 hasta que se cumpla la condición
+Ejercicio 0: imprimir de 1 en 1 hasta que se cumpla la condición
 
- let x = 0;
+let x = 0;
 while (x < 17) {
     console.log(x);
     x++;
@@ -55,8 +43,8 @@ EJERCICIO 1:Haz un ciclo con do-while
 
 let x = 0;
 do {
-console.log(x);
-x++;
+    console.log(x);
+    x++;
 } while (x < 17);
 ========================================================================================
                                 EJERCICIOS CON FOR
@@ -64,9 +52,9 @@ APUNTES:
 -Cada let i declarada en un FOR, vive en ese lapso de tiempo del ciclo
 -Cuando hacer un ciclo dentro de otro ciclo se acostumbra cambiar la variable de nombre
 
-EJERCICIO 1:Haz un ciclo con for                                
+EJERCICIO 1:Haz un ciclo con for del 1 al 10                                
 for (i = 0; i <= 10; i++) {
-console.log(i);
+    console.log(i);
 }
 
 Ejercicio 2: Haz un ciclo que vaya del 10 al 0

@@ -1133,6 +1133,7 @@ delayed(7)
 
 -------------------------------------------------------------------------------------------------------------------------------
 EJERCICIO 22: ENCADENAMIENTO DE PROMESAS, puedo usar el resultado de la primer promesa en el segundo .then
+
 quiero que me crees una función que genere una promesa que te de como resultado un número, cuando se ejecute por primera ves esa promesa, quiero que me multipliques
 ese número X 2, y que me muestre ese resultado en la consola
 
