@@ -49,7 +49,7 @@ function clientes() {
     }, 3000);
 }
 
-Ejercicio 3: solo es un ejercicio sencillo para ejemplificar
+Ejercicio 3: solo es un ejercicio sencillo para ejemplificar como funciona el try-catch
 try {
   // Intentamos hacer algo que podría fallar
   let resultado = 10 / 0; // Esto generará un error, porque no puedes dividir por cero
@@ -74,6 +74,7 @@ try {
 } catch (error) {
     console.log(`Algo salio mal ${error}`);
 }
+
 
 Ejercicio 5: Personalizar el mensaje de error
 try {

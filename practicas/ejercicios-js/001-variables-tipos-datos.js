@@ -4,6 +4,22 @@
 
 /*
 DATOS PRIMITIVOS
+
+ Tipos de datos primitivos:
+ -string
+ -number
+ -boolean
+ -null
+ -undefined
+ -NaN
+
+ Tipos de datos compuestos:
+ -Objeto{}
+ -Array[]
+ -funciones{}  <---
+ -Class
+ -etc(Nuevos tipos de datos como: )
+
 Number: Números enteros y de punto flotante, como 1, 3.14, -10, etc.
 String: Secuencias de caracteres, como "Hola mundo", 'JavaScript', etc.
 Boolean: Representa un valor lógico verdadero o falso, es decir, true o false.
@@ -16,6 +32,7 @@ bigint; es un tipo de dato primitivo introducido en ECMAScript 2020. Este tipo d
 Object: Es un tipo de dato "no primitivo",  llamado Object, que puede almacenar colecciones de datos y funciones.
 funciones: son un tipo de dato "no ´primitivo"
 clases:
+
 */
 
 //Null:Representa un valor ausente, es decir, una variable que no tiene valor PERO se utiliza

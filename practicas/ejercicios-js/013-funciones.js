@@ -1,3 +1,5 @@
+
+
 /*
 
 Jon Mircha: CAPITULO TERMINADO
@@ -44,16 +46,16 @@ En una función declarada, defines una función utilizando la palabra clave "fun
 Esta definición se "eleva" al inicio del ámbito en el que se encuentra, 
 lo que significa que puedes llamar a la función incluso antes de haberla definido en tu código.
 
- La ventaja de las declaraciones de función es que se pueden llamar antes
- de la declaración en el código, ya que JavaScript primero "eleva" las
- declaraciones de función "durante la fase de compilación". 
- Esto significa que puedes llamar a la función antes de que aparezca en el código.
+La ventaja de las declaraciones de función es que se pueden llamar antes
+de la declaración en el código, ya que JavaScript primero "eleva" las
+declaraciones de función "durante la fase de compilación". 
+Esto significa que "puedes llamar a la función antes de que aparezca en el código".
 
 
 Funciones Expresadas:
 En una función expresada, defines una función como una expresión en una variable, 
 por lo que la función solo está disponible para ser llamada después de haber sido definida.
-Las funciones expresadas son útiles en:
+Las funciones expresadas son útiles en: IMPORTANTISIMO
 1- "callbacks
 2- funciones anónimas
 3- Clausuras (closures)
@@ -214,7 +216,7 @@ Puedes asignar funciones expresadas a variables en tiempo de ejecución,
 lo que te permite cambiar "qué función se ejecutará en función de las condiciones del programa".
 
 let operacion;
-if (condicion) {
+if (false) {//true or false
   operacion = function(a, b) {
     return a + b;
   };
@@ -225,24 +227,7 @@ if (condicion) {
 }
 console.log(operacion(2, 3)); // Suma o multiplicación según la condición
 
-------------------------------------------------------------------------------------------------------------------
- Tipos de datos primitivos:
- -string
- -number
- -boolean
- -null
- -undefined
- -NaN
-
- Tipos de datos compuestos:
- -Objeto{}
- -Array[]
- -funciones{}  <---
- -Class
- -etc(Nuevos tipos de datos como: )
-
-
- ---------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------
 Ejercicio 17:
  function sum(a, b) {
      return a + b;
