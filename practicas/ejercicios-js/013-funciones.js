@@ -1,5 +1,4 @@
 
-
 /*
 
 Jon Mircha: CAPITULO TERMINADO
@@ -401,7 +400,7 @@ saludar(-2 || "valor de la derecha");
 saludar(0 || "valor de la derecha");
 ---------------------------------------------------------------------------------------
 
-Ejercicio 32
+Ejercicio 30
 Hacer una suma de 2 números asignandoselos en el parentesis, con una función flecha PERO usando return
 
 let operacion = (num1, num2) => {
@@ -410,7 +409,7 @@ let operacion = (num1, num2) => {
 console.log(operacion(2, 3));
 --------------------------------------------------------------------------------------------------------
 
-Ejercicio 33 (Otra manera de ejecutar una función guardandola en una variable)
+Ejercicio 31 (Otra manera de ejecutar una función guardandola en una variable)
 Toda función devuelve "UNDIFINED", porque todas las funciones tienen un "return aunque no este escrito"
 cuando se tiene una función y no tiene un return "específico", devolverá "undifined"
 Demuestra esto
@@ -422,7 +421,7 @@ const almacen = nombre("Ricardo");
 console.log(almacen);
 ------------------------------------------------------------------------------------------------------------
 
-Ejercicio 34
+Ejercicio 32
 Regresar 2 valores en un return, primero la manera mala y luego la buena
 
 MALA(solo imprimira el número 2)
@@ -442,7 +441,7 @@ const almacen = nombre("Ricardo");
 console.log(almacen[0], almacen[1]);
 
 ------------------------------------------------------------------------------------------------
-Ejercicio 35 PROTIP
+Ejercicio 33 PROTIP
 Crear una funcion flecha con "return" que "retorne un objeto" y luego resume ese objeto
 const persona = (nombre, apellido) => {
     return {
@@ -460,14 +459,14 @@ const persona = (nombre, apellido) =>
 const caja = persona('Ricardo', 'Garrido');
 console.log(caja);
 ----------------------------------------------------------------------------------------------
-Ejercicio 36
+Ejercicio 34
 Crea una función con una variable por default si alguna vez alguien no rellena el dato
 let saludar = (nombre = "visitante") => {
     return `Hola ${nombre}`;
 }
 console.log(saludar("Sutano"));
 -------------------------------------------------------------------------------------------
-EJERCICIO 37: Crear las 4 funciones anónimas autoinvocadas
+EJERCICIO 35: Crear las 4 funciones anónimas autoinvocadas
 
 //clasica
 (function() {
@@ -489,13 +488,11 @@ EJERCICIO 37: Crear las 4 funciones anónimas autoinvocadas
     console.log("Soy una función anónima autoejecutable ESTILO FACEBOOK");
 }
 ---------------------------------------------------------------
-EJERCICIO 38:
-Etse ejercicio sirve para ver como se ejecuta un dato y a veces no
+EJERCICIO 36:
+Etse ejercicio sirve para ver como se ejecuta un dato y a veces no,
 dependiendo que dato sea.
-
-//probar todos los datos: string,number,boolear,function,[],{}
 function ejercicioParametros(param1,param2,callback) {
-    callback({},param2)  
+  callback(undefined,param2)  
 }
 
 //string: hay un error
@@ -504,17 +501,17 @@ function ejercicioParametros(param1,param2,callback) {
 //false: NO PASA NADA
 //array: hay un error
 //object: hay un error
+//undifined: NO PASA NADA
 
 
-ejercicioParametros(5,{},(err,post)=>{
-  //basta con que exista algo para que se active el IF
+ejercicioParametros(5,2,(err,post)=>{
+//basta con que exista algo para que se active el IF
   if (err) {
     console.log ("hay un error");
   }
   console.log(post)
 })
 
---------------------------------------------------------------------------------
 
 
 */

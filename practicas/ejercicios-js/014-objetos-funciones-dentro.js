@@ -1,6 +1,18 @@
+let nombre = "ric";
+let edad = 33;
+
+const persona = {
+    nombre: nombre,
+    edad: edad,
+    frase: function() {
+        console.log("Eres un crack!");
+    }
+}
+console.log(persona.edad);
+
 /*
 JON MIRCHA: LISTO
-Ejercicio 1: Ejemplo de objetos literales:(Nueva caracteristica en ES6)
+Ejercicio 1: Ejemplo de objetos literales:(Nueva caracteristica en ES6, puedes resumir el objeto)
 
  const dog = {
     nombre,
@@ -36,7 +48,7 @@ delete persona.vivo;
 console.log(persona);
 --------------------------------------------
 
-Ejercicio 4 Agregar una nueva propiedad al objeto
+Ejercicio 3: Agregar una nueva propiedad al objeto
 let persona = {
     nombre: "Ricardo",
     edad: 33,
@@ -60,17 +72,17 @@ let persona = {
 persona.casado = false;
 console.log(persona);
 -----------------------------------------------
-Ejercicio 5:imprimir la posicion4, Array que tenga strings, números, boleanos, nulos y funciones
+Ejercicio 4:imprimir la posicion , Array que tenga strings, números, boleanos, nulos y funciones
 let datos = [19, 'Gato', true, null, function name() {}];
 console.log(datos[4]);
 ----------------------------------------------------
 
-Ejercicio 6: Imprimir la función que esté en el array
+Ejercicio 5: Imprimir la función que esté en el array
 let datos = [19, 'Gato', true, null, function name() { return "hola" }];
 console.log(datos[4].name);
 --------------------------------------------------------
 
-Ejercicio 7: Array que tenga strings, números, boleanos, nulos, funciones y un array con datos anteriores 
+Ejercicio 6: Array que tenga strings, números, boleanos, nulos, funciones y un array con datos anteriores 
 Imprime la función
 let datos = [19,
     'Gato',
@@ -84,7 +96,7 @@ console.log(datos[5][1]);
 -------------------------------------------------------------------------------------
         Objetos con funciones
 
-***Ejercicio 8: Agregar datos a un objeto desde una variable
+***Ejercicio 7: Agregar datos a un objeto desde una variable
 let nombre = "ric";
 let edad = 33;
 
@@ -98,7 +110,7 @@ const persona = {
 console.log(persona.edad);
 
 
-Ejercicio 9:
+Ejercicio 8:
 Crear un objeto con diferentes tipos de datos y mostrar su contenido
 let persona = {
     nombre: "Ricardo",
@@ -122,7 +134,7 @@ let persona = {
 }
 console.log(persona.otrosAmigos.unila[1]);
 -------------------------------------------------
-Ejercicio 10:  Crear un objeto e inicializar un metodo interior que tenga
+Ejercicio 9:  Crear un objeto e inicializar un metodo interior que tenga
 let ric = {
     nombre: "Ricardo",
     edad: 33,
@@ -139,7 +151,7 @@ let ric = {
 }
 ric.accion();
 -------------------------------------------------------------------
-Ejercicio 11 ejecutar una función dentro de un objeto pasandole un valor por defecto 
+Ejercicio 10 ejecutar una función dentro de un objeto pasandole un valor por defecto 
 let ric = {
     nombre: "Ricardo",
     edad: 33,
@@ -163,7 +175,7 @@ let ric = {
 ric.accion3(2, 3);
 -------------------------------------------------------------------
 
-Ejercicio 12 ejecutar una función dentro de un objeto pasandole un valor por defecto PARA SUMAR
+Ejercicio 11 ejecutar una función dentro de un objeto pasandole un valor por parametro PARA SUMAR
 let ric = {
     nombre: "Ricardo",
     edad: 33,
@@ -187,7 +199,7 @@ let ric = {
 ric.accion3(2, 3);
 ------------------------------------------------------------------------------------------------------
 
-Ejercicio 14 PROTIP: Reestructuracion de argumentos en un objeto cuando hace falta un valor .
+Ejercicio 12 PROTIP: Reestructuracion de argumentos en un objeto cuando hace falta un valor y le pones uno por defecto .
 MANERA 1
 const persona = {
     nombre: 'Ricardo',
