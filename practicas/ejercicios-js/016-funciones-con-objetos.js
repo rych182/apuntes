@@ -1,9 +1,11 @@
-
-
 /*
 //EJEMPLO: pasando datos por REFERENCIA (Todos los objetos se pasan por referencia)
 //En Javascript todos los objetos son pasados por referencia
-EJERCICIO: Vamos a cambiar los datos del objeto utilizando una función
+
+EJERCICIO1: 
+Crear un objeto con las propiedades nombre y edad, y
+crear una función que modifique los valores de ese objeto 
+
 
 function actualizarUsuario(usuario) {
     usuario.nombre = "Alice";
