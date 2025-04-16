@@ -123,6 +123,7 @@ let amigos = ['Nacho', 'Urrutia', 'Jessica', 'Lau'];
 console.log(amigos.find(amigo => amigo.length > 6));
 
 Ejercicio 21:
+
 Encuentra la posición en el arreglo en el que se encuentra el dato que estás buscando
 console.log(amigos.findIndex((amigo) => {
     return amigo === 'Jessica';

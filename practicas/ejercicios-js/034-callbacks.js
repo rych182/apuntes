@@ -270,7 +270,7 @@ function secondAction(data) {
 
 setTimeout(()=> firstAction(secondAction),5000)
 
------------------------------------------------------------------
+---------------------------------------------------------------------------
 
 Ejercicio 9: Hacer el ejercicio anterior pero la función callback debe de
 recibir 2 parametros, la función y texto. También para ejecutar la función
