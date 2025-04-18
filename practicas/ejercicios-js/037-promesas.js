@@ -1,44 +1,3 @@
-/*function generadora() {
-  return new Promise((resolve, reject) => {
-    console.log("Me ejecuto asincronicamente");
-    setTimeout(() => {
-      resolve(42)
-    }, 2000);
-    //reject("Ya valio")
-  })
-}
-
-generadora().then( (res)=>{
-  console.log("Termina mi promesa con", res)
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve(res *2)
-    }, 2000);
-  })
-} ).then( (res)=>{
-  console.log("Termina mi promesa con", res)
-})
-
-console.log("estoy al final del codigo")
-*/
-
-function generadora() {
-  return new Promise((resolve, reject) => {
-    console.log("Me ejecuto asincronicamente");
-    setTimeout(() => {
-      resolve(42)
-    }, 2000);
-  })
-}
-
-generadora().then( (res)=>{
-  console.log("Termina mi promesa con", res)
-  return 2 * res//este return es código SINCRONO, si quieres hacer codigo ASINCRONO, necesitas devolver una promesa
-} ).then( (res)=>{
-  console.log("Termina mi promesa con", res)
-})
-
-console.log("estoy al final del codigo")
 
 
 
@@ -149,6 +108,16 @@ Características Clave de una Promesa
     //Promise.all nos permite "sincronizar" la respuesta de las promesas y que solo tarde una fracción del tiempo
     //porque se ejecutan simultaneamente, la segunda no depende de la primera
     //si una ejecución es más larga que la otra, tardará lo que tarde el proceso más largo
+
+//Promise.all nos permite "sincronizar" la respuesta de las promesas y que solo tarde una fracción del tiempo
+//porque se ejecutan simultaneamente, la segunda no depende de la primera
+//si una ejecución es más larga que la otra, tardará lo que tarde el proceso más largo
+
+
+Promise.resolve no necesita lógica interna
+new Promise((resolve, reject) => { ... }) se usa cuando vas a ejecutar algo asincrónico manualmente (como setTimeout, fetch, etc).
+Usa new Promise((resolve, reject) => {...}) cuando:
+Vas a hacer trabajo asincrónico manualmente, y necesitas controlar cuándo se resuelve o rechaza.
 ---------------------------------------------------------------------------------------------------------
 
 EJEMPLO: 
@@ -1086,150 +1055,8 @@ delayed(7)
   .then(x => Promise.reject("hubo un error"))
   .catch(e => console.log(e))
 
-
-------------------------------------------------------------------------------------------
-Ejercicio 19:Ejemplo de como .then(onError) ejecutaría el error aunque no lo fuera, 
-PORQUE EL ENCADENAMIENTO DE PROMESAS, POR ESO SE DEBE USAR EL .catch()
-
-function fun1() {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve('404')
-    }, 1000);
-  })
-}
-
-function fun2() {
-  //console.log('Function 2')//no llega a ejecutar aquí el segundo parametro .then()
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve('resuelto')
-    }, 1000);
-  })
-}
-
-function onSuccesss(data) {
-  console.log(`Success: ${data}`)
-}
-
-function onError(errorCode) {
-  console.log(`ERROR: ${errorCode}`)
-}
-
-fun1()
-  .then(fun2)
-  .then(onSuccesss)
-  .catch(onError)//.then(onError) ejecutaría el error aunque no lo fuera, porque está encadenado
-
-----------DEMOSTRACIÓN(EL CÓDIGO DE ABAJO)
--Primero se ejecuta fun1(), que es un reject, por lo tanto, 
-se ejecutará EL SEGUNDO PARAMETRO DEL "PRIMER" .then() que es "onError"
--en el primer .then() se ejecuta la función "onError". que espera un dato en un parametro, 
-el parametro "data"(creo que es onError) recibira el 404 que esta dentro del reject,
--después de todo eso, se ejecuta "el segundo .then()" porque el error no lo hicimos con un .catch() si no con un .then() ENTONCES NO SE DETIENE
-
--SI TODO ESTA CORRECTO en la fun1() , se ejecuta fun2() en el primer .then(), y el texto dentro del resolve() se va a pasar como parametro en la
-función "onSuccess"
-
-en resumen: NO HACER ESTO, SE MANEJA ERRORES CON .CATCH()
-
-function fun1() {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      reject('404')
-    }, 1000);
-  })
-}
-
-function fun2() {
-  //console.log('Function 2')//no llega a ejecutar aquí el segundo parametro .then()
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve('resuelto')
-    }, 1000);
-  })
-}
-
-function onSuccesss(data) {
-  console.log(`Success: ${data}`)
-}
-
-function onError(errorCode) {
-  console.log(`ERROR: ${errorCode}`)
-}
-
-fun1()
-  .then(fun2,onError)
-  .then(onSuccesss)
-  .catch(onError)//.then(onError) ejecutaría el error aunque no lo fuera, porque está encadenado
-
-=====ASÍ ESTÁ BIEN EL CÓDIGO==========
-
-function fun1() {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      reject('404')
-    }, 1000);
-  })
-}
-
-function fun2() {
-  //console.log('Function 2')//no llega a ejecutar aquí el segundo parametro .then()
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve('resuelto')
-    }, 1000);
-  })
-}
-
-function onSuccesss(data) {
-  console.log(`Success: ${data}`)
-}
-
-function onError(errorCode) {
-  console.log(`ERROR: ${errorCode}`)
-}
-
-fun1()
-  .then(fun2)
-  .then(onSuccesss)
-  .catch(onError)
-
- ---------------------------------------------------------------------------------------
-EJERCICIO 20: crea una promesa que reciba un número y que cuando se ejecute la promesa se le sume 5, y en un segundo .then() me muestre el resultado 
-const p1 = Promise.resolve(1)//promesa que se resuelve inmediatamente
-console.log(p1)
-p1
-  .then(x => x + 5) // el valor de aquí es distinto porque se encuentran el clousures distintos
-  .then(x => console.log(x))
-
--------------------------------------------------------------------------------------------------------
-EJERCICIO 21:crea una función que reciba un númer y que cuando se ejecute la promesa se le sume 5
-y se vuelva a ejecutar, pero en la segunda ejecución, ejecuta una promesa que también sume OTRA VEZ 5
-const p1 = Promise.resolve(1)//promesa que se resuelve inmediatamente
-console.log(p1)
-p1
-  .then(x => x + 5) // el valor de aquí es distinto porque se encuentran el clousures distintos
-  .then(x => Promise.resolve(x+5))
-  .then(x => console.log(x))
-------------------------------------------------------------------------------------------------------------
-Ejercicio 22:
-Promesa de manera SINCRONA 
-ejemplo de como NO SE EJECUTA NADA después del catch y que puedes "ejecutar una promesa con un catch" dentro de un .then
-ESTO ES SUMAMENTE ÚTIL cuando manejas efectos, queremos llamar una API, o queremos escribir en base de datos
-de manera que podemos optimizar todo lo que queremos que haga nuestra aplicación
-
-const p1 = Promise.resolve(1)//promesa que se resuelve inmediatamente
-console.log(p1)
-p1
-  .then(x => x + 5) // el valor de aquí es distinto porque se encuentran el clousures distintos
-  .then(x => Promise.resolve(x+5))
-  .then(x => Promise.reject('Error, algo sucedio'))
-  .then(x => console.log('Esto no se va a ejecutar'))
-  .catch(e => console.log(e))
-
 ---------------------------------------------------------------
-EJERCICIO 23: REFACTORIZAR ESTE CALLBACK HELL y PASALO A PROMESA
+EJERCICIO 19: REFACTORIZAR ESTE CALLBACK HELL y PASALO A PROMESA
 
 const usuarios = [
   {id:1,nombre:'ricardo',profesion_id:1},
@@ -1347,8 +1174,9 @@ getProfesion(1) //aquí esperamos 2s
   .then( (profesion) => console.log(profesion))
   .then( ()=> getProfesion(2)) //aquí esperamos 2s
   .then( (profesion)=> console.log(profesion) )
---------------------------------------------------------------------------------
-EJERCICIO 24
+
+----------------------------------------------------------
+EJERCICIO 20: Ejercicio que nos enseña para que sirve Promise.all
 
 const usuarios = [
   {id:1,nombre:'ricardo',profesion_id:1},
@@ -1388,6 +1216,160 @@ getProfesion(1) //aquí esperamos 2s
   .then( (profesion)=> console.log(profesion) )
 
 //  PERO PODEMOS PEDIR LAS 2 SIMULTANEAMENTE PARA NO ESPERAR MÁS
----------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------
+Ejercicio 21:Ejemplo de como .then(onError) ejecutaría el error aunque no lo fuera, 
+POR EL ENCADENAMIENTO DE PROMESAS, POR ESO SE DEBE USAR EL .catch()
+
+function fun1() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('404')
+    }, 1000);
+  })
+}
+
+function fun2() {
+  //console.log('Function 2')//no llega a ejecutar aquí el segundo parametro .then()
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('resuelto')
+    }, 1000);
+  })
+}
+
+function onSuccesss(data) {
+  console.log(`Success: ${data}`)
+}
+
+function onError(errorCode) {
+  console.log(`ERROR: ${errorCode}`)
+}
+
+fun1()
+  .then(fun2)
+  .then(onSuccesss)
+  .catch(onError)//.then(onError) ejecutaría el error aunque no lo fuera, porque está encadenado
+
+====================EXPLICACIÓN==============================
+-Primero se ejecuta fun1(), que es un reject, por lo tanto, 
+se ejecutará EL SEGUNDO PARAMETRO DEL "PRIMER" .then() que es "onError"
+-en el primer .then() se ejecuta la función "onError". que espera un dato en un parametro, 
+el parametro "data"(creo que es onError) recibira el 404 que esta dentro del reject,
+-después de todo eso, se ejecuta "el segundo .then()" porque el error no lo hicimos con un .catch() si no con un .then() ENTONCES NO SE DETIENE
+
+-SI TODO ESTA CORRECTO en la fun1() , se ejecuta fun2() en el primer .then(), y el texto dentro del resolve() se va a pasar como parametro en la
+función "onSuccess"
+
+
+=====ASÍ ESTÁ BIEN EL CÓDIGO==========
+
+function fun1() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      reject('404')
+    }, 1000);
+  })
+}
+
+function fun2() {
+  //console.log('Function 2')//no llega a ejecutar aquí el segundo parametro .then()
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('resuelto')
+    }, 1000);
+  })
+}
+
+function onSuccesss(data) {
+  console.log(`Success: ${data}`)
+}
+
+function onError(errorCode) {
+  console.log(`ERROR: ${errorCode}`)
+}
+
+fun1()
+  .then(fun2)
+  .then(onSuccesss)
+  .catch(onError)
+
+ ---------------------------------------------------------------------------------------
+EJERCICIO 22: crea una promesa que reciba un número y que cuando se ejecute la promesa se le sume 5,
+ y en un segundo .then() me muestre el resultado 
+
+Promise.resolve no necesita lógica interna
+new Promise((resolve, reject) => { ... }) se usa cuando vas a ejecutar algo asincrónico manualmente (como setTimeout, fetch, etc).
+Usa new Promise((resolve, reject) => {...}) cuando:
+Vas a hacer trabajo asincrónico manualmente, y necesitas controlar cuándo se resuelve o rechaza.
+
+
+
+ const p1 = Promise.resolve(1)//promesa que se resuelve inmediatamente
+console.log(p1)
+p1
+  .then(x => x + 5) // el valor de aquí es distinto porque se encuentran el clousures distintos
+  .then(x => console.log(x))
+
+----------------------------------------------------------------------------------------------------------
+EJERCICIO 23: Otro ejercicio con Promise.resolve pero resumiendo el código.
+
+
+
+function obtenerUsuarioDesdeCache() {
+  const usuario = { id: 1, nombre: "Ana" };
+  return Promise.resolve(usuario); // lo devuelves como promesa
+}
+
+// Esto
+obtenerUsuarioDesdeCache().then(console.log);
+//Es lo mismo que esto
+.then((usuario) => {
+  console.log(usuario);
+});
+
+¿Por qué no lleva paréntesis?
+Porque si pusieras:
+.then(console.log())
+Estás llamando inmediatamente a console.log(), sin esperar a que la promesa se resuelva, y eso no es lo que queremos.
+
+¿Por qué no se usó console.log(usuario) o algo dentro de los paréntesis?
+
+Porque console.log es una función
+En JavaScript, puedes pasar funciones como argumentos a otras funciones.
+
+then() espera que le pases una función que reciba el valor de la promesa cuando se resuelve. Entonces, si haces esto:
+.then(console.log)
+Estás pasando la función console.log como callback directamente, para que se ejecute con el valor cuando esté disponible.
+Es lo mismo que escribir:
+
+.then((usuario) => {
+  console.log(usuario);
+});
+-------------------------------------------------------------------------------------------------------
+EJERCICIO 23:crea una función que reciba un número y que cuando se ejecute la promesa se le sume 5
+y se vuelva a ejecutar, pero en la segunda ejecución, ejecuta una promesa que también sume OTRA VEZ 5
+
+const p1 = Promise.resolve(1)//promesa que se resuelve inmediatamente
+console.log(p1)
+p1
+  .then(x => x + 5) // el valor de aquí es distinto porque se encuentran el clousures distintos
+  .then(x => Promise.resolve(x+5))
+  .then(x => console.log(x))
+------------------------------------------------------------------------------------------------------------
+Ejercicio 24:
+Promesa de manera SINCRONA(Porque no tiene ningún retrazo)
+ejemplo de como NO SE EJECUTA NADA después del catch y que puedes "ejecutar una promesa con un reject" dentro de un .then
+ESTO ES SUMAMENTE ÚTIL cuando manejas efectos, queremos llamar una API, o queremos escribir en base de datos
+de manera que podemos optimizar todo lo que queremos que haga nuestra aplicación
+
+const p1 = Promise.resolve(1)//promesa que se resuelve inmediatamente
+console.log(p1)
+p1
+  .then(x => x + 5) // el valor de aquí es distinto porque se encuentran el clousures distintos
+  .then(x => Promise.resolve(x+5))
+  .then(x => Promise.reject('Error, algo sucedio'))
+  .then(x => console.log('Esto no se va a ejecutar'))
+  .catch(e => console.log(e))
 
     */
