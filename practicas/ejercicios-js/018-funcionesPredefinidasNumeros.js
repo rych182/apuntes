@@ -61,25 +61,8 @@ let resuldado;
 resuldado = Math.round(Math.random() * 20);
 console.log(resuldado)
 
-Ejercicio 12: diferencia entre ++puntaje y puntaje ++
-let puntaje = 5;
-undefined
-puntaje
-5
-puntaje++;
-5
-puntaje
-6
-puntaje
-6
-++puntaje
-7
-puntaje++
-7
-puntaje
-8 
 
-Ejercicio 13: convertir un string a un número
+Ejercicio 12: convertir un string a un número
 
 let num1 = "20";
 console.log(Number.parseInt(num1))

@@ -168,4 +168,24 @@ console.log((2*3)>(3*4));//false
 console.log((3*8)<(7/4));//false
 console.log((2/3)===(6/4));//true
 
+-----------------------------------------------------------------
+
+Ejercicio 3: diferencia entre ++puntaje y puntaje ++
+let puntaje = 5;
+undefined
+puntaje
+5
+puntaje++;
+5
+puntaje
+6
+puntaje
+6
+++puntaje
+7
+puntaje++
+7
+puntaje
+8 
+
 */
