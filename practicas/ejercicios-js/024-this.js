@@ -12,7 +12,7 @@ Ejercicio 1: Viendo que selecciona this
 console.log(this);
 
 -----------------------------------------------------------------------------------------------------------------
-Ejercicio 3: crear un objeto e imprime una datos que estén dentro usando THIS
+Ejercicio 3: crear un objeto e imprime datos que estén dentro usando THIS
 
 let ric = {
     nombre: "Ricardo",

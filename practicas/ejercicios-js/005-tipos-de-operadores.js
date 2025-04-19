@@ -1,7 +1,6 @@
 
 
 
-
 /*
 
 OPERADORES
@@ -171,21 +170,11 @@ console.log((2/3)===(6/4));//true
 -----------------------------------------------------------------
 
 Ejercicio 3: diferencia entre ++puntaje y puntaje ++
+
 let puntaje = 5;
-undefined
-puntaje
-5
-puntaje++;
-5
-puntaje
-6
-puntaje
-6
-++puntaje
-7
-puntaje++
-7
-puntaje
-8 
+console.log(puntaje++); // muestra 5 post incremento
+console.log(puntaje);   // ahora sí es 6
+console.log(++puntaje); // 7 Pre-incremento
+console.log(puntaje) // 7
 
 */
