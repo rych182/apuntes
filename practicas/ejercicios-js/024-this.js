@@ -44,7 +44,8 @@ let objeto = {
 }
 console.log(objeto.nombreYapellido());
 ---------------------------------------------------------------------------------------------------------------------
-Ejercicio 5: mandando llamar a un metodo dentro de otro metodo y ejecutando ambos, usando la palabra reservada this.
+Ejercicio 5: mandando llamar a un metodo dentro de otro metodo y ejecutando ambos, 
+usando la palabra reservada this.
 
 let objeto = {
     nombre: "ric",
@@ -68,7 +69,6 @@ que se le asigne cuando uno quiera ejecutar ese metodo.
 
 
 let objeto = {
-    nombre: "ric",
     amigos:["fulano","mengano","perengano"],
     redesSociales:{
         trabajo: ["github","dribble","Linkedin"],
@@ -87,15 +87,17 @@ console.log(objeto.nombreYapellido(1)); // Esto mostrará "mengano Garrido"
 console.log(objeto.nombreYapellido(0)); // Esto mostrará "fulano Garrido"
 console.log(objeto.nombreYapellido(3)); // Esto mostrará "Amigo no encontrado"
 -----------------------------------------------------------------------------------------
-EJEMPLO DE COMO FUNCIONA EL THIS SEGÚN LA FUNCIÓN 
+Ejercicio 7: EJEMPLO DE COMO FUNCIONA EL THIS SEGÚN LA FUNCIÓN 
 
-Ejemplo(con función antigua)
-function saludar() { //el objeto this se vuelve "window" del navegador
+//Ejemplo(con función antigua)
+
+function saludar() { //La palabra reservada this se vuelve "window" del navegador
     console.log(this); 
 }
 saludar();
 
-Ejemplo(con un objeto de javascript que dentro tiene una función vieja)
+//Ejemplo(con un objeto de javascript que dentro tiene una función vieja)
+
 const perro = { //aquí el this nos devuelve el objeto
     nombre: "docky",
     saludar: function() {
@@ -115,7 +117,7 @@ const perro = { //Aquí nos devuelve el objeto "windows" del navegador
 perro.saludar();
 --------------------------------------------------------------------------
 
-Ejercicio 10:
+Ejercicio 8:
 Iterar sobre propiedades heredadas:
 
 function Animal() {

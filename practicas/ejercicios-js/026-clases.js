@@ -1,67 +1,12 @@
-class Animal{
-    constructor(nombre,genero){
-        this.nombre = nombre;
-        this.genero = genero;
-        this.raza = null;
-    }
-    sonar(){
-        console.log("Hago sonidos porque estoy vivo")
-    }
-    saludar(){
-        console.log(`Hola me llamo ${this.nombre}`)
-    }
-}
-class Perro extends Animal{
-    constructor(nombre,genero,tamanio){
-        super(nombre, genero);
-        this.tamanio = tamanio;
-    }
-    sonar(){
-        console.log("SOy un perro y mi sonido es un ladrido");
-    }
-    ladrar(){
-        console.log("GUa gua");
-    }   
-    static queEres(Perro){
-        console.log(`Los perros somos animales mamiferos, somos el mejor amigo del hombre ${Perro.nombre} ${Perro.genero} ${Perro.tamanio}`);
-    }
-    get getRaza(){//un metodo obtenedor solo "retorna"
-        return this.raza;
-    }
-    set setRaza(raza){//al valor de raza, asignale el parametro que estamos recibiendo entre parentesis
-        this.raza = raza;
-    }
-}
 
-const mimi = new Animal("Mimi","Hembra");
-const scooby = new Perro("Scooby","Macho","gigante")
 
-//console.log(mimi)
-//mimi.saludar()
-//mimi.sonar()
-
-//console.log(scooby)
-//scooby.saludar()
-
-//scooby.sonar()
-//scooby.ladrar()
-
-//Perro.queEres(scooby);
-
-//CHeca como sale error si lo ejecutas como metodo el set
-//scooby.setRaza();
-
-//Aquí verifico su valor
-//console.log(scooby.getRaza) //aparecera null
-
-//scooby.setRaza = "gran danes"//Aquí lo declaramos
-//console.log(scooby.getRaza);//Aquí ya imprime "gran danes"
 
 
 /*
 //Esto NO convierte a JS en un lenguaje orientado a objetos "basado en clase", sigue siendo
 //basado en prototipos
 //ES6 nos dio como actualización poder escribir los objetos como en otros lenguajes, usando clases
+//Las clases no reciben parametro
 
 //Existen las propiedades privadas en JS 
 
@@ -80,8 +25,7 @@ function Animal(nombre,genero) {
     }
 }
 
-//Las clases no reciben parametro
-//JS trabaja la orientación a objetos con "prototipos"
+
 class Animal{
     //tienen un metodo especial que se llama constructor que se ejecuta en el momento
     //de instanciar la clase
@@ -115,8 +59,9 @@ class Animal{
         this.nombre = nombre;
         this.genero = genero;
     }
+    
     //Los metodos si pueden recibir parametros
-    //Aquí no necesitar sacar los metodos y usar prototype, lo hace en automatico
+    //Aquí no necesitas sacar los metodos y usar prototype, lo hace en automatico
     sonar(){
         console.log("Hago sonidos porque estoy vivo")
     }
@@ -144,6 +89,7 @@ class Perro extends Animal{
 
 const mimi = new Animal("Mimi","Hembra");
 const scooby = new Perro("Scooby","Macho","gigante")
+
 //Te imprime el objeto identifico, y los metodos aparecen en el objeto más primitivo
 console.log(mimi)
 mimi.saludar()
@@ -152,6 +98,7 @@ mimi.sonar()
 //fijate como Perro deriva del prototypo animal en la consola del navegador
 console.log(scooby)
 scooby.saludar()
+
 //FIjate como se sobreescribio el metodo
 scooby.sonar()
 scooby.ladrar()

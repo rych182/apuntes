@@ -1,43 +1,3 @@
-function Animal(nombre, genero) {
-    this.nombre = nombre;
-    this.genero = genero;
-}
-
-Animal.prototype.sonar = function() {
-    console.log("Hago sonidos porque estoy vivo");
-}
-Animal.prototype.saludar = function(){
-    console.log(`Hola me llamo ${this.nombre}`);
-}
-
-function Perro(nombre,genero,tamanio) {
-    this.super = Animal;
-    this.super(nombre,genero);
-    this.tamanio = tamanio;
-}
-
-Perro.prototype = new Animal();
-Perro.prototype.constructor = Perro;
-
-
-//SObreescritura de metodos del prototipo padre en el hijo
-Perro.prototype.sonar= function(){
-    console.log("SOy un perro y mi sonido es un ladrido");
-}
-
-Perro.prototype.ladrar = function(){
-    console.log("GUa gua")
-}
-
-const Snoopy = new Perro("Snoopy", "Macho","Mediano");
-const LolaBunny = new Animal("LolaBunny", "Hembra");
-
-
-console.log(Snoopy);
-
-Snoopy.sonar();
-Snoopy.saludar();
-Snoopy.ladrar();
 
 
 /*
@@ -95,12 +55,16 @@ LolaBunny.saludar();
 
 
 /*
+TEORÍA
+
 JS es un lenguaje orientado a objetos basado en prototipos, no en clases
 Javascript es un lenguaje multiparadigma(estilos), con la programación funcional, orientada a objetos.
+
 En javascript es un poco distinta a la programación orientada a objetos.
 -Apartir del 2015 (estandar 2016) 'ya tenemos CLASES', estas se les conoce como "azucar sintactica" osea
 una manera más fácil que nos provee el lenguaje "para poder hacer la programación ORIENTADA A PROTOTIPOS",
 el navegador convertira las clases a funciones prototipicas
+
 -La POO sus 4 conceptos importantes son:
     *Clases: un modelo a seguir, como un machote, como una calca
     *Objetos: es una instancia de la clase, osease una copia del modelo a seguir
@@ -119,13 +83,9 @@ y tiene las definiciones de sus getters y setters, es este: __proto__: Object .
 __proto__: Object es como el ADN de ese objeto, te dice quien es el padre
 
 NOTA IMPORTANTE EJERCICIOS: imprimir los 4 console.log, para ver la diferencia en los objetos creados
-
 Las "funciones prototipicas" son llamadas también "funciones constructoras" 
 
-*/
-
-
-/*}
+------------------------------------------------------------------------------------------
 Ejercicio 1: Comparo todos los objetos(los literales vs con los instanciados con la palabra reservada new)
 ESTA ES LA MANERA CORRECTA
 
