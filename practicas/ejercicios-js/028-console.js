@@ -13,8 +13,7 @@ Ejercicio 2:
 Un objeto que te devuelve una matriz y con console.table te hace una tablita
 console.table(Object.entries(console))
 -----------------------------------------
-Ejercicio 3:
-Ejercicio 14: el ejemplo anterior para ordenar de manera ascendente
+Ejercicio 3: el ejemplo anterior para ordenar de manera ascendente
 console.table(Object.entries(console).sort())
 --------------------------------------------------
 Ejercicio 4:console.table() te muestra las propiedades del objeto
@@ -33,7 +32,6 @@ Ejercicio 6: Usamos console.time() para ver cuanto tarda en ejecutar el código
 //Ya no usamos la vieja forma que esta en des-uso
 const arreglo = new Array(1000000);
 
-
 console.time("cuanto tarda mi codigo");
 const arreglo = new Array(1000000);
 //EL objeto tiene sus posiciones vacias
@@ -46,7 +44,7 @@ console.timeEnd("cuanto tarda mi codigo");
 //verificando si lleno mi arreglo
 console.log(arreglo);
 ----------------------------------------------------------------------------------------
-Ejercicio 7: console.count(); sirve para ue te diga cuantas veces ha sido ejecutado
+Ejercicio 7: console.count(); sirve para que te diga cuantas veces ha sido ejecutado
 un bloque de código
 
 situaciones posibles: 
@@ -61,7 +59,6 @@ for (let i = 0; i <=100; i++) {
 
 -------------------------------------------------------------------
 Ejercicio 8: haciendo pruebas con console.assert()
-
 
 let x = 3;
 let y = 2;

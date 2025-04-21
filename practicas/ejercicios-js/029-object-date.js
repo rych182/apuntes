@@ -1,7 +1,6 @@
 /*
 Date es una función, si ejecutas Date(); te muestra la fecha
 Lo ideal es guardarlo en una variable como un objeto
-
 */
 console.log(Date())
 let fecha = new Date();
