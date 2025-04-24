@@ -19,7 +19,7 @@ fetch('https://jsonplaceholder.typicode.com/users').then( (response)=>{
 
 Este objeto representa la respuesta completa del servidor a tu petición fetch
 Tiene varias propiedades útiles. Algunas de las más comunes:
-status: el código HTTP (ej. 200, 404)
+status: el protocolo HTTP (ej. 200, 404)
 ok: true si el estado es 200–299 (o sea, fue exitoso)
 url: la URL de donde viene la respuesta
 headers: información como tipo de contenido

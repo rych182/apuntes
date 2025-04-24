@@ -1,6 +1,7 @@
 /*
 
-Ejercicio 0: Hacer un programa que use la función callback .find() y use promesas, el programa debe de buscar los id dentro de los objetos del
+Ejercicio 0: Hacer un programa que use la función callback .find() y use promesas, 
+el programa debe de buscar los id dentro de los objetos del
 array(toma de ejemplo el callback hell)
 
 const posts = [
