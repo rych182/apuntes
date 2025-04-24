@@ -13,6 +13,12 @@ Los conceptos de los prototipos y las clases pueden ser más complicados y no es
 para construir aplicaciones web básicas.
 -------------------------------------------------------------------------------------------
 
+Async: crea una función que retorna una promesa
+Await: crea una función "asincrona" que espera una promesa
+Permite que tu escribas "código asincrono" de una "manera sincrona"
+Todo lo que sigue a await se coloca en una cola de eventos
+
+
 TEORIA:
 FUNCIONES ASYNCRONAS
 -LAS "PROMESAS ASINCRONAS" no vienen a sustituir a las "promesas", trabajan en conjunto
@@ -32,6 +38,9 @@ Con la palabra reservada "async" ya decimos que esa función es asincrona y pued
 las peticiones asincronas que generalmente van a ser dadas de una "promesa".
 
 Para el manejo de errores lo que nos conviene es trabajar un bloque "try-catch"
+
+
+
 
 
 
@@ -120,4 +129,66 @@ async function funcionAsincrona() {
 
 funcionAsincrona()
 -----------------------------------------------
-    */
+    
+Ejercicio 2: 
+*/
+
+function walkDog() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const dogWalked = true;
+
+      if (dogWalked) {
+        resolve("Tu paseaste al perro")
+      } else {
+        reject("No paseaste al perro")
+      }
+    }, 1500);
+  })
+}
+
+function cleanKitchen() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const cleanedKitchen = true;
+
+      if (cleanedKitchen) {
+        resolve("Limpiaste la cocina")
+      } else {
+        reject("No has hecho nada")
+      }
+    }, 1500);
+  })
+}
+
+function takeOutTrash() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const tookOutTrash = true;
+
+      if (tookOutTrash) {
+        resolve("sacaste la basura")
+      } else {
+        reject("no has hecho nada")
+      }
+    }, 1500);
+  })
+}
+
+async function doChores() {
+  const walkDogResult = await walkDog();
+  console.log(walkDogResult) 
+
+  const cleanKitchenResult = await cleanKitchen()
+  console.log(cleanKitchenResult)
+
+  const takeOutTrashResult = await cleanKitchen()
+  console.log(takeOutTrashResult)
+}
+
+/*  Así se ejecutaría la promesa
+walkDog().then(value =>{console.log(value); return cleanKitchen()})
+          .then(value =>{console.log(value); return takeOutTrash()})
+          .then(value =>{console.log(value); console.log("Terminaste todo")})
+          .catch(error => console.error(error))
+*/
