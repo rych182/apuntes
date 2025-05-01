@@ -71,7 +71,7 @@ Escribe comentarios solo cuando es necesario (el código debe ser tan claro que 
 
 ¿Qué es JSDoc?
 JSDoc es una forma de documentar el código en JavaScript usando comentarios.
-No se ejecuta, no afecta el programa, solo sirve para ayudar a ti y a otros programadores a entender mejor qué hace cada parte de tu código.
+"No se ejecuta, no afecta el programa", solo sirve para ayudar a ti y a otros programadores a entender mejor qué hace cada parte de tu código.
 
 También lo usan los editores de código (como VS Code) para:
 Mostrarte sugerencias automáticas (autocompletado).
