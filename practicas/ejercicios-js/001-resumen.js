@@ -56,6 +56,30 @@ ROADMAP según yo:
 48-VUE JS 3
 
 
+Algunas reglas básicas de Clean Code:
+
+Usa nombres claros para funciones, variables y clases.
+Haz funciones pequeñas (que hagan solo una cosa).
+No repitas el mismo código (aplica el principio DRY: Don't Repeat Yourself).
+Maneja errores correctamente.
+Organiza bien los archivos y carpetas.
+Escribe comentarios solo cuando es necesario (el código debe ser tan claro que casi no los necesites).
+----------------------------------------------------------------
+
+ * @param {HTMLDivElement} element 
+// es un comentario especial llamado JSDoc
+
+¿Qué es JSDoc?
+JSDoc es una forma de documentar el código en JavaScript usando comentarios.
+No se ejecuta, no afecta el programa, solo sirve para ayudar a ti y a otros programadores a entender mejor qué hace cada parte de tu código.
+
+También lo usan los editores de código (como VS Code) para:
+Mostrarte sugerencias automáticas (autocompletado).
+Mostrarte qué tipo de datos espera una función.
+Mostrar advertencias si usas mal un tipo de dato.
+
+
+-------------------------------------------------------------------------------
 Temas que se verán, ya con temás a profundidad
 -VAR vs LET
 -Tipos de datos primitivos y no primitivos

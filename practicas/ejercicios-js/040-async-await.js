@@ -164,7 +164,7 @@ function cleanKitchen() {
 function takeOutTrash() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      const tookOutTrash = true;
+      const tookOutTrash = false;
 
       if (tookOutTrash) {
         resolve("sacaste la basura")
@@ -176,16 +176,24 @@ function takeOutTrash() {
 }
 
 async function doChores() {
+
+  try {
   const walkDogResult = await walkDog();
   console.log(walkDogResult) 
 
   const cleanKitchenResult = await cleanKitchen()
   console.log(cleanKitchenResult)
 
-  const takeOutTrashResult = await cleanKitchen()
+  const takeOutTrashResult = await takeOutTrash()
   console.log(takeOutTrashResult)
+
+  console.log("Termine todo")
+  } catch (error) {
+    console.error(error)
+  }
 }
 
+doChores()
 /*  Así se ejecutaría la promesa
 walkDog().then(value =>{console.log(value); return cleanKitchen()})
           .then(value =>{console.log(value); return takeOutTrash()})
