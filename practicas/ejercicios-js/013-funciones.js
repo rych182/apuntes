@@ -398,15 +398,7 @@ saludar(undefined || "valor de la derecha");
 saludar("" || "valor de la derecha");
 saludar(-2 || "valor de la derecha");
 saludar(0 || "valor de la derecha");
----------------------------------------------------------------------------------------
 
-Ejercicio 30
-Hacer una suma de 2 números asignandoselos en el parentesis, con una función flecha PERO usando return
-
-let operacion = (num1, num2) => {
-    return num1 + num2;
-}
-console.log(operacion(2, 3));
 --------------------------------------------------------------------------------------------------------
 
 Ejercicio 31 (Otra manera de ejecutar una función guardandola en una variable)

@@ -43,7 +43,7 @@ Estructura plana: Con la versión moderna de npm,
 se intenta tener una estructura lo más plana posible dentro de node_modules. 
 Esto significa que, en lugar de crear muchas subcarpetas anidadas,
 npm instala las dependencias en un nivel superior si no hay conflictos de versiones. Sin embargo, 
-en algunos casos puede haber subcarpetas anidadas si diferentes paquetes requieren diferentes 
+en algunos casos puede haber subcarpetas anidadas si diferentes paquetes, requieren diferentes 
 versiones de una misma dependencia.
 
 
