@@ -141,8 +141,13 @@
                         <li><code></code></li>
                     </ol>
 
+                    <hr>
                     <h4>gitignore</h4>
                     <p>Es un archivo que sirve para que no se suba la carpeta de <b>node_modules</b></p>
+                    <hr>
+                    <code>.git-keep</code>
+                    <h4>Es un archivo que metes en una carpeta vacía para que git lo logre rastrear aunque no tenga nada la carpeta</h4>
+                    <hr>
                     <h4>VER commits</h4>
                     <code>git log</code><br>
                     <h4>ELIMINAR último commit(perdiendo confirmaciones anteriores)</h4>
@@ -155,7 +160,12 @@
 
                     <h4>Modificar commit</h4>
                     <code>git commit --amend -m "cambio en el commit"</code> quizás github no deje subir la modificación, entonces usar <code>git push origin master -f</code> para forzar el push
+                    <hr>
 
+                    <code>git commit -am "comentario"</code>
+                    <h4>Agraga y hace el comentario al mismo tiempo</h4>
+
+                    <hr>
                     <h4>ELIMINAR último commit(cuando ya se hizo push)</h4>
                     <code>git revert HEAD</code>
                     <p>De esta forma cualquier usuario que se tenga actualizado el contenido del repositorio remoto puede obtener el cambio simplemente haciendo pull.</p><br>
@@ -178,7 +188,17 @@
                     <p>Al clonar un repositorio puedes moverte entre sus ramas, no las ves porq están ocultas pero si existen</p>
                     <h4>Return to last commit</h4>
                     <code>git checkout master</code><br>
+                    <hr>
 
+                    <h4>te muestra los commits de manera más resumida</h4>
+                    <code>git log --oneline</code>
+                    <hr>
+                    <code>git diff</code>
+                    <h4>Te muestra que has cambiado en el proyecto a diferencia de tu último commit</h4>
+                    <hr>
+
+
+                    <hr>
                     <h4>Borrar el commit pero que no borre el código</h4>
                     <code>git reset --soft xxxxxxxxxxx(aquí va el commit que quieres borrar)</code><br>
                     <h4>Borrar el commit y el código</h4>
