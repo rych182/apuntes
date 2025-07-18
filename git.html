@@ -153,11 +153,26 @@
                     <h4>ELIMINAR último commit(perdiendo confirmaciones anteriores)</h4>
                     <hr>
 
-                    <code></code>
-                    <h4></h4>
+                    <code>git checkout -- nombreDelArchivo</code>
+                    <h4>Sirve para regresar a un archivo si lo borraste por error</h4>
+                    <hr>
+
+                    <code>git rm nombreDelArchivo</code>
+                    <h4>Git remueve el archivo, no funcionara "git checkout -- nombreDelArchivo", pero si funcionara "git reset HEAD nombreDelArchivo"</h4>
+                    <hr>
+
+                    <code>git reset HEAD nombreDelArchivo</code>
+                    <h4>Restablece algo que hayas borrado con "git rm nombreDeLaRama" pero después debes usar "git checkout -- nombre del archivo"</h4>
+                    <hr>
+
                     <hr>
                     <code>git reset --hard HEAD~1</code>
                     <p>Solución si NO hemos subido el commit a nuestro repositorio remoto (no hemos realizado push) y perdemos los cambios</p><br>
+                    <hr>
+
+                    <code>git reset --hard HEAD^</code>
+                    <p>Elimina el último commit junto con el cambio que hayas hecho</p>
+                    <hr>
 
                     <h4>ELIMINAR último commit</h4>
                     <p>no perdemos los cambios de los commits posteriores. Todos los cambios aparecerán como pendientes para realizar un commit.</p>
@@ -202,6 +217,13 @@
                     <h4>Te muestra que has cambiado en el proyecto a diferencia de tu último commit</h4>
                     <hr>
 
+                    <h4>Poner un commit viejo para que producción esté ahí.</h4>
+                    <p><b>Paso1:</b> moverte al commit que quieres <code>git checkout 6b3af55</code></p>
+                    <p><b>Paso2:</b> crear una rama desde ese mismo commit y moverte a la rama<code>git checkout -b experimento-nueva-rama</code></p>
+                    <p><b>Paso3:</b> subir la nueva rama a GitHub <code>git push origin experimento-nueva-rama</code></p>
+                    <p><b>Paso4:</b> ir a github pages y cambiar la rama</p>
+                    <p><b>Paso5:</b> moverte a la rama master</p>
+                    <p><b>Paso6:</b> poner este comando <code>git reset --hard origin/master</code> sirve para sincroniza exactamente con tu repositorio remoto de GitHub</p>
 
                     <hr>
                     <h4>Borrar el commit pero que no borre el código</h4>
