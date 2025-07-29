@@ -200,6 +200,7 @@ walkDog().then(value =>{console.log(value); return cleanKitchen()})
           .then(value =>{console.log(value); console.log("Terminaste todo")})
           .catch(error => console.error(error))
 --------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
 Ejercicio 3: ejercicio de async-await con función flecha 
 
 Hace la petición
@@ -236,6 +237,42 @@ const llamarFuncion = async() =>{
 llamarFuncion()
 
 -------------------------------------------------
+Ejercicio 4: función asincrona con mala practica
 
+let productos = [
+  {
+    nombre: "Computadora Gaming",
+    marca: "Asus",
+    precio: 1200
+  },
+  {
+    nombre: "Tablet",
+    marca: "Samsung",
+    precio: 300
+  },
+  {
+    nombre: "Camara Reflex",
+    marca: "Canon",
+    precio: 600
+  }
+]
+
+function conseguirProductos() {
+  return new Promise((resolve, reject) => {
+    console.log("Cargando productos...") 
+    setTimeout(() => {
+      resolve(productos)
+    }, 3500); 
+  })
+}
+
+async function getMisProductos() {
+  let mis_productos = await conseguirProductos()
+  console.log(mis_productos)  
+}
+
+getMisProductos()
 
           */
+
+
