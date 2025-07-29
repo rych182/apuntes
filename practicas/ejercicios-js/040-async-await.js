@@ -131,7 +131,7 @@ funcionAsincrona()
 -----------------------------------------------
     
 Ejercicio 2: 
-*/
+
 
 function walkDog() {
   return new Promise((resolve, reject) => {
@@ -194,9 +194,48 @@ async function doChores() {
 }
 
 doChores()
-/*  Así se ejecutaría la promesa
+ Así se ejecutaría la promesa
 walkDog().then(value =>{console.log(value); return cleanKitchen()})
           .then(value =>{console.log(value); return takeOutTrash()})
           .then(value =>{console.log(value); console.log("Terminaste todo")})
           .catch(error => console.error(error))
-*/
+--------------------------------------------------------------------------------
+Ejercicio 3: ejercicio de async-await con función flecha 
+
+Hace la petición
+Si no poner el "async" y el "await" el estado de la promesa marca PENDING
+
+Al usar async-await le estamos diciendo que esta funciópn no está coordinada con el tiempo
+y que NO se va a ejecutar "EN ORDEN SECUENCIAL"
+La palara "await" significa que tenemos que esperar por esa respuesta, para continuar con el
+flujo natural.
+
+const sumar = (num1,num2) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      let suma = num1 + num2
+      if (suma >100) {
+        resolve(suma)
+      } else {
+        reject(`Error al procesar los datos ó el número es menor a 100`)
+      }
+    }, 2000);
+  })
+}
+
+
+const llamarFuncion = async() =>{
+  try {
+    const res = await sumar(12,8);
+    console.log(res) 
+  } catch (error) {
+    console.log(`Error: ${error}`)
+  }
+}
+
+llamarFuncion()
+
+-------------------------------------------------
+
+
+          */

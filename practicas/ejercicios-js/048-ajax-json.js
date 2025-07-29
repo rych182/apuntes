@@ -24,8 +24,6 @@ AJAX no es una tecnología en sí mismo. En realidad, se trata de varias tecnolo
     XMLHttpRequest o Fetch, para el intercambio asíncrono de información.
     JavaScript, para unir todas las demás tecnologías.
 
-
-
 Estados de una petición asincrona 	                                        Valor
 
 READY_STATE_UNINITIALIZED(estado de no inicialización) 	                    0
