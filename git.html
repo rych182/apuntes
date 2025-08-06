@@ -233,6 +233,13 @@
                     <p><b>Paso4:</b> hacer un commit <code>git commit -m "comentario"</code></p>
                     <p><b>Paso5:</b> hacer un push <code>git push origin master</code></p>
                     <p>TODO ESO GENERA UN NUEVO COMMIT QUE ESTARA A LA CABEZA</p>
+                    <hr>
+
+                    <h2>Pasos para actualizar tu fork y local (orden correcto):</h2>
+                    <p><b>Paso1:</b> Primero obtienes los últimos cambios del repositorio original (upstream), pero sin mezclarlos aún con tu repositorio local. <code>git fetch upstream</code></p>
+                    <p><b>Paso2:</b> Luego fusionas esos cambios en tu rama local (ej. main o master). <code>git merge upstream/main (o upstream/master, según la rama)</code></p>
+                    <p><b>Paso3:</b> Finalmente subes los cambios a tu fork en GitHub (para que tu repositorio en GitHub también se actualice). <code>git push origin master</code></p>
+                    <hr>
 
                     <hr>
                     <h4>Borrar el commit pero que no borre el código</h4>
