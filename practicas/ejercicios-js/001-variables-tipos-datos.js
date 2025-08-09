@@ -3,6 +3,8 @@
 
 
 /*
+JAVASCRIPT es un lenguaje sencitive, por eso nota la diferencia entre mayusculas y minusculas
+
 DATOS PRIMITIVOS
 
  Tipos de datos primitivos:
@@ -19,6 +21,22 @@ DATOS PRIMITIVOS
  -funciones{}  <---
  -Class
  -etc(Nuevos tipos de datos como: )
+
+Tipos de datos nuevos
+Symbol: se utilizan para tener identificadores únicos y se utilizan para crear propiedades privadas dentro de un objeto
+
+Set Es una estructura de tipo array pero de datos únicos, de datos "primitivos",porque en la memoria de javascript cada
+objeto es una referencia unica porque si tu le pasa objetos, cada objeto, aunque el objeto este vacío, por eso,
+en la memoria de javascript cada objeto es una referencia unica. Se usa para guardar datos pero el programador no quiere
+que se repitan datos, por ejemplo una base de datos de correos electronicos 
+
+
+Map: son un tipo de objetos que nos sirve para almacenar valores asociados de manera de objetos, es comi si fuera
+un objeto primitivo, tiene caracteristicas muy poco usables. Se usa como una colección de datos que están relacionados
+entre si.
+
+
+
 
 Number: Números enteros y de punto flotante, como 1, 3.14, -10, etc.
 String: Secuencias de caracteres, como "Hola mundo", 'JavaScript', etc.
@@ -320,7 +338,4 @@ console.log(true/null)//Infinity
   'use strict';
 let x = 021;
 ----------------------------------------------------------
-
-
-
 */

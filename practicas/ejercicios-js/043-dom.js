@@ -51,7 +51,6 @@ setTimeout(() => {
 
 document.writeln("<h2>estoy escribiendo en el DOM</h2>")
 -----------------------------------------------------------------------
-
 CLASE 2
 
 UN ELEMENTO ES DISTINTO A UN NODO, hay diferentes tipos de nodos, los comentarios de html pueden ser un nodo, las etiquetas de html otro, 
@@ -62,11 +61,41 @@ Recuerda que el DOM es una API que tienen los navegadores para interpretar docum
 Lo que nos va a importar son los "nodos de tipo elemento" y "nodos de tipo texto"
 Un NODO de TEXTO es "un TEXTO que viene DENTRO de una etiqueta h1 o p" y un "NODO de tipo ELEMENTO" es la "ETIQUETA HTML" en si
 
+-------------------------------------------------------------------------------------
+Clase 3
+
+//Esto no es un arreglo, es una colección de HTML
+console.log(document.getElementsByTagName("li"))
+console.log(document.getElementsByClassName("card"))
+console.log(document.getElementsByName("nombre"))
+console.log(document.getElementById("que-es"))
+console.log(document.querySelector("#que-es"))
+//solo te muestra el primer elemento encontrado
+console.log(document.querySelector("a"))
+//te muestra todos los elementos de ese tipo
+console.log(document.querySelectorAll("a"))
+console.log(document.querySelectorAll("a").length)
+document.querySelectorAll("a").forEach(element => console.log(element))
+console.log(document.querySelectorAll(".card")[2])
+//etiquetas li que se encuentren dentro de un id que se llame menu
+console.log(document.querySelectorAll("#menu li"))
+
+
+let caja = document.getElementsByClassName("card")
+console.log(typeof caja)
+
+------------------------------------------------------------------------------------------
+Clase 4
+El estandar ES6 te permite crear tus propios atributos, se le conoce como los data-attributs
+puedes escribirlo así: 
+  data- 
+Después del guion medio, le puedes poner el nombre que tu quieras.
+También tu puedes interactuar con los data attributes y ponerle valores
+
 
 */
 
 /*
-
 
 Exercise 0: callback per event
 Para esto creamos un boton en html que tenga un id
@@ -76,10 +105,6 @@ document.querySelector('#btn').addEventListener('click',()=>{
 	console.log("Has dado click y se ha activado ka función callback que dispara este console.log")
 })
 ---------------------------------------------------------------------------------
-
-
-
-
 
 -----------------------------------------------------------------------------
 
@@ -108,7 +133,7 @@ function fecha() {
   document.getElementById("fecha").innerHTML = Date();
 }
 
-Date es una función constructora que se utiliza para crear objetos de tipo fecha.
+"Date" es una función constructora que se utiliza para crear objetos de tipo fecha.
 Por lo tanto, cuando llamas a Date(), dependiendo de cómo lo uses, puede actuar de dos maneras diferentes:
 
 1-Si llamas a Date() sin el operador new, devuelve una cadena de texto que representa la fecha y hora actual.
@@ -166,3 +191,47 @@ document.getElementById('btn1').addEventListener('click', () => {
 
 */
 
+//trabajar con los atributos de HTML
+console.log(document.documentElement.lang)
+console.log(document.documentElement.getAttribute("lang"))
+//La diferencia es que en una te da todo el link y en otra el valor que realmente esta escrito
+console.log(document.querySelector(".link-dom").href)
+console.log(document.querySelector(".link-dom").getAttribute("href"))
+
+//Cambiando el atributo lang
+document.documentElement.lang="es";
+console.log(document.documentElement.lang)
+document.documentElement.setAttribute("lang","es-MX")
+console.log(document.documentElement.lang)
+
+//cambiando atributo para que se abra en otra pestaña del navegador
+const $linkDom = document.querySelector(".link-dom")
+$linkDom.setAttribute("target","_blank")
+//agregando rel noopener, para que sea seguro el link, es buena practica
+$linkDom.setAttribute("rel","noopener")
+//poniendo un link en el href
+$linkDom.setAttribute("href","https://www.google.com/")
+//validar si mi codigo tiene un atributo
+console.log($linkDom.hasAttribute("rel"))
+//Remover un atributo
+$linkDom.removeAttribute("rel","noopener")
+console.log($linkDom.hasAttribute("rel"))
+
+//Conseguir que me muestre un atributo
+console.log($linkDom.getAttribute("data-description"))
+//Cada atributo lo va guardando en ese Mapa(tipo de dato nuevo de JS desde el 2015)
+console.log($linkDom.getAttribute("data-description"))
+
+/*
+¿Porque se usa const y no let?
+Porque coom vamos a trabajar con objetos y arrays
+el const no va a validar que algo cambie dentro del objeto
+Mientras que valores primitivos como números o string puedo cambiar el valor
+El objeto y el array no van a cambiar, se mantiene
+No importa si le cambio dinamicamente con JS atributos o estilos
+, va a seguir siendo el mismo elemento del DOM a lo largo de mi aplicacion
+
+
+Algunos desarrolladores utilizan $ para nombrar una constante a la cual le almacenamos un
+elemento del DOM
+*/
