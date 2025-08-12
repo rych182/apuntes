@@ -222,6 +222,9 @@ console.log($linkDom.getAttribute("data-description"))
 //Cada atributo lo va guardando en ese Mapa(tipo de dato nuevo de JS desde el 2015)
 console.log($linkDom.getAttribute("data-description"))
 
+//Te guarda los atributos en un objeto de tipo Mapa, fijate como puse 2 atributos en el HTML
+console.log($linkDom.dataset)
+
 /*
 ¿Porque se usa const y no let?
 Porque coom vamos a trabajar con objetos y arrays
