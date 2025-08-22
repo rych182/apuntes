@@ -11,7 +11,6 @@ LAS PROMESAS REQUIEREN MUCHA PRACTICA
 TEORIA
 "Una promesa en JavaScript es un objeto!!!!!"" Que representa la finalización o el fracazo
 de una operación asincrona".
-Es un objeto que representa la terminación o el fracaso de una operacion asincrona
 Las promesas son una forma de manejar operaciones asíncronas en JavaScript de manera más legible 
 y manejable que el uso tradicional de callbacks, evitando problemas como el "callback hell".
 
@@ -23,7 +22,7 @@ es como un "return negativo".
 Tanto el metodo resolve como el metodo reject son metodos estaticos, significa que no necesito crear
 una instancia para poder utilizarlos
 
-Las promesas ya nos convienen cuando tenemos una concatenacion de varios procesos asincronos.
+Las promesas nos convienen cuando tenemos una concatenacion de varios procesos asincronos.
 
 Hoy en día muchas API'S trabajando retornando promesas.
 Fetch es la forma moderna de "hacer AJAX", todo lo trabaja internamente en un objeto de PROMESA de tal manera que 
@@ -48,7 +47,7 @@ Las "promesas" solo convienen cuando tenemos una concatenación de varios proces
 LA EVOLUCION de las promesas.
 Es un código mejor ordenado y sobre todo tiene
 UNA MEJOR MANIPULACIÓN DE LOS ERRORES y no tienes que estar repitiendo la validación del error
-En los "callbacks" en cada ejecución tienes que estar validando el error
+En los "callbacks" en cada ejecución tienes que estar validando el error.
 Las promesas ya tienen su propio mecanismo para rechazar en cualquier parte del flujo
 donde se de un error, mandarlo y trabajarlo
 

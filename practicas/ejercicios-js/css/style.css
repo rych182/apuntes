@@ -1,3 +1,8 @@
+ :root{
+            --yellow-color:#f7d71e;
+            --dark-color:#222;
+        }
+
 .btn2{
     background-color: yellow;
 }

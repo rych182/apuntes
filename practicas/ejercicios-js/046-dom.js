@@ -32,7 +32,8 @@ console.log(document.forms)
 console.log(document.styleSheets)
 
 document.styleSheets
-es una propiedad que te permite acceder a todas las hojas de estilo (CSS) asociadas al documento HTML actual. Esta propiedad devuelve una lista (o colección) de objetos CSSStyleSheet que representan cada una de las hojas de estilo cargadas en la página.
+es una propiedad que te permite acceder a todas las hojas de estilo (CSS) asociadas al documento HTML actual.
+Esta propiedad devuelve una lista (o colección) de objetos CSSStyleSheet que representan cada una de las hojas de estilo cargadas en la página.
 
 ¿Para qué sirve?
 Acceder a las hojas de estilo: Te permite interactuar y modificar las hojas de estilo de la página directamente desde JavaScript.
@@ -59,7 +60,8 @@ Aquí puedes ver los diferentes tipos de nodos: https://developer.mozilla.org/es
 Son 12 tipos de nodos
 Recuerda que el DOM es una API que tienen los navegadores para interpretar documentos HTML y XML
 Lo que nos va a importar son los "nodos de tipo elemento" y "nodos de tipo texto"
-Un NODO de TEXTO es "un TEXTO que viene DENTRO de una etiqueta h1 o p" y un "NODO de tipo ELEMENTO" es la "ETIQUETA HTML" en si
+Un NODO de TEXTO es "un TEXTO que viene DENTRO de una etiqueta h1 o p"
+ y un "NODO de tipo ELEMENTO" es la "ETIQUETA HTML" en si
 
 -------------------------------------------------------------------------------------
 Clase 3
@@ -93,6 +95,54 @@ Después del guion medio, le puedes poner el nombre que tu quieras.
 También tu puedes interactuar con los data attributes y ponerle valores
 
 
+//trabajar con los atributos de HTML
+console.log(document.documentElement.lang)
+console.log(document.documentElement.getAttribute("lang"))
+//La diferencia es que en una te da todo el link y en otra el valor que realmente esta escrito
+console.log(document.querySelector(".link-dom").href)
+console.log(document.querySelector(".link-dom").getAttribute("href"))
+
+//Cambiando el atributo lang
+document.documentElement.lang="es";
+console.log(document.documentElement.lang)
+document.documentElement.setAttribute("lang","es-MX")
+console.log(document.documentElement.lang)
+
+//cambiando atributo para que se abra en otra pestaña del navegador
+const $linkDom = document.querySelector(".link-dom")
+$linkDom.setAttribute("target","_blank")
+//agregando rel noopener, para que sea seguro el link, es buena practica
+$linkDom.setAttribute("rel","noopener")
+//poniendo un link en el href
+$linkDom.setAttribute("href","https://www.google.com/")
+//validar si mi codigo tiene un atributo
+console.log($linkDom.hasAttribute("rel"))
+//Remover un atributo
+$linkDom.removeAttribute("rel","noopener")
+console.log($linkDom.hasAttribute("rel"))
+
+//Conseguir que me muestre un atributo
+console.log($linkDom.getAttribute("data-description"))
+//Cada atributo lo va guardando en ese Mapa(tipo de dato nuevo de JS desde el 2015)
+console.log($linkDom.getAttribute("data-description"))
+
+//Te guarda los atributos en un objeto de tipo Mapa, fijate como puse 2 atributos en el HTML
+console.log($linkDom.dataset)
+
+//Para que te muestre le contenido del atributo , .dataset.nombreDelAtributo
+console.log($linkDom.dataset.id)
+
+//Para que se cambie el atributo
+$linkDom.setAttribute("data-description","hola mundo")
+
+//Cambiarle el valor de otra manera
+$linkDom.dataset.description ="Hello world"
+----------------------------------------------------------------------------------------------------
+clase 5
+
+los estilos también spn un atributo
+
+------------------------------------------------------------------------------------------------
 */
 
 /*
@@ -190,40 +240,47 @@ document.getElementById('btn1').addEventListener('click', () => {
 });
 
 */
-
-//trabajar con los atributos de HTML
-console.log(document.documentElement.lang)
-console.log(document.documentElement.getAttribute("lang"))
-//La diferencia es que en una te da todo el link y en otra el valor que realmente esta escrito
-console.log(document.querySelector(".link-dom").href)
-console.log(document.querySelector(".link-dom").getAttribute("href"))
-
-//Cambiando el atributo lang
-document.documentElement.lang="es";
-console.log(document.documentElement.lang)
-document.documentElement.setAttribute("lang","es-MX")
-console.log(document.documentElement.lang)
-
-//cambiando atributo para que se abra en otra pestaña del navegador
 const $linkDom = document.querySelector(".link-dom")
-$linkDom.setAttribute("target","_blank")
-//agregando rel noopener, para que sea seguro el link, es buena practica
-$linkDom.setAttribute("rel","noopener")
-//poniendo un link en el href
-$linkDom.setAttribute("href","https://www.google.com/")
-//validar si mi codigo tiene un atributo
-console.log($linkDom.hasAttribute("rel"))
-//Remover un atributo
-$linkDom.removeAttribute("rel","noopener")
-console.log($linkDom.hasAttribute("rel"))
 
-//Conseguir que me muestre un atributo
-console.log($linkDom.getAttribute("data-description"))
-//Cada atributo lo va guardando en ese Mapa(tipo de dato nuevo de JS desde el 2015)
-console.log($linkDom.getAttribute("data-description"))
+console.log($linkDom.style)//aquí aparecen odas las propiedades validas que se pueden aplicar en css y cuales has modificado
+console.log($linkDom.getAttribute("style"))//te da solo lo que aparece en el atributo style
+console.log($linkDom.style.backgroundColor)
 
-//Te guarda los atributos en un objeto de tipo Mapa, fijate como puse 2 atributos en el HTML
-console.log($linkDom.dataset)
+//otra manera de obtener todas las propiedades CSS que puedes modificar, solo que te lo enlista y también te muestra su valor por defecto
+//las puedes ver también en la parte de "style" abajo de la consola del navegador das click en "computed" y apareceran, según la etiqueta 
+//que estés seleccionando
+console.log(window.getComputedStyle($linkDom))
+//no es necesario poner explicitamente el window, getPropertyValue("color") nos muestra el valor que tiene nuestra propiedad 
+console.log(getComputedStyle($linkDom).getPropertyValue("color"))
+
+//declarando una propiedad, le estoy quitando el subrayado a las etiqueta a de enlace
+$linkDom.style.setProperty("text-decoration","none")
+//cambiando el display:inline que tienen por defecto las etiquetas a
+$linkDom.style.setProperty("display","block")
+//accediendo a la propiedad por medio del punto
+$linkDom.style.width = "50%";
+//centrando el texto
+$linkDom.style.textAlign = "center";
+//Para centrar la caja
+$linkDom.style.marginLeft = "auto";
+$linkDom.style.marginRight = "auto";
+$linkDom.style.padding = "1rem";
+//borde redondeando
+$linkDom.style.borderRadius = ".5rem";
+console.log($linkDom.getAttribute("style"))//te da solo lo que aparece en el atributo style
+
+//variables en css- el nombre correcto es "custom properties"
+const $html = document.documentElement;
+//selecciona la etiqueta body
+const $body = document.body;
+
+let variableDarkColor = getComputedStyle($html).getPropertyValue("--dark-color")
+let variableYellowColor = getComputedStyle($html).getPropertyValue("--yellow-color")
+//muestra los valores que has seleccionado
+console.log(variableDarkColor,variableYellowColor)
+
+$body.style.backgroundColor = variableDarkColor;
+$body.style.color = variableYellowColor;
 
 /*
 ¿Porque se usa const y no let?
