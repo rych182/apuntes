@@ -132,7 +132,7 @@ console.log($linkDom.dataset)
 //Para que te muestre le contenido del atributo , .dataset.nombreDelAtributo
 console.log($linkDom.dataset.id)
 
-//Para que se cambie el atributo
+//Para que se cambie el atributo 
 $linkDom.setAttribute("data-description","hola mundo")
 
 //Cambiarle el valor de otra manera
@@ -140,7 +140,105 @@ $linkDom.dataset.description ="Hello world"
 ----------------------------------------------------------------------------------------------------
 clase 5
 
-los estilos también spn un atributo
+los estilos también son un atributo
+
+
+const $linkDom = document.querySelector(".link-dom")
+
+console.log($linkDom.style)//aquí aparecen odas las propiedades validas que se pueden aplicar en css y cuales has modificado
+console.log($linkDom.getAttribute("style"))//te da solo lo que aparece en el atributo style
+console.log($linkDom.style.backgroundColor)
+
+//otra manera de obtener todas las propiedades CSS que puedes modificar, solo que te lo enlista y también te muestra su valor por defecto
+//las puedes ver también en la parte de "style" abajo de la consola del navegador das click en "computed" y apareceran, según la etiqueta 
+//que estés seleccionando
+console.log(window.getComputedStyle($linkDom))
+//no es necesario poner explicitamente el window, getPropertyValue("color") nos muestra el valor que tiene nuestra propiedad 
+console.log(getComputedStyle($linkDom).getPropertyValue("color"))
+
+//declarando una propiedad, le estoy quitando el subrayado a las etiqueta a de enlace
+$linkDom.style.setProperty("text-decoration","none")
+//cambiando el display:inline que tienen por defecto las etiquetas a
+$linkDom.style.setProperty("display","block")
+//accediendo a la propiedad por medio del punto
+$linkDom.style.width = "50%";
+//centrando el texto
+$linkDom.style.textAlign = "center";
+//Para centrar la caja
+$linkDom.style.marginLeft = "auto";
+$linkDom.style.marginRight = "auto";
+$linkDom.style.padding = "1rem";
+//borde redondeando
+$linkDom.style.borderRadius = ".5rem";
+console.log($linkDom.getAttribute("style"))//te da solo lo que aparece en el atributo style
+
+//variables en css- el nombre correcto es "custom properties"
+const $html = document.documentElement;
+//selecciona la etiqueta body
+const $body = document.body;
+
+let variableDarkColor = getComputedStyle($html).getPropertyValue("--dark-color")
+let variableYellowColor = getComputedStyle($html).getPropertyValue("--yellow-color")
+//muestra los valores que has seleccionado
+console.log(variableDarkColor,variableYellowColor)
+
+$body.style.backgroundColor = variableDarkColor;
+$body.style.color = variableYellowColor;
+
+//Modificando el color en la variable, checa la etiqueta body en el html, ahí estará en el style
+$html.style.setProperty("--dark-color","pink")//cambia el color dentro de la variable de css
+variableDarkColor = getComputedStyle($html).getPropertyValue("--dark-color")//almacenas la variable css(--dark-color) en la variable(variableDarkColor) 
+//agrega la propiedad CSS background-color y le dice que valor de color ponerle y por eso poner la variable "variableDarkColor" 
+$body.style.setProperty("background-color",variableDarkColor)const $linkDom = document.querySelector(".link-dom")
+
+console.log($linkDom.style)//aquí aparecen odas las propiedades validas que se pueden aplicar en css y cuales has modificado
+console.log($linkDom.getAttribute("style"))//te da solo lo que aparece en el atributo style
+console.log($linkDom.style.backgroundColor)
+
+//otra manera de obtener todas las propiedades CSS que puedes modificar, solo que te lo enlista y también te muestra su valor por defecto
+//las puedes ver también en la parte de "style" abajo de la consola del navegador das click en "computed" y apareceran, según la etiqueta 
+//que estés seleccionando
+console.log(window.getComputedStyle($linkDom))
+//no es necesario poner explicitamente el window, getPropertyValue("color") nos muestra el valor que tiene nuestra propiedad 
+console.log(getComputedStyle($linkDom).getPropertyValue("color"))
+
+//declarando una propiedad, le estoy quitando el subrayado a las etiqueta a de enlace
+$linkDom.style.setProperty("text-decoration","none")
+//cambiando el display:inline que tienen por defecto las etiquetas a
+$linkDom.style.setProperty("display","block")
+//accediendo a la propiedad por medio del punto
+$linkDom.style.width = "50%";
+//centrando el texto
+$linkDom.style.textAlign = "center";
+//Para centrar la caja
+$linkDom.style.marginLeft = "auto";
+$linkDom.style.marginRight = "auto";
+$linkDom.style.padding = "1rem";
+//borde redondeando
+$linkDom.style.borderRadius = ".5rem";
+console.log($linkDom.getAttribute("style"))//te da solo lo que aparece en el atributo style
+
+//variables en css- el nombre correcto es "custom properties"
+const $html = document.documentElement;
+//selecciona la etiqueta body
+const $body = document.body;
+
+let variableDarkColor = getComputedStyle($html).getPropertyValue("--dark-color")
+let variableYellowColor = getComputedStyle($html).getPropertyValue("--yellow-color")
+//muestra los valores que has seleccionado
+console.log(variableDarkColor,variableYellowColor)
+
+$body.style.backgroundColor = variableDarkColor;
+$body.style.color = variableYellowColor;
+
+//Modificando el color en la variable, checa la etiqueta body en el html, ahí estará en el style
+$html.style.setProperty("--dark-color","pink")//cambia el color dentro de la variable de css
+variableDarkColor = getComputedStyle($html).getPropertyValue("--dark-color")//almacenas la variable css(--dark-color) en la variable(variableDarkColor) 
+//agrega la propiedad CSS background-color y le dice que valor de color ponerle y por eso poner la variable "variableDarkColor" 
+$body.style.setProperty("background-color",variableDarkColor)
+
+-----------------------------------------------------------------------------------
+CLASE 6
 
 ------------------------------------------------------------------------------------------------
 */
@@ -201,7 +299,6 @@ let fechaEspecifica = new Date(2024, 4, 17);  // Mes es 0-indexado, por lo que 4
 console.log(fechaEspecifica);  // Ejemplo de salida: Fri May 17 2024 00:00:00 GMT+0000 (Coordinated Universal Time)
 
 
-
 -----------------------------------------------------------------------------------------------------------
 Ejercicio 4: hacer un callback que muestre el dato en el dom
 
@@ -240,47 +337,6 @@ document.getElementById('btn1').addEventListener('click', () => {
 });
 
 */
-const $linkDom = document.querySelector(".link-dom")
-
-console.log($linkDom.style)//aquí aparecen odas las propiedades validas que se pueden aplicar en css y cuales has modificado
-console.log($linkDom.getAttribute("style"))//te da solo lo que aparece en el atributo style
-console.log($linkDom.style.backgroundColor)
-
-//otra manera de obtener todas las propiedades CSS que puedes modificar, solo que te lo enlista y también te muestra su valor por defecto
-//las puedes ver también en la parte de "style" abajo de la consola del navegador das click en "computed" y apareceran, según la etiqueta 
-//que estés seleccionando
-console.log(window.getComputedStyle($linkDom))
-//no es necesario poner explicitamente el window, getPropertyValue("color") nos muestra el valor que tiene nuestra propiedad 
-console.log(getComputedStyle($linkDom).getPropertyValue("color"))
-
-//declarando una propiedad, le estoy quitando el subrayado a las etiqueta a de enlace
-$linkDom.style.setProperty("text-decoration","none")
-//cambiando el display:inline que tienen por defecto las etiquetas a
-$linkDom.style.setProperty("display","block")
-//accediendo a la propiedad por medio del punto
-$linkDom.style.width = "50%";
-//centrando el texto
-$linkDom.style.textAlign = "center";
-//Para centrar la caja
-$linkDom.style.marginLeft = "auto";
-$linkDom.style.marginRight = "auto";
-$linkDom.style.padding = "1rem";
-//borde redondeando
-$linkDom.style.borderRadius = ".5rem";
-console.log($linkDom.getAttribute("style"))//te da solo lo que aparece en el atributo style
-
-//variables en css- el nombre correcto es "custom properties"
-const $html = document.documentElement;
-//selecciona la etiqueta body
-const $body = document.body;
-
-let variableDarkColor = getComputedStyle($html).getPropertyValue("--dark-color")
-let variableYellowColor = getComputedStyle($html).getPropertyValue("--yellow-color")
-//muestra los valores que has seleccionado
-console.log(variableDarkColor,variableYellowColor)
-
-$body.style.backgroundColor = variableDarkColor;
-$body.style.color = variableYellowColor;
 
 /*
 ¿Porque se usa const y no let?
@@ -295,3 +351,29 @@ No importa si le cambio dinamicamente con JS atributos o estilos
 Algunos desarrolladores utilizan $ para nombrar una constante a la cual le almacenamos un
 elemento del DOM
 */
+
+const $card = document.querySelector(".card");
+console.log($card);
+console.log($card.className);//te devuelve la cadena de texto del nombre de la clase
+console.log($card.className);//DomTokenList
+/*
+Es un objeto especial del DOM que se usa para manejar listas de tokens 
+(generalmente clases CSS) de manera eficiente y segura.
+
+¿Por qué existe DOMTokenList y no usan un array?
+Porque el DOM necesita sincronización directa con el atributo del elemento.
+Por ejemplo:
+div.classList.add("activo");
+// Esto automáticamente actualiza el atributo "class" del elemento:
+// <div class="... activo"></div>
+
+Si fuera un array normal, tendrías que sincronizar manualmente el cambio con el DOM,
+lo cual sería propenso a errores y menos eficiente.
+
+Además, DOMTokenList evita duplicados y maneja espacios y formato automáticamente
+— algo que con un array tendrías que controlar tú.
+*/
+
+console.log($card.classList.contains("rotate-45"))//checa si existe la clase de CSS, devuelve boleano
+$card.classList.add("rotate-45")
+console.log($card.classList.contains("rotate-45"))
