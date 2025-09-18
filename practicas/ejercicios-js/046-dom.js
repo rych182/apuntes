@@ -10,6 +10,28 @@ Las etiquetas el DOM se refiere como elementos(checar imagen DOM),
 podemos seleccionar elementos, eliminarlos y modificarlos, el DOM es todo mi código HTML
 , también puedes seleccionar, atributos, clases, id's etc.
 
+DOMTokenList
+Es un objeto especial del DOM que se usa para manejar listas de tokens 
+(generalmente clases CSS) de manera eficiente y segura.
+
+¿Por qué existe DOMTokenList y no usan un array?
+Porque el DOM necesita sincronización directa con el atributo del elemento.
+Por ejemplo:
+div.classList.add("activo");
+// Esto automáticamente actualiza el atributo "class" del elemento:
+// <div class="... activo"></div>
+
+Si fuera un array normal, tendrías que sincronizar manualmente el cambio con el DOM,
+lo cual sería propenso a errores y menos eficiente.
+
+Además, DOMTokenList evita duplicados y maneja espacios y formato automáticamente
+— algo que con un array tendrías que controlar tú.
+
+No hay una regla especial del DOM que diga “usa const”.
+Pero sí es una buena práctica usar const para referencias de elementos del DOM porque casi nunca los
+reasignas, y eso hace tu código más robusto, legible y menos propenso a errores. 
+
+
 ------------------------------------------------------------------------
 CLASE 1
 
@@ -142,6 +164,131 @@ clase 5
 
 los estilos también son un atributo
 
+¿Por qué es útil getVomputedStyle?
+Porque no siempre puedes saber qué estilo tiene realmente un elemento solo mirando tu CSS 
+
+Por ejemplo:
+miDiv.style.color // ← Solo devuelve estilos aplicados *inline* (con style="..."), no los de CSS externo o heredados.
+getComputedStyle(miDiv).color // ← ¡Devuelve el color *calculado final*, aunque venga de una hoja de estilos externa!
+
+Ejemplo práctico: CHECAR EJERCICIO 6
+
+Casos de uso comunes
+Leer estilos reales para animaciones o cálculos dinámicos.
+Detectar el estado visual de un elemento (¿está oculto? ¿qué opacidad tiene?).
+Obtener dimensiones reales afectadas por CSS (márgenes, paddings, transforms, etc.).
+Acceder a estilos de pseudo-elementos (como ::before).
+
+🧪 Ejemplo con pseudo-elemento:
+<div id="contenedor">Contenido</div>
+#contenedor::before {
+  content: "★ ";
+  color: gold;
+}
+const contenedor = document.getElementById("contenedor");
+const estilosBefore = getComputedStyle(contenedor, "::before");
+console.log(estilosBefore.color); // "rgb(255, 215, 0)" (gold)
+console.log(estilosBefore.content); // "★ " (¡o a veces "none" en algunos navegadores! — cuidado)
+
+Ejemplo útil: Obtener dimensiones reales
+const caja = document.getElementById("miCaja");
+const estilos = getComputedStyle(caja);
+
+const ancho = parseFloat(estilos.width);      // "100.4px" → 100.4
+const alto = parseFloat(estilos.height);
+const margenIzq = parseFloat(estilos.marginLeft);
+
+console.log(`Ancho total: ${ancho + margenIzq * 2}px`);
+
+La propiedad (en realidad, método) getComputedStyle() del DOM en JavaScript sirve para:
+
+✅ Obtener los valores finales de todas las propiedades CSS aplicadas a un elemento
+,después de que el navegador haya calculado (o “resuelto”)
+todos los estilos —incluyendo estilos de hojas de estilo, herencia, media queries,
+estilos por defecto del navegador, etc. 
+
+📌 Sintaxis básica:
+js
+
+
+1
+const estilos = window.getComputedStyle(elemento, [pseudoElemento]);
+elemento: El elemento del DOM que quieres inspeccionar.
+pseudoElemento (opcional): Por ejemplo, ":before", ":after", si quieres obtener estilos de pseudo-elementos.
+🔍 ¿Por qué es útil?
+Porque no siempre puedes saber qué estilo tiene realmente un elemento solo mirando tu CSS o usando element.style.propiedad.
+
+Por ejemplo:
+
+miDiv.style.color // ← Solo devuelve estilos aplicados *inline* (con style="..."), no los de CSS externo o heredados.
+Pero:
+
+getComputedStyle(miDiv).color // ← ¡Devuelve el color *calculado final*, aunque venga de una hoja de estilos externa!
+💡 Ejemplo práctico:
+Supongamos este HTML y CSS:
+
+<div id="miCaja">Hola</div>
+
+#miCaja {
+  color: blue;
+  font-size: 20px;
+  padding: 10px;
+}
+Y este JavaScript:
+const caja = document.getElementById("miCaja");
+
+// ❌ Esto devuelve vacío (si no hay estilo inline)
+console.log(caja.style.color); // ""
+
+// ✅ Esto devuelve el valor real calculado por el navegador
+const estilos = getComputedStyle(caja);
+console.log(estilos.color);        // "rgb(0, 0, 255)" (blue)
+console.log(estilos.fontSize);     // "20px"
+console.log(estilos.paddingTop);   // "10px"
+⚠️ Nota: Los colores suelen devolverse en formato rgb() o rgba(), incluso si los definiste como "blue" o "#00f". 
+
+🎯 Casos de uso comunes
+Leer estilos reales para animaciones o cálculos dinámicos.
+Detectar el estado visual de un elemento (¿está oculto? ¿qué opacidad tiene?).
+Obtener dimensiones reales afectadas por CSS (márgenes, paddings, transforms, etc.).
+Acceder a estilos de pseudo-elementos (como ::before).
+🧪 Ejemplo con pseudo-elemento:
+
+<div id="contenedor">Contenido</div>
+
+#contenedor::before {
+  content: "★ ";
+  color: gold;
+}
+
+const contenedor = document.getElementById("contenedor");
+const estilosBefore = getComputedStyle(contenedor, "::before");
+console.log(estilosBefore.color); // "rgb(255, 215, 0)" (gold)
+console.log(estilosBefore.content); // "★ " (¡o a veces "none" en algunos navegadores! — cuidado)
+
+⚠️ El soporte para leer content puede variar entre navegadores. 
+
+📏 Ejemplo útil: Obtener dimensiones reales
+A veces element.offsetWidth o element.clientHeight son suficientes, pero si necesitas valores con decimales o más precisos:
+
+const caja = document.getElementById("miCaja");
+const estilos = getComputedStyle(caja);
+
+const ancho = parseFloat(estilos.width);      // "100.4px" → 100.4
+const alto = parseFloat(estilos.height);
+const margenIzq = parseFloat(estilos.marginLeft);
+
+console.log(`Ancho total: ${ancho + margenIzq * 2}px`);
+
+🚫 Limitaciones
+Solo lectura: No puedes modificar estilos con getComputedStyle. Para eso, usa element.style.propiedad = ... o element.classList.
+Valores computados: Devuelve valores absolutos y normalizados (ej: colores en rgb(), longitudes en px, etc.).
+Rendimiento: Es una operación costosa si se usa en bucles o animaciones — ¡úsala con moderación!
+✅ Recomendación
+Usa getComputedStyle() cuando necesites leer el estilo final real que el navegador está aplicando,
+especialmente si ese estilo viene de CSS externo, clases, o herencia.
+
+========================
 
 const $linkDom = document.querySelector(".link-dom")
 
@@ -149,7 +296,8 @@ console.log($linkDom.style)//aquí aparecen odas las propiedades validas que se 
 console.log($linkDom.getAttribute("style"))//te da solo lo que aparece en el atributo style
 console.log($linkDom.style.backgroundColor)
 
-//otra manera de obtener todas las propiedades CSS que puedes modificar, solo que te lo enlista y también te muestra su valor por defecto
+//otra manera de obtener todas las propiedades CSS que puedes modificar, 
+// solo que te lo enlista y también te muestra su valor por defecto
 //las puedes ver también en la parte de "style" abajo de la consola del navegador das click en "computed" y apareceran, según la etiqueta 
 //que estés seleccionando
 console.log(window.getComputedStyle($linkDom))
@@ -176,7 +324,7 @@ console.log($linkDom.getAttribute("style"))//te da solo lo que aparece en el atr
 const $html = document.documentElement;
 //selecciona la etiqueta body
 const $body = document.body;
-
+-----AQUÍ EMPIEZA EL EJERCICIO DE CAMBIAR DE COLOR EL BODY
 let variableDarkColor = getComputedStyle($html).getPropertyValue("--dark-color")
 let variableYellowColor = getComputedStyle($html).getPropertyValue("--yellow-color")
 //muestra los valores que has seleccionado
@@ -335,45 +483,48 @@ document.getElementById('btn1').addEventListener('click', () => {
     console.log('El resultado es: ' + resultado);
   });
 });
+------------------------------------------------------------------------------------------------------
+Exercise 6:
+Muestra la diferencia entre mostrar código CSS que se colocado desde el HtML y del archivo style.css
+
+<div id="miCaja">Hola</div>
+#miCaja {
+  color: blue;
+  font-size: 20px;
+  padding: 10px;
+}
+const caja = document.getElementById("miCaja");
+
+// ❌ Esto devuelve vacío (si no hay estilo inline)
+console.log(caja.style.color); // ""
+
+// ✅ Esto devuelve el valor real calculado por el navegador
+const estilos = getComputedStyle(caja);
+console.log(estilos.color);        // "rgb(0, 0, 255)" (blue)
+console.log(estilos.fontSize);     // "20px"
+console.log(estilos.paddingTop);   // "10px"
+-------------------------------------------------------------------------------------
+EXERCISE 7:
+
 
 */
 
 /*
-¿Porque se usa const y no let?
-Porque coom vamos a trabajar con objetos y arrays
-el const no va a validar que algo cambie dentro del objeto
-Mientras que valores primitivos como números o string puedo cambiar el valor
-El objeto y el array no van a cambiar, se mantiene
-No importa si le cambio dinamicamente con JS atributos o estilos
-, va a seguir siendo el mismo elemento del DOM a lo largo de mi aplicacion
+No hay una regla especial del DOM que diga “usa const”.
+Pero sí es una buena práctica usar const para referencias de elementos del DOM porque casi nunca los
+reasignas, y eso hace tu código más robusto, legible y menos propenso a errores. 
+
 
 
 Algunos desarrolladores utilizan $ para nombrar una constante a la cual le almacenamos un
 elemento del DOM
-*/
-
 const $card = document.querySelector(".card");
 console.log($card);
 console.log($card.className);//te devuelve la cadena de texto del nombre de la clase
 console.log($card.className);//DomTokenList
-/*
-Es un objeto especial del DOM que se usa para manejar listas de tokens 
-(generalmente clases CSS) de manera eficiente y segura.
 
-¿Por qué existe DOMTokenList y no usan un array?
-Porque el DOM necesita sincronización directa con el atributo del elemento.
-Por ejemplo:
-div.classList.add("activo");
-// Esto automáticamente actualiza el atributo "class" del elemento:
-// <div class="... activo"></div>
-
-Si fuera un array normal, tendrías que sincronizar manualmente el cambio con el DOM,
-lo cual sería propenso a errores y menos eficiente.
-
-Además, DOMTokenList evita duplicados y maneja espacios y formato automáticamente
-— algo que con un array tendrías que controlar tú.
-*/
 
 console.log($card.classList.contains("rotate-45"))//checa si existe la clase de CSS, devuelve boleano
 $card.classList.add("rotate-45")
 console.log($card.classList.contains("rotate-45"))
+*/
