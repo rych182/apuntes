@@ -6,11 +6,49 @@
 }
 --------------------------
 CODIGO EJERCICIO 7
-
-*/
-
+#contenedor::before {
+  content: "★ ";
+  color: gold;
+}
+--------------------------
+CODIGO EJERCICIO 8
 #miCaja {
   color: blue;
   font-size: 20px;
   padding: 10px;
+  background-color: brown;
+  margin-left: 5px;
+}
+----------------------------
+
+*/
+:root{
+  --yellow-color:#f7d71e;
+  --dark-color:#222;
+}
+
+.card{
+    display: inline-block;
+    background-color: var(--dark-color);
+    color: var(--yellow-color);
+}
+
+.card figcaption{
+    padding: 1rem;
+}
+
+.rotate-45{
+    transform: rotate(45deg);
+}
+
+.rotate-135{
+    transform: rotate(135deg);
+}
+
+.opacity-80{
+    opacity: .8;
+}
+
+.sepia{
+    filter: sepia(1);
 }

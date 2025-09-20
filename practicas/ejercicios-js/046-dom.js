@@ -1,6 +1,4 @@
-
 /*
-
 ME QUEDE MIN 9
 
 INFORMACIÓN
@@ -174,23 +172,14 @@ getComputedStyle(miDiv).color // ← ¡Devuelve el color *calculado final*, aunq
 Ejemplo práctico: CHECAR EJERCICIO 6
 
 Casos de uso comunes
-Leer estilos reales para animaciones o cálculos dinámicos.
-Detectar el estado visual de un elemento (¿está oculto? ¿qué opacidad tiene?).
-Obtener dimensiones reales afectadas por CSS (márgenes, paddings, transforms, etc.).
-Acceder a estilos de pseudo-elementos (como ::before).
+-Leer estilos reales para animaciones o cálculos dinámicos.
+-Detectar el estado visual de un elemento (¿está oculto? ¿qué opacidad tiene?).
+-Obtener dimensiones reales afectadas por CSS (márgenes, paddings, transforms, etc.).
+-Acceder a estilos de pseudo-elementos (como ::before).
 
-🧪 Ejemplo con pseudo-elemento:
-<div id="contenedor">Contenido</div>
-#contenedor::before {
-  content: "★ ";
-  color: gold;
-}
-const contenedor = document.getElementById("contenedor");
-const estilosBefore = getComputedStyle(contenedor, "::before");
-console.log(estilosBefore.color); // "rgb(255, 215, 0)" (gold)
-console.log(estilosBefore.content); // "★ " (¡o a veces "none" en algunos navegadores! — cuidado)
 
 Ejemplo útil: Obtener dimensiones reales
+
 const caja = document.getElementById("miCaja");
 const estilos = getComputedStyle(caja);
 
@@ -207,45 +196,12 @@ La propiedad (en realidad, método) getComputedStyle() del DOM en JavaScript sir
 todos los estilos —incluyendo estilos de hojas de estilo, herencia, media queries,
 estilos por defecto del navegador, etc. 
 
-📌 Sintaxis básica:
-js
 
-
-1
 const estilos = window.getComputedStyle(elemento, [pseudoElemento]);
 elemento: El elemento del DOM que quieres inspeccionar.
 pseudoElemento (opcional): Por ejemplo, ":before", ":after", si quieres obtener estilos de pseudo-elementos.
 🔍 ¿Por qué es útil?
 Porque no siempre puedes saber qué estilo tiene realmente un elemento solo mirando tu CSS o usando element.style.propiedad.
-
-Por ejemplo:
-
-miDiv.style.color // ← Solo devuelve estilos aplicados *inline* (con style="..."), no los de CSS externo o heredados.
-Pero:
-
-getComputedStyle(miDiv).color // ← ¡Devuelve el color *calculado final*, aunque venga de una hoja de estilos externa!
-💡 Ejemplo práctico:
-Supongamos este HTML y CSS:
-
-<div id="miCaja">Hola</div>
-
-#miCaja {
-  color: blue;
-  font-size: 20px;
-  padding: 10px;
-}
-Y este JavaScript:
-const caja = document.getElementById("miCaja");
-
-// ❌ Esto devuelve vacío (si no hay estilo inline)
-console.log(caja.style.color); // ""
-
-// ✅ Esto devuelve el valor real calculado por el navegador
-const estilos = getComputedStyle(caja);
-console.log(estilos.color);        // "rgb(0, 0, 255)" (blue)
-console.log(estilos.fontSize);     // "20px"
-console.log(estilos.paddingTop);   // "10px"
-⚠️ Nota: Los colores suelen devolverse en formato rgb() o rgba(), incluso si los definiste como "blue" o "#00f". 
 
 🎯 Casos de uso comunes
 Leer estilos reales para animaciones o cálculos dinámicos.
@@ -267,18 +223,6 @@ console.log(estilosBefore.color); // "rgb(255, 215, 0)" (gold)
 console.log(estilosBefore.content); // "★ " (¡o a veces "none" en algunos navegadores! — cuidado)
 
 ⚠️ El soporte para leer content puede variar entre navegadores. 
-
-📏 Ejemplo útil: Obtener dimensiones reales
-A veces element.offsetWidth o element.clientHeight son suficientes, pero si necesitas valores con decimales o más precisos:
-
-const caja = document.getElementById("miCaja");
-const estilos = getComputedStyle(caja);
-
-const ancho = parseFloat(estilos.width);      // "100.4px" → 100.4
-const alto = parseFloat(estilos.height);
-const margenIzq = parseFloat(estilos.marginLeft);
-
-console.log(`Ancho total: ${ancho + margenIzq * 2}px`);
 
 🚫 Limitaciones
 Solo lectura: No puedes modificar estilos con getComputedStyle. Para eso, usa element.style.propiedad = ... o element.classList.
@@ -388,6 +332,18 @@ $body.style.setProperty("background-color",variableDarkColor)
 -----------------------------------------------------------------------------------
 CLASE 6
 
+
+Algunos desarrolladores utilizan $ para nombrar una constante a la cual le almacenamos un
+elemento del DOM
+const $card = document.querySelector(".card");
+console.log($card);
+console.log($card.className);//te devuelve la cadena de texto del nombre de la clase
+console.log($card.className);//DomTokenList
+
+
+console.log($card.classList.contains("rotate-45"))//checa si existe la clase de CSS, devuelve boleano
+$card.classList.add("rotate-45")
+console.log($card.classList.contains("rotate-45"))
 ------------------------------------------------------------------------------------------------
 */
 
@@ -504,9 +460,37 @@ console.log(estilos.color);        // "rgb(0, 0, 255)" (blue)
 console.log(estilos.fontSize);     // "20px"
 console.log(estilos.paddingTop);   // "10px"
 -------------------------------------------------------------------------------------
-EXERCISE 7:
+EXERCISE 7: te muestra el contenido del pseudo-selector 
+
+🧪 Ejemplo con pseudo-elemento:
+<div id="contenedor">Contenido</div>
+#contenedor::before {
+  content: "★ ";
+  color: gold;
+}
+
+const contenedor = document.getElementById("contenedor");
+const estilosBefore = getComputedStyle(contenedor, "::before");
+console.log(estilosBefore.color); // "rgb(255, 215, 0)" (gold)
+console.log(estilosBefore.content); // "★ " (¡o a veces "none" en algunos navegadores! — cuidado)
+
+-------------------------------------------------------------------------------------------------------
+EXERCISE 8:
 
 
+const caja = document.getElementById("miCaja");
+const estilos = getComputedStyle(caja);
+
+const ancho = parseFloat(estilos.width);      // "100.4px" → 100.4
+const alto = parseFloat(estilos.height);
+const margenIzq = parseFloat(estilos.marginLeft);
+
+console.log(margenIzq)
+console.log(ancho);
+
+console.log(`Ancho total: ${ancho + margenIzq * 2}px`);
+
+---------------------------------------------------------------------------------------------------
 */
 
 /*
@@ -516,15 +500,17 @@ reasignas, y eso hace tu código más robusto, legible y menos propenso a errore
 
 
 
-Algunos desarrolladores utilizan $ para nombrar una constante a la cual le almacenamos un
-elemento del DOM
+
+
+*/
+
 const $card = document.querySelector(".card");
 console.log($card);
 console.log($card.className);//te devuelve la cadena de texto del nombre de la clase
-console.log($card.className);//DomTokenList
+console.log($card.classList);//DomTokenList, cual es su posicion, tu longitud es de 1 y su valor es card
 
 
 console.log($card.classList.contains("rotate-45"))//checa si existe la clase de CSS, devuelve boleano
 $card.classList.add("rotate-45")
 console.log($card.classList.contains("rotate-45"))
-*/
+console.log($card.className);//viendo como 
