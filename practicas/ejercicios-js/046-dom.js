@@ -344,7 +344,73 @@ console.log($card.className);//DomTokenList
 console.log($card.classList.contains("rotate-45"))//checa si existe la clase de CSS, devuelve boleano
 $card.classList.add("rotate-45")
 console.log($card.classList.contains("rotate-45"))
+console.log($card.className);//viendo como agrego la nueva clase y ahora hay 2 clases
+console.log($card.classList);//aquí puedo ver como el DomTokenList muestra que ya tien 2 elementos
+
+//removiendo una clase
+$card.classList.remove("rotate-45")
+console.log($card.className);
+
+//APAGADOR, TOGGLE significa palanca, agrega y quita una clase
+$card.classList.toggle("rotate-45")
+console.log($card.classList.contains("rotate-45"))
+//aquí lo vuelvo a agregar para que le quite esa clase
+$card.classList.toggle("rotate-45")
+console.log($card.classList.contains("rotate-45"))
+
+$card.classList.toggle("rotate-45")
+console.log($card.classList.contains("rotate-45"))
+
+//REEMPLAZAR UNA CLASE X OTRA
+$card.classList.replace("rotate-45","rotate-135")
+
+//AGREGAR VARIAS CLASES AL MISMO TIEMPO
+$card.classList.add("opacity-80","sepia")
 ------------------------------------------------------------------------------------------------
+CLASE 7
+
+El metodo "innerText" se creo para INTERNET EXPLORER
+Cuando necesites "insertar solo texto" = textContent
+cuando necesites "insertar html y texto" = innerHTML
+outerHTML reemplaza lo seleccionado por lo que tenemos(el contenido)
+
+const $whatIsDOM = document.getElementById("que-es")
+
+let text = `
+  <p>
+  El Modelo de Objetos del Documento(<b><i>DOM - Document Object</i></b>) es un API para
+  documentos HTML y XML.
+  </p>
+  <p>
+  Éste proveé una representación estructural del documento, permitiendo modificar su contenido y
+  presentación visual mediante código JS
+  </p>
+  <p>
+    <mark>El DOM no es parte de la especificación de Javascript, es una API para los navegadores
+    </mark>
+  </p>
+`;
+//$whatIsDOM.innerText = text;
+//$whatIsDOM.textContent = text;
+//El metodo "innerText" se creo para INTERNET EXPLORER, no detecta las etiquetas HTML
+//El metodo "textContent" es el metodo STANDAR
+// "innerText" y "textContent" se crearon para agregar contenido textual a un elemento
+// "innerHTML" interpreta el contenido HTML
+$whatIsDOM.innerHTML = text;
+//outerHTML reemplaza lo seleccionado por lo que tenemos(el contenido)
+$whatIsDOM.outerHTML = text
+------------------------------------------------------------------------------
+Clase 8 DOM traversing(recorriendo el DOM)
+Son una serie de metodos para recorrer los elementos tomando como referencia
+"un nodo" poder recorrer diferentes elementos
+
+Diferentes tipos de nodo(hay 12):
+1- nodos de texto
+2- nodos de comentarios
+3- nodos de fragmentos
+
+
+
 */
 
 /*
@@ -504,13 +570,3 @@ reasignas, y eso hace tu código más robusto, legible y menos propenso a errore
 
 */
 
-const $card = document.querySelector(".card");
-console.log($card);
-console.log($card.className);//te devuelve la cadena de texto del nombre de la clase
-console.log($card.classList);//DomTokenList, cual es su posicion, tu longitud es de 1 y su valor es card
-
-
-console.log($card.classList.contains("rotate-45"))//checa si existe la clase de CSS, devuelve boleano
-$card.classList.add("rotate-45")
-console.log($card.classList.contains("rotate-45"))
-console.log($card.className);//viendo como 
