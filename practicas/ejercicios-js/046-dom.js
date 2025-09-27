@@ -409,7 +409,69 @@ Diferentes tipos de nodo(hay 12):
 2- nodos de comentarios
 3- nodos de fragmentos
 
+Por que los espacios de identación o un salto de linea, eso para el DOM es un tipo de nodo
+pero no queremos capturarlo.
 
+Este DOM traversing es "enfocado a los elementos" osea a las etiquetas HTML
+Si quieres capturar comentarios HTML, tendrías que capturarlos con 
+
+DIFERENCIA ENTRE NODO Y ELEMENTO
+
+ Ejemplo práctico
+Imagina este HTML:
+<div id="contenedor">
+  <!-- un comentario -->
+  <p>Hola mundo</p>
+</div>
+
+En el DOM, el nodo #contenedor tiene varios nodos hijos:
+
+Un nodo de tipo comentario (<!-- un comentario -->)
+Un nodo de tipo texto (el espacio/enter entre el comentario y <p>)
+Un nodo de tipo elemento (<p>)
+Otro nodo de tipo texto (el salto de línea después de </p>)
+Entonces:
+
+Si haces contenedor.childNodes, obtienes todos los nodos hijos (incluyendo texto y comentarios).
+Si haces contenedor.children, obtienes solo los elementos hijos (solo el <p>).
+
+Elemento    1   <div>,<p>,<span>, etc.
+Texto       3   El texto dentro de una etiqueta
+Comentario  8   <!-- esto es un comentario -->
+Documento   9   El nodo raíz (document)
+Atributo    2   (Menos usado hoy en día)
+
+✅ Conclusión: Todos los elementos son nodos, pero no todos los nodos son elementos. 
+
+🧠 Resumen final
+Nodo: cualquier parte del árbol DOM (etiquetas, texto, comentarios...).
+Elemento: un tipo de nodo que representa una etiqueta HTML.
+Todos los elementos son nodos, pero no al revés.
+Usa métodos con Element (children, nextElementSibling) si solo quieres trabajar con etiquetas.
+Usa métodos con Node (childNodes, nextSibling) si necesitas todos los nodos, incluyendo texto y comentarios.
+
+//Una etiqueta HTML es un elemento en el DOM 
+const $cards = document.querySelector(".cards");
+
+console.log($cards)
+console.log($cards.children)//acceder a los hijos
+console.log($cards.children[2])//un hijo en especifico
+
+console.log($cards.childNodes)//todo lo que viene adentro de lo que seleccione
+console.log($cards.parentElement)//el papa de lo que seleccione: en este caso es el BODY
+//PREGUNTA TECNICA, diferencia entre firstChild y firstElementChild
+console.log($cards.firstChild);//el primer nodo es la tabulación
+console.log($cards.firstElementChild)//y con este SI me selecciona el primer elemento
+//Solo nos importan los ELEMENTOS
+console.log($cards.lastElementChild)//selecciona el ultimo "elemento" hijo
+//selecciona el hermano que está antes de el
+console.log($cards.previousElementSibling)
+console.log($cards.nextElementSibling)
+
+//te muestra la etiqueta mas cercana que tenga de la que le hayas dicho(ancestro) PERO
+//QUE NO SEAN HERMANOS
+console.log($cards.closest("main"))//ve a tu html y mete todo dentro de una etiqueta MAIN
+console.log($cards.children[3].closest("section"))
 
 */
 
@@ -565,8 +627,6 @@ Pero sí es una buena práctica usar const para referencias de elementos del DOM
 reasignas, y eso hace tu código más robusto, legible y menos propenso a errores. 
 
 
-
-
-
 */
+
 

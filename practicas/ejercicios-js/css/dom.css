@@ -27,6 +27,11 @@ CODIGO EJERCICIO 8
   --dark-color:#222;
 }
 
+.cards{
+  border: solid var(--dark-color);
+  padding: 1rem;
+}
+
 .card{
     display: inline-block;
     background-color: var(--dark-color);
