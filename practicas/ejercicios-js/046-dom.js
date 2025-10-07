@@ -472,6 +472,10 @@ console.log($cards.nextElementSibling)
 //QUE NO SEAN HERMANOS
 console.log($cards.closest("main"))//ve a tu html y mete todo dentro de una etiqueta MAIN
 console.log($cards.children[3].closest("section"))
+.----------------------------------------------------------
+Clase 9:
+
+
 
 */
 
@@ -626,7 +630,69 @@ No hay una regla especial del DOM que diga “usa const”.
 Pero sí es una buena práctica usar const para referencias de elementos del DOM porque casi nunca los
 reasignas, y eso hace tu código más robusto, legible y menos propenso a errores. 
 
+7:59 - 8:59 1min LISTO
+8:59 - 10:59 2min LISTO
+10:59-13:59 3min LISTO
+13:59- 17:59 4MIN LISTO  
+17:59- 22:59 5min LISTO 
+22:59- 27-27 final = 23min 48s 
 
 */
 
 
+//ejercicio creando una tarjeta de imagen(nodo)
+//Así es como REACT, ANGULAR Y VUE CREAN TODO TRAS BAMBALINAS
+//Esta es la manera en la que agregamos nodos, de uno en uno
+const $figure = document.createElement("figure");
+const $figure2 = document.createElement("figure")
+const $img = document.createElement("img");
+const $figCaption = document.createElement("figcaption");
+const $figCaptiontext = document.createTextNode('texto nuevo');
+//elemento padre donde insertare todo
+const $cards = document.querySelector(".cards")
+
+//agregarle el href a la etiqueta img
+$img.setAttribute("src","https://placedog.net/500/g")
+$img.setAttribute("alt","Animals")
+$figure.classList.add("card")
+
+
+$figCaption.appendChild($figCaptiontext)
+$figure.appendChild($img) //al nodo $figure le agrego la etiqueta imagen
+$figure.appendChild($figCaption) //también le agregamos la etiqueta figcaption
+$cards.appendChild($figure)
+//las 4 lineas de arriba crean etiquetas html
+
+//creando otra card pero con el metodo innerHTML
+$figure2.innerHTML = `
+  <img src="https://placedog.net/500/g" alt="otro perro">
+  <figcaption>segunda card creada</figcaption>
+`;
+//agregandole la clase a la card 2
+$figure2.classList.add("card");
+//agregando la tarjeta al html
+$cards.appendChild($figure2)
+
+//ejercicio agregando varios datos
+const estaciones = ["prinavera","verano", "otoño", "invierno"];
+$ul = document.createElement("ul");
+
+document.writeln("<h3>Estaciones del año</h3>")
+//agregando etiqueta ul al DOM
+document.body.appendChild($ul)
+//bucle para imprimir los datos dentro del array en el DOM
+estaciones.forEach(el =>{
+  const $li = document.createElement("li")//creo una etiqueta li para cada valor
+  $li.textContent = el;//le ingreso el valor del array
+  $ul.appendChild($li)//a la etiqueta ul metele cada una de las etiquetas li con su texto 
+})
+
+//otra manera de hacerlo
+const continentes = ["africa","america","oceania","europa","asia"]
+$ul2 = document.createElement("ul")
+
+document.writeln("<h2>Continentes del mundo");
+document.body.appendChild($ul2);
+//$ul2.innerHTML=""; esta linea solo se utiliza en navegadores viejos no actualizados
+//concatenamos el texto vacio con el nuevo elemento, de lo contrario, te sobreescribira
+continentes.forEach(el => $ul2.innerHTML += `<li>${el}</li>`)
