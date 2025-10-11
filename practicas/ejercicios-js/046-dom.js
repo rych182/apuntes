@@ -630,12 +630,7 @@ No hay una regla especial del DOM que diga “usa const”.
 Pero sí es una buena práctica usar const para referencias de elementos del DOM porque casi nunca los
 reasignas, y eso hace tu código más robusto, legible y menos propenso a errores. 
 
-7:59 - 8:59 1min LISTO
-8:59 - 10:59 2min LISTO
-10:59-13:59 3min LISTO
-13:59- 17:59 4MIN LISTO  
-17:59- 22:59 5min LISTO 
-22:59- 27-27 final = 23min 48s 
+24:55
 
 */
 
@@ -696,3 +691,11 @@ document.body.appendChild($ul2);
 //$ul2.innerHTML=""; esta linea solo se utiliza en navegadores viejos no actualizados
 //concatenamos el texto vacio con el nuevo elemento, de lo contrario, te sobreescribira
 continentes.forEach(el => $ul2.innerHTML += `<li>${el}</li>`)
+
+//esta es la forma más optima y adecuada
+const meses = ["enero","febrero", "marzo", "abril","mayo", "junio","julio", "agosto","septiembre", "octubre", "noviembre", "diciembre"]
+$ul3 = document.createElement("ul")
+$fragment = document.createDocumentFragment()
+meses.forEach(el => {
+  const $li = document.createElement("li")
+})
