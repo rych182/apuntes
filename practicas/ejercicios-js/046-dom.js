@@ -734,11 +734,51 @@ No hay una regla especial del DOM que diga “usa const”.
 Pero sí es una buena práctica usar const para referencias de elementos del DOM porque casi nunca los
 reasignas, y eso hace tu código más robusto, legible y menos propenso a errores. 
 
-24:55-25:55 = 1min        DONE
-25:55-27:27 + 28s = 2min  DONE
-0:28s - 3:28s = 3min      DONE
-3:28a - 7:28s = 4min 
+24:55-25:55 = 1min              DONE
+25:55-27:27 + 28s = 2min        DONE
+0:28s - 3:28s = 3min            DONE
+3:28a - 7:28s = 4min            DONE
+7:28s - 12:28s = 5min           DONE
+12:28s - 12:45s + 5:43s = 6min  
 
 */
 
+const $cards = document.querySelector(".cards");
+const $template = document.getElementById("template-card").content;
+const $fragment = document.createDocumentFragment();
+const cardContent = [
+  {
+    title: "Perro 1",
+    img: "https://placedog.net/500/g"
+  },
+  {
+    title: "Perro 2",
+    img: "https://placedog.net/500/g"
+  },
+  {
+    title: "Perro 3",
+    img: "https://placedog.net/500/g"
+  },
+  {
+    title: "Perro 4",
+    img: "https://placedog.net/500/g"
+  },
+  {
+    title: "Perro 5",
+    img: "https://placedog.net/500/g"
+  },
+  
+]
 
+cardContent.forEach(el => {
+  $template.querySelector("img").setAttribute("src",el.img)
+  $template.querySelector("img").setAttribute("alt",el.title)
+  $template.querySelector("figcaption").textContent = el.title
+
+  //clonar el nodo(osea la estructura de html de la tarjeta)
+  let $clone = document.importNode($template,true)
+  //crea el fragmento de código
+  $fragment.appendChild($clone)
+})
+
+$cards.appendChild($fragment)

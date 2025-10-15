@@ -78,6 +78,23 @@ CODIGO EJERCICO 8
             <figcaption>Nature</figcaption>
         </figure>
     </section>
+    <!-- 
+    Las etiquetas temp´late no se renderizan en el DOM porque
+    el objetivo para el que fue creado es para hacer "un machote
+    o un modelo a seguir" y a partir de ella, empezar a generar
+    estructuras del DOM dinamicamente
+    Esta etiqueta se usa en VUE JS porque se utiliza para generar
+    código dinámico utilizando estos templates
+    Esta etiqueta no se renderiza como tal en el DOM
+    cuando tu la intentas seleccionar en la pestaña de "elements"
+    en el navegador, no selecciona nada 
+    -->
+    <template id="template-card">
+        <figure class="card">
+            <img>
+            <figcaption></figcaption>
+        </figure>
+    </template>
      <script src="046-dom.js"></script>
 
 
