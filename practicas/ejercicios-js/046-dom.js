@@ -475,6 +475,110 @@ console.log($cards.children[3].closest("section"))
 .----------------------------------------------------------
 Clase 9:
 
+//ejercicio creando una tarjeta de imagen(nodo)
+//Así es como REACT, ANGULAR Y VUE CREAN TODO TRAS BAMBALINAS
+//Esta es la manera en la que agregamos nodos, de uno en uno
+const $figure = document.createElement("figure");
+const $figure2 = document.createElement("figure")
+const $img = document.createElement("img");
+const $figCaption = document.createElement("figcaption");
+const $figCaptiontext = document.createTextNode('texto nuevo');
+//elemento padre donde insertare todo
+const $cards = document.querySelector(".cards")
+
+//agregarle el href a la etiqueta img
+$img.setAttribute("src","https://placedog.net/500/g")
+$img.setAttribute("alt","Animals")
+$figure.classList.add("card")
+
+
+$figCaption.appendChild($figCaptiontext)
+$figure.appendChild($img) //al nodo $figure le agrego la etiqueta imagen
+$figure.appendChild($figCaption) //también le agregamos la etiqueta figcaption
+$cards.appendChild($figure)
+//las 4 lineas de arriba crean etiquetas html
+
+//creando otra card pero con el metodo innerHTML
+$figure2.innerHTML = `
+  <img src="https://placedog.net/500/g" alt="otro perro">
+  <figcaption>segunda card creada</figcaption>
+`;
+//agregandole la clase a la card 2
+$figure2.classList.add("card");
+//agregando la tarjeta al html
+$cards.appendChild($figure2)
+
+//ejercicio agregando varios datos
+const estaciones = ["prinavera","verano", "otoño", "invierno"];
+$ul = document.createElement("ul");
+
+document.writeln("<h3>Estaciones del año</h3>")
+//agregando etiqueta ul al DOM
+document.body.appendChild($ul)
+//bucle para imprimir los datos dentro del array en el DOM
+estaciones.forEach(el =>{
+  const $li = document.createElement("li")//creo una etiqueta li para cada valor
+  $li.textContent = el;//le ingreso el valor del array
+  $ul.appendChild($li)//a la etiqueta ul metele cada una de las etiquetas li con su texto 
+})
+
+//otra manera de hacerlo
+const continentes = ["africa","america","oceania","europa","asia"]
+$ul2 = document.createElement("ul")
+
+document.writeln("<h2>Continentes del mundo");
+document.body.appendChild($ul2);
+//$ul2.innerHTML=""; esta linea solo se utiliza en navegadores viejos no actualizados
+//concatenamos el texto vacio con el nuevo elemento, de lo contrario, te sobreescribira
+continentes.forEach(el => $ul2.innerHTML += `<li>${el}</li>`)
+
+//esta es la forma más optima y adecuada, para no pedirle tantos recursos al navegador
+const meses = ["enero","febrero", "marzo", "abril","mayo", "junio","julio", "agosto","septiembre", "octubre", "noviembre", "diciembre"]
+$ul3 = document.createElement("ul")
+$fragment = document.createDocumentFragment()
+meses.forEach(el => {
+  const $li = document.createElement("li")
+  $li.textContent = el;
+  $fragment.appendChild($li)
+})
+document.writeln("<h3>Meses del año</n>")
+$ul3.appendChild($fragment)
+document.body.appendChild($ul3)
+
+COMPARANDO EL PENULTIMO EJERCICIO VS EL ÚLTIMO 
+El segundo código es mucho más óptimo. Te explico por qué:
+El problema con el primer código (innerHTML en loop)
+Cuando usas innerHTML += dentro de un loop, estás causando reflows y repaints en cada iteración:
+javascriptcontinentes.forEach(el => $ul2.innerHTML += `<li>${el}</li>`)
+Lo que pasa en cada iteración:
+
+El navegador lee todo el HTML actual de $ul2
+Lo convierte a string
+Le concatena el nuevo <li>
+Parsea todo el HTML de nuevo
+Reconstruye el DOM
+Repinta la página
+
+Si tienes 5 continentes, el navegador hace este proceso 5 veces. Con 100 elementos,
+¡100 veces! Esto es muy costoso en términos de rendimiento.
+
+Ventajas:
+
+DocumentFragment es una estructura en memoria - no está en el DOM real, por lo que manipularlo no causa reflows
+Construyes todos los elementos en el fragment (12 veces, pero en memoria)
+Una sola inserción al DOM real al final con $ul3.appendChild($fragment)
+El navegador solo repinta una vez
+El segundo código es mejor porque minimiza las manipulaciones del DOM real, haciendo todo el trabajo 
+"pesado" en memoria primero
+
+
+
+
+
+
+
+
+
 
 
 */
@@ -630,72 +734,11 @@ No hay una regla especial del DOM que diga “usa const”.
 Pero sí es una buena práctica usar const para referencias de elementos del DOM porque casi nunca los
 reasignas, y eso hace tu código más robusto, legible y menos propenso a errores. 
 
-24:55
+24:55-25:55 = 1min        DONE
+25:55-27:27 + 28s = 2min  DONE
+0:28s - 3:28s = 3min      DONE
+3:28a - 7:28s = 4min 
 
 */
 
 
-//ejercicio creando una tarjeta de imagen(nodo)
-//Así es como REACT, ANGULAR Y VUE CREAN TODO TRAS BAMBALINAS
-//Esta es la manera en la que agregamos nodos, de uno en uno
-const $figure = document.createElement("figure");
-const $figure2 = document.createElement("figure")
-const $img = document.createElement("img");
-const $figCaption = document.createElement("figcaption");
-const $figCaptiontext = document.createTextNode('texto nuevo');
-//elemento padre donde insertare todo
-const $cards = document.querySelector(".cards")
-
-//agregarle el href a la etiqueta img
-$img.setAttribute("src","https://placedog.net/500/g")
-$img.setAttribute("alt","Animals")
-$figure.classList.add("card")
-
-
-$figCaption.appendChild($figCaptiontext)
-$figure.appendChild($img) //al nodo $figure le agrego la etiqueta imagen
-$figure.appendChild($figCaption) //también le agregamos la etiqueta figcaption
-$cards.appendChild($figure)
-//las 4 lineas de arriba crean etiquetas html
-
-//creando otra card pero con el metodo innerHTML
-$figure2.innerHTML = `
-  <img src="https://placedog.net/500/g" alt="otro perro">
-  <figcaption>segunda card creada</figcaption>
-`;
-//agregandole la clase a la card 2
-$figure2.classList.add("card");
-//agregando la tarjeta al html
-$cards.appendChild($figure2)
-
-//ejercicio agregando varios datos
-const estaciones = ["prinavera","verano", "otoño", "invierno"];
-$ul = document.createElement("ul");
-
-document.writeln("<h3>Estaciones del año</h3>")
-//agregando etiqueta ul al DOM
-document.body.appendChild($ul)
-//bucle para imprimir los datos dentro del array en el DOM
-estaciones.forEach(el =>{
-  const $li = document.createElement("li")//creo una etiqueta li para cada valor
-  $li.textContent = el;//le ingreso el valor del array
-  $ul.appendChild($li)//a la etiqueta ul metele cada una de las etiquetas li con su texto 
-})
-
-//otra manera de hacerlo
-const continentes = ["africa","america","oceania","europa","asia"]
-$ul2 = document.createElement("ul")
-
-document.writeln("<h2>Continentes del mundo");
-document.body.appendChild($ul2);
-//$ul2.innerHTML=""; esta linea solo se utiliza en navegadores viejos no actualizados
-//concatenamos el texto vacio con el nuevo elemento, de lo contrario, te sobreescribira
-continentes.forEach(el => $ul2.innerHTML += `<li>${el}</li>`)
-
-//esta es la forma más optima y adecuada
-const meses = ["enero","febrero", "marzo", "abril","mayo", "junio","julio", "agosto","septiembre", "octubre", "noviembre", "diciembre"]
-$ul3 = document.createElement("ul")
-$fragment = document.createDocumentFragment()
-meses.forEach(el => {
-  const $li = document.createElement("li")
-})
