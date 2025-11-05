@@ -782,10 +782,34 @@ reasignas, y eso hace tu código más robusto, legible y menos propenso a errore
 
 */
 
+/*
+Solo hemos visto un metodo para agregar elementos "appendChild"
+appendChild agrega el elemento "al final del selector objetivo"
+PERO tenemos otros metodos que nos permiten "reemplazar o insertarlo
+al inicio ó insertarlo en una posicion en particular"
+
+Vamos a usar el DomTraversing para tener esa interacción
+MANERA VIEJA DE HACERLO
+Vamos a hacerla de la manera menos recomendada, osea, ya no usare la
+etiqueta figcaption, image ó usar templates, porque lo importante
+es que conozcas los otros metodos ademas del appendChild para 
+"agregar los elementos dinámicos"
+*/
+
 const $cards = document.querySelector('.cards');
 const $newCard = document.createElement("figure");
 
 $newCard.innerHTML= `
   <img src="https://placedog.net/500/g" alt="otro perro">
   <figcaption>segunda card creada</figcaption>
-`
+`;
+$newCard.classList.add("card");
+
+//necesita el nuevo nodo y el nodo a reemplazar
+//Aquí utilizamos las propiedades del DomTraversing
+//$cards.replaceChild($newCard,$cards.children[2])
+
+//appendChild nos agrega al final
+//nos permite insertar antes de un nodo que tomamos como referencia
+//recuerda siempre elegir el metodo que diga "element", porque si no agarra el nodo que tiene
+$cards.insertBefore($newCard,$cards.firstElementChild);

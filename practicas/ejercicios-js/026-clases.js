@@ -538,9 +538,123 @@ Perro.queEres();
 
 scooby.setRaza = "gran danes"//Aquí lo declaramos
 console.log(scooby.getRaza);//Aquí ya imprime "gran danes"
+----------------------------------------------------------------------------------
+//Ejercicio de ENCAPSULAMIENTO
+
+class Persona {
+  // Propiedades PRIVADAS (con #)
+    #nombre;
+    #edad;
+
+  constructor(nombre, edad) {
+    this.#nombre = nombre;
+    this.#edad = edad;
+  }
+
+  // Getter: permite LEER la edad
+  get edad() {
+    return this.#edad;
+  }
+
+  // Setter: permite MODIFICAR la edad con validación
+  set edad(nuevaEdad) {
+    if (nuevaEdad < 0 || nuevaEdad > 120) {
+      console.log("❌ Edad inválida");
+      return;
+    }
+    this.#edad = nuevaEdad;
+    console.log("✅ Edad actualizada");
+  }
+
+  get nombre() {
+    return this.#nombre;
+  }
+}
+
+// ============================================
+// DEMOSTRACIÓN
+// ============================================
+
+const persona = new Persona("Carlos", 25);
+
+// ✅ ACCESO CONTROLADO: usando getters
+console.log("Nombre:", persona.nombre);
+console.log("Edad:", persona.edad);
+
+// ✅ MODIFICACIÓN CONTROLADA: usando setter con validación
+persona.edad = 30;  // Funciona
+console.log("Nueva edad:", persona.edad);
+
+persona.edad = -5;  // No funciona - validación lo impide
+console.log("Edad sigue siendo:", persona.edad);
+
+// ❌ ACCESO DIRECTO NO FUNCIONA
+// console.log(persona.#edad); // ERROR: no puedes acceder a propiedades privadas
+// persona.#edad = 999;        // ERROR: no puedes modificar propiedades privadas
+
+let edad = 25;
+edad = -100;  // ¡Nadie te detiene! Ahora tienes -100 años 😅
+
+En resumen:
+
+Encapsulamiento = Ocultar datos importantes (#edad)
+Para acceder o modificar, debes usar las "puertas oficiales" (getter/setter)
+Esas "puertas" pueden tener seguridad (validaciones)
 
 */
-//Intentos:15 Errores:10 AciertosCompletos:5.
+
+
+
+class Persona {
+  // Propiedades PRIVADAS (con #)
+  #nombre;
+  #edad;
+
+  constructor(nombre, edad) {
+    this.#nombre = nombre;
+    this.#edad = edad;
+  }
+
+  // Getter: permite LEER la edad
+  get edad() {
+    return this.#edad;
+  }
+
+  // Setter: permite MODIFICAR la edad con validación
+  set edad(nuevaEdad) {
+    if (nuevaEdad < 0 || nuevaEdad > 120) {
+      console.log("❌ Edad inválida");
+      return;
+    }
+    this.#edad = nuevaEdad;
+    console.log("✅ Edad actualizada");
+  }
+
+  get nombre() {
+    return this.#nombre;
+  }
+}
+
+// ============================================
+// DEMOSTRACIÓN
+// ============================================
+
+const persona = new Persona("Carlos", 25);
+
+// ✅ ACCESO CONTROLADO: usando getters
+console.log("Nombre:", persona.nombre);
+console.log("Edad:", persona.edad);
+
+// ✅ MODIFICACIÓN CONTROLADA: usando setter con validación
+persona.edad = 30;  // Funciona
+console.log("Nueva edad:", persona.edad);
+
+persona.edad = -5;  // No funciona - validación lo impide
+console.log("Edad sigue siendo:", persona.edad);
+
+// ❌ ACCESO DIRECTO NO FUNCIONA
+// console.log(persona.#edad); // ERROR: no puedes acceder a propiedades privadas
+// persona.#edad = 999;        // ERROR: no puedes modificar propiedades privadas
 
 
   
