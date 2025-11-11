@@ -564,7 +564,8 @@ Si tienes 5 continentes, el navegador hace este proceso 5 veces. Con 100 element
 
 Ventajas:
 
-DocumentFragment es una estructura en memoria - no está en el DOM real, por lo que manipularlo no causa reflows
+DocumentFragment es una estructura en memoria - no está en el DOM real, 
+por lo que manipularlo no causa reflows.
 Construyes todos los elementos en el fragment (12 veces, pero en memoria)
 Una sola inserción al DOM real al final con $ul3.appendChild($fragment)
 El navegador solo repinta una vez
@@ -572,7 +573,8 @@ El segundo código es mejor porque minimiza las manipulaciones del DOM real, hac
 "pesado" en memoria primero
 
 -----------------------------------------------------------------------------------------------------------------------------
-CLASE 10 TEMPLATE HTML: vamos a mostrar información en el DOM, usando la etiqueta template
+CLASE 10 TEMPLATE HTML: vamos a mostrar información en el DOM, usando la etiqueta template y le vamos a insertar la información
+de los objetos dentro del array
 
 const $cards = document.querySelector(".cards");
 const $template = document.getElementById("template-card").content;
@@ -617,11 +619,64 @@ $cards.appendChild($fragment)
 ------------------------------------------------------------------------------
 clase 11:
 
+Solo hemos visto un metodo para agregar elementos "appendChild"
+appendChild agrega el elemento "al final del selector objetivo"
+PERO tenemos otros metodos que nos permiten "reemplazar o insertarlo
+al inicio ó insertarlo en una posicion en particular"
 
+Vamos a usar el DomTraversing para tener esa interacción
+MANERA VIEJA DE HACERLO
+Vamos a hacerla de la manera menos recomendada, osea, ya no usare la
+etiqueta figcaption, image ó usar templates, porque lo importante
+es que conozcas los otros metodos ademas del appendChild para 
+"agregar los elementos dinámicos"
 
+const $cards = document.querySelector('.cards');
+const $newCard = document.createElement("figure");
 
+$newCard.innerHTML= `
+  <img src="https://placedog.net/500/g" alt="otro perro">
+  <figcaption>segunda card creada</figcaption>
+`;
+$newCard.classList.add("card");
 
+//necesita el nuevo nodo y el nodo a reemplazar
+//Aquí utilizamos las propiedades del DomTraversing
+//$cards.replaceChild($newCard,$cards.children[2])
 
+//appendChild nos agrega al final
+//nos permite insertar antes de un nodo que tomamos como referencia
+//recuerda siempre elegir el metodo que diga "element", porque si no agarra el nodo que tiene
+//$cards.insertBefore($newCard,$cards.firstElementChild);
+
+//Metodo para eliminar (borra la última card)
+//$cards.removeChild($cards.lastElementChild);
+
+//Clona toda la sección de tarjetas
+//voy a crear una segunda sección de tarjetas con sus 5 tarjetas 
+//le tienes que poner true, para que clone todo el contenido
+//si la dejas vacia o le pones false, no clona el contenido
+const $cloneCards = $cards.cloneNode(true);
+document.body.appendChild($cloneCards)
+
+--------------------------------------------------------------
+clase 12: Modificando elementos en el DOM de manera moderna
+
+.insertAdjacent...
+// es como un appendChild o insertBefore, osea, agrega un elemento
+  .insertAdjacentElement(position,el) 
+  //Es como un innerHTML
+  .insertAdjacentHTML(position , html)
+  //Es como un textContent
+  .insertAdjacentText(position,text)  .
+
+Posiciones:
+  beforebegin(hermano anterior)
+  afterbegin(primer hijo)
+  beforeend(ultimo hijo)
+  afterend(hermano siguiente)
+
+-----------------------------------------------------------------
 
 
 
@@ -782,20 +837,6 @@ reasignas, y eso hace tu código más robusto, legible y menos propenso a errore
 
 */
 
-/*
-Solo hemos visto un metodo para agregar elementos "appendChild"
-appendChild agrega el elemento "al final del selector objetivo"
-PERO tenemos otros metodos que nos permiten "reemplazar o insertarlo
-al inicio ó insertarlo en una posicion en particular"
-
-Vamos a usar el DomTraversing para tener esa interacción
-MANERA VIEJA DE HACERLO
-Vamos a hacerla de la manera menos recomendada, osea, ya no usare la
-etiqueta figcaption, image ó usar templates, porque lo importante
-es que conozcas los otros metodos ademas del appendChild para 
-"agregar los elementos dinámicos"
-*/
-
 const $cards = document.querySelector('.cards');
 const $newCard = document.createElement("figure");
 
@@ -804,12 +845,3 @@ $newCard.innerHTML= `
   <figcaption>segunda card creada</figcaption>
 `;
 $newCard.classList.add("card");
-
-//necesita el nuevo nodo y el nodo a reemplazar
-//Aquí utilizamos las propiedades del DomTraversing
-//$cards.replaceChild($newCard,$cards.children[2])
-
-//appendChild nos agrega al final
-//nos permite insertar antes de un nodo que tomamos como referencia
-//recuerda siempre elegir el metodo que diga "element", porque si no agarra el nodo que tiene
-$cards.insertBefore($newCard,$cards.firstElementChild);
