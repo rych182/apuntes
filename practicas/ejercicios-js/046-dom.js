@@ -728,7 +728,21 @@ const card = document.querySelector('.card')
 card.classList.add("nueva-clase")
 -------------------------------------------------------------------
 
-Exercise 2: change the button color without give a click, only with a function
+Ejercicio 3: agregar 2 clases a una etiqueta HTML
+
+const card = document.querySelector('.card')
+card.classList.add("nueva-clase","otra clase")
+
+----------------------------------------------------------------------
+Ejercicio 4: remover una clase
+
+const card = document.querySelector('.card')
+console.log(card)
+card.classList.add("nueva-clase","otra-clase")
+card.classList.remove("nueva-clase")
+
+-----------------------------------------------------------------------
+Exercise 5: change the button color without give a click, only with a function
 const button = document.querySelector('.btn2')
 
 function toggle() {
@@ -736,7 +750,7 @@ function toggle() {
 }
 toggle()
 --------------------------------------
-Exercise 3: change the button color with a click
+Exercise 6: change the button color with a click
 
 const button = document.querySelector('.btn2')
 
@@ -746,7 +760,7 @@ function toggle() {
 
 button.addEventListener('click',toggle)
 -------------------------------------------------------------
-Ejercicio 4: callback por evento, ejemplo 2
+Ejercicio 7: callback por evento, ejemplo 2
 Para esto creamos un boton en html que tenga un id
 
 function fecha() {
@@ -772,7 +786,7 @@ console.log(fechaEspecifica);  // Ejemplo de salida: Fri May 17 2024 00:00:00 GM
 
 
 -----------------------------------------------------------------------------------------------------------
-Ejercicio 5: hacer un callback que muestre el dato en el dom
+Ejercicio 8: hacer un callback que muestre el dato en el dom
 
 function suma(callback,x,y) {
   let operacion = x + y;
@@ -790,7 +804,7 @@ function mostrarEnPagina(param){
 suma(mostrarEnPagina,2,4)
 
 ---------------------------------------------------------------
-EXERCISE 6: Imprimir el resultado de los números seleccionados en los inputs
+EXERCISE 9: Imprimir el resultado de los números seleccionados en los inputs
 
 const sumar = (num1, num2, callback) => {
   return callback(num1 + num2);
@@ -808,7 +822,7 @@ document.getElementById('btn1').addEventListener('click', () => {
   });
 });
 ------------------------------------------------------------------------------------------------------
-Exercise 7:
+Exercise 10:
 Muestra la diferencia entre mostrar código CSS que se colocado desde el HtML y del archivo style.css
 
 <div id="miCaja">Hola</div>
@@ -828,7 +842,7 @@ console.log(estilos.color);        // "rgb(0, 0, 255)" (blue)
 console.log(estilos.fontSize);     // "20px"
 console.log(estilos.paddingTop);   // "10px"
 -------------------------------------------------------------------------------------
-EXERCISE 8: te muestra el contenido del pseudo-selector 
+EXERCISE 11: te muestra el contenido del pseudo-selector 
 
 🧪 Ejemplo con pseudo-elemento:
 <div id="contenedor">Contenido</div>
@@ -843,7 +857,7 @@ console.log(estilosBefore.color); // "rgb(255, 215, 0)" (gold)
 console.log(estilosBefore.content); // "★ " (¡o a veces "none" en algunos navegadores! — cuidado)
 
 -------------------------------------------------------------------------------------------------------
-EXERCISE 9:
+EXERCISE 12:
 
 
 const caja = document.getElementById("miCaja");
@@ -880,3 +894,7 @@ $newCard.classList.add("card");
 */
 
 
+const card = document.querySelector('.card')
+console.log(card)
+card.classList.add("nueva-clase","otra-clase")
+card.classList.remove("nueva-clase")
