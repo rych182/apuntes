@@ -716,56 +716,80 @@ document.querySelector('.contenido-hero h1').textContent = "hola mundo"
 
 Ejercicio 3: Cambiar una imagen
 
+//CODIGO JS
 const imagen = document.querySelector('.card img');
 console.log(imagen)
 imagen.src = 'images/js.png'
+
+//CÓDIGO HTML
+    <section class="cards">
+        <figure class="card">
+            <img src="https://place-hold.it/200x200" alt="tech">
+            <figcaption>Tech</figcaption>
+        </figure>
+    </section>
 ---------------------------------------------------------------------------------------------
 
 Ejercicio 4: agregar una clase a una etiqueta HTML
 
+//CODIGO JS
 const card = document.querySelector('.card')
 card.classList.add("nueva-clase")
+
+//CÓDIGO HTML: Se agrega en la primer etiqueta que tenga la clase "card"
+<figure class="card">
+  <img src="https://place-hold.it/200x200" alt="tech">
+  <figcaption>Tech</figcaption>
+</figure>
 -------------------------------------------------------------------
 
 Ejercicio 5: agregar 2 clases a una etiqueta HTML
 
+//CODIGO JS
 const card = document.querySelector('.card')
 card.classList.add("nueva-clase","otra clase")
 
+//CÓDIGO HTML: Se agregaran en la primer etiqueta que tenga la clase "card"
+<figure class="card">
+  <img src="https://place-hold.it/200x200" alt="tech">
+  <figcaption>Tech</figcaption>
+</figure>
 ----------------------------------------------------------------------
 Ejercicio 6: remover una clase
 
+//CODIGO JS
 const card = document.querySelector('.card')
 console.log(card)
 card.classList.add("nueva-clase","otra-clase")
 card.classList.remove("nueva-clase")
 
+//CÓDIGO HTML: Se agregaran en la primer etiqueta que tenga la clase "card" y luego removera 1 clase
+<figure class="card">
+  <img src="https://place-hold.it/200x200" alt="tech">
+  <figcaption>Tech</figcaption>
+</figure>
 -----------------------------------------------------------------------
-Exercise 7: change the button color without give a click, only with a function
-const button = document.querySelector('.btn2')
+Exercise 7: change the color of the box with a button
 
-function toggle() {
-  button.classList.toggle('altColor')
-}
-toggle()
---------------------------------------
-Exercise 8: change the button color with a click
+const caja = document.querySelector('.caja')
+const boton = document.querySelector("#botonCaja")
 
-const button = document.querySelector('.btn2')
+boton.addEventListener("click",()=>{
+  caja.classList.toggle("agregandoFondoCaja")
+})
 
-function toggle() {
-  button.classList.toggle('altColor')
-}
-
-button.addEventListener('click',toggle)
 -------------------------------------------------------------
-Ejercicio 9: callback por evento, ejemplo 2
-Para esto creamos un boton en html que tenga un id
+Ejercicio 8: crea una funcion que al ejercutarla imprima la fecha actual en el DOM
 
+//CODIGO JS
 function fecha() {
   document.getElementById("fecha").innerHTML = Date();
 }
 
+//CÓDIGO HTML
+<h2 id="fecha"></h2>
+
+//EXPLICACION LARGA
 "Date" es una función constructora que se utiliza para crear objetos de tipo fecha.
 Por lo tanto, cuando llamas a Date(), dependiendo de cómo lo uses, puede actuar de dos maneras diferentes:
 
@@ -785,15 +809,11 @@ console.log(fechaEspecifica);  // Ejemplo de salida: Fri May 17 2024 00:00:00 GM
 
 
 -----------------------------------------------------------------------------------------------------------
-Ejercicio 10: hacer un callback que muestre el dato en el dom
+Ejercicio 9: hacer un callback que sume y muestre el dato en el DOM
 
 function suma(callback,x,y) {
   let operacion = x + y;
   callback(operacion);
-}
-
-function mostrarEnConsola(param){
-  console.log(param)
 }
 
 function mostrarEnPagina(param){
@@ -898,4 +918,13 @@ card.classList.remove("nueva-clase")
 
 */
 
+function suma(callback,x,y) {
+  let operacion = x + y;
+  callback(operacion);
+}
 
+function mostrarEnPagina(param){
+  document.getElementById('myh1').textContent = param; 
+}
+
+suma(mostrarEnPagina,2,4)
