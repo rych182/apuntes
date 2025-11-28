@@ -5,7 +5,16 @@
 
 body{
     background-color: gray;
+    font-family: "Noto Sans", sans-serif;
 }
+ 
+@font-face {
+  font-family: 'NotoSans';
+  src: url('../webfonts/NotoSans-VariableFont_wdth\,wght.ttf') ;
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 /*  HEADER  */
 
@@ -18,9 +27,54 @@ nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding-top: 5px;
 }
 
-h1 > a{
+h2 > a{
     color: green;
     text-decoration: none;
+    font-family: "Noto Sans", sans-serif;
+    display: block;
+    animation: pulseScale 1.7s infinite;
+}
+
+@keyframes pulseScale {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+ul{
+    padding-inline-start: 0;
+    list-style-type: none;
+}
+
+header> ul > li {
+    text-align: center;
+    color: rgb(216, 194, 165);
+    font-weight: 900;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+header> ul > li:hover{
+    transform: scale(1,1.8);
+    transition: .5s;
+}
+
+
+/*  HEADER RESPONSIVE DESIGN    */
+@media only screen and (min-width: 600px) {
+    header{
+        display: flex;
+    }
+    nav{
+        width: 50%;
+    }
+    ul{
+        display: flex;
+        border: 1px solid yellow;
+        width: 50%;
+        justify-content: space-around;
+    }
 }

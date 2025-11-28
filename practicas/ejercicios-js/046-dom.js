@@ -696,17 +696,16 @@ Posiciones:
 
 /*
 
-Exercise 0: callback per event
+Exercise 1: callback per event
 Para esto creamos un boton en html que tenga un id
 
 //function that allows you to select an id, class or html tag
 document.querySelector('#btn').addEventListener('click',()=>{
 	console.log("Has dado click y se ha activado ka función callback que dispara este console.log")
 })
----------------------------------------------------------------------------------
 
 -----------------------------------------------------------------------------
-Ejercicio 0: Cambiar un texto
+Ejercicio 2: Cambiar un texto
 const encabezado = document.querySelector('.contenido-hero h1').textContent;
 console.log(encabezado)
 document.querySelector('.contenido-hero h1').textContent = "hola mundo"
@@ -715,26 +714,26 @@ document.querySelector('.contenido-hero h1').textContent = "hola mundo"
     </div>
 ---------------------------------------------------------------------------------------
 
-Ejercicio 1: Cambiar una imagen
+Ejercicio 3: Cambiar una imagen
 
 const imagen = document.querySelector('.card img');
 console.log(imagen)
 imagen.src = 'images/js.png'
 ---------------------------------------------------------------------------------------------
 
-Ejercicio 2: agregar una clase a una etiqueta HTML
+Ejercicio 4: agregar una clase a una etiqueta HTML
 
 const card = document.querySelector('.card')
 card.classList.add("nueva-clase")
 -------------------------------------------------------------------
 
-Ejercicio 3: agregar 2 clases a una etiqueta HTML
+Ejercicio 5: agregar 2 clases a una etiqueta HTML
 
 const card = document.querySelector('.card')
 card.classList.add("nueva-clase","otra clase")
 
 ----------------------------------------------------------------------
-Ejercicio 4: remover una clase
+Ejercicio 6: remover una clase
 
 const card = document.querySelector('.card')
 console.log(card)
@@ -742,7 +741,7 @@ card.classList.add("nueva-clase","otra-clase")
 card.classList.remove("nueva-clase")
 
 -----------------------------------------------------------------------
-Exercise 5: change the button color without give a click, only with a function
+Exercise 7: change the button color without give a click, only with a function
 const button = document.querySelector('.btn2')
 
 function toggle() {
@@ -750,7 +749,7 @@ function toggle() {
 }
 toggle()
 --------------------------------------
-Exercise 6: change the button color with a click
+Exercise 8: change the button color with a click
 
 const button = document.querySelector('.btn2')
 
@@ -760,7 +759,7 @@ function toggle() {
 
 button.addEventListener('click',toggle)
 -------------------------------------------------------------
-Ejercicio 7: callback por evento, ejemplo 2
+Ejercicio 9: callback por evento, ejemplo 2
 Para esto creamos un boton en html que tenga un id
 
 function fecha() {
@@ -786,7 +785,7 @@ console.log(fechaEspecifica);  // Ejemplo de salida: Fri May 17 2024 00:00:00 GM
 
 
 -----------------------------------------------------------------------------------------------------------
-Ejercicio 8: hacer un callback que muestre el dato en el dom
+Ejercicio 10: hacer un callback que muestre el dato en el dom
 
 function suma(callback,x,y) {
   let operacion = x + y;
@@ -804,7 +803,7 @@ function mostrarEnPagina(param){
 suma(mostrarEnPagina,2,4)
 
 ---------------------------------------------------------------
-EXERCISE 9: Imprimir el resultado de los números seleccionados en los inputs
+EXERCISE 11: Imprimir el resultado de los números seleccionados en los inputs
 
 const sumar = (num1, num2, callback) => {
   return callback(num1 + num2);
@@ -822,7 +821,7 @@ document.getElementById('btn1').addEventListener('click', () => {
   });
 });
 ------------------------------------------------------------------------------------------------------
-Exercise 10:
+Exercise 12:
 Muestra la diferencia entre mostrar código CSS que se colocado desde el HtML y del archivo style.css
 
 <div id="miCaja">Hola</div>
@@ -842,7 +841,7 @@ console.log(estilos.color);        // "rgb(0, 0, 255)" (blue)
 console.log(estilos.fontSize);     // "20px"
 console.log(estilos.paddingTop);   // "10px"
 -------------------------------------------------------------------------------------
-EXERCISE 11: te muestra el contenido del pseudo-selector 
+EXERCISE 13: te muestra el contenido del pseudo-selector 
 
 🧪 Ejemplo con pseudo-elemento:
 <div id="contenedor">Contenido</div>
@@ -857,7 +856,7 @@ console.log(estilosBefore.color); // "rgb(255, 215, 0)" (gold)
 console.log(estilosBefore.content); // "★ " (¡o a veces "none" en algunos navegadores! — cuidado)
 
 -------------------------------------------------------------------------------------------------------
-EXERCISE 12:
+EXERCISE 14:
 
 
 const caja = document.getElementById("miCaja");
@@ -873,9 +872,7 @@ console.log(ancho);
 console.log(`Ancho total: ${ancho + margenIzq * 2}px`);
 
 ---------------------------------------------------------------------------------------------------
-*/
 
-/*
 No hay una regla especial del DOM que diga “usa const”.
 Pero sí es una buena práctica usar const para referencias de elementos del DOM porque casi nunca los
 reasignas, y eso hace tu código más robusto, legible y menos propenso a errores. 
@@ -891,10 +888,14 @@ $newCard.innerHTML= `
   <figcaption>segunda card creada</figcaption>
 `;
 $newCard.classList.add("card");
-*/
 
+----------------------------------------------------------------
 
 const card = document.querySelector('.card')
 console.log(card)
 card.classList.add("nueva-clase","otra-clase")
 card.classList.remove("nueva-clase")
+
+*/
+
+
