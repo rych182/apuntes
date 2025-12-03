@@ -918,13 +918,21 @@ card.classList.remove("nueva-clase")
 
 */
 
-function suma(callback,x,y) {
-  let operacion = x + y;
-  callback(operacion);
-}
+const caja = document.querySelector('.card')
+const boton = document.querySelector("#botonCaja")
+const imagen = document.querySelector('.card img')
 
-function mostrarEnPagina(param){
-  document.getElementById('myh1').textContent = param; 
-}
+// Define las dos URLs de las imágenes
+const imagen1 = "images/css.png"
+const imagen2 = "images/js.png" // imagen con fondo rojo como ejemplo
+const imagen3 = "images/php.svg"
+const imagen4 = "images/rub.webp"
 
-suma(mostrarEnPagina,2,4)
+
+boton.addEventListener("click", () => {
+  if (imagen.src === imagen1) {
+    imagen.src = imagen3
+  } else {
+    imagen.src = imagen1
+  }
+})
