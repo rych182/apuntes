@@ -703,9 +703,42 @@ Para esto creamos un boton en html que tenga un id
 document.querySelector('#btn').addEventListener('click',()=>{
 	console.log("Has dado click y se ha activado ka función callback que dispara este console.log")
 })
+-------------------------------------------------------------------------------------------------------
+
+Exercise 2: crear un boton que me imprima texto
+MANERA 1
+let boton = document.querySelector("#botonCaja");
+let cajaTitulo = document.querySelector("#contenido")
+
+boton.addEventListener('click', ()=>{
+  cajaTitulo.textContent = "imprimiendo texto"
+})
+
+
+-----------------------------------------------------
+EXERCISE 3:crear un boton que me imprima texto cada vez que das un click
+
+MANERA1
+let boton = document.querySelector("#botonCaja");
+
+boton.addEventListener('click', ()=>{
+  let contenedor = document.querySelector("#contenido");
+  contenedor.innerHTML += "<p>imprimiendo texto</p>";
+})
+
+MANERA 2
+
+let boton = document.querySelector("#botonCaja");
+
+boton.addEventListener('click', ()=>{
+  let nuevoTexto = document.createElement("p");
+  nuevoTexto.textContent = "imprimiendo texto";
+  document.body.appendChild(nuevoTexto);
+})
+
 
 -----------------------------------------------------------------------------
-Ejercicio 2: Cambiar un texto
+Ejercicio 3: Cambiar un texto
 const encabezado = document.querySelector('.contenido-hero h1').textContent;
 console.log(encabezado)
 document.querySelector('.contenido-hero h1').textContent = "hola mundo"
@@ -714,7 +747,7 @@ document.querySelector('.contenido-hero h1').textContent = "hola mundo"
     </div>
 ---------------------------------------------------------------------------------------
 
-Ejercicio 3: Cambiar una imagen
+Ejercicio 4: Cambiar una imagen
 
 //CODIGO JS
 const imagen = document.querySelector('.card img');
@@ -777,6 +810,47 @@ const boton = document.querySelector("#botonCaja")
 boton.addEventListener("click",()=>{
   caja.classList.toggle("agregandoFondoCaja")
 })
+
+--------------------------------------------------------------------------
+Ejercicio 8: crea un boton que al darle click te cambie una imagen
+
+
+const caja = document.querySelector('.card')
+const boton = document.querySelector("#botonCaja")
+const imagen = document.querySelector('.card img')
+
+// Define las dos URLs de las imágenes
+const imagen1 = "images/css.png"
+const imagen2 = "images/js.png" // imagen con fondo rojo como ejemplo
+const imagen3 = "images/php.svg"
+const imagen4 = "images/rub.webp"
+
+boton.addEventListener("click", () => {
+  if (imagen.src.includes("css.png")) {
+    imagen.src = imagen2
+  } else if(imagen.src.includes("js.png")) {
+    imagen.src = imagen3
+  } else if(imagen.src.includes("php.svg")) {
+    imagen.src = imagen4
+  }else if(imagen.src.includes("rub.webp")) {
+    imagen.src = imagen1
+  }
+})
+
+//Usé .includes() en lugar de === porque imagen.src devuelve la URL completa 
+//(ej: "http://localhost/images/css.png") y no solo "images/css.png"¿Por qué sucede?
+//Cuando accedes a imagen.src en JavaScript, el navegador automáticamente convierte la ruta relativa
+// en una URL absoluta. Esto pasa porque el navegador necesita saber la ubicación exacta del recurso
+//  para cargarlo. Por ejemplo:
+
+//En tu HTML escribes: src="images/css.png" (ruta relativa)
+//Pero imagen.src devuelve: "http://localhost:3000/images/css.png" (URL absoluta)
+
+console.log("Atributo HTML:", imagen.getAttribute('src'))  // Muestra: "images/css.png"
+console.log("Propiedad .src:", imagen.src) 
+
+--------------------------------------------------------------------------------------------------------------------
+
 
 -------------------------------------------------------------
 Ejercicio 8: crea una funcion que al ejercutarla imprima la fecha actual en el DOM
@@ -918,21 +992,11 @@ card.classList.remove("nueva-clase")
 
 */
 
-const caja = document.querySelector('.card')
-const boton = document.querySelector("#botonCaja")
-const imagen = document.querySelector('.card img')
 
-// Define las dos URLs de las imágenes
-const imagen1 = "images/css.png"
-const imagen2 = "images/js.png" // imagen con fondo rojo como ejemplo
-const imagen3 = "images/php.svg"
-const imagen4 = "images/rub.webp"
+let boton = document.querySelector("#botonCaja");
 
-
-boton.addEventListener("click", () => {
-  if (imagen.src === imagen1) {
-    imagen.src = imagen3
-  } else {
-    imagen.src = imagen1
-  }
+boton.addEventListener('click', ()=>{
+  let nuevoTexto = document.createElement("p");
+  nuevoTexto.textContent = "imprimiendo texto";
+  document.body.appendChild(nuevoTexto);
 })
