@@ -731,6 +731,14 @@ MANERA 2
 let boton = document.querySelector("#botonCaja");
 
 boton.addEventListener('click', ()=>{
+  let contenedor = document.querySelector("#contenido");
+  contenedor.textContent += "imprimiendo texto";
+})
+
+MANERA 3
+let boton = document.querySelector("#botonCaja");
+
+boton.addEventListener('click', ()=>{
   let nuevoTexto = document.createElement("p");
   nuevoTexto.textContent = "imprimiendo texto";
   document.body.appendChild(nuevoTexto);
@@ -992,11 +1000,9 @@ card.classList.remove("nueva-clase")
 
 */
 
-
 let boton = document.querySelector("#botonCaja");
 
 boton.addEventListener('click', ()=>{
-  let nuevoTexto = document.createElement("p");
-  nuevoTexto.textContent = "imprimiendo texto";
-  document.body.appendChild(nuevoTexto);
+  let contenedor = document.querySelector("#contenido");
+  contenedor.textContent += "imprimiendo texto";
 })

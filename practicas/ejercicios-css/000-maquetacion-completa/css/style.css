@@ -4,13 +4,13 @@
 }
 
 body{
-    background-color: gray;
-    font-family: "Noto Sans", sans-serif;
+    background-color: #313131;
+    font-family: "Minecraft","Noto Sans", sans-serif;
 }
  
 @font-face {
-  font-family: 'NotoSans';
-  src: url('../webfonts/NotoSans-VariableFont_wdth\,wght.ttf') ;
+  font-family: 'Minecraft';
+  src: url('../webfonts/Minecraft.otf') ;
   font-weight: normal;
   font-style: normal;
 }
@@ -33,7 +33,7 @@ nav{
 h2 > a{
     color: green;
     text-decoration: none;
-    font-family: "Noto Sans", sans-serif;
+    font-family: "Minecraft", sans-serif;
     display: block;
     animation: pulseScale 1.7s infinite;
 }
@@ -50,11 +50,25 @@ ul{
 }
 
 header> ul > li {
-    text-align: center;
     color: rgb(216, 194, 165);
     font-weight: 900;
     margin-top: 5px;
     margin-bottom: 5px;
+    border-bottom: white 1px solid;
+    padding: 12px 0 12px 0;
+    position: relative;
+}
+
+header > ul > li > a{
+    text-decoration: none;
+    color: white;
+    margin-left: 55px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header > ul > li > a > i.flechas{
 }
 
 header> ul > li:hover{
