@@ -34,8 +34,8 @@ h2 > a{
     color: green;
     text-decoration: none;
     font-family: "Minecraft", sans-serif;
-    display: block;
     animation: pulseScale 1.7s infinite;
+    display: block;
 }
 
 @keyframes pulseScale {
@@ -68,8 +68,6 @@ header > ul > li > a{
     align-items: center;
 }
 
-header > ul > li > a > i.flechas{
-}
 
 header> ul > li:hover{
     transform: scale(1,1.8);
@@ -82,13 +80,26 @@ header> ul > li:hover{
     header{
         display: flex;
     }
+
+    header> ul > li {
+        color: rgb(216, 194, 165);
+        font-weight: 900;
+    }
+
+    header > ul > li > a > div{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
     nav{
-        width: 50%;
+        width: 49%;
     }
     ul{
         display: flex;
         border: 1px solid yellow;
-        width: 50%;
+        width: 49%;
         justify-content: space-around;
     }
 }
+
