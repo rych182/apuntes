@@ -7,8 +7,8 @@
 
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
-    "module": "ES6",//"nodenext","none"
-    "target": "ES6",//"esnext",
+    "module": "ES6",//"nodenext","none","es5","es6"
+    "target": "ES6",//"esnext","commonjs"
     "types": [],
     // For nodejs:
     // "lib": ["esnext"],
@@ -25,6 +25,7 @@
     "exactOptionalPropertyTypes": true,
 
     // Style Options
+    // "noImplicitAny": true, venía en la versión 4 de TypeScript
     // "noImplicitReturns": true,
     // "noImplicitOverride": true,
     // "noUnusedLocals": true,
