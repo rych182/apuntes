@@ -279,7 +279,7 @@
                     <code>git tag -a v1.4 -m 'This is my version 1.4'</code>
                     <p>Se guarda como un commit, tiene información sobre el tag <b>PERO se guarda el tag antes que un commit</b></p>
                     <h4>Show the last 3 tags</h4>
-                    <code>git describe --tags $(git rev-list --tags --max-count=3)</code>
+                    <code></code>
                     <h4>Asignar un tag a un commit ya creado</h4>
                     <code>git tag v0.9 -m "mensaje" xxxxxxxxxxxxxx</code>
                     <h4>git show </h4>
@@ -290,6 +290,8 @@
                     <code>git tag -a v1.2 9fceb02</code>
                     <h4>Subir varias etiquetas</h4>
                     <code>git push origin --tags</code>
+                    <h4>Muestra los últimos 3 tags</h4>
+                    <code>git describe --tags $(git rev-list --tags --max-count=3)</code>
                     <h4>Subir etiquetas a Github</h4>
                     <code>git push origin v1.5</code>
                     <p><b>IMPORTANTE:</b>No se pueden modificar etiquetas a menos que crees una rama y luego hagas un merge <code>git checkout -b version2 v2.0.0</code></p>
