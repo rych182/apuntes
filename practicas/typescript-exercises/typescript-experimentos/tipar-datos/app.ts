@@ -43,6 +43,13 @@
     const largoDelPoder:number = (poder as string).length;
     console.log( largoDelPoder );
   
+//valor de D? Es 10 por que C vale 9 y el siguiente número es 10, no importa que se repita
+    enum enumeracion {
+  a=10,
+  b,
+  c=9,
+  d
+}
   
   })()
   
