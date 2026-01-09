@@ -26,4 +26,4 @@ Caracteristicas de las funciones den typescript
 
 
 */ 
-//# sourceMappingURL=function.js.map
+//# sourceMappingURL=1function.js.map
