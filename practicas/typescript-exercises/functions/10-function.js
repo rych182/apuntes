@@ -1,7 +1,7 @@
 let nombre = "ric";
 //Prueba cambiando el string de la funcion a otro dato y pon el curso en la variable "caja" para que veas como dice
 //El signo ? significa que el parametro es opcional
-//No puedes poner un 3er parametro si el segundo parametro lo pusiste como opcional "?"
+//No puedes poner un 3er parametro si el segundo parametro lo pusiste como opcional "?" A MENOS QUE lo pongas por defecto
 let saludar = (nombre, apellido, apellidoMaterno = "cruz") => {
     if (apellidoMaterno) {
         return ` ${nombre} ${apellido || "sin  apellido"} ${apellidoMaterno} `.toUpperCase();
