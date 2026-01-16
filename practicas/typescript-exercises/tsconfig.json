@@ -43,11 +43,19 @@
     "moduleDetection": "force",
     "skipLibCheck": true,
   },  
-  "files": [  // ✅ Usa "files" para especificar archivos exactos
-    "ES6/let-var.ts"
+  "files": [  // Usa "files" para especificar archivos exactos
+    "ES6/let-var.ts",
+    "ES6/destructuracion.ts"
   ],
     "exclude": [
       "objetos/node_modules2"
+  ],
+  "include": [
+      "ES6/**/*"  //  Compila TODO dentro de ES6 (incluyendo subcarpetas)
+      //"ES6/**/*" - Todo dentro de ES6 y sus subcarpetas
+      //"ES6/*.ts" - Solo archivos .ts directamente en ES6 (sin subcarpetas)
+      //"ES6/**/*.ts" - Solo archivos .ts en ES6 y subcarpetas (más específico)
+      //AUN ASÍ TENDRÉ QUE PONE EL NOMBRE DE LOS ARCHIVOS EN INDEX.HTML
   ],
 
 }
