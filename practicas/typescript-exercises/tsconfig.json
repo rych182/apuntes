@@ -7,7 +7,7 @@
     "outFile":"./main.js",        //Como se va a llamar el archivo de salida(opción vieja)
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
-    "module": "amd",//"nodenext","none","es6","commonjs" commonjs es la mas usada
+    "module": "amd",//"nodenext","none","es6","amd","commonjs" commonjs es la mas usada
     "target": "ES6",//"esnext","es5"
     "types": [],
     // For nodejs:
@@ -43,7 +43,11 @@
     "moduleDetection": "force",
     "skipLibCheck": true,
   },  
+  "files": [  // ✅ Usa "files" para especificar archivos exactos
+    "ES6/let-var.ts"
+  ],
     "exclude": [
       "objetos/node_modules2"
-  ]
+  ],
+
 }

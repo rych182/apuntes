@@ -12,6 +12,28 @@
     <script type="module" src="app.js"></script>
 
     -->
-    <script type="module" src="main.js"></script>
+    <!-- Cargar RequireJS  para que lea todo con  "module": "amd" -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+    <!-- Tu archivo compilado -->
+    <script src="main.js"></script>
+    <script>
+        require(['let-var']);  // Sin la carpeta ES6/
+    </script>
+
+        <!-- Ejecutar los módulos 
+    <script>
+        // Lista todos los módulos que quieres ejecutar
+        require([ 
+            'app',
+            'functions/10-function',
+            'functions/11-parametroRest',
+            'functions/12-reasignarValor',
+            'tipos/01-strings',
+            'tipos/02-numbers',
+            'tipos/04-arrays',
+            // ... agrega todos los que tengan console.log
+        ]);
+    </script>
+    -->
 </body>
 </html>
