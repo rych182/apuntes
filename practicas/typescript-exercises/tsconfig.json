@@ -3,12 +3,12 @@
   "compilerOptions": {
     // File Layout
     // "rootDir": "./src",
-    // "outDir": "./dist",
-
+    //"outDir": "./dist", //directorio de salida
+    "outFile":"./main.js",        //Como se va a llamar el archivo de salida(opción vieja)
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
-    "module": "ES6",//"nodenext","none","es5","es6"
-    "target": "ES6",//"esnext","commonjs"
+    "module": "amd",//"nodenext","none","es6","commonjs" commonjs es la mas usada
+    "target": "ES6",//"esnext","es5"
     "types": [],
     // For nodejs:
     // "lib": ["esnext"],
@@ -16,13 +16,14 @@
     // and npm install -D @types/node
 
     // Other Outputs
-    "sourceMap": true,
-    "declaration": true,
-    "declarationMap": true,
+    "sourceMap": true, //nos dice en que linea de typescript esta nuestro error, activa el archivo .map
+    "declaration": false, // Evita generar archivos .d.ts
+    "declarationMap": false,
 
     // Stricter Typechecking Options
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true,
+    "removeComments": true,
 
     // Style Options
     // "noImplicitAny": true, venía en la versión 4 de TypeScript
@@ -36,10 +37,13 @@
     // Recommended Options
     "strict": true,
     "jsx": "react-jsx",
-    "verbatimModuleSyntax": true,
-    "isolatedModules": true,
+    "verbatimModuleSyntax": false, //debe estar en false si quiero usar "outFile": "./main.js"
+    "isolatedModules": false,
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
     "skipLibCheck": true,
-  }
+  },  
+    "exclude": [
+      "objetos/node_modules2"
+  ]
 }
