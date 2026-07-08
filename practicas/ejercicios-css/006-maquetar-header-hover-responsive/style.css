@@ -89,6 +89,13 @@ a {
     */
 }
 
+section{
+    background-image: url("haaland.webp");
+    height: 70vh;
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+}
+
 
 /*          EFECTO HOVER        */
 
